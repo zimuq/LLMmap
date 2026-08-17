@@ -62,7 +62,7 @@ def load_LLMmap(model_home_dir, device='cpu', **kargs):
         raise RuntimeError(f"Failed to initialize InferenceModelLLMmap: {e}")
 
     try:
-        net.load_state_dict(torch.load(model_path))
+        net.load_state_dict(torch.load(model_path, map_location=device))
     except Exception as e:
         raise RuntimeError(f"Failed to load model state from {model_path}: {e}")
 
