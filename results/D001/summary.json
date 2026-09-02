@@ -1,0 +1,229 @@
+{
+  "all_52": {
+    "tag": "all_52",
+    "n_pairs": 1326,
+    "n_structurally_related": 111,
+    "n_near_relative": 111,
+    "mean": 0.9996199903970105,
+    "p05": 0.9989727508650519,
+    "p10": 0.9997837370242214,
+    "p25": 1.0,
+    "p50": 1.0,
+    "min": 0.9387975778546713,
+    "max": 1.0,
+    "cvar_0.1": 0.9962235897032609,
+    "M6_cvar_over_mean": 0.9966023081507196,
+    "primary_mannwhitney_p": 3.5064734721449446e-32,
+    "primary_effect_dominance": 0.6887813739665591,
+    "mean_sep_related": 0.9971437700676454,
+    "mean_sep_unrelated": 0.9998462129950019,
+    "decile_same_base_baserate": 0.011312217194570135,
+    "decile_same_base_observed": 0.030303030303030304,
+    "decile_same_base_enrichment": 2.6787878787878787,
+    "decile_adjacent_version_baserate": 0.07239819004524888,
+    "decile_adjacent_version_observed": 0.3106060606060606,
+    "decile_adjacent_version_enrichment": 4.290246212121212,
+    "decile_near_relative_baserate": 0.083710407239819,
+    "decile_near_relative_observed": 0.3409090909090909,
+    "decile_near_relative_enrichment": 4.072481572481572,
+    "decile_structurally_related_baserate": 0.083710407239819,
+    "decile_structurally_related_observed": 0.3409090909090909,
+    "decile_structurally_related_enrichment": 4.072481572481572,
+    "decile_same_org_baserate": 0.058069381598793365,
+    "decile_same_org_observed": 0.3106060606060606,
+    "decile_same_org_enrichment": 5.34887839433294,
+    "decile_same_arch_baserate": 0.11085972850678733,
+    "decile_same_arch_observed": 0.3181818181818182,
+    "decile_same_arch_enrichment": 2.8701298701298703,
+    "decile_same_tokenizer_baserate": 0.10784313725490197,
+    "decile_same_tokenizer_observed": 0.3939393939393939,
+    "decile_same_tokenizer_enrichment": 3.652892561983471,
+    "bootstrap": {
+      "dominance_ci95": [
+        0.6057152529904164,
+        0.7887160971838192
+      ],
+      "M6_ratio_ci95": [
+        0.9942006634889159,
+        0.9982663801002001
+      ],
+      "n_boot": 2000
+    },
+    "permutation_decile": {
+      "observed_rate_in_decile": 0.3409090909090909,
+      "null_mean": 0.08369848484848486,
+      "p_value": 0.0
+    }
+  },
+  "M4_llama70b_vs_smaug": {
+    "auc": 0.9887543252595156,
+    "confusion_rate": 0.04411764705882353,
+    "percentile_rank": 0.7541478129713424,
+    "centroid_dist": 54.99953608905246,
+    "note": "Open-set nearest-template measure. NOT comparable to the paper's 84% closed-set softmax number (Review A3)."
+  },
+  "le14b_inclusive": {
+    "tag": "le14b_inclusive",
+    "n_pairs": 666,
+    "n_structurally_related": 65,
+    "n_near_relative": 65,
+    "mean": 0.9995911785487909,
+    "p05": 0.9991349480968859,
+    "p10": 0.9997837370242214,
+    "p25": 1.0,
+    "p50": 1.0,
+    "min": 0.9387975778546713,
+    "max": 1.0,
+    "cvar_0.1": 0.995930324001258,
+    "M6_cvar_over_mean": 0.9963376482044913,
+    "primary_mannwhitney_p": 5.2017122454815686e-17,
+    "primary_effect_dominance": 0.6796365032637911,
+    "mean_sep_related": 0.9972784136278945,
+    "mean_sep_unrelated": 0.9998413111941458,
+    "decile_same_base_baserate": 0.01951951951951952,
+    "decile_same_base_observed": 0.045454545454545456,
+    "decile_same_base_enrichment": 2.3286713286713288,
+    "decile_adjacent_version_baserate": 0.07807807807807808,
+    "decile_adjacent_version_observed": 0.36363636363636365,
+    "decile_adjacent_version_enrichment": 4.6573426573426575,
+    "decile_near_relative_baserate": 0.09759759759759759,
+    "decile_near_relative_observed": 0.4090909090909091,
+    "decile_near_relative_enrichment": 4.191608391608392,
+    "decile_structurally_related_baserate": 0.09759759759759759,
+    "decile_structurally_related_observed": 0.4090909090909091,
+    "decile_structurally_related_enrichment": 4.191608391608392,
+    "decile_same_org_baserate": 0.06306306306306306,
+    "decile_same_org_observed": 0.36363636363636365,
+    "decile_same_org_enrichment": 5.766233766233767,
+    "decile_same_arch_baserate": 0.13363363363363365,
+    "decile_same_arch_observed": 0.3939393939393939,
+    "decile_same_arch_enrichment": 2.9479060265577117,
+    "decile_same_tokenizer_baserate": 0.12312312312312312,
+    "decile_same_tokenizer_observed": 0.4090909090909091,
+    "decile_same_tokenizer_enrichment": 3.3226164079822618,
+    "n_models": 37,
+    "bootstrap": {
+      "dominance_ci95": [
+        0.5662211280405451,
+        0.8047218550470095
+      ],
+      "M6_ratio_ci95": [
+        0.9923240514734833,
+        0.9989134466612926
+      ],
+      "n_boot": 2000
+    },
+    "I1_near_relative_pairs": 65,
+    "I1_satisfied": true,
+    "I1_hardest_near_relative_pairs": [
+      {
+        "a": "tiiuae/Falcon3-10B-Instruct",
+        "b": "tiiuae/Falcon3-7B-Instruct",
+        "auc": 0.9387975778546713,
+        "percentile_rank_in_subset": 0.0
+      },
+      {
+        "a": "meta-llama/Llama-3.2-1B-Instruct",
+        "b": "meta-llama/Llama-3.2-3B-Instruct",
+        "auc": 0.9688581314878892,
+        "percentile_rank_in_subset": 0.15015015015015015
+      },
+      {
+        "a": "Qwen/Qwen2-1.5B-Instruct",
+        "b": "Qwen/Qwen2.5-0.5B-Instruct",
+        "auc": 0.9842128027681661,
+        "percentile_rank_in_subset": 0.45045045045045046
+      },
+      {
+        "a": "microsoft/Phi-3-medium-128k-instruct",
+        "b": "microsoft/Phi-3-medium-4k-instruct",
+        "auc": 0.9852941176470589,
+        "percentile_rank_in_subset": 0.6006006006006006
+      },
+      {
+        "a": "microsoft/Phi-3-mini-128k-instruct",
+        "b": "microsoft/Phi-3-mini-4k-instruct",
+        "auc": 0.9874567474048442,
+        "percentile_rank_in_subset": 0.7507507507507507
+      },
+      {
+        "a": "nvidia/Llama3-ChatQA-1.5-8B",
+        "b": "openchat/openchat-3.6-8b-20240522",
+        "auc": 0.9930795847750865,
+        "percentile_rank_in_subset": 1.3513513513513513
+      },
+      {
+        "a": "mistralai/Mistral-7B-Instruct-v0.2",
+        "b": "mistralai/Mistral-7B-Instruct-v0.3",
+        "auc": 0.9950259515570934,
+        "percentile_rank_in_subset": 1.5015015015015014
+      },
+      {
+        "a": "Qwen/Qwen2-1.5B-Instruct",
+        "b": "Qwen/Qwen2-7B-Instruct",
+        "auc": 0.9963235294117647,
+        "percentile_rank_in_subset": 1.951951951951952
+      },
+      {
+        "a": "Qwen/Qwen2-7B-Instruct",
+        "b": "Qwen/Qwen2.5-0.5B-Instruct",
+        "auc": 0.9963235294117647,
+        "percentile_rank_in_subset": 1.951951951951952
+      },
+      {
+        "a": "ibm-granite/granite-3.0-8b-instruct",
+        "b": "ibm-granite/granite-3.1-8b-instruct",
+        "auc": 0.9974048442906575,
+        "percentile_rank_in_subset": 2.5525525525525525
+      }
+    ]
+  },
+  "le14b_strict": {
+    "tag": "le14b_strict",
+    "n_pairs": 595,
+    "n_structurally_related": 58,
+    "n_near_relative": 58,
+    "mean": 0.9995761972609113,
+    "p05": 0.9991349480968859,
+    "p10": 0.9997837370242214,
+    "p25": 1.0,
+    "p50": 1.0,
+    "min": 0.9387975778546713,
+    "max": 1.0,
+    "cvar_0.1": 0.9957920356577328,
+    "M6_cvar_over_mean": 0.9962142339788121,
+    "primary_mannwhitney_p": 6.590186174653469e-12,
+    "primary_effect_dominance": 0.6575964810890644,
+    "mean_sep_related": 0.9972929841307719,
+    "mean_sep_unrelated": 0.9998228012861403,
+    "decile_same_base_baserate": 0.021848739495798318,
+    "decile_same_base_observed": 0.05084745762711865,
+    "decile_same_base_enrichment": 2.3272490221642768,
+    "decile_adjacent_version_baserate": 0.07563025210084033,
+    "decile_adjacent_version_observed": 0.3220338983050847,
+    "decile_adjacent_version_enrichment": 4.2580037664783426,
+    "decile_near_relative_baserate": 0.09747899159663866,
+    "decile_near_relative_observed": 0.3728813559322034,
+    "decile_near_relative_enrichment": 3.8252483927527763,
+    "decile_structurally_related_baserate": 0.09747899159663866,
+    "decile_structurally_related_observed": 0.3728813559322034,
+    "decile_structurally_related_enrichment": 3.8252483927527763,
+    "decile_same_org_baserate": 0.058823529411764705,
+    "decile_same_org_observed": 0.3220338983050847,
+    "decile_same_org_enrichment": 5.47457627118644,
+    "decile_same_arch_baserate": 0.13781512605042018,
+    "decile_same_arch_observed": 0.3728813559322034,
+    "decile_same_arch_enrichment": 2.705663497312939,
+    "decile_same_tokenizer_baserate": 0.11596638655462185,
+    "decile_same_tokenizer_observed": 0.3728813559322034,
+    "decile_same_tokenizer_enrichment": 3.2154261852124786,
+    "n_models": 35
+  },
+  "centroid_vs_separability_pearson": 0.2421233209252532,
+  "_interpretation_limits": [
+    "Separability = AUC of Delta=d(trace,T_B)-d(trace,T_A) under the OPEN-SET nearest-template classifier. The paper's 84% for Meta-Llama-3-70B comes from the CLOSED-SET softmax classifier. Different systems; M4 is not a reproduction of that number. (Review A3)",
+    "Hardness is measured under the paper's existing 8 queries, not hardness in principle (that is T2.4).",
+    "This is LLMmap0.2, which the README states is not a one-to-one conversion of the paper's implementation.",
+    "Templates are collapsed centroids (intra-model spread discarded); this metric is scoped to D001 and is NOT a decision on A3."
+  ]
+}
