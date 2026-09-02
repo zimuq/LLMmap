@@ -27,8 +27,35 @@ commissioning that remeasurement on 2026-09-01 — see [D004](D004.md).
 invariant I1 comfortably (65 near-relative pairs across 37 models), but the
 strongest individual near-relative pairs — including the project's own
 motivating case — need a 70B-class partner. Recommendation on record:
-~25×≤14B core + one 70B pair (Llama-3-70B + Smaug-70B) if D002's measured
-budget allows it.
+~25×≤14B core + one 70B pair (Llama-3-70B + Smaug-70B) — **update
+2026-09-02: D002 found this is a memory problem, not a budget problem (the
+70B pair doesn't fit on one GH200 at full precision). Still an open A1
+call, now with a real tradeoff attached — see [D002](D002.md) and
+`DECISIONS.md` A1.**
+
+---
+
+## D002 — Is GPU compute available on Vista, and what does Phase 1 cost?
+
+**Yes, and it was never really in question — the CPU-only run in D001 was
+a wheel-selection mistake, not a platform limitation.** Confirmed by an
+on-device tensor op cross-checked against CPU, not by documentation.
+
+**The real finding: SUs are not the constraint, wall-clock is — and it
+interacts with storage.** Even the most expensive candidate corpus size
+(30 models × 120 queries, unbatched) uses under 8% of the compute
+allocation. What actually binds is that unbatched generation takes longer
+than `$SCRATCH`'s 10-day no-access purge window; batching the 8 queries
+within one prompt config (already possible in the released code, just not
+wired up — `dataset_maker.py:36-39` generates one at a time) is a
+3.7–6.9x speedup and the difference between finishing inside that window
+and not. **Fixing that batching loop is now a hard prerequisite for
+Phase-1 corpus construction**, not an optional optimization.
+
+**Unresolved and now the most consequential open A1 question:** a 70B-class
+model needs ~140GB of weights against ~95GB visible on one GH200 — doesn't
+fit at full precision. Quantizing risks perturbing the very output
+distributions this project fingerprints. See `DECISIONS.md` A1.
 
 ---
 
