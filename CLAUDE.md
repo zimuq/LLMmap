@@ -42,6 +42,12 @@ trail either way.
 **If you hit an invariant, or something the D didn't anticipate:** stop
 and report it in `## R`. Do not work around it silently.
 
+**If you find something wrong in a design-side-owned section** (a D's
+`## D`, `## Review`, or its frontmatter/header block) that you cannot fix
+yourself per the ownership rule below — log it in `docs/TACC_NOTES.md`
+(append-only) instead of only noting it inline in your `## P`/`## R`, and
+continue. Design-side resolves it there each session.
+
 **A P must be self-contained.** Assume whoever reads it later — human or
 agent — has no memory of writing it.
 
@@ -61,6 +67,8 @@ human to copy-paste files between sessions.
   this repo, and `TODO.md` **locally, outside this repo** — TACC never
   sees it, to avoid scope creep from an agent seeing the full backlog.
 - Keep `docs/PLAN.md`'s index table current as D's open, run, and close.
+- Check `docs/TACC_NOTES.md` each session; fix what's flagged there and
+  move it to that file's Resolved section.
 
 **Escalate to the human only for:**
 (a) anything touching an invariant (I1–I7 below),

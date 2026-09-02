@@ -10,7 +10,7 @@
 | [D002](D002.md) | follow-up from D001/P1 §F5 | **CLOSED** 2026-09-02 — GPU_AVAILABLE, own question fully answered | REVIEW (P1 approved, executed) | none | `results/D002/`, `D002.md` `## R` |
 | [D003](D003.md) | ADDENDUM.md item 2 | **CLOSED** 2026-09-02 — READY, 233-entry candidate pool (93% of revised ~250 target) | REVIEW (P1 approved w/ amendments, executed) | none directly; its *consumer* (Phase 1 corpus build) depends on A1 (D001, closed but A1 itself still open) and C3 (now ✅ ~250) | `confs/queries/pool_d003_candidates.json`, `results/D003/`, `D003.md` `## R` |
 | [D004](D004.md) | D001 §R6, human-approved 2026-09-01 | **CLOSED** 2026-09-02 — TAIL CONFIRMED (CVaR₀.₁/mean=0.616 on the uncensored statistic); `METHOD.md §2`/I1 stand | REVIEW (P1 approved, executed) | none (pure re-analysis of D001's cached embeddings) | `results/D004/`, `D004.md` `## R` |
-| [D005](D005.md) | I2 bug found while preparing D004 (TACC note on D001's `## Review`, 2026-09-02) | OPEN — P1 posted; M1/M3/Call A approved and TACC may proceed on those now; **Call B escalated to human, `DECISIONS.md` A5** — M2/S2 blocked until it returns | REVIEW (P1 partially approved) | none for execution; is a **hard prerequisite** for whichever D builds the real Phase-1 corpus | `docs/plans/D005-P1.md`; `## R` pending |
+| [D005](D005.md) | I2 bug found while preparing D004 (TACC note on D001's `## Review`, 2026-09-02) | OPEN — P1 fully approved 2026-09-02 (A5 resolved: `do_sample` carve-out, option 1) — TACC clear to implement M1/M2/M3, targeting FIXED | REVIEW (P1 approved) | none for execution; is a **hard prerequisite** for whichever D builds the real Phase-1 corpus | `docs/plans/D005-P1.md`; `## R` pending |
 
 ## Not yet a D
 

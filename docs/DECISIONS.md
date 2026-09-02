@@ -25,7 +25,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | **A2** | Include closed-source models (GPT/Claude)? Cost + compute-node network access implications. | Exclude through Phase 0–4; include only in final validation if budget allows | ⬜ |
 | **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | 5-fold CV AUC of a linear probe on the point-cloud embeddings (bounded, interpretable); MMD / energy distance as robustness checks on a subset | ⬜ |
 | **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ⬜ |
-| **A5** | **New, 2026-09-02, from D005/P1 §F1.** `sampling_universe`'s `do_sample` is a 2-value parameter — I2's literal wording ("no single sampling setting crosses splits") is structurally unsatisfiable for it: any split puts all-greedy decoding in one pool and all-stochastic in the other, which *is* a confound, not a fix. TACC proposes three options (Call B): (1) a documented, explicit carve-out for `do_sample` alone — **TACC recommends this**; (2) reinterpret I2 at the composite-tuple level rather than per-field; (3) implement the paper's `frequency_penalty` dimension so `do_sample` stops being the only lever (bigger change, needs its own D + I7 schema bump). Sets precedent for how "literally unsatisfiable invariant" cases get handled, not just this field. | Option 1 (documented carve-out) — smallest change; I2's actual failure mode is *silent* leakage, and an explicit, disclosed exception isn't that | ⬜ |
+| **A5** | **New, 2026-09-02, from D005/P1 §F1.** `sampling_universe`'s `do_sample` is a 2-value parameter — I2's literal wording ("no single sampling setting crosses splits") is structurally unsatisfiable for it: any split puts all-greedy decoding in one pool and all-stochastic in the other, which *is* a confound, not a fix. TACC proposes three options (Call B): (1) a documented, explicit carve-out for `do_sample` alone — **TACC recommends this**; (2) reinterpret I2 at the composite-tuple level rather than per-field; (3) implement the paper's `frequency_penalty` dimension so `do_sample` stops being the only lever (bigger change, needs its own D + I7 schema bump). Sets precedent for how "literally unsatisfiable invariant" cases get handled, not just this field. | Option 1 (documented carve-out) — smallest change; I2's actual failure mode is *silent* leakage, and an explicit, disclosed exception isn't that | ✅ Option 1, decided 2026-09-02 by the human |
 
 > **A4 note:** whichever claim is primary, the comparison baseline behind it is
 > `GreedyCover` at `γ=1.0`, framed as *our reconstruction of mean-based
@@ -51,6 +51,19 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 > 0.75 estimate. Doesn't change the tradeoff's shape, but raises what's
 > given up under "drop the 70B pair": not a marginal example, a
 > near-extreme one.
+>
+> **Resolved 2026-09-02 — deferred, default applies (≤14B core, no 70B
+> pair for now).** Checked the full ranked pair list
+> (`results/D004/pairwise_m1.csv`) rather than relying on the single 70B
+> data point: the **single hardest pair in the entire 52-model universe is
+> `Falcon3-10B ↔ Falcon3-7B` (rank 1, both ≤14B)**, not the 70B pair. Of
+> the top 15 hardest pairs, only 2 involve a 70B model; the rest are ≤14B
+> or ≤35B (e.g. `Phi-3-mini-128k↔4k` at rank 3, `CohereForAI/aya-23-35B↔8B`
+> at rank 11 — 35B fits on one GH200 without the memory problem at all).
+> The method's demonstration value is not concentrated in the 70B pair —
+> quantize/offload/multi-node engineering work is not warranted right now.
+> Revisit if a later draft specifically wants the paper's own headline
+> example rather than an equally- or more-extreme substitute.
 
 ## B. Preliminary experiments
 
@@ -195,6 +208,26 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   CLAUDE.md escalation category (a).
   Decided by: design-side (Call A, routine); escalated to human (Call B,
   see A5).
+
+[2026-09-02] A5 -- do_sample carve-out, option 1
+  Decision: adopt TACC's option 1 -- do_sample stays shared across
+  train/test as a documented, explicit exception to I2, rather than a
+  literal per-value split (which would confound decoding mode with split
+  membership) or a bigger reinterpretation/frequency_penalty change.
+  Rationale: smallest change; I2's actual failure mode is silent leakage,
+  and a disclosed, deliberate exception for a structurally-unsplittable
+  binary parameter isn't that. TACC clear to implement M2/S2 now.
+  Decided by: human, 2026-09-02.
+
+[2026-09-02] A1 70B sub-question -- deferred, default applies
+  Decision: do not pursue quantize/offload/multi-node for the 70B pair
+  right now; ~25x<=14B core stands as the universe (default already on
+  file for A1). Supported by data, not just the default: the single
+  hardest pair in the whole 52-model universe (D004's fair instrument) is
+  Falcon3-10B<->Falcon3-7B, both <=14B; only 2 of the top 15 hardest pairs
+  involve a 70B model. The method's demonstration value is not
+  concentrated in the paper's own headline pair.
+  Decided by: human, 2026-09-02.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
