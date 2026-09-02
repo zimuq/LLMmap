@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|
 | [D001](D001.md) | TODO T0.1, T0.2 | OPEN — R posted, held open pending D004's answer to R6 (see D001 `## Review`) | REVIEW (P1 approved w/ amendments) | none | `results/D001/`, `D001.md` `## R` |
 | [D002](D002.md) | follow-up from D001/P1 §F5 | **CLOSED** 2026-09-02 — GPU_AVAILABLE, own question fully answered | REVIEW (P1 approved, executed) | none | `results/D002/`, `D002.md` `## R` |
-| [D003](D003.md) | ADDENDUM.md item 2 | OPEN — P1 approved w/ amendments (generator → OLMo-2-13B-Instruct), awaiting TACC execution | REVIEW (P1 approved) | none directly; its *consumer* (Phase 1 corpus build) depends on A1 (D001) and C3 (D002) | `D003.md` `## P`/`## Review`; `## R` pending |
+| [D003](D003.md) | ADDENDUM.md item 2 | OPEN — P1 approved w/ amendments (generator → OLMo-2-13B-Instruct); C3 target revised ~100→~250 2026-09-02 via Review addendum, no new P needed, awaiting TACC execution | REVIEW (P1 approved) | none directly; its *consumer* (Phase 1 corpus build) depends on A1 (D001) and C3 (now ✅ ~250) | `D003.md` `## P`/`## Review`; `## R` pending |
 | [D004](D004.md) | D001 §R6, human-approved 2026-09-01 | OPEN — P1 approved, awaiting TACC execution | REVIEW (P1 approved) | none (pure re-analysis of D001's cached embeddings, confirmed intact on `$WORK`) | `D004.md` `## P`/`## Review`; `## R` pending |
 | [D005](D005.md) | I2 bug found while preparing D004 (TACC note on D001's `## Review`, 2026-09-02) | OPEN — drafted, awaiting a P | REVIEW | none for execution; is a **hard prerequisite** for whichever D builds the real Phase-1 corpus | `D005.md` |
 

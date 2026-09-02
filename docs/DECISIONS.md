@@ -57,7 +57,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 |---|---|---|---|
 | C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | ⬜ |
 | C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ⬜ |
-| C3 | Initial pool size `\|Q_0\|` | ~100 — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes. **Depends on Phase 1 GPU-hours budget (see new GPU D).** | ⬜ |
+| C3 | Initial pool size `\|Q_0\|` | ~250 (raised from an original ~100 baseline, 2026-09-02, design-side) — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes, expanded further once D002 confirmed generation cost is not the binding constraint at 2–3x this scale. See [D003](D003.md)'s amendment + Review addendum. | ✅ |
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 | ⬜ |
 | C5 | Outer-loop params `T, N, n_keep, θ, ε` | T=3–5, N=40, n_keep=3, θ from tensor quantile, ε=0.005 | ⬜ |
 | C6 | Generator LLM | `allenai/OLMo-2-1124-13B-Instruct` — set for D003's query-pool generation (2026-09-02, design-side, strict decoupling from the universe over TACC's Qwen3-14B default; see D003 `## Review`). Re-evaluate if Phase 3's targeted-generation step (`METHOD.md §5.4` step D) needs a different tradeoff. | ✅ (for D003; Phase 3 use TBD) |
@@ -129,6 +129,21 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   representation bias runs toward oversaturation, not away from it).
   Decided by: design-side, routine call (interpretation-limit requirement,
   not a trade-off -- mirrors D001 R5's existing practice).
+
+[2026-09-02] D003 / C3 -- pool target raised from ~100 to ~250
+  Decision: raised the Q_0 candidate-pool target from the paper-inherited
+  ~100 baseline to ~250. D002 R3/R4 established generation cost is not
+  binding at 2-3x this scale (25x250 batched ~= 1.5% of SU balance, ~4
+  days, still inside the $SCRATCH purge window) -- so the asymmetric risk
+  (a too-narrow pool produces a confound in the mean-vs-CVaR comparison,
+  per D003's own stated risk, not merely a null result) favors erring
+  generous. P1's already-approved methodological calls (no pre-filter,
+  OLMo-2 generator, anchor-recovery approach) are unaffected; only the
+  numeric target changes -- no new P/re-review required, per D003's Review
+  addendum.
+  Decided by: design-side, routine call under Part C ("log when set");
+  direction confirmed with the human in chat before being made
+  (2026-09-02).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
