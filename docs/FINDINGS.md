@@ -20,9 +20,8 @@ separable under this instrument, which flattens each model's response
 distribution into a single averaged point before comparing — the opposite
 of what the project's own point-cloud-vs-point-cloud rule (invariant I3)
 requires. Treat "no hard tail" as **unresolved**, not settled, until a
-non-saturating, I3-compliant remeasurement is run. Open as of 2026-09-01,
-pending a human decision on whether to commission that remeasurement (see
-`D001.md` `## R` §R6 and `## Review`, and `PLAN.md`'s "Not yet a D" note).
+non-saturating, I3-compliant remeasurement is run. Human approved
+commissioning that remeasurement on 2026-09-01 — see [D004](D004.md).
 
 **Practical takeaway for A1 (model universe):** a ≤14B universe satisfies
 invariant I1 comfortably (65 near-relative pairs across 37 models), but the

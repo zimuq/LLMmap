@@ -68,6 +68,18 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   Decision: promoted to D001.
   Rationale: near-zero cost, directly gates the CDQD premise (invariant I1).
   Decided by: human + design-side agreement, prior session.
+
+[2026-09-01] D001 §R6 — remeasure the hard-tail premise with a fair instrument
+  Decision: promoted to D004. D001's "no exploitable tail" verdict was
+  produced by an instrument that violates I3 (compares traces against a
+  collapsed centroid) and saturates (88.2% of pairs at an exact ceiling) --
+  R6 recommended re-measuring with an I3-compliant, non-saturating statistic
+  before treating that verdict as settled, since it bears directly on
+  METHOD.md §2's premise and invariant I1.
+  Rationale: this is a METHOD.md/invariant-touching call per CLAUDE.md's
+  escalation rules, not a routine one -- surfaced to the human rather than
+  decided on the design side.
+  Decided by: human, 2026-09-01 (approved drafting D004 immediately).
 ```
 
 <!-- append new entries below -->
