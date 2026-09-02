@@ -1,0 +1,9 @@
+model,regime,max_new_tokens,n_generations,gen_tokens,wall_s,gen_per_s,tokens_per_s,mean_tokens_per_gen,load_s,peak_gpu_GB,failed_confs,device
+Qwen/Qwen2.5-3B-Instruct,unbatched,100,80,7231,220.94,0.362,32.7,90.4,13.3,12.69,0,cuda:0
+Qwen/Qwen2.5-3B-Instruct,batched,100,80,7132,35.48,2.255,201.0,89.2,13.3,12.69,0,cuda:0
+Qwen/Qwen2.5-7B-Instruct,unbatched,100,80,6585,169.38,0.472,38.9,82.3,29.3,28.61,0,cuda:0
+Qwen/Qwen2.5-7B-Instruct,batched,100,80,6692,32.29,2.478,207.3,83.7,29.3,30.0,0,cuda:0
+Qwen/Qwen2.5-3B-Instruct,unbatched,200,80,10650,344.2,0.232,30.9,133.1,1.2,12.69,0,cuda:0
+Qwen/Qwen2.5-3B-Instruct,batched,200,80,10253,64.19,1.246,159.7,128.2,1.2,12.69,0,cuda:0
+Qwen/Qwen2.5-7B-Instruct,unbatched,200,80,9598,235.47,0.34,40.8,120.0,1.9,28.61,0,cuda:0
+Qwen/Qwen2.5-7B-Instruct,batched,200,80,9514,53.11,1.506,179.2,118.9,1.9,30.0,0,cuda:0

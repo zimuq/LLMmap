@@ -1,0 +1,17 @@
+{
+  "torch_version": "2.7.1+cu128",
+  "torch_cuda_build": "12.8",
+  "cuda_is_available": true,
+  "device_name": "NVIDIA GH200 120GB",
+  "capability": [
+    9,
+    0
+  ],
+  "total_mem_GB": 95.0,
+  "on_device_op": {
+    "tensor_device": "cuda:0",
+    "is_cuda": true,
+    "mem_allocated_delta_MB": 80.0,
+    "matches_cpu_reference": true
+  }
+}
