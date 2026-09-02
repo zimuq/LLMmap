@@ -1,0 +1,34 @@
+{
+  "m1a_probe_cv_auc": {
+    "statistic": "M1a probe CV AUC (bounded)",
+    "M6_cvar_over_mean": 0.9981962509301969,
+    "n_distinct_values": 20,
+    "frac_at_max": 0.9592760180995475,
+    "frac_at_min": 0.0007541478129713424,
+    "smallest_gap": 7.849293563566562e-05
+  },
+  "m1b_energy_scalefree": {
+    "statistic": "M1b energy distance, scale-free (UNBOUNDED)",
+    "M6_cvar_over_mean": 0.6158127367523647,
+    "n_distinct_values": 1326,
+    "frac_at_max": 0.0007541478129713424,
+    "frac_at_min": 0.0007541478129713424,
+    "smallest_gap": 1.971955487567456e-06
+  },
+  "m1b_energy": {
+    "statistic": "M1b energy distance, raw (UNBOUNDED)",
+    "M6_cvar_over_mean": 0.6991830567697424,
+    "n_distinct_values": 1326,
+    "frac_at_max": 0.0007541478129713424,
+    "frac_at_min": 0.0007541478129713424,
+    "smallest_gap": 4.6030489073700664e-06
+  },
+  "m2_separability": {
+    "statistic": "M2 52-way separability (1 - confusion)",
+    "M6_cvar_over_mean": 0.9881469890464892,
+    "n_distinct_values": 13,
+    "frac_at_max": 0.9298642533936652,
+    "frac_at_min": 0.0007541478129713424,
+    "smallest_gap": 0.007352941176470562
+  }
+}

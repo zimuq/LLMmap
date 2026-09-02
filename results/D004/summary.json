@@ -1,0 +1,99 @@
+{
+  "M5_data_provenance": {
+    "reused_d001_cache": true,
+    "path": "./results/D001/f_test.npy",
+    "filesystem": "$WORK (Lustre) -- no purge policy; D004's M5 note assumed $SCRATCH, which is where model WEIGHTS live, not this cache",
+    "re_extraction_needed": false
+  },
+  "M2_loo_52way_top1": 0.9332579185520362,
+  "M2_multiclass_probe_cv_top1": 0.9445720358960836,
+  "statistics": {
+    "m1a_probe_cv_auc": {
+      "statistic": "M1a probe CV AUC (bounded)",
+      "mean": 0.9998006303112962,
+      "min": 0.9612244897959183,
+      "max": 1.0,
+      "p05": 1.0,
+      "p10": 1.0,
+      "p25": 1.0,
+      "p50": 1.0,
+      "cvar_0.1": 0.9979972408543837,
+      "M6_cvar_over_mean": 0.9981962509301969,
+      "n_distinct_values": 20,
+      "frac_at_max": 0.9592760180995475,
+      "frac_at_min": 0.0007541478129713424,
+      "smallest_gap": 7.849293563566562e-05,
+      "mean_related": 0.9981288981288983,
+      "mean_unrelated": 0.9999533564612928
+    },
+    "m1b_energy_scalefree": {
+      "statistic": "M1b energy distance, scale-free (UNBOUNDED)",
+      "mean": 2.163746213024546,
+      "min": 0.6861048645516719,
+      "max": 3.707856903272617,
+      "p05": 1.3691471804095052,
+      "p10": 1.5210554736057225,
+      "p25": 1.8037505689822109,
+      "p50": 2.140411762693753,
+      "cvar_0.1": 1.332462477080211,
+      "M6_cvar_over_mean": 0.6158127367523647,
+      "n_distinct_values": 1326,
+      "frac_at_max": 0.0007541478129713424,
+      "frac_at_min": 0.0007541478129713424,
+      "smallest_gap": 1.971955487567456e-06,
+      "mean_related": 1.9470064353434462,
+      "mean_unrelated": 2.1835471309855357
+    },
+    "m1b_energy": {
+      "statistic": "M1b energy distance, raw (UNBOUNDED)",
+      "mean": 60.569145349881886,
+      "min": 21.096548846430284,
+      "max": 86.26552940752106,
+      "p05": 44.20663511433558,
+      "p10": 47.70512567868998,
+      "p25": 53.963476196162034,
+      "p50": 60.9846373808067,
+      "cvar_0.1": 42.34892019166124,
+      "M6_cvar_over_mean": 0.6991830567697424,
+      "n_distinct_values": 1326,
+      "frac_at_max": 0.0007541478129713424,
+      "frac_at_min": 0.0007541478129713424,
+      "smallest_gap": 4.6030489073700664e-06,
+      "mean_related": 54.93263094974394,
+      "mean_unrelated": 61.084086171622886
+    },
+    "m2_separability": {
+      "statistic": "M2 52-way separability (1 - confusion)",
+      "mean": 0.9986913317363144,
+      "min": 0.8676470588235294,
+      "max": 1.0,
+      "p05": 0.9926470588235294,
+      "p10": 1.0,
+      "p25": 1.0,
+      "p50": 1.0,
+      "cvar_0.1": 0.9868538324420676,
+      "M6_cvar_over_mean": 0.9881469890464892,
+      "n_distinct_values": 13,
+      "frac_at_max": 0.9298642533936652,
+      "frac_at_min": 0.0007541478129713424,
+      "smallest_gap": 0.007352941176470562,
+      "mean_related": 0.9903948065712772,
+      "mean_unrelated": 0.9994492858871943
+    }
+  },
+  "M4_llama70b_vs_smaug": {
+    "m1a_probe_cv_auc": {
+      "value": 0.9934065934065934,
+      "percentile_rank": 0.603318250377074
+    },
+    "m1b_energy_scalefree": {
+      "value": 0.9530006017041471,
+      "percentile_rank": 0.301659125188537
+    },
+    "m2_separability": {
+      "value": 0.9338235294117647,
+      "percentile_rank": 0.301659125188537
+    },
+    "d001_open_set_nearest_template_percentile": 0.754
+  }
+}
