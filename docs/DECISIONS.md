@@ -25,6 +25,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | **A2** | Include closed-source models (GPT/Claude)? Cost + compute-node network access implications. | Exclude through Phase 0–4; include only in final validation if budget allows | ⬜ |
 | **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | 5-fold CV AUC of a linear probe on the point-cloud embeddings (bounded, interpretable); MMD / energy distance as robustness checks on a subset | ⬜ |
 | **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ⬜ |
+| **A5** | **New, 2026-09-02, from D005/P1 §F1.** `sampling_universe`'s `do_sample` is a 2-value parameter — I2's literal wording ("no single sampling setting crosses splits") is structurally unsatisfiable for it: any split puts all-greedy decoding in one pool and all-stochastic in the other, which *is* a confound, not a fix. TACC proposes three options (Call B): (1) a documented, explicit carve-out for `do_sample` alone — **TACC recommends this**; (2) reinterpret I2 at the composite-tuple level rather than per-field; (3) implement the paper's `frequency_penalty` dimension so `do_sample` stops being the only lever (bigger change, needs its own D + I7 schema bump). Sets precedent for how "literally unsatisfiable invariant" cases get handled, not just this field. | Option 1 (documented carve-out) — smallest change; I2's actual failure mode is *silent* leakage, and an explicit, disclosed exception isn't that | ⬜ |
 
 > **A4 note:** whichever claim is primary, the comparison baseline behind it is
 > `GreedyCover` at `γ=1.0`, framed as *our reconstruction of mean-based
@@ -43,6 +44,13 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 > engineering, unmeasured), or **drop the 70B pair** (I1 is satisfied
 > without it — 65 near-relative pairs across 37 ≤14B models — the loss is
 > the headline example, not statistical validity). **Awaiting human call.**
+>
+> **Update 2026-09-02 (D004 §R3):** under D004's fair, non-saturating
+> instrument, this exact pair — Llama-3-70B ↔ Smaug-70B — is the **5th
+> hardest of 1326 pairs** (percentile 0.30), harder than D001's original
+> 0.75 estimate. Doesn't change the tradeoff's shape, but raises what's
+> given up under "drop the 70B pair": not a marginal example, a
+> near-extreme one.
 
 ## B. Preliminary experiments
 
@@ -144,6 +152,49 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   Decided by: design-side, routine call under Part C ("log when set");
   direction confirmed with the human in chat before being made
   (2026-09-02).
+
+[2026-09-02] D004 R -- TAIL CONFIRMED; D001 closed
+  Decision: D004 marked CLOSED (TAIL CONFIRMED, high confidence). D001's
+  negative "no exploitable tail" verdict is attributed to its instrument
+  (centroid collapse, 2-way framing, resolution ceiling) -- under an
+  I3-compliant, non-saturating statistic (energy distance), CVaR_0.1/mean =
+  0.616 (CI95 [0.582,0.669]), decisively below 1. METHOD.md section 2 and
+  invariant I1 stand as written. D001 marked CLOSED in the same pass -- its
+  own R6 open question is what D004 was commissioned to answer.
+  Rationale: D004's own "What counts as an answer" table specifies this
+  disposition (TAIL CONFIRMED -> D001's negative attributed to instrument,
+  METHOD/I1 stand) -- applying it is a routine design-side call once R
+  landed, not a new judgment. D004 does not itself decide what to DO about
+  A1's 70B question -- that stays open, now with D004's percentile finding
+  attached (see A1 update above).
+  Decided by: design-side, routine call (disposition was pre-registered in
+  D004's own D-file; no new interpretation required).
+
+[2026-09-02] D003 R -- closed; READY, 233-entry pool; R3(b) judgment call endorsed
+  Decision: D003 marked CLOSED (READY). Endorsed TACC's judgment call to
+  re-run the prompt-injection family after finding 55% of first-pass
+  entries were provably dead queries (identical answers across every
+  model), even though the family had already met its numeric count target
+  -- D003's own stated purpose (avoid a low-diversity-pool confound in the
+  eventual mean-vs-CVaR comparison) is better served by a live re-run than
+  by a technically-compliant but partly-dead pool, and the defect was
+  TACC's own harness bug, not a design flaw, so fixing and re-running was
+  the right default over shipping and flagging.
+  Decided by: design-side, routine call (D003's own criteria already
+  anticipated this class of judgment call; endorsing rather than
+  overriding).
+
+[2026-09-02] D005 P1 -- Call A approved, Call B escalated (see A5)
+  Decision: approved TACC's proposed interleaved split for `temperature`
+  (train/test each span the full range, rather than a contiguous low/high
+  split that would confound temperature with split membership). Call B
+  (how to handle `do_sample`, a 2-value parameter I2's literal wording
+  cannot apply to) escalated to the human as new item A5 -- this is a
+  genuine invariant-interpretation question with no obviously-correct
+  answer and sets precedent beyond this one field, squarely
+  CLAUDE.md escalation category (a).
+  Decided by: design-side (Call A, routine); escalated to human (Call B,
+  see A5).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

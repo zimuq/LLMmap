@@ -33,6 +33,68 @@ motivating case — need a 70B-class partner. Recommendation on record:
 call, now with a real tradeoff attached — see [D002](D002.md) and
 `DECISIONS.md` A1.**
 
+**Closed 2026-09-02: R6's open question (was the "no hard tail" verdict an
+instrument artifact?) is answered — see [D004](D004.md). It was.**
+
+---
+
+## D003 — Can a proxy LLM generate the Q_0 candidate query pool?
+
+**Yes.** 233 candidate queries (93% of a design-side-revised ~250 target,
+raised from the paper-scale ~100 baseline once D002 showed generation cost
+isn't the binding constraint at 2–3x that size). All four query families
+plus the prompt-injection variant are represented; all 24 published/paper
+anchors recovered and verified via arXiv HTML rendering after a naive PDF
+text-extraction split would have silently mis-assigned one entry between
+the two baseline sets. Generator (`allenai/OLMo-2-1124-13B-Instruct`) was
+deliberately decoupled from the 52-model test universe to avoid
+self-preference (`DECISIONS.md` C6).
+
+**Process note worth keeping:** TACC found and fixed two bugs in its own
+generation harness mid-run — a deduplication step that was comparing
+wrapped-prompt strings (61% shared boilerplate) rather than the inner
+question, silently discarding distinct probes as near-duplicates; and a
+prompt-wording gap that let 55% of one family's queries degenerate into
+neutral trivia with zero inter-model discrepancy (i.e. dead weight for any
+selection algorithm). Both disclosed with a preserved before/after diff
+rather than fixed silently — the corrected pool is what shipped.
+
+---
+
+## D004 — Does an exploitable hard tail exist under a fair instrument?
+
+**Yes — D001's negative result was a censored-instrument artifact, not a
+real absence.** D001 measured 88% of pairs as pinned at a perfect-AUC
+ceiling using a statistic that collapsed each model's responses to one
+average point before comparing (violates invariant I3). D004 re-measured
+the same underlying trace data with an **unbounded** statistic (energy
+distance between point clouds, which structurally cannot saturate) and
+found a real, large tail: `CVaR₀.₁/mean = 0.616` (bootstrap CI95
+[0.582, 0.669]) — decisively below the ≈1 a "no tail" world would produce.
+Two bounded statistics run in parallel (a linear-probe AUC and a 52-way
+classifier) both saturated almost exactly as pre-registered *before* the
+run, which is what makes the attribution to instrument censoring credible
+rather than post-hoc.
+
+**`METHOD.md §2` and invariant I1 stand as written.** This was the
+open question D001 §R6 flagged and the human approved commissioning a
+re-measurement for; it's now closed.
+
+**The headline number for A1:** the project's own motivating pair,
+Llama-3-70B ↔ Smaug-Llama-3-70B, is the **5th hardest of 1326 pairs**
+(percentile 0.30) under the fair instrument — harder than D001's original
+estimate (0.75), not easier. This sharpens (does not resolve) the still-open
+A1 question of whether to pay the memory/engineering cost to include a
+70B-class pair (`DECISIONS.md` A1, from [D002](D002.md) §R5): the pair in
+question is now confirmed to be an unusually strong demonstration case.
+
+**Secondary finding, low urgency:** the `mistral-7b`/`mixtral-8x7b` lineage
+annotation likely undercounts true near-relative pairs (same-product-line
+pairs land in the top 10 hardest despite being tagged "unrelated") —
+means D004's reported effect size is a lower bound, and I1's pair count is
+conservative rather than inflated. No action needed unless a future D
+depends on exact lineage counts.
+
 ---
 
 ## D002 — Is GPU compute available on Vista, and what does Phase 1 cost?
