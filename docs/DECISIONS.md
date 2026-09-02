@@ -26,6 +26,11 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | 5-fold CV AUC of a linear probe on the point-cloud embeddings (bounded, interpretable); MMD / energy distance as robustness checks on a subset | ⬜ |
 | **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ⬜ |
 
+> **A4 note:** whichever claim is primary, the comparison baseline behind it is
+> `GreedyCover` at `γ=1.0`, framed as *our reconstruction of mean-based
+> selection* — not as "reproducing LLMmap's algorithm." See `METHOD.md §6.5`
+> before writing Figure 1's caption.
+
 ## B. Preliminary experiments
 
 | # | Question | Status |
