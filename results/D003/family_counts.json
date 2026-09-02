@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "paper8": 8,
+    "gpt4o-gen-opt": 8,
+    "random-opt": 8,
+    "meta-information": 42,
+    "banner-grabbing": 40,
+    "malformed-alignment": 42,
+    "weak-alignment": 44,
+    "prompt-injection-wrapper": 41
+  },
+  "total": 233,
+  "target": 250,
+  "dedup_dropped": 21,
+  "blocked_families": [],
+  "verdict": "READY",
+  "generator": "allenai/OLMo-2-1124-13B-Instruct"
+}

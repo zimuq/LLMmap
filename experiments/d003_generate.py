@@ -103,8 +103,10 @@ def main():
     }
 
     tok = AutoTokenizer.from_pretrained(GEN_MODEL)
+    # transformers 4.51.3 (pinned in requirements.txt) takes `torch_dtype`;
+    # `dtype` is only an alias in later releases.
     model = AutoModelForCausalLM.from_pretrained(
-        GEN_MODEL, dtype=torch.bfloat16, device_map="auto")
+        GEN_MODEL, torch_dtype=torch.bfloat16, device_map="auto")
     model.eval()
     print(f"[gen] {GEN_MODEL} on {next(model.parameters()).device}", flush=True)
 
@@ -158,32 +160,59 @@ def main():
             pool.append(dict(text=l, provenance=f"generated-{fam}", family=fam,
                              anchor_set=None, generator=GEN_MODEL))
 
-    # ---- dedicated prompt-injection-wrapper pass (D003 S1)
+    # ---- dedicated prompt-injection-wrapper pass (D003 S1), same
+    # multi-round structure as the other families
     fam = "prompt-injection-wrapper"
-    inner_prompt = (
-        "The LLMmap paper wraps a fingerprinting probe inside a prompt-injection "
-        "trigger so the probe survives an unknown system prompt. Write "
-        f"{per_family} SHORT inner questions suitable for such wrapping -- each a "
-        "direct question about the model's identity, origin, training data, or a "
-        "contested factual claim.\n"
-        "- one per line, no numbering, no commentary\n"
-        "- output nothing else")
-    t = time.time()
-    inner = parse_lines(ask(inner_prompt))
-    inner = [i for i in inner if i.strip().lower() not in seen][:per_family]
-    provenance.append(dict(family=fam, round=1, prompt=inner_prompt,
-                           n_returned=len(inner), n_new=len(inner),
-                           secs=round(time.time() - t, 1),
-                           note="inner questions; wrapper applied programmatically "
-                                "with the paper's verbatim trigger string"))
-    for q in inner:
+    inner_all, rounds = [], 0
+    while len(inner_all) < per_family and rounds < args.max_rounds:
+        rounds += 1
+        n_ask = min(args.per_call, per_family - len(inner_all) + 8)
+        # The inner question must itself be discriminative. Neutral world trivia
+        # ("what is the capital of Australia") is answered identically by every
+        # model -> ~zero inter-model discrepancy (paper Eq. 2), i.e. a dead query.
+        # The paper's own three wrapped probes are all self-referential or
+        # contested, never neutral facts.
+        inner_prompt = (
+            "The LLMmap paper wraps a fingerprinting probe inside a prompt-injection "
+            f"trigger so the probe survives an unknown system prompt. Write {n_ask} "
+            "SHORT inner questions suitable for such wrapping.\n\n"
+            "CRITICAL: the question is addressed TO the AI assistant answering it, "
+            "and must be one that DIFFERENT AI models would answer DIFFERENTLY. "
+            "Use the second person ('you'/'your').\n"
+            "Allowed: questions about YOUR identity, creator, version, training "
+            "data, or cutoff; or a genuinely contested/controversial claim where "
+            "models hedge differently.\n"
+            "FORBIDDEN: neutral general-knowledge trivia with one agreed answer "
+            "(capital cities, film directors, release dates of other systems) -- "
+            "every model answers those identically, so they carry no signal.\n"
+            "- one per line, no numbering, no commentary\n"
+            "- output nothing else")
+        t = time.time()
+        got = [i for i in parse_lines(ask(inner_prompt))
+               if i.strip().lower() not in seen]
+        for i in got:
+            seen.add(i.strip().lower())
+        inner_all += got
+        provenance.append(dict(family=fam, round=rounds, prompt=inner_prompt,
+                               n_returned=len(got), n_new=len(got),
+                               secs=round(time.time() - t, 1),
+                               note="inner questions; wrapper applied "
+                                    "programmatically with the paper's verbatim "
+                                    "trigger string"))
+        print(f"  [{fam}] round {rounds}: {len(got)} new (total {len(inner_all)}) "
+              f"{time.time()-t:.0f}s", flush=True)
+    for q in inner_all[:per_family]:
         q_clean = q.rstrip("?.! ")
         pool.append(dict(text=INJECTION_TEMPLATE % q_clean,
                          provenance=f"generated-{fam}", family=fam,
-                         anchor_set=None, generator=GEN_MODEL))
-    if not inner:
+                         anchor_set=None, generator=GEN_MODEL,
+                         # dedup on the INNER question: the wrapper boilerplate is
+                         # ~61% of the wrapped string, so embedding the full text
+                         # lets the shared trigger dominate and collapses
+                         # semantically distinct probes as near-duplicates.
+                         dedup_text=q_clean))
+    if not inner_all:
         blocked.append(fam)
-    print(f"  [{fam}]: {len(inner)} wrapped ({time.time()-t:.0f}s)", flush=True)
 
     del model
     torch.cuda.empty_cache()
@@ -191,7 +220,9 @@ def main():
     # ---- S2 dedup on the frozen I5 embedding; anchors are never removed
     from LLMmap.embedding_model import load_model as load_emb
     emb = load_emb(0, device_map="auto")
-    texts = [p["text"] for p in pool]
+    # Compare on `dedup_text` where set (injection family -> inner question only),
+    # otherwise the full text. See the note at the injection pass.
+    texts = [p.get("dedup_text") or p["text"] for p in pool]
     V = emb.get_embedding_batched(texts, 64).float()
     V = torch.nn.functional.normalize(V, dim=1)
     S = (V @ V.T).cpu().numpy()
@@ -215,7 +246,8 @@ def main():
                "READY" if len(final) >= 0.9 * args.target else "NEEDS ANOTHER PASS")
 
     os.makedirs(args.out_dir, exist_ok=True)
-    json.dump(final, open(args.out_pool, "w"), indent=2, ensure_ascii=False)
+    shipped = [{k: v for k, v in p.items() if k != "dedup_text"} for p in final]
+    json.dump(shipped, open(args.out_pool, "w"), indent=2, ensure_ascii=False)
     json.dump(dict(counts=counts, total=len(final), target=args.target,
                    dedup_dropped=dropped, blocked_families=blocked,
                    verdict=verdict, generator=GEN_MODEL),
