@@ -3,7 +3,7 @@
     "RAG_P": 0.2,
     "MIN_CHUNKS_RAG": 1,
     "MAX_CHUNKS_RAG": 4,
-    "WITH_SYSTEM_P" : 0.9,
+    "WITH_SYSTEM_P": 0.9,
     "sampling_universe": {
         "do_sample": [
             true,
@@ -21,10 +21,33 @@
             0.5,
             0.6,
             0.7,
-            0.7999999999999999,
-            0.8999999999999999,
-            0.9999999999999999,
-            1
+            0.8,
+            0.9,
+            1.0
         ]
-    }
+    },
+    "sampling_universe_split": {
+        "train": {
+            "temperature": [
+                0.1,
+                0.3,
+                0.5,
+                0.7,
+                0.9
+            ]
+        },
+        "test": {
+            "temperature": [
+                0.2,
+                0.4,
+                0.6,
+                0.8,
+                1.0
+            ]
+        }
+    },
+    "sampling_universe_shared": [
+        "do_sample"
+    ],
+    "_sampling_split_note": "D005/M2. temperature is interleaved so both pools span the full range (Call A, approved): a contiguous low/high split would satisfy disjointness while confounding split membership with decoding temperature. Values are deduplicated by rounded value first -- the original list had 11 entries but 10 distinct temperatures. do_sample is listed in sampling_universe_shared: a documented I2 carve-out per DECISIONS.md A5, because a 2-value parameter cannot be split without putting all-greedy in one pool and all-stochastic in the other."
 }

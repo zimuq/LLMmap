@@ -1,0 +1,75 @@
+{
+  "verdict": "UNDETERMINABLE",
+  "note": "No hypothesis is consistent with the evidence under the CURRENT train_test_split.json. The reading that reconciles everything is that the current split file is not the one in force when the dataset was generated -- utility/split_train_test_prompt_conf.py regenerates it from seed 42, and git shows both files entering in a single squashed 'LLMmap0.2' commit with no intermediate history. Under a generation-time split where the cross-pool persona sat in train, the observations are consistent with CORRECT pool-aware generation. That cannot be proved from the artifact, so no claim is made either way.",
+  "entry_totals": {
+    "train": 4264,
+    "test": 3536
+  },
+  "personas": {
+    "FuturistGPT": {
+      "idx": 18,
+      "pool": "train"
+    },
+    "PolymathGPT": {
+      "idx": 24,
+      "pool": "train"
+    },
+    "ProjectManagerGPT": {
+      "idx": 58,
+      "pool": "test"
+    },
+    "StartupGPT": {
+      "idx": 63,
+      "pool": "test"
+    }
+  },
+  "echo_cross_tab": [
+    {
+      "entry_split": "test",
+      "persona": "ProjectManagerGPT",
+      "persona_pool": "test",
+      "system_prompt_idx": 58,
+      "n": 140,
+      "cross_pool": false
+    },
+    {
+      "entry_split": "train",
+      "persona": "FuturistGPT",
+      "persona_pool": "train",
+      "system_prompt_idx": 18,
+      "n": 155,
+      "cross_pool": false
+    },
+    {
+      "entry_split": "train",
+      "persona": "PolymathGPT",
+      "persona_pool": "train",
+      "system_prompt_idx": 24,
+      "n": 52,
+      "cross_pool": false
+    },
+    {
+      "entry_split": "train",
+      "persona": "StartupGPT",
+      "persona_pool": "test",
+      "system_prompt_idx": 63,
+      "n": 189,
+      "cross_pool": true
+    }
+  ],
+  "hypotheses": {
+    "pool_blind_current_bug": {
+      "predicts": "test entries never draw a test-pool prompt",
+      "consistent": false
+    },
+    "correct_pool_aware_under_current_split": {
+      "predicts": "no test-pool prompt appears in train entries",
+      "consistent": false
+    },
+    "no_split_at_all": {
+      "predicts": "~172 train-pool persona echoes in test entries",
+      "observed": 0,
+      "consistent": false
+    }
+  }
+}

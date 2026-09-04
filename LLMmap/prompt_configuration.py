@@ -159,6 +159,14 @@ class PromptConfFactory:
 
         # Collections ------------------------------------------------------
         self.sampling_universe: Dict[str, Any] = self._cfg.constant("sampling_universe", {})
+        # D005/M2: per-pool value sets for sampling hyper-parameters, so I2 holds
+        # for them as it already does for prompt collections. Any parameter absent
+        # from this map is drawn from the full universe in BOTH pools -- see
+        # `sampling_universe_shared` in general.json and DECISIONS.md A5.
+        self.sampling_universe_split: Dict[str, Any] = self._cfg.constant(
+            "sampling_universe_split", {})
+        self.sampling_universe_shared: List[str] = self._cfg.constant(
+            "sampling_universe_shared", [])
 
         self.params = {
             'systems' :  self._cfg.load("systems.json", "system_prompts", []),
@@ -206,9 +214,27 @@ class PromptConfFactory:
     # Public API
     # ------------------------------------------------------------------
 
+    def _sample_hparams(self, pool=TRAIN) -> Dict[str, Any]:
+        """Draw sampling hyper-parameters from `pool`'s value set (D005/M2).
+
+        A parameter listed in `sampling_universe_shared` is drawn from the full
+        universe in both pools. That is a deliberate, documented carve-out from
+        I2, not an oversight: `do_sample` has only two distinct values, so any
+        disjoint split would put all-greedy decoding in one pool and
+        all-stochastic in the other -- a worse confound than the leakage it
+        removes. See DECISIONS.md A5 (resolved 2026-09-02, option 1).
+        """
+        per_pool = self.sampling_universe_split.get(pool, {})
+        out: Dict[str, Any] = {}
+        for k, universe in self.sampling_universe.items():
+            values = universe if k in self.sampling_universe_shared \
+                else per_pool.get(k, universe)
+            out[k] = random.sample(list(values), 1)[0]
+        return out
+
     def sample_one(self, pool=TRAIN) -> PromptConf:
         """Return a freshly sampled *PromptConf* instance."""
-        sampling_hparams = sample_from_multi_universe(self.sampling_universe)
+        sampling_hparams = self._sample_hparams(pool)
         
         system_prompt = self._cond_choice("systems", self.WITH_SYSTEM_P, pool)
         cot_prompt = self._cond_choice("cot_prompts", self.COT_P, pool)
@@ -232,11 +258,17 @@ class PromptConfFactory:
         return None if idx is None else collection[idx]
 
     def sample(self, n, pool=TRAIN):
-        """Sample n unique confs"""
+        """Sample n unique confs from `pool`.
+
+        D005/M1: `pool` was accepted here but never forwarded to `sample_one`,
+        so every caller -- including dataset_maker.py's `pool=TEST` call -- drew
+        from the TRAIN pool. That defeated the train/test holdout silently, with
+        no error, which is invariant I2's stated failure mode.
+        """
         assert n > 0
         s = set()
         while len(s) != n:
-            s.add(self.sample_one())
+            s.add(self.sample_one(pool))
         return list(s)
             
 
