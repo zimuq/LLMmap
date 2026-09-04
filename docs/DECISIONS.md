@@ -228,6 +228,20 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   involve a 70B model. The method's demonstration value is not
   concentrated in the paper's own headline pair.
   Decided by: human, 2026-09-02.
+
+[2026-09-04] D005 R -- FIXED; D005 closed
+  Decision: D005 marked CLOSED. M1+M2+M3 verified via an actual regression
+  test (bug reinjected -> 250 named failures; fix restored -> 0); M4
+  (shipped-dataset exposure) reported UNDETERMINABLE with contradictory
+  evidence across all three hypotheses tested, correctly not forced into
+  a guess either way. No effect on D001/D004's existing numbers -- neither
+  called the buggy code path, and any hypothetical leakage would be
+  inflationary, which works against D004's confirmed tail, not for it. No
+  re-run warranted. Phase-1 corpus construction's remaining blockers are
+  now down to A1 alone (C3, D003's pool, and D005's fix are all in place).
+  Decided by: design-side, routine call (disposition matches D005's own
+  pre-registered "What counts as an answer" table; no new interpretation
+  required).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

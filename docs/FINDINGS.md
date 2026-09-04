@@ -121,5 +121,44 @@ distributions this project fingerprints. See `DECISIONS.md` A1.
 
 ---
 
+## D005 — Fixing the I2 violations in the prompt-config generator
+
+**Fixed, and proven fixed.** Both defects (the dropped `pool` argument;
+`sampling_universe` having no train/test split at all) are corrected, with
+a regression test that reintroduces the original bug and confirms it
+fails (250 named violations), then confirms the fix passes (0). `do_sample`
+(a 2-value parameter I2's literal wording can't apply to without creating
+a worse confound) is now a documented, explicit exception rather than a
+silent gap (`DECISIONS.md` A5).
+
+**A genuinely new class of bug, worth remembering beyond this D:** fixing
+the temperature split turned up a float-aliasing defect nobody had
+anticipated — `0.9999999999999999` and `1.0` are different floats
+representing the same real-world sampling temperature, so an index-wise
+disjoint split would have silently reintroduced value-level leakage while
+looking correct. General lesson: any config split defined over a *value*
+space needs disjointness checked by value, not by index, whenever the
+values are floats.
+
+**Whether the shipped `default_dataset.jsonl` (D001/D004's data source)
+carries either defect: UNDETERMINABLE, and genuinely so** — not a shrug.
+Four hypotheses about how the dataset was generated were tested against
+persona-echo evidence and all four were refuted under the currently
+checked-in split file; the likely explanation is that the split file
+itself was regenerated after the dataset (seed 42, squashed git history)
+rather than being the one actually used. **Doesn't matter for D001/D004
+either way:** neither called the buggy code path, and the one hypothesis
+positively ruled out is the specific leak this D fixed — so if the shipped
+corpus has *some* leakage, it's probably not this one, and any leakage
+would inflate separability (work against D004's confirmed tail, not for
+it). No re-run warranted.
+
+**Phase-1 corpus construction has one fewer blocker.** With C3 (~250),
+D003 (233-entry pool), and D005 (I2 holds) all in place, **A1 (model
+universe) is now the only remaining thing standing between here and
+drafting the real Phase-1 D.**
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
