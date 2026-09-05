@@ -21,7 +21,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 
 | # | Question | Default if undecided | Status |
 |---|---|---|---|
-| **A1** | Which models form the universe? Target ~25 models ≤14B for local/TACC execution. **Must satisfy invariant I1.** Candidate near-relative groups: (Llama-3-8B-Instruct + a fine-tune), (Phi-3-mini-4k vs 128k), (Mistral-7B-Instruct v0.1/v0.2/v0.3), (gemma-2-9b-it vs gemma-1.1-7b-it). **D001's ≤14B subset findings feed this directly once available.** | 25 open-weight models ≤14B including the 4 groups above | ⬜ |
+| **A1** | Which models form the universe? | **All 37 open-weight models with `params_b ≤ 14` in the 52-model universe** (`results/D001/model_metadata.csv`) — not a curated subset. Includes all 4 originally-named near-relative groups (Llama-3-8B family, Phi-3-mini-4k/128k, Mistral-7B v0.1/v0.2/v0.3, gemma-2-9b/gemma-1.1-7b) automatically. **Decided 2026-09-05.** | ✅ |
 | **A2** | Include closed-source models (GPT/Claude)? Cost + compute-node network access implications. | Exclude through Phase 0–4; include only in final validation if budget allows | ⬜ |
 | **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | 5-fold CV AUC of a linear probe on the point-cloud embeddings (bounded, interpretable); MMD / energy distance as robustness checks on a subset | ⬜ |
 | **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ⬜ |
@@ -79,7 +79,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | ⬜ |
 | C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ⬜ |
 | C3 | Initial pool size `\|Q_0\|` | ~250 (raised from an original ~100 baseline, 2026-09-02, design-side) — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes, expanded further once D002 confirmed generation cost is not the binding constraint at 2–3x this scale. See [D003](D003.md)'s amendment + Review addendum. | ✅ |
-| C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 | ⬜ |
+| C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |
 | C5 | Outer-loop params `T, N, n_keep, θ, ε` | T=3–5, N=40, n_keep=3, θ from tensor quantile, ε=0.005 | ⬜ |
 | C6 | Generator LLM | `allenai/OLMo-2-1124-13B-Instruct` — set for D003's query-pool generation (2026-09-02, design-side, strict decoupling from the universe over TACC's Qwen3-14B default; see D003 `## Review`). Re-evaluate if Phase 3's targeted-generation step (`METHOD.md §5.4` step D) needs a different tradeoff. | ✅ (for D003; Phase 3 use TBD) |
 | C7 | Response truncation | 650 chars, matching the released `confs/default.json`. **D002 §R4 finding (2026-09-02): currently inert** — measured shipped response lengths top out at 667 chars (p99=584, mean=352), and the real cap is `max_new_tokens=100` in `llm.py:9`, never 650 chars. Raising to 200 tokens is affordable (D002 §R3, ~1.8x cost). Decide C7 on information grounds, not cost — still open. | ⬜ |
@@ -242,6 +242,28 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   Decided by: design-side, routine call (disposition matches D005's own
   pre-registered "What counts as an answer" table; no new interpretation
   required).
+
+[2026-09-05] A1 -- all 37 <=14B models, not a curated 25
+  Decision: universe = every open-weight model with params_b <= 14 in the
+  52-model universe (verified count: exactly 37, via
+  results/D001/model_metadata.csv). Supersedes the original "~25 curated"
+  default.
+  Rationale: cost scales linearly with |L| (37 vs 25 is +48% generations,
+  still only ~1.8-3.1% of the 6982 SU balance) but wall-clock does not --
+  under Vista's 20-concurrent-job cap, sharding by model needs ceil(25/20)
+  = 2 waves and ceil(37/20) = 2 waves, identical. "All models satisfying
+  the inclusion criterion" is also a cleaner methodology statement than a
+  hand-curated subset, and all 4 originally-named near-relative groups
+  fall out of the full set automatically.
+  Decided by: human, 2026-09-05.
+
+[2026-09-05] C4 -- split sizes 75/25/25, decided
+  Decision: adopt the long-standing default (75 build / 25 val / 25 test),
+  now enforceable given D005's I2 fix (disjoint at the individual-parameter
+  level, with the A5 do_sample carve-out).
+  Rationale: matches TODO.md's own plan; no objection raised; needed to
+  unblock drafting the Phase-1 D (D006).
+  Decided by: design-side, routine call (Part C, "log when set").
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
