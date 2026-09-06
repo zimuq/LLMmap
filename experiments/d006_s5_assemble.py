@@ -72,9 +72,14 @@ def validate(model, q0_sha, n_queries, split_schema):
         rec["problems"].append("no status file")
         return rec
     status = json.load(open(st))
+    # Includes the per-shard DEVIATION fields, not just performance ones. If a
+    # shard ran with trust_remote_code, a substituted chat template, or a
+    # different sentencepiece, that has to be a manifest FIELD -- a deviation
+    # recorded only in a prose footnote is one that gets lost.
     rec.update({k: status.get(k) for k in
                 ("hf_revision", "token_ceiling", "batch", "wall_s", "node_hours",
-                 "gen_per_s", "load_s", "finished")})
+                 "gen_per_s", "load_s", "finished",
+                 "env", "trust_remote_code", "chat_template_source")})
 
     if status.get("status") != "COMPLETE":
         rec["status"] = status.get("status", "UNKNOWN")
@@ -142,6 +147,13 @@ def validate(model, q0_sha, n_queries, split_schema):
     return rec
 
 
+def _modal_env(shards):
+    """The environment most shards ran under; anything else is a deviation."""
+    envs = collections.Counter(json.dumps(s["env"], sort_keys=True)
+                               for s in shards if s.get("env"))
+    return json.loads(envs.most_common(1)[0][0]) if envs else None
+
+
 def main():
     q0doc = json.load(open(Q0))
     q0_sha, n_queries = q0doc["sha256"], q0doc["n"]
@@ -181,6 +193,29 @@ def main():
             note="Empty responses are retained, not dropped. A model going "
                  "silent on a malformed/injection probe is fingerprint signal. "
                  "Downstream may filter them, but must do so explicitly."),
+        # Surfaced at the top level so a reader does not have to scan 37 shard
+        # records to discover that some ran differently from the rest.
+        deviations=dict(
+            trust_remote_code=[s["model"] for s in good
+                               if s.get("trust_remote_code")],
+            substituted_chat_template=[s["model"] for s in good
+                                       if s.get("chat_template_source")
+                                       and s["chat_template_source"] != "model's own"],
+            non_default_env=[dict(model=s["model"], env=s["env"]) for s in good
+                             if s.get("env") and s["env"] != _modal_env(good)],
+            modal_env=_modal_env(good),
+            # Honest provenance gap, recorded rather than back-filled with an
+            # assumption. Per-shard env capture was added partway through S4, so
+            # shards generated before it carry no env record. They ran under
+            # `llmmap-gpu`, but its package set CHANGED DURING THE RUN -- protobuf
+            # and sentencepiece were installed mid-S4 to unblock three models --
+            # so the exact set at each of their runtimes is not recoverable.
+            # Impact is nil for generated content: both packages affect only
+            # tokenizer LOADING, and every one of these shards loaded and
+            # produced a full 32,375 rows. Not worth re-running for provenance
+            # alone; worth stating so nobody later infers uniformity that was
+            # never verified.
+            env_not_recorded=[s["model"] for s in good if not s.get("env")]),
         totals=dict(models_validated=len(good), models_expected=37,
                     rows=total_rows,
                     rows_expected=37 * n_queries * sum(SPLIT_SIZES.values()),
