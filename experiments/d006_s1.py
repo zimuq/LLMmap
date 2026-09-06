@@ -55,12 +55,12 @@ import numpy as np
 import torch
 
 from LLMmap.llm import LLM_huggingface
-from LLMmap.prompt_configuration import PromptConfFactory, TRAIN
+from LLMmap.prompt_configuration import PromptConfFactory, BUILD
 from LLMmap.dataset_maker import make_dataset_entries_for_new_llm
 
 OUT_DIR = "./results/D006"
 CONF_DIR = "./confs/prompt_configurations/"
-POOL = "./confs/queries/pool_d003_candidates.json"
+POOL = "./confs/queries/pool_v1.json"
 I5_MODEL = "intfloat/multilingual-e5-large-instruct"
 
 VERIFY_MODELS = ["Qwen/Qwen2.5-0.5B-Instruct", "microsoft/Phi-3-mini-4k-instruct"]
@@ -198,7 +198,7 @@ def phase_b_generate(queries, confs):
         llm = load(name)
         t0 = time.time()
         entries = make_dataset_entries_for_new_llm(
-            llm, queries, confs, pool=TRAIN, batch_size=8, max_new_tokens=max(CAPS))
+            llm, queries, confs, pool=BUILD, batch_size=8, max_new_tokens=max(CAPS))
         # store token ids so truncation to a cap is exact, not char-approximate
         recs = []
         for ci, e in enumerate(entries):
@@ -308,12 +308,12 @@ def main():
     np.random.seed(0)
 
     pool = json.load(open(POOL))
-    entries = pool["queries"] if isinstance(pool, dict) else pool
+    entries = pool["queries"] if isinstance(pool, dict) else pool  # pool_v1 is a dict
     texts = [e["text"] if isinstance(e, dict) else e for e in entries]
     queries = random.sample(texts, N_QUERIES_PILOT)
 
     pc = PromptConfFactory(CONF_DIR)
-    confs = pc.sample(N_CONFIGS_PILOT, pool=TRAIN)
+    confs = pc.sample(N_CONFIGS_PILOT, pool=BUILD)
 
     print(f"pilot: {len(queries)} queries x {len(confs)} configs "
           f"x {len(PILOT_MODELS)} models @ {max(CAPS)} tokens", flush=True)

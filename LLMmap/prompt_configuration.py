@@ -4,6 +4,10 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple, Union
 
 TRAIN, TEST = 'train', 'test'
+# D006/S3 (C4): the three-way config split. TEST is shared with the legacy
+# two-pool naming above -- same string, same meaning. TRAIN remains only for
+# reproducing D001/D004/D005 against the legacy `train_test_split.json`.
+BUILD, VAL = 'build', 'val'
 
 def sample_from_multi_universe(universe):
     sample = {}
@@ -205,7 +209,20 @@ class PromptConfFactory:
        
         self.documents_rag: List[Tuple[Any, Any, List[str]]] = self._cfg.load("rag_context.json", "documents_rag", [])
 
-        self.train_test_split: List[Tuple[Any, Any, List[str]]] = self._cfg.load("train_test_split.json", "train_test_split", {})
+        # D006/S3: prefer the three-way build/val/test split (C4, `split_v2.json`)
+        # and fall back to the legacy two-pool `train_test_split.json`. The legacy
+        # file is deliberately NOT overwritten -- it is the artifact D005/M4's
+        # forensics reasoned about and what LLMmap's shipped corpus was generated
+        # under, so D001/D004/D005 stay reproducible against it.
+        _v2 = self._cfg.load("split_v2.json", "__absent__", None)
+        self.split_schema_version: str = "cdqd-split-v1-legacy"
+        if _v2:
+            self.split_schema_version = _v2.get("schema_version", "cdqd-split-v2")
+            self.train_test_split = {k: v for k, v in _v2.items()
+                                     if k in (BUILD, VAL, TEST)}
+        else:
+            self.train_test_split = self._cfg.load(
+                "train_test_split.json", "train_test_split", {})
         
         # Scalars / probabilities -----------------------------------------
         self.COT_P: float = self._cfg.constant("COT_P", 0.0)
@@ -253,6 +270,17 @@ class PromptConfFactory:
         all-stochastic in the other -- a worse confound than the leakage it
         removes. See DECISIONS.md A5 (resolved 2026-09-02, option 1).
         """
+        # D006/S3: fail LOUDLY on an unknown pool. Previously an unrecognised
+        # pool name silently yielded `{}` here and every parameter fell back to
+        # the FULL universe -- i.e. a silent I2 violation, the exact failure mode
+        # D005 existed to fix, reintroduced by the two-pool -> three-pool rename
+        # (`train` is not a key in split_v2). `_cond_choice` already raises
+        # KeyError for the same mistake; this makes the two consistent.
+        if self.sampling_universe_split and pool not in self.sampling_universe_split:
+            raise KeyError(
+                f"pool '{pool}' is not in sampling_universe_split "
+                f"(have: {sorted(self.sampling_universe_split)}). Refusing to "
+                f"fall back to the full universe -- that would silently break I2.")
         per_pool = self.sampling_universe_split.get(pool, {})
         out: Dict[str, Any] = {}
         for k, universe in self.sampling_universe.items():

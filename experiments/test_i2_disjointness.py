@@ -1,14 +1,29 @@
 """
-D005 / M3 — invariant I2 as an executable assertion, not a convention.
+D005 / M3 + D006 / S3 — invariant I2 as an executable assertion, not a convention.
 
 I2 (CLAUDE.md): "Prompting-config splits (build/val/test) are disjoint at the
 individual parameter level — no single system prompt, RAG template, or sampling
 setting crosses splits."
 
-I2's failure mode is silent: the code runs and produces plausible output while the
-holdout is defeated. That is exactly what happened before D005 --
+I2's failure mode is silent: the code runs and produces plausible output while
+the holdout is defeated. That is exactly what happened before D005 --
 `PromptConfFactory.sample()` accepted `pool` and never forwarded it. This file
 turns the invariant into something that fails loudly.
+
+D006/S3 extended it from two pools to three, with a per-collection policy,
+because C4's split is three-way and Call 3 (approved 2026-09-05) deliberately
+splits the thin collections only two ways:
+
+    systems      3-way disjoint
+    temperature  3-way disjoint, BY VALUE (not by index)
+    cot_prompts  build-disjoint only; val and test SHARE  <- documented carve-out
+    rag_prompts  build-disjoint only; val and test SHARE  <- documented carve-out
+    do_sample    shared across all pools                  <- A5 carve-out
+
+The carve-outs are checked as carve-outs: this file asserts that `build` is
+disjoint from the holdout AND that val/test genuinely do share, so that a future
+edit which silently makes them differ (or which lets `build` leak) fails here.
+An unchecked exception is indistinguishable from a bug.
 
 Run standalone (no pytest required):
     PYTHONPATH=. python experiments/test_i2_disjointness.py
@@ -18,10 +33,17 @@ import sys
 import json
 import random
 
-from LLMmap.prompt_configuration import PromptConfFactory, TRAIN, TEST
+from LLMmap.prompt_configuration import PromptConfFactory, BUILD, VAL, TEST
 
 CONF_DIR = "./confs/prompt_configurations/"
 N_SAMPLE = 200
+
+# Call 3's approved policy. "3way" = all pools mutually disjoint.
+# "build_only" = build disjoint from the holdout; val and test share it.
+POLICY = {"systems": "3way", "cot_prompts": "build_only",
+          "rag_prompts": "build_only"}
+POOLS = (BUILD, VAL, TEST)
+
 failures = []
 
 
@@ -36,17 +58,36 @@ def main():
     pc = PromptConfFactory(CONF_DIR)
     split = pc.train_test_split
 
-    # ---- 1. The split FILES themselves: disjoint, and covering every index.
-    # This property held all along while the code ignored it -- assert it so a
-    # future edit to the split file cannot quietly break it either.
-    for coll in ("systems", "cot_prompts", "rag_prompts"):
-        tr, te = set(split[TRAIN][coll]), set(split[TEST][coll])
-        check(not (tr & te),
-              f"[split file] {coll}: train/test share indices {sorted(tr & te)}")
+    if set(split) != set(POOLS):
+        print(f"I2 TEST ABORTED: expected pools {POOLS}, found {sorted(split)}. "
+              f"(schema: {getattr(pc, 'split_schema_version', '?')})")
+        return 2
+
+    # ---- 1. The split FILES themselves, per Call 3's policy.
+    for coll, policy in POLICY.items():
+        sets = {p: set(split[p][coll]) for p in POOLS}
         n = len(pc.params[coll])
-        check(tr | te == set(range(n)),
+        check(set().union(*sets.values()) == set(range(n)),
               f"[split file] {coll}: pools do not cover all {n} indices "
-              f"(missing {sorted(set(range(n)) - (tr | te))})")
+              f"(missing {sorted(set(range(n)) - set().union(*sets.values()))})")
+        if policy == "3way":
+            for a, b in ((BUILD, VAL), (BUILD, TEST), (VAL, TEST)):
+                check(not (sets[a] & sets[b]),
+                      f"[split file] {coll}: {a}/{b} share indices "
+                      f"{sorted(sets[a] & sets[b])}")
+        else:
+            check(not (sets[BUILD] & sets[VAL]),
+                  f"[split file] {coll}: build leaks into the holdout: "
+                  f"{sorted(sets[BUILD] & sets[VAL])}")
+            check(not (sets[BUILD] & sets[TEST]),
+                  f"[split file] {coll}: build leaks into test: "
+                  f"{sorted(sets[BUILD] & sets[TEST])}")
+            # the carve-out itself, asserted so it can't silently drift
+            check(sets[VAL] == sets[TEST],
+                  f"[split file] {coll}: Call 3 specifies val and test SHARE "
+                  f"this collection, but they differ "
+                  f"(val-only {sorted(sets[VAL]-sets[TEST])}, "
+                  f"test-only {sorted(sets[TEST]-sets[VAL])})")
 
     # ---- 2. Sampling universe: split pools disjoint BY VALUE, not by index.
     # Index-disjointness is not enough -- the original temperature list held 11
@@ -57,11 +98,14 @@ def main():
     for param in pc.sampling_universe:
         if param in shared:
             continue
-        tr = {round(float(v), 6) for v in su_split.get(TRAIN, {}).get(param, [])}
-        te = {round(float(v), 6) for v in su_split.get(TEST, {}).get(param, [])}
-        check(tr and te, f"[sampling] {param}: missing a per-pool value set")
-        check(not (tr & te),
-              f"[sampling] {param}: pools share value(s) {sorted(tr & te)}")
+        vals = {p: {round(float(v), 6) for v in su_split.get(p, {}).get(param, [])}
+                for p in POOLS}
+        for p in POOLS:
+            check(vals[p], f"[sampling] {param}: pool '{p}' has no value set")
+        for a, b in ((BUILD, VAL), (BUILD, TEST), (VAL, TEST)):
+            check(not (vals[a] & vals[b]),
+                  f"[sampling] {param}: {a}/{b} share value(s) "
+                  f"{sorted(vals[a] & vals[b])}")
 
     # ---- 3. End-to-end: what `sample()` actually returns must respect the pool.
     # Reverse-map each returned prompt STRING back to its index, because sample()
@@ -74,7 +118,7 @@ def main():
         return json.dumps(x, sort_keys=True)
 
     text_to_idx = {coll: {key(t): i for i, t in enumerate(pc.params[coll])}
-                   for coll in ("systems", "cot_prompts", "rag_prompts")}
+                   for coll in POLICY}
     # Read all three from `raw`, which holds the UNTRANSFORMED
     # (system_prompt, cot_prompt, rag_template) triple. Do not use
     # PromptConf.system_prompt: __init__ does `system_prompt or ""`, so a config
@@ -85,7 +129,7 @@ def main():
               "rag_prompts": lambda c: c.raw[2] if len(c.raw) > 2 else None}
 
     drawn = {}
-    for pool in (TRAIN, TEST):
+    for pool in POOLS:
         confs = pc.sample(N_SAMPLE, pool=pool)
         seen = {c: set() for c in text_to_idx}
         temps = set()
@@ -111,14 +155,20 @@ def main():
               f"[end-to-end] {pool}: temperatures {sorted(temps - allowed)} "
               f"outside the {pool} pool")
 
-    # ---- 4. Cross-pool: nothing actually drawn may appear in both pools.
-    for coll in text_to_idx:
-        a, b = drawn[TRAIN][0][coll], drawn[TEST][0][coll]
-        check(not (a & b),
-              f"[cross-pool] {coll}: index(es) {sorted(a & b)} drawn in BOTH pools")
-    ta, tb = drawn[TRAIN][1], drawn[TEST][1]
-    check(not (ta & tb),
-          f"[cross-pool] temperature: value(s) {sorted(ta & tb)} drawn in BOTH pools")
+    # ---- 4. Cross-pool: nothing actually drawn may cross where policy forbids.
+    for coll, policy in POLICY.items():
+        pairs = ((BUILD, VAL), (BUILD, TEST), (VAL, TEST)) if policy == "3way" \
+            else ((BUILD, VAL), (BUILD, TEST))
+        for a, b in pairs:
+            both = drawn[a][0][coll] & drawn[b][0][coll]
+            check(not both,
+                  f"[cross-pool] {coll}: index(es) {sorted(both)} drawn in BOTH "
+                  f"{a} and {b}")
+    for a, b in ((BUILD, VAL), (BUILD, TEST), (VAL, TEST)):
+        both = drawn[a][1] & drawn[b][1]
+        check(not both,
+              f"[cross-pool] temperature: value(s) {sorted(both)} drawn in BOTH "
+              f"{a} and {b}")
 
     # ---- report
     if failures:
@@ -126,10 +176,13 @@ def main():
         for f in failures:
             print("  *", f)
         return 1
-    print(f"I2 holds. Checked split files, sampling universe, and {N_SAMPLE} "
-          f"sampled configs per pool.")
-    print(f"  documented carve-out (DECISIONS.md A5): {sorted(shared)} "
-          f"shared across pools by design")
+    print(f"I2 holds ({getattr(pc, 'split_schema_version', '?')}). Checked split "
+          f"files, sampling universe, and {N_SAMPLE} sampled configs per pool "
+          f"across {len(POOLS)} pools.")
+    print(f"  documented carve-outs: {sorted(shared)} shared across all pools "
+          f"(DECISIONS.md A5); "
+          f"{[c for c, p in POLICY.items() if p == 'build_only']} "
+          f"build-disjoint only, val/test share (D006 Call 3)")
     return 0
 
 

@@ -1,53 +1,57 @@
 {
-    "COT_P": 0.2,
-    "RAG_P": 0.2,
-    "MIN_CHUNKS_RAG": 1,
-    "MAX_CHUNKS_RAG": 4,
-    "WITH_SYSTEM_P": 0.9,
-    "sampling_universe": {
-        "do_sample": [
-            true,
-            true,
-            true,
-            true,
-            true,
-            false
-        ],
-        "temperature": [
-            0.1,
-            0.2,
-            0.3,
-            0.4,
-            0.5,
-            0.6,
-            0.7,
-            0.8,
-            0.9,
-            1.0
-        ]
-    },
-    "sampling_universe_split": {
-        "train": {
-            "temperature": [
-                0.1,
-                0.3,
-                0.5,
-                0.7,
-                0.9
-            ]
-        },
-        "test": {
-            "temperature": [
-                0.2,
-                0.4,
-                0.6,
-                0.8,
-                1.0
-            ]
-        }
-    },
-    "sampling_universe_shared": [
-        "do_sample"
-    ],
-    "_sampling_split_note": "D005/M2. temperature is interleaved so both pools span the full range (Call A, approved): a contiguous low/high split would satisfy disjointness while confounding split membership with decoding temperature. Values are deduplicated by rounded value first -- the original list had 11 entries but 10 distinct temperatures. do_sample is listed in sampling_universe_shared: a documented I2 carve-out per DECISIONS.md A5, because a 2-value parameter cannot be split without putting all-greedy in one pool and all-stochastic in the other."
+ "COT_P": 0.2,
+ "RAG_P": 0.2,
+ "MIN_CHUNKS_RAG": 1,
+ "MAX_CHUNKS_RAG": 4,
+ "WITH_SYSTEM_P": 0.9,
+ "sampling_universe": {
+  "do_sample": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "temperature": [
+   0.1,
+   0.2,
+   0.3,
+   0.4,
+   0.5,
+   0.6,
+   0.7,
+   0.8,
+   0.9,
+   1.0
+  ]
+ },
+ "sampling_universe_split": {
+  "build": {
+   "temperature": [
+    0.1,
+    0.4,
+    0.7,
+    1.0
+   ]
+  },
+  "val": {
+   "temperature": [
+    0.2,
+    0.5,
+    0.8
+   ]
+  },
+  "test": {
+   "temperature": [
+    0.3,
+    0.6,
+    0.9
+   ]
+  }
+ },
+ "sampling_universe_shared": [
+  "do_sample"
+ ],
+ "_sampling_split_note": "D006/S3 (C4, Call 3): three-way build/val/test. temperature is deduplicated by VALUE then round-robin interleaved over sorted values -- a contiguous split would make pool membership partly predictable from temperature alone (D005/M2). do_sample stays shared across all pools per the A5 carve-out: with 2 distinct values any disjoint split puts all-greedy in one pool and all-stochastic in another, a worse confound than the leakage it removes."
 }
