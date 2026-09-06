@@ -23,7 +23,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 |---|---|---|---|
 | **A1** | Which models form the universe? | **All 37 open-weight models with `params_b ≤ 14` in the 52-model universe** (`results/D001/model_metadata.csv`) — not a curated subset. Includes all 4 originally-named near-relative groups (Llama-3-8B family, Phi-3-mini-4k/128k, Mistral-7B v0.1/v0.2/v0.3, gemma-2-9b/gemma-1.1-7b) automatically. **Decided 2026-09-05.** | ✅ |
 | **A2** | Include closed-source models (GPT/Claude)? Cost + compute-node network access implications. | Exclude through Phase 0–4; include only in final validation if budget allows | ⬜ |
-| **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | **Design-side recommendation, 2026-09-06 (awaiting human confirm):** keep the original default — 5-fold CV AUC of a linear probe (bounded, interpretable) as primary — but **upgrade energy distance from "robustness check on a subset" to a mandatory companion statistic computed on the full tensor, with D004's resolution-audit (fraction of pairs at/near ceiling) promoted from a footnote to a formal gate.** New evidence for keeping the bounded default at all: D006's C7 pilot ran probe AUC directly on the real, frozen I5 embedding (not D004's proxy) and found **0% of 15 pairs at ceiling** — the saturation D004 hit was specific to LLmap's own *trained* stage-2 representation (optimized to separate), not to I5 itself. But that's a 15-pair pilot; the real tensor has 666 pairs, and D001 was burned once already by trusting a bounded statistic without an audit gate — hence keeping energy distance mandatory rather than optional, not "the pilot looked clean so skip the check." | ⬜ |
+| **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | **Decided 2026-09-06.** 5-fold CV AUC of a linear probe (bounded, interpretable) as primary, matching the original default — but energy distance is now a **mandatory companion statistic on the full tensor** (not an optional subset check), and D004's resolution-audit (fraction of pairs at/near ceiling) is a **formal gate**, not a footnote: if the bounded statistic saturates on the real tensor the way it did on LLmap's own trained representation in D004, energy distance is authoritative for interpretation. Evidence: D006's C7 pilot ran probe AUC on the real, frozen I5 embedding (not D004's proxy) and found 0% of 15 pairs at ceiling — but that's a 15-pair pilot against a 666-pair reality, and D001 was burned once already by skipping this exact audit. See [D007](D007.md). | ✅ |
 | **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ⬜ |
 | **A5** | **New, 2026-09-02, from D005/P1 §F1.** `sampling_universe`'s `do_sample` is a 2-value parameter — I2's literal wording ("no single sampling setting crosses splits") is structurally unsatisfiable for it: any split puts all-greedy decoding in one pool and all-stochastic in the other, which *is* a confound, not a fix. TACC proposes three options (Call B): (1) a documented, explicit carve-out for `do_sample` alone — **TACC recommends this**; (2) reinterpret I2 at the composite-tuple level rather than per-field; (3) implement the paper's `frequency_penalty` dimension so `do_sample` stops being the only lever (bigger change, needs its own D + I7 schema bump). Sets precedent for how "literally unsatisfiable invariant" cases get handled, not just this field. | Option 1 (documented carve-out) — smallest change; I2's actual failure mode is *silent* leakage, and an explicit, disclosed exception isn't that | ✅ Option 1, decided 2026-09-02 by the human |
 
@@ -290,6 +290,24 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   the F1 pilot as confirmation, not as a precondition. D006 S3-S8 now
   fully clear to proceed.
   Decided by: human, 2026-09-06.
+
+[2026-09-06] A3 -- probe AUC primary + mandatory energy-distance companion + gate
+  Decision: keep the original default (5-fold CV AUC of a linear probe,
+  bounded/interpretable) as the primary Sep(.,.) statistic, but energy
+  distance is now a mandatory companion computed on the full tensor (not
+  an optional check on a subset), and D004's resolution-audit (fraction
+  of pairs at/near ceiling) is a formal gate rather than a footnote.
+  Rationale: D006's C7 pilot found probe AUC does not saturate on the
+  real, frozen I5 embedding (0% of 15 pairs at ceiling) -- unlike D004's
+  proxy instrument (LLmap's own trained representation, which saturated
+  95.9%/93.0%) -- so the bounded default is empirically supported here.
+  But 15 pairs is not 666, and D001 was burned once already by trusting a
+  bounded statistic without this exact audit -- so the gate stays
+  mandatory rather than being dropped because the pilot looked clean.
+  Unblocks D007 (build the real separability tensor + mandatory hard-tail
+  check, TODO.md T1.5/T1.6).
+  Decided by: human, 2026-09-06 (design-side recommendation accepted
+  as proposed).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
