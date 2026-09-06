@@ -1,0 +1,18 @@
+{
+ "corpus_status": "PARTIAL",
+ "models": 29,
+ "near_relative_pairs": 48,
+ "i2_values_checked": 4551,
+ "i2_violations": 0,
+ "embedding_rows": 938875,
+ "passed": true,
+ "notes": [
+  "I7: manifest schema_version = cdqd-corpus-v1",
+  "I1: 48 near-relative pairs among the 29 models present (requirement >=3)",
+  "I1 note: recomputed over the PARTIAL corpus, not copied from D001's 65 -- 8 models are absent, and their pairs with them.",
+  "I2: 4,551 generated (entry, collection) values checked; 0 outside their labelled pool",
+  "I3: point clouds are not degenerate (per-dim spread and row uniqueness checked on every shard)",
+  "I3: 938,875 embedding rows == 938,875 responses (one row per response, never averaged)"
+ ],
+ "failures": []
+}
