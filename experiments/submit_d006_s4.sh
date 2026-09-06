@@ -29,11 +29,16 @@ LIVE=$(for j in $(squeue -u "$USER" -h -o "%i"); do
 
 # Models known to be unrunnable, so the auto top-up loop does not resubmit them
 # every few minutes. Each entry needs a reason and a decision owner.
-#   internlm/internlm2_5-7b-chat -- will not load under transformers 4.51.3:
-#     repo ships no tokenizer.json, forcing a SentencePiece->fast conversion
-#     that fails; use_fast=False returns a bool instead of a tokenizer.
-#     Escalated to design side (D006 BLOCKED criterion). Remove this entry
-#     once that is resolved.
+#   internlm/internlm2_5-7b-chat -- ROOT CAUSE FOUND, fix identified, not yet
+#     applied. It is NOT a transformers incompatibility: sentencepiece 0.2.x
+#     rejects internlm2's vocabulary ("piece must not include null character"),
+#     which 0.1.99 accepts. With sentencepiece==0.1.99 AND use_fast=False the
+#     tokenizer loads correctly and renders proper ChatML.
+#     A GLOBAL downgrade is NOT safe: verified that under sp 0.1.99,
+#     EuroLLM-1.7B and Mistral-7B-v0.3 both fail with protobuf descriptor
+#     errors. So this needs a DEDICATED env for this one shard, applied after
+#     the main corpus lands so llmmap-gpu is never altered under running jobs.
+#     Remove this entry once that env exists.
 BLOCKED="internlm/internlm2_5-7b-chat"
 
 n=0
