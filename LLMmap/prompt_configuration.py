@@ -64,6 +64,35 @@ class PromptConf:
         raw_str = " ".join(map(str, self.raw))
         return raw_str
 
+    # ---------------------------------------------------------------------
+    # Identity (D006/F3, Call 4 approved 2026-09-05)
+    #
+    # `PromptConfFactory.sample()` deduplicates through a `set()` and its
+    # docstring promises "n unique confs". Without __eq__/__hash__ Python falls
+    # back to identity hashing, so no freshly-constructed object was ever
+    # rejected and the dedup silently did nothing: measured over 40 seeds, a
+    # 75-config S_build carried a mean of 3.95 duplicate configurations, a third
+    # of them in the sparsest cell (no system prompt, no CoT, no RAG).
+    #
+    # The key is `(raw, sampling_hparams)` -- the *design point*. Deliberately
+    # NOT the materialised `rag_prompt`: that string embeds a randomly drawn
+    # document (`_generate_rag_prompt`), so keying on it would practically never
+    # collide and would leave the defect in place under a new name.
+    # ---------------------------------------------------------------------
+
+    def _signature(self) -> str:
+        # json rather than tuple(): `raw` holds rag templates, which are lists.
+        return json.dumps([self.raw, sorted(self.sampling_hparams.items())],
+                          sort_keys=True, default=str)
+
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, PromptConf):
+            return NotImplemented
+        return self._signature() == other._signature()
+
+    def __hash__(self) -> int:
+        return hash(self._signature())
+
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -264,11 +293,31 @@ class PromptConfFactory:
         so every caller -- including dataset_maker.py's `pool=TEST` call -- drew
         from the TRAIN pool. That defeated the train/test holdout silently, with
         no error, which is invariant I2's stated failure mode.
+
+        D006/F3: dedup here is only real because `PromptConf` now defines
+        `__eq__`/`__hash__` (see its `_signature`). Before that, identity
+        hashing made this loop a no-op. The retry cap exists because with a
+        working `set()` this loop CAN now spin forever if `pool`'s config space
+        is smaller than `n` -- which the identity-hashing version could never
+        do. Failing loudly beats hanging a 37-shard job.
+
+        The cap counts *consecutive* draws that add nothing, not total attempts:
+        a total-attempt budget has to scale with `n` to avoid false failures,
+        which makes it uselessly large exactly when `n` is big. Consecutive
+        misses measure what actually matters -- that the pool is exhausted --
+        independently of `n`.
         """
         assert n > 0
-        s = set()
+        s, misses, max_misses = set(), 0, 5000
         while len(s) != n:
+            before = len(s)
             s.add(self.sample_one(pool))
+            misses = 0 if len(s) > before else misses + 1
+            if misses >= max_misses:
+                raise RuntimeError(
+                    f"could not draw {n} distinct configs from pool '{pool}': "
+                    f"{max_misses} consecutive draws produced no new config "
+                    f"(got {len(s)}). The pool's config space is smaller than n.")
         return list(s)
             
 

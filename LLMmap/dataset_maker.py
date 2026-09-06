@@ -29,14 +29,54 @@ def read_dataset(
     return train, test
 
 
-def make_dataset_entries_for_new_llm(llm, queries, prompt_confs, pool=TRAIN):
+GEN_BATCH_SIZE = 8
+
+
+def make_dataset_entries_for_new_llm(
+    llm,
+    queries,
+    prompt_confs,
+    pool=TRAIN,
+    batch_size=GEN_BATCH_SIZE,
+    max_new_tokens=None,
+):
+    """Generate one entry per prompt-config, batching queries within a config.
+
+    D006/S1 (from D002 §R4): this loop used to call `llm.generate` once per
+    query, which leaves an H200 almost idle -- D002 measured batching at 3.7-6.9x
+    on the same hardware. Every query inside one `prompt_conf` shares that
+    config's sampling hyper-parameters, so they can be decoded as one batch
+    without changing any of them. Batching across *configs* would not be safe;
+    batching within one is.
+
+    Correctness relies on `LLM_huggingface`'s tokenizer being constructed with
+    `padding_side='left'` (`llm.py:30`): the output slice in `generate` uses the
+    padded input width, which is only the true prompt boundary under left
+    padding. Verified empirically in `experiments/d006_s1_verify.py` (greedy
+    batched output must be character-identical to unbatched).
+
+    `max_new_tokens=None` defers to `llm.py`'s module default; D006 passes the
+    C7-decided 200-token ceiling explicitly so the corpus's token budget lives
+    at the call site and in the manifest rather than in a module global.
+    """
+    gen_kw = {} if max_new_tokens is None else {'max_new_tokens': max_new_tokens}
+
     entries = []
     for prompt_conf in tqdm.tqdm(prompt_confs):
         entry = {'dataset':pool, 'llm': llm.llm_name, 'traces': [], 'prompt_conf': prompt_conf.to_dict()}
+
+        prompts, sample_params = [], None
         for query in queries:
             prompt, sample_params = prompt_conf(query, llm)
-            o = llm.generate(prompt, sample_params)[0]
-            entry['traces'].append((query, o))
+            prompts.append(prompt)
+
+        outs = []
+        for i in range(0, len(prompts), batch_size):
+            outs.extend(llm.generate(prompts[i:i+batch_size], sample_params, **gen_kw))
+
+        assert len(outs) == len(queries), \
+            f"batched generation returned {len(outs)} outputs for {len(queries)} queries"
+        entry['traces'] = list(zip(queries, outs))
         entries.append(entry)
     return entries
 
