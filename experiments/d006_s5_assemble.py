@@ -148,11 +148,20 @@ def validate(model, q0_sha, n_queries, split_schema):
     return rec
 
 
-def _modal_env(shards):
-    """The environment most shards ran under; anything else is a deviation."""
-    envs = collections.Counter(json.dumps(s["env"], sort_keys=True)
-                               for s in shards if s.get("env"))
-    return json.loads(envs.most_common(1)[0][0]) if envs else None
+def _reference_env():
+    """The environment S5 itself is running in -- i.e. llmmap-gpu, the project
+    default. Used as the reference a shard's env is compared against.
+
+    An earlier version took the MODE over shards that recorded an env. That was
+    wrong and actively misleading: per-shard env capture landed late, so only two
+    shards had the field, and a mode over two samples picked internlm's
+    non-default env as "modal" -- labelling the shard that ran in the STANDARD
+    environment as the deviation, and the deviating one as normal. Comparing
+    against a known reference cannot invert like that."""
+    import sentencepiece, transformers, sys
+    return dict(sentencepiece=sentencepiece.__version__,
+                transformers=transformers.__version__,
+                python=sys.version.split()[0])
 
 
 def main():
@@ -205,8 +214,8 @@ def main():
                                        if s.get("chat_template_source")
                                        and s["chat_template_source"] != "model's own"],
             non_default_env=[dict(model=s["model"], env=s["env"]) for s in good
-                             if s.get("env") and s["env"] != _modal_env(good)],
-            modal_env=_modal_env(good),
+                             if s.get("env") and s["env"] != _reference_env()],
+            reference_env=_reference_env(),
             # Honest provenance gap, recorded rather than back-filled with an
             # assumption. Per-shard env capture was added partway through S4, so
             # shards generated before it carry no env record. They ran under
