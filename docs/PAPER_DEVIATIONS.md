@@ -32,65 +32,96 @@ released artifact, paper's own value not established here), or
 
 ## Deviations
 
-### 1. Response generation length — `[code, llm.py:9]`, paper's value UNVERIFIED
+### 1. Response generation length — `[paper, §7.1/§6.1.2 — CONFIRMED ABSENT]`
 
 **Ours:** 200-token generation ceiling (decided 2026-09-06, `DECISIONS.md`
 C7). **Released code:** `max_new_tokens=100` (`llm.py:9`); the shipped
-`confs/default.json`'s 650-char figure was measured inert (D002 §R4— real
-responses top out at 667 chars, the 100-token cap binds first). **The
-paper's own value is not established anywhere in this project.** D006/P1
-§F1 and `plans/D006-P1.md:157` both cite "100 tokens" as a fact about the
-*shipped corpus*, not as a citation to the paper — this project has never
-verified what the published experiments actually used. Treat "100" as a
-code default we are deliberately exceeding, not as "the paper's setting."
+`confs/default.json`'s 650-char figure was measured inert (D002 §R4 —
+real responses top out at 667 chars, the 100-token cap binds first).
+**Checked directly against the paper text (2026-09-06, full-text search of
+the extracted PDF): no response-length or `max_new_tokens`-equivalent
+parameter is specified anywhere.** This upgrades the earlier "unverified"
+flag to a confirmed fact about the paper: **it does not report this
+setting at all.** "100 tokens" is, and remains, purely a released-code
+default — there is no paper value to compare against, only the code's.
 
 **Rationale for 200:** generation is causal (token *t* depends only on
 tokens `<t`), so a 200-token response truncated to 100 is byte-identical
 to generating at 100 directly — only the *ceiling* is a one-way door once
 frozen into the corpus under I6/I7. The 100-token default was measured to
 censor ~38 percentage points of responses (D006/P1 §F1). **This is an
-extension beyond the code's default, explicitly not a reproduction of it**
-— human-decided 2026-09-06, aware it is a deviation.
+extension beyond the code's default; the paper offers no reproduction
+target to deviate from in the first place.**
 
-### 2. Model universe — `[UNVERIFIED against the paper; code gives 52]`
+### 2. Model universe — `[paper, §7.1: 42 models; code ships 52]`
 
 **Ours:** 37 open-weight models, `params_b ≤ 14`, no 70B-class pair, no
-closed-source (`DECISIONS.md` A1, decided 2026-09-05). **Released code**
-ships behavioral templates for 52 models (`results/D001/model_metadata.csv`),
-including 70B-class (the paper's own motivating pair, Llama-3-70B ↔
-Smaug-Llama-3-70B) and closed-source rows (GPT/Claude, `proprietary=True`).
-**Whether this 52-model list is identical to what the published paper
-itself evaluated, or a superset/subset the released code happens to ship,
-is not verified here.**
+closed-source (`DECISIONS.md` A1, decided 2026-09-05). **The paper's own
+universe (§7.1, Table G.1): 42 LLM versions** — "primarily... popular
+open-source models" plus, for closed-source, "the three main models
+offered by the two most popular vendors" (OpenAI, Anthropic) = 6
+closed-source, **36 open-source**. **Released code ships templates for 52**
+(`results/D001/model_metadata.csv`), including the paper's own 6
+closed-source rows (`proprietary=True`) but evidently more open-source
+models than the paper reported (46 vs. 36) — the shipped artifact is a
+**superset** of the paper's own reported universe, not identical to it
+(likely models added to the repo post-publication; not investigated
+further here). The paper's own motivating pair, Llama-3-70B ↔
+Smaug-Llama-3-70B, **is** among its 42 — confirmed genuinely in-paper, not
+just in the released code's superset.
 
-**Rationale:** 70B-class excluded on a memory constraint (D002 §R5 — does
-not fit one GH200 at full precision), not a decision to avoid it in
-principle; kept excluded after data (not just cost) showed the single
-hardest pair in the *entire* universe is already ≤14B
-(`Falcon3-10B↔Falcon3-7B`, D004). Closed-source excluded per A2's
-long-standing default (cost/access), still formally open. **This means
-our headline demonstration case is not the paper's own** (Llama-3-70B ↔
-Smaug) — cite `Falcon3-10B↔Falcon3-7B` instead, and say so explicitly if
-a reviewer would expect the paper's example.
+**Rationale for ours (37, ≤14B, no 70B, no closed-source):** 70B-class
+excluded on a memory constraint (D002 §R5 — does not fit one GH200 at full
+precision), not a decision to avoid it in principle; kept excluded after
+data (not just cost) showed the single hardest pair in the *entire*
+52-model shipped universe is already ≤14B (`Falcon3-10B↔Falcon3-7B`,
+D004). Closed-source excluded per A2's long-standing default (cost/API
+access), still formally open. **This means our headline demonstration
+case is not the paper's own** (Llama-3-70B ↔ Smaug, genuinely in the
+paper's 42) — cite `Falcon3-10B↔Falcon3-7B` instead, and say so explicitly
+if a reviewer would expect the paper's example.
 
-### 3. Separability representation — I5 vs. LLmap's own classifier
+### 3. Separability representation — same frozen embedding as the paper; we stop one stage earlier
 
-**Ours:** frozen `multilingual-e5-large-instruct`, 1024-d, a generic
-sentence embedding applied to raw response text (invariant I5). **LLmap's
-own instrument:** a 384-d classifier *contrastively trained specifically
-to separate these models* (`LLMmap/templates.py`). We used LLmap's own
-classifier only as a **proxy instrument** in D001/D004 to test whether an
-exploitable hard tail exists at all — explicitly flagged in D004's Review
-as **not** the representation the real project uses, with the bias
-direction stated (a classifier trained to separate is biased toward
-*finding* separation, so D004's positive result is evidence despite that
-bias, not because of it).
+**Corrected 2026-09-06 — the previous version of this entry was wrong to
+frame I5 as "a generic embedding, different from LLmap's."** Read directly
+from the paper (§6.1, Fig. 3): LLmap's own inference model is a
+**two-stage pipeline**, and **stage 1 is exactly our I5.**
 
-**Rationale:** using LLmap's own trained classifier as the *actual*
-Sep(·,·) instrument would be circular — it's trained on exactly the
-models under test. I5 must be frozen and untrained-on-the-universe by
-construction (invariant I5's own rationale: comparability across rounds,
-not fit to the test set).
+- **Stage 1 — embedding `E`, frozen, not tuned in training (paper's own
+  words, Fig. 3 caption): `multilingual-e5-large-instruct`, 1024-d.**
+  This is invariant I5, verbatim — not a substitute we chose instead of
+  the paper's method, but a direct reuse of it.
+- **Stage 2 — a *trained* projection (`fp`, 1024→`m=384`) + a small
+  self-attention "siamese"/classifier network (~8M params)**, fit
+  contrastively (open-set) or supervised (closed-set) **per query
+  strategy** — this is what D001/D004's `f_test.npy`/`templates.py`
+  actually is (the 384-d figure is the paper's own `m`, confirmed), and
+  it's what CDQD avoids retraining per candidate during selection
+  (`METHOD.md §6.3`'s "~372 training runs" cost).
+
+**Ours:** Phases 1–3 (query selection, incl. D006's corpus) compute
+`Sep(·,·)` directly on **stage-1 `E`-embeddings** — the same frozen model,
+stopped one stage earlier than the paper's full trained pipeline.
+**Phase 4 (`TODO.md` T4.1, "train inference models on the candidate
+strategies") runs the full paper pipeline** — `E` + a freshly trained
+projection/siamese network — once per candidate query-selection strategy,
+holding the training procedure identical and varying only which queries
+were used to build it. **This is the "hold embed/classify constant, vary
+only query strategy" comparison — it lives in Phase 4, not throughout the
+pipeline**, and Phase 4 has not started (blocked behind Phase 1–3).
+
+**Rationale for stopping at stage 1 during selection:** using the fully
+*trained* stage-2 network as the selection-time instrument would be
+circular (it's fit on the exact models under test, and a query strategy's
+tensor would depend on a network already shaped by that strategy's own
+queries) — and would reintroduce the retraining cost CDQD exists to avoid.
+D001/D004 used the *paper's own trained* stage-2 output as a proxy
+instrument specifically to sanity-check the hard-tail premise before
+committing to the real corpus — explicitly flagged there as biased toward
+*finding* separation (trained-to-separate representation), which is why a
+positive result (D004: TAIL CONFIRMED) was treated as comparatively strong
+evidence despite, not because of, that bias.
 
 ### 4. Query pool construction — `[paper, Table F.1 for baselines]`
 
@@ -132,18 +163,26 @@ already requires this be stated in any writeup (TODO.md T4.4's planned
 "honest comparability statement" deliverable is this same point, not yet
 written as prose).
 
-### 7. Sampling-hyperparameter split — a paper/code deviation *and* our own fix
+### 7. Sampling-hyperparameter split — a paper/code deviation *and* our own fix — `[paper, §7.1, confirmed direct 2026-09-06]`
 
-The paper's own §7.1 (per project notes referencing it) describes
-splitting sampling hyperparameters `H` into `Htrain`/`Htest`. **The
-released code never implemented this at all** (D005's finding — a
-paper-vs-code gap that predates this project, not something we
-introduced). Our fix (D005) restored a real split for `temperature`, but
-found `do_sample`'s only 2 values can't be disjointly split without
-creating a worse confound (all-greedy in one pool, all-stochastic in the
-other). Resolved as a **documented, explicit exception** (`do_sample`
-shared across pools — `DECISIONS.md` A5) rather than either forcing a
-fake split or leaving the gap silent.
+**Confirmed directly against the paper text:** §7.1 defines
+`H = [0,1] × [0.65,1]` — **`temperature` × `frequency_penalty`**, two
+continuous parameters — and states "we split `H` in two equal sized sets
+`Htrain` and `Htest`." **The released code implements neither the split
+nor `frequency_penalty` itself** — `sampling_universe` only has
+`temperature`/`do_sample`, and `do_sample` (binary, sampling on/off) isn't
+in the paper's `H` at all (a released-code parameter with no paper
+counterpart, not the reverse). This is a paper-vs-code gap that predates
+this project (D005's finding), not something we introduced.
+
+Our fix (D005) restored a real split for `temperature`. `do_sample` — the
+code's own addition, not the paper's — can't be disjointly split (only 2
+values; would confound decoding mode with split membership). Resolved as
+a **documented, explicit exception** (shared across pools — `DECISIONS.md`
+A5) rather than forcing a fake split or leaving the gap silent.
+`frequency_penalty` remains unimplemented in the released code; matching
+the paper's `H` exactly would mean adding it, not just fixing the split
+mechanism — noted, not undertaken (would need its own D + I7 bump).
 
 ### 8. Cost/training-time framing — already covered, cross-referenced
 
@@ -156,15 +195,22 @@ is checkpointable, training does not; that's the actual saving.
 
 ## Known gaps in this ledger (flag rather than guess)
 
-- **Item 1's paper-value gap is the most consequential unverified point in
-  this file.** If a specific token/length limit for the paper's own
-  experiments is ever found (in the paper text, an appendix, or
-  supplementary material), record it here immediately with a citation —
-  until then, "100 tokens" in any of our docs means *the code's default*,
-  not a claim about the paper.
-- Item 2's exact paper-reported model count/list is likewise unverified
-  against `model_metadata.csv`'s 52 — that list is a fact about the
-  released artifact.
+- **The paper PDF itself was checked directly (2026-09-06)** — full-text
+  search of an extracted copy — resolving items 1, 2, 3, and 7 above from
+  "unverified" to confirmed facts, one of which (item 3) corrected a
+  previously-wrong framing rather than just filling in a blank. The PDF
+  lives at `docs/LLMmap Fingerprinting for Large Language Models.pdf` in
+  the **main checkout**, not this worktree (untracked, same pattern as
+  earlier onboarding files) — extract with `pdftotext -layout` before
+  grepping; the `Read` tool's PDF path needs `poppler-utils`
+  (`pdftoppm`), not present in this environment.
+- **Item 2's exact model-list correspondence (which 46 open-source models
+  the code adds beyond the paper's 36) is not enumerated** — confirmed
+  the *counts* differ (42 paper vs. 52 code, with the same 6 closed-source
+  rows) but not which specific open-source models are code-only additions.
+  Low priority — doesn't affect our own A1 (already restricted to ≤14B,
+  open-weight), only matters if a writeup needs to state precisely which
+  paper models we do/don't include.
 - `DECISIONS.md` D4 flags that CVaR/robust-submodular hardness citations
   (`METHOD.md §6.1`) are themselves unverified against the literature —
   a related but distinct kind of unverified claim (theory citation, not a
