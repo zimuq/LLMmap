@@ -63,8 +63,9 @@ human to copy-paste files between sessions.
   `docs/REVIEW_TEMPLATE.md`: a short **"For you"** section the human can
   read in under a minute, then a **technical log** underneath for
   audit / for TACC to consume. Post it as `## Review` in the D file.
-- Maintain `docs/METHOD.md`, `docs/DECISIONS.md`, `docs/FINDINGS.md` in
-  this repo, and `TODO.md` **locally, outside this repo** — TACC never
+- Maintain `docs/METHOD.md`, `docs/DECISIONS.md`, `docs/FINDINGS.md`,
+  `docs/PAPER_DEVIATIONS.md` in this repo, and `TODO.md` **locally,
+  outside this repo** — TACC never
   sees it, to avoid scope creep from an agent seeing the full backlog.
 - Keep `docs/PLAN.md`'s index table current as D's open, run, and close.
 - Check `docs/TACC_NOTES.md` each session; fix what's flagged there and

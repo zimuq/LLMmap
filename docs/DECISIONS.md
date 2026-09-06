@@ -82,7 +82,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |
 | C5 | Outer-loop params `T, N, n_keep, θ, ε` | T=3–5, N=40, n_keep=3, θ from tensor quantile, ε=0.005 | ⬜ |
 | C6 | Generator LLM | `allenai/OLMo-2-1124-13B-Instruct` — set for D003's query-pool generation (2026-09-02, design-side, strict decoupling from the universe over TACC's Qwen3-14B default; see D003 `## Review`). Re-evaluate if Phase 3's targeted-generation step (`METHOD.md §5.4` step D) needs a different tradeoff. | ✅ (for D003; Phase 3 use TBD) |
-| C7 | Response truncation | 650 chars, matching the released `confs/default.json`. **D002 §R4 finding (2026-09-02): currently inert** — measured shipped response lengths top out at 667 chars (p99=584, mean=352), and the real cap is `max_new_tokens=100` in `llm.py:9`, never 650 chars. **Now urgent (D006/P1 §F1, 2026-09-05):** the 100-token default would freeze ~38 percentage points of censored responses into the real corpus, irreversibly under I6/I7. TACC recommends a 200-token *generation ceiling* (truncation below it stays free/reversible, since generation is causal — a 200-token response truncated to 100 is byte-identical to generating at 100 directly) plus a small pilot to check whether raising the cap dilutes the fingerprint signal. Design-side agrees with the recommendation but this is the human's call. **Awaiting human decision — blocks D006 §S3–S8.** | ⬜ |
+| C7 | Response truncation | **Decided 2026-09-06: 200-token generation ceiling** (up from the released code's inert 650-char / actual 100-token default, `llm.py:9`). Deliberately beyond the paper/released code's own setting — an extension, not a reproduction; justified because generation is causal (200→100 truncation is free and reversible; the reverse isn't) and the 100-token default was measured to censor ~38 points of the corpus (D006/P1 §F1). TACC runs the small pilot (100/200/400 via truncation, ~6 models) as a confirmatory check on this choice, not as what the choice depends on. See `docs/PAPER_DEVIATIONS.md`. | ✅ |
 
 ## D. Deferred
 
@@ -282,6 +282,14 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   Decided by: design-side (F2-F6, Call 1, Call 2, routine -- TACC's own
   P1 summary table already triaged these as "design side"); F1 escalated
   to human (see C7 above).
+
+[2026-09-06] C7 -- 200-token generation ceiling, decided; D006 fully unblocked
+  Decision: 200 tokens, per TACC's recommendation. Explicitly an extension
+  beyond the paper/released code's own setting, not an attempt to
+  reproduce it -- accepted as a deliberate, disclosed deviation. TACC runs
+  the F1 pilot as confirmation, not as a precondition. D006 S3-S8 now
+  fully clear to proceed.
+  Decided by: human, 2026-09-06.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
