@@ -4,6 +4,13 @@
 # slots free. Largest models first so the long pole starts in round 1.
 set -euo pipefail
 cd /work/11280/zimuq1/vista/LLMmap-project/LLMmap
+
+# Single-instance lock. This script is run by an auto top-up monitor, and two
+# concurrent runs could both read the live-job list before either submits,
+# double-submitting a model -- two processes appending to one shard file. Fail
+# fast instead of racing.
+exec 9>/tmp/.d006_submit.lock
+flock -n 9 || { echo "another submitter is running; skipping this pass"; exit 0; }
 mkdir -p results/D006/shards data/corpus_v1
 
 MODELS=$(python - <<'PY'
