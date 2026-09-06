@@ -36,4 +36,43 @@
 [18/37] ok    google/gemma-7b-it
 Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]Fetching 18 files: 100%|██████████| 18/18 [00:00<00:00, 3065.14it/s]
 [19/37] ok    internlm/internlm2_5-7b-chat
-Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  15%|█▌        | 2/13 [00:00<00:00, 12.88it/s]
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  15%|█▌        | 2/13 [00:00<00:00, 12.88it/s]Fetching 13 files:  15%|█▌        | 2/13 [00:20<00:00, 12.88it/s]Fetching 13 files:  31%|███       | 4/13 [00:39<01:44, 11.57s/it]Fetching 13 files:  54%|█████▍    | 7/13 [00:40<00:32,  5.38s/it]Fetching 13 files: 100%|██████████| 13/13 [00:40<00:00,  3.14s/it]
+[20/37] ok    meta-llama/Llama-2-7b-chat-hf
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files:  50%|█████     | 6/12 [00:28<00:28,  4.80s/it]Fetching 12 files: 100%|██████████| 12/12 [00:28<00:00,  2.40s/it]
+[21/37] ok    mistralai/Mistral-7B-Instruct-v0.1
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files:  50%|█████     | 7/14 [00:19<00:19,  2.80s/it]Fetching 14 files:  57%|█████▋    | 8/14 [00:21<00:16,  2.67s/it]Fetching 14 files: 100%|██████████| 14/14 [00:21<00:00,  1.54s/it]
+[22/37] ok    mistralai/Mistral-7B-Instruct-v0.2
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 2939.42it/s]
+[23/37] ok    mistralai/Mistral-7B-Instruct-v0.3
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 3543.03it/s]
+[24/37] ok    openchat/openchat_3.5
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 2769.43it/s]
+[25/37] ok    tiiuae/Falcon3-7B-Instruct
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:  36%|███▋      | 4/11 [00:00<00:00, 16.69it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 45.87it/s]
+[26/37] ok    togethercomputer/Llama-2-7B-32K-Instruct
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  23%|██▎       | 3/13 [00:00<00:00, 13.21it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 54.81it/s]
+[27/37] ok    microsoft/Phi-3-mini-128k-instruct
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  23%|██▎       | 3/13 [00:00<00:00, 13.54it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 58.63it/s]
+[28/37] ok    microsoft/Phi-3-mini-4k-instruct
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  23%|██▎       | 3/13 [00:00<00:00, 12.01it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 52.04it/s]
+[29/37] ok    microsoft/Phi-3.5-mini-instruct
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 3820.72it/s]
+[30/37] ok    Qwen/Qwen2.5-3B-Instruct
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 3127.16it/s]
+[31/37] ok    meta-llama/Llama-3.2-3B-Instruct
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files:  11%|█         | 1/9 [00:00<00:01,  6.13it/s]Fetching 9 files:  33%|███▎      | 3/9 [00:11<00:26,  4.35s/it]Fetching 9 files: 100%|██████████| 9/9 [00:11<00:00,  1.31s/it]
+[32/37] ok    google/gemma-1.1-2b-it
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files:  11%|█         | 1/9 [00:00<00:01,  5.36it/s]Fetching 9 files:  33%|███▎      | 3/9 [00:13<00:28,  4.83s/it]Fetching 9 files: 100%|██████████| 9/9 [00:13<00:00,  1.45s/it]
+[33/37] ok    google/gemma-2b-it
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 3801.16it/s]
+[34/37] ok    utter-project/EuroLLM-1.7B-Instruct
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 2963.27it/s]
+[35/37] ok    Qwen/Qwen2-1.5B-Instruct
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 2687.89it/s]
+[36/37] ok    meta-llama/Llama-3.2-1B-Instruct
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 3649.03it/s]
+[37/37] ok    Qwen/Qwen2.5-0.5B-Instruct
+
+staged ok=37 fail=0
+569G	/scratch/11280/zimuq1/hf-cache
+=== prestage-all done Sun Sep  6 04:45:14 PM CDT 2026 ===
