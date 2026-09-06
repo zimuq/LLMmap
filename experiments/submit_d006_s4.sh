@@ -27,8 +27,20 @@ LIVE=$(for j in $(squeue -u "$USER" -h -o "%i"); do
          scontrol write batch_script "$j" - 2>/dev/null | grep -oP -- '--model \K\S+' | head -1
        done)
 
+# Models known to be unrunnable, so the auto top-up loop does not resubmit them
+# every few minutes. Each entry needs a reason and a decision owner.
+#   internlm/internlm2_5-7b-chat -- will not load under transformers 4.51.3:
+#     repo ships no tokenizer.json, forcing a SentencePiece->fast conversion
+#     that fails; use_fast=False returns a bool instead of a tokenizer.
+#     Escalated to design side (D006 BLOCKED criterion). Remove this entry
+#     once that is resolved.
+BLOCKED="internlm/internlm2_5-7b-chat"
+
 n=0
 for m in $MODELS; do
+  if echo "$BLOCKED" | grep -qxF "$m"; then
+    echo "BLOCKED (see submitter comment): $m"; continue
+  fi
   slug=${m//\//__}
   if echo "$LIVE" | grep -qxF "$m"; then
     echo "skip (job already queued/running): $m"; continue
