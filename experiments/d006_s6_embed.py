@@ -61,18 +61,33 @@ def main():
 
     os.makedirs(EMB_DIR, exist_ok=True)
     manifest_path = os.path.join(CORPUS_DIR, "corpus_manifest.json")
-    if os.path.exists(manifest_path):
-        m = json.load(open(manifest_path))
-        if m.get("status") != "READY":
-            print(f"WARNING: corpus manifest status is {m.get('status')}, not "
-                  f"READY. Embedding a PARTIAL corpus is fine for inspection, "
-                  f"but the result MUST NOT be consumed downstream (Call 2).")
+    if not os.path.exists(manifest_path):
+        raise SystemExit("No corpus_manifest.json -- run S5 first. S6 embeds only "
+                         "shards S5 has VALIDATED.")
+    m = json.load(open(manifest_path))
+    if m.get("status") != "READY":
+        print(f"WARNING: corpus manifest status is {m.get('status')}, not READY. "
+              f"Embedding a PARTIAL corpus is fine for inspection, but the result "
+              f"MUST NOT be consumed downstream (Call 2).")
+
+    # Embed ONLY shards S5 marked VALIDATED. Globbing *.jsonl would pick up
+    # shards a running job is still appending to -- and because this script skips
+    # any shard whose .npy already exists, such a truncated embedding would never
+    # be corrected. Keying on the manifest makes "complete" the precondition
+    # rather than "file present".
+    validated = {s["model"].replace("/", "__"): s for s in m["models"]
+                 if s["status"] == "VALIDATED"}
 
     tok = AutoTokenizer.from_pretrained(I5_MODEL)
     mdl = AutoModel.from_pretrained(I5_MODEL, torch_dtype=torch.float16).cuda().eval()
 
-    shards = sorted(glob.glob(os.path.join(CORPUS_DIR, "*.jsonl")))
-    print(f"{len(shards)} shard(s) to embed, dtype={args.dtype}", flush=True)
+    on_disk = sorted(glob.glob(os.path.join(CORPUS_DIR, "*.jsonl")))
+    shards = [p for p in on_disk
+              if os.path.basename(p)[:-len(".jsonl")] in validated]
+    skipped = len(on_disk) - len(shards)
+    print(f"{len(shards)} VALIDATED shard(s) to embed, dtype={args.dtype}"
+          + (f" ({skipped} on disk but not validated -- skipped)" if skipped else ""),
+          flush=True)
 
     summary = []
     for jl in shards:
@@ -103,6 +118,10 @@ def main():
                 e = torch.nn.functional.normalize(e, dim=-1)
                 out[i:i+len(e)] = e.float().cpu().numpy().astype(store_dtype)
 
+        exp = validated[slug]["n_rows"]
+        assert len(texts) == exp, (
+            f"{slug}: read {len(texts)} responses but S5 validated {exp}. The "
+            f"shard changed under us -- refusing to write a mismatched embedding.")
         np.save(out_npy, out)
         json.dump(dict(model=slug.replace("__", "/"), n=len(index),
                        dim=I5_DIM, dtype=args.dtype,
