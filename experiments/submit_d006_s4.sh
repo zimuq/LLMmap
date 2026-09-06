@@ -24,6 +24,14 @@ for m in $MODELS; do
      grep -q '"status": "COMPLETE"' "data/corpus_v1/${slug}.status.json" 2>/dev/null; then
     echo "skip (already COMPLETE): $m"; continue
   fi
+  # Skip models whose weights are not staged. docs/ENV.md: compute-node egress
+  # to the HF Hub is untested, so a shard must never be the thing that
+  # discovers a model is ungated-but-undownloaded. Re-running this script after
+  # the gate clears picks them up.
+  cachedir="$SCRATCH/hf-cache/hub/models--${m//\//--}"
+  if [ ! -d "$cachedir" ] || [ -z "$(find "$cachedir" \( -name '*.safetensors' -o -name '*.bin' \) -print -quit 2>/dev/null)" ]; then
+    echo "SKIP (weights not staged, likely gated): $m"; continue
+  fi
   n=$((n+1))
   sbatch --parsable \
     -J "d6-${slug:0:20}" -p gh -N 1 -n 1 -t 12:00:00 \

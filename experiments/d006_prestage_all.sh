@@ -19,7 +19,7 @@ ok=fail=0
 for i,r in enumerate(rows,1):
     m=r["model"]
     try:
-        snapshot_download(m, allow_patterns=['*.json','*.safetensors','*.model','*.txt'],
+        snapshot_download(m, allow_patterns=['*.json','*.safetensors','*.bin','*.model','*.txt'],
                           max_workers=4)
         ok+=1; print(f"[{i}/37] ok    {m}", flush=True)
     except Exception as e:

@@ -92,6 +92,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--limit-configs", type=int, default=None,
+                    help="SMOKE TEST ONLY: generate at most N configs per pool. "
+                         "Never use for the real corpus -- the shard will "
+                         "correctly refuse to report COMPLETE.")
     args = ap.parse_args()
 
     os.makedirs(CORPUS_DIR, exist_ok=True)
@@ -146,6 +150,8 @@ def main():
             for pool in (BUILD, VAL, TEST):
                 todo = [(i, c) for i, c in enumerate(confs[pool])
                         if (pool, i) not in done]
+                if args.limit_configs:
+                    todo = todo[:args.limit_configs]
                 print(f"{pool}: {len(todo)} configs to generate", flush=True)
                 for i, conf in todo:
                     ent = make_dataset_entries_for_new_llm(
