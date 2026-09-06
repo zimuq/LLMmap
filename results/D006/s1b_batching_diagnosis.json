@@ -1,0 +1,57 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "n_tokens": 60,
+  "T1_determinism_unbatched": {
+    "n": 8,
+    "identical": 8,
+    "passed": true
+  },
+  "T2_equal_length_batch": {
+    "n": 7,
+    "distinct_prompt_lengths": [
+      57
+    ],
+    "zero_padding": true,
+    "matches": 7,
+    "mismatches": 0
+  },
+  "T3_divergence_position": {
+    "n": 40,
+    "mismatches": 18,
+    "first_diff_min": 1,
+    "first_diff_median": 15.5,
+    "first_diff_mean": 20.89,
+    "frac_diverging_at_token_0": 0.0
+  },
+  "T4_padding_correlation": {
+    "mismatch_rate_padded": 0.486,
+    "mismatch_rate_unpadded": 0.2,
+    "n_padded": 35,
+    "n_unpadded": 5
+  },
+  "T5_logit_level": {
+    "n": 8,
+    "max_abs_logit_delta": 0.34375,
+    "median_abs_logit_delta": 0.23877,
+    "argmax_flips": 0,
+    "median_top2_margin": 0.125,
+    "interpretation": "delta ~1e-2 with flips only where margin < delta => bf16 non-associativity. Gross delta => masking bug."
+  },
+  "T6_fp32_control": {
+    "n": 16,
+    "matches": 16,
+    "mismatches": 0,
+    "bf16_mismatch_rate": 0.45
+  },
+  "verdict": {
+    "votes": {
+      "equal_length_still_mismatches": false,
+      "small_logit_delta": true,
+      "diverges_late": true,
+      "fp32_reduces_mismatch": true
+    },
+    "votes_for_numerics": 3,
+    "of": 4,
+    "conclusion": "NUMERICAL (fp non-associativity) -- batching is mathematically equivalent; corpus valid but not bit-reproducible"
+  }
+}

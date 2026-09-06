@@ -45,7 +45,17 @@ CORPUS_DIR = os.environ.get("D006_CORPUS", "./data/corpus_v1")
 TOKEN_CEILING = 200                       # C7, decided 2026-09-06
 SPLIT_SIZES = {BUILD: 75, VAL: 25, TEST: 25}   # C4
 SEED = 20260906
-BATCH = int(os.environ.get("D006_BATCH", "8"))
+# D006/S1c: ONE batch size for the whole corpus, never per-shard. S1's A3 found
+# mean response length dropping 18% at B=32, and S1b supplied a mechanism that
+# would make that systematic (padded sequences diverge more under bf16; larger
+# batches carry more padding; more perturbation flips more near-ties, including
+# into an early EOS). If length depends on B, then B is a corpus variable -- and
+# because larger models need smaller B to fit, B would correlate with model size,
+# i.e. a generation artifact confounded with exactly what this project
+# fingerprints. So: on OOM a shard STOPS AND REPORTS. It does not quietly drop
+# its own B. This supersedes D006/P1's failure-handling line, which said the
+# opposite before the evidence existed.
+CORPUS_BATCH = 8          # set by S1c; recorded in every shard's status file
 
 
 def shard_paths(model):
@@ -95,7 +105,7 @@ def main():
         print(f"resuming: {len(done)} configs already complete", flush=True)
 
     status = dict(model=args.model, status="RUNNING", token_ceiling=TOKEN_CEILING,
-                  batch=BATCH, n_queries=len(queries), split_sizes=SPLIT_SIZES,
+                  batch=CORPUS_BATCH, n_queries=len(queries), split_sizes=SPLIT_SIZES,
                   n_expected=n_expected, q0_sha256=q0doc["sha256"],
                   split_schema=pc.split_schema_version,
                   started=time.strftime("%Y-%m-%dT%H:%M:%S"))
@@ -104,7 +114,7 @@ def main():
     if args.dry_run:
         print(f"[dry-run] {args.model}: {n_expected} generations "
               f"({len(queries)} queries x {sum(SPLIT_SIZES.values())} configs) "
-              f"@ {TOKEN_CEILING} tok, batch {BATCH}")
+              f"@ {TOKEN_CEILING} tok, batch {CORPUS_BATCH}")
         return
 
     t0 = time.time()
@@ -128,7 +138,7 @@ def main():
                 for i, conf in todo:
                     ent = make_dataset_entries_for_new_llm(
                         llm, queries, [conf], pool=pool,
-                        batch_size=BATCH, max_new_tokens=TOKEN_CEILING)[0]
+                        batch_size=CORPUS_BATCH, max_new_tokens=TOKEN_CEILING)[0]
                     ent["config_index"] = i
                     ent["model"] = args.model
                     fh.write(json.dumps(ent) + "\n")
@@ -162,6 +172,16 @@ def main():
               f"{len(seen)} configs, {empty} empty, {wall/3600:.2f} node-h, "
               f"{status['gen_per_s']} gen/s", flush=True)
 
+    except torch.cuda.OutOfMemoryError:
+        # Deliberately NOT caught by retrying at a smaller batch -- see
+        # CORPUS_BATCH above. A per-model batch size is a confound, not a
+        # workaround. Surface it and let a human decide corpus-wide.
+        status.update(status="FAILED_OOM", error=traceback.format_exc(),
+                      wall_s=round(time.time() - t0, 1))
+        print(f"SHARD OOM at the corpus-wide batch size {CORPUS_BATCH}. "
+              f"NOT retrying smaller -- that would make batch size a per-model "
+              f"variable correlated with model size. Stop and report.",
+              flush=True)
     except Exception:
         status.update(status="FAILED", error=traceback.format_exc(),
                       wall_s=round(time.time() - t0, 1))
