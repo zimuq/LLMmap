@@ -45,17 +45,29 @@ CORPUS_DIR = os.environ.get("D006_CORPUS", "./data/corpus_v1")
 TOKEN_CEILING = 200                       # C7, decided 2026-09-06
 SPLIT_SIZES = {BUILD: 75, VAL: 25, TEST: 25}   # C4
 SEED = 20260906
-# D006/S1c: ONE batch size for the whole corpus, never per-shard. S1's A3 found
-# mean response length dropping 18% at B=32, and S1b supplied a mechanism that
-# would make that systematic (padded sequences diverge more under bf16; larger
-# batches carry more padding; more perturbation flips more near-ties, including
-# into an early EOS). If length depends on B, then B is a corpus variable -- and
-# because larger models need smaller B to fit, B would correlate with model size,
-# i.e. a generation artifact confounded with exactly what this project
-# fingerprints. So: on OOM a shard STOPS AND REPORTS. It does not quietly drop
-# its own B. This supersedes D006/P1's failure-handling line, which said the
-# opposite before the evidence existed.
-CORPUS_BATCH = 8          # set by S1c; recorded in every shard's status file
+# D006/S1c: batch size, set from measurement.
+#
+# S1's A3 sweep suggested mean response length fell 18% at B=32, and I proposed a
+# mechanism (more padding -> more bf16 perturbation -> more early-EOS flips) that
+# would have made batch size a corpus variable confounded with model size. S1c
+# tested it properly -- 96 PAIRED prompts, token counts rather than chars, both
+# the smallest and largest models -- and REFUTED it. Paired deltas wander +-4
+# tokens around zero with no trend (B=16 is longer than B=1), and mean_tok on the
+# 14B is flat at 84.1/81.7/83.2/82.9 across B=8..64. The A3 signal was a
+# small-sample artifact (32 prompts, chars).
+#
+# So batch size does NOT shift the response distribution, and a per-model B would
+# be statistically harmless -- equivalent to a different random seed. B is pinned
+# corpus-wide anyway because it costs nothing and removes a variable, NOT because
+# varying it would confound anything. On OOM a shard still stops and reports
+# rather than silently halving B, so that the choice stays visible and
+# corpus-wide -- but that is tidiness, not a correctness requirement.
+#
+# 64 is the largest value MEASURED to fit the largest model (Phi-3-medium 14B:
+# 32.75 GB peak of 95 GB visible, 7.873 gen/s, 6.2x over B=8). B=128 was not
+# tested and may well be faster; going past the measured range is exactly the
+# extrapolation this plan has criticised elsewhere, so it is left on the table.
+CORPUS_BATCH = 64         # S1c-measured; recorded in every shard's status file
 
 
 def shard_paths(model):

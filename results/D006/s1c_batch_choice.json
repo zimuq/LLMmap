@@ -1,0 +1,115 @@
+{
+  "Q1_length_vs_batch_small_model": {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "n_prompts": 96,
+    "max_new_tokens": 200,
+    "rows": [
+      {
+        "batch": 1,
+        "gen_per_s": 0.386,
+        "peak_gb": 1.03,
+        "mean_tokens": 119.6,
+        "median_tokens": 136.0,
+        "frac_hit_ceiling": 0.344,
+        "frac_early_eos": 0.656,
+        "mean_paired_delta_vs_b1": 0.0,
+        "identical_to_b1": 96
+      },
+      {
+        "batch": 8,
+        "gen_per_s": 1.658,
+        "peak_gb": 1.07,
+        "mean_tokens": 115.6,
+        "median_tokens": 123.5,
+        "frac_hit_ceiling": 0.323,
+        "frac_early_eos": 0.677,
+        "mean_paired_delta_vs_b1": -3.97,
+        "identical_to_b1": 57
+      },
+      {
+        "batch": 16,
+        "gen_per_s": 3.434,
+        "peak_gb": 1.12,
+        "mean_tokens": 120.4,
+        "median_tokens": 129.5,
+        "frac_hit_ceiling": 0.375,
+        "frac_early_eos": 0.625,
+        "mean_paired_delta_vs_b1": 0.86,
+        "identical_to_b1": 55
+      },
+      {
+        "batch": 32,
+        "gen_per_s": 6.916,
+        "peak_gb": 1.2,
+        "mean_tokens": 117.7,
+        "median_tokens": 125.5,
+        "frac_hit_ceiling": 0.354,
+        "frac_early_eos": 0.646,
+        "mean_paired_delta_vs_b1": -1.86,
+        "identical_to_b1": 55
+      },
+      {
+        "batch": 64,
+        "gen_per_s": 10.385,
+        "peak_gb": 1.38,
+        "mean_tokens": 116.9,
+        "median_tokens": 123.5,
+        "frac_hit_ceiling": 0.333,
+        "frac_early_eos": 0.667,
+        "mean_paired_delta_vs_b1": -2.71,
+        "identical_to_b1": 56
+      }
+    ]
+  },
+  "Q1_verdict": {
+    "paired_deltas_vs_b1": {
+      "1": 0.0,
+      "8": -3.97,
+      "16": 0.86,
+      "32": -1.86,
+      "64": -2.71
+    },
+    "monotone_decreasing": false,
+    "any_shift_over_5_tokens": false,
+    "note": "A shift here means B is a corpus variable and MUST be pinned corpus-wide. No shift means B can be chosen on throughput alone -- but pinning it is still the safer default."
+  },
+  "Q2_memory_largest_model": {
+    "model": "microsoft/Phi-3-medium-4k-instruct",
+    "visible_gb": 95.0,
+    "rows": [
+      {
+        "batch": 8,
+        "ok": true,
+        "peak_gb": 28.55,
+        "gen_per_s": 1.264,
+        "mean_tokens": 84.1
+      },
+      {
+        "batch": 16,
+        "ok": true,
+        "peak_gb": 29.15,
+        "gen_per_s": 2.32,
+        "mean_tokens": 81.7
+      },
+      {
+        "batch": 32,
+        "ok": true,
+        "peak_gb": 30.35,
+        "gen_per_s": 4.611,
+        "mean_tokens": 83.2
+      },
+      {
+        "batch": 64,
+        "ok": true,
+        "peak_gb": 32.75,
+        "gen_per_s": 7.873,
+        "mean_tokens": 82.9
+      }
+    ]
+  },
+  "recommendation": {
+    "largest_fitting_batch": 64,
+    "length_shift_detected": false,
+    "rule": "Pin ONE batch size corpus-wide. On OOM in a shard: STOP and report, do not silently drop B for that model -- a per-model B is a generation artifact confounded with model size."
+  }
+}
