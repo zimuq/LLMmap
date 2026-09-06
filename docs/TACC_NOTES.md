@@ -59,7 +59,14 @@ B1 became D001, which closed 2026-09-02 (`PLAN.md:9`).
 side: `plans/D003-P1.md:165` promises `results/D003/provenance.md`, and
 the artifact delivered is `provenance.json`.
 
-**Issue 10 (2026-09-05) — the structural cause, and a proposal.** The
+**Issue 10 (2026-09-05) — the structural cause, and a proposal.
+DEFERRED by the human, 2026-09-05: keep on file, do not action this
+session.** The approach is accepted in principle; the human wants it
+taken up in a later session rather than competing with D006 for
+attention now. Issues 6–9 (the concrete contradictions) are *not*
+deferred — they are cheap point fixes and should still be made. The
+
+
 audit needed **~104 KB / ~26k tokens** to re-orient, of which ~26 KB was
 closed-experiment history and ~32 KB was search overhead spent locating
 facts nothing points to. Only **13%** of the 263 KB doc corpus is current
