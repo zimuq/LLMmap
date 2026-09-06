@@ -77,6 +77,7 @@ and 6869 on 2026-09-05).
 |---|---|---|
 | `llmmap` | `2.7.1+cpu` | CPU-only analysis |
 | **`llmmap-gpu`** | **`2.7.1+cu128`** | **everything on a GPU node** |
+| `envs/llmmap-internlm` | inherits | **only** `internlm2_5-7b-chat` (see below) |
 
 **`llmmap-gpu` is the one you want.** Activating `llmmap` on a GPU node silently
 runs on CPU — no error, just ~50× slower.
@@ -89,6 +90,34 @@ Installing CUDA torch here has two traps, both hit once already:
 - Pin the **local version explicitly**: `pip install torch==2.7.1+cu128`.
   `torch==2.7.1` is a silent no-op when `2.7.1+cpu` is installed, because PEP 440
   treats `2.7.1+cpu` as satisfying `==2.7.1`.
+
+### The `llmmap-internlm` side environment
+
+`internlm/internlm2_5-7b-chat` cannot load under `llmmap-gpu`, and the reason is
+worth recording because the first error message pointed at the wrong subsystem.
+`AutoTokenizer` reports a failed SentencePiece->fast conversion, which reads like
+a transformers problem. It is not: **`sentencepiece` 0.2.x rejects internlm2's
+vocabulary** (its pieces contain null bytes; 0.1.99 accepts them). The local
+`tokenizer.model` was verified byte-identical to remote, so it is not corruption.
+
+**Do not fix this by downgrading `llmmap-gpu`.** Verified: under sp 0.1.99,
+`EuroLLM-1.7B` and `Mistral-7B-v0.3` both fail with protobuf descriptor errors.
+
+Recipe (a venv over `llmmap-gpu`, so transformers/torch stay identical and the
+deviation is exactly two packages):
+
+```bash
+source /work/11280/zimuq1/vista/miniconda3/etc/profile.d/conda.sh
+conda activate llmmap-gpu
+python -m venv --system-site-packages /work/11280/zimuq1/vista/envs/llmmap-internlm
+/work/11280/zimuq1/vista/envs/llmmap-internlm/bin/pip install \
+    "sentencepiece==0.1.99" einops
+```
+
+`einops` is required by internlm's own remote modeling file. The model also needs
+`trust_remote_code=True` **and** `use_fast=False`. Run it by invoking that venv's
+python directly (see `experiments/submit_d006_internlm.slurm`); do not activate it
+over another env.
 
 ## Never compute on a login node
 
