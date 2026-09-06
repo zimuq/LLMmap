@@ -79,7 +79,8 @@ def validate(model, q0_sha, n_queries, split_schema):
     rec.update({k: status.get(k) for k in
                 ("hf_revision", "token_ceiling", "batch", "wall_s", "node_hours",
                  "gen_per_s", "load_s", "finished",
-                 "env", "trust_remote_code", "chat_template_source")})
+                 "env", "trust_remote_code", "chat_template_source",
+                 "use_cache_overridden")})
 
     if status.get("status") != "COMPLETE":
         rec["status"] = status.get("status", "UNKNOWN")
@@ -198,6 +199,8 @@ def main():
         deviations=dict(
             trust_remote_code=[s["model"] for s in good
                                if s.get("trust_remote_code")],
+            use_cache_overridden=[s["model"] for s in good
+                                  if s.get("use_cache_overridden")],
             substituted_chat_template=[s["model"] for s in good
                                        if s.get("chat_template_source")
                                        and s["chat_template_source"] != "model's own"],

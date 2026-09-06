@@ -208,6 +208,22 @@ def main():
         # `main`, which can move. Free now, unrecoverable later.
         status["hf_revision"] = getattr(
             getattr(llm.model, "config", None), "_commit_hash", None)
+        # Some models ship `use_cache: false` in generation_config.json --
+        # usually an artifact of how the checkpoint was saved. It disables the KV
+        # cache, so every decode step recomputes attention over the whole
+        # sequence: O(n^2) instead of O(n). Measured on SOLAR-10.7B (the only one
+        # of A1's 37 affected): 0.36 gen/s vs ~8 for comparable models, ~22x, and
+        # it survived a move to a different node, which is what ruled out
+        # hardware. Enabling the cache is a pure optimisation -- mathematically
+        # identical outputs -- so this is safe, but it IS an override of what the
+        # model shipped, so it is recorded per shard rather than done silently.
+        gc = getattr(llm.model, "generation_config", None)
+        status["use_cache_overridden"] = False
+        if gc is not None and getattr(gc, "use_cache", True) is False:
+            gc.use_cache = True
+            status["use_cache_overridden"] = True
+            print("NOTE: model shipped use_cache=False; enabled it "
+                  "(KV cache, identical outputs, ~22x faster)", flush=True)
         status["load_s"] = round(time.time() - t0, 1)
         print(f"loaded in {status['load_s']}s  rev={status['hf_revision']}",
               flush=True)
