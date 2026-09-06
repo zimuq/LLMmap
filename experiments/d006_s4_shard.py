@@ -25,6 +25,7 @@ Usage:
     PYTHONPATH=. python experiments/d006_s4_shard.py --model <hf_name>
 """
 import os
+import sys
 import json
 import time
 import random
@@ -79,6 +80,19 @@ CORPUS_BATCH = 64         # S1c-measured; recorded in every shard's status file
 TRUST_REMOTE_CODE = {
     "Deci/DeciLM-7B-instruct",
     "internlm/internlm2_5-7b-chat",
+}
+
+# internlm/internlm2_5-7b-chat needs use_fast=False. Its repo ships no
+# tokenizer.json, so AutoTokenizer attempts a SentencePiece->fast conversion that
+# fails. The underlying cause is NOT transformers: sentencepiece 0.2.x rejects
+# internlm2's vocabulary ("piece must not include null character"); 0.1.99
+# accepts it. Verified the local tokenizer.model is byte-identical to remote, so
+# this is not corruption. A GLOBAL downgrade is unsafe -- under sp 0.1.99,
+# EuroLLM-1.7B and Mistral-7B-v0.3 both fail with protobuf descriptor errors --
+# so this shard runs in a DEDICATED env (envs/llmmap-internlm, sentencepiece
+# 0.1.99) and the deviation is recorded in its status file and the manifest.
+EXTRA_LOAD_KWARGS = {
+    "internlm/internlm2_5-7b-chat": dict(use_fast=False),
 }
 
 # togethercomputer/Llama-2-7B-32K-Instruct ships NO chat_template (verified in
@@ -170,6 +184,11 @@ def main():
         load_kw = dict(torch_dtype=torch.bfloat16, device_map="cuda")
         if args.model in TRUST_REMOTE_CODE:
             load_kw["trust_remote_code"] = True
+        load_kw.update(EXTRA_LOAD_KWARGS.get(args.model, {}))
+        import sentencepiece as _sp, transformers as _tf
+        status["env"] = dict(sentencepiece=_sp.__version__,
+                             transformers=_tf.__version__,
+                             python=sys.version.split()[0])
         llm = LLM_huggingface(args.model, model_load_kargs=load_kw)
         status["trust_remote_code"] = args.model in TRUST_REMOTE_CODE
         if args.model in CHAT_TEMPLATE_FALLBACK:
