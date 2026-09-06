@@ -71,6 +71,21 @@ Check current usage: `/usr/local/etc/taccinfo` (also prints the SU balance — r
 it live rather than trusting a number written in a doc; it was 6982 when D002 ran
 and 6869 on 2026-09-05).
 
+**The SU balance is NOT a measure of your own usage.** The allocation
+(`TG-NAIRR250513`) is shared with other group members, so the balance moves for
+reasons that have nothing to do with your jobs. During D006 the balance fell 123
+SU while this project's own jobs accounted for 44.6 — the remainder was other
+people. **To measure your own cost, use `sacct`, not the balance:**
+
+```bash
+sacct -S <start-date> -X -n -o JobID,JobName%28,State,Elapsed,ElapsedRaw
+```
+
+and apply the 15-minute-per-job minimum. D006 briefly and wrongly suspected the
+documented 1 SU/node-hour rate was inflated by ~2.7x on the strength of the
+balance delta; the rate is correct, the balance was simply not measuring the
+right thing.
+
 ## Conda environments
 
 | env | torch | use |

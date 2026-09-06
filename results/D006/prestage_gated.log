@@ -1,0 +1,39 @@
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:  18%|█▊        | 3/17 [00:00<00:02,  6.22it/s]Fetching 17 files: 100%|██████████| 17/17 [00:00<00:00, 33.31it/s]
+[1/37] ok    microsoft/Phi-3-medium-128k-instruct
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files:  18%|█▊        | 3/17 [00:00<00:01, 13.52it/s]Fetching 17 files:  76%|███████▋  | 13/17 [00:00<00:00, 29.22it/s]Fetching 17 files: 100%|██████████| 17/17 [00:00<00:00, 35.35it/s]
+[2/37] ok    microsoft/Phi-3-medium-4k-instruct
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 6061.93it/s]
+[3/37] ok    upstage/SOLAR-10.7B-Instruct-v1.0
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 4310.29it/s]
+[4/37] ok    tiiuae/Falcon3-10B-Instruct
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:00<00:02,  4.33it/s]Fetching 11 files:  27%|██▋       | 3/11 [00:27<01:22, 10.34s/it]Fetching 11 files:  36%|███▋      | 4/11 [00:29<00:52,  7.43s/it]Fetching 11 files: 100%|██████████| 11/11 [00:29<00:00,  2.72s/it]
+[5/37] ok    google/gemma-2-9b-it
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files:  11%|█         | 1/9 [00:00<00:01,  4.05it/s]Fetching 9 files:  33%|███▎      | 3/9 [00:22<00:50,  8.47s/it]Fetching 9 files:  56%|█████▌    | 5/9 [00:23<00:16,  4.19s/it]Fetching 9 files: 100%|██████████| 9/9 [00:23<00:00,  2.58s/it]
+[6/37] ok    CohereForAI/aya-23-8B
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5727.58it/s]
+[7/37] ok    gradientai/Llama-3-8B-Instruct-Gradient-1048k
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 5358.82it/s]
+[8/37] ok    ibm-granite/granite-3.0-8b-instruct
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 5599.30it/s]
+[9/37] ok    ibm-granite/granite-3.1-8b-instruct
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files:   8%|▊         | 1/12 [00:00<00:01,  6.43it/s]Fetching 12 files:  25%|██▌       | 3/12 [00:25<01:26,  9.57s/it]Fetching 12 files: 100%|██████████| 12/12 [00:25<00:00,  2.16s/it]
+[10/37] ok    meta-llama/Meta-Llama-3-8B-Instruct
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 4282.09it/s]
+[11/37] ok    meta-llama/Meta-Llama-3.1-8B-Instruct
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 4811.21it/s]
+[12/37] ok    nvidia/Llama3-ChatQA-1.5-8B
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 5159.68it/s]
+[13/37] ok    openchat/openchat-3.6-8b-20240522
+Fetching 16 files:   0%|          | 0/16 [00:00<?, ?it/s]Fetching 16 files: 100%|██████████| 16/16 [00:00<00:00, 4590.52it/s]
+[14/37] ok    Deci/DeciLM-7B-instruct
+Fetching 29 files:   0%|          | 0/29 [00:00<?, ?it/s]Fetching 29 files:  52%|█████▏    | 15/29 [00:09<00:09,  1.55it/s]Fetching 29 files:  55%|█████▌    | 16/29 [00:11<00:09,  1.37it/s]Fetching 29 files:  66%|██████▌   | 19/29 [00:21<00:14,  1.50s/it]Fetching 29 files: 100%|██████████| 29/29 [00:21<00:00,  1.32it/s]
+[15/37] ok    HuggingFaceH4/zephyr-7b-beta
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 4633.19it/s]
+[16/37] ok    Qwen/Qwen2-7B-Instruct
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:00<00:01,  5.94it/s]Fetching 11 files:  27%|██▋       | 3/11 [00:22<01:07,  8.40s/it]Fetching 11 files:  36%|███▋      | 4/11 [00:23<00:40,  5.82s/it]Fetching 11 files: 100%|██████████| 11/11 [00:23<00:00,  2.15s/it]
+[17/37] ok    google/gemma-1.1-7b-it
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files:   9%|▉         | 1/11 [00:00<00:01,  5.71it/s]Fetching 11 files:  27%|██▋       | 3/11 [00:22<01:07,  8.44s/it]Fetching 11 files: 100%|██████████| 11/11 [00:22<00:00,  2.08s/it]
+[18/37] ok    google/gemma-7b-it
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]Fetching 18 files: 100%|██████████| 18/18 [00:00<00:00, 3065.14it/s]
+[19/37] ok    internlm/internlm2_5-7b-chat
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  15%|█▌        | 2/13 [00:00<00:00, 12.88it/s]
