@@ -24,41 +24,6 @@
 <!-- TACC appends here. One entry per issue: what's wrong, exactly where
      (file + section), and why the ownership rule blocks a direct fix. -->
 
-These came out of a deliberate audit (2026-09-05): a fresh agent with no
-conversation context was asked to re-orient from the docs alone and record
-what it could not answer and what contradicted itself. Issues 6–9 are all
-things that audit hit. Issue 10 is the structural cause.
-
-**Issue 6 (2026-09-05) — A1's status is stated as decided in two places and
-open in three; `PLAN.md` contradicts itself.** ✅ decided at
-`DECISIONS.md:24` and `PLAN.md:14`; still described as open at
-`PLAN.md:11` ("A1 itself still open"), `FINDINGS.md:32-34` ("Still an open
-A1 call"), and `FINDINGS.md:117-120` ("the most consequential open A1
-question"). `PLAN.md` line 11 and line 14 disagree with each other
-directly. **Why this one matters more than the rest:** A1 is D006's sole
-remaining prerequisite. An agent that reads `PLAN.md:11` or `FINDINGS.md`
-first concludes the Phase-1 corpus is still blocked and stops. Design-side
-owns all three files.
-
-**Issue 7 (2026-09-05) — `FINDINGS.md` carries a superseded A1
-recommendation as if live.** `FINDINGS.md:29-31` records "~25×≤14B core +
-one 70B pair" as the recommendation on record. `DECISIONS.md:246-249`
-explicitly supersedes it ("Supersedes the original '~25 curated'
-default"), and the 70B half was separately deferred (A1 70B, 2026-09-02).
-Relatedly `FINDINGS.md:156-159` says A1 is "the only remaining thing
-standing between here and drafting the real Phase-1 D" — D006 was drafted
-2026-09-05. Commit `495ec38` updated PLAN/DECISIONS/D006 but not FINDINGS.
-
-**Issue 8 (2026-09-05) — `DECISIONS.md:72` says B1 is "in progress".**
-B1 became D001, which closed 2026-09-02 (`PLAN.md:9`).
-
-**Issue 9 (2026-09-05) — one dangling pointer.** `D001.md:402` cites
-`docs/D001-Review-P1-v2.md`; the file does not exist (consolidated away in
-`76d4fa9`). Verified by direct filesystem check. Every other cited path in
-`docs/` resolves, with one cosmetic exception TACC will fix on its own
-side: `plans/D003-P1.md:165` promises `results/D003/provenance.md`, and
-the artifact delivered is `provenance.json`.
-
 **Issue 10 (2026-09-05) — the structural cause, and a proposal.
 DEFERRED by the human, 2026-09-05: keep on file, do not action this
 session.** The approach is accepted in principle; the human wants it
@@ -95,25 +60,31 @@ with no `closed:` date. That converts this whole class of issue from
 
 **This is design-side's call and design-side's file** — TACC can't own a
 file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
-the half it does own: **`docs/ENV.md`** now exists (see Issue 11).
-
-**Issue 11 (2026-09-05) — NOT a defect; a heads-up about a new file and a
-citation in `D006.md` that should be repointed.** `D006.md:30,51,141` cite
-a "TACC 2026-09-04 report" for the `gh` 2-day wall cap and `MaxJobsPU=20`.
-**Those numbers are correct** — TACC re-verified them live against
-`sacctmgr`/`scontrol` on 2026-09-05 (`qgh`: MaxWall 2-00:00:00,
-MaxJobsPU 20, MaxSubmitPU 40, MaxTRESPU node=96). But the cited report is
-a chat message, not a document; it is in no file, and a compacted session
-cannot recover it. The same was true of the login-node prohibition (only
-in `plans/D001-P1.md:233`), the `llmmap-gpu` vs `llmmap` distinction, and
-the entire sbatch/env invocation (only inside `experiments/*.slurm`).
-TACC has created **`docs/ENV.md`** — machine facts only, TACC-owned, each
-with its verification command. Suggest `D006.md`'s three citations be
-repointed at it. Flagged rather than done, since `## D` is design-side's.
+the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
+below).
 
 ---
 
 ## Resolved
+
+**Issues 6–9 (2026-09-05) — documentation-drift audit findings.** A1's
+decided status now reads consistently across `PLAN.md`, `DECISIONS.md`,
+and `FINDINGS.md` (issues 6–7); `DECISIONS.md`'s B1 row updated from "in
+progress" to closed (issue 8); `D001.md`'s citation of the deleted
+`D001-Review-P1-v2` file reworded so it reads unambiguously as a
+historical mention, not a live path (issue 9). Fixed directly rather than
+via parallel subagents — all four were small, single-line corrections in
+files already fully loaded this session, and re-deriving that same
+context in fresh subagents would have cost more than it saved. The
+`plans/D003-P1.md` provenance.md/provenance.json cosmetic note is TACC's
+own file to fix.
+
+**Issue 11 (2026-09-05) — `D006.md`'s three citations of the
+unrecoverable "TACC 2026-09-04 report" repointed to `docs/ENV.md`.**
+Same pass also corrected the wall-clock/cost guardrail per TACC's P1
+§F4/F5 (the original was a utilisation number, not a makespan) and noted
+`MaxSubmitPU=40` so S4 submits all 37 shards at once rather than
+hand-scheduling waves.
 
 **Issue 4 (2026-09-02) — D001's "What counts as an answer" table was
 stale.** The original decile-enrichment CONFIRMS/FALSIFIES/INCONCLUSIVE

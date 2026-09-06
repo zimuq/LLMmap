@@ -69,7 +69,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 
 | # | Question | Status |
 |---|---|---|
-| **B1** | Pool-saturation pre-experiment before committing to a full corpus build. | ✅ Became D001 — in progress |
+| **B1** | Pool-saturation pre-experiment before committing to a full corpus build. | ✅ Became D001 — **closed 2026-09-02** |
 | **B2** | Decompose intra-model noise into config-variation vs sampling-stochasticity? Optional, cheap, not on the critical path. | ⬜ |
 
 ## C. Hyperparameters (log when set, don't need to decide early)
@@ -82,7 +82,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |
 | C5 | Outer-loop params `T, N, n_keep, θ, ε` | T=3–5, N=40, n_keep=3, θ from tensor quantile, ε=0.005 | ⬜ |
 | C6 | Generator LLM | `allenai/OLMo-2-1124-13B-Instruct` — set for D003's query-pool generation (2026-09-02, design-side, strict decoupling from the universe over TACC's Qwen3-14B default; see D003 `## Review`). Re-evaluate if Phase 3's targeted-generation step (`METHOD.md §5.4` step D) needs a different tradeoff. | ✅ (for D003; Phase 3 use TBD) |
-| C7 | Response truncation | 650 chars, matching the released `confs/default.json`. **D002 §R4 finding (2026-09-02): currently inert** — measured shipped response lengths top out at 667 chars (p99=584, mean=352), and the real cap is `max_new_tokens=100` in `llm.py:9`, never 650 chars. Raising to 200 tokens is affordable (D002 §R3, ~1.8x cost). Decide C7 on information grounds, not cost — still open. | ⬜ |
+| C7 | Response truncation | 650 chars, matching the released `confs/default.json`. **D002 §R4 finding (2026-09-02): currently inert** — measured shipped response lengths top out at 667 chars (p99=584, mean=352), and the real cap is `max_new_tokens=100` in `llm.py:9`, never 650 chars. **Now urgent (D006/P1 §F1, 2026-09-05):** the 100-token default would freeze ~38 percentage points of censored responses into the real corpus, irreversibly under I6/I7. TACC recommends a 200-token *generation ceiling* (truncation below it stays free/reversible, since generation is causal — a 200-token response truncated to 100 is byte-identical to generating at 100 directly) plus a small pilot to check whether raising the cap dilutes the fingerprint signal. Design-side agrees with the recommendation but this is the human's call. **Awaiting human decision — blocks D006 §S3–S8.** | ⬜ |
 
 ## D. Deferred
 
@@ -264,6 +264,24 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   Rationale: matches TODO.md's own plan; no objection raised; needed to
   unblock drafting the Phase-1 D (D006).
   Decided by: design-side, routine call (Part C, "log when set").
+
+[2026-09-05] D006 P1 -- mostly approved (F2-F6, Call 1, Call 2); F1/C7 held for human
+  Decision: approved TACC's three-way split scheme (systems/temperature
+  3-way, cot/rag 2-way with val/test sharing -- avoids recreating the A5
+  confound on a thin value set), the (raw, sampling_hparams) dedup key for
+  a newly-found sample() uniqueness bug, the corrected 20h/350-node-hour
+  wall-clock guardrail (TACC caught its own earlier utilisation-vs-makespan
+  error), model-revision pinning, all 26 proposed tokenizer probes, and the
+  reassembly/manifest/all-37-or-nothing design. Held open: F1/C7 (response
+  generation ceiling) -- TACC recommends 200 tokens (causal generation
+  means truncation is free/reversible below the ceiling, so only the
+  ceiling itself is a one-way door) plus a small pilot; design-side agrees
+  but this is a Part-C hyperparameter with real, mostly one-directional
+  stakes -- reserved for the human per the escalation rules, not decided
+  here. TACC clear to run S1+S2 now; S3-S8 wait on F1.
+  Decided by: design-side (F2-F6, Call 1, Call 2, routine -- TACC's own
+  P1 summary table already triaged these as "design side"); F1 escalated
+  to human (see C7 above).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

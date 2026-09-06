@@ -24,14 +24,16 @@ non-saturating, I3-compliant remeasurement is run. Human approved
 commissioning that remeasurement on 2026-09-01 — see [D004](D004.md).
 
 **Practical takeaway for A1 (model universe):** a ≤14B universe satisfies
-invariant I1 comfortably (65 near-relative pairs across 37 models), but the
-strongest individual near-relative pairs — including the project's own
-motivating case — need a 70B-class partner. Recommendation on record:
-~25×≤14B core + one 70B pair (Llama-3-70B + Smaug-70B) — **update
-2026-09-02: D002 found this is a memory problem, not a budget problem (the
-70B pair doesn't fit on one GH200 at full precision). Still an open A1
-call, now with a real tradeoff attached — see [D002](D002.md) and
-`DECISIONS.md` A1.**
+invariant I1 comfortably (65 near-relative pairs across 37 models). The
+original recommendation on this page (~25×≤14B core + one 70B pair) is
+**superseded — A1 is now decided (2026-09-05): all 37 ≤14B open-weight
+models, no 70B pair.** The 70B question surfaced a real memory tradeoff
+(D002 §R5 — a 70B model doesn't fit on one GH200 at full precision) that
+was deferred rather than engineered around, once checking the full ranked
+pair list (D004) showed the single hardest pair in the entire universe is
+already ≤14B (`Falcon3-10B↔Falcon3-7B`) — see `DECISIONS.md` A1 for the
+full reasoning. Cost/wall-clock analysis for building the corpus over all
+37 (not a curated 25) is in [D006](D006.md).
 
 **Closed 2026-09-02: R6's open question (was the "no hard tail" verdict an
 instrument artifact?) is answered — see [D004](D004.md). It was.**
@@ -154,9 +156,9 @@ would inflate separability (work against D004's confirmed tail, not for
 it). No re-run warranted.
 
 **Phase-1 corpus construction has one fewer blocker.** With C3 (~250),
-D003 (233-entry pool), and D005 (I2 holds) all in place, **A1 (model
-universe) is now the only remaining thing standing between here and
-drafting the real Phase-1 D.**
+D003 (233-entry pool), and D005 (I2 holds) all in place, A1 (model
+universe) became the only remaining blocker — **since resolved (37
+models, 2026-09-05), and the Phase-1 D is now drafted: [D006](D006.md).**
 
 ---
 
