@@ -21,7 +21,8 @@ Validation per shard ("validated" defined explicitly so PARTIAL is unambiguous):
   - status file says COMPLETE
   - row count == |Q_0| x 125 exactly
   - all 125 config indices present, across the three pools at C4's sizes
-  - zero empty/whitespace-only responses
+  - empty/whitespace-only responses below EMPTY_RATE_MAX (they are DATA, not
+    corruption -- see below)
   - file sha256 matches what the shard recorded (catches truncation/corruption)
   - the shard's Q_0 hash and split schema match this run's
 
@@ -42,6 +43,7 @@ META = "./results/D001/model_metadata.csv"
 MANIFEST = os.path.join(CORPUS_DIR, "corpus_manifest.json")
 SCHEMA = "cdqd-corpus-v1"          # I7: first version of this project's corpus
 SPLIT_SIZES = {"build": 75, "val": 25, "test": 25}
+EMPTY_RATE_MAX = 0.02      # see validate(): empties are data; a HIGH RATE is not
 
 
 def sha256(path):
@@ -114,8 +116,19 @@ def validate(model, q0_sha, n_queries, split_schema):
     for pool, n in SPLIT_SIZES.items():
         if per_pool[pool] != n:
             rec["problems"].append(f"{pool}: {per_pool[pool]} configs, expected {n}")
-    if n_empty:
-        rec["problems"].append(f"{n_empty} empty responses")
+    # An empty response is a legitimate model output, not corruption: Q_0
+    # contains malformed-alignment and prompt-injection probes, and a model that
+    # emits EOS immediately on one of those is telling us something -- it is
+    # fingerprint signal, not a defect. (Falcon3-7B: 12 of 32,375 = 0.04%.)
+    # My first draft failed a shard on ANY empty response, which is the same
+    # over-strict-criterion mistake as S1's character-exact A1 check. What would
+    # actually indicate a broken shard is an ANOMALOUS RATE, so that is the test.
+    rec["empty_rate"] = round(n_empty / max(n_rows, 1), 5)
+    if rec["empty_rate"] > EMPTY_RATE_MAX:
+        rec["problems"].append(
+            f"{n_empty} empty responses ({rec['empty_rate']:.2%}) exceeds "
+            f"{EMPTY_RATE_MAX:.0%} -- anomalous, likely a broken shard rather "
+            f"than genuine refusals")
 
     digest = sha256(jl)
     if status.get("sha256") and status["sha256"] != digest:
@@ -161,6 +174,13 @@ def main():
         splits=dict(path=SPLIT, schema=split["schema_version"],
                     sizes=SPLIT_SIZES, policy=split["policy"],
                     sha256=sha256(SPLIT)),
+        empty_responses=dict(
+            total=sum(s.get("n_empty", 0) for s in good),
+            by_model={s["model"]: s.get("n_empty", 0) for s in good
+                      if s.get("n_empty")},
+            note="Empty responses are retained, not dropped. A model going "
+                 "silent on a malformed/injection probe is fingerprint signal. "
+                 "Downstream may filter them, but must do so explicitly."),
         totals=dict(models_validated=len(good), models_expected=37,
                     rows=total_rows,
                     rows_expected=37 * n_queries * sum(SPLIT_SIZES.values()),

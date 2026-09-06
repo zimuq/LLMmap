@@ -90,7 +90,7 @@ def main():
                 for qi, (q, a) in enumerate(d["traces"]):
                     texts.append(a)
                     index.append(dict(pool=d["dataset"], config=d["config_index"],
-                                      query_index=qi))
+                                      query_index=qi, empty=not a.strip()))
 
         t0 = time.time()
         out = np.empty((len(texts), I5_DIM), dtype=store_dtype)
@@ -108,7 +108,12 @@ def main():
                        dim=I5_DIM, dtype=args.dtype,
                        embedding_model=I5_MODEL, pooling="mean+l2norm",
                        max_length=MAX_LEN,
-                       note="One row per response. NEVER averaged -- I3 requires "
+                       n_empty=sum(1 for r in index if r["empty"]),
+                       note="Rows with empty=true are EMPTY model responses, "
+                            "kept deliberately (a model going silent on a probe "
+                            "is signal). Their embedding is that of the empty "
+                            "string; filter explicitly if that is unwanted. "
+                            "One row per response. NEVER averaged -- I3 requires "
                             "point-cloud vs point-cloud; the intra-model spread "
                             "cannot be reconstructed after averaging.",
                        rows=index), open(out_idx, "w"))
