@@ -43,23 +43,54 @@ class LLM_huggingface:
         self.tokenizer.with_system_prompt = True
         
         self.is_hf = True
+        # Computed once: make_prompt is called for every (query, config) pair, and
+        # the probe renders a template each time it runs.
+        self.supports_system_role = self._does_template_have_system(self.tokenizer)
 
         self.model = None
         if not tokenizer_only:
             self.model = model_class.from_pretrained(llm_name, token=api_key, **model_load_kargs)
             self.model.generation_config.pad_token_ids = self.tokenizer.pad_token_id
 
-    @staticmethod
-    def _does_template_have_system(tokenizer):
-        chat_template = getattr(tokenizer, 'chat_template', None)
-        if chat_template is None:
+    _SYS_SENTINEL = "__cdqd_system_probe__"
+
+    @classmethod
+    def _does_template_have_system(cls, tokenizer):
+        """Does this chat template actually accept AND render a system role?
+
+        D006/S4: the original test was `"system" in chat_template` -- a substring
+        match on the template source. That is wrong in both directions, and
+        measurably so: on D006's 37-model universe it disagrees with reality for
+        **10 of them**.
+
+          * gemma's template contains the word "system" only inside
+            `raise_exception('System role not supported')`, so the substring test
+            says yes and the render then raises. All 5 gemma models crashed.
+          * `Llama3-ChatQA-1.5-8B` likewise tests True but silently DROPS the
+            system content -- so ~90% of its configs (WITH_SYSTEM_P=0.9) were
+            generated with the system prompt missing entirely, while every other
+            model received it. A silent data defect, not a crash.
+          * `aya-23-8B`, `Llama-3-8B-Gradient-1048k`, `Meta-Llama-3-8B-Instruct`
+            and `openchat_3.5` test False but DO support a system role, so their
+            system prompt was prepended to the user turn instead.
+
+        Rendering a sentinel and checking it survives tests the behaviour rather
+        than the source. Both halves matter: a template that raises fails, and so
+        does one that accepts the message and discards it.
+        """
+        try:
+            out = tokenizer.apply_chat_template(
+                [{'role': 'system', 'content': cls._SYS_SENTINEL},
+                 {'role': 'user', 'content': 'probe'}],
+                tokenize=False, add_generation_prompt=True)
+        except Exception:
             return False
-        return "system" in chat_template
+        return cls._SYS_SENTINEL in out
 
     def make_prompt(self, system, user):
         messages = []
         if system:
-            if self._does_template_have_system(self.tokenizer):
+            if self.supports_system_role:
                 messages.append( {'role':'system', 'content':system} )
             else:
                 user = f'{system}\n\n{user}'
