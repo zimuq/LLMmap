@@ -15,6 +15,17 @@ average. D001's collapsed-centroid finding (`templates.py:58`, where
 example: the spread that determines overlap cannot be reconstructed once it has
 been averaged away.
 
+NORMALISATION: none, matching the paper's own implementation
+(`LLMmap/embedding_model.py:15-26`, which mean-pools and returns the raw vector).
+S6 originally L2-normalised. Measured cost of that (S6b, 6 models x 600
+responses, 15 pairs): probe AUC 0.8056 normalised vs **0.8564 raw**, better on
+**15/15 pairs**, max pair delta 0.082; energy distance 0.015 vs 0.423. Vector
+magnitude carries model-discriminative information and normalising discarded it.
+Storing raw is also the recoverable direction -- normalising afterwards is one
+line, un-normalising is impossible -- the same argument that made C7's ceiling
+safe. (The saturation audit is unaffected: 0% of pairs at ceiling either way, so
+A3's gate holds on both.)
+
 I4 is not computed here, but the format must not foreclose it: coverage of a
 query SET is a MAX over its queries, so the index has to let you address rows by
 (model, query) without loading everything. Hence one .npy per model shard plus a
@@ -49,8 +60,9 @@ BATCH = 64
 
 
 def mean_pool(h, mask):
+    # Matches LLMmap/embedding_model.py:15-18 exactly, including the clamp.
     m = mask.unsqueeze(-1).float()
-    return (h * m).sum(1) / m.sum(1)
+    return (h * m).sum(1) / m.sum(1).clamp(min=1e-9)
 
 
 def main():
@@ -115,7 +127,7 @@ def main():
                         max_length=MAX_LEN, return_tensors="pt").to("cuda")
                 h = mdl(**b).last_hidden_state
                 e = mean_pool(h, b["attention_mask"])
-                e = torch.nn.functional.normalize(e, dim=-1)
+                # NO L2 normalisation -- see NORMALISATION note in the docstring.
                 out[i:i+len(e)] = e.float().cpu().numpy().astype(store_dtype)
 
         exp = validated[slug]["n_rows"]
@@ -125,7 +137,7 @@ def main():
         np.save(out_npy, out)
         json.dump(dict(model=slug.replace("__", "/"), n=len(index),
                        dim=I5_DIM, dtype=args.dtype,
-                       embedding_model=I5_MODEL, pooling="mean+l2norm",
+                       embedding_model=I5_MODEL, pooling="mean, NOT normalised (matches LLMmap/embedding_model.py)",
                        max_length=MAX_LEN,
                        n_empty=sum(1 for r in index if r["empty"]),
                        note="Rows with empty=true are EMPTY model responses, "
@@ -142,6 +154,28 @@ def main():
                             mb=round(out.nbytes/1e6, 1)))
         print(f"  {slug:52s} {len(texts):7,d} rows  {dt/60:5.1f} min  "
               f"{out.nbytes/1e6:7.1f} MB", flush=True)
+
+    # The paper's EmbeddingCache embeds queries as well as responses
+    # (dataset.py: handle_one(query); handle_one(resp)), and Phase 4's full
+    # pipeline consumes both. 259 vectors, so this is free -- but it is not
+    # reconstructible later without re-running the model, so do it now.
+    q_npy = os.path.join(EMB_DIR, "_queries.npy")
+    if not os.path.exists(q_npy):
+        q0 = json.load(open("./confs/queries/pool_v1.json"))
+        qt = [e["text"] for e in q0["queries"]]
+        qe = np.empty((len(qt), I5_DIM), dtype=store_dtype)
+        with torch.no_grad():
+            for i in range(0, len(qt), BATCH):
+                b = tok(qt[i:i+BATCH], padding=True, truncation=True,
+                        max_length=MAX_LEN, return_tensors="pt").to("cuda")
+                e = mean_pool(mdl(**b).last_hidden_state, b["attention_mask"])
+                qe[i:i+len(e)] = e.float().cpu().numpy().astype(store_dtype)
+        np.save(q_npy, qe)
+        json.dump(dict(n=len(qt), dim=I5_DIM, dtype=args.dtype,
+                       embedding_model=I5_MODEL, pooling="mean, NOT normalised",
+                       q0_sha256=q0["sha256"]),
+                  open(os.path.join(EMB_DIR, "_queries.index.json"), "w"))
+        print(f"  embedded {len(qt)} queries -> {q_npy}", flush=True)
 
     if summary:
         total = sum(s["n"] for s in summary)
