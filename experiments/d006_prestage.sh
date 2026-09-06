@@ -20,7 +20,7 @@ for m in \
   python -c "
 import sys
 from huggingface_hub import snapshot_download
-snapshot_download('$m', allow_patterns=['*.json','*.safetensors','*.bin','*.model','*.txt'],
+snapshot_download('$m', allow_patterns=['*.json','*.safetensors','*.bin','*.model','*.txt','*.py'],
                   max_workers=4)
 print('  ok')
 " || echo "  FAILED: $m"

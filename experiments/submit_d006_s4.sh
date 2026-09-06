@@ -17,9 +17,22 @@ for r in sorted(rows, key=lambda r: -float(r["params_b"])):
 PY
 )
 
+# Models that already have a queued/running job. Keyed on the FULL model name
+# read back out of each job's batch script -- NOT on the Slurm job name, which
+# is truncated to 20 chars and therefore collides across genuinely different
+# models (granite-3.0/3.1, Phi-3-medium-128k/4k, Mistral v0.1/v0.2/v0.3,
+# Llama-3.2-1B/3B). Keying on the truncated name once caused four live jobs to
+# be cancelled as false "duplicates".
+LIVE=$(for j in $(squeue -u "$USER" -h -o "%i"); do
+         scontrol write batch_script "$j" - 2>/dev/null | grep -oP -- '--model \K\S+' | head -1
+       done)
+
 n=0
 for m in $MODELS; do
   slug=${m//\//__}
+  if echo "$LIVE" | grep -qxF "$m"; then
+    echo "skip (job already queued/running): $m"; continue
+  fi
   if [ -f "data/corpus_v1/${slug}.status.json" ] && \
      grep -q '"status": "COMPLETE"' "data/corpus_v1/${slug}.status.json" 2>/dev/null; then
     echo "skip (already COMPLETE): $m"; continue

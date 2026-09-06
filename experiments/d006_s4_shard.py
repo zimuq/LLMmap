@@ -69,6 +69,38 @@ SEED = 20260906
 # extrapolation this plan has criticised elsewhere, so it is left on the table.
 CORPUS_BATCH = 64         # S1c-measured; recorded in every shard's status file
 
+# --- Per-model load quirks, found by experiments/d006_preflight.py -----------
+#
+# trust_remote_code executes code published in the model repo. It is scoped to
+# an explicit ALLOWLIST rather than enabled globally, so the corpus records
+# exactly which two repos' custom code we ran. Both are the mainstream repos
+# for their models and both genuinely require it (Deci's model class, InternLM's
+# tokenizer+model classes); no other A1 model needs it.
+TRUST_REMOTE_CODE = {
+    "Deci/DeciLM-7B-instruct",
+    "internlm/internlm2_5-7b-chat",
+}
+
+# togethercomputer/Llama-2-7B-32K-Instruct ships NO chat_template (verified in
+# its tokenizer_config.json), so apply_chat_template raises and the model cannot
+# be prompted at all. Transformers used to fall back to a built-in default
+# template; that fallback was removed, which is why LLMmap's original code path
+# worked and ours does not.
+#
+# This is a PROMPTING DECISION that affects what the model outputs and therefore
+# its fingerprint, so it is declared here rather than buried: we use the format
+# Together documents for this model, "[INST]\n{prompt}\n[/INST]\n\n".
+# The template deliberately never mentions "system" -- llm.py's
+# _does_template_have_system() greps the template string for that word, and if
+# it matched, a system prompt would be handed to a template that silently drops
+# it. As written, llm.py prepends the system prompt to the user turn instead,
+# which is its normal no-system-role path. Flagged in TACC_NOTES for design side.
+CHAT_TEMPLATE_FALLBACK = {
+    "togethercomputer/Llama-2-7B-32K-Instruct":
+        "{% for m in messages %}{% if m['role'] == 'user' %}"
+        "[INST]\n{{ m['content'] }}\n[/INST]\n\n{% endif %}{% endfor %}",
+}
+
 
 def shard_paths(model):
     slug = model.replace("/", "__")
@@ -135,8 +167,20 @@ def main():
 
     t0 = time.time()
     try:
-        llm = LLM_huggingface(args.model, model_load_kargs=dict(
-            torch_dtype=torch.bfloat16, device_map="cuda"))
+        load_kw = dict(torch_dtype=torch.bfloat16, device_map="cuda")
+        if args.model in TRUST_REMOTE_CODE:
+            load_kw["trust_remote_code"] = True
+        llm = LLM_huggingface(args.model, model_load_kargs=load_kw)
+        status["trust_remote_code"] = args.model in TRUST_REMOTE_CODE
+        if args.model in CHAT_TEMPLATE_FALLBACK:
+            assert getattr(llm.tokenizer, "chat_template", None) is None, \
+                (f"{args.model} now ships a chat_template upstream -- remove it "
+                 f"from CHAT_TEMPLATE_FALLBACK rather than overriding the "
+                 f"model's own template")
+            llm.tokenizer.chat_template = CHAT_TEMPLATE_FALLBACK[args.model]
+            status["chat_template_source"] = "D006 fallback (model ships none)"
+        else:
+            status["chat_template_source"] = "model's own"
         # F6: pin the exact weights this shard used -- from_pretrained resolves
         # `main`, which can move. Free now, unrecoverable later.
         status["hf_revision"] = getattr(
