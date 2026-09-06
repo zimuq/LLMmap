@@ -91,7 +91,10 @@ TRUST_REMOTE_CODE = {
 # EuroLLM-1.7B and Mistral-7B-v0.3 both fail with protobuf descriptor errors --
 # so this shard runs in a DEDICATED env (envs/llmmap-internlm, sentencepiece
 # 0.1.99) and the deviation is recorded in its status file and the manifest.
-EXTRA_LOAD_KWARGS = {
+# TOKENIZER-only kwargs. These must not reach the model constructor:
+# InternLM2ForCausalLM raises on an unexpected `use_fast`. llm.py grew a
+# `tokenizer_load_kargs` parameter for exactly this (disclosed in R).
+EXTRA_TOKENIZER_KWARGS = {
     "internlm/internlm2_5-7b-chat": dict(use_fast=False),
 }
 
@@ -184,12 +187,13 @@ def main():
         load_kw = dict(torch_dtype=torch.bfloat16, device_map="cuda")
         if args.model in TRUST_REMOTE_CODE:
             load_kw["trust_remote_code"] = True
-        load_kw.update(EXTRA_LOAD_KWARGS.get(args.model, {}))
+        tok_kw = EXTRA_TOKENIZER_KWARGS.get(args.model, {})
         import sentencepiece as _sp, transformers as _tf
         status["env"] = dict(sentencepiece=_sp.__version__,
                              transformers=_tf.__version__,
                              python=sys.version.split()[0])
-        llm = LLM_huggingface(args.model, model_load_kargs=load_kw)
+        llm = LLM_huggingface(args.model, model_load_kargs=load_kw,
+                              tokenizer_load_kargs=tok_kw or None)
         status["trust_remote_code"] = args.model in TRUST_REMOTE_CODE
         if args.model in CHAT_TEMPLATE_FALLBACK:
             assert getattr(llm.tokenizer, "chat_template", None) is None, \

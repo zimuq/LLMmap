@@ -18,7 +18,15 @@ class LLM_huggingface:
         tokenizer_class=AutoTokenizer,
         model_load_kargs={},
         tokenizer_only=False,
+        tokenizer_load_kargs=None,
     ):
+        # D006/S4: `model_load_kargs` was passed verbatim to BOTH the tokenizer
+        # and the model, so any tokenizer-only argument also reached the model
+        # constructor. Most models ignore an unknown kwarg; custom remote-code
+        # classes do not -- InternLM2ForCausalLM raises
+        # `unexpected keyword argument 'use_fast'`. `tokenizer_load_kargs` adds
+        # arguments for the TOKENIZER ONLY. Default None preserves the previous
+        # behaviour exactly, so no existing caller changes.
 
         api_key = os.environ.get('HUGGINGFACE_API_KEY', None)
         if api_key is None:
@@ -27,7 +35,10 @@ class LLM_huggingface:
         self.llm_name = llm_name
         self.model_class = model_class
         
-        self.tokenizer = tokenizer_class.from_pretrained(llm_name, padding_side='left', token=api_key, legacy=False, **model_load_kargs)
+        _tok_kargs = dict(model_load_kargs)
+        if tokenizer_load_kargs:
+            _tok_kargs.update(tokenizer_load_kargs)
+        self.tokenizer = tokenizer_class.from_pretrained(llm_name, padding_side='left', token=api_key, legacy=False, **_tok_kargs)
         self.tokenizer.pad_token = self.tokenizer.eos_token            
         self.tokenizer.with_system_prompt = True
         
