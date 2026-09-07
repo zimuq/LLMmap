@@ -1,0 +1,441 @@
+{
+ "n_cells": 500,
+ "n_per_cloud": 75,
+ "dim": 1024,
+ "probe": {
+  "mean": 0.9398,
+  "median": 0.9671,
+  "p10": 0.8443,
+  "min": 0.5156,
+  "max": 1.0,
+  "frac_ge_0999": 0.052,
+  "frac_ge_099": 0.204,
+  "frac_le_055": 0.004,
+  "distinct": 179
+ },
+ "probe_near_relative": {
+  "n": 250,
+  "mean": 0.9163,
+  "frac_ge_099": 0.124
+ },
+ "energy_scale_free": {
+  "mean": 0.31749,
+  "p10": 0.08175,
+  "min": 0.02798,
+  "max": 2.27728
+ },
+ "self_pair_control": {
+  "n": 40,
+  "mean": 0.4904,
+  "p95": 0.641,
+  "max": 0.7046,
+  "note": "true AUC is 0.5 by construction; a mean materially above that means the probe fits noise at n=75 and every cell is inflated"
+ },
+ "cells": [
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct|microsoft/Phi-3.5-mini-instruct",
+   "q": 215,
+   "near_relative": true,
+   "auc": 0.9271111111111111,
+   "energy_raw": 1.7024968811229186,
+   "energy_sf": 0.1480052120964839
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct|Qwen/Qwen2-7B-Instruct",
+   "q": 132,
+   "near_relative": true,
+   "auc": 0.8373333333333335,
+   "energy_raw": 2.074217694152683,
+   "energy_sf": 0.2627179167437677
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B|openchat/openchat-3.6-8b-20240522",
+   "q": 207,
+   "near_relative": true,
+   "auc": 0.944,
+   "energy_raw": 4.306698072729272,
+   "energy_sf": 0.31859353791097994
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct|meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "q": 244,
+   "near_relative": true,
+   "auc": 0.9120000000000001,
+   "energy_raw": 0.6595289742256103,
+   "energy_sf": 0.08822665511983473
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct|microsoft/Phi-3-mini-4k-instruct",
+   "q": 111,
+   "near_relative": true,
+   "auc": 0.692,
+   "energy_raw": 0.36537307294284815,
+   "energy_sf": 0.04163554541839988
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct|tiiuae/Falcon3-7B-Instruct",
+   "q": 71,
+   "near_relative": true,
+   "auc": 0.776,
+   "energy_raw": 0.4173492235292482,
+   "energy_sf": 0.047432393307369466
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct|nvidia/Llama3-ChatQA-1.5-8B",
+   "q": 71,
+   "near_relative": true,
+   "auc": 0.9955555555555555,
+   "energy_raw": 2.8870267825663394,
+   "energy_sf": 0.2544090564664484
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it|google/gemma-2-9b-it",
+   "q": 128,
+   "near_relative": true,
+   "auc": 0.9955555555555555,
+   "energy_raw": 1.8482674047452754,
+   "energy_sf": 0.2156098230219766
+  },
+  {
+   "pair": "google/gemma-2-9b-it|google/gemma-2b-it",
+   "q": 158,
+   "near_relative": true,
+   "auc": 0.9537777777777778,
+   "energy_raw": 1.1986744332717318,
+   "energy_sf": 0.1086617985146145
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it|google/gemma-2-9b-it",
+   "q": 37,
+   "near_relative": true,
+   "auc": 0.9466666666666667,
+   "energy_raw": 1.5612594051120858,
+   "energy_sf": 0.15357813399098869
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct|openchat/openchat-3.6-8b-20240522",
+   "q": 241,
+   "near_relative": true,
+   "auc": 0.9680000000000002,
+   "energy_raw": 1.5816347235137833,
+   "energy_sf": 0.18749547170786252
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it|google/gemma-2-9b-it",
+   "q": 181,
+   "near_relative": true,
+   "auc": 0.9697777777777778,
+   "energy_raw": 2.019598579667722,
+   "energy_sf": 0.19715222076807892
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1|openchat/openchat_3.5",
+   "q": 161,
+   "near_relative": true,
+   "auc": 0.8604444444444445,
+   "energy_raw": 0.7137815816558053,
+   "energy_sf": 0.07834327102596397
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k|openchat/openchat-3.6-8b-20240522",
+   "q": 244,
+   "near_relative": true,
+   "auc": 0.9475555555555555,
+   "energy_raw": 1.6373768759753187,
+   "energy_sf": 0.18578257439015733
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1|upstage/SOLAR-10.7B-Instruct-v1.0",
+   "q": 133,
+   "near_relative": true,
+   "auc": 0.9795555555555555,
+   "energy_raw": 2.089197577358174,
+   "energy_sf": 0.2274753768354159
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct|Qwen/Qwen2.5-3B-Instruct",
+   "q": 7,
+   "near_relative": true,
+   "auc": 0.9928888888888888,
+   "energy_raw": 19.18299367310786,
+   "energy_sf": 2.277280149044109
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it|google/gemma-1.1-7b-it",
+   "q": 204,
+   "near_relative": true,
+   "auc": 0.9555555555555555,
+   "energy_raw": 4.977900470363975,
+   "energy_sf": 0.45507923320348204
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta|mistralai/Mistral-7B-Instruct-v0.1",
+   "q": 252,
+   "near_relative": true,
+   "auc": 0.9653333333333334,
+   "energy_raw": 1.98200120706076,
+   "energy_sf": 0.15121596068255871
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct|openchat/openchat-3.6-8b-20240522",
+   "q": 124,
+   "near_relative": true,
+   "auc": 1.0,
+   "energy_raw": 12.119389069218814,
+   "energy_sf": 1.1736226891459185
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct|nvidia/Llama3-ChatQA-1.5-8B",
+   "q": 32,
+   "near_relative": true,
+   "auc": 0.9973333333333333,
+   "energy_raw": 6.056692848728968,
+   "energy_sf": 0.529027129603938
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k|meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "q": 113,
+   "near_relative": true,
+   "auc": 0.9955555555555555,
+   "energy_raw": 5.333591013796051,
+   "energy_sf": 0.7102958530560228
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct|meta-llama/Meta-Llama-3-8B-Instruct",
+   "q": 72,
+   "near_relative": true,
+   "auc": 0.9831111111111112,
+   "energy_raw": 11.748498992791669,
+   "energy_sf": 1.3424071455713522
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2|mistralai/Mistral-7B-Instruct-v0.3",
+   "q": 46,
+   "near_relative": true,
+   "auc": 0.7244444444444446,
+   "energy_raw": 0.27990382071607023,
+   "energy_sf": 0.028747375231513512
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct|Qwen/Qwen2.5-3B-Instruct",
+   "q": 163,
+   "near_relative": true,
+   "auc": 0.9146666666666666,
+   "energy_raw": 1.2633332001458877,
+   "energy_sf": 0.16599056492378478
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B|openchat/openchat-3.6-8b-20240522",
+   "q": 55,
+   "near_relative": true,
+   "auc": 0.9724444444444444,
+   "energy_raw": 2.664359066062227,
+   "energy_sf": 0.2159282163929518
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct|meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "q": 149,
+   "near_relative": true,
+   "auc": 0.8293333333333333,
+   "energy_raw": 0.5369041485789996,
+   "energy_sf": 0.060153160906316665
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it|google/gemma-2-9b-it",
+   "q": 170,
+   "near_relative": true,
+   "auc": 0.9937777777777779,
+   "energy_raw": 3.392872491342965,
+   "energy_sf": 0.3034505768449578
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k|openchat/openchat-3.6-8b-20240522",
+   "q": 147,
+   "near_relative": true,
+   "auc": 0.9466666666666667,
+   "energy_raw": 2.3739476343413504,
+   "energy_sf": 0.21849832324371943
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1|upstage/SOLAR-10.7B-Instruct-v1.0",
+   "q": 46,
+   "near_relative": true,
+   "auc": 0.9955555555555555,
+   "energy_raw": 2.11610747428635,
+   "energy_sf": 0.2504914995005396
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct|microsoft/Phi-3.5-mini-instruct",
+   "q": 162,
+   "near_relative": true,
+   "auc": 0.888888888888889,
+   "energy_raw": 0.6788464064429167,
+   "energy_sf": 0.0889228585417621
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct|meta-llama/Meta-Llama-3-8B-Instruct",
+   "q": 148,
+   "near_relative": true,
+   "auc": 0.9653333333333334,
+   "energy_raw": 0.6373598795509166,
+   "energy_sf": 0.086224258230934
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k|meta-llama/Meta-Llama-3-8B-Instruct",
+   "q": 96,
+   "near_relative": true,
+   "auc": 0.968888888888889,
+   "energy_raw": 3.1985011443518445,
+   "energy_sf": 0.3114220126189372
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k|meta-llama/Meta-Llama-3-8B-Instruct",
+   "q": 16,
+   "near_relative": true,
+   "auc": 1.0,
+   "energy_raw": 11.580342931144095,
+   "energy_sf": 1.5908152967747666
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct|openchat/openchat-3.6-8b-20240522",
+   "q": 243,
+   "near_relative": true,
+   "auc": 0.9422222222222223,
+   "energy_raw": 2.6726935085930883,
+   "energy_sf": 0.26598837222071475
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct|Qwen/Qwen2.5-0.5B-Instruct",
+   "q": 45,
+   "near_relative": true,
+   "auc": 0.9324444444444445,
+   "energy_raw": 1.5937077705922267,
+   "energy_sf": 0.1789878165546576
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it|google/gemma-2b-it",
+   "q": 76,
+   "near_relative": true,
+   "auc": 0.9733333333333333,
+   "energy_raw": 2.1117477056653975,
+   "energy_sf": 0.21031339629002807
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta|upstage/SOLAR-10.7B-Instruct-v1.0",
+   "q": 41,
+   "near_relative": true,
+   "auc": 0.9742222222222223,
+   "energy_raw": 4.285847922811623,
+   "energy_sf": 0.5492721677687735
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct|microsoft/Phi-3-mini-4k-instruct",
+   "q": 141,
+   "near_relative": true,
+   "auc": 0.8715555555555557,
+   "energy_raw": 7.177854641528709,
+   "energy_sf": 0.7488032445197168
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct|meta-llama/Meta-Llama-3-8B-Instruct",
+   "q": 110,
+   "near_relative": true,
+   "auc": 0.9822222222222223,
+   "energy_raw": 10.683173296115813,
+   "energy_sf": 1.5158266888120207
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1|mistralai/Mistral-7B-Instruct-v0.2",
+   "q": 140,
+   "near_relative": true,
+   "auc": 0.9546666666666669,
+   "energy_raw": 1.3999915344484943,
+   "energy_sf": 0.13813347196222303
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2|mistralai/Mistral-7B-Instruct-v0.3",
+   "q": 252,
+   "near_relative": true,
+   "auc": 0.8151111111111111,
+   "energy_raw": 0.5823514895534014,
+   "energy_sf": 0.04938559461817684
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct|microsoft/Phi-3-mini-4k-instruct",
+   "q": 42,
+   "near_relative": true,
+   "auc": 0.7182222222222221,
+   "energy_raw": 0.7990136148540721,
+   "energy_sf": 0.0821218137197206
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct|nvidia/Llama3-ChatQA-1.5-8B",
+   "q": 59,
+   "near_relative": true,
+   "auc": 0.9946666666666667,
+   "energy_raw": 7.448864348337992,
+   "energy_sf": 0.6888062103991397
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B|openchat/openchat-3.6-8b-20240522",
+   "q": 171,
+   "near_relative": true,
+   "auc": 0.9644444444444444,
+   "energy_raw": 2.741359739271397,
+   "energy_sf": 0.27224043978854345
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k|meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "q": 124,
+   "near_relative": true,
+   "auc": 0.9964444444444445,
+   "energy_raw": 8.765164131505237,
+   "energy_sf": 0.9010956493355653
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta|mistralai/Mistral-7B-Instruct-v0.3",
+   "q": 138,
+   "near_relative": true,
+   "auc": 0.9591111111111111,
+   "energy_raw": 1.471569614824988,
+   "energy_sf": 0.1593351423531912
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it|google/gemma-7b-it",
+   "q": 112,
+   "near_relative": true,
+   "auc": 0.992888888888889,
+   "energy_raw": 4.5691057003674445,
+   "energy_sf": 0.6440131094473329
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct|microsoft/Phi-3-mini-128k-instruct",
+   "q": 87,
+   "near_relative": true,
+   "auc": 0.784,
+   "energy_raw": 0.6730065150869731,
+   "energy_sf": 0.06889528401229031
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct|openchat/openchat-3.6-8b-20240522",
+   "q": 218,
+   "near_relative": true,
+   "auc": 0.9928888888888888,
+   "energy_raw": 3.567981986107416,
+   "energy_sf": 0.5130070381421641
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct|Qwen/Qwen2.5-3B-Instruct",
+   "q": 51,
+   "near_relative": true,
+   "auc": 0.8560000000000001,
+   "energy_raw": 0.6632964882418424,
+   "energy_sf": 0.06178796435908331
+  }
+ ],
+ "verdict": {
+  "probe_saturating": true,
+  "probe_inflated_at_n75": false,
+  "conclusion": "S_probe SATURATES at n=75 -- A3's gate fires, S_energy is authoritative for interpretation; self-pair control is near 0.5 as it should be"
+ }
+}
