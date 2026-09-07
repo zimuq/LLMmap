@@ -13,7 +13,7 @@
 | [D005](D005.md) | I2 bug found while preparing D004 (TACC note on D001's `## Review`, 2026-09-02) | **CLOSED** 2026-09-04 — FIXED (M1+M2+M3 verified via regression test); shipped-dataset exposure UNDETERMINABLE (M4), no effect on D001/D004's numbers | REVIEW (P1 approved, executed) | none | `results/D005/`, `D005.md` `## R` |
 | [D006](D006.md) | TODO.md Phase 1 (T1.1–T1.4) + D002 §R4 + D003 + D005; A1/C4/C7 decided 2026-09-05/06 | **CLOSED** 2026-09-06 — READY at 37/37 (1,197,875 generations); own embedding-normalization bug found and fixed (+0.051 AUC, matches paper's actual procedure) | REVIEW (P1 approved, executed) | none | `results/D006/`, `D006.md` `## R` |
 | [D007](D007.md) | TODO.md Phase 1 (T1.5–T1.6); A3 decided 2026-09-06 | **CLOSED** 2026-09-07 — **TAIL CONFIRMED on `S_energy`** (CVaR₀.₁/mean=0.353, uncensored; `S_probe` was 51.8–98.2% ceiling-pinned, A3's gate correctly deferred to `S_energy`). `METHOD.md §2`/I1 stand on the real corpus. Frozen tensor for I6: `S_energy_tok200` | REVIEW (P1 approved, executed) | none | `results/D007/`, `D007.md` `## R` |
-| [D008](D008.md) | TODO.md Phase 2 (T2.1–T2.4); D007's frozen tensor | **OPEN** — drafted 2026-09-07, awaiting a P | REVIEW | D007 (✅ TAIL CONFIRMED, satisfied) — no A/C-series item blocks execution (A4/C1/C2 are what this D produces evidence *for*, not prerequisites) | `D008.md` `## P`/`## R` pending |
+| [D008](D008.md) | TODO.md Phase 2 (T2.1–T2.4); D007's frozen tensor | **OPEN** — P1 fully approved 2026-09-07 (Calls 1–3, F1–F4 all cleared; F4's fix — scale-normalize the classifier's per-query distances to match the tensor's own convention — is the one that would have quietly corrupted the comparison). TACC clear to run S0–S7 | REVIEW (P1 approved) | D007 (✅ TAIL CONFIRMED, satisfied) — no A/C-series item blocks execution (A4/C1/C2 are what this D produces evidence *for*, not prerequisites) | `docs/plans/D008-P1.md`; `## R` pending |
 
 ## Not yet a D
 
@@ -27,10 +27,8 @@
 
 - TACC executes only `status: OPEN` D's whose `gate` is satisfied — `AUTO`
   runs immediately, `REVIEW` needs a posted `## Review` with an APPROVED
-  verdict. D008 has no `## P` yet — TACC should write one; three genuinely
-  open implementation choices (Calls 1–3, see D008's own notes) are
-  flagged for design-side review before the corresponding steps execute,
-  matching the pattern of every prior D's open sub-decisions.
+  verdict. D008 is fully approved — no further design-side gate before
+  execution.
 - "Closed" is a design-side call made after `## R` is posted **and** any
   R-driven open questions are resolved for the D's *own* question. D001–D007
   are all closed as of 2026-09-07 — each answered its own question in full,

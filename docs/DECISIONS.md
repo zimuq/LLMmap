@@ -359,6 +359,32 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   Decided by: design-side, routine call (disposition follows directly
   from A3's own pre-registered gate logic; no new interpretation
   required).
+
+[2026-09-07] D008 P1 -- approved in full (Calls 1-3, F1-F4)
+  Decision: approved 1-NN Euclidean accuracy on build/test splits (Call 1
+  -- matches the shipped LLmap classifier's own cdist mechanism, verified
+  against LLMmap/inference.py:178); structural near-relative pairs (not
+  tensor-derived "empirically hardest" ones) for hard-subset accuracy,
+  since the paper's literal hard pair is out of universe (Call 2); a
+  three-tier identifiability threshold rather than a single percentile,
+  pre-registering that the strictest tier will likely be empty (Call 3);
+  a selection-stability check for the k=1-3 region CONFIRMED leans on
+  (F1); a global MMD bandwidth (F2); a pre-registered INCONCLUSIVE
+  fallback if the CVaR-vs-mean gap is smaller than worst-class accuracy's
+  4pp resolution (F3); and per-query scale-normalized classifier
+  distances (F4).
+  Rationale: none of these are value trade-offs. F4 in particular is
+  worth naming -- without it, the classifier used to score accuracy
+  would implicitly weight the k selected queries by embedding magnitude,
+  while GreedyCover selects them symmetrically under I4's MAX rule, which
+  would have let an incidental property of which queries got picked
+  (not how well the objective picked them) leak into the one comparison
+  this D exists to make cleanly. Call 2 avoids a related circularity
+  (scoring CVaR against a hard-subset definition drawn from the same
+  tensor it optimizes). Both are methodology-correctness fixes, matching
+  established project discipline (D004's classification precedent,
+  D007's scale-comparability lesson), not genuine trade-offs to escalate.
+  Decided by: design-side, routine call.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
