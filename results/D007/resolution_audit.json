@@ -1,0 +1,36 @@
+{
+ "token_budget": 200,
+ "tensor_shape": [
+  259,
+  666
+ ],
+ "probe_cells_ge_ceiling": 0.2563,
+ "probe_cells_ge_0999": 0.0604,
+ "probe_cells_distinct": 1081,
+ "probe_PAIRS_at_ceiling_naive": 0.982,
+ "probe_PAIRS_at_ceiling_corrected": 0.518,
+ "energy_sf_cells_min": 0.00749,
+ "energy_sf_cells_max": 12.55362,
+ "energy_sf_distinct": 16727,
+ "energy_PAIRS_range": [
+  0.28892,
+  12.55362
+ ],
+ "note": "A bounded statistic pinned near its ceiling measures the ceiling, not the population (D001's failure; D004's mandatory check). Energy distance is unbounded and cannot saturate this way.",
+ "gate": "Per A3: a CVaR/mean ratio near 1 may NOT be reported as 'no tail' while this audit shows censoring. It does: 98.2% of pairs at ceiling naive, 51.8% corrected. S_energy is therefore authoritative.",
+ "also_tok100": {
+  "probe_cells_ge_ceiling": 0.2724,
+  "probe_cells_ge_0999": 0.0663,
+  "probe_cells_distinct": 1069,
+  "probe_PAIRS_at_ceiling_naive": 0.9805,
+  "probe_PAIRS_at_ceiling_corrected": 0.5541,
+  "energy_sf_cells_min": 0.00878,
+  "energy_sf_cells_max": 12.62728,
+  "energy_sf_distinct": 15659,
+  "energy_PAIRS_range": [
+   0.30362,
+   12.62728
+  ],
+  "note": "A bounded statistic pinned near its ceiling measures the ceiling, not the population (D001's failure; D004's mandatory check). Energy distance is unbounded and cannot saturate this way."
+ }
+}

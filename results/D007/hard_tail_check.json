@@ -1,0 +1,49 @@
+{
+ "criterion": "10th percentile of per-pair coverage > 0.9 => TAIL STILL ABSENT",
+ "token_budget": 200,
+ "naive": {
+  "naive_mean": 0.9986,
+  "naive_p10": 0.9964,
+  "naive_p50": 1.0,
+  "naive_min": 0.8773,
+  "naive_cvar10": 0.989,
+  "naive_cvar_over_mean": 0.9903
+ },
+ "f2_corrected": {
+  "corrected_mean": 0.9826,
+  "corrected_p10": 0.9536,
+  "corrected_p50": 0.9923,
+  "corrected_min": 0.7821,
+  "corrected_cvar10": 0.9256,
+  "corrected_cvar_over_mean": 0.942
+ },
+ "energy": {
+  "energy_mean": 2.3586,
+  "energy_p10": 1.0632,
+  "energy_p50": 2.0555,
+  "energy_min": 0.2889,
+  "energy_cvar10": 0.8322,
+  "energy_cvar_over_mean": 0.3528
+ },
+ "f2_selection_bias": {
+  "mean": 0.0164,
+  "median": 0.0071,
+  "p90": 0.0446,
+  "frac_positive": 0.6877,
+  "note": "max_A - B[q*], equal sample sizes, so this is selection bias"
+ },
+ "t16": {
+  "criterion": "10th percentile of per-pair coverage > 0.9 => TAIL STILL ABSENT",
+  "naive_p10": 0.9964,
+  "naive_fires": true,
+  "corrected_p10": 0.9536,
+  "corrected_fires": true,
+  "disagree": false
+ },
+ "verdict": "TAIL CONFIRMED on S_energy (CVaR0.1/mean = 0.3528, uncensored). T1.6 fires on S_probe under BOTH estimators, but S_probe is 51.8-98.2% ceiling-pinned, so per A3's gate that reading is not admissible. See D007 R3 -- the outcome table has no branch for 'probe censored, energy resolves cleanly'.",
+ "also_tok100": {
+  "naive_p10": 0.9964,
+  "corrected_p10": 0.9607,
+  "energy_cvar_over_mean": 0.3682
+ }
+}
