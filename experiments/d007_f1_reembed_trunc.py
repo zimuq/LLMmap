@@ -84,8 +84,19 @@ def main():
             gtok = AutoTokenizer.from_pretrained(m, token=api, legacy=False,
                                                  **kw, **tkw)
         except Exception as e:
-            skipped.append((m, f"{type(e).__name__}: {str(e)[:80]}"))
-            print(f"  SKIP {m}: {type(e).__name__} (needs the other env)", flush=True)
+            gtok = e
+        # A failed load does NOT always raise. transformers returns a BOOL
+        # instead of a tokenizer for internlm under use_fast=False in the
+        # standard env -- documented in D006/ENV.md, and then not guarded for
+        # here, so the loop ran 16 models and died on `'bool' object is not
+        # callable`. Check the object is usable rather than assuming the failure
+        # mode is an exception.
+        if not hasattr(gtok, "__call__") or isinstance(gtok, (bool, BaseException)):
+            why = (f"{type(gtok).__name__}: {str(gtok)[:70]}"
+                   if isinstance(gtok, BaseException)
+                   else f"returned {type(gtok).__name__}, not a tokenizer")
+            skipped.append((m, why))
+            print(f"  SKIP {m}: {why} (needs the other env)", flush=True)
             continue
 
         texts, index = [], []
