@@ -1,0 +1,8 @@
+[1] load build cubes: 3.6s  37 models (259, 75, 1024)
+[1b] load test cubes: 1.2s  (259, 25, 1024)
+[2] per-query eval-vs-ref sqdist (925, 2775): 759 ms -> x259 = 196.5s ; memory 2.66 GB float32
+[3] per cell: energy 5.4 ms, MMD 10.7 ms  -> full 172,494-cell tensor: energy 0.26 core-h, MMD 0.51 core-h
+[4] GreedyCover k=8 gamma=0.1: 0.02s  selected [193, 123, 233, 243, 240, 17, 136, 252]
+    gamma=1.0: 0.02s  selected [123, 117, 3, 109, 240, 113, 239, 114]
+    overlap gamma .1 vs 1.0 at k=8: 2/8
+[5] pool coverage (max over all 259) percentiles: [0.289, 0.63, 0.876, 1.063, 1.483, 2.056]
