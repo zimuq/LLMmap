@@ -308,6 +308,35 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   check, TODO.md T1.5/T1.6).
   Decided by: human, 2026-09-06 (design-side recommendation accepted
   as proposed).
+
+[2026-09-06] D006 R -- CLOSED, READY at 37/37
+  Decision: D006 marked CLOSED. All 37 models generated, embedded, and
+  invariant-verified against the corpus as generated. A late own-bug find
+  (L2-normalizing embeddings, which the paper's released code does not
+  do) was fixed and the corpus re-embedded; measured +0.051 AUC, 15/15
+  pairs improved. This makes D006/R2's earlier "100 tokens separates
+  better than 200" finding provisional (measured on the now-corrected-
+  away normalization) -- not resolved here, handed to D007 as its F1.
+  Decided by: design-side, routine call (disposition matches D006's own
+  pre-registered READY criterion; no new interpretation required).
+
+[2026-09-06] D007 P1 -- approved (F1-F4, S2a)
+  Decision: approved re-checking the 100-vs-200 analysis-length question
+  on corrected embeddings over the full 666 pairs before freezing which
+  length the tensor uses (F1, discharges D006/R10's provisional flag);
+  approved a split-half winner's-curse correction applied to T1.6's
+  falsification criterion, since max_q S_probe[q][p] over 259 noisy
+  75-vs-75 estimates is upward-biased in exactly the direction that would
+  falsely trigger a TAIL STILL ABSENT stop (F2 -- threshold unchanged,
+  only the quantity it's applied to); approved F3 (scale-free energy
+  distance for any MAX-aggregated use) and F4 (store per-cell sample
+  counts despite current constancy). Approved S2a (a small saturation
+  check at the real n=75 scale) to run immediately and standalone.
+  Rationale: none of these are value trade-offs -- they are measurement-
+  correctness fixes matching methodology already established and human-
+  approved (D004's bounded+unbounded+audit-gate pattern; C7's causal
+  generate-high/analyze-low asymmetry). No genuine trade-off to escalate.
+  Decided by: design-side, routine call.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

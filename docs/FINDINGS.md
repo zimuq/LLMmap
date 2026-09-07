@@ -162,5 +162,36 @@ models, 2026-09-05), and the Phase-1 D is now drafted: [D006](D006.md).**
 
 ---
 
+## D006 — The real Phase-1 corpus: built, READY at 37/37
+
+**The project's own corpus (not the shipped LLmap one D001/D004/D005
+analyzed) is done.** 1,197,875 responses across 37 models, 259 queries
+(D003's 233 + 26 new tokenizer-level probes), 125 build/val/test configs
+each, embedded with the frozen I5 model. All of I1/I2/I3/I5/I7 verified
+against the corpus *as generated*, not just its definitions.
+
+**A real, measured improvement found late: don't normalize the
+embeddings.** TACC checked its embedding procedure against the paper's
+actual released code (prompted by a design-side correction to
+`PAPER_DEVIATIONS.md` — I5 turned out to be the paper's own frozen
+stage-1 embedding, not a substitute for it, so checking the *rest* of the
+paper's procedure became worth doing) and found it was L2-normalizing
+response vectors, which the paper does not. Removing normalization
+improved separability on 15 of 15 test pairs (+0.051 AUC) — response
+*magnitude*, not just direction, carries real model-discriminative
+information. Fixed; the whole corpus was cheaply re-embedded from stored
+raw text.
+
+**One open thread this created, already being handled, not lost:** an
+earlier finding (D006's C7 pilot: "100-token responses separate better
+than 200-token ones") was measured on the *normalized* embeddings and is
+now provisional — it may or may not survive re-measurement on the
+corrected ones. [D007](D007.md) re-checks this properly (full 666 pairs,
+corrected embeddings) before freezing which analysis length the real
+separability tensor uses, rather than carrying the provisional finding
+forward unverified.
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
