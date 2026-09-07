@@ -1,8 +1,8 @@
 # ENV.md — TACC Vista operational facts
 
-**Owner: TACC-side.** Machine facts only — no decisions, no findings, no
-interpretation. If a fact here is wrong, the machine is the authority; re-run the
-verification command and correct it.
+**Owner: TACC-side.** Machine facts and operational discipline — no research
+decisions, no findings. If a fact here is wrong, the machine is the authority;
+re-run the verification command and correct it.
 
 **Why this file exists.** Every fact below was previously recorded only inside a
 *closed* D's plan file, or in conversation that no file captured. `D006.md` cites
@@ -196,3 +196,50 @@ is on record (`D006.md`'s "4–6 hours"; corrected in `plans/D006-P1.md` §F4).
 
 <!-- Append machine facts as they are established. Keep decisions and findings
      out of this file — they belong in DECISIONS.md / FINDINGS.md. -->
+
+---
+
+## Operational discipline (Phase 1, learned the expensive way)
+
+Four mistakes recurred across D006/D007. Each cost real time, none was caught by
+"does the code do what I intended", and all four are cheap to avoid. They are
+recorded here rather than inside a closed D because they are not about those D's
+questions — they are about how to run work on this machine.
+
+**1. Set thresholds at what a DEFECT looks like, not at "perfect."** Five false
+alarms came from this, each costing a diagnostic detour:
+
+| check | set at | should have been |
+|---|---|---|
+| batched vs unbatched generation | character-exact match | distributional — bf16 makes exactness impossible |
+| batch-size effect on length | 32 prompts, chars | paired, tokens, both size extremes |
+| shard validity | zero empty responses | anomalous *rate* (empties are model behaviour) |
+| point-cloud health | ≥80% unique rows | collapsed spread (repetition is signal) |
+| D007's F2 | assumed bias would flip T1.6 | it was real but 10× too small; the *audit gate* mattered |
+
+An over-strict criterion does not fail safe. It manufactures alarms that look
+exactly like real defects.
+
+**2. Guards must match how the thing actually fails.** `AutoTokenizer` returns a
+**`bool`** instead of raising for some remote-code models. A `try/except` around
+it catches nothing, and the loop dies 16 models later on `'bool' object is not
+callable`. I had documented that exact behaviour myself and then written the
+wrong guard. Check the returned object is usable; don't assume failure arrives as
+an exception. Likewise `set -euo pipefail` turned a zero-match `grep` — a normal
+outcome — into a silent total failure of the submitter.
+
+**3. Never mutate shared state while jobs are queued or running.** Rewriting
+`general.json` killed a PENDING job 90 s in. Installing packages into
+`llmmap-gpu` mid-run left 24 shards with unrecoverable environment provenance.
+Use a venv with `--system-site-packages` for one-off needs (see above).
+
+**4. Prefer a job's own report over inference from job names.** Slurm job names
+are truncated to 20 chars, so `granite-3.0`/`granite-3.1`,
+`Phi-3-medium-128k`/`-4k` and `Mistral v0.1/v0.2/v0.3` collide. De-duplicating on
+them cancelled four healthy jobs. Read `--model` back out of the batch script
+(`scontrol write batch_script <id> -`).
+
+**Two things that paid for themselves repeatedly:** a *preflight* that checks
+every model's tokenizer/template/quirks before launching N jobs, and a *smoke
+test* on the smallest and largest model before committing a fleet. Both were
+written only after failures they would have prevented.
