@@ -137,6 +137,49 @@ def main():
             supersedes="D006/R2's provisional 15-pair result, measured on "
                        "normalised embeddings later shown to discard signal")
 
+    # ---- S6: motivating case + the pre-registered ChatQA instrument check
+    meta, S = load(tags[0])
+    cov = coverage(S, meta)
+    pairs = meta["pairs"]
+    models = meta["models"]
+
+    def rank_of(sub, cval):
+        """Percentile rank of a pair's coverage: 0 = hardest."""
+        hits = [i for i, nm in enumerate(pairs) if all(t in nm for t in sub)]
+        if not hits:
+            return None
+        i = hits[0]
+        return dict(pair=pairs[i],
+                    coverage_corrected=round(float(cval[i]), 4),
+                    percentile=round(float((cval < cval[i]).mean() * 100), 2))
+
+    s6 = dict(
+        statistic_used=tags[0],
+        falcon_pair=rank_of(["Falcon3-10B", "Falcon3-7B"], cov["corrected"]),
+        falcon_pair_energy=rank_of(["Falcon3-10B", "Falcon3-7B"], cov["energy"]),
+        hardest_10=[dict(pair=pairs[i], coverage=round(float(cov["corrected"][i]), 4))
+                    for i in np.argsort(cov["corrected"])[:10]],
+        easiest_5=[dict(pair=pairs[i], coverage=round(float(cov["corrected"][i]), 4))
+                   for i in np.argsort(cov["corrected"])[-5:]])
+
+    # D006/R11 pre-registered: ChatQA's canned-refusal mode (355/500 unique rows
+    # vs a median of 497) should make it UNUSUALLY EASY to separate. If it is
+    # not, suspect the instrument rather than the model. Free sanity check.
+    ci = [i for i, nm in enumerate(pairs) if "Llama3-ChatQA" in nm]
+    others = [i for i in range(len(pairs)) if i not in ci]
+    cq = float(np.mean(cov["corrected"][ci]))
+    ot = float(np.mean(cov["corrected"][others]))
+    s6["chatqa_prediction"] = dict(
+        n_pairs_involving_chatqa=len(ci),
+        mean_coverage_chatqa=round(cq, 4), mean_coverage_others=round(ot, 4),
+        delta=round(cq - ot, 4), prediction_held=bool(cq > ot),
+        mean_rank_percentile=round(float(np.mean(
+            [(cov["corrected"] < cov["corrected"][i]).mean() * 100 for i in ci])), 2),
+        note="D006/R11 pre-registered that ChatQA should be unusually EASY to "
+             "separate because of its distinctive canned-refusal mode. If this "
+             "fails, suspect the instrument, not the model.")
+    res["S6"] = s6
+
     json.dump(res, open(f"{OUT}/analysis.json", "w"), indent=1)
 
     for tag in tags:
@@ -156,6 +199,15 @@ def main():
         print(f"  T1.6  naive p10 {t['naive_p10']:.4f} -> fires={t['naive_fires']}   "
               f"corrected p10 {t['corrected_p10']:.4f} -> fires={t['corrected_fires']}"
               + ("   *** DISAGREE ***" if t["disagree"] else ""))
+
+    s6 = res["S6"]
+    print(f"\n===== S6: motivating case =====")
+    print(f"  Falcon3-10B<->7B: {s6['falcon_pair']}")
+    c = s6["chatqa_prediction"]
+    print(f"  ChatQA prediction (D006/R11): coverage {c['mean_coverage_chatqa']:.4f} "
+          f"vs others {c['mean_coverage_others']:.4f} (delta {c['delta']:+.4f}) -> "
+          f"HELD={c['prediction_held']}")
+    print(f"  hardest pair: {s6['hardest_10'][0]}")
 
     if "F1_budget_comparison" in res:
         f = res["F1_budget_comparison"]
