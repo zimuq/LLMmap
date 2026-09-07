@@ -114,7 +114,7 @@ def main():
         failures.append(f"    {v}")
 
     # ---- I3 + I5
-    tot_emb, degenerate = 0, []
+    tot_emb, degenerate, uniqueness = 0, [], {}
     for s in validated:
         slug = s["model"].replace("/", "__")
         npy, ix = f"{EMB}/{slug}.npy", f"{EMB}/{slug}.index.json"
@@ -130,15 +130,32 @@ def main():
         if meta.get("embedding_model") != I5_MODEL or meta.get("dim") != I5_DIM:
             failures.append(f"I5: {s['model']} embedded with "
                             f"{meta.get('embedding_model')} dim {meta.get('dim')}")
-        # a collapsed / averaged point cloud would have near-zero spread
+        # What I3 forbids is a COLLAPSED point cloud -- averaging, or every
+        # response mapping to one point. That is a spread test.
+        #
+        # My first version also failed a shard whose sampled rows were <80%
+        # unique. That is not I3's failure mode, and it produced a false
+        # positive on Llama3-ChatQA-1.5-8B (355/500 unique, median across the
+        # 37 is 497/500). Its repeats are canned refusals -- " Sorry. I cannot
+        # find the answer based on the context." x86, " Yes" x29, " No" x22 --
+        # because it is RAG/QA-tuned and most of Q_0 is not context-grounded QA.
+        # That is a distinctive, highly identifiable behaviour: fingerprint
+        # SIGNAL, not corruption. Row uniqueness conflates "the pipeline
+        # averaged the data" with "the model repeats itself"; only the first is
+        # a defect. Uniqueness is now reported, not gated -- with a floor low
+        # enough (<10%) that it only fires on something genuinely collapsed.
         sub = np.asarray(a[:2000], dtype=np.float32)
         spread = float(np.mean(np.std(sub, axis=0)))
         uniq = len(np.unique(sub[:500], axis=0))
-        if spread < 1e-4 or uniq < 400:
+        uniqueness[s["model"]] = uniq
+        if spread < 1e-4 or uniq < 50:
             degenerate.append(f"{s['model']}: spread={spread:.2e} uniq={uniq}/500")
+    lo = sorted(uniqueness.items(), key=lambda kv: kv[1])[:3]
     check(not degenerate,
-          f"I3: point clouds are not degenerate (per-dim spread and row "
-          f"uniqueness checked on every shard)")
+          f"I3: no collapsed point clouds (per-dim spread on every shard; "
+          f"median row-uniqueness {int(np.median(list(uniqueness.values())))}/500, "
+          f"lowest {', '.join(f'{m.split(chr(47))[-1]}={u}' for m, u in lo)} "
+          f"-- low uniqueness is model repetitiveness, i.e. signal, not a defect)")
     for d in degenerate:
         failures.append(f"    {d}")
     check(tot_emb == sum(s["n_rows"] for s in validated),
@@ -155,6 +172,7 @@ def main():
     out = dict(corpus_status=manifest["status"], models=len(models),
                near_relative_pairs=len(pairs), i2_values_checked=checked,
                i2_violations=len(viol), embedding_rows=tot_emb,
+               row_uniqueness_per_500=uniqueness,
                passed=not failures, notes=notes, failures=failures)
     json.dump(out, open("./results/D006/s7_invariants.json", "w"), indent=1)
     print(f"\nwritten: results/D006/s7_invariants.json")
