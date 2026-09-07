@@ -207,5 +207,48 @@ paper (LLMmap0.2), not a paper-vs-code deviation with a known paper value
 
 ---
 
+## D007 — The real separability tensor: TAIL CONFIRMED, decisively
+
+**Phase 1 is done. The hard-tail premise now holds on the project's own
+corpus, own embedding, and full query pool — not just on D004's proxy
+instrument.** `CVaR₀.₁/mean = 0.353` on the unbounded statistic
+(`S_energy`) — a *larger* tail than D004 found (0.616), measured on 259
+queries and 666 pairs instead of 8 queries and a proxy representation.
+
+**The bounded statistic (probe AUC) turned out to be unusable at this
+scale, exactly as A3's design anticipated but more severely than
+expected** — 51.8% of pairs pinned at ceiling even after correcting for
+selection bias, 98.2% before. This is why A3 made energy distance a
+*mandatory* companion with a formal resolution-audit gate rather than an
+optional check: applied naively, the bounded statistic alone would have
+reported `TAIL STILL ABSENT` — a false falsification that would have
+escalated to a `METHOD.md`/I1 revision question for no real reason.
+
+**A secondary methodological lesson, worth remembering beyond this D:** a
+statistically well-reasoned safeguard (the winner's-curse correction, F2)
+was approved and executed correctly, but turned out not to be what
+prevented the wrong verdict — a *different* safeguard (A3's saturation
+gate) did that work instead. Both were worth having; only one was
+load-bearing here. Worth remembering when weighing which of several
+proposed checks to prioritize under time pressure in the future — it
+isn't always obvious in advance which one will matter.
+
+**Also resolved: D006's provisional "100 tokens beats 200" finding was
+wrong, not just unverified.** Properly remeasured (666 pairs, corrected
+embeddings, both statistics), 200 tokens wins clearly. C7's 200-token
+ceiling is vindicated a second time.
+
+**The project's own motivating pair remains the throughline.**
+`Falcon3-10B ↔ Falcon3-7B` is the 1.5th-hardest of 666 pairs here — under
+a completely different representation and query pool than D001/D004
+used. Continuity across three independent measurements is about as
+strong as this kind of evidence gets.
+
+**Phase 2 (the actual mean-vs-CVaR query-selection comparison) is now
+unblocked** — per `TODO.md`'s own framing, computationally cheap
+("seconds per run") now that the expensive part (D006+D007) is done.
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

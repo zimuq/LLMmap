@@ -337,6 +337,28 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   approved (D004's bounded+unbounded+audit-gate pattern; C7's causal
   generate-high/analyze-low asymmetry). No genuine trade-off to escalate.
   Decided by: design-side, routine call.
+
+[2026-09-07] D007 R -- TAIL CONFIRMED on S_energy; D007 closed
+  Decision: D007 marked CLOSED. S_probe saturated far more severely than
+  anticipated (51.8% of pairs at ceiling even after F2's correction,
+  98.2% before it) -- A3's mandatory-gate design correctly deferred to
+  S_energy, which resolved cleanly: CVaR_0.1/mean = 0.353, larger tail
+  than D004 found on its proxy instrument (0.616). METHOD.md sec 2 and
+  I1 stand on the real corpus. Frozen tensor for I6 going forward:
+  S_energy_tok200. Also: F2's winner's-curse correction did not prevent
+  a false verdict on its own (T1.6 fired on S_probe under both naive and
+  corrected numbers) -- A3's audit gate is what actually did; both
+  safeguards were worth approving, only one was load-bearing here, and
+  this is reported plainly rather than overstating F2's contribution.
+  D006/R10's provisional "100 tokens beats 200" finding is refuted (not
+  just superseded) on proper remeasurement -- 200 wins on 71.3% of pairs
+  under the authoritative statistic. D007.md's own outcome table was
+  missing a branch for exactly this result (S_probe censored, S_energy
+  resolves) -- fixed in this pass rather than left as a prose-only
+  exception. Phase 2 (TODO.md T2.1-T2.4) is now unblocked.
+  Decided by: design-side, routine call (disposition follows directly
+  from A3's own pre-registered gate logic; no new interpretation
+  required).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

@@ -12,24 +12,23 @@
 | [D004](D004.md) | D001 §R6, human-approved 2026-09-01 | **CLOSED** 2026-09-02 — TAIL CONFIRMED (CVaR₀.₁/mean=0.616 on the uncensored statistic); `METHOD.md §2`/I1 stand | REVIEW (P1 approved, executed) | none (pure re-analysis of D001's cached embeddings) | `results/D004/`, `D004.md` `## R` |
 | [D005](D005.md) | I2 bug found while preparing D004 (TACC note on D001's `## Review`, 2026-09-02) | **CLOSED** 2026-09-04 — FIXED (M1+M2+M3 verified via regression test); shipped-dataset exposure UNDETERMINABLE (M4), no effect on D001/D004's numbers | REVIEW (P1 approved, executed) | none | `results/D005/`, `D005.md` `## R` |
 | [D006](D006.md) | TODO.md Phase 1 (T1.1–T1.4) + D002 §R4 + D003 + D005; A1/C4/C7 decided 2026-09-05/06 | **CLOSED** 2026-09-06 — READY at 37/37 (1,197,875 generations); own embedding-normalization bug found and fixed (+0.051 AUC, matches paper's actual procedure) | REVIEW (P1 approved, executed) | none | `results/D006/`, `D006.md` `## R` |
-| [D007](D007.md) | TODO.md Phase 1 (T1.5–T1.6); A3 decided 2026-09-06 | **OPEN** — P1 approved 2026-09-06 (F1–F4, S2a). TACC runs S2a → F1's 100-vs-200 recheck → builds the tensor with F2's winner's-curse correction applied to T1.6's criterion, in that order | REVIEW (P1 approved) | D006 (✅ READY, satisfied) | `docs/plans/D007-P1.md`; `## R` pending |
+| [D007](D007.md) | TODO.md Phase 1 (T1.5–T1.6); A3 decided 2026-09-06 | **CLOSED** 2026-09-07 — **TAIL CONFIRMED on `S_energy`** (CVaR₀.₁/mean=0.353, uncensored; `S_probe` was 51.8–98.2% ceiling-pinned, A3's gate correctly deferred to `S_energy`). `METHOD.md §2`/I1 stand on the real corpus. Frozen tensor for I6: `S_energy_tok200` | REVIEW (P1 approved, executed) | none | `results/D007/`, `D007.md` `## R` |
 
 ## Not yet a D
 
 - **The actual query-strategy comparison (TODO.md T2.1–T2.4: mean-greedy
-  vs. CVaR-coverage, the γ sweep, the identifiability frontier)** —
-  blocked on D007 landing (`TAIL CONFIRMED` or better). Per TODO.md's own
-  framing this phase is "post-processing on the frozen tensor... seconds
-  per run" once D007 closes — the expensive part is D006+D007, not this.
+  vs. CVaR-coverage, the γ sweep, the identifiability frontier)** — **now
+  unblocked** (D007 closed, TAIL CONFIRMED). Per TODO.md's own framing
+  this phase is "post-processing on the frozen tensor... seconds per
+  run" — the expensive part (D006+D007) is done. Next D to draft.
 
 ## Notes
 
 - TACC executes only `status: OPEN` D's whose `gate` is satisfied — `AUTO`
   runs immediately, `REVIEW` needs a posted `## Review` with an APPROVED
-  verdict. D007 is fully approved — no further design-side gate before
-  execution.
+  verdict.
 - "Closed" is a design-side call made after `## R` is posted **and** any
-  R-driven open questions are resolved for the D's *own* question. D001–D006
-  are all closed as of 2026-09-06 — each answered its own question in full,
+  R-driven open questions are resolved for the D's *own* question. D001–D007
+  are all closed as of 2026-09-07 — each answered its own question in full,
   even where (D001/D002) the answer spawned a still-open A-series item that
   outlives the D itself.
