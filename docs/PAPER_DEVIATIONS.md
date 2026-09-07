@@ -123,6 +123,22 @@ committing to the real corpus — explicitly flagged there as biased toward
 positive result (D004: TAIL CONFIRMED) was treated as comparatively strong
 evidence despite, not because of, that bias.
 
+**A false start worth recording, not just the correction (D006/R10,
+2026-09-06):** having the right *model name* for stage 1 is not the same
+as having the right *procedure*. D006's first embedding pass L2-normalized
+every response vector before storing it — the paper's own stage 1 does
+not (verified against `LLMmap/embedding_model.py:15-26` directly, not
+assumed from the model name). Measured effect of removing it: **+0.051
+probe AUC, 15 of 15 test pairs improved.** Response *magnitude*, not just
+direction, carries real model-discriminative signal, and normalizing
+discarded it. Fixed; the corpus was re-embedded from stored raw text
+(~12 min). **Lesson for future stage-1-adjacent work: verify pooling,
+normalization, truncation length, and special-token handling against the
+paper's actual code, not just the embedding model's name** — this is
+exactly the kind of silent, no-error-message deviation the rest of this
+project's invariants (I1–I7) already exist to guard against, just one
+layer further upstream than usual.
+
 ### 4. Query pool construction — `[paper, Table F.1 for baselines]`
 
 **Ours:** a proxy-LLM-generated candidate pool (`allenai/OLMo-2-1124-13B-Instruct`,
@@ -190,6 +206,40 @@ mechanism — noted, not undertaken (would need its own D + I7 bump).
 ~5–15, at the cost of more inference generations (~315K+ vs ~157K).
 **"20–70× cheaper" must never be claimed** — inference parallelizes and
 is checkpointable, training does not; that's the actual saving.
+
+### 9. System-prompt handling — a released-code bug, not a deliberate deviation — `[code, LLMmap/llm.py, bug]`
+
+`_does_template_have_system` (the released code's check for whether a
+model's chat template accepts a system message) tested `"system" in
+chat_template` — a substring match on the template's *source text*, not
+on what actually happens when a system message is rendered. Measured
+against all 37 of D006's models (2026-09-06), this is wrong for **10**,
+in both directions:
+
+- **5 gemma models:** the template contains `"system"` only inside a
+  `raise_exception('System role not supported')` branch. The substring
+  test says yes; rendering actually **raises**, and every gemma shard
+  crashed.
+- **`nvidia/Llama3-ChatQA-1.5-8B`:** tests true but **silently drops** the
+  system content — the more dangerous failure, since the shard completed
+  normally with the system prompt missing from ~90% of its configs
+  (`WITH_SYSTEM_P=0.9`) rather than erroring.
+- **4 models** (`aya-23-8B`, `Llama-3-8B-Gradient-1048k`,
+  `Meta-Llama-3-8B-Instruct`, `openchat_3.5`): test false but **do**
+  support a system role, so their system prompt was silently prepended
+  to the user turn instead of using the role the template actually
+  supports.
+
+Fixed with a behavioral probe (render a sentinel system message, check it
+survives) rather than a text-based heuristic. **This is a defect in the
+released code (LLMmap0.2, "not a one-to-one conversion of the paper's
+code," `TODO.md` T-1.1) — not a deliberate deviation, and not something
+this project introduced.** Whether the paper's own original experiments
+used code with this same defect is unknown; nothing here establishes
+that. Consequence: 10 of D006's 37 shards were (re)generated after the
+fix (~10 node-hours) — the corpus does not carry this defect, but it
+means those 10 models' prompt construction genuinely differs from
+whatever the released code alone would have produced.
 
 ---
 

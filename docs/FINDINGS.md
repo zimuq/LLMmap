@@ -191,6 +191,20 @@ corrected embeddings) before freezing which analysis length the real
 separability tensor uses, rather than carrying the provisional finding
 forward unverified.
 
+**A second, unrelated corpus-quality bug also found and fixed during
+D006:** the released code's test for "does this model's chat template
+support a system role" was a text-substring check on the template
+source, not a check on what actually happens when a system message is
+rendered — wrong for 10 of the 37 models, in three different ways (5
+gemma models crashed instead of receiving the prompt; one model,
+`Llama3-ChatQA-1.5-8B`, silently *dropped* the system content in ~90% of
+its configs, the more dangerous failure since nothing errored; 4 more
+models had their system prompt misplaced into the user turn). Fixed with
+a behavioral probe instead of a text heuristic; the 10 affected shards
+were regenerated. This is a bug in the released code's rewrite of the
+paper (LLMmap0.2), not a paper-vs-code deviation with a known paper value
+— recorded in `PAPER_DEVIATIONS.md` (item 9) for that reason.
+
 ---
 
 <!-- append new entries below, one per D, once it produces a project-level
