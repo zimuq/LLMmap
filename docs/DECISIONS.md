@@ -154,6 +154,26 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D3 | Papers 2 & 3 follow-ups | 🅿️ out of scope; keep corpus schema friendly where free |
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
 
+> **D4 scope note, 2026-09-08:** the separability statistic itself
+> (energy distance) was a related but separate unverified-citation risk
+> — now resolved. Confirmed it is a pre-existing statistic (Székely &
+> Rizzo 2004; Rizzo & Székely 2016 review), not the paper's formula (the
+> paper never instantiates one, Fact 1) and not this project's
+> invention — applying it to the I3 point-cloud structure is CDQD's own
+> combination, though, and belongs in `PAPER_DEVIATIONS.md` as a
+> deviation/novelty item, not a gap. Full writeup: `PAPER_DEVIATIONS.md`
+> item 10. D4 itself still covers only the CVaR/submodularity hardness
+> citations, which remain unverified.
+>
+> **Open, human-escalation item raised by this check (not yet
+> actioned):** `METHOD.md §4` currently describes `Sep(·,·)` only
+> abstractly (between-group/within-group ratio) and never names energy
+> distance or cites it — the concrete formula only lives in `D004.md`'s
+> TACC-authored `## P` and this file's A3 note. Naming it explicitly in
+> `METHOD.md` would make the method document self-contained, but editing
+> `METHOD.md` is a human-escalation item per `CLAUDE.md` rule (d) —
+> flagged here, not made.
+
 ---
 
 ## Decision log
@@ -495,6 +515,38 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   as fact.
   Decided by: human (A4 resolution); design-side (verification task,
   routine -- answering a direct factual question from existing files).
+
+[2026-09-08] Verified: energy distance is neither the paper's formula nor a
+project invention -- it's a genuine deviation/novelty
+  Decision: recorded as `PAPER_DEVIATIONS.md` item 10. The human asked
+  design-side to confirm whether energy distance (D004/P1's M1b, now
+  A3's mandatory companion statistic) is TACC's own invention, the
+  paper's own distance formula, or a combination of the paper's
+  point-cloud structure and energy distance's own properties. Verified:
+  the paper never instantiates any d(.,.) at all (Fact 1, already
+  confirmed against paper text), so there is no paper formula to have
+  reused; the formula itself (E(A,B) = 2*mean||a-b|| -
+  mean||a-a'|| - mean||b-b'||) matches the standard literature
+  definition (Szekely & Rizzo 2004; Rizzo & Szekely 2016 review,
+  confirmed via web search 2026-09-08), so it predates this project and
+  was not invented here either. The genuine combination -- applying an
+  off-the-shelf statistic to the I3 point-cloud structure as the thing
+  GreedyCover optimizes directly -- is CDQD's own contribution, not
+  present in the paper (which uses point clouds only implicitly, to
+  train a stage-2 siamese network, never as an explicit two-sample-test
+  input). D4's scope narrowed: energy distance's citation is resolved
+  and no longer an open citation risk; CVaR/submodularity hardness
+  citations remain the only unverified item under D4.
+  Rationale: a factual verification task answerable from files already
+  in the repo (D004.md, DECISIONS.md A3) plus one citation lookup --
+  routine ledger maintenance matching PAPER_DEVIATIONS.md's existing
+  9-item discipline, not a trade-off. Separately flagged (not
+  actioned): METHOD.md sec4 should eventually name this statistic and
+  cite it explicitly rather than staying at the abstract Sep(.,.)
+  level -- revising METHOD.md is a human-escalation item per CLAUDE.md
+  rule (d), so this is recorded as open, not done.
+  Decided by: design-side, routine call (verification + ledger entry);
+  the METHOD.md revision itself is NOT decided -- awaiting human call.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

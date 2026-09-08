@@ -241,6 +241,82 @@ fix (~10 node-hours) — the corpus does not carry this defect, but it
 means those 10 models' prompt construction genuinely differs from
 whatever the released code alone would have produced.
 
+### 10. The separability statistic itself — `energy distance` is not the paper's, and not this project's invention either — `[literature, Székely & Rizzo]`
+
+**What it is:** `Sep(q,v,v')`'s primary companion statistic (`DECISIONS.md`
+A3, mandatory since 2026-09-06) is the **energy distance** between two
+point clouds, first used in this project by D004/P1 (2026-09-01/02):
+
+```
+E(A,B) = 2·mean‖a−b‖ − mean‖a−a′‖ − mean‖b−b′‖
+```
+
+**Verified 2026-09-08, no ambiguity on any of the three possibilities the
+human asked about:**
+
+- **Not the paper's own distance formula.** The paper's Eq. 2/3 `d(·,·)`
+  is never instantiated anywhere — paper text (§5.1: "we leave this as
+  future work") and the released repo (no `d`, no greedy-search code) both
+  confirm this (Fact 1, `METHOD.md §1`). There is no formula in LLmap to
+  have reused or deviated from here — the paper simply has none.
+- **Not something TACC or design-side invented for this project.** Energy
+  distance is a pre-existing, general-purpose nonparametric two-sample
+  statistic from the statistics literature — Székely & Rizzo (2004,
+  *"Testing for equal distributions in high dimension"*) and the review
+  Rizzo & Székely (2016, *"Energy distance,"* WIREs Computational
+  Statistics) are the standard citations; it is zero iff the two
+  distributions are identical, and needs no bandwidth or kernel choice
+  (unlike MMD, D008's own sensitivity-check alternative). D004/P1
+  (TACC-authored) picked it off the shelf as "sanctioned by `DECISIONS.md`
+  A3... non-parametric, no bandwidth to choose" — correct in substance,
+  but **no citation was ever recorded anywhere in this repo until now**
+  (not in `METHOD.md`, not in D004, not in `DECISIONS.md`) — see the gap
+  note below.
+- **It is a genuine combination, and that combination is CDQD's own
+  methodological contribution, not the paper's.** The *point cloud*
+  `P(q,v)` (invariant I3) — multiple traces per `(query, model)` cell
+  across `S_build` prompting configs — is data LLmap's own experimental
+  setup naturally produces (it already samples multiple configs), but the
+  **paper never uses it as a two-sample-test input.** LLmap's own pipeline
+  instead trains a stage-2 siamese/classifier network on top of the
+  frozen stage-1 embedding (`PAPER_DEVIATIONS.md` item 3) — an implicit,
+  learned comparison, not an explicit distance statistic. CDQD applies an
+  external, off-the-shelf statistic (energy distance) directly to that
+  point-cloud structure to get an explicit, trainable-model-free
+  separability score per `(query, pair)` cell. **Neither half is new on
+  its own — point clouds are implicit in the paper's own data collection,
+  and energy distance predates LLM fingerprinting by two decades — but
+  applying the second to the first, as the thing `GreedyCover` optimizes
+  directly, is not in the paper and does not reduce to anything in the
+  paper.** This is exactly the load-bearing move `METHOD.md §4` calls
+  "why the point cloud is load-bearing": fusing Eq. 2 (discrepancy,
+  energy distance's between-group term) and Eq. 3 (consistency, its
+  within-group term) into one scalar with no hand-tuned weight — a
+  concrete instantiation of the abstract `Sep(·,·)` `METHOD.md` describes
+  but does not itself name a formula for.
+
+**Rationale for recording this as a deviation, not just a citation
+fix:** every other row in this ledger is "paper does X, we do Y instead."
+This one is different in kind — the paper has **no Y to compare against
+at all** for the separability statistic (Fact 1 again), so the honest
+framing is not "we deviated from the paper's choice" but "the paper made
+no choice here, and CDQD's choice is a novel contribution, built from an
+existing statistical tool applied to a data structure the paper collects
+but never uses this way." Worth stating explicitly in any writeup's
+related-work / method section, both to avoid a reviewer assuming this is
+paper-derived and to correctly cite Székely & Rizzo rather than presenting
+energy distance as this project's own invention.
+
+**Follow-up:** `METHOD.md §4` should eventually name this statistic and
+its citation explicitly rather than staying at the abstract `Sep(·,·)`
+level — currently the concrete formula only lives in `D004.md`'s `## P`
+(TACC-authored) and `DECISIONS.md`'s A3 note, not in the method
+document itself. **Flagged, not made** — revising `METHOD.md` is a
+human-escalation item per `CLAUDE.md`. `DECISIONS.md` D4's scope
+narrows: the CVaR/submodularity citations remain unverified, but energy
+distance's citation is now resolved (Székely & Rizzo 2004; Rizzo &
+Székely 2016) and no longer belongs in that "unverified" bucket.
+
 ---
 
 ## Known gaps in this ledger (flag rather than guess)
