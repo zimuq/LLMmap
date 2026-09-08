@@ -1,0 +1,12 @@
+oracle ceiling over 65 near-relative pairs: 0.9822 (min 0.8000)
+single best build-selected query: 0.9055; median query: 0.8157
+observed at k=8: {'paper8': 0.9356923076923078, 'random': 0.9073738461538463, 'mean_greedy_max': 0.9378461538461539, 'cvar_max': 0.9436923076923076}
+headroom above the best condition: +0.0385; random-to-best span: +0.0363
+   microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruc oracle 0.800
+   tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct                 oracle 0.840
+   mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3  oracle 0.900
+   microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-128k-instruct  oracle 0.920
+   microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct    oracle 0.920
+   microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct    oracle 0.920
+   microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct  oracle 0.940
+   HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.1        oracle 0.960

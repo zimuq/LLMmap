@@ -1,0 +1,267 @@
+{
+ "schema": "d008-sensitivity-v1",
+ "S6": {
+  "audit": {
+   "sigma2": 117.73094841329487,
+   "cells_min": 0.001096550840884447,
+   "cells_max": 1.5721848011016846,
+   "distinct": 49536,
+   "frac_below_1e3": 0.0,
+   "frac_above_1p9": 0.0,
+   "energy_distinct": 16727
+  },
+  "spearman_cells_energy_vs_mmd": 0.9750733092333367,
+  "spearman_cells_mmd_global_vs_local_bandwidth": 0.9697189997249358,
+  "spearman_pair_coverage_energy_vs_mmd": 0.9645563115617564,
+  "chains": {
+   "energy_cvar": [
+    193,
+    123,
+    233,
+    243,
+    240,
+    17,
+    136,
+    252
+   ],
+   "energy_mean": [
+    123,
+    117,
+    3,
+    109,
+    240,
+    113,
+    239,
+    114
+   ],
+   "mmd_cvar": [
+    193,
+    123,
+    233,
+    252,
+    136,
+    243,
+    234,
+    235
+   ],
+   "mmd_mean": [
+    117,
+    109,
+    3,
+    233,
+    123,
+    252,
+    0,
+    140
+   ]
+  },
+  "chain_overlap": {
+   "cvar_k8": 6,
+   "mean_k8": 4
+  },
+  "accuracy": {
+   "energy_cvar": {
+    "mean_top1": 0.787027027027027,
+    "worst_class": 0.28,
+    "worst3_class": 0.3866666666666667,
+    "hard_subset": 0.9436923076923076
+   },
+   "energy_mean": {
+    "mean_top1": 0.7275675675675676,
+    "worst_class": 0.28,
+    "worst3_class": 0.3333333333333333,
+    "hard_subset": 0.9378461538461539
+   },
+   "mmd_cvar": {
+    "mean_top1": 0.7859459459459459,
+    "worst_class": 0.32,
+    "worst3_class": 0.37333333333333335,
+    "hard_subset": 0.9433846153846153
+   },
+   "mmd_mean": {
+    "mean_top1": 0.7816216216216216,
+    "worst_class": 0.2,
+    "worst3_class": 0.37333333333333335,
+    "hard_subset": 0.9421538461538461
+   }
+  },
+  "ranking_preserved": true,
+  "falsification": "if the selected sets or the relative accuracy ranking change materially under MMD, S3-S5 are partly an artifact of the statistic and must be reported as such (D008/S6)"
+ },
+ "S6b": {
+  "split_seed": 20260907,
+  "halves": {
+   "A": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    10,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    25,
+    26,
+    27,
+    30,
+    31,
+    33,
+    35,
+    38,
+    43,
+    44,
+    45,
+    46,
+    47,
+    55,
+    60,
+    61,
+    62,
+    68,
+    69,
+    71,
+    72,
+    73
+   ],
+   "B": [
+    0,
+    1,
+    6,
+    7,
+    9,
+    11,
+    12,
+    15,
+    23,
+    24,
+    28,
+    29,
+    32,
+    34,
+    36,
+    37,
+    39,
+    40,
+    41,
+    42,
+    48,
+    50,
+    51,
+    52,
+    53,
+    54,
+    56,
+    57,
+    58,
+    59,
+    63,
+    64,
+    65,
+    66,
+    67,
+    70,
+    74
+   ]
+  },
+  "chains": {
+   "cvar_halfA": [
+    193,
+    123,
+    233,
+    243,
+    114,
+    252,
+    234,
+    136
+   ],
+   "mean_halfA": [
+    117,
+    114,
+    3,
+    109,
+    145,
+    240,
+    134,
+    239
+   ],
+   "cvar_halfB": [
+    193,
+    140,
+    233,
+    239,
+    240,
+    234,
+    117,
+    243
+   ],
+   "mean_halfB": [
+    123,
+    117,
+    3,
+    240,
+    109,
+    239,
+    113,
+    1
+   ]
+  },
+  "accuracy": {
+   "cvar_halfA": {
+    "mean_top1": 0.7816216216216216,
+    "worst_class": 0.4,
+    "hard_subset": 0.944923076923077
+   },
+   "mean_halfA": {
+    "mean_top1": 0.7297297297297297,
+    "worst_class": 0.28,
+    "hard_subset": 0.9378461538461539
+   },
+   "cvar_halfB": {
+    "mean_top1": 0.7675675675675676,
+    "worst_class": 0.4,
+    "hard_subset": 0.9406153846153846
+   },
+   "mean_halfB": {
+    "mean_top1": 0.7135135135135136,
+    "worst_class": 0.24,
+    "hard_subset": 0.9384615384615385
+   }
+  },
+  "cvar_overlap_k8": 4,
+  "cvar_first_query_same": true,
+  "cvar_overlap_k3": 2,
+  "mean_overlap_k8": 5,
+  "mean_first_query_same": false,
+  "mean_overlap_k3": 2,
+  "full_build_chains": {
+   "cvar": [
+    193,
+    123,
+    233,
+    243,
+    240,
+    17,
+    136,
+    252
+   ],
+   "mean": [
+    123,
+    117,
+    3,
+    109,
+    240,
+    113,
+    239,
+    114
+   ]
+  },
+  "note": "only SELECTION uses a half; the classifier's reference set is always the full build split, so this isolates selection variance from reference-set size"
+ }
+}

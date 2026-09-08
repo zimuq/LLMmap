@@ -1,0 +1,111 @@
+[S0] corpus READY 37/37 · tensor (259, 666) schema cdqd-tensor-v1 · pool 259 · paper-8 == Q_0[0..7] · 65 near-relative pairs
+[S1] gamma=1.0 == independent mean-greedy: max-agg OK [123, 117, 3, 109, 240, 113, 239, 114]
+[S1] same under sum-agg: OK [123, 114, 117, 109, 1, 113, 140, 132]
+
+[S3] selected chains (first 8):
+  mean_greedy_max   [123, 117, 3, 109, 240, 113, 239, 114]
+  cvar_max          [193, 123, 233, 243, 240, 17, 136, 252]
+  mean_greedy_sum   [123, 114, 117, 109, 1, 113, 140, 132]
+  paper8            [0, 1, 2, 3, 4, 5, 6, 7]
+
+  mean-greedy vs CVaR overlap at k=8: 2/8
+  gamma-chain overlaps at k=8: {'1.0_vs_0.5_k8': 4, '1.0_vs_0.25_k8': 3, '1.0_vs_0.1_k8': 2, '1.0_vs_0.05_k8': 3, '0.5_vs_0.25_k8': 3, '0.5_vs_0.1_k8': 2, '0.5_vs_0.05_k8': 1, '0.25_vs_0.1_k8': 6, '0.25_vs_0.05_k8': 5, '0.1_vs_0.05_k8': 4}
+
+[S3] coverage (selection-side):
+  mean_greedy_max_k1       mean 1.3025  min 0.0156  CVaR10 0.1319
+  mean_greedy_max_k3       mean 1.7282  min 0.0549  CVaR10 0.2435
+  mean_greedy_max_k8       mean 2.1050  min 0.0884  CVaR10 0.4521
+  mean_greedy_max_k16      mean 2.2613  min 0.0884  CVaR10 0.6579
+  cvar_max_k1              mean 0.5465  min 0.0707  CVaR10 0.1788
+  cvar_max_k3              mean 1.4923  min 0.0892  CVaR10 0.4094
+  cvar_max_k8              mean 1.7112  min 0.0892  CVaR10 0.6194
+  cvar_max_k16             mean 2.0911  min 0.2815  CVaR10 0.7720
+  mean_greedy_sum_k1       mean 1.3025  min 0.0156  CVaR10 0.1319
+  mean_greedy_sum_k3       mean 3.7599  min 0.1031  CVaR10 0.5814
+  mean_greedy_sum_k8       mean 9.1306  min 0.3502  CVaR10 1.5406
+  mean_greedy_sum_k16      mean 16.5915  min 0.8096  CVaR10 2.9410
+
+written: ./results/D008/selection.json
+[form] building val distance matrices...
+[form] normalised 0.6971 vs raw 0.6915 -> using normalised
+[form] val replication done; releasing val matrices
+[test] building test distance matrices...
+[test] mean_greedy_max   k=8 mean 0.7276 worst 0.2800 hard 0.9378
+[test] cvar_max          k=8 mean 0.7870 worst 0.2800 hard 0.9437
+[test] mean_greedy_sum   k=8 mean 0.7286 worst 0.1600 hard 0.9369
+[test] paper8            k=8 mean 0.7643 worst 0.4400 hard 0.9357
+[test] random k=1: mean 0.4228 [0.3126, 0.5395]
+[test] random k=8: mean 0.6692 [0.6010, 0.7374]
+
+===== S4: headline (test, k=8) =====
+condition             mean   worst  worst3    hard
+paper8              0.7643  0.4400  0.5067  0.9357
+random              0.6692  0.2538  0.3127  0.9074
+mean_greedy_sum     0.7286  0.1600  0.2667  0.9369
+mean_greedy_max     0.7276  0.2800  0.3333  0.9378
+cvar_max            0.7870  0.2800  0.3867  0.9437
+
+===== CVaR vs mean-greedy, paired bootstrap over configs =====
+  k=1: mean +0.1282 [+0.0875,+0.1644]  worst +0.1968 [+0.0800,+0.3200]  hard +0.0121 [-0.0077,+0.0323]
+  k=2: mean +0.1246 [+0.0865,+0.1676]  worst +0.2111 [+0.0400,+0.3600]  hard +0.0104 [-0.0034,+0.0246]
+  k=3: mean +0.0577 [+0.0216,+0.0951]  worst +0.1560 [-0.0400,+0.3200]  hard -0.0029 [-0.0148,+0.0089]
+  k=4: mean +0.0524 [+0.0259,+0.0789]  worst +0.0742 [-0.0800,+0.2400]  hard -0.0063 [-0.0172,+0.0043]
+  k=5: mean +0.0424 [+0.0173,+0.0681]  worst +0.0553 [-0.1200,+0.2400]  hard -0.0035 [-0.0145,+0.0077]
+  k=6: mean +0.0618 [+0.0335,+0.0897]  worst +0.0758 [-0.1200,+0.2800]  hard +0.0061 [-0.0074,+0.0191]
+  k=7: mean +0.0793 [+0.0411,+0.1135]  worst +0.1099 [-0.0400,+0.2800]  hard +0.0065 [-0.0074,+0.0185]
+  k=8: mean +0.0602 [+0.0270,+0.0930]  worst +0.0070 [-0.2000,+0.2000]  hard +0.0059 [-0.0071,+0.0178]
+
+written: ./results/D008/metrics_by_condition_k.json
+[S5] gamma=1.0   k=8  mean 0.7276  worst 0.2800  hard 0.9378
+[S5] gamma=0.5   k=8  mean 0.7157  worst 0.3200  hard 0.9295
+[S5] gamma=0.25  k=8  mean 0.7784  worst 0.3200  hard 0.9422
+[S5] gamma=0.1   k=8  mean 0.7870  worst 0.2800  hard 0.9437
+[S5] gamma=0.05  k=8  mean 0.7968  worst 0.3600  hard 0.9440
+
+===== S5: trade-off at k=8 =====
+ gamma    mean   worst  worst3    hard
+   1.0  0.7276  0.2800  0.3333  0.9378
+   0.5  0.7157  0.3200  0.3733  0.9295
+  0.25  0.7784  0.3200  0.4400  0.9422
+   0.1  0.7870  0.2800  0.3867  0.9437
+  0.05  0.7968  0.3600  0.4667  0.9440
+
+chain overlap at k=8: {'1.0_vs_0.5_k8': 4, '1.0_vs_0.25_k8': 3, '1.0_vs_0.1_k8': 2, '1.0_vs_0.05_k8': 3, '0.5_vs_0.25_k8': 3, '0.5_vs_0.1_k8': 2, '0.5_vs_0.05_k8': 1, '0.25_vs_0.1_k8': 6, '0.25_vs_0.05_k8': 5, '0.1_vs_0.05_k8': 4}
+written: ./results/D008/gamma_sweep.json
+[S6] global bandwidth sigma^2 = 117.73 (median over 200 sampled cells)
+[S6] MMD tensor built in 0.3 min
+[S6] MMD audit: range [0.0011, 1.5722], 49,536 distinct (energy: 16,727), 0.0% below 1e-3
+[S6] energy_cvar  [193, 123, 233, 243, 240, 17, 136, 252]  mean 0.7870 worst 0.2800 hard 0.9437
+[S6] energy_mean  [123, 117, 3, 109, 240, 113, 239, 114]  mean 0.7276 worst 0.2800 hard 0.9378
+[S6] mmd_cvar     [193, 123, 233, 252, 136, 243, 234, 235]  mean 0.7859 worst 0.3200 hard 0.9434
+[S6] mmd_mean     [117, 109, 3, 233, 123, 252, 0, 140]  mean 0.7816 worst 0.2000 hard 0.9422
+[S6b] half A done in 0.1 min: cvar [193, 123, 233, 243, 114, 252, 234, 136]
+[S6b] half B done in 0.1 min: cvar [193, 140, 233, 239, 240, 234, 117, 243]
+
+[S6b] chain overlap across halves: cvar 4/8 (k=3: 2/3, same first query: True), mean 5/8
+written: ./results/D008/statistic_sensitivity.json
+[T1] self-pair null at n=37: mean 0.0546, p95 0.0811, max 0.2403 (9,583 cells)
+[T1] self-pair null at n=25: mean 0.0842, p95 0.1303, max 0.7969 (9,583 cells)
+  [T2] 100/666 pairs
+  [T2] 200/666 pairs
+  [T2] 300/666 pairs
+  [T2] 400/666 pairs
+  [T2] 500/666 pairs
+  [T2] 600/666 pairs
+
+===== S7: identifiability frontier =====
+  pool coverage: min 0.2889  p5 0.8761  median 2.0555
+  T1 (theta=0.1303, self-pair null): 0 pairs (EMPTY, as pre-registered)
+  T2 (best-query 2-way acc < 0.75): 37 pairs
+     microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct 0.640 (oracle 0.800, near-relative=True)
+     tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct               0.720 (oracle 0.840, near-relative=True)
+     ibm-granite/granite-3.1-8b-instruct | openchat/openchat-3.6-8b-20240522 0.720 (oracle 1.000, near-relative=False)
+     Qwen/Qwen2.5-3B-Instruct | ibm-granite/granite-3.1-8b-instruct         0.720 (oracle 1.000, near-relative=False)
+     mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5             0.620 (oracle 0.980, near-relative=True)
+     ibm-granite/granite-3.1-8b-instruct | internlm/internlm2_5-7b-chat     0.700 (oracle 0.980, near-relative=False)
+     ibm-granite/granite-3.0-8b-instruct | openchat/openchat_3.5            0.480 (oracle 1.000, near-relative=False)
+     microsoft/Phi-3-mini-128k-instruct | tiiuae/Falcon3-10B-Instruct       0.660 (oracle 0.980, near-relative=False)
+     microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct  0.520 (oracle 0.920, near-relative=True)
+     ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.1-8b-instruct 0.500 (oracle 0.960, near-relative=True)
+  T3 (5th pct): 34 pairs, 10 of them near-relative
+written: ./results/D008/identifiability_frontier.json
