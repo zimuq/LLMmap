@@ -124,3 +124,6 @@ the table's letter and NOT reinterpreted; flagging here because the fix is a
 `## D` edit (design-side owned). Same class as Issue 4 and as D007/R3: the
 outcome table and the measurement's resolution were fixed independently of
 each other. **Not urgent** — D008's `## R` states the full picture either way.
+**Fixed 2026-09-08:** dated note added to D008's `## D` "What counts as an
+answer" table explaining the resolution mismatch, without retroactively
+reinterpreting the posted verdict — same posture as D007/R3's handling.

@@ -25,6 +25,21 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | **A2** | Include closed-source models (GPT/Claude)? Cost + compute-node network access implications. | Exclude through Phase 0–4; include only in final validation if budget allows | ⬜ |
 | **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | **Decided 2026-09-06.** 5-fold CV AUC of a linear probe (bounded, interpretable) as primary, matching the original default — but energy distance is now a **mandatory companion statistic on the full tensor** (not an optional subset check), and D004's resolution-audit (fraction of pairs at/near ceiling) is a **formal gate**, not a footnote: if the bounded statistic saturates on the real tensor the way it did on LLmap's own trained representation in D004, energy distance is authoritative for interpretation. Evidence: D006's C7 pilot ran probe AUC on the real, frozen I5 embedding (not D004's proxy) and found 0% of 15 pairs at ceiling — but that's a 15-pair pilot against a 666-pair reality, and D001 was burned once already by skipping this exact audit. See [D007](D007.md). | ✅ |
 | **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ⬜ |
+
+> **A4 now has real evidence, not just a prior (D008, 2026-09-08):** on
+> query efficiency, CVaR-coverage reaches 70% mean accuracy at `k=2`
+> against mean-greedy's 4, the paper's own 8 queries' 5, and random's 12
+> — a clean, large, statistically robust win (every CI at every `k`
+> excludes zero on mean top-1). On worst-class accuracy, the advantage is
+> real but only at `k`=1–3 (CIs cross zero by `k`=4), and **at equal
+> `k`=8 the paper's own 8 queries actually beat CVaR on worst-class**
+> (0.44 vs 0.28) — because the paper's queries include direct
+> self-identification probes that a pairwise-separability objective
+> doesn't specifically target. **Design-side recommendation: resolve
+> toward (a).** The efficiency claim is where the data is unambiguous;
+> the worst-class claim is where it's genuinely mixed and where the
+> paper's own baseline currently wins at equal budget. Awaiting human
+> confirmation.
 | **A5** | **New, 2026-09-02, from D005/P1 §F1.** `sampling_universe`'s `do_sample` is a 2-value parameter — I2's literal wording ("no single sampling setting crosses splits") is structurally unsatisfiable for it: any split puts all-greedy decoding in one pool and all-stochastic in the other, which *is* a confound, not a fix. TACC proposes three options (Call B): (1) a documented, explicit carve-out for `do_sample` alone — **TACC recommends this**; (2) reinterpret I2 at the composite-tuple level rather than per-field; (3) implement the paper's `frequency_penalty` dimension so `do_sample` stops being the only lever (bigger change, needs its own D + I7 schema bump). Sets precedent for how "literally unsatisfiable invariant" cases get handled, not just this field. | Option 1 (documented carve-out) — smallest change; I2's actual failure mode is *silent* leakage, and an explicit, disclosed exception isn't that | ✅ Option 1, decided 2026-09-02 by the human |
 
 > **A4 note:** whichever claim is primary, the comparison baseline behind it is
@@ -385,6 +400,25 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   established project discipline (D004's classification precedent,
   D007's scale-comparability lesson), not genuine trade-offs to escalate.
   Decided by: design-side, routine call.
+
+[2026-09-08] D008 R -- INCONCLUSIVE by the letter; D008 closed; A4 evidence logged
+  Decision: D008 marked CLOSED. Verdict is INCONCLUSIVE against its own
+  outcome table (CONFIRMED needed both worst-class AND hard-subset to
+  improve; only worst-class did, and only at k=1-3) -- reported honestly
+  rather than reinterpreted, even though the underlying effect (a large,
+  robust query-efficiency gain, every CI excluding zero on mean top-1) is
+  not actually weak. Added a dated note to D008's outcome table
+  (TACC_NOTES.md issue 12) explaining that the CONFIRMED criterion's two
+  required metrics have wildly different achievable resolution
+  (worst-class CIs +-0.20; hard-subset's entire random-to-oracle range is
+  7.5 points) -- a criterion-design lesson for future work, not grounds
+  to reread this result more favorably. A4 updated with this D's
+  evidence and a design-side recommendation (resolve toward query
+  efficiency) -- still open pending human confirmation.
+  Decided by: design-side, routine call (verdict accepted as reported,
+  matching D007/R3's precedent of not retroactively re-interpreting a
+  result to fit a table's letter); A4's actual resolution escalated to
+  human (see A4 above).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

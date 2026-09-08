@@ -250,5 +250,58 @@ unblocked** — per `TODO.md`'s own framing, computationally cheap
 
 ---
 
+## D008 — Does the objective matter? INCONCLUSIVE by the letter; a real efficiency win underneath
+
+**The literal verdict is INCONCLUSIVE — the underlying finding is not.**
+CVaR-coverage selection beats every baseline (mean-greedy, random, the
+paper's own 8 queries) on mean top-1 accuracy at every query budget `k`,
+with every confidence interval excluding zero. The effect concentrates
+exactly where `METHOD.md §8` said the real headroom was: **query
+efficiency.** CVaR reaches 70% mean accuracy at **`k`=2**; mean-greedy
+needs 4, the paper's own 8 queries need 5, random needs 12. CVaR matches
+the paper's full 8-query accuracy at `k`=4 — half as many queries — and
+exceeds it at 6.
+
+**Why the verdict is technically INCONCLUSIVE anyway:** D008's CONFIRMED
+branch required improvement on *two* metrics (worst-class *and*
+hard-subset accuracy) at equal `k`. Worst-class improves sharply but only
+at `k`=1–3; hard-subset barely moves for any condition. Investigated
+before accepting that as "no effect": the *oracle* ceiling for
+hard-subset (best possible score, cherry-picking per pair, on held-out
+data) is 0.982 against a random baseline of 0.907 — the entire usable
+range is 7.5 points, making "meaningful improvement" on this metric close
+to unsatisfiable regardless of whether CVaR actually helps. Recorded as a
+criterion-design lesson, not used to reread the result more favorably.
+
+**Against the paper's own 8 queries specifically, the honest picture is
+split, not favorable across the board.** At equal `k`=8, CVaR is not
+clearly better on mean accuracy (CI touches zero) and is **worse** on
+worst-class accuracy (0.28 vs. the paper's 0.44) — the paper's queries
+include direct self-identification probes ("what LLM are you exactly")
+that are unusually good at 37-way worst-class discrimination specifically,
+which a pairwise-separability objective doesn't target. The place CVaR
+clearly wins against the paper is query count, not peak accuracy.
+
+**The most consequential finding for what comes next:** of the pairs no
+*selected* query separates well, **33 of 37 have a near-perfect query
+already sitting in the 259-query pool** — greedy selection simply missed
+it. Only 2 pairs (the same `Falcon3` and `Phi-3-medium` pairs D004 and
+D007 already flagged) are genuine limits of the pool itself. This means
+"the objective doesn't help enough" would most likely be a
+**selection-algorithm** gap, not a pool-coverage gap — a distinction
+neither of D008's two clean outcomes (CONFIRMED / FALSIFIED) anticipated,
+and directly relevant to how Phase 3 (targeted generation) gets scoped.
+
+**Also confirmed:** `γ=1.0` reduces exactly to mean-greedy (numeric
+check against an independent implementation); lower `γ` costs nothing on
+mean accuracy here (no visible tail-vs-mean trade-off); the conclusion is
+robust to swapping the tensor's statistic for a completely different one
+(MMD, ρ=0.975 with energy distance); and what generalizes across a
+resample of the build configs is the *objective*, not the particular
+selected queries (half the `k`=8 chain changes between build-config
+halves, but the CVaR-over-mean-greedy advantage reproduces on both).
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
