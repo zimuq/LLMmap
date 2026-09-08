@@ -201,7 +201,7 @@ is on record (`D006.md`'s "4–6 hours"; corrected in `plans/D006-P1.md` §F4).
 
 ## Operational discipline (Phase 1, learned the expensive way)
 
-Four mistakes recurred across D006/D007. Each cost real time, none was caught by
+Five mistakes recurred across D006/D007/D008. Each cost real time, none was caught by
 "does the code do what I intended", and all four are cheap to avoid. They are
 recorded here rather than inside a closed D because they are not about those D's
 questions — they are about how to run work on this machine.
@@ -232,6 +232,14 @@ outcome — into a silent total failure of the submitter.
 `general.json` killed a PENDING job 90 s in. Installing packages into
 `llmmap-gpu` mid-run left 24 shards with unrecoverable environment provenance.
 Use a venv with `--system-site-packages` for one-off needs (see above).
+
+**5. Compare floats in the dtype you intend, not the one the array happens to
+carry.** D008's `CVaR(x, 1.0) == mean(x)` correctness assertion failed on the
+first run at 2.8e-8 — the tensor is stored float32, `cvar` sorts before averaging,
+and `np.mean` of the same float32 values sums in a different order. Nothing about
+the reduction being tested was wrong. Cast both sides to float64 at the boundary
+where a numerical identity is asserted. (Same family as the bf16 non-associativity
+that broke the batched-generation check; see item 1.)
 
 **4. Prefer a job's own report over inference from job names.** Slurm job names
 are truncated to 20 chars, so `granite-3.0`/`granite-3.1`,

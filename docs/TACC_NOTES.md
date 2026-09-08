@@ -108,3 +108,19 @@ both `opened:` fields backfilled from `git log --follow` on each file
 (D002's is a lower bound — its history is squashed before 2026-09-01, so
 the true open date may be slightly earlier and isn't independently
 recoverable); D002's `closed:` filled in to match its `status:` line.
+
+**Issue 12 (2026-09-07) — D008's CONFIRMED criterion requires "meaningfully
+better" on two metrics whose resolutions differ by an order of magnitude.**
+The branch needs *both* worst-class and hard-subset accuracy to improve at
+equal `k`. As measured (D008 `## R`): worst-class has 4-point granularity
+(25 test configs) and bootstrap CIs of roughly ±0.20, while hard-subset's
+entire range from a random query set (0.9074) to the oracle ceiling (0.9822)
+is 7.5 points, of which the random-to-best span is 3.6. A criterion phrased
+as "meaningfully better" on both was therefore not satisfiable by any
+plausible effect on this corpus, independently of whether the effect exists —
+and the observed effect on mean top-1 (positive at every `k`, all CIs
+excluding zero) is not in the criterion at all. Reported as INCONCLUSIVE per
+the table's letter and NOT reinterpreted; flagging here because the fix is a
+`## D` edit (design-side owned). Same class as Issue 4 and as D007/R3: the
+outcome table and the measurement's resolution were fixed independently of
+each other. **Not urgent** — D008's `## R` states the full picture either way.
