@@ -24,22 +24,68 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | **A1** | Which models form the universe? | **All 37 open-weight models with `params_b ≤ 14` in the 52-model universe** (`results/D001/model_metadata.csv`) — not a curated subset. Includes all 4 originally-named near-relative groups (Llama-3-8B family, Phi-3-mini-4k/128k, Mistral-7B v0.1/v0.2/v0.3, gemma-2-9b/gemma-1.1-7b) automatically. **Decided 2026-09-05.** | ✅ |
 | **A2** | Include closed-source models (GPT/Claude)? Cost + compute-node network access implications. | Exclude through Phase 0–4; include only in final validation if budget allows | ⬜ |
 | **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | **Decided 2026-09-06.** 5-fold CV AUC of a linear probe (bounded, interpretable) as primary, matching the original default — but energy distance is now a **mandatory companion statistic on the full tensor** (not an optional subset check), and D004's resolution-audit (fraction of pairs at/near ceiling) is a **formal gate**, not a footnote: if the bounded statistic saturates on the real tensor the way it did on LLmap's own trained representation in D004, energy distance is authoritative for interpretation. Evidence: D006's C7 pilot ran probe AUC on the real, frozen I5 embedding (not D004's proxy) and found 0% of 15 pairs at ceiling — but that's a 15-pair pilot against a 666-pair reality, and D001 was burned once already by skipping this exact audit. See [D007](D007.md). | ✅ |
-| **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ⬜ |
+| **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ✅ (a) query efficiency, decided 2026-09-08 by the human |
 
-> **A4 now has real evidence, not just a prior (D008, 2026-09-08):** on
-> query efficiency, CVaR-coverage reaches 70% mean accuracy at `k=2`
-> against mean-greedy's 4, the paper's own 8 queries' 5, and random's 12
-> — a clean, large, statistically robust win (every CI at every `k`
-> excludes zero on mean top-1). On worst-class accuracy, the advantage is
-> real but only at `k`=1–3 (CIs cross zero by `k`=4), and **at equal
-> `k`=8 the paper's own 8 queries actually beat CVaR on worst-class**
-> (0.44 vs 0.28) — because the paper's queries include direct
-> self-identification probes that a pairwise-separability objective
-> doesn't specifically target. **Design-side recommendation: resolve
-> toward (a).** The efficiency claim is where the data is unambiguous;
-> the worst-class claim is where it's genuinely mixed and where the
-> paper's own baseline currently wins at equal budget. Awaiting human
-> confirmation.
+> **A4 resolved 2026-09-08 — (a) query efficiency, per D008's evidence:**
+> CVaR-coverage reaches 70% mean accuracy at `k=2` against mean-greedy's
+> 4, the paper's own 8 queries' 5, and random's 12 — a clean, large,
+> statistically robust win (every CI at every `k` excludes zero on mean
+> top-1). Figure 1 is the accuracy-vs-`k` curve; worst-class accuracy is
+> reported as a secondary metric, honestly, alongside the gap below.
+>
+> **Worst-class gap mechanism, verified 2026-09-08 (no new TACC run —
+> read directly from `results/D008/selection.json` and
+> `confs/queries/pool_v1.json`, both already on disk):** at equal `k`=8
+> the paper's own 8 queries beat every algorithmic condition on
+> worst-class (0.44 vs. CVaR's 0.28) because 5 of the 8 are direct
+> self-identification probes ("What LLM are you exactly?", "What's your
+> data cutoff date?", the injection-wrapped "who created you", etc. —
+> `confs/queries/default.json` indices 0,2,4,5,6). **This is not a
+> selection-algorithm weakness we failed to find a workaround for — it's
+> a direct, checkable fact about what the objective rewards.** Our own
+> 259-query pool contains all 5 of those exact queries (as literal
+> anchors, `pool_v1.json` `anchor_set: "paper8"`) *plus* 40 more
+> purpose-generated `generated-banner-grabbing` queries — 45 total
+> self-identification-style candidates, freely available. **None of the
+> 45 were ever selected** in the top-16 chain of `mean_greedy_max`
+> (γ=1.0, our reconstruction of the paper's own claimed objective
+> family), `mean_greedy_sum`, or `cvar_max` (γ=0.1, our actual method).
+> Only 2 of the paper's 8 (index 1, "build a bomb"; index 3, climate
+> true/false — both non-identity behavioral probes) ever get picked, and
+> late in the chain. What *does* dominate every chain instead:
+> `generated-malformed-alignment` (harmful-request refusal probes — same
+> family as the paper's own index 1) and the tokenizer probes.
+>
+> **Likely mechanism (theory-grounded, not yet independently confirmed
+> at the tensor level):** `METHOD.md §4`'s `Sep(q,v,v')` = between-group
+> separation (numerator) / within-group spread (denominator). A
+> self-ID query plausibly has large *raw* between-model separation (models
+> report different names) but poor *within*-model consistency — whether a
+> model states its identity is sensitive to system prompt / RAG context /
+> sampling config (I2's 25-way split), so the same model answers
+> inconsistently across configs. A refusal-behavior probe's yes/no
+> response is a more config-stable property. If true, this is a case
+> where CDQD's objective is *working as designed* (penalizing
+> config-fragile signal) and the mismatch is with the worst-class
+> *metric*, which rewards a single lucky config regardless of
+> reliability elsewhere — not a bug in `GreedyCover`. Confirming this
+> would need TACC to read within-model variance for the 45
+> self-ID-style queries off the already-frozen `S_energy_sf_tok200`
+> tensor — cheap (post-processing), not yet requested as a D.
+>
+> **Net effect on the earlier framing:** "our method loses to the
+> paper's 8 on worst-case" is accurate as stated, but should not be read
+> as "our selection algorithm underperforms theirs" — the paper's own
+> claimed algorithm family (mean-greedy) *also* never selects these
+> queries when given the chance, which is direct evidence the paper's
+> shipped defaults were not purely the output of the greedy search
+> Algorithm H.1 describes (whose code and 50-query pool were never
+> released — `METHOD.md §1` Fact 1, `PAPER_DEVIATIONS.md` item 4/5).
+> They read as hand-augmented with identity probes by the authors, on
+> top of whatever the algorithm actually produced. This can't be proven
+> as a claim about the paper's own process (no such counterfactual can
+> be run without the paper's original code/pool), but it is now a
+> directly reproducible fact about *our* pool and *our* objective family.
 | **A5** | **New, 2026-09-02, from D005/P1 §F1.** `sampling_universe`'s `do_sample` is a 2-value parameter — I2's literal wording ("no single sampling setting crosses splits") is structurally unsatisfiable for it: any split puts all-greedy decoding in one pool and all-stochastic in the other, which *is* a confound, not a fix. TACC proposes three options (Call B): (1) a documented, explicit carve-out for `do_sample` alone — **TACC recommends this**; (2) reinterpret I2 at the composite-tuple level rather than per-field; (3) implement the paper's `frequency_penalty` dimension so `do_sample` stops being the only lever (bigger change, needs its own D + I7 schema bump). Sets precedent for how "literally unsatisfiable invariant" cases get handled, not just this field. | Option 1 (documented carve-out) — smallest change; I2's actual failure mode is *silent* leakage, and an explicit, disclosed exception isn't that | ✅ Option 1, decided 2026-09-02 by the human |
 
 > **A4 note:** whichever claim is primary, the comparison baseline behind it is
@@ -419,6 +465,36 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
   matching D007/R3's precedent of not retroactively re-interpreting a
   result to fit a table's letter); A4's actual resolution escalated to
   human (see A4 above).
+
+[2026-09-08] A4 resolved (a) query efficiency; worst-class gap mechanism verified
+  Decision: A4 -> (a) query efficiency is the primary claim, worst-class
+  reported as secondary. Separately, the human asked design-side to
+  verify a specific hypothesis: does the paper's own claimed algorithm
+  (greedy search per Algorithm H.1) actually produce the paper's shipped
+  8-query worst-class advantage, or did the shipped defaults get
+  hand-augmented with self-identification probes outside the algorithm?
+  Verified by cross-referencing two files already on disk -- no new TACC
+  run: `results/D008/selection.json` (query-index chains for
+  mean_greedy_max/sum and cvar_max, already computed) against
+  `confs/queries/pool_v1.json` (per-index provenance/category, already
+  built in D006/S2). Finding: of 45 self-identification-style candidates
+  in the pool (the paper's own 5 identity-probe anchors + 40
+  purpose-generated `generated-banner-grabbing` queries), zero appear in
+  the top-16 chain of any of the three greedy reconstructions
+  (mean-max/gamma=1.0, mean-sum, CVaR/gamma=0.1). Full writeup and
+  theory-grounded mechanism hypothesis (config-fragile within-model
+  consistency) added as a note under A4 above.
+  Rationale: A4's resolution was already flagged (b) above the note --
+  the human made the actual call, this entry just logs it. The
+  fidelity-verification was requested explicitly ("需要你核查") and
+  answered from existing result files, consistent with the
+  do-not-execute-experiments rule (CLAUDE.md) since nothing new was
+  computed from the raw tensor -- only already-materialized JSON was
+  read. The mechanism *hypothesis* (within-model variance) remains
+  unconfirmed at the tensor level and is flagged as such, not asserted
+  as fact.
+  Decided by: human (A4 resolution); design-side (verification task,
+  routine -- answering a direct factual question from existing files).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

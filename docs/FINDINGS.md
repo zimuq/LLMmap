@@ -282,6 +282,23 @@ that are unusually good at 37-way worst-class discrimination specifically,
 which a pairwise-separability objective doesn't target. The place CVaR
 clearly wins against the paper is query count, not peak accuracy.
 
+**Follow-up, 2026-09-08 (verified from existing files, no new run):**
+checked whether the paper's own *claimed* algorithm (greedy search) would
+actually select those identity probes, or whether the shipped 8 were
+hand-augmented beyond it. Our pool has 45 self-identification-style
+candidates available (the paper's 5 identity anchors + 40 generated
+`generated-banner-grabbing` queries) — **none are ever selected**, in the
+top-16 chain, by any of the three greedy reconstructions computed here,
+including `mean_greedy_max` (γ=1.0, the closest reconstruction of the
+paper's own claimed objective family). This means the worst-class gap is
+not "our selection algorithm missed a good move available to it" — even
+the paper's own claimed algorithm family declines the same candidates.
+Likely mechanism (theory-grounded per `METHOD.md §4`'s Sep = between-group
+/ within-group ratio, not yet confirmed at the tensor level): identity
+probes plausibly have config-fragile within-model consistency, which the
+objective penalizes by design. Full detail: `DECISIONS.md` A4 note,
+`D008.md` addendum.
+
 **The most consequential finding for what comes next:** of the pairs no
 *selected* query separates well, **33 of 37 have a near-perfect query
 already sitting in the 259-query pool** — greedy selection simply missed
