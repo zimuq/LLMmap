@@ -1,0 +1,17 @@
+responses: 1,197,875
+chars: mean 625  median 700  p90 1047  max 2,879
+FRACTION > 650 chars (truncated at inference, not at training): 52.2%
+  restricted to the paper's 8 queries: 34.2% of 37,000
+  chars kept when truncated: median 69.4% of the response
+
+most affected models:
+  togethercomputer/Llama-2-7B-32K-Instruct             92.7%
+  meta-llama/Llama-2-7b-chat-hf                        86.8%
+  internlm/internlm2_5-7b-chat                         80.9%
+  microsoft/Phi-3.5-mini-instruct                      80.0%
+  mistralai/Mistral-7B-Instruct-v0.3                   79.7%
+  mistralai/Mistral-7B-Instruct-v0.2                   74.8%
+least affected:
+  google/gemma-2b-it                                   33.1%
+  ibm-granite/granite-3.0-8b-instruct                  29.9%
+  nvidia/Llama3-ChatQA-1.5-8B                          14.3%

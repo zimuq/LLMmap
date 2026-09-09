@@ -1,0 +1,77 @@
+{
+ "S1": {
+  "source": "data/corpus_v1/embeddings/_queries.npy (D006/S6)",
+  "shape": [
+   259,
+   1024
+  ],
+  "recomputed": false,
+  "note": "D006/S6 embedded all 259 pool queries at corpus-build time precisely because 'the pipeline consumes both'. S1 costs nothing and cannot drift from the responses."
+ },
+ "equivalence": {
+  "entries_compared": 6,
+  "shape": [
+   8,
+   2048
+  ],
+  "max_abs_diff": 0.002739131450653076,
+  "mean_abs_diff": 0.00046308431774377823,
+  "median_rel_diff": 0.000660744437482208,
+  "cosine": 0.9999997019767761,
+  "note": "ours reads D006/S6's fp16 store; the shipped path recomputes in fp32, so exact equality is not expected -- fp16 storage is the only difference and it is a property of the frozen corpus (I6), not of this assembly"
+ },
+ "architecture": {
+  "hparams": {
+   "num_blocks": 3,
+   "feature_size": 384,
+   "norm_layer": "BatchNorm1d",
+   "num_heads": 4,
+   "activation": "gelu",
+   "optimizer": {
+    "name": "Adam",
+    "params": {
+     "lr": 0.0001
+    }
+   },
+   "with_add_dense_class": false,
+   "num_classes": 37,
+   "num_queries": 8,
+   "emb_size": 1024
+  },
+  "params": 3023653,
+  "source": "confs/default.json inference_model block",
+  "method_5_5_claim": "~8M params"
+ },
+ "training": {
+  "wall_s": 8.7,
+  "error": null,
+  "steps_per_epoch": 22,
+  "max_epochs": 50,
+  "patience": 5,
+  "n_train": 2775,
+  "n_val": 925,
+  "n_test": 925,
+  "device": "cuda",
+  "test_metrics": {
+   "mean_top1": 0.8345945945945946,
+   "worst_class": 0.36,
+   "worst3_class": 0.4666666666666666,
+   "hard_subset": 0.9618461538461539,
+   "hard_subset_min": 0.64
+  },
+  "val_metrics": {
+   "mean_top1": 0.8551351351351352,
+   "worst_class": 0.6,
+   "worst3_class": 0.6666666666666666,
+   "hard_subset": 0.9621538461538461,
+   "hard_subset_min": 0.82
+  }
+ },
+ "siamese_probe": {
+  "steps_per_s": 70.9,
+  "steps_per_epoch": 3907,
+  "min_per_epoch": 0.9,
+  "num_pairs_per_epoch": 500000,
+  "note": "open-set (siamese + templates) is a SEPARATE training run per condition, not a free head on the closed model: the closed model's forward returns head logits, and the shipped default is 500k pairs per epoch against the closed run's 2,775 samples"
+ }
+}
