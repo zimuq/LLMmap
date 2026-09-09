@@ -547,6 +547,43 @@ project invention -- it's a genuine deviation/novelty
   rule (d), so this is recorded as open, not done.
   Decided by: design-side, routine call (verification + ledger entry);
   the METHOD.md revision itself is NOT decided -- awaiting human call.
+
+[2026-09-08] Phase 3 paused; METHOD.md sec5.5 added; D009 promoted
+  Decision: human decided to pause Phase 3 (targeted generation,
+  METHOD.md sec5.4's outer loop) and prioritize validating whether
+  D008's tensor-level proxy-metric gains (nearest-point-cloud stand-in
+  classifier over raw I5 embeddings) survive contact with the paper's
+  actual trained pipeline (frozen I5 + trained projection + trained
+  self-attention siamese/classifier). METHOD.md sec5.5 added specifying
+  that protocol (human-approved, edited by design-side, diff reviewed
+  before commit per the human's explicit request). Verified along the
+  way, against LLMmap/inference.py:92-113 directly (not assumed): the
+  released pipeline embeds query and response separately and
+  concatenates in embedding space (2048-d per query slot), which
+  sec5.1-5.4's response-only tensor never needed to replicate (a
+  per-query constant cancels exactly in any distance-based statistic,
+  so D004/D006/D007/D008's numbers are unaffected) but sec5.5's trained
+  classifier does need (query embedding is what lets the network
+  generalize across strategies selecting different k-subsets of the
+  pool) -- flagged as a required, cheap addition (embed each strategy's
+  selected query texts) rather than a blocker.
+  D009 drafted and promoted: trains LLmap's own released trainer
+  (LLMmap/trainer.py, LLMmap/inference_model_archs.py, reused
+  unmodified) once per D008 query-strategy condition, holding the
+  training procedure identical. Explicitly scoped OUT of D009: METHOD.md
+  sec5.4's outer loop (DIAGNOSE / cross-round MODEL SELECTION / TARGETED
+  GENERATION) -- D009 is a single-round evaluation of D008's four
+  already-fixed query sets, not a resumption of the iterative loop.
+  PLAN.md's index and "Not yet a D" section updated to match.
+  Rationale: this is a genuine sequencing call with real
+  trade-offs (per CLAUDE.md escalation rule (c)) -- made by the human,
+  not design-side. The METHOD.md revision is rule (d) -- made by
+  design-side only after the human granted permission and reviewed a
+  diff, per their explicit instruction this session. Drafting D009
+  itself is a routine design-side act once the direction was set.
+  Decided by: human (pause Phase 3; prioritize D009; grant METHOD.md
+  edit permission); design-side (D009's concrete content, PLAN.md
+  bookkeeping).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
