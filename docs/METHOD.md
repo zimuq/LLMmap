@@ -234,6 +234,65 @@ useless or harmful elsewhere. Two defenses: survivors are filtered on `S_val`
 CVaR gain on the full pair set — greedy will simply not select a query that
 covers one pair while displacing coverage elsewhere.
 
+### 5.5 Final validation — closed-set accuracy under the paper's own trained pipeline
+
+Everything in §5.1–5.4 is computed on the separability tensor using a
+lightweight stand-in classifier (nearest-point-cloud over the frozen I5
+embedding) — never LLmap's actual inference pipeline. This is deliberate
+during selection: retraining LLmap's stage-2 network per candidate query set
+would be both circular (fit on the exact models under test) and expensive,
+exactly what CDQD exists to avoid (§6.3). But it means no number produced by
+§5.1–5.4 is the number the paper reports, or the number a reviewer asks for
+first — that number requires one further step, run once selection is done.
+
+**Trace construction must match the released code exactly, not just the
+embedding model.** `LLMmap/inference.py:92–113` embeds the query text and
+the response text **separately** (`emb_queries = E(queries)`,
+`emb_outs = E(answers)`), then concatenates them **in embedding space**
+per query slot: `trace = [E(query) ; E(response)]`, 2048-d, one per
+selected query, stacked into a length-`k` sequence fed to the self-attention
+network. **§5.1–5.4's tensor stores response embeddings only (1024-d,
+`§4` Layer 1)** — this is not an oversight there: at fixed `q`, `E(query)`
+is an identical constant across every model being compared, so it cancels
+exactly in any distance-based statistic (`‖(a,c)−(b,c)‖ = ‖a−b‖`) and
+carries zero information for a linear probe. It does **not** cancel here —
+the self-attention network needs `E(query)` to know *which* of the pool's
+queries produced each token, exactly the information that lets it
+generalize across strategies that select different `k`-subsets of the
+pool. **This D must additionally embed each candidate strategy's selected
+query texts** with the same cached I5 model before training — cheap
+(≤259 static strings, no new generation, no I7 schema bump) but not
+optional.
+
+**Protocol.** For each candidate query strategy under comparison — the
+CVaR-coverage chain (`k=1..8`), the mean-greedy `γ=1` baseline chain,
+random-`k`, and the paper's own 8 queries — train LLmap's own stage-2
+pipeline from scratch (`PAPER_DEVIATIONS.md` item 3: the projection
+`f_p: 1024→384` plus the small self-attention siamese/classifier network,
+~8M params) on that strategy's `k` selected queries' `[E(query) ; E(response)]`
+traces, using the same `S_build` / `S_val` / `S_test` split (I2) as every
+other measurement in this project. Hold the training procedure —
+architecture, hyperparameters, epochs, optimizer — **identical** across
+strategies; only the queries used to build the training corpus vary.
+Evaluate closed-set accuracy on `S_test`, touched once (I2).
+
+This is the "hold embed/classify constant, vary only query strategy"
+comparison this project has referred to throughout (`PAPER_DEVIATIONS.md`
+item 3) — it is what makes the headline comparison one of *query
+strategies*, not of *classifiers*, and it is the step that confirms or
+falsifies whether the separability-tensor gains from §5.1–5.4 survive
+contact with a real trained classifier. **Do not treat a proxy-metric gain
+(§5.1–5.4) as the result — it is the hypothesis this step tests.**
+
+**Cost.** One training run per strategy — `§6.3`'s ~5–15 runs, not ~372.
+This is where CDQD's training-cost saving becomes an actual measured
+number rather than an argument.
+
+**Relationship to §6.2.** Even run this way, absolute accuracy will not be
+directly comparable to the paper's reported 95.35% (three-way split vs. the
+paper's two-way) — state §6.2's caveat in the same breath as any accuracy
+number this protocol produces.
+
 ---
 
 ## 6. Known caveats — read before writing anything up
@@ -267,6 +326,9 @@ LLMmap's Algorithm H.1 selects on `T_test` and reports on the same distribution.
 We use a three-way split (I2 in `DECISIONS.md`) and touch `S_test` once. Our
 protocol is stricter, so **our absolute numbers may look lower even where the
 method is better.** Every writeup must state this, or reviewers will misread it.
+This applies to §5.5's trained-pipeline numbers as much as to §5.1–5.4's
+tensor-level ones — a stricter split, not the training step, is the source of
+any gap.
 
 ### 6.3 The cost claim must be stated carefully
 
@@ -327,6 +389,10 @@ surrounding it.
    separate. A genuine negative result that draws the method's boundary honestly.
 3. **Reusable artifacts** — the trace corpus and separability tensor. These
    outlive this particular study and support follow-up work.
+4. **Closed-set accuracy under the paper's own trained pipeline** (§5.5), per
+   candidate strategy — the number that is actually comparable (mod §6.2's
+   split caveat) to the paper's reported 95.35%, and the number a reviewer
+   asks for before any of 1–3 above.
 
 ## 8. Metrics to report (all four, always)
 
@@ -338,4 +404,9 @@ surrounding it.
 | **queries needed to reach X%** | primary claim; the dimension with real headroom |
 
 Reporting mean accuracy alone while optimizing the worst tail is a metric
-mismatch and will (rightly) be caught.
+mismatch and will (rightly) be caught. **State which classifier produced
+these numbers.** Computed cheaply on the tensor-level stand-in classifier
+(§5.1–5.4) during selection, these four metrics are proxies; computed via
+§5.5's trained pipeline, they are the real result. A writeup must report
+both and label which is which — not silently report the cheap one as if it
+were the other.
