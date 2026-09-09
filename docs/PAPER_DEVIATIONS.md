@@ -92,8 +92,12 @@ from the paper (§6.1, Fig. 3): LLmap's own inference model is a
   words, Fig. 3 caption): `multilingual-e5-large-instruct`, 1024-d.**
   This is invariant I5, verbatim — not a substitute we chose instead of
   the paper's method, but a direct reuse of it.
-- **Stage 2 — a *trained* projection (`fp`, 1024→`m=384`) + a small
-  self-attention "siamese"/classifier network (~8M params)**, fit
+- **Stage 2 — a *trained* projection (`fp`, `2048→m=384`; corrected
+  2026-09-09, D009's pilot measurement — the projection consumes the
+  *concatenated* `[query;response]` trace, `1024→384` was this entry's
+  own error, carried into `METHOD.md §5.5` before being caught) + a
+  small self-attention "siamese"/classifier network (**3,023,653 params
+  measured**, not the "~8M" this entry previously estimated)**, fit
   contrastively (open-set) or supervised (closed-set) **per query
   strategy** — this is what D001/D004's `f_test.npy`/`templates.py`
   actually is (the 384-d figure is the paper's own `m`, confirmed), and
@@ -316,6 +320,44 @@ human-escalation item per `CLAUDE.md`. `DECISIONS.md` D4's scope
 narrows: the CVaR/submodularity citations remain unverified, but energy
 distance's citation is now resolved (Székely & Rizzo 2004; Rizzo &
 Székely 2016) and no longer belongs in that "unverified" bucket.
+
+### 11. `test_model.py`'s top-k ranking is backwards for closed-set models — `[code, LLMmap/test_model.py, bug]`
+
+Found by TACC while planning D009 (2026-09-09), not fixed inside a
+REVIEW-gated D. `evaluate_topk`'s `np.argsort(distances)[:k]` ranks
+ascending — correct for `InferenceModel`'s (open-set) *distances*, where
+smaller is more similar, but exactly backwards for
+`InferenceModel_closed`'s *softmax probabilities*, where larger means
+more likely. Applied to closed-set output, it returns the **least**
+likely `k` classes, not the most likely. **Not used by D009** — D009
+reads logits directly and computes accuracy itself, disclosed rather
+than silently avoided. Same family as item 9 (a released-code defect
+found in passing, not a deliberate deviation, not patched inside a
+gated D): whether the paper's own reported 95.35% used code with this
+defect is unknown and not established here.
+
+### 12. `InferenceModel`'s 650-char inference-time truncation is label-correlated — `[code, LLMmap/inference.py, quirk]`
+
+Distinct from item 1 (which is about *generation-time* length limits —
+D002 found the released code's 100-token cap binds before its 650-char
+figure ever does). This item is about a *different* stage:
+`InferenceModel._preprocess_answers` truncates each response to
+`max_number_chars_response` (650) chars **at inference/embedding time**,
+regardless of how the response was generated. Measured across D006's
+corpus (TACC, 2026-09-09, job 984640): **52.2%** of all 1,197,875
+responses exceed 650 chars (34.2% among just the paper's own 8 queries;
+median response length is ~700 chars, right at the threshold), and the
+per-model truncation rate ranges **14.3%–92.7%**. A deployed
+`InferenceModel` therefore sees a truncation-induced distribution shift
+between training and inference that is **6.5× uneven across the classes
+it has to separate** — a real property of the released pipeline, not
+something this project introduced. **D009 is unaffected**: it applies
+the same untruncated convention to every condition it compares, so this
+cannot bias the CVaR-vs-baseline comparison D009 exists to make — but
+any number D009 (or a future D) reports must state which convention
+(truncated-as-shipped vs. untruncated, training-time) it was computed
+under, and this belongs in a writeup's limitations if the paper's
+650-char behavior is ever invoked as a comparison point.
 
 ---
 

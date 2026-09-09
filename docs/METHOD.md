@@ -267,9 +267,11 @@ optional.
 **Protocol.** For each candidate query strategy under comparison — the
 CVaR-coverage chain (`k=1..8`), the mean-greedy `γ=1` baseline chain,
 random-`k`, and the paper's own 8 queries — train LLmap's own stage-2
-pipeline from scratch (`PAPER_DEVIATIONS.md` item 3: the projection
-`f_p: 1024→384` plus the small self-attention siamese/classifier network,
-~8M params) on that strategy's `k` selected queries' `[E(query) ; E(response)]`
+pipeline from scratch (the projection `f_p: 2048→384` — consuming the
+full concatenated trace above, not the raw 1024-d embedding — plus the
+small self-attention siamese/classifier network, **3,023,653 params
+measured**, D009's pilot, 2026-09-09) on that strategy's `k` selected
+queries' `[E(query) ; E(response)]`
 traces, using the same `S_build` / `S_val` / `S_test` split (I2) as every
 other measurement in this project. Hold the training procedure —
 architecture, hyperparameters, epochs, optimizer — **identical** across

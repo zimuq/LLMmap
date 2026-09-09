@@ -584,6 +584,42 @@ project invention -- it's a genuine deviation/novelty
   Decided by: human (pause Phase 3; prioritize D009; grant METHOD.md
   edit permission); design-side (D009's concrete content, PLAN.md
   bookkeeping).
+
+[2026-09-09] D009/P1 -- APPROVED WITH AMENDMENTS; F7 open-set escalated
+  Decision: Calls 1 (full k=1..8 grid) and 2 (5 paired seeds) approved
+  as TACC proposed -- the pilot measured 8.7s/run, so the cost concern
+  that motivated a smaller grid/seed count in D009's own drafting no
+  longer applies. F1/F3/F4/F5/F6 accepted as reported. F2 (early-stop on
+  S_val, touch S_test once, rather than reproducing the shipped
+  train.py's monitor-on-test behavior) confirmed correct and required by
+  I2 independent of the chat instruction TACC cited. F7 (open-set
+  evaluation, priced at ~3 GPU-hours for k=8 across all four conditions)
+  is NOT approved to execute yet -- escalated to the human as a genuine
+  scope question (run now as a disclosed supplementary measurement that
+  does not alter D009's closed-set verdict, or defer to a new D),
+  design-side recommendation: run it now, given trivial cost, warm
+  engineering context, and that it would directly re-test D001/D004's
+  original proxy instrument (the paper's own open-set trained
+  representation) against a real result for the first time.
+  Two documentation fixes made alongside the review, not new decisions:
+  METHOD.md sec5.5 and PAPER_DEVIATIONS.md item 3 corrected from "~8M
+  params, f_p 1024->384" (my own error, carried from item 3's
+  pre-concatenation-discovery figure) to the measured "3,023,653 params,
+  f_p 2048->384" (D009 pilot). PAPER_DEVIATIONS.md items 11 (test_model.py's
+  top-k ranking backwards for closed-set models -- released-code bug,
+  same family as item 9) and 12 (InferenceModel's 650-char inference-time
+  truncation is label-correlated, 14.3-92.7% per-model rate spread --
+  released-code quirk, distinct from item 1's generation-time figure)
+  added.
+  Rationale: Calls 1/2 and F1/F3/F4/F5/F6 are routine once cost is
+  measured and correctness is verified -- no genuine trade-off, decided
+  by design-side per standing practice. F7 is a real scope question
+  (CLAUDE.md rule (c)) the human is better positioned to weigh against
+  their own priorities for this D, especially since they originated the
+  open-set ask directly with TACC -- escalated rather than decided
+  unilaterally, even though a recommendation was given.
+  Decided by: design-side (Calls 1/2, F1-F6, documentation fixes); human
+  (F7, still open).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
