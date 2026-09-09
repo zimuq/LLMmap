@@ -1,0 +1,82 @@
+[S0] verified: 37 models, queries (259, 1024), D008 chains ok
+[S2] corpus cubes loaded
+[S3] k=1 paper8           test top-1 0.6093 [0.5827,0.6292]  train 0.7655 val 0.6476
+[S3] k=1 mean_greedy_max  test top-1 0.5403 [0.4973,0.5632]  train 0.6718 val 0.5550
+[S3] k=1 cvar_max         test top-1 0.6333 [0.6151,0.6616]  train 0.7930 val 0.6670
+[S3] k=1 random           test top-1 0.3948 [0.2865,0.5535]  train 0.5574 val 0.4156
+[S3] k=2 paper8           test top-1 0.7395 [0.7124,0.7686]  train 0.9053 val 0.7611
+[S3] k=2 mean_greedy_max  test top-1 0.6491 [0.6270,0.6714]  train 0.8125 val 0.6716
+[S3] k=2 cvar_max         test top-1 0.7585 [0.7470,0.7795]  train 0.9226 val 0.7725
+[S3] k=2 random           test top-1 0.5243 [0.3805,0.6346]  train 0.7648 val 0.5769
+[S3] k=3 paper8           test top-1 0.7602 [0.7395,0.7892]  train 0.9077 val 0.7747
+[S3] k=3 mean_greedy_max  test top-1 0.7124 [0.6605,0.7384]  train 0.9105 val 0.7446
+[S3] k=3 cvar_max         test top-1 0.7816 [0.7719,0.7892]  train 0.9338 val 0.7948
+[S3] k=3 random           test top-1 0.5691 [0.4822,0.6843]  train 0.8012 val 0.6234
+[S3] k=4 paper8           test top-1 0.8052 [0.7924,0.8368]  train 0.9647 val 0.8156
+[S3] k=4 mean_greedy_max  test top-1 0.7258 [0.6854,0.7470]  train 0.8840 val 0.7723
+[S3] k=4 cvar_max         test top-1 0.8231 [0.8011,0.8389]  train 0.9876 val 0.8391
+[S3] k=4 random           test top-1 0.6992 [0.6411,0.7795]  train 0.9258 val 0.7431
+[S3] k=5 paper8           test top-1 0.8050 [0.7805,0.8195]  train 0.9689 val 0.8259
+[S3] k=5 mean_greedy_max  test top-1 0.7477 [0.6951,0.7762]  train 0.9052 val 0.7797
+[S3] k=5 cvar_max         test top-1 0.8102 [0.7816,0.8443]  train 0.9667 val 0.8268
+[S3] k=5 random           test top-1 0.6813 [0.6097,0.7568]  train 0.9534 val 0.7492
+[S3] k=6 paper8           test top-1 0.8294 [0.7838,0.8541]  train 0.9731 val 0.8409
+[S3] k=6 mean_greedy_max  test top-1 0.7745 [0.7578,0.8032]  train 0.9635 val 0.8169
+[S3] k=6 cvar_max         test top-1 0.8463 [0.8378,0.8595]  train 0.9910 val 0.8692
+[S3] k=6 random           test top-1 0.7252 [0.6259,0.8043]  train 0.9529 val 0.7641
+[S3] k=7 paper8           test top-1 0.8461 [0.8281,0.8778]  train 0.9936 val 0.8575
+[S3] k=7 mean_greedy_max  test top-1 0.7836 [0.7481,0.8032]  train 0.9619 val 0.8156
+[S3] k=7 cvar_max         test top-1 0.8623 [0.8508,0.8789]  train 0.9945 val 0.8897
+[S3] k=7 random           test top-1 0.7269 [0.7049,0.7524]  train 0.9784 val 0.7914
+[S3] k=8 paper8           test top-1 0.8452 [0.8346,0.8724]  train 0.9916 val 0.8573
+[S3] k=8 mean_greedy_max  test top-1 0.8084 [0.7838,0.8227]  train 0.9542 val 0.8298
+[S3] k=8 cvar_max         test top-1 0.8519 [0.8303,0.8681]  train 0.9835 val 0.8802
+[S3] k=8 random           test top-1 0.7453 [0.6670,0.8162]  train 0.9596 val 0.8065
+
+[S3] 160/160 runs ok in 12.0 min -> ./results/D009/runs.json
+===== S5: test top-1, mean over 5 runs [min,max] =====
+  k                     paper8           mean_greedy_max                  cvar_max                    random
+  1       0.6093 [0.583,0.629]      0.5403 [0.497,0.563]      0.6333 [0.615,0.662]      0.3948 [0.286,0.554]
+  2       0.7395 [0.712,0.769]      0.6491 [0.627,0.671]      0.7585 [0.747,0.779]      0.5243 [0.381,0.635]
+  3       0.7602 [0.739,0.789]      0.7124 [0.661,0.738]      0.7816 [0.772,0.789]      0.5691 [0.482,0.684]
+  4       0.8052 [0.792,0.837]      0.7258 [0.685,0.747]      0.8231 [0.801,0.839]      0.6992 [0.641,0.779]
+  5       0.8050 [0.781,0.819]      0.7477 [0.695,0.776]      0.8102 [0.782,0.844]      0.6813 [0.610,0.757]
+  6       0.8294 [0.784,0.854]      0.7745 [0.758,0.803]      0.8463 [0.838,0.859]      0.7252 [0.626,0.804]
+  7       0.8461 [0.828,0.878]      0.7836 [0.748,0.803]      0.8623 [0.851,0.879]      0.7269 [0.705,0.752]
+  8       0.8452 [0.835,0.872]      0.8084 [0.784,0.823]      0.8519 [0.830,0.868]      0.7453 [0.667,0.816]
+
+===== CVaR vs mean-greedy (trained) =====
+  k=1: mean +0.0929 [+0.0595,+0.1250] run-range 0.0659 RESOLVED | worst +0.1775 R | hard -0.0058 -
+  k=2: mean +0.1095 [+0.0843,+0.1332] run-range 0.0443 RESOLVED | worst +0.2472 - | hard +0.0144 -
+  k=3: mean +0.0696 [+0.0409,+0.0992] run-range 0.0778 not resolved | worst +0.1465 - | hard +0.0067 -
+  k=4: mean +0.0975 [+0.0752,+0.1209] run-range 0.0616 RESOLVED | worst +0.2869 R | hard +0.0139 -
+  k=5: mean +0.0625 [+0.0413,+0.0839] run-range 0.0811 not resolved | worst +0.2049 - | hard +0.0137 -
+  k=6: mean +0.0720 [+0.0486,+0.0982] run-range 0.0454 RESOLVED | worst +0.2999 R | hard +0.0180 R
+  k=7: mean +0.0789 [+0.0575,+0.1018] run-range 0.0551 RESOLVED | worst +0.2147 - | hard +0.0131 -
+  k=8: mean +0.0435 [+0.0244,+0.0627] run-range 0.0389 RESOLVED | worst +0.1130 - | hard +0.0099 -
+
+===== S6: trained vs proxy (mean top-1) =====
+  paper8           mean delta +0.1050  k-curve Spearman 0.9523809523809524
+  mean_greedy_max  mean delta +0.0434  k-curve Spearman 0.9523809523809524
+  cvar_max         mean delta +0.0460  k-curve Spearman 0.9761904761904763
+  random           mean delta +0.0520  k-curve Spearman 0.9761904761904763
+
+  CVaR - mean-greedy, sign agreement trained vs proxy:
+    mean_top1      8/8 k values agree in sign
+    worst_class    6/8 k values agree in sign
+    worst3_class   8/8 k values agree in sign
+    hard_subset    4/8 k values agree in sign
+
+===== overfit check (S4) =====
+  paper8           k=8: train 0.9916 val 0.8573 gap +0.1343
+  mean_greedy_max  k=8: train 0.9542 val 0.8298 gap +0.1243
+  cvar_max         k=8: train 0.9835 val 0.8802 gap +0.1033
+  random           k=8: train 0.9596 val 0.8065 gap +0.1531
+
+written: ./results/D009/metrics_by_condition_k.json, ./results/D009/proxy_vs_trained_comparison.json
+[S8] paper8           top-1 0.8778 top-3 0.9611 worst 0.4800 hard 0.9674 (30.7 min)
+[S8] cvar_max         top-1 0.8627 top-3 0.9449 worst 0.4800 hard 0.9612 (19.9 min)
+[S8] mean_greedy_max  top-1 0.8378 top-3 0.9416 worst 0.4800 hard 0.9498 (14.3 min)
+[S8] random           top-1 0.7557 top-3 0.8832 worst 0.2800 hard 0.9246 (12.5 min)
+
+written: ./results/D009/open_set_metrics.json

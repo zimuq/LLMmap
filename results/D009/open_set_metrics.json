@@ -1,0 +1,92 @@
+{
+ "schema": "d009-openset-v1",
+ "k": 8,
+ "n_models": 37,
+ "chance": 0.027,
+ "metric": "nearest-template top-1/top-3 over the 37 KNOWN models -- the metric setup_templates.py itself reports; templates built from S_build features, evaluated on S_test (I2)",
+ "not_measured": "rejection of a model absent from training. That is the open-set path's actual selling point, and testing it needs models held out of training entirely -- a different experiment than this corpus split supports.",
+ "supplementary": true,
+ "note": "approved 2026-09-09 as S8 (TACC's F7); does not enter S7's verdict",
+ "conditions": {
+  "paper8": {
+   "queries": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "wall_min": 30.7,
+   "nearest_template_top1": 0.8778378378378379,
+   "nearest_template_top3": 0.961081081081081,
+   "worst_class": 0.48,
+   "worst3_class": 0.5733333333333334,
+   "hard_subset": 0.9673846153846154,
+   "hard_subset_min": 0.72,
+   "n_test": 925
+  },
+  "cvar_max": {
+   "queries": [
+    193,
+    123,
+    233,
+    243,
+    240,
+    17,
+    136,
+    252
+   ],
+   "wall_min": 19.9,
+   "nearest_template_top1": 0.8627027027027027,
+   "nearest_template_top3": 0.9448648648648649,
+   "worst_class": 0.48,
+   "worst3_class": 0.56,
+   "hard_subset": 0.9612307692307693,
+   "hard_subset_min": 0.7,
+   "n_test": 925
+  },
+  "mean_greedy_max": {
+   "queries": [
+    123,
+    117,
+    3,
+    109,
+    240,
+    113,
+    239,
+    114
+   ],
+   "wall_min": 14.3,
+   "nearest_template_top1": 0.8378378378378378,
+   "nearest_template_top3": 0.9416216216216217,
+   "worst_class": 0.48,
+   "worst3_class": 0.5333333333333333,
+   "hard_subset": 0.9498461538461539,
+   "hard_subset_min": 0.66,
+   "n_test": 925
+  },
+  "random": {
+   "queries": [
+    40,
+    51,
+    98,
+    105,
+    128,
+    132,
+    150,
+    151
+   ],
+   "wall_min": 12.5,
+   "nearest_template_top1": 0.7556756756756757,
+   "nearest_template_top3": 0.8832432432432432,
+   "worst_class": 0.28,
+   "worst3_class": 0.39999999999999997,
+   "hard_subset": 0.9246153846153846,
+   "hard_subset_min": 0.66,
+   "n_test": 925
+  }
+ }
+}

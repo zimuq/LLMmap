@@ -1,0 +1,11 @@
+{
+  "n": 259,
+  "dim": 1024,
+  "source": "data/corpus_v1/embeddings/_queries.npy",
+  "source_sha256": "969e5fda32be60652d045e684dfc740a7458591f6ec2e1e482e7a04507810ee5",
+  "recomputed": false,
+  "embedding_model": "intfloat/multilingual-e5-large-instruct",
+  "pooling": "mean, NOT normalised",
+  "produced_by": "D006/S6",
+  "note": "S1 required no compute: D006/S6 embedded all 259 pool queries at corpus-build time, so query and response embeddings come from the same run and cannot drift apart."
+}

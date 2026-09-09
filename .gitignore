@@ -9,3 +9,7 @@ results/**/*.npy
 # D006: Phase-1 corpus lives on $WORK, never in git (~1.2M generations)
 data/corpus_v1/
 results/D006/shards/
+
+# D009: trained checkpoints (~12 MB each, 36 of them) stay out of git
+results/**/*.ckpt
+results/**/*.pt

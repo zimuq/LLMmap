@@ -164,3 +164,39 @@ def d008_chains():
         mean_greedy_max=sel["conditions"]["mean_greedy_max"]["queries"],
         paper8=list(range(8)),
     ), draws, sel
+
+
+# ------------------------------------------------------- open-set (S8) pairs
+class TracePairDataset(torch.utils.data.Dataset):
+    """Siamese pair sampler over assembled traces.
+
+    Mirrors `LLMmap/dataset.py`'s `DatasetFactorySiamese` semantics exactly --
+    per-index reseeding, a 50/50 positive/negative draw, and **label 1 = same
+    model**. That labelling looks inverted against `ContrastiveLoss`'s docstring
+    ("0 = same"), but the docstring describes the classic distance-based form
+    while the network here emits a SIMILARITY (`sigmoid(fc(bn(dist)))`). Under
+    that output: y=1 gives `(margin - y_pred)^2`, pushing similarity up for same
+    -model pairs, and y=0 gives `y_pred^2`, pushing it down for different ones.
+    The shipped code is self-consistent; only its docstring is misleading.
+    """
+    def __init__(self, tr, y, n_pairs, n_models):
+        self.tr, self.y, self.n_pairs, self.n_models = tr, y, n_pairs, n_models
+        self.by_model = [np.where(y == m)[0] for m in range(n_models)]
+
+    def __len__(self):
+        return self.n_pairs
+
+    def __getitem__(self, idx):
+        import random as _r
+        info = torch.utils.data.get_worker_info()
+        _r.seed(idx + (0 if info is None else info.id))
+        a = _r.randrange(0, self.n_models)
+        ia = _r.choice(list(self.by_model[a]))
+        if _r.choice([True, False]):
+            pool = [i for i in self.by_model[a] if i != ia]
+            ib, label = _r.choice(pool), 1
+        else:
+            b = _r.choice([m for m in range(self.n_models) if m != a])
+            ib, label = _r.choice(list(self.by_model[b])), 0
+        pair = np.stack([self.tr[ia], self.tr[ib]])
+        return torch.from_numpy(pair), float(label)
