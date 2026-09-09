@@ -620,6 +620,31 @@ project invention -- it's a genuine deviation/novelty
   unilaterally, even though a recommendation was given.
   Decided by: design-side (Calls 1/2, F1-F6, documentation fixes); human
   (F7, still open).
+
+[2026-09-09] F7 approved; F2's instruction confirmed; D009 fully unblocked
+  Decision: human approved F7 -- D009 now runs the open-set evaluation
+  (S8, k=8, all four conditions, ~3 GPU-hours) as a supplementary,
+  disclosed deliverable that does not enter the closed-set-only outcome
+  table. D009's ## D/Required steps/Constraints/Deliverables sections
+  updated to fold S8 in formally, not left as a Review-only note, so a
+  fresh session reading the D file has the complete, current scope.
+  Separately, the human confirmed F2's cited instruction ("reproducing
+  the pipeline does not mean reproducing its unreasonable choices") was
+  given by them directly, not a TACC misreading. Recorded as
+  PAPER_DEVIATIONS.md item 13: the released train.py has no held-out
+  validation set at the classifier-training level (same underlying
+  pattern item 6 already documents at the query-selection level) --
+  logged explicitly, with the alternative (paper's literal 2-way
+  protocol) specified precisely enough to run later if a fidelity check
+  ever wants it, per the human's stated reason for asking this be
+  recorded.
+  Rationale: F7 was a genuine scope trade-off (rule (c)), the human's
+  call to make; documenting F2's provenance and the paper's alternative
+  protocol is routine ledger maintenance once the human confirmed the
+  fact, matching this project's standing PAPER_DEVIATIONS.md discipline.
+  Decided by: human (F7 approval; confirming F2's provenance and asking
+  it be recorded); design-side (folding S8 into D009's formal sections,
+  item 13's writeup).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

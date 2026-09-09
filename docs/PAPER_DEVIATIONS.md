@@ -359,6 +359,43 @@ any number D009 (or a future D) reports must state which convention
 under, and this belongs in a writeup's limitations if the paper's
 650-char behavior is ever invoked as a comparison point.
 
+### 13. Classifier training has no held-out validation set — the paper's own `train.py` early-stops and reports on the same split — `[code, LLMmap/trainer.py, same pattern as item 6]`
+
+Found by TACC while planning D009 (2026-09-09). `train_model(...,
+loader_test=…)` — the released training loop passes the **same** split
+object to `EarlyStopping`/`ModelCheckpoint` (what training monitors to
+decide when to stop and which checkpoint to keep) as the split whose
+accuracy it then reports as the model's performance. There is no
+separate validation split at the classifier-training level in the
+released code — only a train/test distinction.
+
+**Relationship to item 6:** item 6 documents this same pattern
+("selects on `T_test`, reports on the same distribution") at the
+**query-selection** level (Algorithm H.1). This is the same pattern
+recurring independently at the **classifier-training** level — a second
+place in the paper's pipeline where what gets tuned on and what gets
+reported on are the same split.
+
+**Ours (D009, per direct human instruction, 2026-09-09 — "reproducing
+the pipeline does not mean reproducing its unreasonable choices"):**
+training early-stops on `S_val`; `S_test` is touched exactly once, for
+final reported accuracy — matching invariant I2 and this project's
+standing 3-way split discipline (`DECISIONS.md` C4, `METHOD.md §6.2`,
+item 6 above). Consequence, stated because it cuts against us: D009's
+numbers read lower than the shipped procedure's would (the pilot showed
+roughly a 2-point val-vs-test gap on the paper's own 8 queries at `k=8`).
+
+**Recorded explicitly, not just folded into item 6, because:** the
+human asked for this specifically so that **if a future D wants to test
+fidelity to the paper's own literal training protocol** — a genuine
+2-way split with no held-out validation set, exactly as `train.py` ships
+— the alternative protocol is written down precisely enough to actually
+run, rather than needing to be reverse-engineered from `trainer.py`
+again. This is not a recommendation to run that alternative — I2 and
+`METHOD.md §6.2` remain the default and the stated reason our absolute
+numbers may read lower than the paper's — just a preserved, ready
+option.
+
 ---
 
 ## Known gaps in this ledger (flag rather than guess)
