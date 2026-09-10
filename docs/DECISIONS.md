@@ -24,7 +24,19 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | **A1** | Which models form the universe? | **All 37 open-weight models with `params_b ≤ 14` in the 52-model universe** (`results/D001/model_metadata.csv`) — not a curated subset. Includes all 4 originally-named near-relative groups (Llama-3-8B family, Phi-3-mini-4k/128k, Mistral-7B v0.1/v0.2/v0.3, gemma-2-9b/gemma-1.1-7b) automatically. **Decided 2026-09-05.** | ✅ |
 | **A2** | Include closed-source models (GPT/Claude)? Cost + compute-node network access implications. | Exclude through Phase 0–4; include only in final validation if budget allows | ⬜ |
 | **A3** | Which two-sample statistic for the separability tensor's `Sep(·,·)`? **Changing this later invalidates every number computed so far.** Note: D001's AUC-of-Δ-vs-collapsed-centroid metric is scoped to D001 only and is *not* a decision on this — see D001's Review. | **Decided 2026-09-06.** 5-fold CV AUC of a linear probe (bounded, interpretable) as primary, matching the original default — but energy distance is now a **mandatory companion statistic on the full tensor** (not an optional subset check), and D004's resolution-audit (fraction of pairs at/near ceiling) is a **formal gate**, not a footnote: if the bounded statistic saturates on the real tensor the way it did on LLmap's own trained representation in D004, energy distance is authoritative for interpretation. Evidence: D006's C7 pilot ran probe AUC on the real, frozen I5 embedding (not D004's proxy) and found 0% of 15 pairs at ceiling — but that's a 15-pair pilot against a 666-pair reality, and D001 was burned once already by skipping this exact audit. See [D007](D007.md). | ✅ |
-| **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ✅ (a) query efficiency, decided 2026-09-08 by the human |
+| **A4** | Primary claim: (a) query efficiency at small k, or (b) worst-class accuracy? Determines what the paper's Figure 1 is. | (a) primary — more headroom, harder to dismiss; (b) secondary | ✅ (a) query efficiency, decided 2026-09-08 by the human; **confirmed under the real trained classifier by D009, 2026-09-09** |
+
+> **A4, real-classifier update (D009, 2026-09-09):** query efficiency
+> holds against mean-greedy and random under the actual trained
+> pipeline (not just the D004–D008 proxy), CONFIRMED at every `k`.
+> Against the paper's own 8 queries specifically, it is a **tie**, not a
+> win (+0.007 mean top-1 at `k=8`, inside the seed range) — but the tie
+> was reached at a fraction of the paper's own selection cost (Algorithm
+> H.1 trains a real classifier 372 times to produce those 8 queries;
+> CVaR never touches one during selection). Any writeup's Figure 1
+> caption should say *"ties the paper's hand-selected strategy at
+> near-zero selection cost,"* not merely *"ties the paper's strategy"* —
+> the two claims are equally true and very differently persuasive.
 
 > **A4 resolved 2026-09-08 — (a) query efficiency, per D008's evidence:**
 > CVaR-coverage reaches 70% mean accuracy at `k=2` against mean-greedy's
@@ -645,6 +657,43 @@ project invention -- it's a genuine deviation/novelty
   Decided by: human (F7 approval; confirming F2's provenance and asking
   it be recorded); design-side (folding S8 into D009's formal sections,
   item 13's writeup).
+
+[2026-09-09] D009 R -- CONFIRMED vs mean-greedy/random, tie vs paper8; closed
+  Decision: D009 marked CLOSED. Verdict per its own outcome table:
+  CONFIRMED against mean-greedy (every k, every CI excludes zero) and
+  random; a tie against the paper's own 8 queries (+0.007 mean top-1 at
+  k=8, not resolved against the 5-seed range). The tensor-level proxy
+  (D004-D008) is validated as a sound ranking instrument (k-curve
+  Spearman 0.95-0.98 vs the trained result, same sign on the CVaR-vs-
+  mean-greedy gap at 8/8 k on mean top-1) -- D009's FALSIFIED branch
+  does not fire.
+  The human asked whether Algorithm H.1's actual selection process had
+  been read carefully before accepting the tie at face value. Verified
+  directly against Appendix H (not METHOD.md's existing summary of it):
+  GREEDY_QUERY_OPT trains a real inference model and evaluates its real
+  accuracy for every candidate query at every greedy step -- 372 total
+  training runs to produce the paper's 8 queries (matching METHOD.md
+  sec6.3's existing cost figure exactly, now connected to what it
+  implies for a same-classifier comparison). CVaR never touches a
+  trained classifier during selection. Recorded as a post-hoc Review
+  reframing (D009.md), not a re-verdict: the tie is evidence for CDQD's
+  cost thesis (parity at near-zero selection cost vs 372 real training
+  runs), not evidence against CVaR. A4's note updated to reflect this.
+  Also logged: TACC's R2 mechanism hypothesis (per-query objective vs.
+  interaction-aware joint classifier) is directly supported by this
+  finding -- Algorithm H.1's retrain-per-candidate loop is itself an
+  expensive form of interaction-aware set optimization. "Score query
+  sets, not individual queries" added to PLAN.md's "Not yet a D" as the
+  most concretely motivated next step, not drafted as a D yet.
+  Rationale: closing on a pre-registered, satisfied outcome table is
+  routine (CLAUDE.md's standing definition of "closed"); the Algorithm
+  H.1 reframing is a factual verification against the primary source,
+  not a judgment call -- matches this project's standing practice of
+  checking the paper's actual text rather than a prior summary of it
+  before drawing a conclusion from a same-classifier comparison.
+  Decided by: design-side, routine call (closure); the underlying
+  question (was Algorithm H.1 read carefully) was the human's, answered
+  by direct paper verification.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

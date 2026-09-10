@@ -320,5 +320,67 @@ halves, but the CVaR-over-mean-greedy advantage reproduces on both).
 
 ---
 
+## D009 — Does the proxy survive a real classifier? CONFIRMED vs. baselines; a tie vs. the paper, at a fraction of its cost
+
+**The headline: everything D004–D008 measured on the tensor-level proxy
+holds up once a real classifier is trained.** CVaR-coverage selection,
+evaluated by training LLmap's own stage-2 pipeline from scratch (frozen
+I5 embedding + trained projection + self-attention siamese/classifier,
+`LLMmap/trainer.py`/`inference_model_archs.py`, reused unmodified),
+**beats mean-greedy at every `k`=1–8** (every bootstrap CI excludes
+zero) **and beats random** — D009's FALSIFIED branch ("the proxy metric
+was misleading") does not fire. The proxy's `k`-curve correlates with
+the trained result at Spearman 0.95–0.98 across all four conditions, and
+the sign of the CVaR-over-mean-greedy gap agrees at 8/8 `k` on mean
+top-1. This is the license the project needed to keep selecting on a
+cheap tensor instead of training a network per candidate — no longer an
+assumption, a measured fact.
+
+**Against the paper's own 8 queries specifically: a tie, not a win — and
+that tie is a stronger result than it looks.** Mean top-1 differs by
++0.005 to +0.024 across `k`, none of it resolved against the 5-seed
+training-variance range. Read in isolation, this looks like "our method
+doesn't beat the paper's queries." **It should not be read in
+isolation.** Checked directly against `Appendix H`'s Algorithm H.1
+pseudocode (not from memory, not from this project's own prior summary
+of it): the paper's 8 queries were produced by training a real inference
+classifier and evaluating its real accuracy for **every candidate query
+at every one of 8 greedy steps** — 372 total training runs
+(`50+49+…+43`, the exact figure `METHOD.md §6.3`'s cost table already
+carried, now connected to what it implies here). CVaR never touches a
+trained classifier during selection at all. **Tying a strategy that cost
+372 real training runs to produce, using a selection process that costs
+effectively zero, is evidence for CDQD's core cost thesis — not a sign
+that CVaR-coverage failed to find an edge.** Any writeup should say
+*"ties the paper's own hand-optimized strategy at near-zero selection
+cost,"* not merely *"ties the paper's strategy."*
+
+**A genuinely new mechanism, not just a reframing:** Algorithm H.1's
+retrain-per-candidate loop is itself a (very expensive) form of
+*interaction-aware* set optimization — each candidate query is scored in
+the context of the set already chosen, inside the real classifier. This
+is exactly the capability D009's own mechanism hypothesis (R2) says a
+per-query tensor statistic (`S_energy[q][pair]`, aggregated by MAX) does
+not have. It reframes what a promising next step would need to do: not
+generate new queries (Phase 3, still paused, still resting on the same
+grounds D008 left it — most "unidentifiable" pairs already have a good
+pool query that selection missed), but find a **cheap, set-aware**
+scoring method that approximates what Algorithm H.1 gets expensively —
+directly testable on the existing frozen tensor and D009's own training
+pipeline, no new corpus or GPU budget beyond what already exists.
+
+**Also established:** the absolute accuracy ceiling here (0.8519,
+CVaR/`k`=8) is not and should never be quoted against the paper's
+95.35% — three-way split vs. the paper's two-way, 75 build configs vs.
+150, 37 models vs. 52 (`METHOD.md §6.2`). Training itself is sound and
+overfits identically across every condition by construction (train/val
+gaps 0.10–0.15, nothing near chance, 160/160 runs converged) — D009's
+INCONCLUSIVE branch does not apply. The supplementary open-set
+evaluation (S8, not part of the verdict) shows the same ordering as
+closed-set, paper's 8 slightly ahead of CVaR by one seed each — treated
+as a tie, not read further; it does not test the open-set path's actual
+selling point (rejecting a model never seen in training), which needs a
+different held-out-model experiment.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
