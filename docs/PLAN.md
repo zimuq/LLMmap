@@ -15,6 +15,7 @@
 | [D007](D007.md) | TODO.md Phase 1 (T1.5–T1.6); A3 decided 2026-09-06 | **CLOSED** 2026-09-07 — **TAIL CONFIRMED on `S_energy`** (CVaR₀.₁/mean=0.353, uncensored; `S_probe` was 51.8–98.2% ceiling-pinned, A3's gate correctly deferred to `S_energy`). `METHOD.md §2`/I1 stand on the real corpus. Frozen tensor for I6: `S_energy_tok200` | REVIEW (P1 approved, executed) | none | `results/D007/`, `D007.md` `## R` |
 | [D008](D008.md) | TODO.md Phase 2 (T2.1–T2.4); D007's frozen tensor | **CLOSED** 2026-09-08 — **INCONCLUSIVE** by the outcome table's letter (worst-class improves at k=1–3 only; hard-subset compressed, 7.5-pt total range). Real, replicated effect underneath: CVaR reaches 70% mean accuracy at k=2 vs mean-greedy's 4 / paper's 5 / random's 12 — a query-*efficiency* gain. New finding: 33 of 37 "unidentifiable" pairs have a near-perfect query already in the pool that selection missed | REVIEW (P1 approved, executed) | none | `results/D008/`, `D008.md` `## R` |
 | [D009](D009.md) | `METHOD.md` §5.5 (new, 2026-09-08); D008's frozen selection chains; human decision to pause Phase 3 pending this validation | **CLOSED** 2026-09-09 — **CONFIRMED** vs mean-greedy (every k, every CI excludes zero) and random; **tie** vs the paper's own 8 (+0.007 mean top-1 at k=8, not resolved against seed range) — reframed in a post-hoc Review: Algorithm H.1 (`Appendix H`) retrains a real classifier 372 times to pick those 8, CVaR never touches one during selection, so parity is evidence for CDQD's cost thesis, not against it. Proxy metric (D004–D008) validated as a sound ranking instrument (Spearman 0.95–0.98 vs trained) | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED) | `results/D009/`, `D009.md` `## R` |
+| [D010](D010.md) | D009 R2/post-hoc Review (2026-09-09); human-scoped 2026-09-10 as "Direction A" | **OPEN** 2026-09-10 — a classifier-free, set-level two-sample statistic (parallel to `GreedyCover`'s MAX-aggregated one), testing whether it narrows the D009 paper-8 gap without training in the loop | REVIEW (not yet planned) | D008 (CLOSED), D009 (CLOSED) | `results/D010/`, `D010.md` `## R` |
 
 ## Not yet a D
 
@@ -24,18 +25,16 @@
   grounds D008 left it on (33/37 "unidentifiable" pairs already have a
   good pool query that selection missed — a selection-algorithm question,
   not a pool-coverage one).
-- **"Score query sets, not individual queries"** — new, from D009 R2/post-hoc
-  Review, 2026-09-09. D009 found CVaR ties the paper's own 8 despite the
-  paper's Algorithm H.1 directly co-optimizing with the real classifier
-  over 372 training runs, while CVaR's per-query tensor statistic never
-  sees the classifier or models query-*interaction*. TACC's hypothesis:
-  a set-aware (not per-query) scoring method could close this gap far
-  more cheaply than either Phase 3's generation or Algorithm H.1's brute
-  force. Directly testable on the existing frozen tensor + D009's
-  training pipeline — no new corpus, no GPU beyond what D009 already
-  costs. Not yet drafted as a D; flagged here as the most concretely
-  motivated next step, pending human sequencing input alongside the
-  Phase 3 item above.
+- **"Direction B" — an actual classifier-in-the-loop greedy search
+  (Algorithm H.1-style) on our own 259-query pool** — **explicitly
+  shelved by human decision, 2026-09-10.** Newly affordable in principle
+  (D009's pilot: 8.7s/training run, so ~5 GPU-hours for a full 259-query
+  greedy search, not the multi-day cost the paper's own setup implied)
+  but deliberately not pursued now — D010 ("Direction A," above) tests
+  whether a cheap, classifier-free statistic can capture the same
+  interaction signal first. Revisit only if D010 comes back FALSIFIED
+  **and** the human decides closing the paper-8 gap is worth the
+  classifier-in-the-loop cost — not automatic either way.
 
 ## Notes
 

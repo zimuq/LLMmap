@@ -165,6 +165,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D2 | Target venue | 🅿️ same |
 | D3 | Papers 2 & 3 follow-ups | 🅿️ out of scope; keep corpus schema friendly where free |
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
+| D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. | 🅿️ noted for writeup |
 
 > **D4 scope note, 2026-09-08:** the separability statistic itself
 > (energy distance) was a related but separate unverified-citation risk
@@ -694,6 +695,26 @@ project invention -- it's a genuine deviation/novelty
   Decided by: design-side, routine call (closure); the underlying
   question (was Algorithm H.1 read carefully) was the human's, answered
   by direct paper verification.
+
+[2026-09-10] D010 drafted (Direction A); Direction B shelved; D5 writeup note added
+  Decision: human resolved the "score query sets" idea into two tracks.
+  Direction A (a classifier-free, set-level statistic, parallel to
+  GreedyCover's MAX-aggregated one) drafted as D010 -- stays inside
+  CDQD's cost thesis, no training in the selection loop. Direction B (an
+  actual classifier-in-the-loop greedy search on our own pool, newly
+  affordable at ~5 GPU-hours per D009's pilot) explicitly shelved --
+  not drafted, not triggered automatically by D010's outcome. Separately,
+  DECISIONS.md Part D gained D5: a concise writeup-framing note (report
+  three separate claims instead of one "fair comparison") kept apart
+  from this experimental log per the human's explicit request.
+  Rationale: Direction A is the routine, in-scope design-side drafting
+  task the human authorized directly ("方向A写成D"); Direction B stays a
+  human call since it's a real scope/cost trade-off with no automatic
+  trigger condition, not something design-side should promote to a D on
+  its own reading of D010's eventual result.
+  Decided by: human (which direction to draft, which to shelve, and the
+  writeup note's placement/separation); design-side (D010's concrete
+  content).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
