@@ -1,0 +1,63 @@
+37 models, 666 pairs, 259 queries
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+[S2] precompute 0.2 min, XY2 3.9 GB
+[S2] accumulator == direct: 0.31344637 vs 0.31345288 (|Δ| 6.51e-06)
+[S3] joint greedy, energy, gamma=0.1:
+    k=1: q=193  CVaR 0.17875  mean 0.54645
+    k=2: q=140  CVaR 0.23310  mean 0.63157
+    k=3: q=237  CVaR 0.23346  mean 0.55457
+    k=4: q=114  CVaR 0.23410  mean 0.63603
+    k=5: q=233  CVaR 0.23523  mean 0.58009
+    k=6: q=117  CVaR 0.23912  mean 0.62235
+    k=7: q=0  CVaR 0.24142  mean 0.59058
+    k=8: q=16  CVaR 0.24336  mean 0.57030
+[S3] energy chain [193, 140, 237, 114, 233, 117, 0, 16] in 0.1 min; objective PEAKS AT k=8 (0.24336)
+[S3] joint greedy, MMD (review amendment, k=8 check):
+    k=1: q=193  CVaR 0.11306  mean 0.31278
+    k=2: q=123  CVaR 0.13982  mean 0.38838
+    k=3: q=233  CVaR 0.13841  mean 0.34185
+    k=4: q=0  CVaR 0.14318  mean 0.32770
+    k=5: q=114  CVaR 0.14518  mean 0.35099
+    k=6: q=235  CVaR 0.14609  mean 0.32466
+    k=7: q=140  CVaR 0.14601  mean 0.33481
+    k=8: q=234  CVaR 0.14439  mean 0.31953
+[S3] mmd chain [193, 123, 233, 0, 114, 235, 140, 234] in 0.4 min; peaks at k=6
+
+[S4] energy chain overlap with D008's CVaR chain: 2/8; energy vs mmd 5/8
+[S4] objective monotone in k: True
+written: ./results/D010/selection.json
+[S5] joint_energy  k=1 test top-1 0.6333 [0.6151,0.6616]
+[S5] joint_energy  k=2 test top-1 0.7725 [0.7611,0.7881]
+[S5] joint_energy  k=3 test top-1 0.8076 [0.7686,0.8335]
+[S5] joint_energy  k=4 test top-1 0.8212 [0.8043,0.8335]
+[S5] joint_energy  k=5 test top-1 0.8301 [0.8119,0.8454]
+[S5] joint_energy  k=6 test top-1 0.8439 [0.8281,0.8519]
+[S5] joint_energy  k=7 test top-1 0.8672 [0.8508,0.8789]
+[S5] joint_energy  k=8 test top-1 0.8757 [0.8659,0.8908]
+[S5] joint_mmd     k=8 test top-1 0.8662 [0.8151,0.8973]
+
+===== S6: joint_energy vs D009 =====
+  k=1 vs cvar_max        +0.0000 [+0.0000,+0.0000] range 0.0465 not resolved
+  k=1 vs paper8          +0.0237 [-0.0048,+0.0558] range 0.0465 not resolved
+  k=2 vs cvar_max        +0.0141 [-0.0022,+0.0294] range 0.0324 not resolved
+  k=2 vs paper8          +0.0331 [+0.0117,+0.0543] range 0.0562 not resolved
+  k=3 vs cvar_max        +0.0257 [+0.0093,+0.0422] range 0.0649 not resolved
+  k=3 vs paper8          +0.0470 [+0.0268,+0.0659] range 0.0649 not resolved
+  k=4 vs cvar_max        -0.0021 [-0.0195,+0.0158] range 0.0378 not resolved
+  k=4 vs paper8          +0.0155 [-0.0078,+0.0376] range 0.0443 not resolved
+  k=5 vs cvar_max        +0.0198 [+0.0035,+0.0361] range 0.0627 not resolved
+  k=5 vs paper8          +0.0251 [+0.0032,+0.0461] range 0.0389 not resolved
+  k=6 vs cvar_max        -0.0023 [-0.0186,+0.0138] range 0.0238 not resolved
+  k=6 vs paper8          +0.0146 [-0.0093,+0.0365] range 0.0703 not resolved
+  k=7 vs cvar_max        +0.0050 [-0.0104,+0.0223] range 0.0281 not resolved
+  k=7 vs paper8          +0.0213 [+0.0032,+0.0381] range 0.0497 not resolved
+  k=8 vs cvar_max        +0.0240 [+0.0086,+0.0404] range 0.0378 not resolved
+  k=8 vs paper8          +0.0308 [+0.0084,+0.0536] range 0.0378 not resolved
+  MMD k=8 vs cvar_max +0.0143 [-0.0004,+0.0277]
+
+total 3.4 min
+written: ./results/D010/metrics_by_k.json, ./results/D010/comparison_vs_d009.json
