@@ -1,0 +1,123 @@
+{
+ "1": {
+  "n_real": 60,
+  "n_null": 40,
+  "real_median": 0.261975381870318,
+  "real_p10": 0.11029243113573446,
+  "real_min": 0.05237247138852868,
+  "hard_median": 0.25031410852574304,
+  "hard_min": 0.05237247138852868,
+  "null_median": 0.05195104770852088,
+  "null_p95": 0.08778973619241406,
+  "null_max": 0.13849820737068574,
+  "separation_ratio": 2.984123124554455,
+  "hard_separation_ratio": 2.8512912714205507,
+  "auroc_real_vs_null": 0.985,
+  "frac_hard_below_null_p95": 0.13333333333333333,
+  "wall_s": 0.4
+ },
+ "2": {
+  "n_real": 60,
+  "n_null": 40,
+  "real_median": 0.34010985888944745,
+  "real_p10": 0.16811407856911176,
+  "real_min": 0.07235478408837712,
+  "hard_median": 0.2970886702193075,
+  "hard_min": 0.07235478408837712,
+  "null_median": 0.05399871197384318,
+  "null_p95": 0.06629835915481878,
+  "null_max": 0.07419801245016285,
+  "separation_ratio": 5.129989086083244,
+  "hard_separation_ratio": 4.481086319580718,
+  "auroc_real_vs_null": 0.9991666666666666,
+  "frac_hard_below_null_p95": 0.0,
+  "wall_s": 0.8
+ },
+ "4": {
+  "n_real": 60,
+  "n_null": 40,
+  "real_median": 0.34748456440436853,
+  "real_p10": 0.16503807325733336,
+  "real_min": 0.05402713600940452,
+  "hard_median": 0.3144905067886774,
+  "hard_min": 0.05402713600940452,
+  "null_median": 0.053490104450877735,
+  "null_p95": 0.06851838898376854,
+  "null_max": 0.08181838549692344,
+  "separation_ratio": 5.071405932890291,
+  "hard_separation_ratio": 4.589870127611694,
+  "auroc_real_vs_null": 0.9916666666666667,
+  "frac_hard_below_null_p95": 0.03333333333333333,
+  "wall_s": 1.6
+ },
+ "8": {
+  "n_real": 60,
+  "n_null": 40,
+  "real_median": 0.2618860614000411,
+  "real_p10": 0.1201743545863133,
+  "real_min": 0.05417323746364526,
+  "hard_median": 0.24571275355801053,
+  "hard_min": 0.05417323746364526,
+  "null_median": 0.05385961271862111,
+  "null_p95": 0.0682560437092755,
+  "null_max": 0.07290702628090465,
+  "separation_ratio": 3.8368186488437317,
+  "hard_separation_ratio": 3.599868087939295,
+  "auroc_real_vs_null": 0.9920833333333333,
+  "frac_hard_below_null_p95": 0.03333333333333333,
+  "wall_s": 3.3
+ },
+ "16": {
+  "n_real": 60,
+  "n_null": 40,
+  "real_median": 0.22338255496965786,
+  "real_p10": 0.12755282337588933,
+  "real_min": 0.052963508792938686,
+  "hard_median": 0.1985607118976058,
+  "hard_min": 0.052963508792938686,
+  "null_median": 0.054486070325590386,
+  "null_p95": 0.064787026696123,
+  "null_max": 0.08338581755783192,
+  "separation_ratio": 3.447951949043921,
+  "hard_separation_ratio": 3.0648221105891267,
+  "auroc_real_vs_null": 0.99,
+  "frac_hard_below_null_p95": 0.03333333333333333,
+  "wall_s": 7.2
+ },
+ "cost": {
+  "precompute_subset_s": 0.1,
+  "precompute_full_projection_core_h": 0.01,
+  "accumulator_per_cell_ms": 0.051,
+  "direct_per_cell_ms": 26.201,
+  "speedup": 518.7,
+  "accumulator_step_core_h": 0.0,
+  "direct_step_core_h": 1.26,
+  "full_greedy_8_steps_accumulator_core_h": 0.02,
+  "agreement": {
+   "accumulator": 0.2853536903858185,
+   "direct": 0.2853607794653762,
+   "abs_diff": 7.089079557709432e-06
+  },
+  "memory_XY2_full_gb": 3.9,
+  "memory_XX2_full_gb": 0.22
+ },
+ "verdict": {
+  "ks_checked": [
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "ks_non_degenerate": [
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "degenerate": false,
+  "criterion": "AUROC(real pairs vs same-model null) >= 0.95 and the separation ratio not collapsing toward 1 as k grows",
+  "note": "a drop that is monotone but mild is WEAKER, not degenerate; D010's INCONCLUSIVE branch needs the statistic to stop discriminating, not merely to discriminate less well"
+ }
+}

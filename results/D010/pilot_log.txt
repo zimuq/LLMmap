@@ -1,0 +1,14 @@
+37 models, 259 queries, 75 configs, dim 1024, 666 pairs
+[S1] k= 1: real med 0.2620 (hard 0.2503) vs null p95 0.0878  ratio 2.98 (hard 2.85)  AUROC 0.9850  (0.4s)
+[S1] k= 2: real med 0.3401 (hard 0.2971) vs null p95 0.0663  ratio 5.13 (hard 4.48)  AUROC 0.9992  (0.8s)
+[S1] k= 4: real med 0.3475 (hard 0.3145) vs null p95 0.0685  ratio 5.07 (hard 4.59)  AUROC 0.9917  (1.6s)
+[S1] k= 8: real med 0.2619 (hard 0.2457) vs null p95 0.0683  ratio 3.84 (hard 3.60)  AUROC 0.9921  (3.3s)
+[S1] k=16: real med 0.2234 (hard 0.1986) vs null p95 0.0648  ratio 3.45 (hard 3.06)  AUROC 0.9900  (7.2s)
+
+[cost] accumulator 0.051 ms/cell vs direct 26.201 ms/cell -> 518.7x
+[cost] one greedy step over 259x666: 0.0 core-h (accumulator) vs 1.26 core-h (direct)
+[cost] full k=8 greedy: 0.02 core-h; precompute 0.01 core-h; XY2 would be 3.9 GB
+[cost] accumulator vs direct agreement: 7.09e-06
+
+[S1] non-degenerate at k = [1, 2, 4, 8, 16]
+written: ./results/D010/degeneracy_pilot.json
