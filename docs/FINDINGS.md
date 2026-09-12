@@ -382,5 +382,55 @@ as a tie, not read further; it does not test the open-set path's actual
 selling point (rejecting a model never seen in training), which needs a
 different held-out-model experiment.
 
+## D010 — A cheap, classifier-free refinement reverses the paper-8 gap (mechanism confirmed, magnitude and one mechanism still open)
+
+**Headline: a set-level (multivariate) statistic, still classifier-free,
+beats the paper's own 8 queries at every `k`, and beats CVaR-coverage at
+`k=8` — for half a minute of CPU.** D009 left a tie against the paper's
+8 queries, explained by Algorithm H.1's retrain-per-candidate loop
+(372 real training runs) implicitly capturing query-*interaction* that
+CVaR-coverage's per-query, MAX-aggregated statistic (I4) cannot see by
+construction. D010 tested a cheap, classifier-free way to capture the
+same signal: energy distance on *concatenated* query-response
+embeddings rather than per-query. Result: mean +0.026 over the paper's
+8 across all 8 `k` values (8/8 same sign), +0.024 over CVaR-coverage at
+`k=8` — reached without a single classifier retrained during selection.
+
+**The mechanism is not just inferred, it's directly observed.** The
+joint criterion's selected set overlaps only 2/8 with CVaR-coverage's
+own chain, and it picked **one of the paper's own 8 anchor queries**
+(the injection-wrapped "who created you") that CVaR-coverage's per-query
+MAX never selects at any `k` across D008, D009, or D010. That is exactly
+the object I4's aggregation rule cannot see by design: a query that's
+unremarkable alone but complementary once combined with others. This is
+concrete confirmation of D009/R2's hypothesis, not just a better number.
+
+**Two things this D does not establish, both honestly reported rather
+than glossed over.** (1) No single `k`'s delta clears the 5-seed
+training-variance range — the case rests on consistency (8/8 sign
+agreement, 5 of 8 CIs excluding zero), not on any one cell, and this is
+the same 25-config `S_test` resolution wall D008 and D009 already hit —
+now three D's running into the same limitation, escalated as a new open
+item (`DECISIONS.md` A6: fixing it needs new test-set generation, a real
+corpus-cost decision, not urgent since no verdict so far has needed it).
+(2) The pre-registered prediction (small-`k` advantage, converging by
+`k=8`) was only half right: the small-`k` half held, but the advantage
+does *not* fade by `k=8` — it's among the largest gaps in the table
+there. Why a statistic whose own selection objective and pilot both
+predicted the benefit should concentrate at `k=2` keeps paying off all
+the way to `k=8` is not explained by this D — flagged as the most
+interesting open question the project currently has, not urgent, not
+promoted to a new D yet.
+
+**Verified, not assumed, throughout:** an exact (not approximate)
+additive accumulator for the joint statistic — squared distances
+decompose over concatenated queries, only the final square root doesn't
+— made the naive-vs-approximate cost trade-off moot (519× faster,
+6.51e-06 agreement with direct computation); a `k=1` sanity check
+confirmed the joint statistic reduces bitwise-exactly to the per-query
+one when there's no interaction to capture; a `k=8` MMD cross-check
+(smaller magnitude, 5/8 same queries, same direction) confirmed the
+result isn't an artifact of energy distance specifically.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

@@ -99,6 +99,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 > be run without the paper's original code/pool), but it is now a
 > directly reproducible fact about *our* pool and *our* objective family.
 | **A5** | **New, 2026-09-02, from D005/P1 §F1.** `sampling_universe`'s `do_sample` is a 2-value parameter — I2's literal wording ("no single sampling setting crosses splits") is structurally unsatisfiable for it: any split puts all-greedy decoding in one pool and all-stochastic in the other, which *is* a confound, not a fix. TACC proposes three options (Call B): (1) a documented, explicit carve-out for `do_sample` alone — **TACC recommends this**; (2) reinterpret I2 at the composite-tuple level rather than per-field; (3) implement the paper's `frequency_penalty` dimension so `do_sample` stops being the only lever (bigger change, needs its own D + I7 schema bump). Sets precedent for how "literally unsatisfiable invariant" cases get handled, not just this field. | Option 1 (documented carve-out) — smallest change; I2's actual failure mode is *silent* leakage, and an explicit, disclosed exception isn't that | ✅ Option 1, decided 2026-09-02 by the human |
+| **A6** | **New, 2026-09-11, from D010 R9.** Three D's running (D008, D009, D010) have all hit the same wall: 25 `S_test` configs give too little resolution to resolve a `k`-by-`k` delta — only the aggregate/consistency pattern across `k`, never a single clean number. Fixing it means **more test configs, i.e. new generation** — touches I6/I7 (corpus is currently frozen; a size change is a schema-relevant event), real cost, real turnaround. Not urgent — every closed verdict so far (D008/D009/D010) was reached on the aggregate pattern, not blocked by this. | Leave `S_test` frozen at 25 configs until a specific number needs a tighter CI than "consistent across k" (e.g. for a paper figure) — expand only then, sized to that need | ⬜ |
 
 > **A4 note:** whichever claim is primary, the comparison baseline behind it is
 > `GreedyCover` at `γ=1.0`, framed as *our reconstruction of mean-based
@@ -715,6 +716,40 @@ project invention -- it's a genuine deviation/novelty
   Decided by: human (which direction to draft, which to shelve, and the
   writeup note's placement/separation); design-side (D010's concrete
   content).
+
+[2026-09-11] D010 R -- CONFIRMED, reverses the paper-8 gap; closed
+  Decision: D010 marked CLOSED. Verdict per its own outcome table:
+  CONFIRMED -- the classifier-free joint (set-level) statistic beats the
+  paper's 8 queries at all 8 k values (mean +0.026, every CI-excluding-zero
+  case in the same direction) and beats CVaR-coverage at k=8 (+0.024),
+  selection staying at 0.5 minutes of CPU against Algorithm H.1's 372
+  training runs. k=1 sanity check passed bitwise (joint statistic reduces
+  exactly to the per-query one when there is no set to have interaction
+  in). MMD robustness check (Review amendment) agrees directionally,
+  ruling out an energy-distance-specific artifact. Mechanistically
+  confirms D009/R2's hypothesis concretely: the joint criterion selected
+  one of the paper's own 8 anchors (q=0) that CVaR-coverage's per-query
+  MAX never picks at any k -- exactly the "unremarkable alone,
+  complementary in combination" object I4's aggregation rule cannot see
+  by construction.
+  Two honest limits accepted as reported, not smoothed over: no single k
+  clears the 5-seed variance range (case rests on 8/8 sign-consistency,
+  not any one cell), and the pre-registered F1 prediction was only half
+  right -- the advantage does not fade by k=8 as the pilot and the
+  selection objective both predicted, and this D does not explain why.
+  New open item (A6 above): three D's in a row (D008/D009/D010) are now
+  limited by S_test's 25-config resolution -- fixing it needs new
+  generation (I6/I7-adjacent), logged as a human cost decision, not
+  actioned, not urgent (every verdict so far didn't need it).
+  Rationale: closing on a satisfied, pre-registered outcome table is
+  routine; A6 is a genuine trade-off (CLAUDE.md rule (c)) since it costs
+  real corpus-generation resources for a resolution improvement with no
+  specific number currently needing it -- escalated rather than decided,
+  matching TACC's own R9 framing ("a human call about corpus cost, not
+  something TACC can resolve").
+  Decided by: design-side, routine call (closure, A6's logging); A6's
+  actual resolution (whether/when to expand S_test) left open for the
+  human.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
