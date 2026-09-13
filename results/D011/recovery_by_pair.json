@@ -1,0 +1,2250 @@
+{
+ "schema": "d011-recovery-v1",
+ "n_pairs": 32,
+ "population": "32 split-half-robust pairs (premise_check.json); the naive count was 33 and was inflated by selecting and scoring the oracle query on the same split",
+ "criteria": {
+  "T2_accuracy": 0.75,
+  "T3_energy_secondary": 0.8761,
+  "joint_null_p95": {
+   "GreedyCover": 0.0703441156395026,
+   "JointGreedy": 0.07517735405716294
+  }
+ },
+ "chains": {
+  "GreedyCover": [
+   193,
+   123,
+   233,
+   243,
+   240,
+   17,
+   136,
+   252
+  ],
+  "JointGreedy": [
+   193,
+   140,
+   237,
+   114,
+   233,
+   117,
+   0,
+   16
+  ]
+ },
+ "chain_overlap": 2,
+ "summary": {
+  "GreedyCover": {
+   "a_naive": 32,
+   "a_split_half": 32,
+   "b_only": 0,
+   "clears_T2": 32,
+   "joint_vs_null": 32,
+   "s_energy_clears_T3": 21,
+   "mean_set_acc": 0.9612,
+   "mean_a_max": 0.9563
+  },
+  "JointGreedy": {
+   "a_naive": 32,
+   "a_split_half": 32,
+   "b_only": 0,
+   "clears_T2": 32,
+   "joint_vs_null": 32,
+   "s_energy_clears_T3": 15,
+   "mean_set_acc": 0.9656,
+   "mean_a_max": 0.975
+  }
+ },
+ "recovered": 0,
+ "lost": 0,
+ "recovered_via_a": 0,
+ "recovered_via_b_only": 0,
+ "pre_registered": {
+  "confirmed_at": 12,
+  "not_recovered_at": 4
+ },
+ "verdict": "NOT RECOVERED",
+ "inputs": {
+  "d008_selection": "7593c186a01038b966e4cf0e93cb9d60210e6b9640845d7d5efd7554dbfd9771",
+  "d010_selection": "0e3150e892dc20f48827816a78e239d6f7e49a745b09e14809592dd58c9d955b",
+  "d008_frontier": "affcadc9ba0e51ba42c4bd91b42fa3721e2935ebe92371547f288138e6803204"
+ },
+ "pairs": [
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | openchat/openchat-3.6-8b-20240522",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.72,
+   "median_query_acc": 0.8,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.1-8b",
+    "oc3.6-8b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.92,
+     0.8,
+     0.72,
+     0.64,
+     0.6,
+     0.8,
+     0.8,
+     0.72
+    ],
+    "a_max_acc": 0.92,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.88,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.1832,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6985,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.92,
+     0.8,
+     0.82,
+     0.74,
+     0.72,
+     0.78,
+     0.96,
+     0.9
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.1851,
+    "joint_vs_null": true,
+    "s_energy_max": 0.3377,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | ibm-granite/granite-3.1-8b-instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.72,
+   "median_query_acc": 0.8,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "3.0",
+    "8.0"
+   ],
+   "variants": [
+    "2.5-3b",
+    "3.1-8b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     0.74,
+     0.72,
+     0.78,
+     0.64,
+     0.86,
+     0.72,
+     0.58
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.1229,
+    "joint_vs_null": true,
+    "s_energy_max": 0.3727,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.62,
+     0.7,
+     0.72,
+     0.72,
+     0.74,
+     1.0,
+     0.8
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.184,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6906,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.62,
+   "median_query_acc": 0.74,
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.1",
+    "oc3.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.84,
+     0.84,
+     0.78,
+     0.58,
+     0.6,
+     0.9,
+     0.74,
+     0.66
+    ],
+    "a_max_acc": 0.9,
+    "a_naive": true,
+    "a_split_half_acc": 0.7917,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2806,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6858,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.84,
+     0.82,
+     0.84,
+     0.78,
+     0.78,
+     0.9,
+     0.8,
+     0.84
+    ],
+    "a_max_acc": 0.9,
+    "a_naive": true,
+    "a_split_half_acc": 0.875,
+    "a_split_half": true,
+    "set_acc": 0.92,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3464,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6263,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | internlm/internlm2_5-7b-chat",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.7,
+   "median_query_acc": 0.78,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "7.0"
+   ],
+   "variants": [
+    "3.1-8b",
+    "2.5-7b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.92,
+     0.82,
+     0.86,
+     0.74,
+     0.7,
+     0.84,
+     0.74,
+     0.88
+    ],
+    "a_max_acc": 0.92,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.86,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3178,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8522,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.92,
+     0.8,
+     0.76,
+     0.74,
+     0.86,
+     0.66,
+     0.98,
+     0.72
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.92,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2611,
+    "joint_vs_null": true,
+    "s_energy_max": 0.604,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | openchat/openchat_3.5",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.48,
+   "median_query_acc": 0.82,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "7.0"
+   ],
+   "variants": [
+    "3.0-8b",
+    "oc3.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.94,
+     0.9,
+     0.74,
+     0.48,
+     0.68,
+     0.92,
+     0.82,
+     0.62
+    ],
+    "a_max_acc": 0.94,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.92,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2817,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8734,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.94,
+     0.8,
+     0.82,
+     0.92,
+     0.74,
+     0.82,
+     0.92,
+     0.88
+    ],
+    "a_max_acc": 0.94,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2965,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8026,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | tiiuae/Falcon3-10B-Instruct",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.66,
+   "median_query_acc": 0.8,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "3.8",
+    "10.0"
+   ],
+   "variants": [
+    "mini-128k",
+    "10b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     0.6,
+     0.54,
+     0.48,
+     0.42,
+     0.94,
+     0.66,
+     0.58
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.341,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8954,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.78,
+     0.48,
+     0.86,
+     0.54,
+     0.68,
+     0.88,
+     0.82
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2145,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8304,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.1-8b-instruct",
+   "naive_oracle": 0.96,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.5,
+   "median_query_acc": 0.78,
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.0-8b",
+    "3.1-8b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.92,
+     0.84,
+     0.68,
+     0.68,
+     0.52,
+     0.78,
+     0.68,
+     0.5
+    ],
+    "a_max_acc": 0.92,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2313,
+    "joint_vs_null": true,
+    "s_energy_max": 0.9439,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.92,
+     0.86,
+     0.76,
+     0.82,
+     0.68,
+     0.64,
+     0.96,
+     0.82
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2059,
+    "joint_vs_null": true,
+    "s_energy_max": 0.4018,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "openchat/openchat_3.5 | tiiuae/Falcon3-7B-Instruct",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.42,
+   "median_query_acc": 0.8,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "oc3.5",
+    "7b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.94,
+     0.62,
+     0.9,
+     0.72,
+     0.56,
+     0.78,
+     0.96,
+     0.86
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.92,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4051,
+    "joint_vs_null": true,
+    "s_energy_max": 0.9261,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.94,
+     0.8,
+     0.96,
+     0.94,
+     0.9,
+     0.9,
+     0.92,
+     0.86
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3578,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8612,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | ibm-granite/granite-3.0-8b-instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.54,
+   "median_query_acc": 0.94,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "2.0",
+    "8.0"
+   ],
+   "variants": [
+    "1.1-2b",
+    "3.0-8b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     1.0,
+     1.0,
+     0.96,
+     0.92,
+     0.9,
+     0.96,
+     0.96,
+     0.94
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4194,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8563,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     1.0,
+     1.0,
+     0.98,
+     0.98,
+     0.96,
+     0.98,
+     1.0,
+     0.98
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.51,
+    "joint_vs_null": true,
+    "s_energy_max": 1.198,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | tiiuae/Falcon3-10B-Instruct",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.42,
+   "median_query_acc": 0.78,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "10.0"
+   ],
+   "variants": [
+    "3.1-8b",
+    "10b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     0.9,
+     0.52,
+     0.38,
+     0.42,
+     0.92,
+     0.88,
+     0.76
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4089,
+    "joint_vs_null": true,
+    "s_energy_max": 1.2616,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.68,
+     0.46,
+     0.82,
+     0.52,
+     0.8,
+     0.88,
+     0.84
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3247,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6847,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | tiiuae/Falcon3-10B-Instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.46,
+   "median_query_acc": 0.82,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "10.0"
+   ],
+   "variants": [
+    "3.0-8b",
+    "10b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     1.0,
+     0.86,
+     0.58,
+     0.46,
+     0.5,
+     0.88,
+     0.86,
+     0.72
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4361,
+    "joint_vs_null": true,
+    "s_energy_max": 1.2654,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     1.0,
+     0.8,
+     0.52,
+     0.9,
+     0.58,
+     0.78,
+     0.82,
+     0.92
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3125,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6378,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | tiiuae/Falcon3-7B-Instruct",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.54,
+   "median_query_acc": 0.8,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "3.8",
+    "7.0"
+   ],
+   "variants": [
+    "mini-128k",
+    "7b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.96,
+     0.58,
+     0.64,
+     0.5,
+     0.5,
+     0.92,
+     0.56,
+     0.86
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.875,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2949,
+    "joint_vs_null": true,
+    "s_energy_max": 1.157,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.96,
+     0.9,
+     0.56,
+     0.94,
+     0.64,
+     0.72,
+     0.98,
+     0.9
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2522,
+    "joint_vs_null": true,
+    "s_energy_max": 0.5391,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | openchat/openchat-3.6-8b-20240522",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.74,
+   "median_query_acc": 0.84,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "8b",
+    "oc3.6-8b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.9,
+     0.98,
+     0.56,
+     0.78,
+     0.78,
+     0.92,
+     0.88,
+     0.78
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3614,
+    "joint_vs_null": true,
+    "s_energy_max": 1.3378,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.9,
+     0.94,
+     0.84,
+     0.76,
+     0.56,
+     0.88,
+     0.92,
+     0.98
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.8333,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3611,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6547,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "openchat/openchat_3.5 | tiiuae/Falcon3-10B-Instruct",
+   "naive_oracle": 0.96,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.68,
+   "median_query_acc": 0.78,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "10.0"
+   ],
+   "variants": [
+    "oc3.5",
+    "10b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.88,
+     0.62,
+     0.72,
+     0.52,
+     0.5,
+     0.76,
+     0.94,
+     0.72
+    ],
+    "a_max_acc": 0.94,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2529,
+    "joint_vs_null": true,
+    "s_energy_max": 0.6963,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.88,
+     0.84,
+     0.96,
+     0.88,
+     0.72,
+     0.88,
+     0.8,
+     0.66
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2738,
+    "joint_vs_null": true,
+    "s_energy_max": 0.5502,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | openchat/openchat_3.5",
+   "naive_oracle": 0.96,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.74,
+   "median_query_acc": 0.76,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "7b",
+    "oc3.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.78,
+     0.88,
+     0.72,
+     0.52,
+     0.66,
+     0.72,
+     0.8,
+     0.6
+    ],
+    "a_max_acc": 0.88,
+    "a_naive": true,
+    "a_split_half_acc": 0.75,
+    "a_split_half": true,
+    "set_acc": 0.88,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2114,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8192,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.78,
+     0.86,
+     0.8,
+     0.88,
+     0.72,
+     0.76,
+     0.86,
+     0.76
+    ],
+    "a_max_acc": 0.88,
+    "a_naive": true,
+    "a_split_half_acc": 0.7917,
+    "a_split_half": true,
+    "set_acc": 0.88,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2564,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8192,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | ibm-granite/granite-3.0-8b-instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.48,
+   "median_query_acc": 0.86,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "3.0",
+    "8.0"
+   ],
+   "variants": [
+    "2.5-3b",
+    "3.0-8b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     0.76,
+     0.8,
+     0.88,
+     0.94,
+     0.92,
+     0.74,
+     0.96
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3522,
+    "joint_vs_null": true,
+    "s_energy_max": 1.147,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.84,
+     0.7,
+     0.86,
+     0.8,
+     0.9,
+     0.98,
+     0.92
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.325,
+    "joint_vs_null": true,
+    "s_energy_max": 1.5409,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.56,
+   "median_query_acc": 0.84,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "3.8"
+   ],
+   "variants": [
+    "2-7b",
+    "mini-4k"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.88,
+     0.42,
+     0.56,
+     0.5,
+     0.68,
+     0.88,
+     0.84,
+     0.88
+    ],
+    "a_max_acc": 0.88,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4736,
+    "joint_vs_null": true,
+    "s_energy_max": 1.8788,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.88,
+     0.88,
+     0.92,
+     0.52,
+     0.56,
+     0.78,
+     0.96,
+     0.94
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.6412,
+    "joint_vs_null": true,
+    "s_energy_max": 1.8788,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | tiiuae/Falcon3-7B-Instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.52,
+   "median_query_acc": 0.86,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "7.0"
+   ],
+   "variants": [
+    "8b",
+    "7b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     1.0,
+     0.94,
+     0.7,
+     0.74,
+     0.84,
+     0.96,
+     1.0,
+     0.88
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.6102,
+    "joint_vs_null": true,
+    "s_energy_max": 1.8869,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     1.0,
+     0.96,
+     0.92,
+     0.94,
+     0.7,
+     0.98,
+     1.0,
+     1.0
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4357,
+    "joint_vs_null": true,
+    "s_energy_max": 0.9942,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.74,
+   "median_query_acc": 0.84,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "0.5",
+    "10.0"
+   ],
+   "variants": [
+    "2.5-0.5b",
+    "10b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.92,
+     0.56,
+     0.56,
+     0.92,
+     0.5,
+     0.86,
+     0.72,
+     0.84
+    ],
+    "a_max_acc": 0.92,
+    "a_naive": true,
+    "a_split_half_acc": 0.7917,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2914,
+    "joint_vs_null": true,
+    "s_energy_max": 0.7391,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.92,
+     0.92,
+     0.98,
+     0.66,
+     0.56,
+     0.74,
+     0.88,
+     0.88
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4868,
+    "joint_vs_null": true,
+    "s_energy_max": 1.9818,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.74,
+   "median_query_acc": 0.82,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "3.0",
+    "7.0"
+   ],
+   "variants": [
+    "2.5-3b",
+    "7b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     0.92,
+     0.54,
+     0.8,
+     0.58,
+     0.94,
+     0.88,
+     1.0
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 0.875,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.5403,
+    "joint_vs_null": true,
+    "s_energy_max": 1.9809,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.92,
+     0.76,
+     0.9,
+     0.54,
+     0.92,
+     1.0,
+     0.92
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4342,
+    "joint_vs_null": true,
+    "s_energy_max": 1.3138,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | nvidia/Llama3-ChatQA-1.5-8B",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.54,
+   "median_query_acc": 0.86,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "8b",
+    "chatqa-1.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     0.84,
+     0.52,
+     0.68,
+     0.62,
+     0.96,
+     0.76,
+     0.84
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.92,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3718,
+    "joint_vs_null": true,
+    "s_energy_max": 1.5115,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.88,
+     0.96,
+     0.82,
+     0.52,
+     0.88,
+     0.86,
+     1.0
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3847,
+    "joint_vs_null": true,
+    "s_energy_max": 0.9297,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "naive_oracle": 0.96,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.54,
+   "median_query_acc": 0.78,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "2-7b",
+    "7b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.9,
+     0.56,
+     0.66,
+     0.54,
+     0.54,
+     0.96,
+     0.46,
+     0.94
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.432,
+    "joint_vs_null": true,
+    "s_energy_max": 2.1309,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.9,
+     0.88,
+     0.86,
+     0.96,
+     0.66,
+     0.78,
+     0.96,
+     0.88
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3597,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8415,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | tiiuae/Falcon3-7B-Instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.5,
+   "median_query_acc": 0.82,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.3",
+    "7b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.96,
+     0.96,
+     0.82,
+     0.92,
+     0.62,
+     0.88,
+     0.96,
+     0.92
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.7187,
+    "joint_vs_null": true,
+    "s_energy_max": 1.6017,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.96,
+     0.94,
+     0.92,
+     0.98,
+     0.82,
+     0.96,
+     1.0,
+     0.86
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.5782,
+    "joint_vs_null": true,
+    "s_energy_max": 1.3616,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.54,
+   "median_query_acc": 0.82,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "3.8"
+   ],
+   "variants": [
+    "2-7b",
+    "mini-128k"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.86,
+     0.74,
+     0.54,
+     0.5,
+     0.68,
+     0.9,
+     0.82,
+     0.92
+    ],
+    "a_max_acc": 0.92,
+    "a_naive": true,
+    "a_split_half_acc": 0.875,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.406,
+    "joint_vs_null": true,
+    "s_energy_max": 2.2741,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.86,
+     0.82,
+     0.92,
+     0.78,
+     0.54,
+     0.88,
+     1.0,
+     0.94
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4181,
+    "joint_vs_null": true,
+    "s_energy_max": 2.2741,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.5,
+   "median_query_acc": 0.88,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "3.0",
+    "10.0"
+   ],
+   "variants": [
+    "3.2-3b",
+    "10b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     1.0,
+     0.72,
+     0.52,
+     0.5,
+     0.92,
+     1.0,
+     0.94
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.474,
+    "joint_vs_null": true,
+    "s_energy_max": 2.4819,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.98,
+     0.92,
+     0.94,
+     0.72,
+     0.92,
+     0.9,
+     0.9
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3953,
+    "joint_vs_null": true,
+    "s_energy_max": 1.0767,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.5,
+   "median_query_acc": 0.88,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "0.5",
+    "8.0"
+   ],
+   "variants": [
+    "2.5-0.5b",
+    "chatqa-1.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.86,
+     0.92,
+     0.92,
+     0.92,
+     0.6,
+     0.94,
+     0.86,
+     0.94
+    ],
+    "a_max_acc": 0.94,
+    "a_naive": true,
+    "a_split_half_acc": 0.875,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.309,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8748,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.86,
+     0.98,
+     0.88,
+     0.96,
+     0.92,
+     1.0,
+     0.8,
+     0.96
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.2727,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8126,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.52,
+   "median_query_acc": 0.88,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "1.5",
+    "8.0"
+   ],
+   "variants": [
+    "2-1.5b",
+    "chatqa-1.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.82,
+     0.96,
+     0.94,
+     0.82,
+     0.6,
+     0.94,
+     0.84,
+     0.88
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4751,
+    "joint_vs_null": true,
+    "s_energy_max": 2.2728,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.82,
+     0.92,
+     0.86,
+     0.94,
+     0.94,
+     0.98,
+     0.82,
+     0.9
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.6024,
+    "joint_vs_null": true,
+    "s_energy_max": 2.3815,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "naive_oracle": 0.98,
+   "both_halves_max": 0.9583333333333334,
+   "build_qstar_acc": 0.52,
+   "median_query_acc": 0.8,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "3.0",
+    "10.0"
+   ],
+   "variants": [
+    "2.5-3b",
+    "10b"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.94,
+     0.8,
+     0.56,
+     0.54,
+     0.52,
+     0.94,
+     0.76,
+     0.84
+    ],
+    "a_max_acc": 0.94,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4782,
+    "joint_vs_null": true,
+    "s_energy_max": 2.6451,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.94,
+     0.9,
+     0.54,
+     0.94,
+     0.56,
+     0.98,
+     0.92,
+     0.82
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4121,
+    "joint_vs_null": true,
+    "s_energy_max": 0.8635,
+    "s_energy_clears_T3": false
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.54,
+   "median_query_acc": 0.9,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "14.0",
+    "8.0"
+   ],
+   "variants": [
+    "medium-128k",
+    "chatqa-1.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.88,
+     0.94,
+     0.96,
+     0.76,
+     0.52,
+     0.98,
+     0.92,
+     0.9
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4164,
+    "joint_vs_null": true,
+    "s_energy_max": 1.6611,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.88,
+     0.88,
+     0.94,
+     0.94,
+     0.96,
+     0.92,
+     0.86,
+     0.88
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.5933,
+    "joint_vs_null": true,
+    "s_energy_max": 1.9014,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.68,
+   "median_query_acc": 0.88,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "0.5",
+    "14.0"
+   ],
+   "variants": [
+    "2.5-0.5b",
+    "medium-4k"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.96,
+     0.62,
+     0.64,
+     0.9,
+     0.7,
+     0.9,
+     0.72,
+     0.9
+    ],
+    "a_max_acc": 0.96,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.94,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3385,
+    "joint_vs_null": true,
+    "s_energy_max": 0.7532,
+    "s_energy_clears_T3": false
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.96,
+     0.76,
+     0.96,
+     0.64,
+     0.64,
+     0.68,
+     0.96,
+     1.0
+    ],
+    "a_max_acc": 1.0,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.6229,
+    "joint_vs_null": true,
+    "s_energy_max": 3.2535,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | nvidia/Llama3-ChatQA-1.5-8B",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.52,
+   "median_query_acc": 0.92,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "7.0",
+    "8.0"
+   ],
+   "variants": [
+    "v0.3",
+    "chatqa-1.5"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.94,
+     0.9,
+     0.96,
+     0.8,
+     0.92,
+     0.98,
+     0.96,
+     0.9
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4602,
+    "joint_vs_null": true,
+    "s_energy_max": 1.0883,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.94,
+     0.98,
+     0.98,
+     0.84,
+     0.96,
+     0.96,
+     0.9,
+     0.96
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9583,
+    "a_split_half": true,
+    "set_acc": 0.98,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.4355,
+    "joint_vs_null": true,
+    "s_energy_max": 1.0531,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "naive_oracle": 1.0,
+   "both_halves_max": 1.0,
+   "build_qstar_acc": 0.62,
+   "median_query_acc": 0.86,
+   "same_base": false,
+   "same_lineage": false,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": false,
+   "params_b": [
+    "0.5",
+    "14.0"
+   ],
+   "variants": [
+    "2.5-0.5b",
+    "medium-128k"
+   ],
+   "GreedyCover": {
+    "per_query_acc": [
+     0.98,
+     0.62,
+     0.62,
+     0.9,
+     0.78,
+     0.96,
+     0.78,
+     0.9
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 0.9167,
+    "a_split_half": true,
+    "set_acc": 1.0,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.3509,
+    "joint_vs_null": true,
+    "s_energy_max": 0.95,
+    "s_energy_clears_T3": true
+   },
+   "JointGreedy": {
+    "per_query_acc": [
+     0.98,
+     0.56,
+     0.94,
+     0.52,
+     0.62,
+     0.62,
+     0.94,
+     0.88
+    ],
+    "a_max_acc": 0.98,
+    "a_naive": true,
+    "a_split_half_acc": 1.0,
+    "a_split_half": true,
+    "set_acc": 0.96,
+    "clears_T2": true,
+    "b_only": false,
+    "joint_stat": 0.6331,
+    "joint_vs_null": true,
+    "s_energy_max": 3.4871,
+    "s_energy_clears_T3": true
+   },
+   "recovered": false,
+   "lost": false
+  }
+ ]
+}

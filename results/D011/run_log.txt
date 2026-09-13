@@ -1,0 +1,19 @@
+[S1] population: 32 split-half-robust pairs (naive count was 33)
+[S1] chains: GreedyCover [193, 123, 233, 243, 240, 17, 136, 252]
+             JointGreedy [193, 140, 237, 114, 233, 117, 0, 16]  (overlap 2/8)
+[S3] GreedyCover joint self-pair null p95 (k=8): 0.0703
+[S3] JointGreedy joint self-pair null p95 (k=8): 0.0752
+  10/32
+  20/32
+  30/32
+
+===== S5: 32 pairs =====
+chain           (a) naive  (a) split  (b) only  clears T2  mean set acc
+GreedyCover            32         32         0         32        0.9612
+JointGreedy            32         32         0         32        0.9656
+
+RECOVERED (Joint clears T2, Greedy does not): 0/32   [via (a): 0, via (b) only: 0]
+LOST     (Greedy clears T2, Joint does not): 0/32
+pre-registered: >=12 CONFIRMED, <=4 NOT RECOVERED  ->  NOT RECOVERED
+
+written: ./results/D011/recovery_by_pair.json
