@@ -299,15 +299,23 @@ probes plausibly have config-fragile within-model consistency, which the
 objective penalizes by design. Full detail: `DECISIONS.md` A4 note,
 `D008.md` addendum.
 
-**The most consequential finding for what comes next:** of the pairs no
-*selected* query separates well, **33 of 37 have a near-perfect query
-already sitting in the 259-query pool** — greedy selection simply missed
-it. Only 2 pairs (the same `Falcon3` and `Phi-3-medium` pairs D004 and
-D007 already flagged) are genuine limits of the pool itself. This means
-"the objective doesn't help enough" would most likely be a
-**selection-algorithm** gap, not a pool-coverage gap — a distinction
-neither of D008's two clean outcomes (CONFIRMED / FALSIFIED) anticipated,
-and directly relevant to how Phase 3 (targeted generation) gets scoped.
+**The most consequential finding for what comes next** (corrected
+2026-09-13 — see D008.md's addendum): of the 37 hard pairs, **32,
+split-half robust, have a query in the 259-query pool whose build-time
+top rank does not survive to test** — the naive count was 33 (inflated
+~7 accuracy points by scoring the same split it selected on, the same
+class of error D007/F2 already caught once). **This is a per-pair
+build→test generalization gap in the tensor's own per-pair estimate,
+not a consequence of `GreedyCover`'s shared 8-query budget** — the
+underlying script (`experiments/d008_frontier.py:95`) takes the argmax
+over all 259 pool queries per pair and never looks at which 8 queries
+any selection algorithm chose. ("Selection simply missed it," the
+original framing here, was a mischaracterization TACC caught while
+planning D011; not corrected until then.) Only 2 pairs (the same
+`Falcon3` and `Phi-3-medium` pairs D004 and D007 already flagged) are
+genuine limits of the pool itself. Whether this build→test gap is
+something a *selection algorithm* can route around — despite not being
+"caused" by one — is exactly what D011 tests.
 
 **Also confirmed:** `γ=1.0` reduces exactly to mean-greedy (numeric
 check against an independent implementation); lower `γ` costs nothing on
