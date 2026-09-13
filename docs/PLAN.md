@@ -16,6 +16,7 @@
 | [D008](D008.md) | TODO.md Phase 2 (T2.1–T2.4); D007's frozen tensor | **CLOSED** 2026-09-08 — **INCONCLUSIVE** by the outcome table's letter (worst-class improves at k=1–3 only; hard-subset compressed, 7.5-pt total range). Real, replicated effect underneath: CVaR reaches 70% mean accuracy at k=2 vs mean-greedy's 4 / paper's 5 / random's 12 — a query-*efficiency* gain. New finding: 33 of 37 "unidentifiable" pairs have a near-perfect query already in the pool that selection missed | REVIEW (P1 approved, executed) | none | `results/D008/`, `D008.md` `## R` |
 | [D009](D009.md) | `METHOD.md` §5.5 (new, 2026-09-08); D008's frozen selection chains; human decision to pause Phase 3 pending this validation | **CLOSED** 2026-09-09 — **CONFIRMED** vs mean-greedy (every k, every CI excludes zero) and random; **tie** vs the paper's own 8 (+0.007 mean top-1 at k=8, not resolved against seed range) — reframed in a post-hoc Review: Algorithm H.1 (`Appendix H`) retrains a real classifier 372 times to pick those 8, CVaR never touches one during selection, so parity is evidence for CDQD's cost thesis, not against it. Proxy metric (D004–D008) validated as a sound ranking instrument (Spearman 0.95–0.98 vs trained) | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED) | `results/D009/`, `D009.md` `## R` |
 | [D010](D010.md) | D009 R2/post-hoc Review (2026-09-09); human-scoped 2026-09-10 as "Direction A" | **CLOSED** 2026-09-11 — **CONFIRMED**: a classifier-free joint (set-level) statistic reverses the paper-8 gap at every k (mean +0.026, 8/8 positive) and beats CVaR-coverage at k=8 (+0.024), selection staying at 0.5 min CPU vs the paper's 372 training runs. Magnitude unresolved at any single k (25-config test-set resolution, same wall D008/D009 hit); why the advantage persists at k=8 rather than fading as predicted is unexplained | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED), D009 (CLOSED) | `results/D010/`, `D010.md` `## R` |
+| [D011](D011.md) | D008's 33-pair identifiability frontier + D010's chain, human-approved 2026-09-13 | **OPEN** 2026-09-13 — cheapest possible cross-check: does `JointGreedy`'s already-selected chain resolve any of D008's 33 flagged pairs, and via individual-query overlap or genuine joint resolution? Pure post-processing, zero new cost | REVIEW (not yet planned) | D007 (CLOSED), D008 (CLOSED), D010 (CLOSED) | `results/D011/`, `D011.md` `## R` |
 
 ## Not yet a D
 
@@ -37,14 +38,13 @@
   joint statistic's trained-accuracy advantage persists through `k=8`
   when its own selection objective and S1's pilot both predicted it
   should fade after small `k` — unexplained, flagged as the most
-  interesting open question in the project, not urgent; (b) whether
-  `JointGreedy` (D010) also recovers any of D008's 33/37 "selection
-  missed an already-good pool query" misses — untested, would directly
-  connect D008's diagnostic finding to D010's new algorithm; (c) whether
-  CDQD's method going forward is `GreedyCover` alone, `JointGreedy`
-  alone, or a two-stage hybrid (cheap MAX-coverage first, joint-statistic
-  refinement second) — an architecture/writeup question as much as an
-  experimental one, see `DECISIONS.md` D5.
+  interesting open question in the project, not urgent; (b) **promoted
+  to [D011](D011.md), 2026-09-13** — whether `JointGreedy` also recovers
+  any of D008's 33/37 selection misses; (c) whether CDQD's method going
+  forward is `GreedyCover` alone, `JointGreedy` alone, or a two-stage
+  hybrid (cheap MAX-coverage first, joint-statistic refinement second) —
+  an architecture/writeup question as much as an experimental one, see
+  `DECISIONS.md` D5.
 
 ## Notes
 
