@@ -26,15 +26,25 @@
   good pool query that selection missed — a selection-algorithm question,
   not a pool-coverage one).
 - **"Direction B" — an actual classifier-in-the-loop greedy search
-  (Algorithm H.1-style) on our own 259-query pool** — **explicitly
-  shelved by human decision, 2026-09-10.** Newly affordable in principle
-  (D009's pilot: 8.7s/training run, so ~5 GPU-hours for a full 259-query
-  greedy search, not the multi-day cost the paper's own setup implied)
-  but deliberately not pursued now — D010 ("Direction A," above) tests
-  whether a cheap, classifier-free statistic can capture the same
-  interaction signal first. Revisit only if D010 comes back FALSIFIED
-  **and** the human decides closing the paper-8 gap is worth the
-  classifier-in-the-loop cost — not automatic either way.
+  (Algorithm H.1-style) on our own 259-query pool** — **still shelved.**
+  D010 ("Direction A") came back CONFIRMED, not FALSIFIED — the
+  condition that would have reopened this item did not fire. Newly
+  affordable in principle either way (D009's pilot: 8.7s/training run,
+  ~5 GPU-hours for a full 259-query greedy search), but there is no
+  longer even a stated reason to revisit it; stays shelved pending a new
+  human reason, not a re-check of this one.
+- **New from D010 R9, 2026-09-13, not yet scoped as a D:** (a) why the
+  joint statistic's trained-accuracy advantage persists through `k=8`
+  when its own selection objective and S1's pilot both predicted it
+  should fade after small `k` — unexplained, flagged as the most
+  interesting open question in the project, not urgent; (b) whether
+  `JointGreedy` (D010) also recovers any of D008's 33/37 "selection
+  missed an already-good pool query" misses — untested, would directly
+  connect D008's diagnostic finding to D010's new algorithm; (c) whether
+  CDQD's method going forward is `GreedyCover` alone, `JointGreedy`
+  alone, or a two-stage hybrid (cheap MAX-coverage first, joint-statistic
+  refinement second) — an architecture/writeup question as much as an
+  experimental one, see `DECISIONS.md` D5.
 
 ## Notes
 
