@@ -127,3 +127,20 @@ each other. **Not urgent** — D008's `## R` states the full picture either way.
 **Fixed 2026-09-08:** dated note added to D008's `## D` "What counts as an
 answer" table explaining the resolution mismatch, without retroactively
 reinterpreting the posted verdict — same posture as D007/R3's handling.
+
+**Issue 13 (2026-09-13) — D011's `## D` misattributes D008's 37 flagged pairs
+to `GreedyCover`'s chain.** D011 describes them as pairs where "no query in
+`GreedyCover`'s selected chain separates them well". D008 computed them with
+`qstar = S.argmax(axis=0)` (`experiments/d008_frontier.py:95`) — the argmax
+over all 259 queries, per pair. `GreedyCover`'s chain does not appear in that
+script at all. The T2 criterion means "the build tensor's top-ranked query for
+this pair gives <75% 2-way test accuracy while some other pool query does much
+better" — a per-pair selection error, not a consequence of an 8-query shared
+budget. This invalidates S4's stated rationale ("(a) should mostly fail — that
+is exactly why these pairs were flagged"), though not S4 itself, which remains
+the correct baseline. **Root cause is mine**: D008's `## R` narrated the
+artifact's own caveat away. Related: the "33" figure is inflated by selection
+on the evaluation split — the split-half-robust count is 32/37 and per-pair
+oracle accuracies are ~7 points optimistic (D011/P1 Part 0,
+`results/D011/premise_check.json`). **Not urgent** — D011/P1 proposes the
+corrected framing and the steps are unchanged.

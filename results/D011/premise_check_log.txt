@@ -1,0 +1,11 @@
+T2 pairs: 37
+  10/37
+  20/37
+  30/37
+
+naive oracle (max over 259 on all 25 cfgs): mean 0.977, >=0.95 on 33/37
+HONEST oracle (pick on half A, score on half B): mean 0.908, >=0.95 on 18/37
+max over queries of min(halfA,halfB): mean 0.970, >=0.95 on 32/37
+median query accuracy: mean 0.811
+mean shrinkage naive->honest: +0.069
+written results/D011/premise_check.json
