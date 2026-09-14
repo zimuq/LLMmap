@@ -299,23 +299,20 @@ probes plausibly have config-fragile within-model consistency, which the
 objective penalizes by design. Full detail: `DECISIONS.md` A4 note,
 `D008.md` addendum.
 
-**The most consequential finding for what comes next** (corrected
-2026-09-13 — see D008.md's addendum): of the 37 hard pairs, **32,
-split-half robust, have a query in the 259-query pool whose build-time
-top rank does not survive to test** — the naive count was 33 (inflated
-~7 accuracy points by scoring the same split it selected on, the same
-class of error D007/F2 already caught once). **This is a per-pair
-build→test generalization gap in the tensor's own per-pair estimate,
-not a consequence of `GreedyCover`'s shared 8-query budget** — the
-underlying script (`experiments/d008_frontier.py:95`) takes the argmax
-over all 259 pool queries per pair and never looks at which 8 queries
-any selection algorithm chose. ("Selection simply missed it," the
-original framing here, was a mischaracterization TACC caught while
-planning D011; not corrected until then.) Only 2 pairs (the same
-`Falcon3` and `Phi-3-medium` pairs D004 and D007 already flagged) are
-genuine limits of the pool itself. Whether this build→test gap is
-something a *selection algorithm* can route around — despite not being
-"caused" by one — is exactly what D011 tests.
+**The "most consequential finding" from this D was retired by D011,
+2026-09-13 — recorded here for the corrected picture, not the original
+one.** D008 flagged 37 (later corrected to 32, split-half robust) pairs
+where a per-pair single-query oracle scored badly on test. D011 checked
+whether either real selected 8-query chain (`GreedyCover`'s own, or the
+later `JointGreedy`) actually fails on these pairs — **both resolve all
+32** (32/32 each, ≥0.75 test accuracy; the flagged single-query pick
+itself scores a median of 0.54, *worse than a random pool query's
+0.82*). The flag was measuring an estimator defect (`argmax` over 259
+noisy per-query build-time scores, a severe winner's-curse effect) — not
+a selection-algorithm gap, not a motivation for Phase 3, not a property
+of the model universe. The two pairs this project has tracked as
+genuinely hard since D001 (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`) are
+not even in the 32. Full detail: D011's `## R`, `D008.md`'s addenda.
 
 **Also confirmed:** `γ=1.0` reduces exactly to mean-greedy (numeric
 check against an independent implementation); lower `γ` costs nothing on
@@ -439,6 +436,57 @@ confirmed the joint statistic reduces bitwise-exactly to the per-query
 one when there's no interaction to capture; a `k=8` MMD cross-check
 (smaller magnitude, 5/8 same queries, same direction) confirmed the
 result isn't an artifact of energy distance specifically.
+
+## D011 — The cheapest D in the project retired one of its more-cited findings
+
+**Set out to check whether `JointGreedy` recovers any of D008's flagged
+pairs; found there was nothing to recover, and why.** Both `GreedyCover`'s
+and `JointGreedy`'s actual 8-query chains resolve **all 32** of D008's
+flagged pairs (32/32 each, ≥0.75 test accuracy, D008's own threshold).
+D008's per-pair single-query "oracle" — the thing that flagged these
+pairs as hard — scores a median of **0.54 on test, worse than a randomly
+drawn pool query (0.82)**. Not merely optimistic: actively
+anti-informative for this population. Offered as a hypothesis, not
+proven: `argmax` over 259 noisy per-query build-time scores
+preferentially surfaces queries whose apparent strength is a fluke that
+doesn't transfer — the same winner's-curse class of error this project
+has now caught three times in its own prior work (D001's censored
+statistic, D008's own oracle inflation, and now D008's underlying T2
+flag itself).
+
+**A structural, not empirical, dead end for the question D011 actually
+wanted to answer.** D011 was designed to distinguish "recovered because
+one chosen query happens to be individually strong" from "recovered
+because the *set* resolves it jointly, with no single member sufficing"
+— the latter being the mechanism D010 exists to test. With every single
+query in both chains already succeeding on all 32 pairs, there was no
+case left where the second mechanism could even in principle show
+itself. Not evidence against set-level interaction — evidence this
+specific population was the wrong place to look for it.
+
+**A near-miss worth keeping as a standing lesson, independent of the
+substantive result.** The Review-approved fix to run the comparison on
+D008's own accuracy scale (rather than an `S_energy` threshold) did not
+just sharpen the numbers — it flipped the answer's sign. On the
+original (wrong) scale, `JointGreedy` would have looked worse than
+`GreedyCover` by 6 pairs (15/32 vs 21/32); on the corrected scale, the
+two are tied at 32/32, with `JointGreedy` slightly ahead on mean
+accuracy. Three D's in, the same lesson keeps recurring: a reporting
+convention, not the underlying data, has repeatedly been what
+determined a conclusion's direction.
+
+**What this changes going forward:** D008's "identifiability frontier"
+(the T2-derived 32-pair tier) should be retired, not cited as a
+selection-algorithm gap or a Phase 3 motivation. `METHOD.md §7` still
+lists "the identifiability frontier" as a standalone deliverable — on
+current evidence that role belongs to the 2 structurally-hard pairs
+tracked since D001 (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`), not the
+T2 tier. Flagged for a `METHOD.md` revision, not yet made (human
+decision). Phase 3's motivation is unaffected either way — the 2 real
+hard pairs remain exactly where D007/D008 left them, untouched by this
+D. D010's own real advantage (+0.024 mean top-1 at `k=8`) is confirmed
+to come from somewhere other than this population — still unexplained,
+same open item as D010/R9's k=8-persistence question.
 
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

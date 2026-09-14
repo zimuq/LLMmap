@@ -167,6 +167,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D3 | Papers 2 & 3 follow-ups | 🅿️ out of scope; keep corpus schema friendly where free |
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
 | D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. | 🅿️ noted for writeup |
+| D6 | **`METHOD.md` §7 revision, 2026-09-13, from D011.** §7 lists "the identifiability frontier" as a standalone deliverable. D011 found the tier meant to fill that role (D008's T2, 32/37 pairs) is an estimator artifact — a per-pair oracle that scores *worse than a random query* on this population, not a real property of the model universe. Editing `METHOD.md §7` (e.g. to name the 2 structurally-hard pairs, `Falcon3-10B↔7B` and `Phi-3-medium-128k↔4k`, tracked since D001, as the deliverable's actual content) is a human-escalation item per `CLAUDE.md` rule (d) — flagged, not made. | ⬜ |
 
 > **D4 scope note, 2026-09-08:** the separability statistic itself
 > (energy distance) was a related but separate unverified-citation risk
@@ -749,6 +750,47 @@ project invention -- it's a genuine deviation/novelty
   something TACC can resolve").
   Decided by: design-side, routine call (closure, A6's logging); A6's
   actual resolution (whether/when to expand S_test) left open for the
+  human.
+
+[2026-09-13] D011 R -- NOT RECOVERED (0/32); retires D008's identifiability
+frontier finding; D6 opened
+  Decision: D011 marked CLOSED. Verdict per its own pre-registered table:
+  NOT RECOVERED (0 of 32 beyond baseline) -- but because both
+  GreedyCover's and JointGreedy's actual 8-query chains already resolve
+  all 32 flagged pairs (32/32 each, D008's own 0.75 accuracy threshold),
+  not because the population remained unresolved. D008's per-pair
+  single-query oracle -- the thing that flagged these 32 as an
+  "identifiability frontier" -- scores a median of 0.54 on test on this
+  population, worse than a randomly drawn pool query (0.82). This
+  retires the finding, not just corrects it: D008's "selection missed an
+  available query" observation (already corrected last turn to a
+  build-to-test generalization framing) is now understood as an
+  estimator artifact (argmax over 259 noisy per-query build scores,
+  preferentially surfacing flukes that don't transfer), not a real
+  property of pair difficulty or a motivation for Phase 3. The two pairs
+  this project has actually tracked as hard since D001 (Falcon3-10B/7B,
+  Phi-3-medium-128k/4k) are not even in the 32.
+  Separately: the Review-approved threshold-scale fix (F2, last turn)
+  determined the sign of the answer -- run on the originally-drafted
+  S_energy scale, this D would have reported JointGreedy 6 pairs worse
+  than GreedyCover (15/32 vs 21/32), the opposite of the true tie at
+  32/32. Third instance of a reporting convention rather than the
+  underlying data determining a conclusion's direction (D001's censored
+  statistic, D008's oracle, now this).
+  D008.md, FINDINGS.md, PLAN.md updated to reflect retirement (not just
+  correction) of the identifiability-frontier finding. New item opened:
+  DECISIONS.md D6 -- METHOD.md sec7 lists "the identifiability frontier"
+  as a standalone deliverable; on this evidence that role belongs to the
+  2 structurally-hard pairs, not the retired T2 tier. Flagged for a
+  METHOD.md revision, not made (human-escalation item, rule (d)).
+  Rationale: closing on a satisfied, pre-registered outcome table (0 is
+  outside both CONFIRMED/NOT-RECOVERED bands) is routine; the retirement
+  itself is a factual finding verified against D008's own code and
+  numbers, not a judgment call. D6 is opened rather than actioned
+  because revising METHOD.md requires human sign-off regardless of how
+  well-evidenced the underlying finding is.
+  Decided by: design-side, routine call (D011 closure, documentation
+  retirement, D6 logging); D6's actual resolution left open for the
   human.
 ```
 

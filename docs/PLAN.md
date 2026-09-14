@@ -13,20 +13,21 @@
 | [D005](D005.md) | I2 bug found while preparing D004 (TACC note on D001's `## Review`, 2026-09-02) | **CLOSED** 2026-09-04 — FIXED (M1+M2+M3 verified via regression test); shipped-dataset exposure UNDETERMINABLE (M4), no effect on D001/D004's numbers | REVIEW (P1 approved, executed) | none | `results/D005/`, `D005.md` `## R` |
 | [D006](D006.md) | TODO.md Phase 1 (T1.1–T1.4) + D002 §R4 + D003 + D005; A1/C4/C7 decided 2026-09-05/06 | **CLOSED** 2026-09-06 — READY at 37/37 (1,197,875 generations); own embedding-normalization bug found and fixed (+0.051 AUC, matches paper's actual procedure) | REVIEW (P1 approved, executed) | none | `results/D006/`, `D006.md` `## R` |
 | [D007](D007.md) | TODO.md Phase 1 (T1.5–T1.6); A3 decided 2026-09-06 | **CLOSED** 2026-09-07 — **TAIL CONFIRMED on `S_energy`** (CVaR₀.₁/mean=0.353, uncensored; `S_probe` was 51.8–98.2% ceiling-pinned, A3's gate correctly deferred to `S_energy`). `METHOD.md §2`/I1 stand on the real corpus. Frozen tensor for I6: `S_energy_tok200` | REVIEW (P1 approved, executed) | none | `results/D007/`, `D007.md` `## R` |
-| [D008](D008.md) | TODO.md Phase 2 (T2.1–T2.4); D007's frozen tensor | **CLOSED** 2026-09-08 — **INCONCLUSIVE** by the outcome table's letter (worst-class improves at k=1–3 only; hard-subset compressed, 7.5-pt total range). Real, replicated effect underneath: CVaR reaches 70% mean accuracy at k=2 vs mean-greedy's 4 / paper's 5 / random's 12 — a query-*efficiency* gain. Finding (**corrected 2026-09-13**, see addendum): 32 of 37 pairs, split-half robust, have a pool query whose build-time top rank doesn't survive to test — a per-pair generalization gap in the tensor's own estimate, not a `GreedyCover`-budget effect (naive count was 33, "selection missed it" was a mischaracterization) | REVIEW (P1 approved, executed) | none | `results/D008/`, `D008.md` `## R` |
+| [D008](D008.md) | TODO.md Phase 2 (T2.1–T2.4); D007's frozen tensor | **CLOSED** 2026-09-08 — **INCONCLUSIVE** by the outcome table's letter (worst-class improves at k=1–3 only; hard-subset compressed, 7.5-pt total range). Real, replicated effect underneath: CVaR reaches 70% mean accuracy at k=2 vs mean-greedy's 4 / paper's 5 / random's 12 — a query-*efficiency* gain. **"Identifiability frontier" finding retired 2026-09-13 (see addenda + D011):** the flagged 32/37 pairs are resolved 32/32 by any real selected chain — the per-pair oracle that flagged them was an estimator artifact (median 0.54 on test, worse than random), not a selection-algorithm gap | REVIEW (P1 approved, executed) | none | `results/D008/`, `D008.md` `## R` |
 | [D009](D009.md) | `METHOD.md` §5.5 (new, 2026-09-08); D008's frozen selection chains; human decision to pause Phase 3 pending this validation | **CLOSED** 2026-09-09 — **CONFIRMED** vs mean-greedy (every k, every CI excludes zero) and random; **tie** vs the paper's own 8 (+0.007 mean top-1 at k=8, not resolved against seed range) — reframed in a post-hoc Review: Algorithm H.1 (`Appendix H`) retrains a real classifier 372 times to pick those 8, CVaR never touches one during selection, so parity is evidence for CDQD's cost thesis, not against it. Proxy metric (D004–D008) validated as a sound ranking instrument (Spearman 0.95–0.98 vs trained) | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED) | `results/D009/`, `D009.md` `## R` |
 | [D010](D010.md) | D009 R2/post-hoc Review (2026-09-09); human-scoped 2026-09-10 as "Direction A" | **CLOSED** 2026-09-11 — **CONFIRMED**: a classifier-free joint (set-level) statistic reverses the paper-8 gap at every k (mean +0.026, 8/8 positive) and beats CVaR-coverage at k=8 (+0.024), selection staying at 0.5 min CPU vs the paper's 372 training runs. Magnitude unresolved at any single k (25-config test-set resolution, same wall D008/D009 hit); why the advantage persists at k=8 rather than fading as predicted is unexplained | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED), D009 (CLOSED) | `results/D010/`, `D010.md` `## R` |
-| [D011](D011.md) | D008's identifiability frontier + D010's chain, human-approved 2026-09-13 | **OPEN** — P1 reviewed and APPROVED WITH AMENDMENTS 2026-09-13. P1's own premise check found D008's naive 33/37 was winner's-curse inflated (32/37 split-half robust) **and** mischaracterized (a per-pair build→test generalization gap, not a `GreedyCover`-budget effect — see `D008.md`'s addendum); D011's `## D` corrected to match. Pre-registered thresholds set (≥12/32 CONFIRMED, ≤4/32 NOT RECOVERED). TACC executing S2–S6 | REVIEW (P1 approved w/ amendments) | D007 (CLOSED), D008 (CLOSED), D010 (CLOSED) | `results/D011/`, `D011.md` `## R` |
+| [D011](D011.md) | D008's identifiability frontier + D010's chain, human-approved 2026-09-13 | **CLOSED** 2026-09-13 — **NOT RECOVERED (0/32), because there was nothing to recover**: both `GreedyCover` and `JointGreedy` already resolve all 32 flagged pairs (32/32, D008's own threshold). D008's per-pair oracle scored a median 0.54 on these pairs — *worse than a random pool query (0.82)* — confirming the "identifiability frontier" tier was an estimator artifact, not real difficulty. A threshold-scale bug caught in review would have shown the opposite (wrong) conclusion had it shipped. D010's real advantage is confirmed to come from elsewhere, still unexplained | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D010 (CLOSED) | `results/D011/`, `D011.md` `## R` |
 
 ## Not yet a D
 
-- **Targeted generation (TODO.md Phase 3, T3.1+)** — **status unchanged
-  by D009: still paused.** D009 confirmed the tensor-level proxy is a
-  sound ranking instrument, so the case for Phase 3 rests on the same
-  grounds D008 left it on (**corrected 2026-09-13** — 32/37 pairs, not
-  33, have a pool query whose build-time rank doesn't survive to test;
-  a per-pair generalization-gap question, not a `GreedyCover`-budget
-  one — see `D008.md`'s addendum).
+- **Targeted generation (TODO.md Phase 3, T3.1+)** — **status unchanged,
+  still paused, but its stated motivation is gone.** D008's "32/37
+  pairs selection couldn't resolve" was retired by D011, 2026-09-13 — an
+  estimator artifact, not a real gap (see `D008.md`'s addenda). The only
+  remaining, real motivation for Phase 3 is the 2 structurally-hard
+  pairs tracked since D001 (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`),
+  which D011 confirmed are untouched by any selection-algorithm fix.
+  Whether that alone justifies Phase 3 is a human call, not yet asked.
 - **"Direction B" — an actual classifier-in-the-loop greedy search
   (Algorithm H.1-style) on our own 259-query pool** — **still shelved.**
   D010 ("Direction A") came back CONFIRMED, not FALSIFIED — the
@@ -38,15 +39,22 @@
 - **New from D010 R9, 2026-09-13, not yet scoped as a D:** (a) why the
   joint statistic's trained-accuracy advantage persists through `k=8`
   when its own selection objective and S1's pilot both predicted it
-  should fade after small `k` — unexplained, flagged as the most
-  interesting open question in the project, not urgent; (b) **promoted
-  to [D011](D011.md), 2026-09-13** — whether `JointGreedy` also recovers
-  any of D008's 32/37 build→test generalization-gap pairs (corrected
-  count and mechanism, see `D008.md`'s addendum); (c) whether CDQD's method going
-  forward is `GreedyCover` alone, `JointGreedy` alone, or a two-stage
-  hybrid (cheap MAX-coverage first, joint-statistic refinement second) —
-  an architecture/writeup question as much as an experimental one, see
-  `DECISIONS.md` D5.
+  should fade after small `k` — unexplained, and **sharpened by D011**:
+  D010's advantage is now confirmed to come from *somewhere other than*
+  the 32-pair population D011 checked, narrowing but not answering where
+  it actually lives; flagged as the most interesting open question in
+  the project, not urgent; (b) **closed via [D011](D011.md), 2026-09-13**
+  — NOT RECOVERED, because the population itself wasn't real (see
+  above); (c) whether CDQD's method going forward is `GreedyCover`
+  alone, `JointGreedy` alone, or a two-stage hybrid (cheap MAX-coverage
+  first, joint-statistic refinement second) — an architecture/writeup
+  question as much as an experimental one, see `DECISIONS.md` D5.
+- **New from D011, 2026-09-13, needs a human decision, not yet scoped:**
+  `METHOD.md §7` lists "the identifiability frontier" as a standalone
+  project deliverable. D011 found the T2 tier that was meant to fill
+  that role is an estimator artifact. Revising `METHOD.md §7` (e.g. to
+  name the 2 structurally-hard pairs instead) is a human-escalation item
+  per `CLAUDE.md` rule (d) — flagged, not made.
 
 ## Notes
 
