@@ -20,14 +20,15 @@
 
 ## Not yet a D
 
-- **Targeted generation (TODO.md Phase 3, T3.1+)** — **status unchanged,
-  still paused, but its stated motivation is gone.** D008's "32/37
-  pairs selection couldn't resolve" was retired by D011, 2026-09-13 — an
-  estimator artifact, not a real gap (see `D008.md`'s addenda). The only
-  remaining, real motivation for Phase 3 is the 2 structurally-hard
-  pairs tracked since D001 (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`),
-  which D011 confirmed are untouched by any selection-algorithm fix.
-  Whether that alone justifies Phase 3 is a human call, not yet asked.
+- **Targeted generation (TODO.md Phase 3, T3.1+)** — **paused, and
+  explicitly confirmed lowest priority, 2026-09-13 (human decision).**
+  D008's "32/37 pairs selection couldn't resolve" was retired by D011 —
+  an estimator artifact, not a real gap (see `D008.md`'s addenda). The
+  only remaining real motivation is the 2 structurally-hard pairs
+  tracked since D001 (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`), which
+  D011 confirmed are untouched by any selection-algorithm fix — the
+  human has decided that alone does not justify resuming Phase 3 now.
+  Revisit only on a new, separate reason, not a re-check of this one.
 - **"Direction B" — an actual classifier-in-the-loop greedy search
   (Algorithm H.1-style) on our own 259-query pool** — **still shelved.**
   D010 ("Direction A") came back CONFIRMED, not FALSIFIED — the
