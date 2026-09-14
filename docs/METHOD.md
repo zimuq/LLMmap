@@ -387,8 +387,18 @@ surrounding it.
 ## 7. Deliverables
 
 1. **The selected strategy** — `k` queries, plus the nested `k=1..8` chain.
-2. **The identifiability frontier** — model pairs no query in the pool can
-   separate. A genuine negative result that draws the method's boundary honestly.
+2. **The identifiability frontier** — under the strict pool-coverage test (does
+   *any* query in the whole pool separate a pair above the same-model noise
+   floor), the frontier is **empty** on the current 37-model universe: no pair
+   is unseparable by every available query. The honest boundary is narrower:
+   **2 pairs fall short of reliable (≥0.95, split-half-robust) identification**
+   — `Falcon3-10B↔Falcon3-7B` (oracle 0.840) and `Phi-3-medium-128k↔4k`
+   (oracle 0.800), tracked since D001/D004/D007 and confirmed untouched by
+   selection-algorithm choice (D011). **A single per-pair query's build-time
+   score is not a reliable proxy for this boundary** — `argmax` over 259 noisy
+   per-query estimates can itself become the artifact being measured rather
+   than a measurement of difficulty (D011: a naively-computed "32/37 frontier"
+   whose flagged queries scored *worse than a random pick* on test).
 3. **Reusable artifacts** — the trace corpus and separability tensor. These
    outlive this particular study and support follow-up work.
 4. **Closed-set accuracy under the paper's own trained pipeline** (§5.5), per
