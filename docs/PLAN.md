@@ -17,7 +17,7 @@
 | [D009](D009.md) | `METHOD.md` §5.5 (new, 2026-09-08); D008's frozen selection chains; human decision to pause Phase 3 pending this validation | **CLOSED** 2026-09-09 — **CONFIRMED** vs mean-greedy (every k, every CI excludes zero) and random; **tie** vs the paper's own 8 (+0.007 mean top-1 at k=8, not resolved against seed range) — reframed in a post-hoc Review: Algorithm H.1 (`Appendix H`) retrains a real classifier 372 times to pick those 8, CVaR never touches one during selection, so parity is evidence for CDQD's cost thesis, not against it. Proxy metric (D004–D008) validated as a sound ranking instrument (Spearman 0.95–0.98 vs trained) | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED) | `results/D009/`, `D009.md` `## R` |
 | [D010](D010.md) | D009 R2/post-hoc Review (2026-09-09); human-scoped 2026-09-10 as "Direction A" | **CLOSED** 2026-09-11 — **CONFIRMED**: a classifier-free joint (set-level) statistic reverses the paper-8 gap at every k (mean +0.026, 8/8 positive) and beats CVaR-coverage at k=8 (+0.024), selection staying at 0.5 min CPU vs the paper's 372 training runs. Magnitude unresolved at any single k (25-config test-set resolution, same wall D008/D009 hit); why the advantage persists at k=8 rather than fading as predicted is unexplained | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED), D009 (CLOSED) | `results/D010/`, `D010.md` `## R` |
 | [D011](D011.md) | D008's identifiability frontier + D010's chain, human-approved 2026-09-13 | **CLOSED** 2026-09-13 — **NOT RECOVERED (0/32), because there was nothing to recover**: both `GreedyCover` and `JointGreedy` already resolve all 32 flagged pairs (32/32, D008's own threshold). D008's per-pair oracle scored a median 0.54 on these pairs — *worse than a random pool query (0.82)* — confirming the "identifiability frontier" tier was an estimator artifact, not real difficulty. A threshold-scale bug caught in review would have shown the opposite (wrong) conclusion had it shipped. D010's real advantage is confirmed to come from elsewhere, still unexplained | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D010 (CLOSED) | `results/D011/`, `D011.md` `## R` |
-| [D012](D012.md) | `DECISIONS.md` C1 (γ ablation, never run for `JointGreedy`); human-approved 2026-09-16, sharpened from a broader "k and γ sweep" | **OPEN** — P1 reviewed and APPROVED WITH AMENDMENTS 2026-09-16. Pre-registered hypothesis (mean-aggregation already favors hard pairs) already **refuted at the objective level** before any training (worst-decile CVaR +56%, hard-pair concentration 33% vs 15% under γ<1); found γ=1.0's objective is non-monotone (peaks at k=1); found 3 of 4 γ values collapse to the identical k=8 set (order-sensitivity bonus check); outcome table replaced with a pre-registered TOST equivalence test. TACC executing S5–S7 | REVIEW (P1 approved w/ amendments) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D010 (CLOSED) | `results/D012/`, `D012.md` `## R` |
+| [D012](D012.md) | `DECISIONS.md` C1 (γ ablation, never run for `JointGreedy`); human-approved 2026-09-16, sharpened from a broader "k and γ sweep" | **CLOSED** 2026-09-17 — **CONFIRMED, decisively**: γ<1 required for `JointGreedy` at every k (1–8) and every metric, every CI excludes zero — the first comparison in this project resolved at all 8 k values. γ=0.1 recommended default; {0.25,0.1,0.05} statistically indistinguishable. Mechanism: γ=1.0's own selection objective falls monotonically (1.30→0.88) while its trained accuracy rises (0.54→0.80) — its selected queries fit worse even on training data (0.939 vs 0.992), i.e. carry less usable signal, not just mis-scored. Bonus: trained network confirmed order-insensitive to query-slot position | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D010 (CLOSED) | `results/D012/`, `D012.md` `## R` |
 
 ## Not yet a D
 
@@ -51,12 +51,16 @@
   alone, `JointGreedy` alone, or a two-stage hybrid (cheap MAX-coverage
   first, joint-statistic refinement second) — an architecture/writeup
   question as much as an experimental one, see `DECISIONS.md` D5.
-- **New from D011, 2026-09-13, needs a human decision, not yet scoped:**
-  `METHOD.md §7` lists "the identifiability frontier" as a standalone
-  project deliverable. D011 found the T2 tier that was meant to fill
-  that role is an estimator artifact. Revising `METHOD.md §7` (e.g. to
-  name the 2 structurally-hard pairs instead) is a human-escalation item
-  per `CLAUDE.md` rule (d) — flagged, not made.
+- **D011's `METHOD.md §7` item — resolved 2026-09-14** (`DECISIONS.md`
+  D6): §7 now names the 2 structurally-hard pairs instead of the
+  retired T2 tier.
+- **New from D012 R7, 2026-09-17, optional, not urgent:** `GreedyCover`'s
+  own γ-sensitivity has only ever been measured via D008's proxy, never
+  trained. If a writeup wants to claim `GreedyCover` and `JointGreedy`
+  genuinely differ in how much they need CVaR-weighting (suggested by
+  D012/P1 Part 0's tensor-level trade-off finding, not yet proven at the
+  trained level), that needs `GreedyCover`'s γ variants trained too —
+  ~5 minutes of compute per TACC's estimate. Not drafted as a D.
 
 ## Notes
 

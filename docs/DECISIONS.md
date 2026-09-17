@@ -150,7 +150,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 
 | # | Parameter | Proposed | Status |
 |---|---|---|---|
-| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | ⬜ for `GreedyCover`: ✅ answered by D008 (γ=1.0 costs nothing on mean, helps worst-class at small k). For `JointGreedy`: **⬜, being tested by [D012](D012.md), opened 2026-09-16** |
+| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | For `GreedyCover`: proxy-only evidence (D008, never trained). For `JointGreedy`: **✅ decided 2026-09-17 by [D012](D012.md) — γ<1 required (decisive, all 8 k, every metric, every CI excludes zero); γ=0.1 default on precedent, {0.25,0.1,0.05} statistically indistinguishable from each other.** Mechanism: γ=1.0's selected queries fit *worse even on their own training data* (train acc. 0.939 vs. 0.992) — less usable information, not just mis-scored. `GreedyCover`'s own γ-sensitivity remains untrained (~5 min if ever wanted, D012/R7) — optional, not blocking. |
 | C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ⬜ |
 | C3 | Initial pool size `\|Q_0\|` | ~250 (raised from an original ~100 baseline, 2026-09-02, design-side) — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes, expanded further once D002 confirmed generation cost is not the binding constraint at 2–3x this scale. See [D003](D003.md)'s amendment + Review addendum. | ✅ |
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |

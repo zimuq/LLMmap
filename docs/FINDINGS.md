@@ -488,5 +488,56 @@ D. D010's own real advantage (+0.024 mean top-1 at `k=8`) is confirmed
 to come from somewhere other than this population — still unexplained,
 same open item as D010/R9's k=8-persistence question.
 
+## D012 — γ<1 is decisively required for JointGreedy — and not for the reason "CVaR helps" implies
+
+**The cleanest, most decisive result this project has produced.**
+γ=1.0 (mean aggregation) loses to every `γ<1` value tested (0.25, 0.1,
+0.05) at **all 8 `k` values**, on every one of the four
+`METHOD.md §8` metrics, every bootstrap CI excluding zero, every gap
+exceeding the 5-seed training-variance range. D008, D009, D010, and
+D011 each hit a resolution wall somewhere in their own comparisons —
+this is the first one that doesn't, anywhere. The pre-registered
+hypothesis going in (that `JointGreedy`'s set-level interaction might
+already implicitly favor hard pairs under mean-aggregation, making γ
+*less* necessary than it was for `GreedyCover`) is not just wrong — γ
+matters *more* here than D008's own weaker, proxy-only evidence ever
+showed it mattering for `GreedyCover`.
+
+**The mechanism is sharper than "CVaR-weighting helps," and matters for
+how this gets written up.** γ=1.0's own selection objective — the thing
+`JointGreedy` is directly maximizing at each greedy step — *falls*
+monotonically as `k` grows (1.30 → 0.88), while the *trained accuracy*
+of the exact same selected queries *rises* (0.54 → 0.80) over the same
+range. The objective and the outcome move in opposite directions across
+the entire range. This could mean either "the objective just mis-scores
+otherwise-fine queries" or "the objective is actively selecting worse
+queries" — distinguished by checking the *training*-set accuracy itself
+(not just held-out accuracy): γ=1.0's selected queries fit their own
+training data worse (0.939 vs. 0.992 for every `γ<1`), meaning they
+carry genuinely less usable signal, not merely a differently-distributed
+version of the same signal. **CVaR-weighting is not improving a working
+selection process here — it is repairing one that is degenerate past
+`k`=1** (mean-aggregation's raw statistic gets dimension-dominated by
+each additional query's 1024-d contribution, a variant of the same
+curse-of-dimensionality risk D010's own pilot first flagged).
+
+**Within `γ<1`, there is no further ordering to find** — 23 of 24
+pairwise comparisons among {0.25, 0.1, 0.05} are either statistically
+equivalent (a pre-registered TOST equivalence test, not just "failed to
+find a difference") or inconsistent in direction across `k`. At `k`=8
+all three select the *identical* 8-query set (differing only in slot
+order) — which incidentally provided a free, previously-unchecked
+confirmation that the trained network is insensitive to query-slot
+order (spread 40× smaller than seed noise). `C1` (the CVaR tail
+parameter) is now closed for `JointGreedy`: γ<1 required, γ=0.1
+recommended as the default on precedent (not because the data
+distinguish it from 0.25 or 0.05).
+
+**What's still open, cheaply:** `GreedyCover`'s own γ-sensitivity has
+only ever been measured via D008's untrained proxy — training its γ
+variants (~5 minutes of compute) is the only way to properly compare
+how much *each* algorithm actually needs CVaR-weighting, if that
+comparison is ever wanted for a writeup.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
