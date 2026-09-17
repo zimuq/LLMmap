@@ -142,3 +142,20 @@ each other. **Not urgent** — D008's `## R` states the full picture either way.
 answer" table explaining the resolution mismatch, without retroactively
 reinterpreting the posted verdict — same posture as D007/R3's handling.
 
+**Issue 14 (2026-09-16) — D012's `## D` overstates what D008 settled about γ,
+and S6 asks for a trained-vs-proxy comparison.** `## D` says "D008 already
+answered it for `GreedyCover`: lower γ cost nothing on mean accuracy and helped
+worst-class at small `k`." Two problems. (1) **D008's γ sweep was never
+trained** — `results/D008/gamma_sweep.json` is the 1-NN proxy over frozen
+embeddings, and `results/D009/runs.json` shows only four conditions were ever
+trained (`cvar_max`, `mean_greedy_max`, `paper8`, `random`), none of them γ
+variants. S6's instruction to report the curve "the same way D008/T2.2 did, for
+direct comparability across the two algorithms' γ-sensitivity" therefore sets a
+trained curve against a proxy one; D009/R2 measured the proxy→trained shift as
+condition-dependent (+0.043 to +0.105), so that comparison is confounded.
+(2) **"Helped worst-class" is not resolved even on the proxy**: D008's own
+bootstrap CIs at `k=8` are γ=1.0 → 0.235 [0.120, 0.360] against γ=0.05 → 0.345
+[0.200, 0.480], γ=0.5 is non-monotone on mean top-1 (0.636 at `k=3` vs γ=1.0's
+0.697), and D008/R6 explicitly said the sweep "does not separate" 0.05 from 0.1.
+D012/P1 proposes keeping proxy-to-proxy and trained curves separate. **Not
+urgent** — the steps are unchanged, only the framing and one comparison.

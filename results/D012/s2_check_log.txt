@@ -1,0 +1,19 @@
+666 pairs, 65 near-relative
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+[S2] precompute 0.22 min (D010 measured 0.2)
+[S2/S3] gamma=1.0: [123, 114, 109, 117, 1, 121, 113, 147]  peak k=1  0.13 min
+[S2/S3] gamma=0.25: [114, 193, 140, 16, 117, 233, 0, 237]  peak k=3  0.13 min
+[S2/S3] gamma=0.05: [193, 140, 16, 237, 117, 233, 0, 114]  peak k=8  0.13 min
+
+[mechanism] where do HARD pairs sit under each chain?
+  gamma=1.0   hard mean 0.6290 vs easy 0.9059  hard@pct  38.2  CVaR10 0.1555  mean 0.8788  hard-share of worst decile 0.15
+  gamma=0.25  hard mean 0.4284 vs easy 0.5856  hard@pct  32.0  CVaR10 0.2434  mean 0.5703  hard-share of worst decile 0.33
+  gamma=0.1   hard mean 0.4284 vs easy 0.5856  hard@pct  32.0  CVaR10 0.2434  mean 0.5703  hard-share of worst decile 0.33
+  gamma=0.05  hard mean 0.4284 vs easy 0.5856  hard@pct  32.0  CVaR10 0.2434  mean 0.5703  hard-share of worst decile 0.33
+
+[S4] chain overlap at k=8: {'1.0_vs_0.25': 2, '1.0_vs_0.1': 2, '1.0_vs_0.05': 2, '0.25_vs_0.1': 8, '0.25_vs_0.05': 8, '0.1_vs_0.05': 8}
+written ./results/D012/s2_check.json
