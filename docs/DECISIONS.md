@@ -150,7 +150,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 
 | # | Parameter | Proposed | Status |
 |---|---|---|---|
-| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | For `GreedyCover`: proxy-only evidence (D008, never trained). For `JointGreedy`: **✅ decided 2026-09-17 by [D012](D012.md) — γ<1 required (decisive, all 8 k, every metric, every CI excludes zero); γ=0.1 default on precedent, {0.25,0.1,0.05} statistically indistinguishable from each other.** Mechanism: γ=1.0's selected queries fit *worse even on their own training data* (train acc. 0.939 vs. 0.992) — less usable information, not just mis-scored. `GreedyCover`'s own γ-sensitivity remains untrained (~5 min if ever wanted, D012/R7) — optional, not blocking. |
+| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | **✅ decided 2026-09-18 for both algorithms** ([D012](D012.md) `JointGreedy`, [D013](D013.md) `GreedyCover`, both trained): **a small γ is required — γ ≤ 0.25 helps decisively (γ=0.1 default, on precedent); {0.25, 0.1, 0.05} are not distinguishable from each other; γ=1.0 (mean) is decisively worse.** The two algorithms' γ-penalty is the same size (mean −0.079 vs −0.081 on mean top-1; no detectable difference). **Caveat — γ is not a clean continuous dial:** for `GreedyCover`, γ=0.5 gave *no* benefit over γ=1.0 (and if anything a slightly worse result), reproducing under training what D008's proxy showed. Whether that is a genuine threshold in γ or an idiosyncrasy of that one nested chain is **untested** (single point; chains are known to be composition-unstable, D008/R5); `JointGreedy` at γ=0.5 was not run. Practical rule: stay at γ ≤ 0.25. |
 | C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ⬜ |
 | C3 | Initial pool size `\|Q_0\|` | ~250 (raised from an original ~100 baseline, 2026-09-02, design-side) — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes, expanded further once D002 confirmed generation cost is not the binding constraint at 2–3x this scale. See [D003](D003.md)'s amendment + Review addendum. | ✅ |
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |
@@ -792,6 +792,39 @@ frontier finding; D6 opened
   Decided by: design-side, routine call (D011 closure, documentation
   retirement, D6 logging); D6's actual resolution left open for the
   human.
+
+[2026-09-14] D6 resolved -- METHOD.md sec7 revised
+  Decision: per the human ("那还是改吧"), METHOD.md sec7 item 2 now
+  states the strict pool-coverage identifiability frontier is empty and
+  names the 2 structurally-hard pairs (Falcon3-10B/7B, Phi-3-medium-128k/4k)
+  as the actual boundary. Decided by: human; edit by design-side.
+
+[2026-09-17/18] D012 and D013 closed; C1 closed for both algorithms
+  Decision: D012 (JointGreedy) and D013 (GreedyCover) both CONFIRMED that
+  a small gamma is required, at comparable effect size, under the
+  identical trained protocol (hparams hash asserted equal). See the C1
+  row for the operative rule. Findings logged, not decisions, and worth
+  keeping distinct:
+  (1) D012/R2's mechanism ("CVaR repairs an objective that fails
+  outright") is true of JointGreedy but is NOT the general reason gamma
+  matters -- D013 showed GreedyCover's objective is healthy (monotone,
+  I4) and gamma helps just as much. The general mechanism is unexplained.
+  D012 carries an addendum saying so.
+  (2) gamma=0.5 gives GreedyCover no benefit over gamma=1.0. TACC's R2
+  reads this as a threshold between 0.5 and 0.25; design-side review
+  holds that this rests on a single gamma point whose nested chain is
+  composition-unstable, and that TACC's mechanism (CVaR_0.5 "commits to
+  neither mean nor tail") would predict a result between gamma=1 and
+  gamma=0.25, not equal-to-or-below gamma=1 -- so it does not fully
+  explain the observation. Recorded as an untested caveat, not a
+  finding of a threshold.
+  (3) The two algorithms' gamma-penalty is the same size on average
+  (-0.079 vs -0.081); wording is "no detectable difference", not
+  "equal" (per-k gaps reach ~0.04, above the 0.02 equivalence bound).
+  Rationale: closing on satisfied pre-registered criteria is routine;
+  the caveats are recorded because two of TACC's stronger phrasings
+  ("threshold", "not a valid CVaR setting") outrun the evidence.
+  Decided by: design-side, routine call.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

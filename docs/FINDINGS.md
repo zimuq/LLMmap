@@ -539,5 +539,36 @@ variants (~5 minutes of compute) is the only way to properly compare
 how much *each* algorithm actually needs CVaR-weighting, if that
 comparison is ever wanted for a writeup.
 
+## D013 — GreedyCover needs a small γ just as much — which breaks the tidy explanation D012 offered
+
+**Headline: the same γ requirement holds for the other algorithm.**
+Trained on the identical protocol, `GreedyCover` at γ=1.0 (plain mean)
+loses to γ ≤ 0.25 on mean top-1 at most or all `k`, at the same size as
+`JointGreedy` (mean penalty −0.081 vs. −0.079; no detectable difference
+between the algorithms). γ=0.1 stays the default; 0.25/0.1/0.05 are not
+distinguishable. `C1` is closed for both.
+
+**The interesting part is what it does to D012's explanation.** D012
+found `JointGreedy`'s γ=1.0 objective *falls* as queries are added while
+its accuracy rises, and concluded CVaR was "repairing an objective that
+fails outright." `GreedyCover`'s objective does not fall — I4's MAX
+aggregation makes it monotone by construction — and γ=1.0 *still* loses
+by the same margin. So that mechanism is true of `JointGreedy` but is
+not why γ matters in general; nothing is broken in `GreedyCover` to
+repair. **Why a small γ improves selection independent of any objective
+pathology is now the project's most interesting unexplained question.**
+(A pre-registered prediction that γ would help `GreedyCover` only
+narrowly — worst-class, small `k` — was wrong; the structural mechanism
+it was built on was right.)
+
+**A γ-shaped caution, held loosely.** γ=0.5 gave `GreedyCover` no benefit
+over γ=1.0 — reproducing under training an anomaly D008's proxy had shown
+(and that had been dismissed as noise). That is enough to stop treating γ
+as a clean continuous dial and to make the rule "γ ≤ 0.25" rather than
+"γ < 1." It is *not* yet evidence of a threshold in γ: it is one point,
+the proxy and trained anomalies are the same nested chain evaluated twice,
+and chains here are composition-unstable. Whether it is a property of γ
+or of that chain is untested.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

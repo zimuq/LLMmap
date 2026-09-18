@@ -18,7 +18,7 @@
 | [D010](D010.md) | D009 R2/post-hoc Review (2026-09-09); human-scoped 2026-09-10 as "Direction A" | **CLOSED** 2026-09-11 — **CONFIRMED**: a classifier-free joint (set-level) statistic reverses the paper-8 gap at every k (mean +0.026, 8/8 positive) and beats CVaR-coverage at k=8 (+0.024), selection staying at 0.5 min CPU vs the paper's 372 training runs. Magnitude unresolved at any single k (25-config test-set resolution, same wall D008/D009 hit); why the advantage persists at k=8 rather than fading as predicted is unexplained | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED), D009 (CLOSED) | `results/D010/`, `D010.md` `## R` |
 | [D011](D011.md) | D008's identifiability frontier + D010's chain, human-approved 2026-09-13 | **CLOSED** 2026-09-13 — **NOT RECOVERED (0/32), because there was nothing to recover**: both `GreedyCover` and `JointGreedy` already resolve all 32 flagged pairs (32/32, D008's own threshold). D008's per-pair oracle scored a median 0.54 on these pairs — *worse than a random pool query (0.82)* — confirming the "identifiability frontier" tier was an estimator artifact, not real difficulty. A threshold-scale bug caught in review would have shown the opposite (wrong) conclusion had it shipped. D010's real advantage is confirmed to come from elsewhere, still unexplained | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D010 (CLOSED) | `results/D011/`, `D011.md` `## R` |
 | [D012](D012.md) | `DECISIONS.md` C1 (γ ablation, never run for `JointGreedy`); human-approved 2026-09-16, sharpened from a broader "k and γ sweep" | **CLOSED** 2026-09-17 — **CONFIRMED, decisively**: γ<1 required for `JointGreedy` at every k (1–8) and every metric, every CI excludes zero — the first comparison in this project resolved at all 8 k values. γ=0.1 recommended default; {0.25,0.1,0.05} statistically indistinguishable. Mechanism: γ=1.0's own selection objective falls monotonically (1.30→0.88) while its trained accuracy rises (0.54→0.80) — its selected queries fit worse even on training data (0.939 vs 0.992), i.e. carry less usable signal, not just mis-scored. Bonus: trained network confirmed order-insensitive to query-slot position | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D010 (CLOSED) | `results/D012/`, `D012.md` `## R` |
-| [D013](D013.md) | D012/R7 (optional follow-up, now promoted); D008's original proxy γ-sweep for `GreedyCover`, never trained beyond γ=1.0/0.1; human-approved 2026-09-18 | **OPEN** — P1 reviewed and APPROVED WITH AMENDMENTS 2026-09-18. Split verdict already visible from pre-existing D009 data: the structural *mechanism* prediction holds (`GreedyCover`'s objective is monotone in k, unlike `JointGreedy`'s), but the *effect-size* prediction is wrong — γ<1 beats γ=1 at all 8 k, same magnitude as `JointGreedy`. Means D012/R2's "CVaR repairs a broken objective" explanation can't be the general mechanism. TACC executing S4–S7 (~9 min) | REVIEW (P1 approved w/ amendments) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D012 (CLOSED) | `results/D013/`, `D013.md` `## R` |
+| [D013](D013.md) | D012/R7 (optional follow-up, now promoted); D008's original proxy γ-sweep for `GreedyCover`, never trained beyond γ=1.0/0.1; human-approved 2026-09-18 | **CLOSED** 2026-09-18 — **CONFIRMED, D012-shaped, for γ ≤ 0.25**: `GreedyCover` needs a small γ as much as `JointGreedy` (mean penalty for γ=1.0: −0.081 vs −0.079; no detectable difference between the algorithms). Structural hypothesis: mechanism right (objective monotone, I4), effect-size prediction wrong — so D012/R2's "CVaR repairs a broken objective" is `JointGreedy`-specific, not general (D012 carries an addendum). New: γ=0.5 gave no benefit over γ=1.0 on this chain — threshold in γ vs. unlucky chain is untested. C1 closed for both algorithms | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D012 (CLOSED) | `results/D013/`, `D013.md` `## R` |
 
 ## Not yet a D
 
@@ -55,7 +55,16 @@
 - **D011's `METHOD.md §7` item — resolved 2026-09-14** (`DECISIONS.md`
   D6): §7 now names the 2 structurally-hard pairs instead of the
   retired T2 tier.
-- **D012 R7's follow-up — promoted to [D013](D013.md), 2026-09-18.**
+- **D012 R7's follow-up — done as [D013](D013.md), closed 2026-09-18.**
+- **New from D013, 2026-09-18, optional, not urgent:** (a) is γ=0.5's
+  failure to help a threshold in γ or an unlucky nested chain? — rerun
+  selection at γ ∈ {0.35, 0.4, 0.5, 0.6, 0.75} (and on build-config
+  split-halves) and train; a few minutes; the practical rule (γ ≤ 0.25)
+  doesn't depend on the answer. (b) `METHOD.md §5.2` calls γ "a clean
+  continuous ablation axis" — D013 shows that's unsafe; one-sentence
+  edit awaiting the human's OK. (c) Why a small γ helps selection quality
+  *in general* (not via `JointGreedy`'s objective pathology) is
+  unexplained — the most interesting open scientific question now.
 
 ## Notes
 
