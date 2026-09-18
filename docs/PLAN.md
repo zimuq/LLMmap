@@ -18,6 +18,7 @@
 | [D010](D010.md) | D009 R2/post-hoc Review (2026-09-09); human-scoped 2026-09-10 as "Direction A" | **CLOSED** 2026-09-11 — **CONFIRMED**: a classifier-free joint (set-level) statistic reverses the paper-8 gap at every k (mean +0.026, 8/8 positive) and beats CVaR-coverage at k=8 (+0.024), selection staying at 0.5 min CPU vs the paper's 372 training runs. Magnitude unresolved at any single k (25-config test-set resolution, same wall D008/D009 hit); why the advantage persists at k=8 rather than fading as predicted is unexplained | REVIEW (P1 approved w/ amendments, executed) | D008 (CLOSED), D009 (CLOSED) | `results/D010/`, `D010.md` `## R` |
 | [D011](D011.md) | D008's identifiability frontier + D010's chain, human-approved 2026-09-13 | **CLOSED** 2026-09-13 — **NOT RECOVERED (0/32), because there was nothing to recover**: both `GreedyCover` and `JointGreedy` already resolve all 32 flagged pairs (32/32, D008's own threshold). D008's per-pair oracle scored a median 0.54 on these pairs — *worse than a random pool query (0.82)* — confirming the "identifiability frontier" tier was an estimator artifact, not real difficulty. A threshold-scale bug caught in review would have shown the opposite (wrong) conclusion had it shipped. D010's real advantage is confirmed to come from elsewhere, still unexplained | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D010 (CLOSED) | `results/D011/`, `D011.md` `## R` |
 | [D012](D012.md) | `DECISIONS.md` C1 (γ ablation, never run for `JointGreedy`); human-approved 2026-09-16, sharpened from a broader "k and γ sweep" | **CLOSED** 2026-09-17 — **CONFIRMED, decisively**: γ<1 required for `JointGreedy` at every k (1–8) and every metric, every CI excludes zero — the first comparison in this project resolved at all 8 k values. γ=0.1 recommended default; {0.25,0.1,0.05} statistically indistinguishable. Mechanism: γ=1.0's own selection objective falls monotonically (1.30→0.88) while its trained accuracy rises (0.54→0.80) — its selected queries fit worse even on training data (0.939 vs 0.992), i.e. carry less usable signal, not just mis-scored. Bonus: trained network confirmed order-insensitive to query-slot position | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D010 (CLOSED) | `results/D012/`, `D012.md` `## R` |
+| [D013](D013.md) | D012/R7 (optional follow-up, now promoted); D008's original proxy γ-sweep for `GreedyCover`, never trained beyond γ=1.0/0.1; human-approved 2026-09-18 | **OPEN** 2026-09-18 — symmetric to D012 but for `GreedyCover`: does γ<1 help decisively (D012-shaped) or only on worst-class at small k (D008-proxy-shaped)? Pre-registered structural prediction: the latter, since I4's MAX-aggregation is monotone in k unlike JointGreedy's concatenated statistic. Reuses D009's γ=1.0/γ=0.1; trains γ∈{0.5,0.25,0.05} | REVIEW (not yet planned) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D012 (CLOSED) | `results/D013/`, `D013.md` `## R` |
 
 ## Not yet a D
 
@@ -54,13 +55,7 @@
 - **D011's `METHOD.md §7` item — resolved 2026-09-14** (`DECISIONS.md`
   D6): §7 now names the 2 structurally-hard pairs instead of the
   retired T2 tier.
-- **New from D012 R7, 2026-09-17, optional, not urgent:** `GreedyCover`'s
-  own γ-sensitivity has only ever been measured via D008's proxy, never
-  trained. If a writeup wants to claim `GreedyCover` and `JointGreedy`
-  genuinely differ in how much they need CVaR-weighting (suggested by
-  D012/P1 Part 0's tensor-level trade-off finding, not yet proven at the
-  trained level), that needs `GreedyCover`'s γ variants trained too —
-  ~5 minutes of compute per TACC's estimate. Not drafted as a D.
+- **D012 R7's follow-up — promoted to [D013](D013.md), 2026-09-18.**
 
 ## Notes
 
