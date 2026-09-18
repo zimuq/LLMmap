@@ -1,0 +1,279 @@
+{
+ "hparams_hash": "0ce04efbd56c4cfaf49d2306b25450270343f3e3c9f949eef437513a05a79274",
+ "hash_asserted_equal_across": [
+  "D009",
+  "D012",
+  "D013"
+ ],
+ "note": "paired only because all three share hparams hash, I2 split, 5 seeds and bootstrap draws (P1/F2)",
+ "gamma_1.0": [
+  {
+   "k": 1,
+   "greedycover": 0.5403,
+   "jointgreedy": 0.5403,
+   "delta_jg_minus_gc": 0.0
+  },
+  {
+   "k": 2,
+   "greedycover": 0.6491,
+   "jointgreedy": 0.672,
+   "delta_jg_minus_gc": 0.0229
+  },
+  {
+   "k": 3,
+   "greedycover": 0.7124,
+   "jointgreedy": 0.6984,
+   "delta_jg_minus_gc": -0.0141
+  },
+  {
+   "k": 4,
+   "greedycover": 0.7258,
+   "jointgreedy": 0.741,
+   "delta_jg_minus_gc": 0.0151
+  },
+  {
+   "k": 5,
+   "greedycover": 0.7477,
+   "jointgreedy": 0.7624,
+   "delta_jg_minus_gc": 0.0147
+  },
+  {
+   "k": 6,
+   "greedycover": 0.7745,
+   "jointgreedy": 0.7825,
+   "delta_jg_minus_gc": 0.008
+  },
+  {
+   "k": 7,
+   "greedycover": 0.7836,
+   "jointgreedy": 0.8082,
+   "delta_jg_minus_gc": 0.0246
+  },
+  {
+   "k": 8,
+   "greedycover": 0.8084,
+   "jointgreedy": 0.8028,
+   "delta_jg_minus_gc": -0.0056
+  }
+ ],
+ "gamma_0.25": [
+  {
+   "k": 1,
+   "greedycover": 0.5511,
+   "jointgreedy": 0.5511,
+   "delta_jg_minus_gc": 0.0
+  },
+  {
+   "k": 2,
+   "greedycover": 0.6471,
+   "jointgreedy": 0.755,
+   "delta_jg_minus_gc": 0.1079
+  },
+  {
+   "k": 3,
+   "greedycover": 0.7898,
+   "jointgreedy": 0.7931,
+   "delta_jg_minus_gc": 0.0032
+  },
+  {
+   "k": 4,
+   "greedycover": 0.8162,
+   "jointgreedy": 0.8251,
+   "delta_jg_minus_gc": 0.0089
+  },
+  {
+   "k": 5,
+   "greedycover": 0.8439,
+   "jointgreedy": 0.8534,
+   "delta_jg_minus_gc": 0.0095
+  },
+  {
+   "k": 6,
+   "greedycover": 0.8413,
+   "jointgreedy": 0.8612,
+   "delta_jg_minus_gc": 0.0199
+  },
+  {
+   "k": 7,
+   "greedycover": 0.8502,
+   "jointgreedy": 0.8683,
+   "delta_jg_minus_gc": 0.0182
+  },
+  {
+   "k": 8,
+   "greedycover": 0.8528,
+   "jointgreedy": 0.8763,
+   "delta_jg_minus_gc": 0.0236
+  }
+ ],
+ "gamma_0.1": [
+  {
+   "k": 1,
+   "greedycover": 0.6333,
+   "jointgreedy": 0.6333,
+   "delta_jg_minus_gc": 0.0
+  },
+  {
+   "k": 2,
+   "greedycover": 0.7585,
+   "jointgreedy": 0.7725,
+   "delta_jg_minus_gc": 0.0141
+  },
+  {
+   "k": 3,
+   "greedycover": 0.7816,
+   "jointgreedy": 0.8076,
+   "delta_jg_minus_gc": 0.0259
+  },
+  {
+   "k": 4,
+   "greedycover": 0.8231,
+   "jointgreedy": 0.8212,
+   "delta_jg_minus_gc": -0.0019
+  },
+  {
+   "k": 5,
+   "greedycover": 0.8102,
+   "jointgreedy": 0.8301,
+   "delta_jg_minus_gc": 0.0199
+  },
+  {
+   "k": 6,
+   "greedycover": 0.8463,
+   "jointgreedy": 0.8439,
+   "delta_jg_minus_gc": -0.0024
+  },
+  {
+   "k": 7,
+   "greedycover": 0.8623,
+   "jointgreedy": 0.8672,
+   "delta_jg_minus_gc": 0.005
+  },
+  {
+   "k": 8,
+   "greedycover": 0.8519,
+   "jointgreedy": 0.8757,
+   "delta_jg_minus_gc": 0.0238
+  }
+ ],
+ "gamma_0.05": [
+  {
+   "k": 1,
+   "greedycover": 0.6333,
+   "jointgreedy": 0.6333,
+   "delta_jg_minus_gc": 0.0
+  },
+  {
+   "k": 2,
+   "greedycover": 0.7585,
+   "jointgreedy": 0.7725,
+   "delta_jg_minus_gc": 0.0141
+  },
+  {
+   "k": 3,
+   "greedycover": 0.7948,
+   "jointgreedy": 0.8039,
+   "delta_jg_minus_gc": 0.0091
+  },
+  {
+   "k": 4,
+   "greedycover": 0.8054,
+   "jointgreedy": 0.8275,
+   "delta_jg_minus_gc": 0.0221
+  },
+  {
+   "k": 5,
+   "greedycover": 0.8422,
+   "jointgreedy": 0.8417,
+   "delta_jg_minus_gc": -0.0004
+  },
+  {
+   "k": 6,
+   "greedycover": 0.8448,
+   "jointgreedy": 0.8584,
+   "delta_jg_minus_gc": 0.0136
+  },
+  {
+   "k": 7,
+   "greedycover": 0.8558,
+   "jointgreedy": 0.8874,
+   "delta_jg_minus_gc": 0.0316
+  },
+  {
+   "k": 8,
+   "greedycover": 0.8422,
+   "jointgreedy": 0.8763,
+   "delta_jg_minus_gc": 0.0342
+  }
+ ],
+ "gamma1_penalty_by_algorithm": [
+  {
+   "k": 1,
+   "greedycover": -0.0929,
+   "jointgreedy": -0.0929
+  },
+  {
+   "k": 2,
+   "greedycover": -0.1095,
+   "jointgreedy": -0.101
+  },
+  {
+   "k": 3,
+   "greedycover": -0.0696,
+   "jointgreedy": -0.1094
+  },
+  {
+   "k": 4,
+   "greedycover": -0.0975,
+   "jointgreedy": -0.0802
+  },
+  {
+   "k": 5,
+   "greedycover": -0.0625,
+   "jointgreedy": -0.0676
+  },
+  {
+   "k": 6,
+   "greedycover": -0.072,
+   "jointgreedy": -0.0618
+  },
+  {
+   "k": 7,
+   "greedycover": -0.0789,
+   "jointgreedy": -0.0593
+  },
+  {
+   "k": 8,
+   "greedycover": -0.0435,
+   "jointgreedy": -0.0732
+  }
+ ],
+ "k1_identity_check": {
+  "per_gamma": {
+   "1.0": {
+    "greedycover": 0.5403,
+    "jointgreedy": 0.5403,
+    "identical": true,
+    "query_gc": [
+     123
+    ],
+    "query_jg": [
+     123
+    ]
+   },
+   "0.1": {
+    "greedycover": 0.6333,
+    "jointgreedy": 0.6333,
+    "identical": true,
+    "query_gc": [
+     193
+    ],
+    "query_jg": [
+     193
+    ]
+   }
+  },
+  "all_identical": true,
+  "note": "F3: at k=1 the joint statistic reduces to the per-query one, so the two algorithms ARE the same algorithm. These rows are ONE observation appearing twice, not two agreeing observations -- reported as an end-to-end consistency check."
+ }
+}
