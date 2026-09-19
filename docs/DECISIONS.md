@@ -150,7 +150,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 
 | # | Parameter | Proposed | Status |
 |---|---|---|---|
-| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | **✅ decided 2026-09-18 for both algorithms** ([D012](D012.md) `JointGreedy`, [D013](D013.md) `GreedyCover`, both trained): **a small γ is required — γ ≤ 0.25 helps decisively (γ=0.1 default, on precedent); {0.25, 0.1, 0.05} are not distinguishable from each other; γ=1.0 (mean) is decisively worse.** The two algorithms' γ-penalty is the same size (mean −0.079 vs −0.081 on mean top-1; no detectable difference). **Caveat — γ is not a clean continuous dial:** for `GreedyCover`, γ=0.5 gave *no* benefit over γ=1.0 (and if anything a slightly worse result), reproducing under training what D008's proxy showed. Whether that is a genuine threshold in γ or an idiosyncrasy of that one nested chain is **untested** (single point; chains are known to be composition-unstable, D008/R5); `JointGreedy` at γ=0.5 was not run. Practical rule: stay at γ ≤ 0.25. |
+| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | **✅ decided 2026-09-18 for both algorithms** ([D012](D012.md) `JointGreedy`, [D013](D013.md) `GreedyCover`, both trained): **a small γ is required — γ ≤ 0.25 helps decisively (γ=0.1 default, on precedent); {0.25, 0.1, 0.05} are not distinguishable from each other; γ=1.0 (mean) is decisively worse.** The two algorithms' γ-penalty is the same size (mean −0.079 vs −0.081 on mean top-1; no detectable difference). **Caveat — γ is not a clean continuous dial:** for `GreedyCover`, γ=0.5 gave *no* benefit over γ=1.0 (and if anything a slightly worse result), reproducing under training what D008's proxy showed. Whether that is a genuine threshold in γ or an idiosyncrasy of that one nested chain is **untested** (single point; chains are known to be composition-unstable, D008/R5); `JointGreedy` at γ=0.5 was not run. **Being tested by [D014](D014.md), 2026-09-19, for both algorithms.** Practical rule until then: stay at γ ≤ 0.25. |
 | C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ⬜ |
 | C3 | Initial pool size `\|Q_0\|` | ~250 (raised from an original ~100 baseline, 2026-09-02, design-side) — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes, expanded further once D002 confirmed generation cost is not the binding constraint at 2–3x this scale. See [D003](D003.md)'s amendment + Review addendum. | ✅ |
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |
@@ -825,6 +825,21 @@ frontier finding; D6 opened
   the caveats are recorded because two of TACC's stronger phrasings
   ("threshold", "not a valid CVaR setting") outrun the evidence.
   Decided by: design-side, routine call.
+
+[2026-09-19] D014 drafted; METHOD.md sec5.2 edit held
+  Decision: human approved a finer gamma sweep to separate "threshold in
+  gamma" from "unlucky chain" for gamma=0.5, and set its scope to BOTH
+  GreedyCover and JointGreedy -- JointGreedy was never run between
+  gamma=0.25 and 1.0, and cross-algorithm agreement is an independent
+  test of chain luck (the chains differ from k=2 on). D014 adds a
+  chain-stability arm (random half-subsamples of the build configs,
+  selection never touching val/test) and pre-registers its numeric
+  labelling rule in P1 before any training. Design-side lean recorded up
+  front, weakly held (~60/40 toward chain luck), so a wrong guess is
+  visible. The human also HELD the METHOD.md sec5.2 edit (gamma "a
+  clean continuous ablation axis") until D014's results land.
+  Decided by: human (scope, both algorithms; hold on sec5.2);
+  design-side (D014's content).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

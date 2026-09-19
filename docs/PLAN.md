@@ -19,6 +19,7 @@
 | [D011](D011.md) | D008's identifiability frontier + D010's chain, human-approved 2026-09-13 | **CLOSED** 2026-09-13 — **NOT RECOVERED (0/32), because there was nothing to recover**: both `GreedyCover` and `JointGreedy` already resolve all 32 flagged pairs (32/32, D008's own threshold). D008's per-pair oracle scored a median 0.54 on these pairs — *worse than a random pool query (0.82)* — confirming the "identifiability frontier" tier was an estimator artifact, not real difficulty. A threshold-scale bug caught in review would have shown the opposite (wrong) conclusion had it shipped. D010's real advantage is confirmed to come from elsewhere, still unexplained | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D010 (CLOSED) | `results/D011/`, `D011.md` `## R` |
 | [D012](D012.md) | `DECISIONS.md` C1 (γ ablation, never run for `JointGreedy`); human-approved 2026-09-16, sharpened from a broader "k and γ sweep" | **CLOSED** 2026-09-17 — **CONFIRMED, decisively**: γ<1 required for `JointGreedy` at every k (1–8) and every metric, every CI excludes zero — the first comparison in this project resolved at all 8 k values. γ=0.1 recommended default; {0.25,0.1,0.05} statistically indistinguishable. Mechanism: γ=1.0's own selection objective falls monotonically (1.30→0.88) while its trained accuracy rises (0.54→0.80) — its selected queries fit worse even on training data (0.939 vs 0.992), i.e. carry less usable signal, not just mis-scored. Bonus: trained network confirmed order-insensitive to query-slot position | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D010 (CLOSED) | `results/D012/`, `D012.md` `## R` |
 | [D013](D013.md) | D012/R7 (optional follow-up, now promoted); D008's original proxy γ-sweep for `GreedyCover`, never trained beyond γ=1.0/0.1; human-approved 2026-09-18 | **CLOSED** 2026-09-18 — **CONFIRMED, D012-shaped, for γ ≤ 0.25**: `GreedyCover` needs a small γ as much as `JointGreedy` (mean penalty for γ=1.0: −0.081 vs −0.079; no detectable difference between the algorithms). Structural hypothesis: mechanism right (objective monotone, I4), effect-size prediction wrong — so D012/R2's "CVaR repairs a broken objective" is `JointGreedy`-specific, not general (D012 carries an addendum). New: γ=0.5 gave no benefit over γ=1.0 on this chain — threshold in γ vs. unlucky chain is untested. C1 closed for both algorithms | REVIEW (P1 approved w/ amendments, executed) | D007 (CLOSED), D008 (CLOSED), D009 (CLOSED), D012 (CLOSED) | `results/D013/`, `D013.md` `## R` |
+| [D014](D014.md) | D013 R2 + Review (γ=0.5 anomaly on one chain); D012 addendum (JointGreedy never run between γ=0.25 and 1.0); human-approved 2026-09-19, scope: both algorithms | **OPEN** 2026-09-19 — is γ=0.5's failure a threshold in γ (H1) or an unlucky nested chain (H2)? Fine γ grid trained for both algorithms, plus a chain-stability arm (random half-subsamples of the build configs). Cross-algorithm agreement is the independent test of chain luck. Numeric labelling rule pre-registered in P1 before training. Holds the `METHOD.md §5.2` wording decision | REVIEW (not yet planned) | D007–D013 (all CLOSED) | `results/D014/`, `D014.md` `## R` |
 
 ## Not yet a D
 
@@ -56,15 +57,15 @@
   D6): §7 now names the 2 structurally-hard pairs instead of the
   retired T2 tier.
 - **D012 R7's follow-up — done as [D013](D013.md), closed 2026-09-18.**
-- **New from D013, 2026-09-18, optional, not urgent:** (a) is γ=0.5's
-  failure to help a threshold in γ or an unlucky nested chain? — rerun
-  selection at γ ∈ {0.35, 0.4, 0.5, 0.6, 0.75} (and on build-config
-  split-halves) and train; a few minutes; the practical rule (γ ≤ 0.25)
-  doesn't depend on the answer. (b) `METHOD.md §5.2` calls γ "a clean
-  continuous ablation axis" — D013 shows that's unsafe; one-sentence
-  edit awaiting the human's OK. (c) Why a small γ helps selection quality
-  *in general* (not via `JointGreedy`'s objective pathology) is
-  unexplained — the most interesting open scientific question now.
+- **From D013, 2026-09-18:** (a) γ=0.5 threshold-vs-unlucky-chain —
+  **promoted to [D014](D014.md), 2026-09-19, scope widened to both
+  algorithms.** (b) `METHOD.md §5.2` calls γ "a clean continuous
+  ablation axis" — D013 shows that's unsafe; **edit HELD by the human
+  (2026-09-19) until D014's results land**, then worded to match. (c) Why
+  a small γ helps selection quality *in general* (not via
+  `JointGreedy`'s objective pathology) is unexplained — the most
+  interesting open scientific question now; D014's chain-overlap and
+  objective-trace findings may give a clue but D014 does not chase it.
 
 ## Notes
 
