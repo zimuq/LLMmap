@@ -1,0 +1,255 @@
+[S2] GreedyCover  g=1.0   REUSED from D009
+[S2] GreedyCover  g=0.75  mean top-1 k=8 0.8009
+[S2] GreedyCover  g=0.6   mean top-1 k=8 0.7948
+[S2] GreedyCover  g=0.5   REUSED from D013
+[S2] GreedyCover  g=0.45  mean top-1 k=8 0.8242
+[S2] GreedyCover  g=0.4   mean top-1 k=8 0.8242
+[S2] GreedyCover  g=0.35  mean top-1 k=8 0.8246
+[S2] GreedyCover  g=0.3   mean top-1 k=8 0.7810
+[S2] GreedyCover  g=0.25  REUSED from D013
+[S2] GreedyCover  g=0.1   REUSED from D009
+[S2] GreedyCover  g=0.05  REUSED from D013
+[S2] JointGreedy  g=1.0   REUSED from D012
+[S2] JointGreedy  g=0.75  mean top-1 k=8 0.8210
+[S2] JointGreedy  g=0.6   mean top-1 k=8 0.8182
+[S2] JointGreedy  g=0.5   mean top-1 k=8 0.8437
+[S2] JointGreedy  g=0.45  mean top-1 k=8 0.8711
+[S2] JointGreedy  g=0.4   mean top-1 k=8 0.8718
+[S2] JointGreedy  g=0.35  mean top-1 k=8 0.8709
+[S2] JointGreedy  g=0.3   mean top-1 k=8 0.8776
+[S2] JointGreedy  g=0.25  REUSED from D012
+[S2] JointGreedy  g=0.1   REUSED from D012
+[S2] JointGreedy  g=0.05  REUSED from D012
+
+===== Arm A: mean top-1 at k=8 =====
+ gamma   GreedyCover   JointGreedy
+   1.0       0.8084       0.8028
+  0.75       0.8009       0.8210
+   0.6       0.7948       0.8182
+   0.5       0.7918       0.8437
+  0.45       0.8242       0.8711
+   0.4       0.8242       0.8718
+  0.35       0.8246       0.8709
+   0.3       0.7810       0.8776
+  0.25       0.8528       0.8763
+   0.1       0.8519             
+  0.05       0.8422       0.8763
+
+===== Arm A labels vs gamma=1.0 (DESCRIPTIVE -- Arm B decides) =====
+ gamma                GreedyCover                JointGreedy
+  0.75           NO-BENEFIT(0/8)           NO-BENEFIT(0/8)
+   0.6           NO-BENEFIT(0/8)           NO-BENEFIT(0/8)
+   0.5           NO-BENEFIT(0/8)           UNRESOLVED(2/8)
+  0.45           NO-BENEFIT(0/8)           UNRESOLVED(4/8)
+   0.4           NO-BENEFIT(0/8)              BENEFIT(5/8)
+  0.35           NO-BENEFIT(0/8)              BENEFIT(6/8)
+   0.3           NO-BENEFIT(0/8)              BENEFIT(7/8)
+  0.25              BENEFIT(5/8)              BENEFIT(7/8)
+   0.1              BENEFIT(6/8)           NO-BENEFIT(0/0)
+  0.05              BENEFIT(7/8)              BENEFIT(8/8)
+
+total 38.9 min
+written: ./results/D014/metrics_by_gamma_k.json
+37 models, 259 queries, 75 build configs
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 1/30  (0.3 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 2/30  (0.5 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 3/30  (0.8 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 4/30  (1.1 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 5/30  (1.4 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 6/30  (1.6 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 7/30  (1.9 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 8/30  (2.2 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 9/30  (2.5 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 10/30  (2.7 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 11/30  (3.0 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 12/30  (3.3 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 13/30  (3.6 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 14/30  (3.8 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 15/30  (4.1 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 16/30  (4.4 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 17/30  (4.7 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 18/30  (4.9 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 19/30  (5.2 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 20/30  (5.5 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 21/30  (5.7 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 22/30  (6.0 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 23/30  (6.3 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 24/30  (6.6 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 25/30  (6.8 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 26/30  (7.1 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 27/30  (7.4 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 28/30  (7.7 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 29/30  (7.9 min)
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+  resample 30/30  (8.2 min)
+
+[ArmB] GreedyCover: main UNRESOLVED
+    k=4: d=+0.0245 [+0.0093,+0.0403] | median 0.25=0.7043 vs 0.5=0.6886
+    k=8: d=+0.0149 [+0.0075,+0.0222] | median 0.25=0.7773 vs 0.5=0.7546
+  control UNRESOLVED -> powered: False
+
+[ArmB] JointGreedy: main SYSTEMATIC (-> H1)
+    k=4: d=+0.0852 [+0.0808,+0.0897] | median 0.25=0.7892 vs 0.5=0.7135
+    k=8: d=+0.0365 [+0.0309,+0.0420] | median 0.25=0.8205 vs 0.5=0.7784
+  control SYSTEMATIC (-> H1) -> powered: True
+
+[check] training proxy-best/worst resampled chains (GreedyCover, k=8)
+  g=0.5: proxy best 0.7946 -> trained 0.8525 | proxy worst 0.7351 -> trained 0.8022 | agrees: True
+  g=0.25: proxy best 0.7989 -> trained 0.8655 | proxy worst 0.7459 -> trained 0.8084 | agrees: True
+
+===== Arm B verdicts (THESE DECIDE) =====
+  GreedyCover  UNINFORMATIVE (control failed)
+  JointGreedy  SYSTEMATIC (-> H1)
+  proxy within-gamma ranking confirmed: True
+
+total 9.9 min
+written: ./results/D014/chain_stability.json

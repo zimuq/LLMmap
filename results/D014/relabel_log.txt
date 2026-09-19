@@ -1,0 +1,28 @@
+===== Arm A: mean top-1 at k=8 =====
+ gamma   GreedyCover   JointGreedy
+   1.0       0.8084       0.8028
+  0.75       0.8009       0.8210
+   0.6       0.7948       0.8182
+   0.5       0.7918       0.8437
+  0.45       0.8242       0.8711
+   0.4       0.8242       0.8718
+  0.35       0.8246       0.8709
+   0.3       0.7810       0.8776
+  0.25       0.8528       0.8763
+   0.1       0.8519       0.8757
+  0.05       0.8422       0.8763
+
+===== Arm A labels vs gamma=1.0 (DESCRIPTIVE) =====
+ gamma                GreedyCover                JointGreedy
+  0.75           NO-BENEFIT(0/8)           NO-BENEFIT(0/8)
+   0.6           NO-BENEFIT(0/8)           NO-BENEFIT(0/8)
+   0.5           NO-BENEFIT(0/8)           UNRESOLVED(2/8)
+  0.45           NO-BENEFIT(0/8)           UNRESOLVED(4/8)
+   0.4           NO-BENEFIT(0/8)              BENEFIT(5/8)
+  0.35           NO-BENEFIT(0/8)              BENEFIT(6/8)
+   0.3           NO-BENEFIT(0/8)              BENEFIT(7/8)
+  0.25              BENEFIT(5/8)              BENEFIT(7/8)
+   0.1              BENEFIT(6/8)              BENEFIT(8/8)
+  0.05              BENEFIT(7/8)              BENEFIT(8/8)
+
+written: ./results/D014/metrics_by_gamma_k.json
