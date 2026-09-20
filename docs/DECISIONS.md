@@ -150,7 +150,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 
 | # | Parameter | Proposed | Status |
 |---|---|---|---|
-| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | **✅ decided 2026-09-18 for both algorithms** ([D012](D012.md) `JointGreedy`, [D013](D013.md) `GreedyCover`, both trained): **a small γ is required — γ ≤ 0.25 helps decisively (γ=0.1 default, on precedent); {0.25, 0.1, 0.05} are not distinguishable from each other; γ=1.0 (mean) is decisively worse.** The two algorithms' γ-penalty is the same size (mean −0.079 vs −0.081 on mean top-1; no detectable difference). **Caveat — γ is not a clean continuous dial:** for `GreedyCover`, γ=0.5 gave *no* benefit over γ=1.0 (and if anything a slightly worse result), reproducing under training what D008's proxy showed. Whether that is a genuine threshold in γ or an idiosyncrasy of that one nested chain is **untested** (single point; chains are known to be composition-unstable, D008/R5); `JointGreedy` at γ=0.5 was not run. **Being tested by [D014](D014.md), 2026-09-19, for both algorithms.** Practical rule until then: stay at γ ≤ 0.25. |
+| C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | **✅ decided 2026-09-18 for both algorithms** ([D012](D012.md) `JointGreedy`, [D013](D013.md) `GreedyCover`, both trained): **a small γ is required — γ ≤ 0.25 helps decisively (γ=0.1 default, on precedent); {0.25, 0.1, 0.05} are not distinguishable from each other; γ=1.0 (mean) is decisively worse.** The two algorithms' γ-penalty is the same size (mean −0.079 vs −0.081 on mean top-1; no detectable difference). **Caveat — γ is not a clean continuous dial:** for `GreedyCover`, γ=0.5 gave *no* benefit over γ=1.0 (and if anything a slightly worse result), reproducing under training what D008's proxy showed. Whether that is a genuine threshold in γ or an idiosyncrasy of that one nested chain is **untested** (single point; chains are known to be composition-unstable, D008/R5); `JointGreedy` at γ=0.5 was not run. **Tested by [D014](D014.md), 2026-09-19:** for `JointGreedy` the γ effect is systematic and *graded* (a ramp, not a step; chain luck rejected); for `GreedyCover` it is **inconclusive** (the chain-stability arm failed its control; the small-`k` effect under resampling is unresolved). So γ is not linear and its onset moves with how much data selection sees. Practical rule: default γ = 0.1; γ ≤ 0.25 adequate on full-data chains but unconfirmed for `GreedyCover` at small `k`. |
 | C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ⬜ |
 | C3 | Initial pool size `\|Q_0\|` | ~250 (raised from an original ~100 baseline, 2026-09-02, design-side) — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes, expanded further once D002 confirmed generation cost is not the binding constraint at 2–3x this scale. See [D003](D003.md)'s amendment + Review addendum. | ✅ |
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |
@@ -840,6 +840,27 @@ frontier finding; D6 opened
   clean continuous ablation axis") until D014's results land.
   Decided by: human (scope, both algorithms; hold on sec5.2);
   design-side (D014's content).
+
+[2026-09-19] D014 closed: JointGreedy RAMP, GreedyCover INCONCLUSIVE
+  Decision: D014 CLOSED. JointGreedy: the gamma effect is systematic and
+  graded (chain-stability arm SYSTEMATIC with a passing positive control;
+  labels climb 0->2->4->5->6->7->8 with two UNRESOLVED points between
+  regions = RAMP); chain luck (H2) rejected; design-side's ~60/40 lean
+  toward H2 was wrong. GreedyCover: INCONCLUSIVE -- the arm failed its
+  pre-registered control at k=4. Design-side notes that a failed control is
+  ambiguous between "instrument blind" and "the effect is smaller under
+  resampling" (the rule assumed the former; the same machinery gives
+  JointGreedy +0.107), so GreedyCover's small-k gamma effect under noise
+  is an open question, and D013's "same gamma-sensitivity" holds on the
+  frozen full-data chains only. The trained grid alone would have reported
+  a clean STEP for GreedyCover on three copies of one chain -- the
+  amendment making Arm B decisive prevented that. The proxy was confirmed
+  to rank chains correctly within a gamma (20-run trained check).
+  C1 unchanged in substance (default 0.1; gamma is not linear; onset moves
+  with data size). METHOD.md sec5.2 is now unblocked; replacement wording
+  proposed to the human, not applied.
+  Decided by: design-side, routine call (closure); sec5.2 edit awaiting
+  the human (rule (d)).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

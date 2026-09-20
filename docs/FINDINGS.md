@@ -570,5 +570,43 @@ the proxy and trained anomalies are the same nested chain evaluated twice,
 and chains here are composition-unstable. Whether it is a property of γ
 or of that chain is untested.
 
+## D014 — γ is a graded, non-linear dial for JointGreedy; for GreedyCover the question is still open
+
+**`JointGreedy`: the γ effect is real and graded, not a chain accident.**
+Resampling the build configs 30 times and re-selecting the chains, γ=0.25
+beats γ=0.5 by +0.085 (`k`=4) and +0.037 (`k`=8) on the proxy, with CIs far
+from zero and a control (γ=0.25 vs 1.0, ≈ +0.10) that reproduces the known
+gap. The trained grid shows benefit switching on over a band of γ — no
+single cutoff — and flat below ≈0.4 on the full data. A pre-registered
+lean toward "γ=0.5's failure is chain luck" was wrong for this algorithm.
+
+**`GreedyCover`: inconclusive, and the failure is informative.** The same
+arm failed its positive control at `k`=4 (γ=0.25 vs 1.0: +0.0125,
+CI [−0.003, +0.029]). Two readings fit: the instrument is less sensitive
+for this algorithm, or its small-`k` γ effect is genuinely smaller once the
+selection data is perturbed than on the frozen chains (≈ +0.09 trained).
+The same machinery gives `JointGreedy` +0.107, which weighs somewhat toward
+the second. Descriptively (post hoc, a lead not a result): at `k`=4 its
+resampled medians are flat from γ=1.0 to 0.25 and only rise at γ=0.1; at
+`k`=8 they rise steadily with γ=0.5 between its neighbours. If it holds, it
+matters for A4 (small-`k` efficiency is the primary claim) and leans toward
+`JointGreedy` as the recommended algorithm, and it qualifies D013's "same
+γ-sensitivity" — true on frozen full-data chains only.
+
+**Method lessons that paid for themselves.** Chains recur as *families*
+across neighbouring γ (γ=0.6 and 0.5 give the same `k`=8 set; γ ∈ {0.45,
+0.4, 0.35} likewise), so the trained grid alone showed `GreedyCover` a clean
+STEP made of three copies of one chain — declaring Arm B decisive and Arm A
+descriptive prevented that. A positive control caught the uninformative arm.
+The proxy was confirmed (20 trained runs) to rank chains correctly *within*
+a γ, which D009 had never tested. One caution: a failed control is ambiguous
+between blindness and a genuinely smaller effect — the rule had assumed the
+first.
+
+**Consequence for the method.** `METHOD.md §5.2`'s "γ is a clean continuous
+ablation axis" should go: the axis is not linear, its onset moves with how
+much data selection sees, and `GreedyCover`'s fine structure is not
+established. Replacement wording is proposed and awaits the human.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
