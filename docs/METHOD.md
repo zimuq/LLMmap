@@ -147,8 +147,13 @@ maximize  CVaR_γ ( { cov(p) : p ∈ pairs } )
 ```
 
 `γ = 1.0` recovers the mean objective, i.e. **the baseline is a special case of
-our method**, which makes γ a clean continuous ablation axis rather than a
-competing alternative.
+our method**, which makes γ an ablation axis rather than a competing
+alternative. **The axis is not linear**: measured benefit is negligible near
+γ = 1, rises over a band of intermediate γ, and is flat below it, with no
+measurable ordering among γ ≤ 0.25 (D012–D014). The band's location shifts with
+how much data selection sees, and `GreedyCover`'s fine structure is not
+established (D014); the default γ = 0.1 lies in the flat region for both
+algorithms.
 
 ### 5.3 GreedyCover — where `k` comes from
 

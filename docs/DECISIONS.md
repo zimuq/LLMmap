@@ -151,7 +151,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | # | Parameter | Proposed | Status |
 |---|---|---|---|
 | C1 | CVaR tail `γ` | 0.1 default; ablate {1.0, 0.25, 0.1, 0.05} | **✅ decided 2026-09-18 for both algorithms** ([D012](D012.md) `JointGreedy`, [D013](D013.md) `GreedyCover`, both trained): **a small γ is required — γ ≤ 0.25 helps decisively (γ=0.1 default, on precedent); {0.25, 0.1, 0.05} are not distinguishable from each other; γ=1.0 (mean) is decisively worse.** The two algorithms' γ-penalty is the same size (mean −0.079 vs −0.081 on mean top-1; no detectable difference). **Caveat — γ is not a clean continuous dial:** for `GreedyCover`, γ=0.5 gave *no* benefit over γ=1.0 (and if anything a slightly worse result), reproducing under training what D008's proxy showed. Whether that is a genuine threshold in γ or an idiosyncrasy of that one nested chain is **untested** (single point; chains are known to be composition-unstable, D008/R5); `JointGreedy` at γ=0.5 was not run. **Tested by [D014](D014.md), 2026-09-19:** for `JointGreedy` the γ effect is systematic and *graded* (a ramp, not a step; chain luck rejected); for `GreedyCover` it is **inconclusive** (the chain-stability arm failed its control; the small-`k` effect under resampling is unresolved). So γ is not linear and its onset moves with how much data selection sees. Practical rule: default γ = 0.1; γ ≤ 0.25 adequate on full-data chains but unconfirmed for `GreedyCover` at small `k`. |
-| C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ⬜ |
+| C2 | Query budget `k` | 8 (comparable to the paper); always report the full k=1..8 curve | ✅ de facto since D008 — every D reports the full k=1..8 curve (bookkeeping, 2026-09-21) |
 | C3 | Initial pool size `\|Q_0\|` | ~250 (raised from an original ~100 baseline, 2026-09-02, design-side) — the paper's 8 + expansions of its 4 query families + published baselines + tokenizer/glitch probes, expanded further once D002 confirmed generation cost is not the binding constraint at 2–3x this scale. See [D003](D003.md)'s amendment + Review addendum. | ✅ |
 | C4 | Split sizes | 75 / 25 / 25 build/val/test, disjoint at the parameter level per I2 (D005's fix; A5 carve-out for `do_sample`). **Decided 2026-09-05 (design-side, routine — matches TODO.md's own plan and the uncontested default; no objection raised).** | ✅ |
 | C5 | Outer-loop params `T, N, n_keep, θ, ε` | T=3–5, N=40, n_keep=3, θ from tensor quantile, ε=0.005 | ⬜ |
@@ -861,6 +861,15 @@ frontier finding; D6 opened
   proposed to the human, not applied.
   Decided by: design-side, routine call (closure); sec5.2 edit awaiting
   the human (rule (d)).
+
+[2026-09-21] METHOD.md sec5.2 revised; C2 marked done
+  Decision: on the human's go-ahead ("好的记录"), METHOD.md sec5.2's
+  "gamma a clean continuous ablation axis" is replaced by the wording
+  proposed in D014's Review (axis is not linear; no single cutoff; onset
+  moves with data size; GreedyCover's fine structure not established;
+  default 0.1 in the flat region). C2 (k budget) marked done de facto --
+  every D since D008 reports the full k=1..8 curve.
+  Decided by: human (sec5.2 wording); design-side (edit, bookkeeping).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

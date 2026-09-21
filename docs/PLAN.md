@@ -59,8 +59,8 @@
 - **D012 R7's follow-up — done as [D013](D013.md), closed 2026-09-18.**
 - **From D013/D014, 2026-09-19:** (a) γ=0.5 question — **closed via
   [D014](D014.md)** (`JointGreedy` RAMP; `GreedyCover` INCONCLUSIVE).
-  (b) `METHOD.md §5.2` — D014's results are in; **replacement wording
-  proposed (in D014's Review), awaiting the human's OK** (rule (d)).
+  (b) `METHOD.md §5.2` — **revised 2026-09-21** with the human's OK
+  (`DECISIONS.md` log).
   (c) Why a small γ helps selection quality *in general* is unexplained —
   the most interesting open scientific question; D014 did not chase it.
   (d) **Optional, cheap, not drafted:** from D014's saved per-resample
