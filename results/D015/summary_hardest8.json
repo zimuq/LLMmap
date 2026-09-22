@@ -1,0 +1,200 @@
+{
+ "schema": "d015-hardest8-v1",
+ "sorted_by": "paper8 accuracy at k=8 (display sort)",
+ "named_pair_ranks_of_65": {
+  "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": 2,
+  "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": 1
+ },
+ "named_pair_rank_by_method": {
+  "paper8": {
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": 2,
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": 1
+  },
+  "coverage": {
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": 2,
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": 1
+  },
+  "joint_energy": {
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": 2,
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": 1
+  }
+ },
+ "rows": [
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "paper8": 0.712,
+   "coverage": 0.656,
+   "joint_energy": 0.732,
+   "d_joint_minus_coverage": {
+    "delta": 0.076,
+    "lo": -0.012,
+    "hi": 0.16,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.056,
+    "lo": -0.1601,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "paper8": 0.804,
+   "coverage": 0.8,
+   "joint_energy": 0.832,
+   "d_joint_minus_coverage": {
+    "delta": 0.032,
+    "lo": -0.068,
+    "hi": 0.128,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.004,
+    "lo": -0.076,
+    "hi": 0.072,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+   "paper8": 0.824,
+   "coverage": 0.912,
+   "joint_energy": 0.896,
+   "d_joint_minus_coverage": {
+    "delta": -0.016,
+    "lo": -0.06,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.088,
+    "lo": 0.012,
+    "hi": 0.18,
+    "resolved": true,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "paper8": 0.904,
+   "coverage": 0.928,
+   "joint_energy": 0.94,
+   "d_joint_minus_coverage": {
+    "delta": 0.012,
+    "lo": -0.028,
+    "hi": 0.048,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.024,
+    "lo": -0.028,
+    "hi": 0.084,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "paper8": 0.908,
+   "coverage": 0.964,
+   "joint_energy": 0.948,
+   "d_joint_minus_coverage": {
+    "delta": -0.016,
+    "lo": -0.052,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.056,
+    "lo": 0.0,
+    "hi": 0.124,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "paper8": 0.912,
+   "coverage": 0.952,
+   "joint_energy": 0.956,
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": -0.052,
+    "hi": 0.0481,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.04,
+    "lo": -0.024,
+    "hi": 0.1,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "paper8": 0.92,
+   "coverage": 0.9,
+   "joint_energy": 0.924,
+   "d_joint_minus_coverage": {
+    "delta": 0.024,
+    "lo": -0.024,
+    "hi": 0.072,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.02,
+    "lo": -0.08,
+    "hi": 0.036,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "paper8": 0.924,
+   "coverage": 0.98,
+   "joint_energy": 0.972,
+   "d_joint_minus_coverage": {
+    "delta": -0.008,
+    "lo": -0.024,
+    "hi": 0.004,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.056,
+    "lo": 0.02,
+    "hi": 0.1,
+    "resolved": true,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true
+  }
+ ]
+}

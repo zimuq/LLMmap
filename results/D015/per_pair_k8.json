@@ -1,0 +1,3006 @@
+{
+ "schema": "d015-per-pair-v1",
+ "k": 8,
+ "n_pairs": 65,
+ "sort": "ascending paper8 accuracy -- a DISPLAY convenience, not a hardness claim (D015/S1)",
+ "chance": 0.5,
+ "n_boot": 2000,
+ "resolution_floor": "one trace of 50 = 2.00 pp; no pair can move less (P1/F3)",
+ "aggregate": {
+  "paper8": 0.9637,
+  "coverage": 0.9644,
+  "joint_energy": 0.9685
+ },
+ "rows": [
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 546,
+   "paper8": 0.712,
+   "paper8_ci": {
+    "lo": 0.62,
+    "hi": 0.796
+   },
+   "coverage": 0.656,
+   "coverage_ci": {
+    "lo": 0.568,
+    "hi": 0.744
+   },
+   "joint_energy": 0.732,
+   "joint_energy_ci": {
+    "lo": 0.6279,
+    "hi": 0.824
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.076,
+    "lo": -0.012,
+    "hi": 0.16,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.056,
+    "lo": -0.1601,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "14.0",
+    "14.0"
+   ],
+   "variants": [
+    "medium-128k",
+    "medium-4k"
+   ]
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 656,
+   "paper8": 0.804,
+   "paper8_ci": {
+    "lo": 0.744,
+    "hi": 0.86
+   },
+   "coverage": 0.8,
+   "coverage_ci": {
+    "lo": 0.728,
+    "hi": 0.868
+   },
+   "joint_energy": 0.832,
+   "joint_energy_ci": {
+    "lo": 0.768,
+    "hi": 0.896
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.032,
+    "lo": -0.068,
+    "hi": 0.128,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.004,
+    "lo": -0.076,
+    "hi": 0.072,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "10.0",
+    "7.0"
+   ],
+   "variants": [
+    "10b",
+    "7b"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 621,
+   "paper8": 0.824,
+   "paper8_ci": {
+    "lo": 0.724,
+    "hi": 0.908
+   },
+   "coverage": 0.912,
+   "coverage_ci": {
+    "lo": 0.836,
+    "hi": 0.968
+   },
+   "joint_energy": 0.896,
+   "joint_energy_ci": {
+    "lo": 0.8,
+    "hi": 0.964
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.016,
+    "lo": -0.06,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.088,
+    "lo": 0.012,
+    "hi": 0.18,
+    "resolved": true,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.2",
+    "v0.3"
+   ]
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 95,
+   "paper8": 0.904,
+   "paper8_ci": {
+    "lo": 0.844,
+    "hi": 0.952
+   },
+   "coverage": 0.928,
+   "coverage_ci": {
+    "lo": 0.892,
+    "hi": 0.96
+   },
+   "joint_energy": 0.94,
+   "joint_energy_ci": {
+    "lo": 0.9039,
+    "hi": 0.976
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.012,
+    "lo": -0.028,
+    "hi": 0.048,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.024,
+    "lo": -0.028,
+    "hi": 0.084,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "zephyr-beta",
+    "v0.2"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 496,
+   "paper8": 0.908,
+   "paper8_ci": {
+    "lo": 0.844,
+    "hi": 0.96
+   },
+   "coverage": 0.964,
+   "coverage_ci": {
+    "lo": 0.936,
+    "hi": 0.988
+   },
+   "joint_energy": 0.948,
+   "joint_energy_ci": {
+    "lo": 0.916,
+    "hi": 0.976
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.016,
+    "lo": -0.052,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.056,
+    "lo": 0.0,
+    "hi": 0.124,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "3.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-3b",
+    "3.1-8b"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 561,
+   "paper8": 0.912,
+   "paper8_ci": {
+    "lo": 0.864,
+    "hi": 0.96
+   },
+   "coverage": 0.952,
+   "coverage_ci": {
+    "lo": 0.912,
+    "hi": 0.98
+   },
+   "joint_energy": 0.956,
+   "joint_energy_ci": {
+    "lo": 0.908,
+    "hi": 0.992
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": -0.052,
+    "hi": 0.0481,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.04,
+    "lo": -0.024,
+    "hi": 0.1,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "14.0",
+    "3.8"
+   ],
+   "variants": [
+    "medium-4k",
+    "mini-128k"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 575,
+   "paper8": 0.92,
+   "paper8_ci": {
+    "lo": 0.86,
+    "hi": 0.972
+   },
+   "coverage": 0.9,
+   "coverage_ci": {
+    "lo": 0.836,
+    "hi": 0.964
+   },
+   "joint_energy": 0.924,
+   "joint_energy_ci": {
+    "lo": 0.86,
+    "hi": 0.98
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.024,
+    "lo": -0.024,
+    "hi": 0.072,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.02,
+    "lo": -0.08,
+    "hi": 0.036,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "3.8",
+    "3.8"
+   ],
+   "variants": [
+    "mini-128k",
+    "mini-4k"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 563,
+   "paper8": 0.924,
+   "paper8_ci": {
+    "lo": 0.8719,
+    "hi": 0.972
+   },
+   "coverage": 0.98,
+   "coverage_ci": {
+    "lo": 0.956,
+    "hi": 1.0
+   },
+   "joint_energy": 0.972,
+   "joint_energy_ci": {
+    "lo": 0.94,
+    "hi": 0.996
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.008,
+    "lo": -0.024,
+    "hi": 0.004,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.056,
+    "lo": 0.02,
+    "hi": 0.1,
+    "resolved": true,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "14.0",
+    "3.8"
+   ],
+   "variants": [
+    "medium-4k",
+    "3.5-mini"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 547,
+   "paper8": 0.928,
+   "paper8_ci": {
+    "lo": 0.888,
+    "hi": 0.964
+   },
+   "coverage": 0.924,
+   "coverage_ci": {
+    "lo": 0.868,
+    "hi": 0.964
+   },
+   "joint_energy": 0.96,
+   "joint_energy_ci": {
+    "lo": 0.904,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.036,
+    "lo": -0.008,
+    "hi": 0.076,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.004,
+    "lo": -0.044,
+    "hi": 0.032,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "14.0",
+    "3.8"
+   ],
+   "variants": [
+    "medium-128k",
+    "mini-128k"
+   ]
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index": 139,
+   "paper8": 0.932,
+   "paper8_ci": {
+    "lo": 0.868,
+    "hi": 0.984
+   },
+   "coverage": 0.98,
+   "coverage_ci": {
+    "lo": 0.956,
+    "hi": 1.0
+   },
+   "joint_energy": 0.976,
+   "joint_energy_ci": {
+    "lo": 0.948,
+    "hi": 0.996
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.004,
+    "lo": -0.036,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.048,
+    "lo": -0.004,
+    "hi": 0.112,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "3.0"
+   ],
+   "variants": [
+    "2-7b",
+    "2.5-3b"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 548,
+   "paper8": 0.932,
+   "paper8_ci": {
+    "lo": 0.888,
+    "hi": 0.972
+   },
+   "coverage": 0.816,
+   "coverage_ci": {
+    "lo": 0.724,
+    "hi": 0.904
+   },
+   "joint_energy": 0.852,
+   "joint_energy_ci": {
+    "lo": 0.7639,
+    "hi": 0.928
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.036,
+    "lo": -0.028,
+    "hi": 0.108,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.116,
+    "lo": -0.212,
+    "hi": -0.024,
+    "resolved": true,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "14.0",
+    "3.8"
+   ],
+   "variants": [
+    "medium-128k",
+    "mini-4k"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 612,
+   "paper8": 0.932,
+   "paper8_ci": {
+    "lo": 0.868,
+    "hi": 0.98
+   },
+   "coverage": 0.932,
+   "coverage_ci": {
+    "lo": 0.872,
+    "hi": 0.98
+   },
+   "joint_energy": 0.9,
+   "joint_energy_ci": {
+    "lo": 0.836,
+    "hi": 0.952
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.032,
+    "lo": -0.084,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.076,
+    "hi": 0.08,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.1",
+    "v0.3"
+   ]
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "index": 106,
+   "paper8": 0.936,
+   "paper8_ci": {
+    "lo": 0.884,
+    "hi": 0.98
+   },
+   "coverage": 0.948,
+   "coverage_ci": {
+    "lo": 0.888,
+    "hi": 0.996
+   },
+   "joint_energy": 0.928,
+   "joint_energy_ci": {
+    "lo": 0.848,
+    "hi": 0.992
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.02,
+    "lo": -0.096,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.012,
+    "lo": -0.044,
+    "hi": 0.06,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.5",
+    "0.5"
+   ],
+   "variants": [
+    "2-1.5b",
+    "2.5-0.5b"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 562,
+   "paper8": 0.936,
+   "paper8_ci": {
+    "lo": 0.896,
+    "hi": 0.972
+   },
+   "coverage": 0.824,
+   "coverage_ci": {
+    "lo": 0.736,
+    "hi": 0.908
+   },
+   "joint_energy": 0.908,
+   "joint_energy_ci": {
+    "lo": 0.852,
+    "hi": 0.956
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.084,
+    "lo": 0.02,
+    "hi": 0.152,
+    "resolved": true,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.112,
+    "lo": -0.196,
+    "hi": -0.032,
+    "resolved": true,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "14.0",
+    "3.8"
+   ],
+   "variants": [
+    "medium-4k",
+    "mini-4k"
+   ]
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index": 390,
+   "paper8": 0.948,
+   "paper8_ci": {
+    "lo": 0.908,
+    "hi": 0.976
+   },
+   "coverage": 0.956,
+   "coverage_ci": {
+    "lo": 0.912,
+    "hi": 0.992
+   },
+   "joint_energy": 0.96,
+   "joint_energy_ci": {
+    "lo": 0.92,
+    "hi": 0.988
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": -0.032,
+    "hi": 0.048,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.008,
+    "lo": -0.036,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.0-8b",
+    "3.1-8b"
+   ]
+  },
+  {
+   "pair": "openchat/openchat_3.5 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 654,
+   "paper8": 0.948,
+   "paper8_ci": {
+    "lo": 0.892,
+    "hi": 0.992
+   },
+   "coverage": 0.988,
+   "coverage_ci": {
+    "lo": 0.972,
+    "hi": 1.0
+   },
+   "joint_energy": 0.984,
+   "joint_energy_ci": {
+    "lo": 0.964,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.004,
+    "lo": -0.024,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.04,
+    "lo": -0.008,
+    "hi": 0.096,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": true,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "10.7"
+   ],
+   "variants": [
+    "oc3.5",
+    "solar-10.7b"
+   ]
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | openchat/openchat_3.5",
+   "index": 99,
+   "paper8": 0.956,
+   "paper8_ci": {
+    "lo": 0.908,
+    "hi": 0.992
+   },
+   "coverage": 0.988,
+   "coverage_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "joint_energy": 0.996,
+   "joint_energy_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.008,
+    "lo": 0.0,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.032,
+    "lo": -0.004,
+    "hi": 0.076,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": true,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "zephyr-beta",
+    "oc3.5"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 611,
+   "paper8": 0.956,
+   "paper8_ci": {
+    "lo": 0.9079,
+    "hi": 0.996
+   },
+   "coverage": 0.948,
+   "coverage_ci": {
+    "lo": 0.896,
+    "hi": 0.988
+   },
+   "joint_energy": 0.948,
+   "joint_energy_ci": {
+    "lo": 0.9,
+    "hi": 0.984
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": -0.044,
+    "hi": 0.0401,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.008,
+    "lo": -0.036,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.1",
+    "v0.2"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5",
+   "index": 615,
+   "paper8": 0.956,
+   "paper8_ci": {
+    "lo": 0.908,
+    "hi": 0.996
+   },
+   "coverage": 0.972,
+   "coverage_ci": {
+    "lo": 0.94,
+    "hi": 0.992
+   },
+   "joint_energy": 0.968,
+   "joint_energy_ci": {
+    "lo": 0.94,
+    "hi": 0.988
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.004,
+    "lo": -0.024,
+    "hi": 0.016,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.016,
+    "lo": -0.028,
+    "hi": 0.064,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.1",
+    "oc3.5"
+   ]
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 96,
+   "paper8": 0.96,
+   "paper8_ci": {
+    "lo": 0.904,
+    "hi": 0.996
+   },
+   "coverage": 0.956,
+   "coverage_ci": {
+    "lo": 0.912,
+    "hi": 0.988
+   },
+   "joint_energy": 0.972,
+   "joint_energy_ci": {
+    "lo": 0.9279,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.016,
+    "lo": 0.0,
+    "hi": 0.032,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.004,
+    "lo": -0.032,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "zephyr-beta",
+    "v0.3"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 476,
+   "paper8": 0.96,
+   "paper8_ci": {
+    "lo": 0.912,
+    "hi": 0.988
+   },
+   "coverage": 0.968,
+   "coverage_ci": {
+    "lo": 0.944,
+    "hi": 0.988
+   },
+   "joint_energy": 0.956,
+   "joint_energy_ci": {
+    "lo": 0.916,
+    "hi": 0.988
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.012,
+    "lo": -0.052,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.008,
+    "lo": -0.02,
+    "hi": 0.048,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.0",
+    "3.0"
+   ],
+   "variants": [
+    "3.2-1b",
+    "3.2-3b"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | openchat/openchat_3.5",
+   "index": 624,
+   "paper8": 0.96,
+   "paper8_ci": {
+    "lo": 0.92,
+    "hi": 0.992
+   },
+   "coverage": 0.984,
+   "coverage_ci": {
+    "lo": 0.96,
+    "hi": 1.0
+   },
+   "joint_energy": 0.984,
+   "joint_energy_ci": {
+    "lo": 0.968,
+    "hi": 0.996
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": -0.02,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.024,
+    "lo": -0.008,
+    "hi": 0.056,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.2",
+    "oc3.5"
+   ]
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 94,
+   "paper8": 0.964,
+   "paper8_ci": {
+    "lo": 0.916,
+    "hi": 0.996
+   },
+   "coverage": 0.952,
+   "coverage_ci": {
+    "lo": 0.916,
+    "hi": 0.984
+   },
+   "joint_energy": 0.952,
+   "joint_energy_ci": {
+    "lo": 0.916,
+    "hi": 0.984
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": -0.032,
+    "hi": 0.032,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.012,
+    "lo": -0.04,
+    "hi": 0.016,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "zephyr-beta",
+    "v0.1"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 473,
+   "paper8": 0.964,
+   "paper8_ci": {
+    "lo": 0.936,
+    "hi": 0.988
+   },
+   "coverage": 0.98,
+   "coverage_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "joint_energy": 0.992,
+   "joint_energy_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.012,
+    "lo": 0.0,
+    "hi": 0.032,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.016,
+    "lo": -0.024,
+    "hi": 0.056,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "7b-chat",
+    "7b-32k"
+   ]
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "index": 138,
+   "paper8": 0.968,
+   "paper8_ci": {
+    "lo": 0.944,
+    "hi": 0.988
+   },
+   "coverage": 0.976,
+   "coverage_ci": {
+    "lo": 0.956,
+    "hi": 0.996
+   },
+   "joint_energy": 0.996,
+   "joint_energy_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.02,
+    "lo": 0.004,
+    "hi": 0.04,
+    "resolved": true,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.008,
+    "lo": -0.02,
+    "hi": 0.04,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "0.5"
+   ],
+   "variants": [
+    "2-7b",
+    "2.5-0.5b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 478,
+   "paper8": 0.968,
+   "paper8_ci": {
+    "lo": 0.932,
+    "hi": 0.996
+   },
+   "coverage": 0.96,
+   "coverage_ci": {
+    "lo": 0.92,
+    "hi": 0.992
+   },
+   "joint_energy": 0.968,
+   "joint_energy_ci": {
+    "lo": 0.94,
+    "hi": 0.992
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.008,
+    "lo": -0.032,
+    "hi": 0.052,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.008,
+    "lo": -0.06,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-1b",
+    "3.1-8b"
+   ]
+  },
+  {
+   "pair": "google/gemma-2b-it | google/gemma-7b-it",
+   "index": 315,
+   "paper8": 0.976,
+   "paper8_ci": {
+    "lo": 0.936,
+    "hi": 1.0
+   },
+   "coverage": 0.976,
+   "coverage_ci": {
+    "lo": 0.96,
+    "hi": 0.992
+   },
+   "joint_energy": 0.972,
+   "joint_energy_ci": {
+    "lo": 0.94,
+    "hi": 0.996
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.004,
+    "lo": -0.036,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.028,
+    "hi": 0.0361,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "2.0",
+    "7.0"
+   ],
+   "variants": [
+    "1.0-2b",
+    "1.0-7b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 495,
+   "paper8": 0.976,
+   "paper8_ci": {
+    "lo": 0.9559,
+    "hi": 0.992
+   },
+   "coverage": 0.996,
+   "coverage_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "joint_energy": 0.956,
+   "joint_energy_ci": {
+    "lo": 0.908,
+    "hi": 0.992
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.04,
+    "lo": -0.088,
+    "hi": -0.004,
+    "resolved": true,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.02,
+    "lo": 0.0,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "3.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-3b",
+    "3-8b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 513,
+   "paper8": 0.976,
+   "paper8_ci": {
+    "lo": 0.952,
+    "hi": 0.996
+   },
+   "coverage": 0.992,
+   "coverage_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "joint_energy": 0.96,
+   "joint_energy_ci": {
+    "lo": 0.924,
+    "hi": 0.988
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.032,
+    "lo": -0.064,
+    "hi": -0.004,
+    "resolved": true,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.016,
+    "lo": -0.008,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3-8b",
+    "3.1-8b"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 588,
+   "paper8": 0.976,
+   "paper8_ci": {
+    "lo": 0.944,
+    "hi": 1.0
+   },
+   "coverage": 0.972,
+   "coverage_ci": {
+    "lo": 0.9359,
+    "hi": 1.0
+   },
+   "joint_energy": 0.992,
+   "joint_energy_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.02,
+    "lo": 0.0,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.004,
+    "lo": -0.0361,
+    "hi": 0.036,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "3.8",
+    "3.8"
+   ],
+   "variants": [
+    "mini-4k",
+    "3.5-mini"
+   ]
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 103,
+   "paper8": 0.98,
+   "paper8_ci": {
+    "lo": 0.94,
+    "hi": 1.0
+   },
+   "coverage": 0.988,
+   "coverage_ci": {
+    "lo": 0.964,
+    "hi": 1.0
+   },
+   "joint_energy": 0.98,
+   "joint_energy_ci": {
+    "lo": 0.944,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.008,
+    "lo": -0.02,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.008,
+    "lo": 0.0,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": true,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "10.7"
+   ],
+   "variants": [
+    "zephyr-beta",
+    "solar-10.7b"
+   ]
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index": 170,
+   "paper8": 0.98,
+   "paper8_ci": {
+    "lo": 0.96,
+    "hi": 0.996
+   },
+   "coverage": 0.98,
+   "coverage_ci": {
+    "lo": 0.96,
+    "hi": 0.996
+   },
+   "joint_energy": 0.996,
+   "joint_energy_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.016,
+    "lo": 0.0,
+    "hi": 0.036,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.0201,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "0.5",
+    "3.0"
+   ],
+   "variants": [
+    "2.5-0.5b",
+    "2.5-3b"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | openchat/openchat_3.5",
+   "index": 632,
+   "paper8": 0.98,
+   "paper8_ci": {
+    "lo": 0.96,
+    "hi": 0.996
+   },
+   "coverage": 0.992,
+   "coverage_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "joint_energy": 0.972,
+   "joint_energy_ci": {
+    "lo": 0.952,
+    "hi": 0.9881
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.02,
+    "lo": -0.036,
+    "hi": -0.008,
+    "resolved": true,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.012,
+    "lo": -0.004,
+    "hi": 0.028,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "v0.3",
+    "oc3.5"
+   ]
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | openchat/openchat-3.6-8b-20240522",
+   "index": 638,
+   "paper8": 0.98,
+   "paper8_ci": {
+    "lo": 0.944,
+    "hi": 1.0
+   },
+   "coverage": 0.984,
+   "coverage_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "joint_energy": 0.976,
+   "joint_energy_ci": {
+    "lo": 0.9359,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.008,
+    "lo": -0.06,
+    "hi": 0.044,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.004,
+    "lo": -0.044,
+    "hi": 0.052,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": true,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "chatqa-1.5",
+    "oc3.6-8b"
+   ]
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-1.1-7b-it",
+   "index": 231,
+   "paper8": 0.984,
+   "paper8_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "coverage": 0.912,
+   "coverage_ci": {
+    "lo": 0.856,
+    "hi": 0.964
+   },
+   "joint_energy": 0.952,
+   "joint_energy_ci": {
+    "lo": 0.9,
+    "hi": 0.996
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.04,
+    "lo": 0.0,
+    "hi": 0.084,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.072,
+    "lo": -0.128,
+    "hi": -0.024,
+    "resolved": true,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "2.0",
+    "7.0"
+   ],
+   "variants": [
+    "1.1-2b",
+    "1.1-7b"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 619,
+   "paper8": 0.984,
+   "paper8_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "coverage": 0.984,
+   "coverage_ci": {
+    "lo": 0.964,
+    "hi": 1.0
+   },
+   "joint_energy": 0.984,
+   "joint_energy_ci": {
+    "lo": 0.964,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": -0.012,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.016,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "10.7"
+   ],
+   "variants": [
+    "v0.1",
+    "solar-10.7b"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 628,
+   "paper8": 0.984,
+   "paper8_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "coverage": 0.988,
+   "coverage_ci": {
+    "lo": 0.968,
+    "hi": 1.0
+   },
+   "joint_energy": 0.992,
+   "joint_energy_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": 0.0,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.004,
+    "lo": -0.012,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "10.7"
+   ],
+   "variants": [
+    "v0.2",
+    "solar-10.7b"
+   ]
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 636,
+   "paper8": 0.984,
+   "paper8_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "coverage": 0.996,
+   "coverage_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "joint_energy": 0.984,
+   "joint_energy_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.012,
+    "lo": -0.048,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.012,
+    "lo": -0.012,
+    "hi": 0.048,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "10.7"
+   ],
+   "variants": [
+    "v0.3",
+    "solar-10.7b"
+   ]
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index": 107,
+   "paper8": 0.988,
+   "paper8_ci": {
+    "lo": 0.968,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 0.98,
+   "joint_energy_ci": {
+    "lo": 0.944,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.02,
+    "lo": -0.056,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.012,
+    "lo": 0.0,
+    "hi": 0.032,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.5",
+    "3.0"
+   ],
+   "variants": [
+    "2-1.5b",
+    "2.5-3b"
+   ]
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2b-it",
+   "index": 233,
+   "paper8": 0.988,
+   "paper8_ci": {
+    "lo": 0.972,
+    "hi": 1.0
+   },
+   "coverage": 0.988,
+   "coverage_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "joint_energy": 0.988,
+   "joint_energy_ci": {
+    "lo": 0.964,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": -0.032,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.02,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "2.0",
+    "2.0"
+   ],
+   "variants": [
+    "1.1-2b",
+    "1.0-2b"
+   ]
+  },
+  {
+   "pair": "google/gemma-2-9b-it | google/gemma-7b-it",
+   "index": 289,
+   "paper8": 0.988,
+   "paper8_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "coverage": 0.988,
+   "coverage_ci": {
+    "lo": 0.964,
+    "hi": 1.0
+   },
+   "joint_energy": 0.992,
+   "joint_energy_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": -0.024,
+    "hi": 0.036,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.032,
+    "hi": 0.024,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "9.0",
+    "7.0"
+   ],
+   "variants": [
+    "2-9b",
+    "1.0-7b"
+   ]
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 372,
+   "paper8": 0.988,
+   "paper8_ci": {
+    "lo": 0.968,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 0.996,
+   "joint_energy_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.004,
+    "lo": -0.012,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.012,
+    "lo": 0.0,
+    "hi": 0.032,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "grad-1048k",
+    "3-8b"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 549,
+   "paper8": 0.988,
+   "paper8_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "coverage": 0.972,
+   "coverage_ci": {
+    "lo": 0.928,
+    "hi": 1.0
+   },
+   "joint_energy": 0.972,
+   "joint_energy_ci": {
+    "lo": 0.924,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": -0.016,
+    "hi": 0.016,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.016,
+    "lo": -0.0601,
+    "hi": 0.016,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "14.0",
+    "3.8"
+   ],
+   "variants": [
+    "medium-128k",
+    "3.5-mini"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 576,
+   "paper8": 0.988,
+   "paper8_ci": {
+    "lo": 0.976,
+    "hi": 1.0
+   },
+   "coverage": 0.968,
+   "coverage_ci": {
+    "lo": 0.92,
+    "hi": 0.996
+   },
+   "joint_energy": 0.988,
+   "joint_energy_ci": {
+    "lo": 0.972,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.02,
+    "lo": -0.004,
+    "hi": 0.06,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.02,
+    "lo": -0.06,
+    "hi": 0.008,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "3.8",
+    "3.8"
+   ],
+   "variants": [
+    "mini-128k",
+    "3.5-mini"
+   ]
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2-7B-Instruct",
+   "index": 105,
+   "paper8": 0.992,
+   "paper8_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "coverage": 0.968,
+   "coverage_ci": {
+    "lo": 0.916,
+    "hi": 1.0
+   },
+   "joint_energy": 0.96,
+   "joint_energy_ci": {
+    "lo": 0.916,
+    "hi": 0.992
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.008,
+    "lo": -0.068,
+    "hi": 0.056,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.024,
+    "lo": -0.076,
+    "hi": 0.0121,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.5",
+    "7.0"
+   ],
+   "variants": [
+    "2-1.5b",
+    "2-7b"
+   ]
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-7b-it",
+   "index": 234,
+   "paper8": 0.992,
+   "paper8_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "coverage": 0.992,
+   "coverage_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "joint_energy": 0.992,
+   "joint_energy_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": -0.016,
+    "hi": 0.016,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.012,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "2.0",
+    "7.0"
+   ],
+   "variants": [
+    "1.1-2b",
+    "1.0-7b"
+   ]
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 371,
+   "paper8": 0.992,
+   "paper8_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "coverage": 0.996,
+   "coverage_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "joint_energy": 0.992,
+   "joint_energy_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": -0.004,
+    "lo": -0.016,
+    "hi": 0.008,
+    "resolved": false,
+    "sign": "-"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.004,
+    "lo": -0.008,
+    "hi": 0.02,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "3.0"
+   ],
+   "variants": [
+    "grad-1048k",
+    "3.2-3b"
+   ]
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 373,
+   "paper8": 0.992,
+   "paper8_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "coverage": 0.996,
+   "coverage_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": 0.0,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.004,
+    "lo": -0.008,
+    "hi": 0.016,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "grad-1048k",
+    "3.1-8b"
+   ]
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 382,
+   "paper8": 0.992,
+   "paper8_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "coverage": 0.984,
+   "coverage_ci": {
+    "lo": 0.968,
+    "hi": 0.996
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.016,
+    "lo": 0.004,
+    "hi": 0.032,
+    "resolved": true,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.008,
+    "lo": -0.024,
+    "hi": 0.008,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": true,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "grad-1048k",
+    "chatqa-1.5"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 477,
+   "paper8": 0.992,
+   "paper8_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "coverage": 0.976,
+   "coverage_ci": {
+    "lo": 0.936,
+    "hi": 1.0
+   },
+   "joint_energy": 0.996,
+   "joint_energy_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.02,
+    "lo": -0.008,
+    "hi": 0.06,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.016,
+    "lo": -0.06,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-1b",
+    "3-8b"
+   ]
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | openchat/openchat-3.6-8b-20240522",
+   "index": 383,
+   "paper8": 0.996,
+   "paper8_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "coverage": 0.996,
+   "coverage_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": 0.0,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": -0.012,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": true,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "grad-1048k",
+    "oc3.6-8b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 488,
+   "paper8": 0.996,
+   "paper8_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.004,
+    "lo": 0.0,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-1b",
+    "oc3.6-8b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 539,
+   "paper8": 0.996,
+   "paper8_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.004,
+    "lo": 0.0,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "+"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.1-8b",
+    "oc3.6-8b"
+   ]
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2-9b-it",
+   "index": 232,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "2.0",
+    "9.0"
+   ],
+   "variants": [
+    "1.1-2b",
+    "2-9b"
+   ]
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2-9b-it",
+   "index": 260,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "9.0"
+   ],
+   "variants": [
+    "1.1-7b",
+    "2-9b"
+   ]
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2b-it",
+   "index": 261,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 0.988,
+   "coverage_ci": {
+    "lo": 0.972,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.012,
+    "lo": 0.0,
+    "hi": 0.028,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.012,
+    "lo": -0.028,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "2.0"
+   ],
+   "variants": [
+    "1.1-7b",
+    "1.0-2b"
+   ]
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-7b-it",
+   "index": 262,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 0.98,
+   "coverage_ci": {
+    "lo": 0.952,
+    "hi": 1.0
+   },
+   "joint_energy": 0.984,
+   "joint_energy_ci": {
+    "lo": 0.956,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": -0.032,
+    "hi": 0.04,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.02,
+    "lo": -0.048,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "7.0",
+    "7.0"
+   ],
+   "variants": [
+    "1.1-7b",
+    "1.0-7b"
+   ]
+  },
+  {
+   "pair": "google/gemma-2-9b-it | google/gemma-2b-it",
+   "index": 288,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": true,
+   "same_arch": false,
+   "same_tokenizer": true,
+   "params_b": [
+    "9.0",
+    "2.0"
+   ],
+   "variants": [
+    "2-9b",
+    "1.0-2b"
+   ]
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 370,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 0.992,
+   "coverage_ci": {
+    "lo": 0.98,
+    "hi": 1.0
+   },
+   "joint_energy": 0.996,
+   "joint_energy_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": 0.0,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.008,
+    "lo": -0.02,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "1.0"
+   ],
+   "variants": [
+    "grad-1048k",
+    "3.2-1b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 487,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "1.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-1b",
+    "chatqa-1.5"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 505,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 0.996,
+   "coverage_ci": {
+    "lo": 0.988,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.004,
+    "lo": 0.0,
+    "hi": 0.012,
+    "resolved": false,
+    "sign": "+"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": -0.004,
+    "lo": -0.012,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "-"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "3.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-3b",
+    "chatqa-1.5"
+   ]
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 506,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "3.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.2-3b",
+    "oc3.6-8b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 522,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3-8b",
+    "chatqa-1.5"
+   ]
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 523,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3-8b",
+    "oc3.6-8b"
+   ]
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 538,
+   "paper8": 1.0,
+   "paper8_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "coverage": 1.0,
+   "coverage_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "joint_energy": 1.0,
+   "joint_energy_ci": {
+    "lo": 1.0,
+    "hi": 1.0
+   },
+   "d_joint_minus_coverage": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "d_coverage_minus_paper8": {
+    "delta": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "resolved": false,
+    "sign": "0"
+   },
+   "same_base": false,
+   "same_lineage": true,
+   "same_org": false,
+   "same_arch": true,
+   "same_tokenizer": true,
+   "params_b": [
+    "8.0",
+    "8.0"
+   ],
+   "variants": [
+    "3.1-8b",
+    "chatqa-1.5"
+   ]
+  }
+ ]
+}

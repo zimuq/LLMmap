@@ -1,0 +1,64 @@
+{
+ "schema": "d015-family-rollup-v1",
+ "k": 8,
+ "n_families": 8,
+ "weighting": "unweighted mean of member pairs within a family; each family is one row regardless of size. A DISPLAY choice, not a claim that hard_subset should weight families equally (D015/S6).",
+ "rows": [
+  {
+   "lineage": "llama-3",
+   "n_pairs": 21,
+   "paper8": 0.9863,
+   "coverage": 0.9905,
+   "joint_energy": 0.9878
+  },
+  {
+   "lineage": "mistral-7b",
+   "n_pairs": 15,
+   "paper8": 0.9515,
+   "coverage": 0.9672,
+   "joint_energy": 0.9635
+  },
+  {
+   "lineage": "phi-3",
+   "n_pairs": 10,
+   "paper8": 0.9216,
+   "coverage": 0.8964,
+   "joint_energy": 0.9256
+  },
+  {
+   "lineage": "gemma",
+   "n_pairs": 10,
+   "paper8": 0.9928,
+   "coverage": 0.9824,
+   "joint_energy": 0.988
+  },
+  {
+   "lineage": "qwen2",
+   "n_pairs": 6,
+   "paper8": 0.966,
+   "coverage": 0.9753,
+   "joint_energy": 0.9727
+  },
+  {
+   "lineage": "falcon-3",
+   "n_pairs": 1,
+   "paper8": 0.804,
+   "coverage": 0.8,
+   "joint_energy": 0.832
+  },
+  {
+   "lineage": "granite-3",
+   "n_pairs": 1,
+   "paper8": 0.948,
+   "coverage": 0.956,
+   "joint_energy": 0.96
+  },
+  {
+   "lineage": "llama-2",
+   "n_pairs": 1,
+   "paper8": 0.964,
+   "coverage": 0.98,
+   "joint_energy": 0.992
+  }
+ ]
+}

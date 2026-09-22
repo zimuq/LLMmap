@@ -1,0 +1,60 @@
+{
+ "schema": "d015-s0-v1",
+ "n_pairs": 65,
+ "model_list_stored_in": {
+  "D009": true,
+  "D010": false,
+  "D012": false,
+  "D013": false,
+  "D014": false
+ },
+ "method": "verified by construction + shape, not by stored metadata (P1/S0): all sources derive the index from near_relative_pairs(models) with models read from results/D008/selection.json, row order sorted(hard_pairs)",
+ "shapes": {
+  "D009": {
+   "n_cnt_pair": 160,
+   "shape": [
+    65,
+    25
+   ]
+  },
+  "D010": {
+   "n_cnt_pair": 45,
+   "shape": [
+    65,
+    25
+   ]
+  },
+  "D012": {
+   "n_cnt_pair": 120,
+   "shape": [
+    65,
+    25
+   ]
+  },
+  "D013": {
+   "n_cnt_pair": 120,
+   "shape": [
+    65,
+    25
+   ]
+  },
+  "D014": {
+   "n_cnt_pair": 520,
+   "shape": [
+    65,
+    25
+   ]
+  }
+ },
+ "direction_counts": {
+  "up": {
+   "8": 28,
+   "1": 0
+  },
+  "down": {
+   "8": 20,
+   "1": 0
+  }
+ },
+ "wall_s": 1.0
+}
