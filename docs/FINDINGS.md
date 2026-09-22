@@ -666,5 +666,107 @@ carry no information (they select the identical single query by
 construction, D010/R2) — a reporting trap this D and D013/F3 have now both
 hit independently; worth a standing caveat if `k`=1 is ever tabulated again.
 
+## Reference — aggregate accuracy across k=1..8, γ=0.1 (design-side consolidation, 2026-09-22)
+
+**Not a new D — a reorganization of already-published per-k means** from
+D009 (`paper8`, `cvar_max`=coverage), D010 (`joint_energy`), reproduced by
+independent recomputation from `results/D009/runs.json` and
+`results/D010/metrics_by_k.json`. Requested by the human to see which
+metric actually improves and by how much, across the full budget range.
+
+**mean top-1 is the only metric that is positive at every single k.**
+`joint energy` beats `paper8` at all 8 k values, +1.45pp to +4.74pp
+(mean ≈ +2.7pp), at the project's headline k=8: **.8452 → .8757, +3.05pp**.
+Against `coverage`, the lead is positive at 6 of 8 k (two near-zero dips at
+k=4/6, −0.19pp/−0.24pp, both far inside the 5-seed run range — selection
+noise, not a reversal): **.8519 → .8757 at k=8, +2.38pp**.
+
+| k | paper8 | coverage(γ=.1) | joint energy(γ=.1) | joint−paper8 | joint−coverage |
+|---|---:|---:|---:|---:|---:|
+| 1 | .6093 | .6333 | .6333 | +2.40pp | 0 |
+| 2 | .7395 | .7585 | .7725 | +3.30pp | +1.40pp |
+| 3 | .7602 | .7816 | .8076 | +4.74pp | +2.60pp |
+| 4 | .8052 | .8231 | .8212 | +1.60pp | −0.19pp |
+| 5 | .8050 | .8102 | .8301 | +2.51pp | +1.99pp |
+| 6 | .8294 | .8463 | .8439 | +1.45pp | −0.24pp |
+| 7 | .8461 | .8623 | .8672 | +2.11pp | +0.49pp |
+| 8 | .8452 | .8519 | .8757 | +3.05pp | +2.38pp |
+
+**worst-class and hard-subset do not support a clean headline number.**
+worst-class swings from −5.6pp to +20.0pp against `paper8` depending on k,
+with within-condition 5-seed ranges (0.16–0.36) larger than most of the
+deltas — sign flips at k=4/5/6 are noise, not a real dip, per this
+project's standing worst-class caution (A6, 25 test configs). hard-subset
+moves by at most +0.5pp at any k — real but small, and D015 already showed
+even that small aggregate move hides real per-pair redistribution
+(28 up/20 down at k=8).
+
+**For any future "how much did the method improve" question: quote mean
+top-1, at the k of interest, against both `paper8` and `coverage` — not
+worst-class (too noisy) and not hard-subset alone (too compressed, and
+masks redistribution per D015).**
+
+## Design-side check — does proxy separability track real classifier error? (2026-09-22)
+
+**The human's question:** if low-separability pairs (what the tensor/CVaR
+objective targets) do not correspond to high-error pairs (what actually
+matters), shrinking γ further just optimizes a misaligned proxy harder.
+Checked from already-computed results — **no new tensor computation was
+run**; this cross-references two already-published per-pair files:
+`results/D008/hard_subset_ceiling.json` (per-pair proxy accuracy over the
+candidate pool, computed from the frozen `S_energy` tensor: `median_query` =
+median 2-way test accuracy over all 259 queries for that pair; `best_build_query`
+= test accuracy of the tensor's own argmax-scored query for that pair;
+`oracle` = best-of-259 on test, **optimistic by construction**, D008's own
+docstring — treated as the least trustworthy of the three) against
+`results/D015/per_pair_k8.json`'s trained per-pair accuracy, both already
+computed and reviewed. A Spearman rank correlation across the 65 structural
+pairs (not a new statistic from raw tensor/corpus data — an off-the-shelf
+correlation between two already-existing derived files).
+
+**Moderate-to-strong positive correlation, strongest exactly where CVaR
+actually looks.** `median_query` (proxy) vs. trained `paper8` accuracy:
+**ρ = 0.81**; vs. trained `coverage`: 0.76; vs. trained `joint energy`: 0.85.
+`best_build_query` (the tensor's own top pick) correlates more weakly
+(0.68–0.72) — the pair's *typical* separability across the pool tracks real
+difficulty better than the tensor's single favorite query does. **At the
+tail — where CVaR/γ actually operates — the agreement is close to exact**:
+the proxy's 4 hardest pairs by `median_query` (Phi-3-medium-128k/4k,
+Mistral-v0.2/v0.3, Phi-3-mini-128k/4k, Falcon3-10B/7B) are the same 4 pairs
+in the trained-`paper8` top-4 hardest, just reordered.
+
+**But mid-ranking agreement is noticeably weaker, in both directions** —
+this is the part that bears on "would shrinking γ further help or just
+chase proxy noise." Two named examples: `gemma-1.1-2b↔gemma-2b` ranks
+12th-hardest by the proxy but only 41st by trained accuracy (proxy
+*overstates* its difficulty); `Phi-3-medium-4k↔Phi-3.5-mini-instruct` ranks
+8th-hardest when trained but only 30th by the proxy (proxy *understates*
+it). Several more pairs disagree by 20+ ranks out of 65 in the middle of
+the distribution.
+
+**Reading for C1/γ:** this is reassuring for the *current* default (γ=0.1
+already concentrates on a small tail where the proxy-target correlation is
+close to exact) but is a real caution against pushing γ substantially
+smaller expecting the same alignment to hold — CVaR would start reaching
+into the middle-ranked pairs, exactly where this check finds the proxy and
+the trained classifier disagree most. **Not a green light or a red light
+for "go smaller" — a specific, named risk if it is tried**, with the
+concrete failure mode (which pairs would be mis-prioritized) now visible
+rather than hypothetical.
+
+**Limits, stated plainly:** n=65 (the structural set only, not all 666
+pairs); one specific pair of proxy statistics (`median_query`,
+`best_build_query`), not the literal CVaR-tail objective value the
+selection algorithms actually optimize; a single k reference point
+(k=8's trained numbers) against an aggregate-over-259-queries proxy, not a
+matched-budget comparison; no significance test on the correlation itself
+(n=65 rank correlation, not bootstrapped). **A rigorous version — the
+actual tensor separability statistic vs. trained error, across all 666
+pairs, with a proper interval — would require reading the raw `S_energy`
+tensor directly and is TACC's work, not design-side's**; this check used
+only already-published per-pair result files. Flagged as a candidate D if
+the human wants the authoritative version before relying on this for a
+γ decision.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

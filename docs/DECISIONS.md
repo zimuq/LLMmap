@@ -977,6 +977,40 @@ misattributed in R, corrected
   Decided by: design-side, routine call (closure; correction follows
   standing project discipline of verifying claims against source before
   they propagate, same as the D012 correction earlier this session).
+
+[2026-09-22] Two design-side checks recorded in FINDINGS.md: k=1..8
+aggregate reference table; proxy-vs-trained separability correlation
+  Decision: (1) Consolidated the already-published per-k aggregate means
+  (paper8/coverage/joint energy, gamma=0.1) from D009/D010 into one
+  reference table in FINDINGS.md, at the human's request. mean top-1 is
+  the only metric positive at every k=1..8 (+1.45 to +4.74pp vs paper8,
+  +3.05pp at k=8); worst-class and hard-subset do not support a clean
+  headline (worst-class noise exceeds most deltas; hard-subset moves
+  <=0.5pp and D015 already showed that small move hides redistribution).
+  Pure arithmetic on already-published means, no new experiment.
+  (2) Checked the human's question -- does low proxy separability track
+  high trained classifier error, or would shrinking gamma further just
+  optimize a misaligned proxy -- by cross-referencing two already-computed
+  per-pair files (results/D008/hard_subset_ceiling.json's tensor-derived
+  proxy accuracy, results/D015/per_pair_k8.json's trained accuracy) via a
+  Spearman rank correlation over the 65 structural pairs. No raw tensor
+  read; both inputs were already-published, already-reviewed result
+  files -- a cross-reference of existing artifacts, not a new
+  corpus/tensor statistic. Result: moderate-strong agreement (rho 0.76-0.85
+  for median_query vs trained), strongest exactly at the tail CVaR
+  targets (proxy's top-4 hardest = trained's top-4 hardest, reordered),
+  weaker in the mid-ranking (named outliers both directions). Read as
+  reassuring for the current gamma=0.1 default, a specific named caution
+  against pushing gamma substantially smaller. Explicitly flagged as
+  descriptive with stated limits (n=65 not 666, a proxy-accuracy stat not
+  the literal CVaR-tail objective value, no CI on the correlation) --
+  the rigorous all-666-pair version needs the raw S_energy tensor and is
+  TACC's work if the human wants it authoritative before acting on it.
+  Decided by: design-side, routine call (both are descriptive checks on
+  already-existing, already-reviewed result files, not new experiments
+  or new tensor/corpus computation; recorded per standing practice of
+  writing design-side findings into FINDINGS.md when they bear on an
+  open methodological question, here C1/gamma).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
