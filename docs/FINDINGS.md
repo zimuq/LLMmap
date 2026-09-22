@@ -490,18 +490,27 @@ same open item as D010/R9's k=8-persistence question.
 
 ## D012 — γ<1 is decisively required for JointGreedy — and not for the reason "CVaR helps" implies
 
-**The cleanest, most decisive result this project has produced.**
+**One of the cleanest, most decisive results this project has produced —
+decisive as a coarse effect, not literally exceptionless.**
 γ=1.0 (mean aggregation) loses to every `γ<1` value tested (0.25, 0.1,
-0.05) at **all 8 `k` values**, on every one of the four
-`METHOD.md §8` metrics, every bootstrap CI excluding zero, every gap
-exceeding the 5-seed training-variance range. D008, D009, D010, and
-D011 each hit a resolution wall somewhere in their own comparisons —
-this is the first one that doesn't, anywhere. The pre-registered
-hypothesis going in (that `JointGreedy`'s set-level interaction might
-already implicitly favor hard pairs under mean-aggregation, making γ
-*less* necessary than it was for `GreedyCover`) is not just wrong — γ
-matters *more* here than D008's own weaker, proxy-only evidence ever
-showed it mattering for `GreedyCover`.
+0.05) across almost the entire `k=1..8` × four-metric grid, most gaps'
+CIs excluding zero and exceeding the 5-seed training-variance range.
+**Correction, 2026-09-22:** the original wording here and in D012's `## R`
+headline said "every `k`, every metric, every CI excluding zero" without
+qualification; D012/R3's own table already reported the true count —
+1 of 24 mean-top-1 comparisons (γ=1.0 vs 0.25 at `k`=1) is INCONCLUSIVE,
+not resolved, and that same cell's worst3-class and hard-subset deltas
+also have CIs spanning zero. See the dated addendum in D012's `## Review`.
+This does not reverse the finding — it is still true at 23 of 24 mean-top-1
+cells and the overall pattern is large and consistent — but "every" was
+false as literally written. D008, D009, D010, and D011 each hit a
+resolution wall somewhere in their own comparisons; D012 hits it at only
+one cell instead of pervasively. The pre-registered hypothesis going in
+(that `JointGreedy`'s set-level interaction might already implicitly
+favor hard pairs under mean-aggregation, making γ *less* necessary than
+it was for `GreedyCover`) is not just wrong — γ matters *more* here than
+D008's own weaker, proxy-only evidence ever showed it mattering for
+`GreedyCover`.
 
 **The mechanism is sharper than "CVaR-weighting helps," and matters for
 how this gets written up.** γ=1.0's own selection objective — the thing

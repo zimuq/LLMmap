@@ -870,6 +870,38 @@ frontier finding; D6 opened
   default 0.1 in the flat region). C2 (k budget) marked done de facto --
   every D since D008 reports the full k=1..8 curve.
   Decided by: human (sec5.2 wording); design-side (edit, bookkeeping).
+
+[2026-09-22] Retrospective hard-pairs review; D012's "every k, every
+metric" headline corrected; hard-pair definitions clarified
+  Decision: per the human's request, ran a retrospective evidence audit
+  of D010-D014 plus a hard-pair-definition proposal
+  (docs/REVIEW-2026-09-22-hard-pairs.md). Two corrections applied as
+  addenda, not new experiments: (1) D012's `## R` headline and this
+  project's own D012 Review/FINDINGS entry claimed gamma=1.0 loses to
+  every sub-1 gamma "at every k, every metric, every CI excluding zero" --
+  D012/R3's own table already showed 1 of 24 mean-top1 comparisons
+  (gamma=1.0 vs 0.25, k=1) is INCONCLUSIVE, confirmed against
+  results/D012/metrics_by_gamma_k.json. Dated addendum appended to
+  D012's `## Review`; FINDINGS.md's D012 entry corrected. C1's
+  substantive recommendation (gamma<1 required, 0.1 default) is
+  unaffected -- only the literal-universality phrasing was wrong.
+  (2) D012/D014's "mechanism confirmed" language for D010's k=8
+  interaction claim and D011's "32/32 pairs succeed" framing were found
+  to already carry appropriate hedges in FINDINGS/DECISIONS from prior
+  passes; no further correction needed there.
+  Also clarified for future use, not yet adopted: three distinct
+  "hard pair" objects -- the existing 65-pair structural near-relative
+  set N (metadata-defined, used since D008/P1 specifically to avoid
+  scoring CVaR against a hard-subset definition drawn from its own
+  tensor), a prospectively-frozen empirical hard set H_ref (not yet
+  built), and the active optimization tail T(A,gamma) (diagnostic only,
+  not an evaluation population -- do not equate gamma with the fraction
+  of genuinely hard pairs). No METHOD change; adopting H_ref as a
+  primary endpoint would be a rule-(d) escalation if ever proposed.
+  Decided by: design-side, routine call (correcting a verified factual
+  overclaim follows this project's standing discipline of fixing
+  reporting-convention errors on sight; the hard-pair typology is
+  recorded for future reference, not adopted as a METHOD change).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
