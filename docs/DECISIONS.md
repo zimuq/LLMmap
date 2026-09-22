@@ -925,6 +925,27 @@ metric" headline corrected; hard-pair definitions clarified
   Decided by: human (approve drafting this D now); design-side (D015's
   scope, steps, and gate -- routine call, no invariant or open
   DECISIONS item touched beyond what's already logged above).
+
+[2026-09-22] D015/P1 approved in full; execution note added for TACC
+  Decision: approved TACC's P1 (docs/plans/D015-P1.md) without
+  amendments. Call 1 (include D014's 13 extra (algorithm, gamma) cells
+  in S3's curve, zero new compute, labelled by source) approved --
+  D014 postdating D015's stated deps is a drafting-order artifact, not
+  a scope limit. F1-F4 accepted as proposed. F3 is the substantive
+  finding: the aggregate effect being decomposed (+0.41pp, joint vs
+  coverage at k=8) is only ~13 trace-flips across 3,250 decisions, so
+  no single pair can move by less than 2pp -- an order of magnitude
+  coarser than the effect. "Spread vs concentrated" is therefore
+  unanswerable at 25 test configs; "does any pair get worse"
+  (redistribution) remains answerable and is what R will lead with.
+  Flagged for the supervisor-deck use case this D serves.
+  Per the human's instruction this session: added an execution note
+  (not a change to S1-S6) telling TACC to run experiments/d015_per_pair.py
+  directly on a login node rather than through the SLURM queue -- 0 GPU,
+  minutes of CPU, no reason to wait in a scheduled-job queue.
+  Decided by: design-side, routine call (approval; no invariant or open
+  DECISIONS item touched); execution-queueing note relayed verbatim
+  from the human.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
