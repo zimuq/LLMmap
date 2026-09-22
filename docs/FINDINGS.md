@@ -617,5 +617,54 @@ ablation axis" should go: the axis is not linear, its onset moves with how
 much data selection sees, and `GreedyCover`'s fine structure is not
 established. Replacement wording is proposed and awaits the human.
 
+## D015 — The `hard_subset` gain hides real backward movement on a third of the pairs
+
+**A tiny aggregate number was masking a redistribution, and it was real.**
+Breaking `hard_subset`'s single averaged number into its 65 pair-level
+components (joint energy vs. coverage, `k`=8) shows the reported +0.41pp
+aggregate gain is actually **28 pairs improving, 20 getting worse, 17
+unchanged** — gross movement (+0.544/−0.276) three times the net. `coverage`
+vs. `paper8` is the same shape (28 up/21 down/16 flat). **A metric that reads
+as "improved" can have a third of its structural near-relative pairs doing
+worse** — a genuine finding about what an unweighted 65-pair mean can hide,
+not a defect in the selection methods themselves.
+
+**Pre-registered before any table existed (P1/F3): "spread vs. concentrated"
+is unanswerable at this resolution, and it was right.** The effect being
+decomposed is worth only ~13 individual trace-flips across 3,250 decisions —
+no single pair can move by less than 2pp, an order of magnitude coarser than
+the aggregate. The redistribution question ("does any pair get worse") stayed
+answerable and is what this D actually delivers; "most pairs improved a
+little" was correctly flagged as an artifact the instrument cannot render,
+before it could be mistaken for a result.
+
+**Independent corroboration for the two previously-named hard pairs:**
+`Falcon3-10B/7B` and `Phi-3-medium-128k/4k` rank 1st and 2nd hardest under
+`paper8`, `coverage`, **and** `joint energy` independently — three different
+query sets agree, plus two sources outside this corpus entirely (D001's
+AUC statistic on the paper's own shipped artifact; D008's tensor oracle).
+Neither is a fine-tune derivation pair — both have an empty `base` field;
+they are same-generation siblings released by their org, not parent/child.
+
+**A correction, caught in post-hoc review, worth recording as a process
+lesson.** `## R`'s original headline example — "the project's named hardest
+pair is 11.6pp worse under coverage than paper8" — attached that resolved
+delta to the wrong pair. It belongs to a different, third-ranked pair
+(`Phi-3-medium-128k` vs. `Phi-3-mini-4k`, cross-size, not the same-size
+sibling pair named since D001); the actually-named-hardest pair's own
+coverage-vs-paper8 delta (−0.056) does not resolve. A prose transcription
+slip, not a data or join bug — verified against the raw per-pair JSON, all
+other headline numbers reproduced exactly on independent recomputation. The
+corrected, still-real claim: `coverage` is resolvably worse than `paper8` on
+6 of 65 structural pairs at `k`=8, just not on the specific pair this project
+has repeatedly pointed to as hardest.
+
+**Consequence for future reporting.** Any writeup quoting `hard_subset`
+should quote this redistribution alongside it — the number alone overclaims
+uniform improvement. `k`=1 comparisons between `coverage` and `joint energy`
+carry no information (they select the identical single query by
+construction, D010/R2) — a reporting trap this D and D013/F3 have now both
+hit independently; worth a standing caveat if `k`=1 is ever tabulated again.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

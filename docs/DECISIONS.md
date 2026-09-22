@@ -946,6 +946,37 @@ metric" headline corrected; hard-pair definitions clarified
   Decided by: design-side, routine call (approval; no invariant or open
   DECISIONS item touched); execution-queueing note relayed verbatim
   from the human.
+
+[2026-09-22] D015 closed -- redistribution confirmed; one headline pair
+misattributed in R, corrected
+  Decision: D015 marked CLOSED. Core finding CONFIRMED by independent
+  recomputation from results/D015/per_pair_k8.json: the +0.41pp
+  hard_subset gain (joint energy vs coverage, k=8) decomposes into 28
+  pairs up / 20 down / 17 flat (gross +0.544/-0.276, net +0.0041); a
+  third of the near-relative pairs move backward under a metric that
+  reads as uniformly improving. coverage vs paper8 is the same shape
+  (28/21/16). "Spread vs concentrated" remains unanswerable at 25 test
+  configs (P1/F3, pre-registered) -- the resolution floor is 2pp per
+  pair, an order of magnitude coarser than the effect. The two named
+  pairs (Falcon3-10B/7B, Phi-3-medium-128k/4k) rank 1st/2nd hardest
+  under paper8, coverage, AND joint energy independently -- cross-method
+  corroboration that they are hard regardless of selection algorithm.
+  Correction (post-hoc Review, design-side, verified against the raw
+  JSON): R2/R10's headline example attributed a resolved -0.116 delta
+  to "the hardest pair" (Phi-3-medium-128k/medium-4k); that delta
+  actually belongs to a different, third-ranked pair (Phi-3-medium-128k
+  vs Phi-3-mini-4k, a cross-size pair). The true named-hardest pair's
+  own coverage-vs-paper8 delta is -0.056 and does not resolve (CI spans
+  zero). A prose transcription slip in TACC's R, not a join/indexing bug
+  -- the underlying per-pair data is internally consistent and S0/R4's
+  indexing check is unaffected. All other headline numbers in R
+  (redistribution counts, rank table, gamma curve) independently
+  reproduced exactly. FINDINGS.md/PLAN.md updated with the corrected
+  framing; a process note (not a new D) left for TACC about round-trip
+  checks between prose and JSON in future per-item reports.
+  Decided by: design-side, routine call (closure; correction follows
+  standing project discipline of verifying claims against source before
+  they propagate, same as the D012 correction earlier this session).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
