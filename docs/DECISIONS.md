@@ -902,6 +902,29 @@ metric" headline corrected; hard-pair definitions clarified
   overclaim follows this project's standing discipline of fixing
   reporting-convention errors on sight; the hard-pair typology is
   recorded for future reference, not adopted as a METHOD change).
+
+[2026-09-22] D015 drafted -- per-pair decomposition of hard_subset
+  Decision: drafted D015 (docs/D015.md), human-approved
+  ("2的提案非常合理,可以立刻写D"). Breaks the single hard_subset number
+  into its 65 per-pair components for paper8/coverage/joint energy at
+  k=1,8, reading only already-saved per_hard_pair arrays from
+  D009/D010/D012/D013 (I6) -- zero new training, selection, or
+  generation. Confirmed before drafting (descriptive metadata check,
+  not a tensor/corpus statistic): the two previously-named hard pairs
+  (Falcon3-10B/7B, Phi-3-medium-128k/4k) are same-lineage siblings, not
+  derivation pairs -- both have an empty `base` field in
+  results/D001/model_metadata.csv; they match only on the `lineage` tag.
+  Of the full 65 structural pairs, 6 also share a literal `base` field
+  (true shared-parent fine-tunes), and all 6 are a subset of the 65
+  same-lineage pairs in this dataset, not a separate category. Explicitly
+  out of scope for D015: constructing H_ref (a prospective frozen
+  empirical hard set) -- that remains a future, separate human decision.
+  Gate set to REVIEW per CLAUDE.md default, though cost is ~0 GPU time;
+  the risk is in bookkeeping (pair-index consistency across four source
+  files) and framing, not compute.
+  Decided by: human (approve drafting this D now); design-side (D015's
+  scope, steps, and gate -- routine call, no invariant or open
+  DECISIONS item touched beyond what's already logged above).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
