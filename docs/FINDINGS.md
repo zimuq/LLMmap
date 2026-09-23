@@ -768,5 +768,69 @@ only already-published per-pair result files. Flagged as a candidate D if
 the human wants the authoritative version before relying on this for a
 γ decision.
 
+## Design-side check — reformulating hard_subset: worst-pair, tail-CVaR, and hard-model-restricted top-1 (2026-09-22)
+
+**Motivation.** The two-logit-restricted `hard_subset` mean (METHOD §8) is
+neither the worst pair, a tail average, nor the true 37-way accuracy on the
+models that are actually hard — all three flaws were named in
+`docs/REVIEW-2026-09-22-hard-pairs.md` §8 and confirmed with concrete
+numbers the same day. The human asked whether the metrics that fix each
+flaw can be computed from already-run data. **Yes, all three, at k=8, from
+`results/D015/per_pair_k8.json` and the already-stored `per_model` arrays
+in `results/D009/runs.json`/`results/D010/metrics_by_k.json` — no new
+tensor read, no new training, no new selection.**
+
+**(1) Worst pair — min instead of mean, same 2-way-restricted values D015
+already has.** Averaging over 65 pairs was hiding a real, sizeable spread:
+
+| | worst pair (min of 65) | tail mean, γ=0.10 (worst 6) | tail mean, γ=0.25 (worst 16) | full mean (65) |
+|---|---:|---:|---:|---:|
+| paper8 | .712 | .844 | .900 | .964 |
+| coverage | **.656** | **.818** | **.895** | .964 |
+| joint energy | **.732** | **.853** | **.911** | .968 |
+
+At the worst pair, `coverage` is *worse than paper8* (−5.6pp) while `joint
+energy` is best (+2.0pp over paper8) — a **7.6pp spread between methods**,
+15–19× the ≈0.4–0.5pp the flat `hard_subset` mean showed. The tail means
+(γ=0.10/0.25) tell the same story at smaller magnitude. This ranking —
+joint energy > paper8 > coverage — was invisible in the aggregate.
+
+**(2) True 37-way top-1 accuracy, restricted to the models that are
+actually hard, not a 2-way-restricted proxy.** Using `per_model` (already
+stored per run, never before read this way): restricting to the 10 models
+in the 6 hardest structural pairs (by `paper8`, k=8) —
+
+| | hard-models mean (n=10) | all-37 mean_top1 | gap |
+|---|---:|---:|---:|
+| paper8 | .720 | .845 | **−12.5pp** |
+| coverage | .750 | .852 | −10.2pp |
+| joint energy | **.803** | .876 | **−7.3pp** |
+
+**The gap between hard models and the population shrinks as the method
+improves (−12.5 → −10.2 → −7.3pp), and the improvement on hard models
+alone (paper8→joint: +8.3pp) is larger than the overall improvement
+(+3.0pp).** The method's real benefit is concentrated on the hard cases —
+a defensible, quantified version of "helps with hard pairs" that
+`hard_subset` could never show, because it never measured true deployment
+(37-way) accuracy at all. Checked for robustness with a looser cutoff (21
+models from the 16 hardest pairs, γ=0.25): same direction, smaller
+magnitude (gap −5.6 → −5.4 → −5.1pp) — the effect is real and concentrates
+most strongly in the genuinely hardest tier, not an artifact of one cutoff
+choice.
+
+**Not yet done, and would need a fresh reason to prioritize:** the k=1
+version; backfilling this for D012/D013's γ grid and D014's resampled
+arms; extending "hard models" to the full 33-of-37 models touching *any*
+near-relative pair (too inclusive to be useful — nearly the whole
+population, by I1's own design). None of these need new experiments
+either; they are the same read-only extraction, just not yet run.
+
+**Consequence for METHOD.md §8 — flagged, not applied.** This suggests
+`hard_subset` should be supplemented or replaced by (a) a worst-pair or
+tail-CVaR statistic over the 65 pairs, and/or (b) true top-1 restricted to
+the hard-pair models, rather than the current two-logit-restricted mean.
+This is a METHOD revision (`CLAUDE.md` rule (d)) and needs the human's
+explicit sign-off before `METHOD.md §8`'s table changes.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

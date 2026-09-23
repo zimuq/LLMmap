@@ -168,6 +168,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
 | D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. | 🅿️ noted for writeup |
 | D6 | **`METHOD.md` §7 revision, 2026-09-13, from D011.** §7 lists "the identifiability frontier" as a standalone deliverable. D011 found the tier meant to fill that role (D008's T2, 32/37 pairs) is an estimator artifact — a per-pair oracle that scores *worse than a random query* on this population, not a real property of the model universe. | ✅ **Decided 2026-09-14 by the human — revised.** §7 item 2 now states the strict pool-coverage frontier is empty and names the 2 structurally-hard pairs (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`) as the actual boundary. |
+| D7 | **`METHOD.md` §8 metric revision, 2026-09-23, from the FINDINGS.md "reformulating hard_subset" check.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models — and all three reformulations are computable from already-run data (D009/D010/D015) and show a real, decision-relevant signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models (+8.3pp) than overall (+3.0pp). Should `METHOD.md §8` add or replace `hard_subset` with one or more of these? | ⬜ needs the human |
 
 > **D4 scope note, 2026-09-08:** the separability statistic itself
 > (energy distance) was a related but separate unverified-citation risk
@@ -1011,6 +1012,36 @@ aggregate reference table; proxy-vs-trained separability correlation
   or new tensor/corpus computation; recorded per standing practice of
   writing design-side findings into FINDINGS.md when they bear on an
   open methodological question, here C1/gamma).
+
+[2026-09-23] hard_subset reformulated three ways; all computable from
+already-run data; METHOD sec8 change opened as D7 (open, needs the human)
+  Decision: per the human's proposal -- worst pair, tail average, and
+  true top-1 restricted to hard models are all better answers to "does
+  the method help hard pairs" than hard_subset's flat 65-pair mean --
+  checked whether all three are computable from already-run data. Yes,
+  entirely: worst-pair and tail-CVaR (gamma=0.10/0.25) read directly
+  from results/D015/per_pair_k8.json (already-stored per-pair values,
+  just min/sort instead of mean); hard-model-restricted true 37-way
+  top-1 reads the per_model arrays already stored in
+  results/D009/runs.json and results/D010/metrics_by_k.json (never
+  before read this way). No new tensor read, no new training or
+  selection -- pure extraction and arithmetic on already-published,
+  already-reviewed result files.
+  Findings: worst-pair spread is 15-19x the flat mean's (coverage
+  actually worse than paper8 at the worst pair, joint energy best);
+  restricting true top-1 to the 10 models in the 6 hardest structural
+  pairs, the hard/population gap shrinks as the method improves
+  (paper8 -12.5pp, coverage -10.2pp, joint energy -7.3pp) and joint
+  energy's improvement on hard models (+8.3pp) exceeds its overall
+  improvement (+3.0pp) -- robust under a looser cutoff (21 models,
+  smaller magnitude, same direction). Full numbers in FINDINGS.md.
+  Whether to add or replace hard_subset in METHOD.md sec8 with one or
+  more of these is a METHOD revision (rule (d)) -- opened as D7 above,
+  not applied; needs the human's sign-off and a diff review before any
+  edit.
+  Decided by: design-side, routine call (computing the reformulated
+  metrics from already-existing files, and recording them); the METHOD
+  sec8 adoption question itself is explicitly left to the human (D7).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
