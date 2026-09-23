@@ -825,12 +825,65 @@ near-relative pair (too inclusive to be useful — nearly the whole
 population, by I1's own design). None of these need new experiments
 either; they are the same read-only extraction, just not yet run.
 
+**Addendum, 2026-09-23 — a consensus definition (intersection across all
+three methods' own rankings), and why the population cannot yet be
+extended past the 65 structural pairs.**
+
+*(a) Consensus hard set.* Ranking the 65 pairs separately by `paper8`,
+`coverage`, and `joint energy`'s own k=8 accuracy and intersecting the
+three worst-N sets — a pair only counts if all three methods agree it is
+hard, removing any dependence on which single method's ranking is
+trusted — gives a *smaller, stronger* version of the same result:
+
+| worst-N per method | pairs in the 3-way intersection | unique models | paper8 hard-mean | coverage hard-mean | joint hard-mean | joint gain over paper8 |
+|---|---:|---:|---:|---:|---:|---:|
+| 6 | 3 | 6 | .640 (gap −20.5pp) | .680 (gap −17.2pp) | **.755** (gap −12.1pp) | **+11.5pp** |
+| 10 | 5 | 9 | .696 (gap −14.9pp) | .697 (gap −15.5pp) | **.777** (gap −9.9pp) | **+8.1pp** |
+| 16 | 10 | 12 | .734 (gap −11.1pp) | .739 (gap −11.3pp) | **.791** (gap −8.4pp) | **+5.7pp** |
+
+(gap = hard-model mean minus the full 37-model `mean_top1` for that
+condition, same condition.) The tightest cut (3 pairs all three methods
+agree are hardest: the same trio named throughout this project —
+Phi-3-medium-128k/4k, Falcon3-10B/7B, Mistral-7B-v0.2/v0.3 — 6 models)
+shows the sharpest version yet: joint energy's gain on the consensus-hard
+models (+11.5pp) is nearly **4×** its overall gain (+3.0pp), and
+`coverage` is *worse relative to its own population* than `paper8` is
+(gap −17.2pp vs. −20.5pp is an improvement, but a smaller one than
+joint's). Same read-only computation as the first pass — intersecting
+per-pair rankings already in `results/D015/per_pair_k8.json`, no new
+tensor or corpus read.
+
+*(b) Extending past the 65 structural pairs to the full 666 — checked,
+and declined rather than reported.* The only already-computed per-pair
+statistic covering all 666 pairs is `results/D008/identifiability_frontier.json`
+(the T1/T2/T3 "identifiability frontier" tiers) — but **this is the exact
+population D011 already retired as substantially an estimator artifact**:
+D011 found its flagged pairs (32, after D011's own split-half-robustness
+correction from a naive 33) were **32/32 fully resolved** by any real
+selected chain, because the tier's `best_build_query`/`oracle_over_pool`
+statistic is selected *and scored* on data too close to the same split —
+a generalization-gap artifact, not real difficulty (`D011.md`, addenda).
+31 of the 37 pairs in this file's T2 tier are not in the structural
+65-set at all — reusing this file now to claim "hard pairs exist outside
+the structural set" would silently repeat the mistake D011 was drafted to
+catch. **The trained classifier's actual two-logit-restricted accuracy
+has only ever been computed for the 65 structural pairs** — `per_hard_pair`
+in every D009/D010/D012/D013 run is a fixed 65-length array; the other
+601 pairs were never evaluated this way, and no raw per-trace logits are
+stored that would let this be recomputed without rerunning inference
+from a saved checkpoint. **Extending past the 65 structural pairs requires
+new computation (loading a saved checkpoint, or retraining, to get
+trained accuracy on a broader pair set) — TACC's work, a new D if wanted,
+not derivable from what already exists.**
+
 **Consequence for METHOD.md §8 — flagged, not applied.** This suggests
 `hard_subset` should be supplemented or replaced by (a) a worst-pair or
-tail-CVaR statistic over the 65 pairs, and/or (b) true top-1 restricted to
-the hard-pair models, rather than the current two-logit-restricted mean.
-This is a METHOD revision (`CLAUDE.md` rule (d)) and needs the human's
-explicit sign-off before `METHOD.md §8`'s table changes.
+tail-CVaR statistic over the 65 pairs — ideally the 3-method-consensus
+version, which needs no method-choice justification — and/or (b) true
+top-1 restricted to the hard-pair models, rather than the current
+two-logit-restricted mean. This is a METHOD revision (`CLAUDE.md` rule
+(d)) and needs the human's explicit sign-off before `METHOD.md §8`'s
+table changes.
 
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

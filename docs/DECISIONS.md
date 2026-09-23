@@ -168,7 +168,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
 | D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. | 🅿️ noted for writeup |
 | D6 | **`METHOD.md` §7 revision, 2026-09-13, from D011.** §7 lists "the identifiability frontier" as a standalone deliverable. D011 found the tier meant to fill that role (D008's T2, 32/37 pairs) is an estimator artifact — a per-pair oracle that scores *worse than a random query* on this population, not a real property of the model universe. | ✅ **Decided 2026-09-14 by the human — revised.** §7 item 2 now states the strict pool-coverage frontier is empty and names the 2 structurally-hard pairs (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`) as the actual boundary. |
-| D7 | **`METHOD.md` §8 metric revision, 2026-09-23, from the FINDINGS.md "reformulating hard_subset" check.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models — and all three reformulations are computable from already-run data (D009/D010/D015) and show a real, decision-relevant signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models (+8.3pp) than overall (+3.0pp). Should `METHOD.md §8` add or replace `hard_subset` with one or more of these? | ⬜ needs the human |
+| D7 | **`METHOD.md` §8 metric revision, 2026-09-23, from the FINDINGS.md "reformulating hard_subset" check.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models — and all three reformulations are computable from already-run data (D009/D010/D015) and show a real, decision-relevant signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models than overall, sharpest (+11.5pp vs. +3.0pp) on the 3-method-consensus 6-model set (2026-09-23 addendum). Should `METHOD.md §8` add or replace `hard_subset` with one or more of these? | ⬜ needs the human |
 
 > **D4 scope note, 2026-09-08:** the separability statistic itself
 > (energy distance) was a related but separate unverified-citation risk
@@ -1042,6 +1042,38 @@ already-run data; METHOD sec8 change opened as D7 (open, needs the human)
   Decided by: design-side, routine call (computing the reformulated
   metrics from already-existing files, and recording them); the METHOD
   sec8 adoption question itself is explicitly left to the human (D7).
+
+[2026-09-23] Consensus hard-pair set (3-method intersection); extending
+past the 65 structural pairs declined -- reuses a population D011 retired
+  Decision: per the human's request, computed two extensions. (1) A
+  3-method-consensus hard set: ranked the 65 pairs separately by
+  paper8/coverage/joint energy's own k=8 accuracy and intersected the
+  worst-N sets, so no single method's ranking has to be trusted alone.
+  Sharper than the paper8-only version: tightest cut (3 pairs all three
+  agree are hardest -- the same named trio, 6 models) shows joint
+  energy's gain on consensus-hard models (+11.5pp) at nearly 4x its
+  overall gain (+3.0pp). Same read-only computation on
+  results/D015/per_pair_k8.json, no new data. (2) Checked whether "hard
+  pairs" can be extended past the 65 structural pairs to the full 666 --
+  declined to report a result. The only already-computed per-pair
+  statistic spanning all 666 (results/D008/identifiability_frontier.json,
+  the T1/T2/T3 tiers) is the exact population D011 already showed is
+  substantially an estimator artifact (32/32 pairs fully resolved by any
+  real selected chain once evaluated properly; the tier's
+  best-build-query/oracle-over-pool statistic is selected and scored too
+  close to the same split). 31 of 37 T2-tier pairs are not in the
+  structural 65-set; presenting them as "hard" now would silently repeat
+  D011's already-caught mistake. The trained classifier's real per-pair
+  accuracy (per_hard_pair) was only ever computed for the 65 structural
+  pairs -- extending it needs new inference from a saved checkpoint (no
+  raw per-trace logits are stored to reprocess), which is new computation,
+  TACC's work, and would need a new D if wanted. FINDINGS.md updated
+  with both; D7's language sharpened to cite the consensus number.
+  Decided by: design-side, routine call (both are checks on
+  already-existing files; declining to report (2) as a finding follows
+  standing evidence discipline -- verify a data source's provenance
+  before building on it, here catching that it was the same source a
+  prior D already retired).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
