@@ -1074,6 +1074,33 @@ past the 65 structural pairs declined -- reuses a population D011 retired
   standing evidence discipline -- verify a data source's provenance
   before building on it, here catching that it was the same source a
   prior D already retired).
+
+[2026-09-23] D016 drafted -- real trained-classifier hard-pair check
+extended to the full ~666-pair population
+  Decision: drafted D016 (docs/D016.md), human-approved ("是的,起草这个
+  D"). Answers whether genuinely hard pairs exist outside the 65
+  structural near-relative pairs, using the same real trained-classifier
+  two-logit-restricted accuracy this project has trusted since D009 --
+  not the build-selected single-query proxy D011 already showed is
+  substantially an estimator artifact. Reuses D009/D010's already-trained
+  checkpoints for inference only (no retraining) if they still exist on
+  disk (S0 gates this explicitly; if not, TACC stops and reports back
+  rather than silently retraining or substituting). Also extends D008's
+  tensor-level proxy (median_query/oracle/best_build_query) to the same
+  666 pairs and correlates it against the real trained accuracy -- the
+  rigorous, full-scale version of the 2026-09-22 FINDINGS.md
+  proxy-vs-trained check, which was explicitly limited to the 65
+  structural pairs at the time. Directly informs D7 (hard_subset
+  redefinition) either way: if the structural set already contains the
+  objectively hardest pairs, that validates it; if not, D7's
+  reformulation needs to account for pairs it currently misses.
+  Gate REVIEW per default (feeds a possible METHOD change and a writeup
+  claim). Cost expected low (inference only, not training) but not
+  measured yet -- S0 is the first required step.
+  Decided by: human (approve drafting this D now); design-side (D016's
+  scope, steps, checkpoint-availability gating, and REVIEW gate --
+  routine call, no invariant or open DECISIONS item touched beyond
+  D7 which this D is explicitly designed to inform, not preempt).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
