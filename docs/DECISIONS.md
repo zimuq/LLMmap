@@ -1101,6 +1101,37 @@ extended to the full ~666-pair population
   scope, steps, checkpoint-availability gating, and REVIEW gate --
   routine call, no invariant or open DECISIONS item touched beyond
   D7 which this D is explicitly designed to inform, not preempt).
+
+[2026-09-23] D016/P1 approved with amendments -- Call 1 resolved (retrain,
+bit-exact); a naming typo corrected; S1/S2/S4 unblocked
+  Decision: approved TACC's P1. S0 found only seed-0 checkpoints were
+  ever saved by D009/D010/D012/D013's training loops (`if r == 0`,
+  verified at experiments/d009_train.py:156 and three other files) --
+  not deletion. Call 1 (retrain the 12 missing seeds vs. reduced-seed
+  analysis vs. subsampling) resolved by measurement, not guesswork: one
+  retrained run reproduced its stored mean_top1 bit-exactly (abs_diff
+  0.0) in 9.8s; 12 runs is 2.0 minutes. Approved -- proceed on the full
+  5-seed basis D016 specifies. Independently re-verified against
+  results/D016/checkpoint_availability.json and
+  call1_cost_measurement.json before approving.
+  Part 0 (S3, done): the tensor proxy over all 666 pairs confirms the
+  structural 65-pair set is genuinely harder on average (median_query
+  .816 vs .874 non-structural) -- not an arbitrary label -- but ties for
+  hardest include several non-structural, cross-family pairs at the
+  tail. Independently reproduced TACC's own top-10 extraction
+  (experiments/d016_s0_s3.py:127) exactly; the count (4 non-structural
+  of 10) and which rows are correct, but the writeup mislabeled two
+  pairs' partner model (wrote Mistral-v0.1, data says Mistral-v0.3) --
+  corrected in the Review, computation unaffected. Noted for S2: this
+  cut sits inside a 7-way tie at median_query=0.720; S2's real-accuracy
+  version should state its tie-break explicitly rather than imply a
+  principled top-10.
+  Decided by: design-side, routine call (approval after independent
+  verification of the load-bearing claims -- checkpoint reproducibility,
+  the top-10 re-derivation, the lineage cross-check -- per standing
+  evidence discipline; the naming correction follows the same discipline
+  that caught D012's and D015's earlier transcription slips this
+  session).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
