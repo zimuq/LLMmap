@@ -168,7 +168,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
 | D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. | 🅿️ noted for writeup |
 | D6 | **`METHOD.md` §7 revision, 2026-09-13, from D011.** §7 lists "the identifiability frontier" as a standalone deliverable. D011 found the tier meant to fill that role (D008's T2, 32/37 pairs) is an estimator artifact — a per-pair oracle that scores *worse than a random query* on this population, not a real property of the model universe. | ✅ **Decided 2026-09-14 by the human — revised.** §7 item 2 now states the strict pool-coverage frontier is empty and names the 2 structurally-hard pairs (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`) as the actual boundary. |
-| D7 | **`METHOD.md` §8 metric revision, 2026-09-23, from the FINDINGS.md "reformulating hard_subset" check.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models — and all three reformulations are computable from already-run data (D009/D010/D015) and show a real, decision-relevant signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models than overall, sharpest (+11.5pp vs. +3.0pp) on the 3-method-consensus 6-model set (2026-09-23 addendum). Should `METHOD.md §8` add or replace `hard_subset` with one or more of these? | ⬜ needs the human |
+| D7 | **`METHOD.md` §8 metric revision.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models. **Population question CLOSED by D016 (2026-09-24, NO): the 65 structural pairs already contain the 11 objectively hardest pairs of all 666** (real trained classifier; first non-structural pair at rank 12+, accuracy .916 vs. worst structural .656) — so any reformulation can safely build on the existing 65-pair set, not a redefined population. Reformulations computable from already-run data show a real signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models than overall, sharpest (+11.5pp vs. +3.0pp) on the 3-method-consensus 6-model set. Still open: should `METHOD.md §8` add or replace `hard_subset` with one or more of these, and at what cutoff? | ⬜ needs the human |
 
 > **D4 scope note, 2026-09-08:** the separability statistic itself
 > (energy distance) was a related but separate unverified-citation risk
@@ -1132,6 +1132,36 @@ bit-exact); a naming typo corrected; S1/S2/S4 unblocked
   evidence discipline; the naming correction follows the same discipline
   that caught D012's and D015's earlier transcription slips this
   session).
+
+[2026-09-24] D016 closed -- NO, the structural 65-pair set already
+contains every genuinely hard pair; D7's population question settled
+  Decision: D016 marked CLOSED. Independently re-verified every summary
+  number in TACC's R against results/D016/full_pair_trained_accuracy.json,
+  full_pair_tensor_proxy.json, and full_pair_correlation.json before
+  accepting. All confirmed exactly except one: R2 stated the tensor
+  proxy's worst-12 pairs included 6 non-structural pairs; recomputing it
+  twice (matching TACC's own established sort method from P1) gives 5,
+  not 6. The 7/12 overlap figure and every other number were already
+  computed correctly and are unaffected -- an isolated manual-tabulation
+  slip in one summary cell, not a code or data error. Corrected in a
+  post-hoc Review; does not change R2's substantive point (proxy still
+  overstates non-structural difficulty, 5 vs 1).
+  Headline finding, confirmed: the 11 objectively hardest pairs of all
+  666 (real trained classifier, minimum across paper8/coverage/joint
+  energy) are ALL structural; first non-structural pair is rank 12+ at
+  .916 vs worst structural .656. This settles DECISIONS.md D7's
+  population question -- the 65-pair structural set is not missing real
+  difficulty; whatever needs fixing about hard_subset is its aggregation
+  (D015's redistribution finding), not its membership. Proxy-vs-trained
+  correlation (the 2026-09-22 check, now at full 666-pair scale with a
+  bootstrap CI) is substantially stronger inside the structural set
+  (+0.75 to +0.85) than outside it (+0.55 to +0.70) -- the proxy is most
+  trustworthy exactly where the real hard pairs live.
+  D7 updated to reflect the population question is closed; the
+  cutoff/formulation question remains open for the human.
+  Decided by: design-side, routine call (closure and verification follow
+  standing discipline; substantive interpretation for D7 is recorded as
+  informing, not deciding, the human's still-open call).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

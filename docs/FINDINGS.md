@@ -885,5 +885,57 @@ two-logit-restricted mean. This is a METHOD revision (`CLAUDE.md` rule
 (d)) and needs the human's explicit sign-off before `METHOD.md §8`'s
 table changes.
 
+## D016 — No hidden hard pairs: the 65 structural pairs are the 11 objectively hardest of all 666
+
+**Answers the question D015/FINDINGS left open: does real difficulty exist
+outside the structural near-relative set?** Extended the real trained
+classifier's two-logit-restricted accuracy from the 65 structural pairs to
+the full 666-pair universe, by reusing D009/D010's trained checkpoints
+(seed-0 checkpoints existed; the other 4 seeds per condition were never
+saved by design — `if r == 0` in the training loops — not lost; retraining
+them reproduced the stored numbers bit-exactly, so nothing here is a new
+statistical draw). **No — the 65-pair structural set already contains the
+11 objectively hardest pairs in the entire model universe**, ranked by the
+minimum accuracy across `paper8`/`coverage`/`joint energy`: the first
+non-structural pair sits at rank 12+, accuracy 0.916, against a worst
+structural pair of 0.656 and chance of 0.500. **This closes the population
+question decisively: `hard_subset`'s problem (D015: a flat mean hiding 20
+backward-moving pairs) was always the aggregation, never which 65 pairs
+were chosen.**
+
+**The tensor-level proxy (the statistic the selection algorithms actually
+see) over-states non-structural difficulty by roughly 5×** — its own
+worst-12 pairs include 5 cross-family, non-structural pairs where the
+trained classifier finds only 1, and the two worst-12 sets overlap on just
+7 of 12. Measured with a proper bootstrap CI for the first time: the proxy
+tracks the trained classifier much better *inside* the structural set
+(Spearman +0.75 to +0.85) than *outside* it (+0.55 to +0.70) — the proxy is
+most trustworthy exactly where the real hard pairs live, which is
+reassuring for why CVaR/γ's tail-focus works, and a caution against reading
+the proxy's ranking at large outside that tail.
+
+**A pre-registered hypothesis did not survive, and is reported as such.**
+Before S2 ran, the proxy suggested "difficulty is not only a near-relative
+phenomenon" (cross-family pairs among the apparent hardest). Under real
+trained evaluation this did not hold: **every one of the 11 hardest pairs
+shares a lineage tag.** On this evidence, near-relative structure *is* what
+difficulty is, in this model universe.
+
+**What this does not say:** the structural set is not well-*calibrated* —
+54 of its 65 members score above 0.9, a hard set with a long easy tail,
+exactly why its flat mean barely moves (D015). It contains the hard pairs;
+it is not made only of hard pairs. The full 666-pair trained-accuracy
+table (`results/D016/full_pair_trained_accuracy.json`) is now available
+for defining a worst-pair, tail-CVaR, or any other endpoint DECISIONS.md
+D7 might adopt — no further TACC work is needed to validate that such a
+definition would be complete.
+
+**One correction from post-hoc review:** `## R`'s summary table stated the
+proxy's worst-12 had 6 non-structural pairs; independently recomputed
+(matching TACC's own established method) as 5. The 7/12-overlap figure and
+every other number were already correct — an isolated manual-tabulation
+slip in one cell, not a data or code error, and it does not change the
+substantive finding.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
