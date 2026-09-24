@@ -1,0 +1,6675 @@
+{
+ "schema": "d016-tensor-proxy-v1",
+ "n_pairs": 666,
+ "n_structural": 65,
+ "statistic": "two-logit-restricted accuracy of D008's 1-NN proxy, per query, summarised over the 259-query pool",
+ "oracle_caveat": "`oracle` and `best_build_query` are retained for continuity but are the statistics D011 showed to be substantially estimator artifacts; `median_query` is the one used for correlation.",
+ "summary": {
+  "all": 0.8686,
+  "structural": 0.8157,
+  "non_structural": 0.8743
+ },
+ "rows": [
+  {
+   "pair": "CohereForAI/aya-23-8B | Deci/DeciLM-7B-instruct",
+   "index": 0,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8347,
+   "best_build_query": 0.84,
+   "oracle": 0.98,
+   "floor": 0.58
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | HuggingFaceH4/zephyr-7b-beta",
+   "index": 1,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.869,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | Qwen/Qwen2-1.5B-Instruct",
+   "index": 2,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.86,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | Qwen/Qwen2-7B-Instruct",
+   "index": 3,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8732,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | Qwen/Qwen2.5-0.5B-Instruct",
+   "index": 4,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8849,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | Qwen/Qwen2.5-3B-Instruct",
+   "index": 5,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8791,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | google/gemma-1.1-2b-it",
+   "index": 6,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9237,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | google/gemma-1.1-7b-it",
+   "index": 7,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9396,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | google/gemma-2-9b-it",
+   "index": 8,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9008,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | google/gemma-2b-it",
+   "index": 9,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8997,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | google/gemma-7b-it",
+   "index": 10,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.911,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 11,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9268,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | ibm-granite/granite-3.0-8b-instruct",
+   "index": 12,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8685,
+   "best_build_query": 0.84,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | ibm-granite/granite-3.1-8b-instruct",
+   "index": 13,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8334,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | internlm/internlm2_5-7b-chat",
+   "index": 14,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.865,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | meta-llama/Llama-2-7b-chat-hf",
+   "index": 15,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.871,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 16,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.912,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 17,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9004,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 18,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8815,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 19,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8973,
+   "best_build_query": 0.84,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | microsoft/Phi-3-medium-128k-instruct",
+   "index": 20,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.834,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | microsoft/Phi-3-medium-4k-instruct",
+   "index": 21,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8344,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | microsoft/Phi-3-mini-128k-instruct",
+   "index": 22,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8627,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | microsoft/Phi-3-mini-4k-instruct",
+   "index": 23,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8631,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | microsoft/Phi-3.5-mini-instruct",
+   "index": 24,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.889,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 25,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8213,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 26,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8507,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 27,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8524,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.62
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 28,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8544,
+   "best_build_query": 0.54,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | openchat/openchat-3.6-8b-20240522",
+   "index": 29,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8386,
+   "best_build_query": 0.74,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | openchat/openchat_3.5",
+   "index": 30,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8144,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | tiiuae/Falcon3-10B-Instruct",
+   "index": 31,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8599,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | tiiuae/Falcon3-7B-Instruct",
+   "index": 32,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8582,
+   "best_build_query": 0.52,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 33,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9025,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 34,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8802,
+   "best_build_query": 0.84,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "CohereForAI/aya-23-8B | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 35,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9084,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | HuggingFaceH4/zephyr-7b-beta",
+   "index": 36,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8285,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | Qwen/Qwen2-1.5B-Instruct",
+   "index": 37,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8112,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | Qwen/Qwen2-7B-Instruct",
+   "index": 38,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8697,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "index": 39,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8322,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.58
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index": 40,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8673,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | google/gemma-1.1-2b-it",
+   "index": 41,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9159,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | google/gemma-1.1-7b-it",
+   "index": 42,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9226,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | google/gemma-2-9b-it",
+   "index": 43,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.914,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | google/gemma-2b-it",
+   "index": 44,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9038,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | google/gemma-7b-it",
+   "index": 45,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8968,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 46,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8738,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | ibm-granite/granite-3.0-8b-instruct",
+   "index": 47,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8195,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index": 48,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8306,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | internlm/internlm2_5-7b-chat",
+   "index": 49,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8623,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.64
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | meta-llama/Llama-2-7b-chat-hf",
+   "index": 50,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8746,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 51,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8937,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 52,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8888,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 53,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8768,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 54,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.889,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 55,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8122,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 56,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8322,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 57,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8429,
+   "best_build_query": 0.82,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 58,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8341,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 59,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8874,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 60,
+   "structural": false,
+   "median_query": 0.72,
+   "mean_query": 0.732,
+   "best_build_query": 0.88,
+   "oracle": 0.94,
+   "floor": 0.5
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 61,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8409,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.62
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 62,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8384,
+   "best_build_query": 0.82,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 63,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7933,
+   "best_build_query": 0.88,
+   "oracle": 0.96,
+   "floor": 0.5
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 64,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7975,
+   "best_build_query": 0.86,
+   "oracle": 0.96,
+   "floor": 0.54
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | openchat/openchat_3.5",
+   "index": 65,
+   "structural": false,
+   "median_query": 0.76,
+   "mean_query": 0.7437,
+   "best_build_query": 0.74,
+   "oracle": 0.96,
+   "floor": 0.5
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 66,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8029,
+   "best_build_query": 0.8,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 67,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.819,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 68,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8751,
+   "best_build_query": 0.98,
+   "oracle": 0.98,
+   "floor": 0.68
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 69,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8345,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 70,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.832,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | Qwen/Qwen2-1.5B-Instruct",
+   "index": 71,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8727,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | Qwen/Qwen2-7B-Instruct",
+   "index": 72,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8856,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | Qwen/Qwen2.5-0.5B-Instruct",
+   "index": 73,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8909,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | Qwen/Qwen2.5-3B-Instruct",
+   "index": 74,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8829,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | google/gemma-1.1-2b-it",
+   "index": 75,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9174,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | google/gemma-1.1-7b-it",
+   "index": 76,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9408,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | google/gemma-2-9b-it",
+   "index": 77,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9042,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | google/gemma-2b-it",
+   "index": 78,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9167,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | google/gemma-7b-it",
+   "index": 79,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9038,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 80,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9086,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | ibm-granite/granite-3.0-8b-instruct",
+   "index": 81,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8715,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | ibm-granite/granite-3.1-8b-instruct",
+   "index": 82,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8222,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | internlm/internlm2_5-7b-chat",
+   "index": 83,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8562,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.66
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | meta-llama/Llama-2-7b-chat-hf",
+   "index": 84,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8528,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.68
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 85,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9108,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 86,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8938,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 87,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8707,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 88,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8971,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | microsoft/Phi-3-medium-128k-instruct",
+   "index": 89,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8174,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | microsoft/Phi-3-medium-4k-instruct",
+   "index": 90,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8198,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | microsoft/Phi-3-mini-128k-instruct",
+   "index": 91,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8628,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | microsoft/Phi-3-mini-4k-instruct",
+   "index": 92,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8656,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | microsoft/Phi-3.5-mini-instruct",
+   "index": 93,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8765,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 94,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8112,
+   "best_build_query": 0.88,
+   "oracle": 0.96,
+   "floor": 0.64
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 95,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.788,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 96,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.8022,
+   "best_build_query": 0.78,
+   "oracle": 0.98,
+   "floor": 0.64
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 97,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8897,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | openchat/openchat-3.6-8b-20240522",
+   "index": 98,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8242,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | openchat/openchat_3.5",
+   "index": 99,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8232,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | tiiuae/Falcon3-10B-Instruct",
+   "index": 100,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8672,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | tiiuae/Falcon3-7B-Instruct",
+   "index": 101,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8676,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 102,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8729,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 103,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8425,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 104,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.907,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2-7B-Instruct",
+   "index": 105,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8246,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "index": 106,
+   "structural": true,
+   "median_query": 0.74,
+   "mean_query": 0.7358,
+   "best_build_query": 0.82,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index": 107,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8337,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | google/gemma-1.1-2b-it",
+   "index": 108,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.924,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | google/gemma-1.1-7b-it",
+   "index": 109,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9306,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | google/gemma-2-9b-it",
+   "index": 110,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9097,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | google/gemma-2b-it",
+   "index": 111,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9114,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | google/gemma-7b-it",
+   "index": 112,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9112,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 113,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9118,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | ibm-granite/granite-3.0-8b-instruct",
+   "index": 114,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8637,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index": 115,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8422,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | internlm/internlm2_5-7b-chat",
+   "index": 116,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8626,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | meta-llama/Llama-2-7b-chat-hf",
+   "index": 117,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8869,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 118,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8849,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 119,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8907,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 120,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8775,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 121,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8903,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 122,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8029,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 123,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8244,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 124,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8535,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 125,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8337,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 126,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8968,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 127,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8335,
+   "best_build_query": 0.8,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 128,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8574,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 129,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8615,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 130,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.86,
+   "best_build_query": 0.52,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 131,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8541,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | openchat/openchat_3.5",
+   "index": 132,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8161,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 133,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8159,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 134,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8134,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 135,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9045,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 136,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8745,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 137,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.872,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "index": 138,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8332,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index": 139,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.791,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | google/gemma-1.1-2b-it",
+   "index": 140,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9259,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | google/gemma-1.1-7b-it",
+   "index": 141,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9288,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | google/gemma-2-9b-it",
+   "index": 142,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9008,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | google/gemma-2b-it",
+   "index": 143,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9168,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | google/gemma-7b-it",
+   "index": 144,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9056,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 145,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9414,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | ibm-granite/granite-3.0-8b-instruct",
+   "index": 146,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8718,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index": 147,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7866,
+   "best_build_query": 0.88,
+   "oracle": 0.96,
+   "floor": 0.56
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | internlm/internlm2_5-7b-chat",
+   "index": 148,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7883,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | meta-llama/Llama-2-7b-chat-hf",
+   "index": 149,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8724,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 150,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8903,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 151,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8665,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 152,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8583,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 153,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8607,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 154,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7727,
+   "best_build_query": 0.82,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 155,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7935,
+   "best_build_query": 0.88,
+   "oracle": 0.94,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 156,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8236,
+   "best_build_query": 0.54,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 157,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8329,
+   "best_build_query": 0.56,
+   "oracle": 1.0,
+   "floor": 0.42
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 158,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8455,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 159,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8751,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.62
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 160,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8375,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 161,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8294,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 162,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9154,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 163,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8398,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | openchat/openchat_3.5",
+   "index": 164,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8341,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 165,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7957,
+   "best_build_query": 0.5,
+   "oracle": 0.96,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 166,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.774,
+   "best_build_query": 0.54,
+   "oracle": 0.96,
+   "floor": 0.46
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 167,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8991,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 168,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8593,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 169,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9233,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.78
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index": 170,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8461,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | google/gemma-1.1-2b-it",
+   "index": 171,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9223,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.8
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | google/gemma-1.1-7b-it",
+   "index": 172,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.929,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | google/gemma-2-9b-it",
+   "index": 173,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9047,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | google/gemma-2b-it",
+   "index": 174,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9042,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | google/gemma-7b-it",
+   "index": 175,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9015,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 176,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9221,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | ibm-granite/granite-3.0-8b-instruct",
+   "index": 177,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8793,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index": 178,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.862,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | internlm/internlm2_5-7b-chat",
+   "index": 179,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8786,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | meta-llama/Llama-2-7b-chat-hf",
+   "index": 180,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9053,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 181,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.901,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 182,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9005,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 183,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8955,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 184,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8974,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 185,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8344,
+   "best_build_query": 0.62,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 186,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.856,
+   "best_build_query": 0.68,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 187,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8728,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 188,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.85,
+   "best_build_query": 0.84,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 189,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9072,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 190,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8429,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 191,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.878,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 192,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8829,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 193,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8752,
+   "best_build_query": 0.5,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 194,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8781,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | openchat/openchat_3.5",
+   "index": 195,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.848,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 196,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8459,
+   "best_build_query": 0.74,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 197,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8322,
+   "best_build_query": 0.8,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 198,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9161,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 199,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8928,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 200,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8768,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | google/gemma-1.1-2b-it",
+   "index": 201,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9402,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.78
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | google/gemma-1.1-7b-it",
+   "index": 202,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9402,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | google/gemma-2-9b-it",
+   "index": 203,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8701,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | google/gemma-2b-it",
+   "index": 204,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9232,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | google/gemma-7b-it",
+   "index": 205,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9121,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 206,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9381,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | ibm-granite/granite-3.0-8b-instruct",
+   "index": 207,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8524,
+   "best_build_query": 0.48,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index": 208,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7956,
+   "best_build_query": 0.72,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | internlm/internlm2_5-7b-chat",
+   "index": 209,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8257,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | meta-llama/Llama-2-7b-chat-hf",
+   "index": 210,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8861,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 211,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8936,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 212,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8623,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 213,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8539,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 214,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8646,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 215,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.85,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 216,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8475,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 217,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8516,
+   "best_build_query": 0.76,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 218,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.876,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 219,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8686,
+   "best_build_query": 0.98,
+   "oracle": 0.98,
+   "floor": 0.66
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 220,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8503,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.62
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 221,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8275,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 222,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.832,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 223,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9117,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 224,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8463,
+   "best_build_query": 0.84,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | openchat/openchat_3.5",
+   "index": 225,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8352,
+   "best_build_query": 0.84,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 226,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7978,
+   "best_build_query": 0.52,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 227,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8032,
+   "best_build_query": 0.74,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 228,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9156,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 229,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8815,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "Qwen/Qwen2.5-3B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 230,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9168,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-1.1-7b-it",
+   "index": 231,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.8075,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2-9b-it",
+   "index": 232,
+   "structural": true,
+   "median_query": 0.88,
+   "mean_query": 0.8839,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2b-it",
+   "index": 233,
+   "structural": true,
+   "median_query": 0.76,
+   "mean_query": 0.7727,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-7b-it",
+   "index": 234,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.8164,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 235,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9532,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | ibm-granite/granite-3.0-8b-instruct",
+   "index": 236,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9242,
+   "best_build_query": 0.54,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | ibm-granite/granite-3.1-8b-instruct",
+   "index": 237,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9067,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | internlm/internlm2_5-7b-chat",
+   "index": 238,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8793,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | meta-llama/Llama-2-7b-chat-hf",
+   "index": 239,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9101,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 240,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9147,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 241,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9186,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 242,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.911,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 243,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9165,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | microsoft/Phi-3-medium-128k-instruct",
+   "index": 244,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8886,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | microsoft/Phi-3-medium-4k-instruct",
+   "index": 245,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8808,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | microsoft/Phi-3-mini-128k-instruct",
+   "index": 246,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9178,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | microsoft/Phi-3-mini-4k-instruct",
+   "index": 247,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9171,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | microsoft/Phi-3.5-mini-instruct",
+   "index": 248,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9234,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 249,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8822,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 250,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8927,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 251,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8868,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 252,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9225,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | openchat/openchat-3.6-8b-20240522",
+   "index": 253,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9071,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | openchat/openchat_3.5",
+   "index": 254,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9066,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | tiiuae/Falcon3-10B-Instruct",
+   "index": 255,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9283,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | tiiuae/Falcon3-7B-Instruct",
+   "index": 256,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9194,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 257,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.933,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 258,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9318,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 259,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9517,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2-9b-it",
+   "index": 260,
+   "structural": true,
+   "median_query": 0.9,
+   "mean_query": 0.8873,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2b-it",
+   "index": 261,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8348,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-7b-it",
+   "index": 262,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8264,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 263,
+   "structural": false,
+   "median_query": 0.98,
+   "mean_query": 0.9595,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | ibm-granite/granite-3.0-8b-instruct",
+   "index": 264,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9299,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | ibm-granite/granite-3.1-8b-instruct",
+   "index": 265,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9208,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | internlm/internlm2_5-7b-chat",
+   "index": 266,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8886,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | meta-llama/Llama-2-7b-chat-hf",
+   "index": 267,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9289,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 268,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9147,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 269,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9204,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 270,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9203,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 271,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9158,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | microsoft/Phi-3-medium-128k-instruct",
+   "index": 272,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9121,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | microsoft/Phi-3-medium-4k-instruct",
+   "index": 273,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.911,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | microsoft/Phi-3-mini-128k-instruct",
+   "index": 274,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9249,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | microsoft/Phi-3-mini-4k-instruct",
+   "index": 275,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9264,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | microsoft/Phi-3.5-mini-instruct",
+   "index": 276,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9334,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 277,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9064,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 278,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9066,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 279,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9053,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 280,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9331,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | openchat/openchat-3.6-8b-20240522",
+   "index": 281,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9303,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | openchat/openchat_3.5",
+   "index": 282,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.921,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | tiiuae/Falcon3-10B-Instruct",
+   "index": 283,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9331,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | tiiuae/Falcon3-7B-Instruct",
+   "index": 284,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9212,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 285,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9453,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 286,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9397,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 287,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9568,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "google/gemma-2-9b-it | google/gemma-2b-it",
+   "index": 288,
+   "structural": true,
+   "median_query": 0.86,
+   "mean_query": 0.8673,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-2-9b-it | google/gemma-7b-it",
+   "index": 289,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8398,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-2-9b-it | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 290,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9541,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2-9b-it | ibm-granite/granite-3.0-8b-instruct",
+   "index": 291,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8954,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "google/gemma-2-9b-it | ibm-granite/granite-3.1-8b-instruct",
+   "index": 292,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8451,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "google/gemma-2-9b-it | internlm/internlm2_5-7b-chat",
+   "index": 293,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8306,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2-9b-it | meta-llama/Llama-2-7b-chat-hf",
+   "index": 294,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8618,
+   "best_build_query": 0.82,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "google/gemma-2-9b-it | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 295,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9049,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-2-9b-it | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 296,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8742,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "google/gemma-2-9b-it | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 297,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8577,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-2-9b-it | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 298,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8744,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2-9b-it | microsoft/Phi-3-medium-128k-instruct",
+   "index": 299,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8676,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-2-9b-it | microsoft/Phi-3-medium-4k-instruct",
+   "index": 300,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8609,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "google/gemma-2-9b-it | microsoft/Phi-3-mini-128k-instruct",
+   "index": 301,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9019,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "google/gemma-2-9b-it | microsoft/Phi-3-mini-4k-instruct",
+   "index": 302,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9164,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2-9b-it | microsoft/Phi-3.5-mini-instruct",
+   "index": 303,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9008,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-2-9b-it | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 304,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8754,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-2-9b-it | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 305,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8229,
+   "best_build_query": 0.82,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-2-9b-it | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 306,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8344,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-2-9b-it | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 307,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9256,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-2-9b-it | openchat/openchat-3.6-8b-20240522",
+   "index": 308,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8961,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-2-9b-it | openchat/openchat_3.5",
+   "index": 309,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.884,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-2-9b-it | tiiuae/Falcon3-10B-Instruct",
+   "index": 310,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8817,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2-9b-it | tiiuae/Falcon3-7B-Instruct",
+   "index": 311,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8812,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2-9b-it | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 312,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9212,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "google/gemma-2-9b-it | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 313,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9193,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-2-9b-it | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 314,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9587,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "google/gemma-2b-it | google/gemma-7b-it",
+   "index": 315,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.8065,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-2b-it | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 316,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9473,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "google/gemma-2b-it | ibm-granite/granite-3.0-8b-instruct",
+   "index": 317,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9067,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "google/gemma-2b-it | ibm-granite/granite-3.1-8b-instruct",
+   "index": 318,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8927,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-2b-it | internlm/internlm2_5-7b-chat",
+   "index": 319,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8639,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-2b-it | meta-llama/Llama-2-7b-chat-hf",
+   "index": 320,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9027,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "google/gemma-2b-it | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 321,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8981,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2b-it | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 322,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9066,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-2b-it | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 323,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.902,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "google/gemma-2b-it | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 324,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9059,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "google/gemma-2b-it | microsoft/Phi-3-medium-128k-instruct",
+   "index": 325,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8783,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "google/gemma-2b-it | microsoft/Phi-3-medium-4k-instruct",
+   "index": 326,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8766,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "google/gemma-2b-it | microsoft/Phi-3-mini-128k-instruct",
+   "index": 327,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9077,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.42
+  },
+  {
+   "pair": "google/gemma-2b-it | microsoft/Phi-3-mini-4k-instruct",
+   "index": 328,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9129,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2b-it | microsoft/Phi-3.5-mini-instruct",
+   "index": 329,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9185,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "google/gemma-2b-it | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 330,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8714,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-2b-it | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 331,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8815,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-2b-it | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 332,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8863,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-2b-it | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 333,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9092,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "google/gemma-2b-it | openchat/openchat-3.6-8b-20240522",
+   "index": 334,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9049,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "google/gemma-2b-it | openchat/openchat_3.5",
+   "index": 335,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8992,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "google/gemma-2b-it | tiiuae/Falcon3-10B-Instruct",
+   "index": 336,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9134,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2b-it | tiiuae/Falcon3-7B-Instruct",
+   "index": 337,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9035,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "google/gemma-2b-it | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 338,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9272,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-2b-it | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 339,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9265,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-2b-it | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 340,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9466,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "google/gemma-7b-it | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "index": 341,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9524,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.86
+  },
+  {
+   "pair": "google/gemma-7b-it | ibm-granite/granite-3.0-8b-instruct",
+   "index": 342,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9126,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-7b-it | ibm-granite/granite-3.1-8b-instruct",
+   "index": 343,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8904,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-7b-it | internlm/internlm2_5-7b-chat",
+   "index": 344,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8221,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-7b-it | meta-llama/Llama-2-7b-chat-hf",
+   "index": 345,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8683,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-7b-it | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 346,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9012,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "google/gemma-7b-it | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 347,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.892,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "google/gemma-7b-it | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 348,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8786,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-7b-it | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 349,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8978,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "google/gemma-7b-it | microsoft/Phi-3-medium-128k-instruct",
+   "index": 350,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8491,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "google/gemma-7b-it | microsoft/Phi-3-medium-4k-instruct",
+   "index": 351,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8511,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "google/gemma-7b-it | microsoft/Phi-3-mini-128k-instruct",
+   "index": 352,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9109,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-7b-it | microsoft/Phi-3-mini-4k-instruct",
+   "index": 353,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9125,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "google/gemma-7b-it | microsoft/Phi-3.5-mini-instruct",
+   "index": 354,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9113,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-7b-it | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 355,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8615,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-7b-it | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 356,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8422,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "google/gemma-7b-it | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 357,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8354,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "google/gemma-7b-it | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 358,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9114,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-7b-it | openchat/openchat-3.6-8b-20240522",
+   "index": 359,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8839,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-7b-it | openchat/openchat_3.5",
+   "index": 360,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8868,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "google/gemma-7b-it | tiiuae/Falcon3-10B-Instruct",
+   "index": 361,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.91,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-7b-it | tiiuae/Falcon3-7B-Instruct",
+   "index": 362,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8998,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-7b-it | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 363,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.909,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "google/gemma-7b-it | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 364,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9238,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.76
+  },
+  {
+   "pair": "google/gemma-7b-it | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 365,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9461,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | ibm-granite/granite-3.0-8b-instruct",
+   "index": 366,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9038,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | ibm-granite/granite-3.1-8b-instruct",
+   "index": 367,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9164,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | internlm/internlm2_5-7b-chat",
+   "index": 368,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9499,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-2-7b-chat-hf",
+   "index": 369,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9505,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.78
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 370,
+   "structural": true,
+   "median_query": 0.94,
+   "mean_query": 0.9354,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 371,
+   "structural": true,
+   "median_query": 0.94,
+   "mean_query": 0.9331,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 372,
+   "structural": true,
+   "median_query": 0.94,
+   "mean_query": 0.9306,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 373,
+   "structural": true,
+   "median_query": 0.94,
+   "mean_query": 0.9273,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | microsoft/Phi-3-medium-128k-instruct",
+   "index": 374,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9253,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | microsoft/Phi-3-medium-4k-instruct",
+   "index": 375,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.934,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | microsoft/Phi-3-mini-128k-instruct",
+   "index": 376,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9334,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | microsoft/Phi-3-mini-4k-instruct",
+   "index": 377,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9206,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | microsoft/Phi-3.5-mini-instruct",
+   "index": 378,
+   "structural": false,
+   "median_query": 0.96,
+   "mean_query": 0.9527,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 379,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8727,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 380,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.922,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 381,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9223,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.8
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 382,
+   "structural": true,
+   "median_query": 0.9,
+   "mean_query": 0.8845,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | openchat/openchat-3.6-8b-20240522",
+   "index": 383,
+   "structural": true,
+   "median_query": 0.92,
+   "mean_query": 0.9144,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | openchat/openchat_3.5",
+   "index": 384,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8972,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | tiiuae/Falcon3-10B-Instruct",
+   "index": 385,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9188,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | tiiuae/Falcon3-7B-Instruct",
+   "index": 386,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9225,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 387,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9398,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.8
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 388,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9393,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 389,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9141,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index": 390,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.775,
+   "best_build_query": 0.5,
+   "oracle": 0.96,
+   "floor": 0.5
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | internlm/internlm2_5-7b-chat",
+   "index": 391,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8703,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | meta-llama/Llama-2-7b-chat-hf",
+   "index": 392,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8891,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 393,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.897,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 394,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8878,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 395,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8719,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 396,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8824,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 397,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8164,
+   "best_build_query": 0.96,
+   "oracle": 0.96,
+   "floor": 0.58
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 398,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.829,
+   "best_build_query": 0.98,
+   "oracle": 0.98,
+   "floor": 0.58
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 399,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8392,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 400,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8436,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 401,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8884,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 402,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8107,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 403,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8359,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 404,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8402,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 405,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8633,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 406,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8388,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | openchat/openchat_3.5",
+   "index": 407,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8082,
+   "best_build_query": 0.48,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 408,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.7996,
+   "best_build_query": 0.46,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 409,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8234,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 410,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9015,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 411,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.878,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 412,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8964,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | internlm/internlm2_5-7b-chat",
+   "index": 413,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7705,
+   "best_build_query": 0.7,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | meta-llama/Llama-2-7b-chat-hf",
+   "index": 414,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.811,
+   "best_build_query": 0.82,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 415,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8767,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 416,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8436,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 417,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8181,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 418,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8563,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 419,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7434,
+   "best_build_query": 0.88,
+   "oracle": 0.94,
+   "floor": 0.48
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 420,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7411,
+   "best_build_query": 0.8,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 421,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7761,
+   "best_build_query": 0.78,
+   "oracle": 0.96,
+   "floor": 0.46
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 422,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8096,
+   "best_build_query": 0.92,
+   "oracle": 0.96,
+   "floor": 0.44
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 423,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8112,
+   "best_build_query": 0.84,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 424,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8178,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 425,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7432,
+   "best_build_query": 0.88,
+   "oracle": 0.96,
+   "floor": 0.56
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 426,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7365,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 427,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8849,
+   "best_build_query": 0.98,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 428,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.788,
+   "best_build_query": 0.72,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | openchat/openchat_3.5",
+   "index": 429,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7795,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.44
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 430,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7642,
+   "best_build_query": 0.42,
+   "oracle": 0.98,
+   "floor": 0.38
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 431,
+   "structural": false,
+   "median_query": 0.76,
+   "mean_query": 0.759,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 432,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8551,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.64
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 433,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8131,
+   "best_build_query": 0.84,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "ibm-granite/granite-3.1-8b-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 434,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9092,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | meta-llama/Llama-2-7b-chat-hf",
+   "index": 435,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.796,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 436,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8784,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 437,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8536,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.42
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 438,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8315,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 439,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.868,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | microsoft/Phi-3-medium-128k-instruct",
+   "index": 440,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7727,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | microsoft/Phi-3-medium-4k-instruct",
+   "index": 441,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7655,
+   "best_build_query": 0.94,
+   "oracle": 0.96,
+   "floor": 0.48
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | microsoft/Phi-3-mini-128k-instruct",
+   "index": 442,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8189,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.4
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | microsoft/Phi-3-mini-4k-instruct",
+   "index": 443,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8539,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.36
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | microsoft/Phi-3.5-mini-instruct",
+   "index": 444,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8181,
+   "best_build_query": 0.8,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 445,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8237,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 446,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.749,
+   "best_build_query": 0.9,
+   "oracle": 0.94,
+   "floor": 0.56
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 447,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7416,
+   "best_build_query": 0.92,
+   "oracle": 0.96,
+   "floor": 0.54
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 448,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9152,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | openchat/openchat-3.6-8b-20240522",
+   "index": 449,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7922,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | openchat/openchat_3.5",
+   "index": 450,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8143,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.42
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | tiiuae/Falcon3-10B-Instruct",
+   "index": 451,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8291,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | tiiuae/Falcon3-7B-Instruct",
+   "index": 452,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.8008,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 453,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8631,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 454,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8586,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.62
+  },
+  {
+   "pair": "internlm/internlm2_5-7b-chat | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 455,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.928,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | meta-llama/Llama-3.2-1B-Instruct",
+   "index": 456,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8941,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 457,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8694,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 458,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.807,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 459,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8919,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | microsoft/Phi-3-medium-128k-instruct",
+   "index": 460,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7822,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | microsoft/Phi-3-medium-4k-instruct",
+   "index": 461,
+   "structural": false,
+   "median_query": 0.76,
+   "mean_query": 0.78,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | microsoft/Phi-3-mini-128k-instruct",
+   "index": 462,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8575,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | microsoft/Phi-3-mini-4k-instruct",
+   "index": 463,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8817,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | microsoft/Phi-3.5-mini-instruct",
+   "index": 464,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8629,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 465,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.8038,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 466,
+   "structural": false,
+   "median_query": 0.72,
+   "mean_query": 0.7312,
+   "best_build_query": 0.92,
+   "oracle": 0.92,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 467,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7425,
+   "best_build_query": 0.88,
+   "oracle": 0.96,
+   "floor": 0.54
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 468,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.924,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | openchat/openchat-3.6-8b-20240522",
+   "index": 469,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7962,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | openchat/openchat_3.5",
+   "index": 470,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8294,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | tiiuae/Falcon3-10B-Instruct",
+   "index": 471,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8904,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | tiiuae/Falcon3-7B-Instruct",
+   "index": 472,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8754,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 473,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8149,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 474,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.877,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 475,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9305,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index": 476,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.7755,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 477,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8313,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 478,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.7783,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.44
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 479,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8832,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 480,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8885,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 481,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8948,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 482,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9003,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 483,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9063,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 484,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.879,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 485,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8848,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 486,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8808,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 487,
+   "structural": true,
+   "median_query": 0.92,
+   "mean_query": 0.9128,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 488,
+   "structural": true,
+   "median_query": 0.9,
+   "mean_query": 0.894,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | openchat/openchat_3.5",
+   "index": 489,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.884,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 490,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8901,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 491,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8791,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 492,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.916,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 493,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9174,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 494,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9249,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index": 495,
+   "structural": true,
+   "median_query": 0.76,
+   "mean_query": 0.767,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 496,
+   "structural": true,
+   "median_query": 0.72,
+   "mean_query": 0.7242,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.46
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 497,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8613,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 498,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8619,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 499,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8792,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 500,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.891,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 501,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8809,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 502,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.872,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 503,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8499,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 504,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.855,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 505,
+   "structural": true,
+   "median_query": 0.94,
+   "mean_query": 0.9245,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 506,
+   "structural": true,
+   "median_query": 0.88,
+   "mean_query": 0.8737,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | openchat/openchat_3.5",
+   "index": 507,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8732,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 508,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8669,
+   "best_build_query": 0.5,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 509,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8615,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 510,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9057,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 511,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9005,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 512,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.936,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index": 513,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.7804,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 514,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8283,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 515,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8221,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 516,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8563,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 517,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8771,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 518,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8686,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 519,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8477,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 520,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7942,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 521,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8155,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 522,
+   "structural": true,
+   "median_query": 0.92,
+   "mean_query": 0.9133,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 523,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8347,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | openchat/openchat_3.5",
+   "index": 524,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8494,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 525,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8608,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 526,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.856,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 527,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8844,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 528,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8842,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 529,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9286,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+   "index": 530,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.87,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 531,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8741,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 532,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8743,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 533,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8863,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 534,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.884,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 535,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8832,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 536,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8727,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 537,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8727,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 538,
+   "structural": true,
+   "median_query": 0.92,
+   "mean_query": 0.9141,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 539,
+   "structural": true,
+   "median_query": 0.88,
+   "mean_query": 0.885,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | openchat/openchat_3.5",
+   "index": 540,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8792,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 541,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8612,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 542,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8568,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 543,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9215,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 544,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8956,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 545,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9355,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.78
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index": 546,
+   "structural": true,
+   "median_query": 0.56,
+   "mean_query": 0.5723,
+   "best_build_query": 0.64,
+   "oracle": 0.8,
+   "floor": 0.3
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 547,
+   "structural": true,
+   "median_query": 0.74,
+   "mean_query": 0.7398,
+   "best_build_query": 0.82,
+   "oracle": 0.96,
+   "floor": 0.46
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 548,
+   "structural": true,
+   "median_query": 0.72,
+   "mean_query": 0.7147,
+   "best_build_query": 0.5,
+   "oracle": 0.94,
+   "floor": 0.44
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 549,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.8057,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 550,
+   "structural": false,
+   "median_query": 0.76,
+   "mean_query": 0.7703,
+   "best_build_query": 0.82,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 551,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7415,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.46
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 552,
+   "structural": false,
+   "median_query": 0.72,
+   "mean_query": 0.7264,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.36
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 553,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8779,
+   "best_build_query": 0.54,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 554,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7446,
+   "best_build_query": 0.82,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | openchat/openchat_3.5",
+   "index": 555,
+   "structural": false,
+   "median_query": 0.76,
+   "mean_query": 0.7518,
+   "best_build_query": 0.9,
+   "oracle": 0.96,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 556,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.768,
+   "best_build_query": 0.92,
+   "oracle": 0.96,
+   "floor": 0.48
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 557,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7697,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 558,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8505,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 559,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8165,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 560,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8966,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index": 561,
+   "structural": true,
+   "median_query": 0.76,
+   "mean_query": 0.7471,
+   "best_build_query": 0.9,
+   "oracle": 0.92,
+   "floor": 0.46
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 562,
+   "structural": true,
+   "median_query": 0.74,
+   "mean_query": 0.7283,
+   "best_build_query": 0.52,
+   "oracle": 0.92,
+   "floor": 0.4
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 563,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.7979,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 564,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7876,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 565,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7389,
+   "best_build_query": 0.98,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 566,
+   "structural": false,
+   "median_query": 0.72,
+   "mean_query": 0.7318,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 567,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8927,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 568,
+   "structural": false,
+   "median_query": 0.76,
+   "mean_query": 0.7552,
+   "best_build_query": 0.96,
+   "oracle": 0.96,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | openchat/openchat_3.5",
+   "index": 569,
+   "structural": false,
+   "median_query": 0.76,
+   "mean_query": 0.7577,
+   "best_build_query": 0.9,
+   "oracle": 0.96,
+   "floor": 0.5
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 570,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7813,
+   "best_build_query": 0.86,
+   "oracle": 0.96,
+   "floor": 0.44
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 571,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7799,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 572,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8504,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 573,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8266,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 574,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9164,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index": 575,
+   "structural": true,
+   "median_query": 0.64,
+   "mean_query": 0.67,
+   "best_build_query": 0.88,
+   "oracle": 0.92,
+   "floor": 0.44
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 576,
+   "structural": true,
+   "median_query": 0.8,
+   "mean_query": 0.7995,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 577,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8429,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 578,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8219,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 579,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8165,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.62
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 580,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.895,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 581,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8226,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | openchat/openchat_3.5",
+   "index": 582,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8166,
+   "best_build_query": 0.84,
+   "oracle": 0.98,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 583,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7916,
+   "best_build_query": 0.66,
+   "oracle": 0.98,
+   "floor": 0.42
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 584,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.785,
+   "best_build_query": 0.54,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 585,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8854,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 586,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8492,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 587,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9086,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index": 588,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8387,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 589,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8395,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 590,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8547,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 591,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.846,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 592,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8736,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.44
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 593,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8372,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | openchat/openchat_3.5",
+   "index": 594,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8212,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 595,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.7986,
+   "best_build_query": 0.96,
+   "oracle": 0.98,
+   "floor": 0.4
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 596,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8029,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 597,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8981,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 598,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8602,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 599,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9088,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | mistralai/Mistral-7B-Instruct-v0.1",
+   "index": 600,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8796,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 601,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8269,
+   "best_build_query": 0.86,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 602,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8215,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 603,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9317,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | openchat/openchat-3.6-8b-20240522",
+   "index": 604,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8442,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | openchat/openchat_3.5",
+   "index": 605,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8571,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | tiiuae/Falcon3-10B-Instruct",
+   "index": 606,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8561,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 607,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8493,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 608,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8869,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 609,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8641,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "microsoft/Phi-3.5-mini-instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 610,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9373,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.2",
+   "index": 611,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.7762,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 612,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.7767,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 613,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8159,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat-3.6-8b-20240522",
+   "index": 614,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7692,
+   "best_build_query": 0.9,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5",
+   "index": 615,
+   "structural": true,
+   "median_query": 0.74,
+   "mean_query": 0.7425,
+   "best_build_query": 0.62,
+   "oracle": 0.98,
+   "floor": 0.44
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | tiiuae/Falcon3-10B-Instruct",
+   "index": 616,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8133,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | tiiuae/Falcon3-7B-Instruct",
+   "index": 617,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8312,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 618,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8363,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.62
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 619,
+   "structural": true,
+   "median_query": 0.86,
+   "mean_query": 0.8478,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 620,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8282,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.64
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+   "index": 621,
+   "structural": true,
+   "median_query": 0.62,
+   "mean_query": 0.6266,
+   "best_build_query": 0.9,
+   "oracle": 0.9,
+   "floor": 0.4
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 622,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9062,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.56
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | openchat/openchat-3.6-8b-20240522",
+   "index": 623,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7455,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.5
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | openchat/openchat_3.5",
+   "index": 624,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.7798,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | tiiuae/Falcon3-10B-Instruct",
+   "index": 625,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8352,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | tiiuae/Falcon3-7B-Instruct",
+   "index": 626,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8283,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.54
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 627,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8125,
+   "best_build_query": 0.8,
+   "oracle": 0.98,
+   "floor": 0.6
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 628,
+   "structural": true,
+   "median_query": 0.84,
+   "mean_query": 0.8304,
+   "best_build_query": 0.88,
+   "oracle": 0.98,
+   "floor": 0.54
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 629,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9164,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | nvidia/Llama3-ChatQA-1.5-8B",
+   "index": 630,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9025,
+   "best_build_query": 0.52,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | openchat/openchat-3.6-8b-20240522",
+   "index": 631,
+   "structural": false,
+   "median_query": 0.74,
+   "mean_query": 0.7387,
+   "best_build_query": 0.9,
+   "oracle": 0.94,
+   "floor": 0.52
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | openchat/openchat_3.5",
+   "index": 632,
+   "structural": true,
+   "median_query": 0.78,
+   "mean_query": 0.7773,
+   "best_build_query": 0.86,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | tiiuae/Falcon3-10B-Instruct",
+   "index": 633,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8239,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | tiiuae/Falcon3-7B-Instruct",
+   "index": 634,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8181,
+   "best_build_query": 0.5,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 635,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.817,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.58
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 636,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8266,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.58
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 637,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9073,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | openchat/openchat-3.6-8b-20240522",
+   "index": 638,
+   "structural": true,
+   "median_query": 0.88,
+   "mean_query": 0.8751,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | openchat/openchat_3.5",
+   "index": 639,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.832,
+   "best_build_query": 0.9,
+   "oracle": 0.96,
+   "floor": 0.5
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | tiiuae/Falcon3-10B-Instruct",
+   "index": 640,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8768,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | tiiuae/Falcon3-7B-Instruct",
+   "index": 641,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8848,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.46
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 642,
+   "structural": false,
+   "median_query": 0.94,
+   "mean_query": 0.9222,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.74
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 643,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9053,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 644,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8885,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5",
+   "index": 645,
+   "structural": false,
+   "median_query": 0.72,
+   "mean_query": 0.7169,
+   "best_build_query": 0.92,
+   "oracle": 0.98,
+   "floor": 0.48
+  },
+  {
+   "pair": "openchat/openchat-3.6-8b-20240522 | tiiuae/Falcon3-10B-Instruct",
+   "index": 646,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8235,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.48
+  },
+  {
+   "pair": "openchat/openchat-3.6-8b-20240522 | tiiuae/Falcon3-7B-Instruct",
+   "index": 647,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8276,
+   "best_build_query": 0.88,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "openchat/openchat-3.6-8b-20240522 | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 648,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8272,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.62
+  },
+  {
+   "pair": "openchat/openchat-3.6-8b-20240522 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 649,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8328,
+   "best_build_query": 0.92,
+   "oracle": 1.0,
+   "floor": 0.52
+  },
+  {
+   "pair": "openchat/openchat-3.6-8b-20240522 | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 650,
+   "structural": false,
+   "median_query": 0.88,
+   "mean_query": 0.8818,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "openchat/openchat_3.5 | tiiuae/Falcon3-10B-Instruct",
+   "index": 651,
+   "structural": false,
+   "median_query": 0.78,
+   "mean_query": 0.7737,
+   "best_build_query": 0.68,
+   "oracle": 0.96,
+   "floor": 0.48
+  },
+  {
+   "pair": "openchat/openchat_3.5 | tiiuae/Falcon3-7B-Instruct",
+   "index": 652,
+   "structural": false,
+   "median_query": 0.8,
+   "mean_query": 0.7883,
+   "best_build_query": 0.42,
+   "oracle": 0.98,
+   "floor": 0.42
+  },
+  {
+   "pair": "openchat/openchat_3.5 | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 653,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8551,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.64
+  },
+  {
+   "pair": "openchat/openchat_3.5 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 654,
+   "structural": true,
+   "median_query": 0.82,
+   "mean_query": 0.8195,
+   "best_build_query": 0.94,
+   "oracle": 0.98,
+   "floor": 0.56
+  },
+  {
+   "pair": "openchat/openchat_3.5 | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 655,
+   "structural": false,
+   "median_query": 0.86,
+   "mean_query": 0.8598,
+   "best_build_query": 0.94,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index": 656,
+   "structural": true,
+   "median_query": 0.66,
+   "mean_query": 0.6515,
+   "best_build_query": 0.72,
+   "oracle": 0.84,
+   "floor": 0.4
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 657,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9114,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 658,
+   "structural": false,
+   "median_query": 0.84,
+   "mean_query": 0.8449,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.6
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 659,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8945,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.66
+  },
+  {
+   "pair": "tiiuae/Falcon3-7B-Instruct | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index": 660,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9081,
+   "best_build_query": 1.0,
+   "oracle": 1.0,
+   "floor": 0.68
+  },
+  {
+   "pair": "tiiuae/Falcon3-7B-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 661,
+   "structural": false,
+   "median_query": 0.82,
+   "mean_query": 0.8353,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.5
+  },
+  {
+   "pair": "tiiuae/Falcon3-7B-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 662,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "togethercomputer/Llama-2-7B-32K-Instruct | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index": 663,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.8986,
+   "best_build_query": 0.9,
+   "oracle": 1.0,
+   "floor": 0.7
+  },
+  {
+   "pair": "togethercomputer/Llama-2-7B-32K-Instruct | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 664,
+   "structural": false,
+   "median_query": 0.9,
+   "mean_query": 0.9027,
+   "best_build_query": 0.96,
+   "oracle": 1.0,
+   "floor": 0.72
+  },
+  {
+   "pair": "upstage/SOLAR-10.7B-Instruct-v1.0 | utter-project/EuroLLM-1.7B-Instruct",
+   "index": 665,
+   "structural": false,
+   "median_query": 0.92,
+   "mean_query": 0.9187,
+   "best_build_query": 0.98,
+   "oracle": 1.0,
+   "floor": 0.74
+  }
+ ],
+ "wall_s": 17.2
+}

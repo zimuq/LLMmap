@@ -1,0 +1,153 @@
+{
+ "schema": "d016-s0-v1",
+ "k": 8,
+ "conditions": [
+  "paper8",
+  "coverage",
+  "joint_energy"
+ ],
+ "gate_pass": false,
+ "total_usable": 3,
+ "note": "D009/D010 kept only seed 0 per (condition, k) -- their training loops wrote a checkpoint `if r_ == 0`. The other seeds were never saved, so this is not file loss.",
+ "availability": {
+  "paper8": {
+   "runs_in_source": 5,
+   "checkpoints_present": 1,
+   "load_and_reproduce": 1,
+   "detail": [
+    {
+     "run": 0,
+     "stored_mean_top1": 0.8345945945945946,
+     "best_ckpt_recorded": "best-epoch=09-val_loss=0.5199.ckpt",
+     "path": "./results/D009/models/paper8_k8_r0.ckpt",
+     "exists": true,
+     "loads": true,
+     "recovered_mean_top1": 0.834595,
+     "reproduces": true,
+     "abs_diff": 0.0
+    },
+    {
+     "run": 1,
+     "stored_mean_top1": 0.8389189189189189,
+     "best_ckpt_recorded": "best-epoch=11-val_loss=0.5438.ckpt",
+     "path": "./results/D009/models/paper8_k8_r1.ckpt",
+     "exists": false
+    },
+    {
+     "run": 2,
+     "stored_mean_top1": 0.8724324324324324,
+     "best_ckpt_recorded": "best-epoch=16-val_loss=0.4803.ckpt",
+     "path": "./results/D009/models/paper8_k8_r2.ckpt",
+     "exists": false
+    },
+    {
+     "run": 3,
+     "stored_mean_top1": 0.8367567567567568,
+     "best_ckpt_recorded": "best-epoch=09-val_loss=0.5290.ckpt",
+     "path": "./results/D009/models/paper8_k8_r3.ckpt",
+     "exists": false
+    },
+    {
+     "run": 4,
+     "stored_mean_top1": 0.8432432432432433,
+     "best_ckpt_recorded": "best-epoch=14-val_loss=0.5214.ckpt",
+     "path": "./results/D009/models/paper8_k8_r4.ckpt",
+     "exists": false
+    }
+   ]
+  },
+  "coverage": {
+   "runs_in_source": 5,
+   "checkpoints_present": 1,
+   "load_and_reproduce": 1,
+   "detail": [
+    {
+     "run": 0,
+     "stored_mean_top1": 0.8616216216216216,
+     "best_ckpt_recorded": "best-epoch=15-val_loss=0.3962.ckpt",
+     "path": "./results/D009/models/cvar_max_k8_r0.ckpt",
+     "exists": true,
+     "loads": true,
+     "recovered_mean_top1": 0.861622,
+     "reproduces": true,
+     "abs_diff": 0.0
+    },
+    {
+     "run": 1,
+     "stored_mean_top1": 0.8302702702702702,
+     "best_ckpt_recorded": "best-epoch=08-val_loss=0.4446.ckpt",
+     "path": "./results/D009/models/cvar_max_k8_r1.ckpt",
+     "exists": false
+    },
+    {
+     "run": 2,
+     "stored_mean_top1": 0.8464864864864865,
+     "best_ckpt_recorded": "best-epoch=09-val_loss=0.4218.ckpt",
+     "path": "./results/D009/models/cvar_max_k8_r2.ckpt",
+     "exists": false
+    },
+    {
+     "run": 3,
+     "stored_mean_top1": 0.8681081081081081,
+     "best_ckpt_recorded": "best-epoch=12-val_loss=0.3810.ckpt",
+     "path": "./results/D009/models/cvar_max_k8_r3.ckpt",
+     "exists": false
+    },
+    {
+     "run": 4,
+     "stored_mean_top1": 0.8529729729729729,
+     "best_ckpt_recorded": "best-epoch=05-val_loss=0.4337.ckpt",
+     "path": "./results/D009/models/cvar_max_k8_r4.ckpt",
+     "exists": false
+    }
+   ]
+  },
+  "joint_energy": {
+   "runs_in_source": 5,
+   "checkpoints_present": 1,
+   "load_and_reproduce": 1,
+   "detail": [
+    {
+     "run": 0,
+     "stored_mean_top1": 0.8821621621621621,
+     "best_ckpt_recorded": "best-epoch=13-val_loss=0.3485.ckpt",
+     "path": "./results/D010/models/joint_energy_k8_r0.ckpt",
+     "exists": true,
+     "loads": true,
+     "recovered_mean_top1": 0.882162,
+     "reproduces": true,
+     "abs_diff": 0.0
+    },
+    {
+     "run": 1,
+     "stored_mean_top1": 0.8691891891891892,
+     "best_ckpt_recorded": "best-epoch=13-val_loss=0.4490.ckpt",
+     "path": "./results/D010/models/joint_energy_k8_r1.ckpt",
+     "exists": false
+    },
+    {
+     "run": 2,
+     "stored_mean_top1": 0.8702702702702703,
+     "best_ckpt_recorded": "best-epoch=16-val_loss=0.3888.ckpt",
+     "path": "./results/D010/models/joint_energy_k8_r2.ckpt",
+     "exists": false
+    },
+    {
+     "run": 3,
+     "stored_mean_top1": 0.8908108108108108,
+     "best_ckpt_recorded": "best-epoch=10-val_loss=0.3339.ckpt",
+     "path": "./results/D010/models/joint_energy_k8_r3.ckpt",
+     "exists": false
+    },
+    {
+     "run": 4,
+     "stored_mean_top1": 0.865945945945946,
+     "best_ckpt_recorded": "best-epoch=07-val_loss=0.4165.ckpt",
+     "path": "./results/D010/models/joint_energy_k8_r4.ckpt",
+     "exists": false
+    }
+   ]
+  }
+ },
+ "wall_s": 10.2
+}

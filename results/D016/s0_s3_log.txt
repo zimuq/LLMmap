@@ -1,0 +1,23 @@
+37 models, 666 pairs, 65 structural
+[S0] paper8        5 runs in source, 1 checkpoints on disk, 1 load and reproduce stored mean_top1
+[S0] coverage      5 runs in source, 1 checkpoints on disk, 1 load and reproduce stored mean_top1
+[S0] joint_energy  5 runs in source, 1 checkpoints on disk, 1 load and reproduce stored mean_top1
+[S0] gate (>=5 per condition): False  (3/15 usable)
+  [S3] 150/666
+  [S3] 300/666
+  [S3] 450/666
+  [S3] 600/666
+[S3] median_query: all 0.8686 | structural 0.8157 (n=65) | non-structural 0.8743 (n=601)
+[S3] 10 hardest by median_query (proxy):
+   microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium- med 0.560 oracle 0.800 structural=True
+   mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Inst med 0.620 oracle 0.900 structural=True
+   microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-i med 0.640 oracle 0.920 structural=True
+   tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct       med 0.660 oracle 0.840 structural=True
+   Deci/DeciLM-7B-instruct | mistralai/Mistral-7B-Instruct-v0.1   med 0.720 oracle 0.940 structural=False
+   meta-llama/Llama-2-7b-chat-hf | mistralai/Mistral-7B-Instruct- med 0.720 oracle 0.920 structural=False
+   meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8 med 0.720 oracle 0.980 structural=True
+   microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k med 0.720 oracle 0.940 structural=True
+   microsoft/Phi-3-medium-128k-instruct | mistralai/Mistral-7B-In med 0.720 oracle 1.000 structural=False
+   microsoft/Phi-3-medium-4k-instruct | mistralai/Mistral-7B-Inst med 0.720 oracle 0.980 structural=False
+
+S0 + S3 wall 27.3s; written: ./results/D016/

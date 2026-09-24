@@ -1,0 +1,9 @@
+target: paper8 k=8 seed 1, stored mean_top1 0.838919
+
+retrain wall           : 9.8 s
+stored  mean_top1      : 0.838919
+retrained mean_top1    : 0.838919
+|diff|                 : 0.000000
+deterministic          : True
+
+12 missing runs x 9.8s = 2.0 min

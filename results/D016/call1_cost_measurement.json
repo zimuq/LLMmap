@@ -1,0 +1,10 @@
+{
+ "target": "paper8 k=8 seed 1 (no checkpoint saved)",
+ "retrain_wall_s": 9.8,
+ "stored": 0.8389189189189189,
+ "retrained": 0.8389189189189189,
+ "abs_diff": 0.0,
+ "deterministic": true,
+ "projected_12_runs_min": 2.0,
+ "note": "measurement for Call 1 only; no part of S1-S5 computed"
+}
