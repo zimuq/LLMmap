@@ -1,0 +1,30 @@
+37 models, 666 pairs, 65 structural
+[S1] paper8        5 runs (4 retrained) — all reproduce stored mean_top1 exactly
+[S1] coverage      5 runs (4 retrained) — all reproduce stored mean_top1 exactly
+[S1] joint_energy  5 runs (4 retrained) — all reproduce stored mean_top1 exactly
+[S2] paper8        666-pair mean 0.9831 | structural 0.9637 | min 0.7120
+[S2] coverage      666-pair mean 0.9872 | structural 0.9644 | min 0.6560
+[S2] joint_energy  666-pair mean 0.9877 | structural 0.9685 | min 0.7320
+
+[S2] worst 14 pairs (12 + everything tied with the 12th at 0.916): 3 non-structural
+   0.656 S sameLin  microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mediu
+   0.800 S sameLin  tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct
+   0.816 S sameLin  microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-
+   0.824 S sameLin  microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k
+   0.824 S sameLin  mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-In
+   0.900 S sameLin  microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k
+   0.900 S sameLin  mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-In
+   0.904 S sameLin  HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct
+   0.908 S sameLin  meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1
+   0.912 S sameLin  google/gemma-1.1-2b-it | google/gemma-1.1-7b-it
+   0.912 S sameLin  microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-12
+   0.916 - xFamily  Deci/DeciLM-7B-instruct | mistralai/Mistral-7B-Instruct-v0.1
+   0.916 - xFamily  mistralai/Mistral-7B-Instruct-v0.2 | togethercomputer/Llama-
+   0.916 - xFamily  openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5
+[S4] paper8        Spearman(trained, proxy) over 666: +0.7174 [0.6752, 0.7565] | structural +0.8070 | non-structural +0.7048
+[S4] coverage      Spearman(trained, proxy) over 666: +0.5908 [0.5397, 0.6418] | structural +0.7531 | non-structural +0.5498
+[S4] joint_energy  Spearman(trained, proxy) over 666: +0.5991 [0.5435, 0.6499] | structural +0.8524 | non-structural +0.5535
+
+[check] 65 structural rows vs D015: IDENTICAL
+
+wall 1.4 min; written: ./results/D016/

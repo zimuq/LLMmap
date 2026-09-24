@@ -1,0 +1,43 @@
+{
+ "schema": "d016-correlation-v1",
+ "n_pairs": 666,
+ "n_boot": 500,
+ "proxy_statistic": "median_query (D008 1-NN proxy, averaged over the 259-query pool)",
+ "caveats": {
+  "n65_to_666": "RESOLVED -- now all 666 pairs",
+  "no_ci": "RESOLVED -- bootstrap CI reported",
+  "accuracy_not_objective": "STILL OPEN -- this correlates two ACCURACIES; neither is the literal CVaR-tail objective value"
+ },
+ "correlations": {
+  "paper8": {
+   "spearman_all": 0.7174,
+   "ci": [
+    0.6752,
+    0.7565
+   ],
+   "spearman_structural": 0.807,
+   "spearman_non_structural": 0.7048,
+   "n": 666
+  },
+  "coverage": {
+   "spearman_all": 0.5908,
+   "ci": [
+    0.5397,
+    0.6418
+   ],
+   "spearman_structural": 0.7531,
+   "spearman_non_structural": 0.5498,
+   "n": 666
+  },
+  "joint_energy": {
+   "spearman_all": 0.5991,
+   "ci": [
+    0.5435,
+    0.6499
+   ],
+   "spearman_structural": 0.8524,
+   "spearman_non_structural": 0.5535,
+   "n": 666
+  }
+ }
+}
