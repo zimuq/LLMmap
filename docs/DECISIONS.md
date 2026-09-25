@@ -1222,6 +1222,43 @@ over mean-pooling; a notable non-blocking finding flagged for the human
   verification of every load-bearing number, per standing evidence
   discipline); the Part 0(b) finding is surfaced to the human, not
   acted on unilaterally.
+
+[2026-09-25] D017 closed -- CLASSIFIER-AGNOSTIC on the ordering; every
+number independently reproduced exactly (no correction needed, unlike
+D012/D015/D016)
+  Decision: D017 marked CLOSED. joint energy > paper8 holds with
+  consistent sign across all 8 k under the attention network and both
+  linear poolings, larger under the linear readouts (mean delta +0.018
+  concat, +0.049 mean-pool) -- the advantage is not a product of the
+  attention network's capacity. coverage > paper8 does NOT survive under
+  the linear classifier (sign flips across k) -- a third independent
+  confirmation, after D009/R2 and this session's own work, that coverage
+  alone is the weak link; DECISIONS.md D5 and any writeup ordering
+  should say "joint energy > {coverage, paper8}", not chain all three.
+  hard_subset's joint-minus-paper8 delta was never resolved on either
+  classifier (D015 already established why -- ~13 trace flips over
+  3,250 decisions); correctly reported as "never resolved on either"
+  rather than forced into a CLASSIFIER-DEPENDENT verdict that would
+  wrongly imply the attention network had a result the linear model
+  lost.
+  Correction to design-side's own framing from earlier this session:
+  the "joint energy's benefit concentrates on hard models" claim was
+  based on a DIFFERENT metric (true top-1 restricted to a subset of
+  hard models, computed ad hoc in chat) than hard_subset's own delta
+  (what D017 tested). The two do not contradict each other, but the
+  hard-pair-specific magnitude should be described as directionally
+  consistent (joint energy wins on hard_subset and both named pairs, 6
+  of 6 readouts across D015/D016/D017) rather than as a confirmed large
+  effect -- it has never been statistically resolved on any classifier
+  tried so far. FINDINGS.md updated to state this precisely.
+  Independent finding, unrelated to D017's question: a linear classifier
+  beats the paper's attention network at every condition/k (24/24
+  cells, +3.9 to +11.0pp) on identical data -- flagged for the human
+  (pursue as a new D, or report as-is); not investigated further here.
+  Decided by: design-side, routine call (closure and verification follow
+  standing discipline); the linear-beats-attention finding and the
+  hard-pair-magnitude correction are surfaced for the human, not decided
+  unilaterally.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

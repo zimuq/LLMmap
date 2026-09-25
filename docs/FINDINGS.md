@@ -937,5 +937,58 @@ every other number were already correct — an isolated manual-tabulation
 slip in one cell, not a data or code error, and it does not change the
 substantive finding.
 
+## D017 — CLASSIFIER-AGNOSTIC on the ordering; the hard-pair magnitude was never resolved on any classifier
+
+**Trained a linear classifier (multinomial logistic regression, on the
+exact same frozen traces/splits/already-selected chains, no new
+embeddings or selection) to test whether `joint energy`'s advantage over
+`paper8` is a property of the paper's attention network or of the
+selected data itself.** `joint energy > paper8` on mean top-1 holds with
+**consistent sign at all 8 `k`** under the attention network *and* both
+linear poolings tried (concatenation, mean-pooling) — and the gap is
+*larger* under both linear readouts (mean Δ +0.018 concatenated, +0.049
+mean-pooled, against the attention network's own numbers). **The
+advantage is not a product of the attention network's capacity; if
+anything it is easier to see with a weaker readout.**
+
+**`coverage > paper8` does not survive.** Sign is inconsistent across `k`
+under the linear classifier, the third independent line of evidence
+(after D009/R2's original finding and this session's own analysis) that
+`coverage` alone is the weak link in the chain — any writeup ordering the
+three conditions should say `joint energy > {coverage, paper8}`, not
+chain all three together.
+
+**A correction to how this project described the hard-pair result a few
+turns before this D ran.** Design-side had characterized joint energy's
+benefit as "concentrated on hard models," based on a custom metric (true
+top-1 restricted to a subset of hard *models*, computed ad hoc from
+`per_model` arrays). D017 tested a related but distinct thing —
+`hard_subset`'s own `joint − paper8` delta, the pair-level metric this
+project has reported since D008 — and found it was **never resolved on
+either classifier** (D015 already explains why: the effect is ≈13 trace
+flips over 3,250 decisions). This is not a contradiction — the two are
+different measurements — but the honest summary is: **the hard-pair
+effect is directionally consistent (joint energy wins on `hard_subset`
+and on both named pairs, 6 of 6 readouts across D015/D016/D017) but has
+never been large enough to resolve statistically, on any classifier tried
+so far.** Treat "helps hard cases" as a well-supported *direction*, not a
+confirmed *magnitude*, until checked more directly.
+
+**An unrelated, striking finding this D was not designed to explain: a
+plain linear classifier beats the paper's own attention network at every
+condition and every `k`** — 24 of 24 cells positive, +3.9 to +11.0
+percentage points, on identical frozen data (2,775 training traces vs.
+the attention network's ≈3.0M parameters). Plausible but untested
+explanation: undertraining or overparameterization at this corpus size.
+Not investigated inside this D; whether to pursue it (a capacity/training-
+budget study) or simply report it is a human call.
+
+**Method note carried forward:** the linear fit is bit-deterministic
+(identical coefficients across `random_state`) — "5 seeds" measures
+nothing for a linear condition; uncertainty here rests entirely on the
+config-level paired bootstrap this project already uses, and any
+cross-architecture delta is one-sided (only the attention side has seed
+variance) and should be labelled as such.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
