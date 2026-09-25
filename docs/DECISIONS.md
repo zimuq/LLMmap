@@ -1190,6 +1190,38 @@ network, to test whether the selection benefit is classifier-agnostic
   Decided by: human (approve drafting this D now; the hard-definition
   deferral); design-side (D017's scope, steps, pooling proposal, and
   gate -- routine call, no invariant or open DECISIONS item touched).
+
+[2026-09-25] D017/P1 approved with amendments -- concatenation adopted
+over mean-pooling; a notable non-blocking finding flagged for the human
+  Decision: approved TACC's P1. Call 1 reverses design-side's proposed
+  mean-pooling default to concatenation: my stated objection
+  ("concatenation reintroduces slot-order dependency") does not hold for
+  a FITTED linear model -- permuting slots permutes the learned weight
+  blocks, and a convex fit's optimum is provably order-free. TACC's
+  first measurement appeared to contradict this (0.900541 vs 0.896216);
+  traced to solver non-convergence rather than dismissed, confirmed
+  closing to exactly 0.000000 at max_iter=20000/tol=1e-6. Independently
+  reproduced both numbers against results/D017/s0_log.txt and
+  s0b_s1_log.txt before approving. Concatenation adopted as primary
+  (also the more faithful analogue -- the attention network can use
+  per-query identity, mean-pooling structurally cannot), mean-pooling
+  kept as secondary.
+  Notable, non-blocking finding: the linear classifier (C=1.0,
+  converged) scores 0.9027 on paper8 k=8, same frozen chain -- 6.8pp
+  ABOVE the paper's own attention network (0.8346, independently
+  verified against D016's already-confirmed value). D017's "does the
+  benefit survive a simpler/weaker classifier" framing does not fit at
+  this sample size (2,775 training traces vs ~3.0M network parameters).
+  Does not block S2-S5 (the actual selection-algorithm question is
+  unaffected either way); flagged for the human as worth a citable
+  mention or further investigation, not chased inside this D's scope.
+  F1 (drop the seed axis for linear conditions -- the fit is
+  bit-deterministic, coef identical to the seed across random_state)
+  and F2/F3 accepted as proposed, all independently verified.
+  Decided by: design-side, routine call (approval after independent
+  verification of every load-bearing number, per standing evidence
+  discipline); the Part 0(b) finding is surfaced to the human, not
+  acted on unilaterally.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
