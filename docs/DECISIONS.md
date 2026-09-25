@@ -1162,6 +1162,34 @@ contains every genuinely hard pair; D7's population question settled
   Decided by: design-side, routine call (closure and verification follow
   standing discipline; substantive interpretation for D7 is recorded as
   informing, not deciding, the human's still-open call).
+
+[2026-09-24] D017 drafted -- linear classifier vs. the paper's attention
+network, to test whether the selection benefit is classifier-agnostic
+  Decision: drafted D017 (docs/D017.md), human-approved ("先起草D017,
+  hard定义那条线先放着" -- explicitly deferring the hard-pair-definition
+  thread, not abandoning it). Tests whether joint energy's advantage
+  (both the aggregate mean-top1 gain and its concentration on hard
+  near-relative pairs/models, found this session) survives a minimal
+  linear classifier in place of the paper's attention network, on the
+  exact same frozen traces/splits/already-selected query chains -- no
+  new embeddings, no new selection, no new generation (I2/I5/I6).
+  Three symmetric pre-registered outcomes (classifier-agnostic /
+  classifier-dependent / falsified) per D009's own precedent that a
+  "proxy/mechanism does not survive" branch is not a failed D.
+  Explicitly scoped to NOT reopen the hard-pair-definition question --
+  uses only the existing 65-pair hard_subset and the two named pairs
+  (Falcon3-10B/7B, Phi-3-medium-128k/4k) as reference points, per the
+  human's instruction to park that thread. Key design calls left to
+  TACC's P1 as a Call: how a linear model pools the k unordered query
+  slots (proposed: mean-pool, preserving the attention network's
+  confirmed order-insensitivity, D012/R4), and whether the linear fit is
+  deterministic (changes what "5 seeds" means here). Gate REVIEW per
+  default (feeds DECISIONS.md D5 claim 3, theoretical formalization).
+  Expected cost low (no backward pass through an attention stack) --
+  among the cheapest D's in the project if confirmed by TACC's own S0.
+  Decided by: human (approve drafting this D now; the hard-definition
+  deferral); design-side (D017's scope, steps, pooling proposal, and
+  gate -- routine call, no invariant or open DECISIONS item touched).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
