@@ -1,0 +1,56 @@
+{
+ "schema": "d017-named-v1",
+ "pairs": [
+  "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct"
+ ],
+ "rows": [
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "k": 1,
+   "concat_paper8": 0.92,
+   "concat_coverage": 0.86,
+   "concat_joint_energy": 0.86,
+   "meanpool_paper8": 0.92,
+   "meanpool_coverage": 0.86,
+   "meanpool_joint_energy": 0.86
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "k": 8,
+   "concat_paper8": 0.92,
+   "concat_coverage": 0.84,
+   "concat_joint_energy": 0.96,
+   "meanpool_paper8": 0.82,
+   "meanpool_coverage": 0.88,
+   "meanpool_joint_energy": 0.9,
+   "attention_paper8": 0.804,
+   "attention_coverage": 0.8,
+   "attention_joint_energy": 0.832
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "k": 1,
+   "concat_paper8": 0.72,
+   "concat_coverage": 0.76,
+   "concat_joint_energy": 0.76,
+   "meanpool_paper8": 0.72,
+   "meanpool_coverage": 0.76,
+   "meanpool_joint_energy": 0.76
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "k": 8,
+   "concat_paper8": 0.76,
+   "concat_coverage": 0.72,
+   "concat_joint_energy": 0.82,
+   "meanpool_paper8": 0.7,
+   "meanpool_coverage": 0.68,
+   "meanpool_joint_energy": 0.76,
+   "attention_paper8": 0.712,
+   "attention_coverage": 0.656,
+   "attention_joint_energy": 0.732
+  }
+ ],
+ "attention_source": "results/D015/per_pair_k8.json"
+}
