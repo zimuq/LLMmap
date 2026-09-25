@@ -1,0 +1,48 @@
+{
+ "A_query_half_constant": {
+  "constant_across_traces": true,
+  "note": "within one condition every trace answers the SAME k queries, so a linear model absorbs E(query) into the bias. The 2048-d trace is effectively 1024-d for ANY linear pooling. The attention network CAN use it (to modulate how each slot is read); concatenation gets that same capability via separate weight blocks, mean-pooling does not."
+ },
+ "D_determinism": {
+  "fit_wall_s": 5.77,
+  "acc": 0.9005,
+  "coef_bit_identical_across_seeds": true,
+  "max_coef_diff": 0.0,
+  "implication": "deterministic -- `5 seeds` has nothing to measure; the config-level bootstrap is the only real uncertainty source"
+ },
+ "B_concat_order_invariance": {
+  "chain_order_acc": 0.900541,
+  "permuted_order_acc": 0.896216,
+  "identical": false,
+  "permutation": [
+   2,
+   4,
+   3,
+   6,
+   5,
+   0,
+   1,
+   7
+  ],
+  "note": "for a linear model f(x)=sum_i W_i v_i + b, permuting slots permutes the learned blocks; the fitted function is unchanged. D017's concern that concatenation 'would reintroduce a slot-order dependency' holds for a FIXED-weight model, not a fitted one."
+ },
+ "A_response_only_equals_full": {
+  "full_2048k": 0.900541,
+  "response_only_1024k": 0.899459,
+  "identical": false
+ },
+ "C_pooling": {
+  "concat_acc": 0.9005,
+  "concat_features": 16384,
+  "concat_fit_s": 5.77,
+  "meanpool_acc": 0.8281,
+  "meanpool_features": 2048,
+  "meanpool_fit_s": 1.77,
+  "gap": 0.0724,
+  "note": "mean-pooling is the strict special case W_i = W/k for all i: one shared weight matrix across slots, so it cannot tell which query produced which response. Concatenation can. The gap measures how much of the signal needs per-query resolution."
+ },
+ "reference_attention_network": {
+  "paper8_k8_seed0": 0.8345945945945946
+ },
+ "wall_s": 28.6
+}

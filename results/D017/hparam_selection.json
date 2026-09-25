@@ -1,0 +1,127 @@
+{
+ "schema": "d017-s0b-s1-v1",
+ "convergence_probe": {
+  "rows": [
+   {
+    "max_iter": 3000,
+    "tol": 0.0001,
+    "chain_order": 0.900541,
+    "permuted": 0.896216,
+    "gap": 0.004324,
+    "wall_s": 11.1
+   },
+   {
+    "max_iter": 20000,
+    "tol": 1e-06,
+    "chain_order": 0.902703,
+    "permuted": 0.902703,
+    "gap": 0.0,
+    "wall_s": 32.0
+   },
+   {
+    "max_iter": 60000,
+    "tol": 1e-08,
+    "chain_order": 0.902703,
+    "permuted": 0.902703,
+    "gap": 0.0,
+    "wall_s": 32.0
+   }
+  ],
+  "gap_shrinks_with_convergence": true,
+  "conclusion": "the S0 order gap is an lbfgs CONVERGENCE artifact, not an order dependency of the objective -- the convex optimum is permutation-equivariant and the gap closes as the solver converges"
+ },
+ "hparam_selection": {
+  "grid": [
+   0.003,
+   0.01,
+   0.03,
+   0.1,
+   0.3,
+   1.0,
+   3.0
+  ],
+  "concat": [
+   {
+    "C": 0.003,
+    "val": 0.8778,
+    "test": 0.8746,
+    "wall_s": 4.6
+   },
+   {
+    "C": 0.01,
+    "val": 0.9027,
+    "test": 0.893,
+    "wall_s": 7.2
+   },
+   {
+    "C": 0.03,
+    "val": 0.9114,
+    "test": 0.8984,
+    "wall_s": 8.5
+   },
+   {
+    "C": 0.1,
+    "val": 0.9146,
+    "test": 0.8973,
+    "wall_s": 12.7
+   },
+   {
+    "C": 0.3,
+    "val": 0.9146,
+    "test": 0.8995,
+    "wall_s": 14.3
+   },
+   {
+    "C": 1.0,
+    "val": 0.9189,
+    "test": 0.9027,
+    "wall_s": 15.2
+   },
+   {
+    "C": 3.0,
+    "val": 0.9189,
+    "test": 0.9038,
+    "wall_s": 13.8
+   }
+  ],
+  "chosen_C_concat": 1.0,
+  "meanpool": [
+   {
+    "C": 0.003,
+    "val": 0.6324
+   },
+   {
+    "C": 0.01,
+    "val": 0.7341
+   },
+   {
+    "C": 0.03,
+    "val": 0.7914
+   },
+   {
+    "C": 0.1,
+    "val": 0.8292
+   },
+   {
+    "C": 0.3,
+    "val": 0.853
+   },
+   {
+    "C": 1.0,
+    "val": 0.8627
+   },
+   {
+    "C": 3.0,
+    "val": 0.8681
+   }
+  ],
+  "chosen_C_meanpool": 3.0,
+  "chosen_on": "validation split only; test never used to pick",
+  "frozen": "this C is reused identically for every condition and every k (D009/F4's fairness discipline)",
+  "solver": {
+   "max_iter": 20000,
+   "tol": 1e-06
+  }
+ },
+ "wall_s": 173.1
+}

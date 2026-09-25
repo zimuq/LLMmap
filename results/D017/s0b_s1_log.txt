@@ -1,0 +1,15 @@
+[S0b] max_iter=3000   tol=0.0001  chain 0.900541 perm 0.896216 gap 0.004324  (11.1s)
+[S0b] max_iter=20000  tol=1e-06   chain 0.902703 perm 0.902703 gap 0.000000  (32.0s)
+[S0b] max_iter=60000  tol=1e-08   chain 0.902703 perm 0.902703 gap 0.000000  (32.0s)
+[S0b] gap shrinks with tighter convergence: True (0.004324 -> 0.000000)
+[S1] C=0.003  val 0.8778  (test 0.8746, not used to choose)
+[S1] C=0.01   val 0.9027  (test 0.8930, not used to choose)
+[S1] C=0.03   val 0.9114  (test 0.8984, not used to choose)
+[S1] C=0.1    val 0.9146  (test 0.8973, not used to choose)
+[S1] C=0.3    val 0.9146  (test 0.8995, not used to choose)
+[S1] C=1.0    val 0.9189  (test 0.9027, not used to choose)
+[S1] C=3.0    val 0.9189  (test 0.9038, not used to choose)
+[S1] chosen on VAL: C=1.0 (val 0.9189)
+[S1] mean-pool chosen on VAL: C=3.0 (val 0.8681)
+
+wall 173.1s; written: ./results/D017/hparam_selection.json

@@ -1,0 +1,9 @@
+traces (2775, 8, 2048) -> (925, 8, 2048), 37 models
+[A] E(query) identical across all traces: True
+[D] fit 5.77s, acc 0.9005; two seeds bit-identical: True
+[B] concat under chain order 0.900541 vs permuted 0.896216 -> identical: False
+[A'] full 2048k 0.900541 vs response-only 1024k 0.899459
+[C] concat 0.9005 (16384 feats) vs mean-pool 0.8281 (2048 feats) -> gap +0.0724
+[ref] attention network, same chain: 0.8346
+
+wall 28.6s; written: ./results/D017/pooling_and_determinism_check.json
