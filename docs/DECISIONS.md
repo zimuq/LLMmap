@@ -1303,6 +1303,52 @@ search on our own 259-query pool, both classifiers
   B); design-side (D018's scope, steps, the three Calls, and gate --
   routine call, no invariant or open DECISIONS item touched beyond what
   D018 itself is designed to inform).
+
+[2026-09-26] D018/P1 approved, no amendments -- cost pilot brings both
+arms in under the single-arm estimate already accepted
+  Decision: approved TACC's P1 in full. S0's mandatory cost pilot priced
+  all five candidate arms (attention; linear concat/mean-pool x
+  tight/loose solver) by measuring real per-evaluation cost at k=1/4/8
+  and weighting by the true candidate count per greedy step
+  (259+258+...+252). Independently reproduced all five projected totals
+  from results/D018/cost_pilot.json before approving -- exact match.
+  Total for both arms (attention 2.47h + linear mean-pool-tight 2.30h)
+  is ~4.8 GPU-hours, LESS than the ~5h already accepted for a single arm
+  -- the attention network is cheaper than PLAN.md's old estimate (that
+  figure included checkpointing/full-test-eval overhead a search step
+  doesn't need), while linear concatenation's cost grows 6x from k=1 to
+  k=8 (opposite the attention network's flat profile), making
+  concat-at-full-convergence the single most expensive of the five
+  options (5.98h).
+  All three Calls approved: (1) S_val argmax per greedy step, not
+  S_test, per PAPER_DEVIATIONS items 6/13's precedent -- noted precisely
+  that this makes any PARITY-OR-BETTER result mean "beats a FAIR
+  implementation of Algorithm H.1," not H.1 exactly as specified (H.1's
+  own literal protocol selects on the same split it is scored on, which
+  is easier). (2) One seed during the search, five for the final chain
+  -- confirmed as more faithful to "372 real training runs" (one per
+  candidate), not a compromise; each step's winning margin will be
+  recorded so a noisy chain is visible, not smoothed over. (3)
+  Mean-pool at the TIGHT solver for the search itself, both poolings at
+  final evaluation -- correctly rejected loosening the solver to save
+  cost, since D017 already measured the loose solver's 0.004
+  non-convergence wobble at the same scale as many genuine
+  candidate-to-candidate differences, which would risk an incorrect
+  argmax propagating through the entire rest of the chain.
+  F1 (the attention arm is the true head-to-head test; the linear arm
+  is a separate robustness/mechanism check, never averaged into one
+  verdict) accepted as a refinement of D018's own framing. F3 (PARITY
+  requires TOST equivalence AND |delta| below the 5-seed run range, not
+  TOST alone, since TOST's own delta=0.02 is narrower than the attention
+  network's own 0.024-0.081 seed range and would otherwise be satisfied
+  by noise) accepted -- same discipline this project applies to
+  resolved-difference claims (D009/F1), now correctly applied to the
+  equivalence side.
+  Decided by: design-side, routine call (approval after independent
+  verification of every cost figure, per standing evidence discipline;
+  none of the three Calls involved an invariant ambiguity or a genuine
+  unresolved trade-off requiring escalation -- all resolved soundly by
+  TACC's own measurement and reasoning).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
