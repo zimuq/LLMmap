@@ -1259,6 +1259,50 @@ D012/D015/D016)
   standing discipline); the linear-beats-attention finding and the
   hard-pair-magnitude correction are surfaced for the human, not decided
   unilaterally.
+
+[2026-09-26] Direction B un-shelved; D018 drafted -- Algorithm H.1's real
+search on our own 259-query pool, both classifiers
+  Decision: per the human ("我能接受重新跑的成本,甚至2种分类器都可以
+  跑"), un-shelved "Direction B" (PLAN.md's parked classifier-in-the-loop
+  greedy search, shelved 2026-09-10 pending "a new human reason") and
+  drafted D018. Motivated by a precise gap the human named: every
+  comparison in this project so far (D009/D010/D015-D017) is against
+  paper8 -- Algorithm H.1's published OUTPUT, selected on the paper's own
+  50-query pool -- never against Algorithm H.1 itself run on OUR 259-query
+  pool. Beating paper8 supports D5 claim (2) as a cost-asymmetric
+  comparison (already decided, 2026-09-10, not to be oversold as "which
+  algorithm is better"); only holding the candidate pool fixed and running
+  their actual procedure can support a true head-to-head claim.
+  Confirmed this is NOT the "expectation baseline" METHOD.md sec6.5
+  already rejected (a distance-function reconstruction of Algorithm H.1,
+  correctly resolved as GreedyCover(gamma=1.0)) -- D018 runs the real
+  procedure (real training, real held-out evaluation, greedy), which this
+  project's own documents have always treated as distinct from that
+  rejected strawman (D010.md's header already separates the two).
+  Cost already estimated (~5 GPU-hours, 2,044 runs = 259+258+...+252, not
+  the paper's own 372 which was sized to their 50-query pool); doubling
+  for two classifiers is accepted, but the ACTUAL total (especially the
+  linear classifier's cost, which D017 showed scales with k for
+  concatenation) is unmeasured -- D018 makes a cost pilot (S0) mandatory
+  before any full-scale commitment, and three explicit design Calls
+  (val- vs test-based greedy-step selection, matching PAPER_DEVIATIONS
+  items 6/13's precedent; seed policy during the search; linear pooling
+  for the search vs. the final chain) for P1 to resolve, none decided
+  unilaterally here.
+  Also answered, precisely, from primary sources before drafting: (a)
+  JointGreedy replaces I4's MAX-coverage rule with a joint/concatenated
+  energy-distance statistic per pair, but keeps CVaR_gamma tail-weighting
+  over pairs unchanged (verified against D010.md's own D/S2/S3 text) --
+  recorded here since it came up in the same conversation and bears on
+  how D018's own chains should be read alongside GreedyCover/JointGreedy.
+  (b) A greedy search through k=8 yields the k=1..7 prefixes for free
+  (Algorithm H.1's own 50+49+...+43 structure is itself sequential/
+  nested, same as our own chains) -- confirmed before scoping D018's S1
+  as a single sequential 8-step search, not 8 independent searches.
+  Decided by: human (accept cost; both classifiers; un-shelve Direction
+  B); design-side (D018's scope, steps, the three Calls, and gate --
+  routine call, no invariant or open DECISIONS item touched beyond what
+  D018 itself is designed to inform).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
