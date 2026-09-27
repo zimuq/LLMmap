@@ -63,24 +63,27 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
-**Issue 15 (2026-09-27) — D019's `## D` model-set table: `consensus6`'s
-stated construction does not reproduce its listed six; `naturalgap5`'s
-sort key is ambiguous.** In `docs/D019.md` `## D`, "What is and is not
-known going in" table. (a) `consensus6` = intersection of the three
-methods' worst-6. Under the pair-index tie-break the same table states for
-`worst6-paper8`, it yields 2 pairs / 4 models. `coverage` ranks 6–7 tie at
-0.912 (gemma-1.1 pair, index 231, vs Mistral-7B-v0.2/v0.3, index 621), and
-index keeps gemma. The listed 6 models are reproduced by breaking ties in
-D015 file order (rows stored `paper8`-ascending), which also reproduces
-FINDINGS 2026-09-23's consensus table (3/6, 5/9, 10/12). Suggest stating
-that tie-break in the row. (b) `naturalgap5` says "`min_over_methods`/
-`paper8`". Only the min-over key reproduces the 7 listed models; `paper8`
-alone gives 9. Suggest dropping "/`paper8`". D019/P1 Call 3 proposes using
-both lists verbatim meanwhile. TACC can't edit `## D`, so it's logged here.
-
 ---
 
 ## Resolved
+
+**Issue 15 (2026-09-27) — D019's `## D` model-set table: `consensus6`'s
+stated construction did not reproduce its listed six; `naturalgap5`'s
+sort key was ambiguous.** Both confirmed by design-side (independently
+recomputed both tie-break rules against `results/D015/per_pair_k8.json`
+before touching anything) and fixed in `docs/D019.md` `## D`. (a)
+`consensus6`'s "pair-index tie-break" line removed; replaced with the
+correct mechanism (the incidental order of D015's stored rows, which are
+`paper8`-ascending) and a dated correction note added so the six listed
+models are used verbatim rather than re-derived from the wrong rule. (b)
+`naturalgap5`'s sort key narrowed to `min_over_methods` only (D016's
+666-pair file); the ambiguous "`/paper8`" alternative removed, with a
+note that `paper8` alone gives a different (9-model) set. Neither
+changes any number already reported (`FINDINGS.md`'s 2026-09-23
+consensus table used the correct construction throughout; only D019's
+own restatement of the method was wrong). Good catch — exactly the kind
+of pre-run sanity check this project's discipline calls for, caught
+before any training ran on the wrong set.
 
 **Issue 14 (2026-09-16) — D012's `## D` overstated what D008 settled
 about γ, and S6 asked for a confounded trained-vs-proxy comparison.**

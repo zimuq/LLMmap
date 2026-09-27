@@ -1413,6 +1413,37 @@ D018's two H1 chains
   Decided by: human (approve doing this now); design-side (D019's scope,
   steps, and gate -- routine call, no invariant or open DECISIONS item
   touched; the model-set reuse specifically avoids touching D7).
+
+[2026-09-27] D019/P1 approved, no amendments -- TACC caught a real bug
+in D019's own ## D via TACC_NOTES; fixed before any run
+  Decision: approved TACC's P1 in full. Before running anything, TACC
+  pre-checked D019's own model-set table and found consensus6's stated
+  "pair-index tie-break" does not reproduce its listed 6 models (gives
+  4) -- logged correctly as TACC_NOTES.md Issue 15 rather than guessed
+  around, since ## D is design-side-owned and TACC cannot edit it.
+  Independently reproduced both tie-break rules against
+  results/D015/per_pair_k8.json before accepting: an explicit
+  (value, pair_index) key gives 2 pairs/4 models; a plain stable sort
+  (no explicit tie-break) gives 3 pairs/6 models, matching the listed
+  set and FINDINGS.md's 2026-09-23 consensus table exactly -- the real
+  mechanism is that results/D015/per_pair_k8.json's rows are stored
+  paper8-ascending (a display sort), so ties in other methods break in
+  that incidental order, not by pair index. Fixed D019's ## D directly
+  (naturalgap5's ambiguous "min_over_methods/paper8" sort-key wording
+  also narrowed to min_over_methods only, paper8 alone gives a
+  different 9-model set) and moved TACC_NOTES Issue 15 to Resolved.
+  Also approved: S0's finding (only seed-0 checkpoints exist for both
+  D018 chains, all 10 will be retrained, bit-exact per D016 precedent);
+  Call 1 (read H1-linear's chain through the attention network, not the
+  linear classifier, for readout consistency with the 3 comparators --
+  matches D018/R5's own convention for the same chain); the joint_mmd
+  filtering trap correctly avoided (D010's runs hold both joint_energy
+  and joint_mmd at k=8; filtering on condition and asserting n=5 avoids
+  silently averaging them).
+  Decided by: design-side, routine call (fixing a documentation bug in
+  design-side's own prior draft, caught by TACC's proper use of the
+  TACC_NOTES channel exactly as CLAUDE.md's ownership rule intends;
+  approval of P1's calls after independent verification).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
