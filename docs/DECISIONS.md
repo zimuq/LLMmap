@@ -1498,6 +1498,51 @@ D018/R3 left as point estimates only
   Decided by: human (approve drafting this D now); design-side (D020's
   scope, steps, and gate -- routine call, no invariant or open
   DECISIONS item touched).
+
+[2026-09-27] Correction to the 2026-09-25 entry above: concat's
+"exactly 0.000000" order gap was true of one permutation, not in
+general (TACC_NOTES Issue 16, caught by D020/P1 before any new run)
+  Decision: the 2026-09-25 entry above states D017/P1's slot-order gap
+  for concatenation "clos[ed] to exactly 0.000000 at
+  max_iter=20000/tol=1e-6" -- accurate for the one permutation D017/P1
+  measured (a full 8-query chain vs. its reversal), but not a general
+  fact. D020/P1 found a genuine counterexample at the identical solver
+  setting: JointGreedy's k=2 prefix [193,140] and H1-linear's k=2 prefix
+  [140,193] are the same two-query set in reversed order, and differ by
+  exactly 1 trace (1/925) under concat (0.844324 vs 0.845405).
+  Independently reproduced both numbers against
+  results/D017/linear_metrics_by_k.json and
+  results/D018/metrics_by_k.json's own stored values before accepting;
+  confirmed the control (the same-order pair) reproduces bit-exactly
+  across the two independently-run jobs, ruling out job-to-job noise as
+  the cause.
+  Correct, narrower statement: the true optimum of a concatenated linear
+  fit is provably order-free (unchanged); lbfgs at this tolerance gets
+  close but not always exactly there, leaving a residual on the order of
+  a single trace depending on slot order. No previously reported number
+  or conclusion changes -- every linear-readout delta this project has
+  drawn a conclusion from is far larger than one trace -- but the
+  blanket "exactly 0.000000" phrasing should not be repeated as a
+  general fact. Corrected via a dated addendum in D017.md's post-hoc
+  Review (the 2026-09-25 entry above is left as a historical record, not
+  edited in place, per the log's append-only convention).
+  Decided by: design-side, routine call (correcting a verified factual
+  overclaim follows this project's standing discipline of fixing
+  reporting-convention errors on sight, same posture as the D012 and
+  D016 corrections earlier this session).
+
+[2026-09-27] D020/P1 approved, no amendments
+  Decision: approved TACC's P1 in full, beyond the correction logged
+  above. Call 2 (pre-register JointGreedy - H1-linear, mean_top1,
+  k=4..8, both poolings, as the sole primary comparison -- resolved
+  only if CI excludes 0 AND sign is consistent across k, per the
+  established D010-onward criterion; everything else descriptive with
+  an honest chance-expectation count) correctly heads off a real
+  multiple-comparisons risk (up to 256 cells at a nominal ~5% rate would
+  produce several "resolved" cells by chance alone) without inventing a
+  new correction framework. Proceed to S0-S3.
+  Decided by: design-side, routine call (approval after independent
+  verification; no invariant or open DECISIONS item touched).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
