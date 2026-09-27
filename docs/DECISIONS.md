@@ -1392,6 +1392,27 @@ does not resolvably beat or lose to our chains; D5 updated
   Decided by: design-side, routine call (closure and verification follow
   standing discipline; the D5 note and hard-pairs framing record already-
   settled interpretation, no new decision made).
+
+[2026-09-27] D019 drafted -- extend the hard-model recall check to
+D018's two H1 chains
+  Decision: drafted D019 (docs/D019.md), human-approved ("好,补上这个
+  分析"). The chat-computed "true 37-way top-1 restricted to hard
+  models" table (paper8/GreedyCover/JointGreedy, several candidate model
+  sets) was never extendable to D018's H1-attention/H1-linear chains
+  because D018 saved no per_model array (same gap as D017). D019 fills
+  it in cheaply: reload D018's already-saved checkpoints (gitignored on
+  $WORK, not committed) for one forward pass each -- no retraining
+  unless they were cleaned up, in which case retraining just these two
+  chains at k=8 is itself minutes of cost.
+  Explicitly reuses the four model sets already defined in this
+  session's chat (worst6-paper8/10 models, worst16-paper8/21 models,
+  consensus6/6 models, naturalgap5/7 models) verbatim rather than
+  re-deriving them, to avoid a second, subtly different version of the
+  same table and to keep the still-parked hard-set-definition question
+  (D7-adjacent) untouched.
+  Decided by: human (approve doing this now); design-side (D019's scope,
+  steps, and gate -- routine call, no invariant or open DECISIONS item
+  touched; the model-set reuse specifically avoids touching D7).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
