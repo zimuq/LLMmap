@@ -990,5 +990,72 @@ config-level paired bootstrap this project already uses, and any
 cross-architecture delta is one-sided (only the attention side has seed
 variance) and should be labelled as such.
 
+## D018 — Algorithm H.1's real search, run fairly on our own pool, neither beats nor loses to our chains
+
+**Un-shelved "Direction B": ran the paper's actual classifier-in-the-loop
+greedy search — real training, real held-out evaluation, one query at a
+time — on our own 259-query pool (not the paper's 50), under both the
+attention network and a linear classifier, to get the first true
+head-to-head comparison this project has ever made.** Every prior
+comparison (D009, D010, D015–D017) was against `paper8` — Algorithm
+H.1's published *output*, selected on a different pool and corpus.
+Holding the pool fixed changes the question from "do we beat their
+result" to "do we beat their algorithm."
+
+**Answer: INCONCLUSIVE — neither side wins.** `JointGreedy` comes
+closest to a resolved win (ahead of H.1's real search by ~1.5pp at
+`k`=7,8, CI excluding zero) but the gap sits inside the attention
+network's own 5-seed training variance at every single cell in the
+comparison table — the pre-registered bar (D009/F1: CI excludes 0 *and*
+|Δ| exceeds the seed range) is not met anywhere. `GreedyCover` trails
+H.1's search at several `k` by up to 3.4pp, also unresolved. **The
+honest sentence: against a fair implementation of Algorithm H.1 (selects
+on `S_val`, not the circular `S_test` it specifies — a harder bar for
+H.1, not an easier one), `JointGreedy` is a cost-free tie at the largest
+budgets — zero training runs vs. H.1's 2.7 GPU-hours — not a resolved
+win.** `GreedyCover` does not reach even that. This sharpens
+`DECISIONS.md` D5 claim (2) into its strongest tested form without
+overturning its own standing caution against claiming "which algorithm
+is better."
+
+**Cost came in lower than expected, informatively so.** Both arms
+together cost ≈4.8 GPU-hours projected (5.2 actual) — *less* than the ~5
+hours previously estimated for one arm alone, because the attention
+network's real search-step cost (2.47h) turned out much cheaper than
+D009's training-run figure implied (that figure included checkpointing
+and full-test evaluation a search step doesn't need), while the linear
+classifier's cost runs the *opposite* direction from expectation —
+flat for the attention network, but growing 6× from `k`=1 to `k`=8 for
+concatenation (more slots = more features), making full-fidelity
+concatenation the single most expensive of five costed options.
+
+**On the hard pairs, specifically — the answer the human was tracking
+throughout this line of work.** Algorithm H.1's real search does **not**
+specifically rescue the two named hard pairs (Falcon3-10B/7B,
+Phi-3-medium-128k/4k) beyond what `JointGreedy` already achieves — both
+move a little in both directions across the four compared chains, none
+of it resolved (D015's ~2pp-per-trace floor still binds). Across the
+full 65 structural pairs, H1-attention vs. `JointGreedy` is 19 up / 30
+down / 16 unchanged — the same kind of internal redistribution D015
+found for our own selection methods, not something unique to real
+classifier-in-the-loop search. **Real classifier-in-the-loop signal, if
+it exists, is not visibly being left on the table by our classifier-free
+methods — at least not at a magnitude this corpus can resolve.**
+
+**A free, unplanned corroboration.** Both H1 searches (attention-guided
+and linear-guided) independently rediscover `JointGreedy`'s opening two
+queries ({193, 140}) — weak but real supporting evidence that
+`JointGreedy`'s own front end is picking up on genuine signal, not an
+artifact of its specific classifier-free objective.
+
+**Resolution wall named as the binding constraint again, not the
+algorithm** — every comparison cell sits inside 5-seed training
+variance; more seeds on the already-selected chains would not change
+anything (the chains themselves were picked using a single seed, per
+Algorithm H.1's own literal "one run per candidate" budget). Only more
+test configurations (the recurring 25-config limit since D008/F3) would
+narrow these intervals enough to resolve them — a lever, and a new D, if
+ever wanted.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

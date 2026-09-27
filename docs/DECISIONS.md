@@ -166,7 +166,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D2 | Target venue | 🅿️ same |
 | D3 | Papers 2 & 3 follow-ups | 🅿️ out of scope; keep corpus schema friendly where free |
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
-| D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. | 🅿️ noted for writeup |
+| D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. **D018 (2026-09-27, INCONCLUSIVE) tested the stronger version of (2) directly — Algorithm H.1's real search run fairly on our own pool, not just its published output — and confirms the caution above still holds: JointGreedy is a cost-free tie at best (ahead at `k`=7,8, unresolved against seed variance), not a resolved win; GreedyCover doesn't reach even that.** | 🅿️ noted for writeup |
 | D6 | **`METHOD.md` §7 revision, 2026-09-13, from D011.** §7 lists "the identifiability frontier" as a standalone deliverable. D011 found the tier meant to fill that role (D008's T2, 32/37 pairs) is an estimator artifact — a per-pair oracle that scores *worse than a random query* on this population, not a real property of the model universe. | ✅ **Decided 2026-09-14 by the human — revised.** §7 item 2 now states the strict pool-coverage frontier is empty and names the 2 structurally-hard pairs (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`) as the actual boundary. |
 | D7 | **`METHOD.md` §8 metric revision.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models. **Population question CLOSED by D016 (2026-09-24, NO): the 65 structural pairs already contain the 11 objectively hardest pairs of all 666** (real trained classifier; first non-structural pair at rank 12+, accuracy .916 vs. worst structural .656) — so any reformulation can safely build on the existing 65-pair set, not a redefined population. Reformulations computable from already-run data show a real signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models than overall, sharpest (+11.5pp vs. +3.0pp) on the 3-method-consensus 6-model set. Still open: should `METHOD.md §8` add or replace `hard_subset` with one or more of these, and at what cutoff? | ⬜ needs the human |
 
@@ -1349,6 +1349,49 @@ arms in under the single-arm estimate already accepted
   none of the three Calls involved an invariant ambiguity or a genuine
   unresolved trade-off requiring escalation -- all resolved soundly by
   TACC's own measurement and reasoning).
+
+[2026-09-27] D018 closed -- INCONCLUSIVE; Algorithm H.1's real search
+does not resolvably beat or lose to our chains; D5 updated
+  Decision: D018 marked CLOSED. Independently re-verified nearly the
+  entire R against raw JSON (the 16-cell headline comparison table,
+  F2's reuse check, all four chains and their per-step margins, the two
+  named pairs across all chains) -- all correct except one: R4 said the
+  linear search's margins are "7/8 below" the attention network's 5-seed
+  range; recomputed directly and all 8 are below (k=2's margin 0.027 is
+  clearly under its 0.032 seed range, not a rounding-boundary case). An
+  isolated miscount, does not change the finding (the chain is
+  noise-selected past k=2 either way) and nothing else in R depends on
+  it.
+  Headline: neither GreedyCover nor JointGreedy resolvably beats
+  Algorithm H.1's real classifier-in-the-loop search run fairly (S_val
+  argmax) on our own 259-query pool, nor does H.1 resolvably beat them.
+  JointGreedy is closest (ahead at k=7,8 by ~1.5pp, CI excludes 0, but
+  inside the attention network's own 5-seed range -- the pre-registered
+  bar from D009/F1, correctly applied here even though TACC's own stored
+  verdict() label strings omitted the seed-range check, disclosed and
+  overridden in R's own table). GreedyCover trails H.1 at several k,
+  also unresolved. H1 WINS never fires -- no resolved H.1 advantage
+  anywhere. F2: the 65 structural pairs reproduce D015's per_pair_k8.json
+  exactly, 520/520 cells -- the strongest available self-check that this
+  D's own pipeline is sound.
+  Hard-pairs angle, since the human asked to keep tracking it: H.1's
+  search does not specifically rescue the two named hard pairs
+  (Falcon3-10B/7B, Phi-3-medium-128k/4k) beyond what JointGreedy already
+  does -- movement in both directions across the four chains, none
+  resolved. Across all 65 pairs, H1-attention vs JointGreedy is 19
+  up/30 down/16 flat, the same kind of redistribution D015 found for our
+  own methods -- not unique to real classifier-in-the-loop search.
+  DECISIONS.md D5 updated with a one-line note: the stronger, apples-to-
+  apples version of claim (2) was tested directly and confirms the
+  existing caution (cost-asymmetric tie, not a resolved win).
+  Session-continuity note (operational, not scientific): the previous
+  session (interrupted by a TACC /work outage) had run S1 (the greedy
+  searches) but never submitted the S2-S5 evaluation job; this session
+  verified S1's completion via sacct before proceeding, per the recovery
+  plan discussed with the human.
+  Decided by: design-side, routine call (closure and verification follow
+  standing discipline; the D5 note and hard-pairs framing record already-
+  settled interpretation, no new decision made).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
