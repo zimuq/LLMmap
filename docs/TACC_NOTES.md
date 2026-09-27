@@ -63,6 +63,13 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+**Issue 17 (2026-09-27) — D020's `## D` quotes D018/R3's mean-pool range as
+"+0.010 to +0.029"; the correct range is +0.010 to +0.023.** The error is
+TACC's own, from D018/R3's prose. D018's table was right, and a dated correction
+is now appended in `D018.md`. The wrong figure appears twice in `docs/D020.md`:
+the header `source:` block and the `## D` question. Suggest correcting both.
+No number or verdict depends on it: D020's primary was run on the real counts.
+
 ---
 
 ## Resolved

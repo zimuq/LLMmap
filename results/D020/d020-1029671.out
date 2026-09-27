@@ -1,0 +1,28 @@
+[S0] concat   GreedyCover   k=1..8 reproduce stored exactly; k=8 mean_top1 0.9038
+[S0] concat   JointGreedy   k=1..8 reproduce stored exactly; k=8 mean_top1 0.9373
+[S0] concat   H1-attention  k=1..8 reproduce stored exactly; k=8 mean_top1 0.9178
+[S0] concat   H1-linear     k=1..8 reproduce stored exactly; k=8 mean_top1 0.9276
+[S0] meanpool GreedyCover   k=1..8 reproduce stored exactly; k=8 mean_top1 0.8605
+[S0] meanpool JointGreedy   k=1..8 reproduce stored exactly; k=8 mean_top1 0.9005
+[S0] meanpool H1-attention  k=1..8 reproduce stored exactly; k=8 mean_top1 0.8584
+[S0] meanpool H1-linear     k=1..8 reproduce stored exactly; k=8 mean_top1 0.8822
+[Call1] GreedyCover   reversed-order gap 0 traces, 0 predictions differ
+[Call1] JointGreedy   reversed-order gap 0 traces, 0 predictions differ
+[Call1] H1-attention  reversed-order gap 0 traces, 0 predictions differ
+[Call1] H1-linear     reversed-order gap 0 traces, 1 predictions differ
+[S2] PRIMARY concat   sign-consistent False; resolved at []
+     k=4: +0.0238 [+0.0065, +0.0411] (+22 traces)
+     k=5: +0.0000 [-0.0173, +0.0173] (+0 traces)
+     k=6: -0.0173 [-0.0389, +0.0043] (-16 traces)
+     k=7: +0.0032 [-0.0152, +0.0227] (+3 traces)
+     k=8: +0.0097 [-0.0065, +0.0259] (+9 traces)
+[S2] PRIMARY meanpool sign-consistent True; resolved at [6]
+     k=4: +0.0097 [-0.0054, +0.0249] (+9 traces)
+     k=5: +0.0130 [-0.0108, +0.0346] (+12 traces)
+     k=6: +0.0227 [+0.0054, +0.0411] (+21 traces)
+     k=7: +0.0141 [-0.0032, +0.0324] (+13 traces)
+     k=8: +0.0184 [+0.0000, +0.0389] (+17 traces)
+[S2] cells (distinct inputs) by metric: {'mean_top1': {'n_cells': 56, 'n_ci_excludes_0': 22, 'chance_expectation_5pct': 2.8}, 'worst_class': {'n_cells': 56, 'n_ci_excludes_0': 4, 'chance_expectation_5pct': 2.8}, 'worst3_class': {'n_cells': 56, 'n_ci_excludes_0': 8, 'chance_expectation_5pct': 2.8}, 'hard_subset': {'n_cells': 56, 'n_ci_excludes_0': 12, 'chance_expectation_5pct': 2.8}}
+[S2] concat order floor: 0 trace(s)
+
+wall 10.2 min; written ./results/D020/
