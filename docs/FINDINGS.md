@@ -1084,5 +1084,58 @@ test configurations (the recurring 25-config limit since D008/F3) would
 narrow these intervals enough to resolve them — a lever, and a new D, if
 ever wanted.
 
+## D020 — Properly paired: the primary claim softens, but GreedyCover resolvably trails real search
+
+**Turned D018/R3's disclosed "point estimates only" limitation into a
+properly resolved comparison**, by refitting the same four already-
+selected chains (`GreedyCover`, `JointGreedy`, `H1-attention`,
+`H1-linear`) under D017's exact frozen linear hparams — deterministic,
+cheap, no new training or selection — and building one shared
+config-level bootstrap so every delta is paired, the same convention
+this project has used since D009.
+
+**The pre-registered primary question softens rather than confirms.**
+D018/R3's finding — `JointGreedy` beats `H1-linear`'s chain even under
+`H1-linear`'s own (linear) classifier — comes back a **tie leaning
+`JointGreedy`**, not a win: consistent direction under mean-pooling but
+resolved at only 1 of the 5 tested `k` (`k`=6); under concatenation (the
+readout D017 established as primary) the sign **flips across `k`**. The
+honest sentence: *"`JointGreedy` matches or edges out `H1-linear` on the
+classifier `H1-linear` searched with; the edge is not reliably there."*
+
+**The real, resolved finding is about `GreedyCover`, not `JointGreedy`.**
+Under the linear readout — which has no training-seed noise to hide
+behind, unlike every attention-network comparison in this project —
+`GreedyCover` **resolvably trails both real-search chains**: behind
+`H1-linear` at every `k`=4..8 under mean-pooling, and behind both `H1`
+chains at most `k` under concatenation. 22 of 56 `mean_top1` cells have
+a paired CI excluding zero, against 2.8 expected by chance — not scatter,
+but two coherent blocks (`GreedyCover` trailing; `JointGreedy` beating
+`H1-attention` under mean-pool). **This is the first properly resolved
+confirmation, against a real classifier-in-the-loop search rather than
+just `paper8`, that the coverage algorithm alone is this project's weak
+link** — the same lean D009 first found and D017/R7 repeated, now
+resolved because the linear readout removes the seed-variance noise
+floor that hid it everywhere else.
+
+**A measured, not assumed, floor for the concat slot-order question left
+open since D017/D020's own correction (below).** Reversed-slot-order
+refits at `k`=8 show a 0-trace gap for three of the four chains and a
+1-trace gap for the fourth (a wrong prediction moving between two wrong
+classes, no change to the correct count) — confirming the residual is
+negligible and binds nothing in this D's conclusions.
+
+**A small self-correction, recorded for accuracy.** D018/R3's own quoted
+range for `JointGreedy`'s mean-pool edge ("+0.010 to +0.029") was an
+arithmetic slip against its own table; the correct range is +0.010 to
++0.023 (max at `k`=6). Does not change any conclusion.
+
+**`hard_subset` (the pair-level metric) leans the opposite direction**
+from D019's model-restricted true-top1 view (resolved cells here mostly
+favour the `H1` chains, ≤1.3pp) — small, and consistent with this
+project's repeated finding that `hard_subset`'s aggregation and a
+model-level view can disagree in sign while both stay largely
+unresolved (D015 onward). Flagged, not reconciled.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

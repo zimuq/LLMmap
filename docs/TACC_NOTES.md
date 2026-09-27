@@ -63,16 +63,19 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
-**Issue 17 (2026-09-27) — D020's `## D` quotes D018/R3's mean-pool range as
-"+0.010 to +0.029"; the correct range is +0.010 to +0.023.** The error is
-TACC's own, from D018/R3's prose. D018's table was right, and a dated correction
-is now appended in `D018.md`. The wrong figure appears twice in `docs/D020.md`:
-the header `source:` block and the `## D` question. Suggest correcting both.
-No number or verdict depends on it: D020's primary was run on the real counts.
-
 ---
 
 ## Resolved
+
+**Issue 17 (2026-09-27) — D020's `## D` quoted D018/R3's mean-pool range as
+"+0.010 to +0.029"; the correct range is +0.010 to +0.023.** Confirmed
+(the underlying error was TACC's own, from D018/R3's prose; D018's own
+table was always right, and TACC appended a dated correction there).
+Both occurrences in `docs/D020.md` fixed (the header `source:` block and
+the `## D` question), each with a one-line pointer back to this issue
+so the correction's provenance stays visible. No number or verdict
+depended on it — D020's primary ran on the real per-config counts, not
+this quoted figure.
 
 **Issue 16 (2026-09-27) — `DECISIONS.md` 2026-09-25 (D017/P1 approval)
 recorded concat's slot-order gap as "exactly 0.000000 at

@@ -166,7 +166,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D2 | Target venue | 🅿️ same |
 | D3 | Papers 2 & 3 follow-ups | 🅿️ out of scope; keep corpus schema friendly where free |
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
-| D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. **D018 (2026-09-27, INCONCLUSIVE) tested the stronger version of (2) directly — Algorithm H.1's real search run fairly on our own pool, not just its published output — and confirms the caution above still holds: JointGreedy is a cost-free tie at best (ahead at `k`=7,8, unresolved against seed variance), not a resolved win; GreedyCover doesn't reach even that.** | 🅿️ noted for writeup |
+| D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. **D018 (2026-09-27, INCONCLUSIVE) tested the stronger version of (2) directly — Algorithm H.1's real search run fairly on our own pool, not just its published output — and confirms the caution above still holds: JointGreedy is a cost-free tie at best (ahead at `k`=7,8, unresolved against seed variance), not a resolved win; GreedyCover doesn't reach even that.** **D020 (2026-09-27) properly paired the linear-readout comparison D018/R3 left as point estimates: JointGreedy's edge over H1-linear on its own classifier softens further (tie leaning JointGreedy, resolved at only 1 of 5 `k`) — but GreedyCover's trailing lean *does* resolve here (no seed-noise floor to hide behind), the first properly-resolved confirmation against a real search that coverage alone is the weak link. For any writeup: claim (1)'s "CVaR beats mean-greedy" evidence is strongest for `JointGreedy`; `GreedyCover` alone should not be presented as matching real classifier-in-the-loop search.** | 🅿️ noted for writeup |
 | D6 | **`METHOD.md` §7 revision, 2026-09-13, from D011.** §7 lists "the identifiability frontier" as a standalone deliverable. D011 found the tier meant to fill that role (D008's T2, 32/37 pairs) is an estimator artifact — a per-pair oracle that scores *worse than a random query* on this population, not a real property of the model universe. | ✅ **Decided 2026-09-14 by the human — revised.** §7 item 2 now states the strict pool-coverage frontier is empty and names the 2 structurally-hard pairs (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`) as the actual boundary. |
 | D7 | **`METHOD.md` §8 metric revision.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models. **Population question CLOSED by D016 (2026-09-24, NO): the 65 structural pairs already contain the 11 objectively hardest pairs of all 666** (real trained classifier; first non-structural pair at rank 12+, accuracy .916 vs. worst structural .656) — so any reformulation can safely build on the existing 65-pair set, not a redefined population. Reformulations computable from already-run data show a real signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models than overall, sharpest (+11.5pp vs. +3.0pp) on the 3-method-consensus 6-model set. Still open: should `METHOD.md §8` add or replace `hard_subset` with one or more of these, and at what cutoff? | ⬜ needs the human |
 
@@ -1543,6 +1543,36 @@ general (TACC_NOTES Issue 16, caught by D020/P1 before any new run)
   new correction framework. Proceed to S0-S3.
   Decided by: design-side, routine call (approval after independent
   verification; no invariant or open DECISIONS item touched).
+
+[2026-09-27] D020 closed -- primary NOT RESOLVED, but GreedyCover
+resolvably trails real search; every number independently verified
+  Decision: D020 marked CLOSED. Independently re-verified R in full
+  against results/D020/paired_linear_comparison.json (the full primary
+  table both poolings, secondary_counts, the concat order-floor check,
+  a spot-checked cells entry) -- exact match throughout.
+  Primary (JointGreedy - H1-linear, mean_top1, k=4..8, pre-registered
+  2026-09-27): NOT RESOLVED. Consistent positive direction under
+  mean-pool but resolved at only k=6 (1 of 5); sign flips under concat.
+  Softer than D018/R3's original framing -- "matches or edges out," not
+  "beats."
+  Real finding: under the linear readout (no seed-noise floor),
+  GreedyCover resolvably trails both H1-guided chains -- every k=4..8
+  under mean-pool, most of k=3..8 under concat. 22/56 mean_top1 cells
+  resolved vs 2.8 by chance, clustering into two coherent blocks
+  (GreedyCover trailing; JointGreedy beating H1-attention under
+  mean-pool). First properly resolved confirmation, against a real
+  classifier-in-the-loop search rather than just paper8, that coverage
+  alone is the weak link (D009's original finding, D017/R7 pattern).
+  Concat's slot-order residual measured (not assumed) at 0-1 trace,
+  binding nothing. Corrected D020's own ## D (TACC_NOTES Issue 17:
+  quoted D018/R3's "+0.010 to +0.029", should be "+0.010 to +0.023",
+  D018/R3's own arithmetic slip, no conclusion affected) and moved it to
+  Resolved.
+  DECISIONS.md D5 updated with a one-line note distinguishing the two
+  algorithms' evidence strength; FINDINGS.md given its own D020 entry.
+  Decided by: design-side, routine call (closure and verification follow
+  standing discipline; D5 note records already-established interpretation,
+  no new decision made).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
