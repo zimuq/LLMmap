@@ -1,0 +1,38 @@
+{
+ "schema": "d019-s0-v1",
+ "k": 8,
+ "present": {
+  "H1-attention": {
+   "0": true,
+   "1": false,
+   "2": false,
+   "3": false,
+   "4": false
+  },
+  "H1-linear": {
+   "0": true,
+   "1": false,
+   "2": false,
+   "3": false,
+   "4": false
+  }
+ },
+ "n_present": 2,
+ "note": "D018's d018_evaluate.py saved a checkpoint only `if r == 0 and k == 8`: seeds 1-4 were never written (not file loss). Both files are attention networks; H1-linear_k8_r0 is the attention network on the H1-linear chain. No linear-classifier fit was ever persisted.",
+ "resolution": "all 5 seeds x 2 chains retrained (P1/Call 2); saved seed-0 checkpoints used as a bit-identity check",
+ "seed0_bit_identity": {
+  "H1-attention": {
+   "path": "./results/D018/models/H1-attention_k8_r0.ckpt",
+   "reloaded_mean_top1": 0.8789189189189189,
+   "retrained_seed0_mean_top1": 0.8789189189189189,
+   "per_model_bit_identical": true
+  },
+  "H1-linear": {
+   "path": "./results/D018/models/H1-linear_k8_r0.ckpt",
+   "reloaded_mean_top1": 0.8518918918918919,
+   "retrained_seed0_mean_top1": 0.8518918918918919,
+   "per_model_bit_identical": true
+  }
+ },
+ "retrained_checkpoints": "./results/D019/models/ (10 files, gitignored)"
+}

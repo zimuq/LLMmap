@@ -1,0 +1,23 @@
+[S2] sets {'worst6_paper8': 10, 'worst16_paper8': 21, 'consensus6': 6, 'naturalgap5': 7}; audit {'worst6_paper8': True, 'worst16_paper8': 21, 'consensus6': True, 'naturalgap5': True}
+[S0] 2/10 D018 checkpoints present: {'H1-attention': {'0': True, '1': False, '2': False, '3': False, '4': False}, 'H1-linear': {'0': True, '1': False, '2': False, '3': False, '4': False}}
+[S1] H1-attention seed 0: mean_top1 0.878919 (11.5s)
+[S1] H1-attention seed 1: mean_top1 0.845405 (5.0s)
+[S1] H1-attention seed 2: mean_top1 0.854054 (6.9s)
+[S1] H1-attention seed 3: mean_top1 0.858378 (5.4s)
+[S1] H1-attention seed 4: mean_top1 0.865946 (4.8s)
+[S1] H1-attention: 5-seed mean 0.860541 == D018 0.860541; range diff 0.0e+00; seed-0 ckpt bit-identical True
+[S1] H1-linear seed 0: mean_top1 0.851892 (4.5s)
+[S1] H1-linear seed 1: mean_top1 0.886486 (5.6s)
+[S1] H1-linear seed 2: mean_top1 0.882162 (5.6s)
+[S1] H1-linear seed 3: mean_top1 0.865946 (4.2s)
+[S1] H1-linear seed 4: mean_top1 0.857297 (4.3s)
+[S1] H1-linear: 5-seed mean 0.868757 == D018 0.868757; range diff 0.0e+00; seed-0 ckpt bit-identical True
+
+                all-37         worst6_paper8        worst16_paper8            consensus6           naturalgap5
+paper8          0.8452       0.720 (-12.5pp)       0.790 ( -5.5pp)       0.640 (-20.5pp)       0.664 (-18.1pp)
+GreedyCover     0.8519       0.750 (-10.2pp)       0.798 ( -5.4pp)       0.680 (-17.2pp)       0.665 (-18.7pp)
+JointGreedy     0.8757       0.803 ( -7.2pp)       0.825 ( -5.1pp)       0.755 (-12.1pp)       0.745 (-13.1pp)
+H1-attention    0.8605       0.783 ( -7.7pp)       0.809 ( -5.2pp)       0.732 (-12.9pp)       0.711 (-15.0pp)
+H1-linear       0.8688       0.788 ( -8.1pp)       0.818 ( -5.1pp)       0.727 (-14.2pp)       0.711 (-15.8pp)
+
+wall 1.1 min; written ./results/D019/
