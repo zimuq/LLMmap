@@ -63,6 +63,20 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+**Issue 16 (2026-09-27) — `DECISIONS.md` 2026-09-25 (D017/P1 approval)
+records concat's slot-order gap as "exactly 0.000000 at
+max_iter=20000/tol=1e-6". That holds for the one permutation measured, not
+in general.** The stored numbers contain a counterexample at the same solver
+setting. At `k`=2, JointGreedy `[193,140]` (D017) scores concat 0.844324 and
+H1-linear `[140,193]` (D018) scores 0.845405, a 1-trace gap. The control is
+clean: the identical set *in the same order* (JointGreedy D017 vs H1-attention
+D018) reproduces exactly across jobs. The optimum is order-free; lbfgs at
+`tol=1e-6` stops short of it. No reported number changes, since every
+linear-readout delta so far is ≫1 trace. Suggest softening the DECISIONS line
+to "order gap 0 on the measured permutation; ≤1 trace observed elsewhere".
+D020/P1 Call 1 proposes measuring the floor properly (4 reversed-order `k`=8
+fits). DECISIONS.md is design-owned, so it's logged here.
+
 ---
 
 ## Resolved
