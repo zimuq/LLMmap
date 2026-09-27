@@ -1,0 +1,53 @@
+[S1] arm=attention  pool=259  k=1..8  seed=0  argmax on S_val (Call 1)
+    k=1 50/259  (2.6 min)
+    k=1 100/259  (4.9 min)
+    k=1 150/259  (7.5 min)
+    k=1 200/259  (10.1 min)
+    k=1 250/259  (12.7 min)
+[S1] k=1: q=193 val 0.6681  margin +0.0141  (runner-up q=0)  [13.1 min]
+    k=2 50/258  (3.0 min)
+    k=2 100/258  (5.6 min)
+    k=2 150/258  (8.4 min)
+    k=2 200/258  (11.3 min)
+    k=2 250/258  (14.0 min)
+[S1] k=2: q=140 val 0.7935  margin +0.0054  (runner-up q=109)  [14.4 min]
+    k=3 50/257  (3.1 min)
+    k=3 100/257  (6.3 min)
+    k=3 150/257  (9.5 min)
+    k=3 200/257  (13.1 min)
+    k=3 250/257  (16.8 min)
+[S1] k=3: q=250 val 0.8768  margin +0.0141  (runner-up q=251)  [17.2 min]
+    k=4 50/256  (4.1 min)
+    k=4 100/256  (8.3 min)
+    k=4 150/256  (12.3 min)
+    k=4 200/256  (16.3 min)
+    k=4 250/256  (20.5 min)
+[S1] k=4: q=202 val 0.8951  margin +0.0032  (runner-up q=175)  [20.9 min]
+    k=5 50/255  (4.5 min)
+    k=5 100/255  (8.8 min)
+    k=5 150/255  (13.1 min)
+    k=5 200/255  (17.3 min)
+    k=5 250/255  (21.8 min)
+[S1] k=5: q=247 val 0.9070  margin +0.0065  (runner-up q=246)  [22.2 min]
+    k=6 50/254  (4.5 min)
+    k=6 100/254  (9.2 min)
+    k=6 150/254  (13.4 min)
+    k=6 200/254  (17.6 min)
+    k=6 250/254  (22.1 min)
+[S1] k=6: q=31 val 0.9103  margin +0.0011  (runner-up q=29)  [22.4 min]
+    k=7 50/253  (5.2 min)
+    k=7 100/253  (10.0 min)
+    k=7 150/253  (14.9 min)
+    k=7 200/253  (19.7 min)
+    k=7 250/253  (24.6 min)
+[S1] k=7: q=254 val 0.9135  margin +0.0043  (runner-up q=72)  [24.9 min]
+    k=8 50/252  (5.1 min)
+    k=8 100/252  (10.1 min)
+    k=8 150/252  (14.9 min)
+    k=8 200/252  (19.8 min)
+    k=8 250/252  (24.9 min)
+[S1] k=8: q=113 val 0.9168  margin +0.0022  (runner-up q=55)  [25.1 min]
+
+[S1] attention chain: [193, 140, 250, 202, 247, 31, 254, 113]
+[S1] margins: median 0.0049  range [0.0011, 0.0141]  (8/8 below the attention network's own seed floor)
+[S1] wall 160.4 min; written ./results/D018/greedy_attention.json

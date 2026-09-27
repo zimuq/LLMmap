@@ -1,0 +1,55 @@
+{
+ "schema": "d018-f2-check-v1",
+ "verdict": "IDENTICAL",
+ "n_pairs": 65,
+ "pair_index_match": true,
+ "n_cells_compared": 520,
+ "comparison": "exact equality at D015's stored precision (4 dp) of means, 95% CIs and paired deltas; bootstrap seed 20260908, 2,000 draws, same as D015",
+ "aggregate_recomputed": {
+  "paper8": 0.9637,
+  "coverage": 0.9644,
+  "joint_energy": 0.9685
+ },
+ "aggregate_d015": {
+  "paper8": 0.9637,
+  "coverage": 0.9644,
+  "joint_energy": 0.9685
+ },
+ "hard_subset_stored": {
+  "paper8": 0.9636923076923077,
+  "coverage": 0.9643692307692306,
+  "joint_energy": 0.9684923076923078
+ },
+ "hard_subset_abs_diff": {
+  "paper8": 0.0,
+  "coverage": 0.0,
+  "joint_energy": 0.0
+ },
+ "chains": {
+  "GreedyCover": [
+   193,
+   123,
+   233,
+   243,
+   240,
+   17,
+   136,
+   252
+  ],
+  "JointGreedy": [
+   193,
+   140,
+   237,
+   114,
+   233,
+   117,
+   0,
+   16
+  ]
+ },
+ "chain_match": {
+  "GreedyCover": true,
+  "JointGreedy": true
+ },
+ "failures": []
+}

@@ -1,0 +1,53 @@
+[S1] arm=linear  pool=259  k=1..8  seed=0  argmax on S_val (Call 1)
+    k=1 50/259  (3.7 min)
+    k=1 100/259  (7.2 min)
+    k=1 150/259  (12.1 min)
+    k=1 200/259  (15.9 min)
+    k=1 250/259  (20.0 min)
+[S1] k=1: q=140 val 0.7611  margin +0.0065  (runner-up q=193)  [20.9 min]
+    k=2 50/258  (3.7 min)
+    k=2 100/258  (7.3 min)
+    k=2 150/258  (11.7 min)
+    k=2 200/258  (15.6 min)
+    k=2 250/258  (19.4 min)
+[S1] k=2: q=193 val 0.8659  margin +0.0270  (runner-up q=248)  [20.1 min]
+    k=3 50/257  (2.9 min)
+    k=3 100/257  (5.9 min)
+    k=3 150/257  (9.2 min)
+    k=3 200/257  (12.2 min)
+    k=3 250/257  (15.2 min)
+[S1] k=3: q=109 val 0.8941  margin +0.0011  (runner-up q=113)  [15.6 min]
+    k=4 50/256  (3.3 min)
+    k=4 100/256  (6.5 min)
+    k=4 150/256  (10.1 min)
+    k=4 200/256  (13.4 min)
+    k=4 250/256  (16.7 min)
+[S1] k=4: q=108 val 0.9016  margin +0.0000  (runner-up q=111)  [17.1 min]
+    k=5 50/255  (3.4 min)
+    k=5 100/255  (6.8 min)
+    k=5 150/255  (10.5 min)
+    k=5 200/255  (14.0 min)
+    k=5 250/255  (17.4 min)
+[S1] k=5: q=251 val 0.9211  margin +0.0097  (runner-up q=132)  [17.8 min]
+    k=6 50/254  (3.1 min)
+    k=6 100/254  (6.2 min)
+    k=6 150/254  (9.4 min)
+    k=6 200/254  (12.6 min)
+    k=6 250/254  (15.8 min)
+[S1] k=6: q=35 val 0.9265  margin +0.0011  (runner-up q=112)  [16.0 min]
+    k=7 50/253  (3.0 min)
+    k=7 100/253  (6.0 min)
+    k=7 150/253  (9.1 min)
+    k=7 200/253  (12.2 min)
+    k=7 250/253  (15.2 min)
+[S1] k=7: q=145 val 0.9308  margin +0.0011  (runner-up q=121)  [15.4 min]
+    k=8 50/252  (3.2 min)
+    k=8 100/252  (6.4 min)
+    k=8 150/252  (9.7 min)
+    k=8 200/252  (13.0 min)
+    k=8 250/252  (16.2 min)
+[S1] k=8: q=121 val 0.9395  margin +0.0043  (runner-up q=111)  [16.3 min]
+
+[S1] linear chain: [140, 193, 109, 108, 251, 35, 145, 121]
+[S1] margins: median 0.0027  range [0.0000, 0.0270]  (7/8 below the attention network's own seed floor)
+[S1] wall 139.2 min; written ./results/D018/greedy_linear.json

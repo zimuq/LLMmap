@@ -1,0 +1,23 @@
+[S2] H1-attention [193, 140, 250, 202, 247, 31, 254, 113]
+[S2] H1-linear    [140, 193, 109, 108, 251, 35, 145, 121]
+[S2] H1-attention|attention   k=8 mean 0.8605
+[S2] H1-attention|linear_concat k=8 mean 0.9178
+[S2] H1-attention|linear_meanpool k=8 mean 0.8584
+[S2] H1-linear|attention      k=8 mean 0.8688
+[S2] H1-linear|linear_concat  k=8 mean 0.9276
+[S2] H1-linear|linear_meanpool k=8 mean 0.8822
+
+===== S5: ours vs Algorithm H.1 (attention arm), mean top-1 =====
+  k                        GreedyCover                        JointGreedy
+  1   0.6333 vs 0.6333 +0.0000 PARITY   0.6333 vs 0.6333 +0.0000 PARITY
+  20.7585 vs 0.7725 -0.0141 INCONCLUS   0.7725 vs 0.7725 +0.0000 PARITY
+  30.7816 vs 0.8154 -0.0335 H1 BETTER   0.8076 vs 0.8154 -0.0079 PARITY
+  40.8231 vs 0.8307 -0.0076 INCONCLUS0.8212 vs 0.8307 -0.0097 INCONCLUS
+  50.8102 vs 0.8383 -0.0282 H1 BETTER0.8301 vs 0.8383 -0.0084 INCONCLUS
+  6   0.8463 vs 0.8448 +0.0014 PARITY   0.8439 vs 0.8448 -0.0009 PARITY
+  70.8623 vs 0.8517 +0.0105 INCONCLUS0.8672 vs 0.8517 +0.0156 OURS BETT
+  80.8519 vs 0.8605 -0.0086 INCONCLUS0.8757 vs 0.8605 +0.0153 OURS BETT
+
+[S5] chain overlap (of 8): {'H1-attention_vs_GreedyCover': 1, 'H1-attention_vs_JointGreedy': 2, 'H1-linear_vs_GreedyCover': 1, 'H1-linear_vs_JointGreedy': 2, 'H1attention_vs_H1linear': 2}
+
+wall 10.4 min; written: ./results/D018/

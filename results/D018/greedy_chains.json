@@ -1,0 +1,275 @@
+{
+ "schema": "d018-chains-v1",
+ "chains": {
+  "H1-attention": [
+   193,
+   140,
+   250,
+   202,
+   247,
+   31,
+   254,
+   113
+  ],
+  "H1-linear": [
+   140,
+   193,
+   109,
+   108,
+   251,
+   35,
+   145,
+   121
+  ]
+ },
+ "search": {
+  "H1-attention": {
+   "schema": "d018-search-v1",
+   "arm": "attention",
+   "chain": [
+    193,
+    140,
+    250,
+    202,
+    247,
+    31,
+    254,
+    113
+   ],
+   "trace": [
+    {
+     "k": 1,
+     "chosen": 193,
+     "val_acc": 0.668108,
+     "runner_up": 0,
+     "runner_up_acc": 0.654054,
+     "margin": 0.014054,
+     "n_candidates": 259,
+     "n_tied_with_winner": 1,
+     "wall_min": 13.14
+    },
+    {
+     "k": 2,
+     "chosen": 140,
+     "val_acc": 0.793514,
+     "runner_up": 109,
+     "runner_up_acc": 0.788108,
+     "margin": 0.005405,
+     "n_candidates": 258,
+     "n_tied_with_winner": 1,
+     "wall_min": 14.45
+    },
+    {
+     "k": 3,
+     "chosen": 250,
+     "val_acc": 0.876757,
+     "runner_up": 251,
+     "runner_up_acc": 0.862703,
+     "margin": 0.014054,
+     "n_candidates": 257,
+     "n_tied_with_winner": 1,
+     "wall_min": 17.23
+    },
+    {
+     "k": 4,
+     "chosen": 202,
+     "val_acc": 0.895135,
+     "runner_up": 175,
+     "runner_up_acc": 0.891892,
+     "margin": 0.003243,
+     "n_candidates": 256,
+     "n_tied_with_winner": 1,
+     "wall_min": 20.92
+    },
+    {
+     "k": 5,
+     "chosen": 247,
+     "val_acc": 0.907027,
+     "runner_up": 246,
+     "runner_up_acc": 0.900541,
+     "margin": 0.006486,
+     "n_candidates": 255,
+     "n_tied_with_winner": 1,
+     "wall_min": 22.23
+    },
+    {
+     "k": 6,
+     "chosen": 31,
+     "val_acc": 0.91027,
+     "runner_up": 29,
+     "runner_up_acc": 0.909189,
+     "margin": 0.001081,
+     "n_candidates": 254,
+     "n_tied_with_winner": 1,
+     "wall_min": 22.44
+    },
+    {
+     "k": 7,
+     "chosen": 254,
+     "val_acc": 0.913514,
+     "runner_up": 72,
+     "runner_up_acc": 0.909189,
+     "margin": 0.004324,
+     "n_candidates": 253,
+     "n_tied_with_winner": 1,
+     "wall_min": 24.93
+    },
+    {
+     "k": 8,
+     "chosen": 113,
+     "val_acc": 0.916757,
+     "runner_up": 55,
+     "runner_up_acc": 0.914595,
+     "margin": 0.002162,
+     "n_candidates": 252,
+     "n_tied_with_winner": 1,
+     "wall_min": 25.06
+    }
+   ],
+   "seed": 0,
+   "selection_split": "S_val (Call 1; S_test never touched)",
+   "classifier": "attention network -- THIS ARM IS ALGORITHM H.1",
+   "margins": {
+    "values": [
+     0.014054,
+     0.005405,
+     0.014054,
+     0.003243,
+     0.006486,
+     0.001081,
+     0.004324,
+     0.002162
+    ],
+    "median": 0.0048645,
+    "min": 0.001081,
+    "max": 0.014054,
+    "note": "P1/F3: the attention network's own 5-seed range is 0.024-0.081 on mean top-1, so a margin below that is not a resolved preference. The chain is noisy by construction -- a property of Algorithm H.1 as specified, not of this implementation."
+   },
+   "wall_min": 160.4
+  },
+  "H1-linear": {
+   "schema": "d018-search-v1",
+   "arm": "linear",
+   "chain": [
+    140,
+    193,
+    109,
+    108,
+    251,
+    35,
+    145,
+    121
+   ],
+   "trace": [
+    {
+     "k": 1,
+     "chosen": 140,
+     "val_acc": 0.761081,
+     "runner_up": 193,
+     "runner_up_acc": 0.754595,
+     "margin": 0.006486,
+     "n_candidates": 259,
+     "n_tied_with_winner": 1,
+     "wall_min": 20.87
+    },
+    {
+     "k": 2,
+     "chosen": 193,
+     "val_acc": 0.865946,
+     "runner_up": 248,
+     "runner_up_acc": 0.838919,
+     "margin": 0.027027,
+     "n_candidates": 258,
+     "n_tied_with_winner": 1,
+     "wall_min": 20.07
+    },
+    {
+     "k": 3,
+     "chosen": 109,
+     "val_acc": 0.894054,
+     "runner_up": 113,
+     "runner_up_acc": 0.892973,
+     "margin": 0.001081,
+     "n_candidates": 257,
+     "n_tied_with_winner": 1,
+     "wall_min": 15.63
+    },
+    {
+     "k": 4,
+     "chosen": 108,
+     "val_acc": 0.901622,
+     "runner_up": 111,
+     "runner_up_acc": 0.901622,
+     "margin": 0.0,
+     "n_candidates": 256,
+     "n_tied_with_winner": 4,
+     "wall_min": 17.14
+    },
+    {
+     "k": 5,
+     "chosen": 251,
+     "val_acc": 0.921081,
+     "runner_up": 132,
+     "runner_up_acc": 0.911351,
+     "margin": 0.00973,
+     "n_candidates": 255,
+     "n_tied_with_winner": 1,
+     "wall_min": 17.76
+    },
+    {
+     "k": 6,
+     "chosen": 35,
+     "val_acc": 0.926486,
+     "runner_up": 112,
+     "runner_up_acc": 0.925405,
+     "margin": 0.001081,
+     "n_candidates": 254,
+     "n_tied_with_winner": 1,
+     "wall_min": 16.04
+    },
+    {
+     "k": 7,
+     "chosen": 145,
+     "val_acc": 0.930811,
+     "runner_up": 121,
+     "runner_up_acc": 0.92973,
+     "margin": 0.001081,
+     "n_candidates": 253,
+     "n_tied_with_winner": 1,
+     "wall_min": 15.41
+    },
+    {
+     "k": 8,
+     "chosen": 121,
+     "val_acc": 0.939459,
+     "runner_up": 111,
+     "runner_up_acc": 0.935135,
+     "margin": 0.004324,
+     "n_candidates": 252,
+     "n_tied_with_winner": 1,
+     "wall_min": 16.31
+    }
+   ],
+   "seed": 0,
+   "selection_split": "S_val (Call 1; S_test never touched)",
+   "classifier": "linear, mean-pool, C=3.0, max_iter=20000 tol=1e-6 (Call 3) -- NOT Algorithm H.1; robustness check (F1)",
+   "margins": {
+    "values": [
+     0.006486,
+     0.027027,
+     0.001081,
+     0.0,
+     0.00973,
+     0.001081,
+     0.001081,
+     0.004324
+    ],
+    "median": 0.0027025,
+    "min": 0.0,
+    "max": 0.027027,
+    "note": "P1/F3: the attention network's own 5-seed range is 0.024-0.081 on mean top-1, so a margin below that is not a resolved preference. The chain is noisy by construction -- a property of Algorithm H.1 as specified, not of this implementation."
+   },
+   "wall_min": 139.2
+  }
+ }
+}
