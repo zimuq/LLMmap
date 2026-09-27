@@ -1468,6 +1468,36 @@ JointGreedy on hard-model recall, every number independently verified
   Decided by: design-side, routine call (closure and verification follow
   standing discipline; no new interpretation beyond what D018 already
   established).
+
+[2026-09-27] D020 drafted -- properly pair the linear-readout comparison
+D018/R3 left as point estimates only
+  Decision: drafted D020 (docs/D020.md), human-approved ("好,起草D").
+  D018/R3 found JointGreedy beating H1-linear's chain under the linear
+  classifier itself (the very readout H1-linear's search optimized for)
+  at k=4-8, but explicitly disclosed this as point estimates only --
+  D017 never saved per-config correctness counts for GreedyCover/
+  JointGreedy's linear evaluation (confirmed: results/D017/
+  linear_metrics_by_k.json's bootstrap_ci has only aggregated
+  {mean,lo,hi}, no per-config array), so no paired CI exists for that
+  comparison, unlike every other comparison this project has made since
+  D009.
+  D020 refits GreedyCover/JointGreedy under D017's exact frozen linear
+  hparams (deterministic, cheap, asserted to reproduce D017's stored
+  point estimates exactly) and builds one shared config-level bootstrap
+  across all four already-selected chains (GreedyCover, JointGreedy,
+  H1-attention, H1-linear -- none reselected, I6) to test whether
+  JointGreedy's edge is resolved. Noted precisely: no seed-range
+  condition applies here, since the linear classifier is deterministic
+  on both sides of the comparison (unlike every attention-network
+  comparison this project has made) -- a paired CI excluding zero is
+  sufficient on its own.
+  Explicitly scoped to the four aggregate METHOD.md sec8 metrics only --
+  does not reopen the hard-pair/hard-model extensions (D015/D016/D019)
+  or D018's own head-to-head verdict (already CLOSED, unaffected either
+  way).
+  Decided by: human (approve drafting this D now); design-side (D020's
+  scope, steps, and gate -- routine call, no invariant or open
+  DECISIONS item touched).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
