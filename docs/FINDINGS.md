@@ -885,6 +885,33 @@ two-logit-restricted mean. This is a METHOD revision (`CLAUDE.md` rule
 (d)) and needs the human's explicit sign-off before `METHOD.md §8`'s
 table changes.
 
+**Addendum (D019, 2026-09-27) — extended to D018's two Algorithm-H.1
+chains; the ordering holds.** True 37-way top-1 recall at `k`=8,
+restricted to each of the four sets above, for `H1-attention` and
+`H1-linear` (D018's real classifier-in-the-loop search chains, read by
+the attention network for consistency with the other three conditions):
+
+| | all-37 | `worst6-paper8` (10) | `worst16-paper8` (21) | `consensus6` (6) | `naturalgap5` (7) |
+|---|---:|---:|---:|---:|---:|
+| paper8 | .8452 | .720 (−12.5pp) | .790 (−5.5pp) | .640 (−20.5pp) | .664 (−18.1pp) |
+| GreedyCover | .8519 | .750 (−10.2pp) | .798 (−5.4pp) | .680 (−17.2pp) | .665 (−18.7pp) |
+| **JointGreedy** | **.8757** | **.803** (−7.2pp) | **.825** (−5.1pp) | **.755** (−12.1pp) | **.745** (−13.1pp) |
+| H1-attention | .8605 | .783 (−7.7pp) | .809 (−5.2pp) | .732 (−12.9pp) | .711 (−15.0pp) |
+| H1-linear | .8688 | .788 (−8.1pp) | .818 (−5.1pp) | .727 (−14.2pp) | .711 (−15.8pp) |
+
+**Both `H1` chains land between `GreedyCover` and `JointGreedy` on every
+set; `JointGreedy` is highest on all four (by 0.7–3.4pp).** Algorithm
+H.1's real classifier-in-the-loop search — trained on the same pool,
+under either classifier — does not find a hard-model advantage that our
+classifier-free `JointGreedy` misses; at the level of point estimates,
+it is the other way around. **Not resolved**: 5-seed ranges overlap
+between `JointGreedy` and both `H1` chains on every set (e.g.
+`consensus6`: `H1-attention` .687–.800 vs. `JointGreedy` .720–.780) — a
+consistent descriptive pattern across four independent sets and two
+independent chains, not a statistically resolved difference. Consistent
+with D018's own pair-level (`hard_subset`) result: `JointGreedy` ≳ `H1` ≳
+`GreedyCover`, unresolved at every level this project has checked.
+
 ## D016 — No hidden hard pairs: the 65 structural pairs are the 11 objectively hardest of all 666
 
 **Answers the question D015/FINDINGS left open: does real difficulty exist

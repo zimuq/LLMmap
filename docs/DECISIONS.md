@@ -1444,6 +1444,30 @@ in D019's own ## D via TACC_NOTES; fixed before any run
   design-side's own prior draft, caught by TACC's proper use of the
   TACC_NOTES channel exactly as CLAUDE.md's ownership rule intends;
   approval of P1's calls after independent verification).
+
+[2026-09-27] D019 closed -- both H1 chains sit between GreedyCover and
+JointGreedy on hard-model recall, every number independently verified
+  Decision: D019 marked CLOSED. Independently re-verified R in full
+  against results/D019/hard_model_recall.json and
+  checkpoint_availability.json (all 20 table cells, S0/S1's exact-match
+  reproduction asserts, the naturalgap5 audit) -- no correction needed,
+  unlike D012/D015/D016/D018.
+  On all four already-fixed hard-model sets, H1-attention and H1-linear
+  (D018's real Algorithm-H.1-search chains) land between GreedyCover and
+  JointGreedy; JointGreedy is highest on every set (0.7-3.4pp).
+  Algorithm H.1's real classifier-in-the-loop search does not find a
+  hard-model advantage JointGreedy misses -- the reverse, at
+  point-estimate level. Not resolved: 5-seed ranges overlap between
+  JointGreedy and both H1 chains on every set. Consistent with D018's
+  own pair-level result (JointGreedy >~ H1 >~ GreedyCover, unresolved
+  throughout) -- supports the "cost-asymmetric tie, not a loss" reading
+  of D018, does not upgrade it to a win.
+  FINDINGS.md's 2026-09-22/23 hard_subset-reformulation entry updated
+  with this table as its D018/D019 addendum, per R5's own suggested
+  placement.
+  Decided by: design-side, routine call (closure and verification follow
+  standing discipline; no new interpretation beyond what D018 already
+  established).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
