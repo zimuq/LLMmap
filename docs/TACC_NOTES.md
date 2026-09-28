@@ -63,6 +63,25 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+**Issue 18 (2026-09-28) — D021 `## Review`, amendment A1: its premise that
+"every model runs the same 125 configs in the same order (D006)" does not hold
+in the corpus.** From `data/corpus_v1/*.jsonl` (`prompt_conf` per
+`config_index`): 36 of 37 models differ from the first model at the same
+`config_index`. The differing fields are system prompt 2,580×, sampling
+2,247×, CoT 978×, and RAG 605× over the build configs. Configs are drawn per
+model. Each model gets nearly the same *multiset* of prompts, in different
+positions. Build uses 33 prompt groups (32 prompts + none), not 42. A1's
+concern still applies, in a cross-model form. TACC implemented A1's literal
+rule ("all configs sharing a system prompt go to the same half") as a
+**global** prompt-to-half assignment, which makes the halves prompt-disjoint
+across all models as well as within each one. Per-model half sizes vary as a
+result. Disclosed in D021 `## R`. **Separately, for design side (touches
+I2, not acted on):** the empty system prompt ("none") occurs in all three
+pools (build 5.3%, val 12.0%, test 12.0% of configs). Every non-empty prompt
+is pool-disjoint, as `split_v2` requires (verified). Whether "no system
+prompt" counts as a system prompt under I2 is not stated in D006 or
+DECISIONS.
+
 ---
 
 ## Resolved
