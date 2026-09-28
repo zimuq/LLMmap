@@ -1,0 +1,2 @@
+[S0-1] {'n_pairs': 666, 'split_a': 37, 'split_b': 37, 'configs_in_neither_half': [49], 'ties_at_1': {'paper8': 193, 'coverage': 240, 'joint_energy': 219}, 'n_distinct_values': {'paper8': 28, 'coverage': 26, 'joint_energy': 25}, 'n_nonceiling_min_lt_0_99': 408, 'n_nonceiling_structural': 49}
+[S0-2] MAX vs D008 trace 1.19e-07; JOINT-E vs D010 trace 1.76e-05

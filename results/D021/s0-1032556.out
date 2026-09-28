@@ -1,0 +1,17 @@
+[S0-1] {'n_pairs': 666, 'split_a': 37, 'split_b': 37, 'configs_in_neither_half': [49], 'ties_at_1': {'paper8': 193, 'coverage': 240, 'joint_energy': 219}, 'n_distinct_values': {'paper8': 28, 'coverage': 26, 'joint_energy': 25}, 'n_nonceiling_min_lt_0_99': 408, 'n_nonceiling_structural': 49}
+[S0-2] MAX vs D008 trace 0.00e+00; JOINT-E vs D010 trace 1.76e-05
+[S0-3] JOINT-E|all_666              +0.4309 +/- 0.1319 per-chain {'paper8': 0.502, 'coverage': 0.402, 'joint_energy': 0.388}
+[S0-3] JOINT-E|nonceiling           +0.4035 +/- 0.1306 per-chain {'paper8': 0.459, 'coverage': 0.409, 'joint_energy': 0.342}
+[S0-3] MAX|all_666                  +0.3345 +/- 0.1672 per-chain {'paper8': 0.344, 'coverage': 0.352, 'joint_energy': 0.308}
+[S0-3] MAX|nonceiling               +0.2835 +/- 0.1532 per-chain {'paper8': 0.291, 'coverage': 0.287, 'joint_energy': 0.273}
+[S0-3] JOINT-E_minus_MAX|all_666    +0.0965 +/- 0.0916 per-chain {}
+[S0-3] JOINT-E_minus_MAX|nonceiling +0.1200 +/- 0.0655 per-chain {}
+[S0-4] q=193: rho(full,half) 0.99982 median rel diff 0.0058 neg 0/0
+[S0-4] q=140: rho(full,half) 0.99993 median rel diff 0.0056 neg 0/0
+[S0-4] q=237: rho(full,half) 0.99989 median rel diff 0.0068 neg 1/1
+[S0-4] q=114: rho(full,half) 0.99992 median rel diff 0.0064 neg 0/0
+[S0-4] q=233: rho(full,half) 0.99989 median rel diff 0.0064 neg 0/0
+[S0-4] q=117: rho(full,half) 0.99995 median rel diff 0.0059 neg 1/1
+[S0-4] q=0: rho(full,half) 0.99979 median rel diff 0.0063 neg 0/0
+[S0-4] q=16: rho(full,half) 0.99989 median rel diff 0.0043 neg 0/0
+[S0-5] {'load_s_for_queries': 60.8, 'n_queries_loaded': 21, 'm2_per_query_s': 0.32, 'projected_s1_primary_min': 1.4, 'projected_load_all_259_min': 12.5, 'wall_s': 122.8}
