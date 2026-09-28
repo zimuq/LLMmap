@@ -1137,5 +1137,64 @@ project's repeated finding that `hard_subset`'s aggregation and a
 model-level view can disagree in sign while both stay largely
 unresolved (D015 onward). Flagged, not reconciled.
 
+## D021 — Additive, noise-whitened evidence ranks pair difficulty better than anything we select on; its probabilities do not
+
+**GO, as pre-registered, and robust on every footing tried.** For each
+query and model pair, compute a cross-fitted Mahalanobis² evidence score
+from S_build only: PCA to 64-d, then whitening by pooled within-model
+covariance. Sum it over a chain's queries (`ADD`). On D016's 666-pair
+trained accuracy at `k`=8, `ADD` ranks pairs by difficulty better than
+either statistic our selection algorithms actually optimise:
+
+| | pooled Spearman ρ |
+|---|---|
+| `ADD` | 0.595 |
+| JointGreedy's joint energy | 0.431 |
+| GreedyCover's MAX | 0.335 |
+
+- Δ(`ADD` − joint energy) = +0.164 [+0.019, +0.310].
+- Δ(`ADD` − MAX) = +0.261 [+0.069, +0.452].
+- The sign is the same on all three chains, and holds under every
+  dimension, covariance and split variant.
+
+**It improves the ranking, not the probabilities.**
+- Converted to predicted pairwise error, `ADD` is about 100× too
+  optimistic (1e-4 predicted vs 0.014 observed).
+- Its k-curve over-predicts trained accuracy by 10–17pp.
+- So the framework supports **ranking pairs and selecting on that
+  ranking**. It does not support "predict the query budget in accuracy
+  units", or reading an LP bound as a probability.
+
+**A mechanism lead, exploratory, not a finding.** The three statistics
+differ along two axes, and the gains line up with them:
+- MAX → sum: accumulating evidence across queries.
+- Plain distance → whitened distance: weighting directions by within-model
+  noise, i.e. METHOD's intra-model-consistency term done properly.
+- Full cross-query covariance adds nothing to the ranking (Δ −0.002,
+  the tightest interval in the D).
+
+Read together: **accumulation plus noise-aware weighting carries the
+signal; cross-query "interaction" does not.** That offers a candidate
+answer to D010's open question of why JointGreedy's advantage persists at
+`k`=8. It has to be tested by the ILP follow-up's trained comparison
+before it can be quoted.
+
+**Two instrument facts worth keeping.**
+- The width of every pair-level interval here is set by the **37
+  models** (LOMO jackknife): roughly ±0.15 for Δρ between dissimilar
+  statistics, ±0.02 between near-identical ones. A fresh S_test tightens
+  config-limited metrics but **not** these.
+- Configs are drawn per model, not shared across models (TACC_NOTES
+  Issue 18, correcting a design-side premise). Prompt overlap between the
+  cross-fit halves inflated `M²` by only about 1% (A1 check passed).
+
+**Consequence.** This licenses the ILP-selection follow-up: exact
+selection over `ADD`, with an LP optimality bound. That follow-up's
+trained comparison against JointGreedy is the decisive test. It must
+report proxy-vs-trained agreement for the chain it selects, since exact
+optimisation of an over-confident proxy is where Goodhart failures show
+up. D021's targets are the repeatedly-inspected S_test, so this entry is
+exploratory evidence.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
