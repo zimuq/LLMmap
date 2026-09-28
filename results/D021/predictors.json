@@ -1,0 +1,66 @@
+{
+ "schema": "d021-predictors-v1",
+ "file": "predictors.npz",
+ "keys": "'{predictor}|{chain}|{k}' -> (666,) in D007 pair order",
+ "predictors": [
+  "MAX",
+  "JOINT-E",
+  "ADD",
+  "JOINT-G",
+  "ADD_grouped"
+ ],
+ "chains": {
+  "paper8": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "coverage": [
+   193,
+   123,
+   233,
+   243,
+   240,
+   17,
+   136,
+   252
+  ],
+  "joint_energy": [
+   193,
+   140,
+   237,
+   114,
+   233,
+   117,
+   0,
+   16
+  ]
+ },
+ "ks": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "J_equals_A_at_k1_max_rel_diff": {
+  "paper8": 0.0,
+  "coverage": 0.0,
+  "joint_energy": 0.0
+ },
+ "notes": {
+  "MAX": "max_q S_energy_sf_tok200 (D007), what GreedyCover optimises",
+  "JOINT-E": "scale-free joint energy, accumulator path, S_build 75 configs (D010)",
+  "ADD": "signed sum of M^2_q, d=64 (primary)",
+  "JOINT-G": "full LW covariance on concatenated 64k-d PCA scores, cross-fitted, dependence check only",
+  "ADD_grouped": "ADD under the A1 grouped halves (sensitivity)"
+ }
+}

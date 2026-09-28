@@ -1,0 +1,32 @@
+[load] 1.6 min; grouped split: 33 prompt groups, totals [1370, 1405], per-model half min 35
+[A1] CoT/RAG templates in both grouped halves (not grouped, disclosed): {'cot': {'n_templates': 3, 'in_both_halves': 3}, 'rag': {'n_templates': 9, 'in_both_halves': 0}}
+[S1] q=0 (0.0 min)
+[S1] q=50 (0.6 min)
+[S1] q=100 (1.1 min)
+[S1] q=150 (1.7 min)
+[S1] q=200 (2.2 min)
+[S1] q=250 (2.8 min)
+[S1] 2.9 min; negative cells {'d32': 310, 'd64': 181, 'd128': 94, 'd64_halfsigma': 200, 'd64_pairsigma': 31, 'd64_grouped': 55}
+[A1] median Spearman 0.9977 (min 0.9871, 1 q < 0.99); median rel diff 0.0244; grouped/D007 mean ratio 0.990 -> PASS
+[S2] J == A at k=1 (max rel diff) {'paper8': 0.0, 'coverage': 0.0, 'joint_energy': 0.0}
+[S3] VERDICT GO: d(ADD-JOINT-E) +0.1643 [+0.0188, +0.3097]; d(ADD-MAX) +0.2607 [+0.0691, +0.4523]; per-chain {'paper8': {'ADD_minus_JOINT_E': np.float64(0.0914), 'ADD_minus_MAX': np.float64(0.2499)}, 'coverage': {'ADD_minus_JOINT_E': np.float64(0.2464), 'ADD_minus_MAX': np.float64(0.2965)}, 'joint_energy': {'ADD_minus_JOINT_E': np.float64(0.155), 'ADD_minus_MAX': np.float64(0.2359)}}; consistent {'ADD_minus_JOINT_E': True, 'ADD_minus_MAX': True}
+[S3] non-ceiling d(ADD-JOINT-E) {'value': 0.106, 'half_width': 0.137, 'lo': -0.031, 'hi': 0.243}; JOINT-G {'value': 0.5934, 'half_width': 0.127, 'lo': 0.4664, 'hi': 0.7204}; calib overall {'pred': 0.0001, 'obs': 0.014}
+[S3d] d007|attention|primary_3                 {'spearman': 0.8652, 'mean_abs_gap': 0.1741, 'mean_signed_gap_pred_minus_trained': 0.1741, 'n_points': 24}
+[S3d] d007|attention|all_5                     {'spearman': 0.8904, 'mean_abs_gap': 0.1711, 'mean_signed_gap_pred_minus_trained': 0.1711, 'n_points': 40}
+[S3d] d007|linear_concat|primary_3             {'spearman': 0.97, 'mean_abs_gap': 0.1017, 'mean_signed_gap_pred_minus_trained': 0.1017, 'n_points': 24}
+[S3d] d007|linear_concat|all_5                 {'spearman': 0.9378, 'mean_abs_gap': 0.0992, 'mean_signed_gap_pred_minus_trained': 0.0992, 'n_points': 40}
+[S3d] d007|linear_meanpool|primary_3           {'spearman': 0.8491, 'mean_abs_gap': 0.1381, 'mean_signed_gap_pred_minus_trained': 0.1381, 'n_points': 24}
+[S3d] d007|linear_meanpool|all_5               {'spearman': 0.854, 'mean_abs_gap': 0.1346, 'mean_signed_gap_pred_minus_trained': 0.1346, 'n_points': 40}
+[S3d] grouped|attention|primary_3              {'spearman': 0.9208, 'mean_abs_gap': 0.1757, 'mean_signed_gap_pred_minus_trained': 0.1757, 'n_points': 24}
+[S3d] grouped|attention|all_5                  {'spearman': 0.9402, 'mean_abs_gap': 0.1716, 'mean_signed_gap_pred_minus_trained': 0.1716, 'n_points': 40}
+[S3d] grouped|linear_concat|primary_3          {'spearman': 0.9669, 'mean_abs_gap': 0.1034, 'mean_signed_gap_pred_minus_trained': 0.1034, 'n_points': 24}
+[S3d] grouped|linear_concat|all_5              {'spearman': 0.9593, 'mean_abs_gap': 0.0997, 'mean_signed_gap_pred_minus_trained': 0.0997, 'n_points': 40}
+[S3d] grouped|linear_meanpool|primary_3        {'spearman': 0.7498, 'mean_abs_gap': 0.1398, 'mean_signed_gap_pred_minus_trained': 0.1398, 'n_points': 24}
+[S3d] grouped|linear_meanpool|all_5            {'spearman': 0.7745, 'mean_abs_gap': 0.1351, 'mean_signed_gap_pred_minus_trained': 0.1351, 'n_points': 40}
+[S3e] d32            d(ADD-JOINT-E) {'value': 0.1575, 'half_width': 0.1289, 'lo': 0.0287, 'hi': 0.2864}
+[S3e] d128           d(ADD-JOINT-E) {'value': 0.1594, 'half_width': 0.1578, 'lo': 0.0017, 'hi': 0.3172}
+[S3e] d64_halfsigma  d(ADD-JOINT-E) {'value': 0.1657, 'half_width': 0.144, 'lo': 0.0217, 'hi': 0.3098}
+[S3e] d64_pairsigma  d(ADD-JOINT-E) {'value': 0.2609, 'half_width': 0.1117, 'lo': 0.1492, 'hi': 0.3726}
+[S3e] d64_grouped    d(ADD-JOINT-E) {'value': 0.1625, 'half_width': 0.1451, 'lo': 0.0174, 'hi': 0.3076}
+
+wall 5.6 min; written ./results/D021/

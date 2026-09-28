@@ -1,0 +1,914 @@
+{
+ "schema": "d021-gate-v1",
+ "delta": 0.05,
+ "verdict": "GO",
+ "verdict_rule": "GO: lo(d ADD-JOINT-E) > -delta AND lo(d ADD-MAX) > 0; NO-GO: hi(d ADD-JOINT-E) < -delta; else INCONCLUSIVE (full pre-registered rule)",
+ "uncertainty": "LOMO jackknife, 37 folds, t_36 (commit c54e4d1)",
+ "exploratory_targets": "D016 S_test-derived, repeatedly inspected; not confirmatory",
+ "primary": {
+  "MAX": {
+   "value": 0.3345,
+   "half_width": 0.1672,
+   "lo": 0.1673,
+   "hi": 0.5017
+  },
+  "JOINT-E": {
+   "value": 0.4309,
+   "half_width": 0.1319,
+   "lo": 0.2991,
+   "hi": 0.5628
+  },
+  "ADD": {
+   "value": 0.5952,
+   "half_width": 0.1217,
+   "lo": 0.4734,
+   "hi": 0.7169
+  },
+  "d_ADD_minus_JOINT-E": {
+   "value": 0.1643,
+   "half_width": 0.1455,
+   "lo": 0.0188,
+   "hi": 0.3097
+  },
+  "d_ADD_minus_MAX": {
+   "value": 0.2607,
+   "half_width": 0.1916,
+   "lo": 0.0691,
+   "hi": 0.4523
+  },
+  "per_chain": {
+   "paper8": {
+    "MAX": 0.3436,
+    "JOINT-E": 0.5021,
+    "ADD": 0.5935
+   },
+   "coverage": {
+    "MAX": 0.3522,
+    "JOINT-E": 0.4023,
+    "ADD": 0.6487
+   },
+   "joint_energy": {
+    "MAX": 0.3075,
+    "JOINT-E": 0.3884,
+    "ADD": 0.5434
+   }
+  }
+ },
+ "per_chain_deltas": {
+  "paper8": {
+   "ADD_minus_JOINT_E": 0.0914,
+   "ADD_minus_MAX": 0.2499
+  },
+  "coverage": {
+   "ADD_minus_JOINT_E": 0.2464,
+   "ADD_minus_MAX": 0.2965
+  },
+  "joint_energy": {
+   "ADD_minus_JOINT_E": 0.155,
+   "ADD_minus_MAX": 0.2359
+  }
+ },
+ "sign_consistent_across_chains": {
+  "ADD_minus_JOINT_E": true,
+  "ADD_minus_MAX": true
+ },
+ "reachability": {
+  "realised_half_width_ADD_minus_JOINT_E": 0.1455,
+  "realised_half_width_ADD_minus_MAX": 0.1916,
+  "GO_first_leg_needs_point_above": 0.0955,
+  "NO_GO_needs_point_below": -0.1955,
+  "GO_second_leg_needs_point_above": 0.1916,
+  "p1_estimate": {
+   "h": 0.09,
+   "GO": 0.04,
+   "NO_GO": -0.14
+  }
+ },
+ "a1": {
+  "rule": "median per-query Spearman >= 0.99 -> D007 halves stay primary; else stop for a Call before any target correlation",
+  "median_spearman": 0.9976988136697756,
+  "min_spearman": 0.9871433110918632,
+  "p05_spearman": 0.9949227946481952,
+  "n_queries_below_0_99": 1,
+  "median_rel_diff": 0.024383020678617136,
+  "mean_ratio_grouped_over_d007": 0.9902708120887934,
+  "negative_cells": {
+   "d007": 181,
+   "grouped": 55
+  },
+  "grouped_split": {
+   "n_groups": 33,
+   "totals": [
+    1370,
+    1405
+   ],
+   "per_model_A": [
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    38,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    35,
+    37,
+    38,
+    37,
+    37,
+    38,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37
+   ],
+   "per_model_B": [
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    37,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    40,
+    38,
+    37,
+    38,
+    38,
+    37,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38,
+    38
+   ],
+   "min_half": 35,
+   "assignment": {
+    "<none>": 1,
+    "Act as a knowledgeable tutor, helping students understand complex topics in subjects such as mathematics, science, and history. Explain concepts clearly and provide examples to aid learning.": 0,
+    "Act as a travel itinerary planner. Help users create detailed travel plans, including accommodation, transportation, activities, and dining options. Provide local insights and travel tips for various destinations.": 1,
+    "Act like an editorial fact-checker. Identify possible inaccuracies, flag claims that need sources, and recommend trusted references.": 1,
+    "Answer as a wine and cheese pairing assistant for event planners. Offer suggestions based on crowd size, season, and dietary restrictions.": 1,
+    "Assist indie game developers by providing feedback on mechanics, storytelling, UI/UX, and monetization strategies tailored for small teams.": 0,
+    "Assist pet owners by offering advice on pet care products, food choices, and health tips. Respond to user questions with compassionate and informative advice, encouraging responsible pet ownership and promoting products that align with the pet's specific needs.": 1,
+    "Assist potential buyers and renters by providing detailed information about properties. Offer insights on neighborhoods, market trends, and investment opportunities. Respond to inquiries with precision and direct users to relevant listings or contact forms for further details": 0,
+    "Engage like a peer reviewer for grant applications. Focus on clarity, feasibility, impact, and alignment with stated objectives.": 1,
+    "Engage with users about art history, techniques, and contemporary trends. Offer constructive critiques on user-submitted artworks, provide encouragement, and foster a supportive and creative community environment. Tailor responses to cater to hobbyists and professional artists alike.": 1,
+    "Help library visitors explore book catalogs, reserve materials, and access digital resources. Provide reading recommendations and information on library events. Answer inquiries with politeness and direct users to additional resources or library staff when needed.": 1,
+    "I want you to act as a growth hacker. You will create innovative strategies to promote a startup product or service of your choice. You will identify a target audience, develop key growth tactics and experiments, select the most effective digital channels for promotion, and determine any additional resources needed to optimize growth.": 1,
+    "Offer parenting support from a Montessori perspective. Focus on respect, independence, and age-appropriate developmental insights.": 0,
+    "Respond as a first-time founder mentor, specializing in marketplace startups. Share hard-won lessons and lean methodology advice.": 0,
+    "Respond as a personal concierge for executives. Prioritize brevity, discretion, and actionable suggestions across travel, dining, and scheduling needs.": 1,
+    "Respond like a sustainability consultant for medium-sized companies. Provide practical steps to reduce carbon footprint across operations.": 1,
+    "Simulate a highly competent administrative assistant. Handle calendar conflicts, email drafts, meeting notes, and polite follow-ups.": 0,
+    "When asked a question, provide a summary of the latest peer-reviewed research on the topic, with citations when appropriate.": 1,
+    "When asked for feedback, respond like a product designer reviewing a new mobile app. Focus on usability, clarity, and emotional impact.": 0,
+    "Write onboarding messages for a fintech app, guiding new users through the core features while reinforcing trust and clarity.": 0,
+    "You are FuturistGPT, a visionary expert in predicting and analyzing trends across various fields of human endeavor, including technology, economics, politics, and social issues. Your proficiency in identifying emerging patterns and extrapolating them into the future allows you to provide unique insights into how the world may evolve over time.": 1,
+    "You are StartupGPT, an AI expert in the world of entrepreneurship, with a keen understanding of the unique challenges faced by indie founders, particularly programmers and software engineers. Your expertise lies in developing efficient strategies for launching lean startups that can generate revenue quickly, without relying on gimmicks or unsustainable practices.": 0,
+    "You are a cooking assistant bot here to help users find and prepare recipes. Provide guidance on ingredient substitutions, cooking techniques, and nutritional information. Offer tips for meal planning and encourage users when they're trying new dishes. Be friendly and supportive, enhancing the cooking experience.": 1,
+    "You are a financial advisor bot for a banking website. Assist users in understanding different banking products and services like savings accounts, loans, and investment options. Offer guidance on financial planning, budgeting, and saving strategies. Keep user information confidential and provide trustworthy advice.": 1,
+    "You are a helpful assistant.": 0,
+    "You are a helpful chatbot working for aircanada.com. Your task is to assist customers with organizing their travels, managing their bookings, and providing information on flight schedules, baggage policies, and loyalty programs. Respond promptly and courteously, and escalate issues to human agents when necessary.": 1,
+    "You are a knowledgeable and reliable expert that can answer questions on various domains.": 0,
+    "You are a language learning bot designed to help users practice and improve their skills in various languages. Provide exercises, correct grammar mistakes, and engage in conversation to enhance language proficiency.": 1,
+    "You are a social media manager bot. Help users develop content strategies, create engaging posts, and analyze performance metrics. Provide tips on increasing engagement and growing their online presence.": 0,
+    "You are a virtual travel guide for a tourism board website. Help visitors discover local attractions, events, and cultural information about destinations. Provide personalized travel recommendations based on interests and logistical information such as transportation options, weather forecasts, and travel tips.": 0,
+    "You are an AI art instructor. Help users improve their artistic skills, provide feedback on their work, and suggest new techniques and materials to explore. Encourage creativity and artistic growth.": 0,
+    "You are an AI fashion consultant. Assist users in choosing outfits, understanding current trends, and providing tips on how to style different pieces. Offer personalized recommendations based on user preferences and occasions.": 0,
+    "You are an AI health and wellness coach. Offer advice on healthy eating, exercise routines, and stress management. Provide tips for maintaining a balanced lifestyle and achieving wellness goals.": 0
+   },
+   "cot_rag_overlap_not_grouped": {
+    "cot": {
+     "n_templates": 3,
+     "in_both_halves": 3
+    },
+    "rag": {
+     "n_templates": 9,
+     "in_both_halves": 0
+    }
+   }
+  },
+  "target_touched": false,
+  "pass": true
+ },
+ "secondary": {
+  "a_dependence": {
+   "paper8": {
+    "J_over_A_quantiles": {
+     "5": 0.7212,
+     "25": 0.8144,
+     "50": 0.9104,
+     "75": 0.9793,
+     "95": 1.0742
+    },
+    "n_A_nonpositive": 0
+   },
+   "coverage": {
+    "J_over_A_quantiles": {
+     "5": 0.8798,
+     "25": 0.979,
+     "50": 1.0493,
+     "75": 1.1018,
+     "95": 1.1763
+    },
+    "n_A_nonpositive": 0
+   },
+   "joint_energy": {
+    "J_over_A_quantiles": {
+     "5": 0.8085,
+     "25": 0.8686,
+     "50": 0.9183,
+     "75": 0.9663,
+     "95": 1.0171
+    },
+    "n_A_nonpositive": 0
+   },
+   "rho_JOINT_G": {
+    "value": 0.5934,
+    "half_width": 0.127,
+    "lo": 0.4664,
+    "hi": 0.7204
+   },
+   "d_JOINT_G_minus_ADD": {
+    "value": -0.0018,
+    "half_width": 0.0204,
+    "lo": -0.0222,
+    "hi": 0.0186
+   }
+  },
+  "b_nonceiling": {
+   "MAX": {
+    "value": 0.2835,
+    "half_width": 0.1532,
+    "lo": 0.1303,
+    "hi": 0.4367
+   },
+   "JOINT-E": {
+    "value": 0.4035,
+    "half_width": 0.1306,
+    "lo": 0.2728,
+    "hi": 0.5341
+   },
+   "ADD": {
+    "value": 0.5094,
+    "half_width": 0.1136,
+    "lo": 0.3958,
+    "hi": 0.623
+   },
+   "d_ADD_minus_JOINT-E": {
+    "value": 0.106,
+    "half_width": 0.137,
+    "lo": -0.031,
+    "hi": 0.243
+   },
+   "d_ADD_minus_MAX": {
+    "value": 0.2259,
+    "half_width": 0.1793,
+    "lo": 0.0466,
+    "hi": 0.4053
+   },
+   "per_chain": {
+    "paper8": {
+     "MAX": 0.2906,
+     "JOINT-E": 0.4591,
+     "ADD": 0.5544
+    },
+    "coverage": {
+     "MAX": 0.2869,
+     "JOINT-E": 0.4094,
+     "ADD": 0.5494
+    },
+    "joint_energy": {
+     "MAX": 0.2729,
+     "JOINT-E": 0.3418,
+     "ADD": 0.4245
+    }
+   }
+  },
+  "c_calibration": {
+   "d007": [
+    {
+     "bin": 0,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0054
+    },
+    {
+     "bin": 1,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0048
+    },
+    {
+     "bin": 2,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0038
+    },
+    {
+     "bin": 3,
+     "n": 199,
+     "pred_err": 0.0,
+     "obs_err": 0.0047
+    },
+    {
+     "bin": 4,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0083
+    },
+    {
+     "bin": 5,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0087
+    },
+    {
+     "bin": 6,
+     "n": 199,
+     "pred_err": 0.0,
+     "obs_err": 0.0149
+    },
+    {
+     "bin": 7,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0185
+    },
+    {
+     "bin": 8,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0253
+    },
+    {
+     "bin": 9,
+     "n": 200,
+     "pred_err": 0.0007,
+     "obs_err": 0.0459
+    }
+   ],
+   "d007_overall": {
+    "pred": 0.0001,
+    "obs": 0.014
+   },
+   "grouped": [
+    {
+     "bin": 0,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0054
+    },
+    {
+     "bin": 1,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0048
+    },
+    {
+     "bin": 2,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0037
+    },
+    {
+     "bin": 3,
+     "n": 199,
+     "pred_err": 0.0,
+     "obs_err": 0.0049
+    },
+    {
+     "bin": 4,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0077
+    },
+    {
+     "bin": 5,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0092
+    },
+    {
+     "bin": 6,
+     "n": 199,
+     "pred_err": 0.0,
+     "obs_err": 0.0148
+    },
+    {
+     "bin": 7,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0186
+    },
+    {
+     "bin": 8,
+     "n": 200,
+     "pred_err": 0.0,
+     "obs_err": 0.0255
+    },
+    {
+     "bin": 9,
+     "n": 200,
+     "pred_err": 0.0003,
+     "obs_err": 0.0454
+    }
+   ],
+   "grouped_overall": {
+    "pred": 0.0,
+    "obs": 0.014
+   }
+  },
+  "d_kcurve": {
+   "predicted": {
+    "d007": {
+     "paper8": [
+      0.8577837837837838,
+      0.9564594594594594,
+      0.9767162162162162,
+      0.9802702702702702,
+      0.9836621621621622,
+      0.984527027027027,
+      0.9848378378378378,
+      0.9864459459459459
+     ],
+     "coverage": [
+      0.8782432432432432,
+      0.9672972972972973,
+      0.9759324324324324,
+      0.9781081081081081,
+      0.9763108108108108,
+      0.9823648648648649,
+      0.9856756756756757,
+      0.9860405405405406
+     ],
+     "joint_energy": [
+      0.8782432432432432,
+      0.9747702702702703,
+      0.9854864864864865,
+      0.990054054054054,
+      0.9906081081081081,
+      0.990027027027027,
+      0.9925675675675676,
+      0.9938108108108108
+     ],
+     "H1-attention": [
+      0.8782432432432432,
+      0.9747702702702703,
+      0.9825135135135135,
+      0.9827567567567568,
+      0.9829594594594595,
+      0.9891486486486486,
+      0.9897297297297297,
+      0.9905675675675676
+     ],
+     "H1-linear": [
+      0.8269594594594595,
+      0.9745945945945946,
+      0.9803108108108108,
+      0.9837702702702703,
+      0.9934459459459459,
+      0.9971216216216217,
+      0.9966216216216216,
+      0.9963783783783784
+     ]
+    },
+    "grouped": {
+     "paper8": [
+      0.8594459459459459,
+      0.9573783783783784,
+      0.9728918918918918,
+      0.9816621621621622,
+      0.9883648648648649,
+      0.9899324324324325,
+      0.9908378378378379,
+      0.9927567567567568
+     ],
+     "coverage": [
+      0.8815945945945945,
+      0.9676621621621622,
+      0.9754324324324324,
+      0.9795810810810811,
+      0.9782837837837838,
+      0.9871891891891892,
+      0.9893918918918919,
+      0.992027027027027
+     ],
+     "joint_energy": [
+      0.8815945945945945,
+      0.9644054054054054,
+      0.9822972972972973,
+      0.9891216216216216,
+      0.9898783783783783,
+      0.992,
+      0.9957702702702703,
+      0.9960675675675675
+     ],
+     "H1-attention": [
+      0.8815945945945945,
+      0.9644054054054054,
+      0.981418918918919,
+      0.9843648648648649,
+      0.9878243243243243,
+      0.9924864864864865,
+      0.9942162162162163,
+      0.9951216216216217
+     ],
+     "H1-linear": [
+      0.8006081081081081,
+      0.9657162162162162,
+      0.977081081081081,
+      0.986527027027027,
+      0.9942162162162163,
+      0.9981891891891892,
+      0.998527027027027,
+      0.9985810810810811
+     ]
+    }
+   },
+   "trained": {
+    "attention": {
+     "paper8": [
+      0.6092972972972973,
+      0.7394594594594595,
+      0.7602162162162162,
+      0.8051891891891891,
+      0.8049729729729729,
+      0.8294054054054054,
+      0.846054054054054,
+      0.8451891891891892
+     ],
+     "coverage": [
+      0.6332972972972973,
+      0.7584864864864864,
+      0.7816216216216216,
+      0.8231351351351351,
+      0.8101621621621622,
+      0.8462702702702701,
+      0.8622702702702704,
+      0.8518918918918919
+     ],
+     "joint_energy": [
+      0.6332972972972973,
+      0.7725405405405406,
+      0.8075675675675675,
+      0.8211891891891894,
+      0.830054054054054,
+      0.8438918918918918,
+      0.8672432432432433,
+      0.8756756756756758
+     ],
+     "H1-attention": [
+      0.6332972972972973,
+      0.7725405405405406,
+      0.8153513513513513,
+      0.8307027027027025,
+      0.8382702702702703,
+      0.8447567567567568,
+      0.8516756756756756,
+      0.8605405405405406
+     ],
+     "H1-linear": [
+      0.601945945945946,
+      0.7723243243243243,
+      0.7688648648648649,
+      0.8227027027027027,
+      0.8410810810810811,
+      0.8607567567567568,
+      0.8694054054054053,
+      0.8687567567567568
+     ]
+    },
+    "linear_concat": {
+     "paper8": [
+      0.7189189189189189,
+      0.8378378378378378,
+      0.8691891891891892,
+      0.8789189189189189,
+      0.8875675675675676,
+      0.8908108108108108,
+      0.8972972972972973,
+      0.9027027027027027
+     ],
+     "coverage": [
+      0.7275675675675676,
+      0.841081081081081,
+      0.8637837837837837,
+      0.8756756756756757,
+      0.8756756756756757,
+      0.8951351351351351,
+      0.9016216216216216,
+      0.9037837837837838
+     ],
+     "joint_energy": [
+      0.7275675675675676,
+      0.8443243243243244,
+      0.8854054054054054,
+      0.8972972972972973,
+      0.907027027027027,
+      0.9005405405405406,
+      0.9275675675675675,
+      0.9372972972972973
+     ],
+     "H1-attention": [
+      0.7275675675675676,
+      0.8443243243243244,
+      0.8918918918918919,
+      0.9005405405405406,
+      0.9081081081081082,
+      0.918918918918919,
+      0.9167567567567567,
+      0.9178378378378378
+     ],
+     "H1-linear": [
+      0.7102702702702702,
+      0.8454054054054054,
+      0.8605405405405405,
+      0.8735135135135135,
+      0.907027027027027,
+      0.9178378378378378,
+      0.9243243243243243,
+      0.9275675675675675
+     ]
+    },
+    "linear_meanpool": {
+     "paper8": [
+      0.7145945945945946,
+      0.8216216216216217,
+      0.8151351351351351,
+      0.827027027027027,
+      0.8118918918918919,
+      0.8248648648648649,
+      0.8216216216216217,
+      0.8324324324324325
+     ],
+     "coverage": [
+      0.7264864864864865,
+      0.8172972972972973,
+      0.8378378378378378,
+      0.8291891891891892,
+      0.8216216216216217,
+      0.841081081081081,
+      0.8594594594594595,
+      0.8605405405405405
+     ],
+     "joint_energy": [
+      0.7264864864864865,
+      0.8313513513513513,
+      0.8486486486486486,
+      0.8702702702702703,
+      0.8864864864864865,
+      0.894054054054054,
+      0.9005405405405406,
+      0.9005405405405406
+     ],
+     "H1-attention": [
+      0.7264864864864865,
+      0.8313513513513513,
+      0.8648648648648649,
+      0.8486486486486486,
+      0.8605405405405405,
+      0.8562162162162162,
+      0.8464864864864865,
+      0.8583783783783784
+     ],
+     "H1-linear": [
+      0.7091891891891892,
+      0.8313513513513513,
+      0.8443243243243244,
+      0.8605405405405405,
+      0.8735135135135135,
+      0.8713513513513513,
+      0.8864864864864865,
+      0.8821621621621621
+     ]
+    }
+   },
+   "agreement": {
+    "d007|attention|primary_3": {
+     "spearman": 0.8652,
+     "mean_abs_gap": 0.1741,
+     "mean_signed_gap_pred_minus_trained": 0.1741,
+     "n_points": 24
+    },
+    "d007|attention|all_5": {
+     "spearman": 0.8904,
+     "mean_abs_gap": 0.1711,
+     "mean_signed_gap_pred_minus_trained": 0.1711,
+     "n_points": 40
+    },
+    "d007|linear_concat|primary_3": {
+     "spearman": 0.97,
+     "mean_abs_gap": 0.1017,
+     "mean_signed_gap_pred_minus_trained": 0.1017,
+     "n_points": 24
+    },
+    "d007|linear_concat|all_5": {
+     "spearman": 0.9378,
+     "mean_abs_gap": 0.0992,
+     "mean_signed_gap_pred_minus_trained": 0.0992,
+     "n_points": 40
+    },
+    "d007|linear_meanpool|primary_3": {
+     "spearman": 0.8491,
+     "mean_abs_gap": 0.1381,
+     "mean_signed_gap_pred_minus_trained": 0.1381,
+     "n_points": 24
+    },
+    "d007|linear_meanpool|all_5": {
+     "spearman": 0.854,
+     "mean_abs_gap": 0.1346,
+     "mean_signed_gap_pred_minus_trained": 0.1346,
+     "n_points": 40
+    },
+    "grouped|attention|primary_3": {
+     "spearman": 0.9208,
+     "mean_abs_gap": 0.1757,
+     "mean_signed_gap_pred_minus_trained": 0.1757,
+     "n_points": 24
+    },
+    "grouped|attention|all_5": {
+     "spearman": 0.9402,
+     "mean_abs_gap": 0.1716,
+     "mean_signed_gap_pred_minus_trained": 0.1716,
+     "n_points": 40
+    },
+    "grouped|linear_concat|primary_3": {
+     "spearman": 0.9669,
+     "mean_abs_gap": 0.1034,
+     "mean_signed_gap_pred_minus_trained": 0.1034,
+     "n_points": 24
+    },
+    "grouped|linear_concat|all_5": {
+     "spearman": 0.9593,
+     "mean_abs_gap": 0.0997,
+     "mean_signed_gap_pred_minus_trained": 0.0997,
+     "n_points": 40
+    },
+    "grouped|linear_meanpool|primary_3": {
+     "spearman": 0.7498,
+     "mean_abs_gap": 0.1398,
+     "mean_signed_gap_pred_minus_trained": 0.1398,
+     "n_points": 24
+    },
+    "grouped|linear_meanpool|all_5": {
+     "spearman": 0.7745,
+     "mean_abs_gap": 0.1351,
+     "mean_signed_gap_pred_minus_trained": 0.1351,
+     "n_points": 40
+    }
+   },
+   "n_mc": 2000,
+   "seed": 20260928
+  },
+  "e_sensitivity": {
+   "d32": {
+    "ADD": {
+     "value": 0.5885,
+     "half_width": 0.1158,
+     "lo": 0.4726,
+     "hi": 0.7043
+    },
+    "d_ADD_minus_JOINT-E": {
+     "value": 0.1575,
+     "half_width": 0.1289,
+     "lo": 0.0287,
+     "hi": 0.2864
+    },
+    "d_ADD_minus_MAX": {
+     "value": 0.254,
+     "half_width": 0.1753,
+     "lo": 0.0787,
+     "hi": 0.4293
+    }
+   },
+   "d128": {
+    "ADD": {
+     "value": 0.5903,
+     "half_width": 0.126,
+     "lo": 0.4643,
+     "hi": 0.7164
+    },
+    "d_ADD_minus_JOINT-E": {
+     "value": 0.1594,
+     "half_width": 0.1578,
+     "lo": 0.0017,
+     "hi": 0.3172
+    },
+    "d_ADD_minus_MAX": {
+     "value": 0.2559,
+     "half_width": 0.2023,
+     "lo": 0.0536,
+     "hi": 0.4581
+    }
+   },
+   "d64_halfsigma": {
+    "ADD": {
+     "value": 0.5967,
+     "half_width": 0.1204,
+     "lo": 0.4763,
+     "hi": 0.7171
+    },
+    "d_ADD_minus_JOINT-E": {
+     "value": 0.1657,
+     "half_width": 0.144,
+     "lo": 0.0217,
+     "hi": 0.3098
+    },
+    "d_ADD_minus_MAX": {
+     "value": 0.2622,
+     "half_width": 0.1903,
+     "lo": 0.0719,
+     "hi": 0.4526
+    }
+   },
+   "d64_pairsigma": {
+    "ADD": {
+     "value": 0.6918,
+     "half_width": 0.0806,
+     "lo": 0.6113,
+     "hi": 0.7724
+    },
+    "d_ADD_minus_JOINT-E": {
+     "value": 0.2609,
+     "half_width": 0.1117,
+     "lo": 0.1492,
+     "hi": 0.3726
+    },
+    "d_ADD_minus_MAX": {
+     "value": 0.3574,
+     "half_width": 0.1563,
+     "lo": 0.2011,
+     "hi": 0.5137
+    }
+   },
+   "d64_grouped": {
+    "ADD": {
+     "value": 0.5934,
+     "half_width": 0.122,
+     "lo": 0.4715,
+     "hi": 0.7154
+    },
+    "d_ADD_minus_JOINT-E": {
+     "value": 0.1625,
+     "half_width": 0.1451,
+     "lo": 0.0174,
+     "hi": 0.3076
+    },
+    "d_ADD_minus_MAX": {
+     "value": 0.259,
+     "half_width": 0.1911,
+     "lo": 0.0679,
+     "hi": 0.45
+    }
+   }
+  }
+ },
+ "subset_sizes": {
+  "all": 666,
+  "nonceiling": 408
+ },
+ "cost": {
+  "load_min": 1.6,
+  "wall_min": 5.6
+ }
+}
