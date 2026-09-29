@@ -1,0 +1,8 @@
+[S2] restricted pool 155 queries; composition {'anchor:paper8': 3, 'anchor:gpt4o-gen-opt': 7, 'anchor:random-opt': 8, 'meta-information': 39, 'banner-grabbing': 35, 'malformed-alignment': 1, 'weak-alignment': 43, 'tokenizer-probe-digit-chunking': 7, 'tokenizer-probe-whitespace-merging': 3, 'tokenizer-probe-unicode-byte-fallback': 5, 'tokenizer-probe-glitch-token': 4}
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+[S2] code-path check: full pool reproduces D010 [193, 140, 237, 114, 233, 117, 0, 16]
+[S2] restricted chain [237, 233, 92, 16, 239, 18, 17, 247]; identical-input k []; overlap JG 3/8
