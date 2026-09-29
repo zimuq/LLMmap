@@ -1267,5 +1267,64 @@ validated against D019 exactly).**
   accumulation beats MAX, and how close greedy is to optimal. It is not a
   better selector.
 
+## D024 — Fingerprints must span deployment configs; keeping the full distribution adds a smaller, hard-model-weighted edge
+
+**The question.** Hold the selection algorithm fixed (JointGreedy,
+CVaR₀.₁ over 666 pairs) and change only the fingerprint inside its
+statistic:
+- **CLOUD:** the per-model point cloud across 75 S_build configs;
+- **CENTROID:** the mean of that cloud;
+- **SINGLE:** one greedy reference answer per model.
+
+**The big effect is multi-config reference data.**
+- SINGLE trains to 0.659 mean top-1 over `k`, against 0.791 for the best
+  centroid and 0.806 for CLOUD.
+- On the hardest models it collapses: consensus6 recall .50 vs .76.
+- This is the selection-level counterpart of AdaptPrint's Gen → All
+  jump. A reference built from one generic config misses what separates
+  near-relatives.
+
+**The distribution itself adds a smaller, consistent edge.**
+- Against the strongest centroid baseline (un-normalised), CLOUD is
+  +1.5 pp mean top-1 over `k` [+0.2, +2.7] on the paper's network, and
+  +1.5 / +2.2 pp on the two linear readouts, all with positive lower
+  bounds.
+- At `k`=8, on the hard-model sets, the edge is +2.8 to +5.9 pp, about
+  1.3–2.7× the overall gain (descriptive).
+- The hard-pair tail difference is not resolved.
+- The pre-registered P1 verdict (+9.5 pp, BETTER) was against a
+  normalised centroid that turned out to be a strawman (below). **Quote
+  the +1.5 pp.**
+
+**Mechanism, together with D021.**
+- The within-model spread matters as a *noise yardstick*. Raw cloud vs
+  centroid barely differs on ranking pair difficulty (Δρ +0.04,
+  unresolved). The *whitened* cloud (`ADD`, D021) ranks clearly better
+  (+0.20).
+- On selection, the multi-config centroid already captures most of the
+  separation, and the spread adds the last ~1.5–2 pp, mostly on models
+  whose differences show up only across configs.
+
+**Two by-products worth keeping.**
+- **Why Phi-3-medium-128k↔4k is the hardest pair.** Under greedy
+  decoding, the two give **byte-identical answers to 46 of 259 queries**.
+  A single reference cannot separate them at all on those queries; only
+  sampling and config variation can. It is the worst pair under every
+  definition. It needs probes where the models genuinely diverge, e.g.
+  long-context prompts beyond 4k tokens, not a better definition.
+- **Benign-looking ≠ useful.** SINGLE's chain is nearly guard-clean (1 of
+  8 flagged, D022's guards) yet trains ~15 pp worse than CLOUD. Queries
+  that separate models through behaviour *across configs* (injection,
+  refusal probes) are the ones input guards catch.
+
+**Method lesson (design-side error).**
+- The D specified a per-query median normalisation for the centroid "so
+  no query dominates". It divided out the centroid's only signal
+  (between-model scale) and cost 8 pp.
+- The strongest-baseline amendment added at P1 review caught it.
+- **Standing rule from now on:** pre-register plausible variants of any
+  baseline and compare against the strongest. A fairness transformation
+  is itself a modelling choice.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
