@@ -1,0 +1,1682 @@
+{
+ "schema": "d024-s0-v1",
+ "models": [
+  "CohereForAI/aya-23-8B",
+  "Deci/DeciLM-7B-instruct",
+  "HuggingFaceH4/zephyr-7b-beta",
+  "Qwen/Qwen2-1.5B-Instruct",
+  "Qwen/Qwen2-7B-Instruct",
+  "Qwen/Qwen2.5-0.5B-Instruct",
+  "Qwen/Qwen2.5-3B-Instruct",
+  "google/gemma-1.1-2b-it",
+  "google/gemma-1.1-7b-it",
+  "google/gemma-2-9b-it",
+  "google/gemma-2b-it",
+  "google/gemma-7b-it",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+  "ibm-granite/granite-3.0-8b-instruct",
+  "ibm-granite/granite-3.1-8b-instruct",
+  "internlm/internlm2_5-7b-chat",
+  "meta-llama/Llama-2-7b-chat-hf",
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Llama-3.2-3B-Instruct",
+  "meta-llama/Meta-Llama-3-8B-Instruct",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-medium-4k-instruct",
+  "microsoft/Phi-3-mini-128k-instruct",
+  "microsoft/Phi-3-mini-4k-instruct",
+  "microsoft/Phi-3.5-mini-instruct",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "mistralai/Mistral-7B-Instruct-v0.3",
+  "nvidia/Llama3-ChatQA-1.5-8B",
+  "openchat/openchat-3.6-8b-20240522",
+  "openchat/openchat_3.5",
+  "tiiuae/Falcon3-10B-Instruct",
+  "tiiuae/Falcon3-7B-Instruct",
+  "togethercomputer/Llama-2-7B-32K-Instruct",
+  "upstage/SOLAR-10.7B-Instruct-v1.0",
+  "utter-project/EuroLLM-1.7B-Instruct"
+ ],
+ "n_pairs": 666,
+ "n_queries": 259,
+ "single_tier": {
+  "readings": {
+   "field": {
+    "CohereForAI/aya-23-8B": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Deci/DeciLM-7B-instruct": {
+     "config_index": 6,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+     "config_index": 67,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-1.5B-Instruct": {
+     "config_index": 59,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-7B-Instruct": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+     "config_index": 26,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+     "config_index": 73,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-2b-it": {
+     "config_index": 35,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-7b-it": {
+     "config_index": 52,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-2-9b-it": {
+     "config_index": 59,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-2b-it": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-7b-it": {
+     "config_index": 71,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+     "config_index": 55,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.0-8b-instruct": {
+     "config_index": 60,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.1-8b-instruct": {
+     "config_index": 53,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "internlm/internlm2_5-7b-chat": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-2-7b-chat-hf": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-1B-Instruct": {
+     "config_index": 31,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-3B-Instruct": {
+     "config_index": 37,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3-8B-Instruct": {
+     "config_index": 10,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-128k-instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-4k-instruct": {
+     "config_index": 47,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-128k-instruct": {
+     "config_index": 5,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-4k-instruct": {
+     "config_index": 67,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3.5-mini-instruct": {
+     "config_index": 21,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+     "config_index": 15,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.2": {
+     "config_index": 12,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+     "config_index": 69,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "nvidia/Llama3-ChatQA-1.5-8B": {
+     "config_index": 4,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "openchat/openchat-3.6-8b-20240522": {
+     "config_index": 9,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "openchat/openchat_3.5": {
+     "config_index": 73,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-10B-Instruct": {
+     "config_index": 30,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-7B-Instruct": {
+     "config_index": 57,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "togethercomputer/Llama-2-7B-32K-Instruct": {
+     "config_index": 14,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "upstage/SOLAR-10.7B-Instruct-v1.0": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-1.7B-Instruct": {
+     "config_index": 66,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    }
+   },
+   "effective": {
+    "CohereForAI/aya-23-8B": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Deci/DeciLM-7B-instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-1.5B-Instruct": {
+     "config_index": 70,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-7B-Instruct": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+     "config_index": 35,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+     "config_index": 63,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-2b-it": {
+     "config_index": 50,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-7b-it": {
+     "config_index": 6,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-2-9b-it": {
+     "config_index": 55,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-2b-it": {
+     "config_index": 19,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-7b-it": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+     "config_index": 30,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.0-8b-instruct": {
+     "config_index": 67,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.1-8b-instruct": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "internlm/internlm2_5-7b-chat": {
+     "config_index": 54,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-2-7b-chat-hf": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-1B-Instruct": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-3B-Instruct": {
+     "config_index": 49,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3-8B-Instruct": {
+     "config_index": 58,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+     "config_index": 10,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-128k-instruct": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-4k-instruct": {
+     "config_index": 56,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-128k-instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-4k-instruct": {
+     "config_index": 56,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3.5-mini-instruct": {
+     "config_index": 66,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.2": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "nvidia/Llama3-ChatQA-1.5-8B": {
+     "config_index": 69,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "openchat/openchat-3.6-8b-20240522": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "openchat/openchat_3.5": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-10B-Instruct": {
+     "config_index": 70,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-7B-Instruct": {
+     "config_index": 60,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "togethercomputer/Llama-2-7B-32K-Instruct": {
+     "config_index": 20,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "upstage/SOLAR-10.7B-Instruct-v1.0": {
+     "config_index": 20,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-1.7B-Instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    }
+   }
+  },
+  "tier_counts": {
+   "field": {
+    "1": 37,
+    "2": 0,
+    "3": 0
+   },
+   "effective": {
+    "1": 37,
+    "2": 0,
+    "3": 0
+   }
+  },
+  "sampling_of_choice": {
+   "field": [
+    [
+     true,
+     0.4
+    ]
+   ],
+   "effective": [
+    [
+     false,
+     0.7
+    ]
+   ]
+  },
+  "tier1_configs_per_model": {
+   "CohereForAI/aya-23-8B": [
+    [
+     0,
+     true,
+     1.0
+    ],
+    [
+     1,
+     true,
+     0.4
+    ],
+    [
+     29,
+     true,
+     0.7
+    ],
+    [
+     72,
+     false,
+     0.7
+    ]
+   ],
+   "Deci/DeciLM-7B-instruct": [
+    [
+     3,
+     true,
+     1.0
+    ],
+    [
+     6,
+     true,
+     0.4
+    ],
+    [
+     8,
+     false,
+     0.7
+    ],
+    [
+     49,
+     true,
+     0.7
+    ]
+   ],
+   "HuggingFaceH4/zephyr-7b-beta": [
+    [
+     48,
+     true,
+     0.7
+    ],
+    [
+     51,
+     false,
+     0.7
+    ],
+    [
+     63,
+     true,
+     1.0
+    ],
+    [
+     67,
+     true,
+     0.4
+    ]
+   ],
+   "Qwen/Qwen2-1.5B-Instruct": [
+    [
+     1,
+     true,
+     0.7
+    ],
+    [
+     31,
+     true,
+     1.0
+    ],
+    [
+     59,
+     true,
+     0.4
+    ],
+    [
+     70,
+     false,
+     0.7
+    ]
+   ],
+   "Qwen/Qwen2-7B-Instruct": [
+    [
+     15,
+     true,
+     1.0
+    ],
+    [
+     18,
+     true,
+     0.7
+    ],
+    [
+     22,
+     true,
+     0.4
+    ],
+    [
+     72,
+     false,
+     0.7
+    ]
+   ],
+   "Qwen/Qwen2.5-0.5B-Instruct": [
+    [
+     3,
+     true,
+     1.0
+    ],
+    [
+     26,
+     true,
+     0.4
+    ],
+    [
+     35,
+     false,
+     0.7
+    ],
+    [
+     72,
+     true,
+     0.7
+    ]
+   ],
+   "Qwen/Qwen2.5-3B-Instruct": [
+    [
+     55,
+     true,
+     0.7
+    ],
+    [
+     61,
+     true,
+     1.0
+    ],
+    [
+     63,
+     false,
+     0.7
+    ],
+    [
+     73,
+     true,
+     0.4
+    ]
+   ],
+   "google/gemma-1.1-2b-it": [
+    [
+     19,
+     true,
+     1.0
+    ],
+    [
+     33,
+     true,
+     0.7
+    ],
+    [
+     35,
+     true,
+     0.4
+    ],
+    [
+     50,
+     false,
+     0.7
+    ]
+   ],
+   "google/gemma-1.1-7b-it": [
+    [
+     0,
+     true,
+     1.0
+    ],
+    [
+     2,
+     true,
+     0.7
+    ],
+    [
+     6,
+     false,
+     0.7
+    ],
+    [
+     52,
+     true,
+     0.4
+    ]
+   ],
+   "google/gemma-2-9b-it": [
+    [
+     44,
+     true,
+     1.0
+    ],
+    [
+     55,
+     false,
+     0.7
+    ],
+    [
+     59,
+     true,
+     0.4
+    ],
+    [
+     61,
+     true,
+     0.7
+    ]
+   ],
+   "google/gemma-2b-it": [
+    [
+     19,
+     false,
+     0.7
+    ],
+    [
+     23,
+     true,
+     1.0
+    ],
+    [
+     33,
+     true,
+     0.4
+    ],
+    [
+     63,
+     true,
+     0.7
+    ]
+   ],
+   "google/gemma-7b-it": [
+    [
+     46,
+     false,
+     0.7
+    ],
+    [
+     56,
+     true,
+     0.7
+    ],
+    [
+     57,
+     true,
+     1.0
+    ],
+    [
+     71,
+     true,
+     0.4
+    ]
+   ],
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k": [
+    [
+     27,
+     true,
+     1.0
+    ],
+    [
+     30,
+     false,
+     0.7
+    ],
+    [
+     41,
+     true,
+     0.7
+    ],
+    [
+     55,
+     true,
+     0.4
+    ]
+   ],
+   "ibm-granite/granite-3.0-8b-instruct": [
+    [
+     0,
+     true,
+     1.0
+    ],
+    [
+     30,
+     true,
+     0.7
+    ],
+    [
+     60,
+     true,
+     0.4
+    ],
+    [
+     67,
+     false,
+     0.7
+    ]
+   ],
+   "ibm-granite/granite-3.1-8b-instruct": [
+    [
+     8,
+     true,
+     0.7
+    ],
+    [
+     37,
+     true,
+     1.0
+    ],
+    [
+     46,
+     false,
+     0.7
+    ],
+    [
+     53,
+     true,
+     0.4
+    ]
+   ],
+   "internlm/internlm2_5-7b-chat": [
+    [
+     13,
+     true,
+     0.7
+    ],
+    [
+     47,
+     true,
+     1.0
+    ],
+    [
+     51,
+     true,
+     0.4
+    ],
+    [
+     54,
+     false,
+     0.7
+    ]
+   ],
+   "meta-llama/Llama-2-7b-chat-hf": [
+    [
+     0,
+     false,
+     0.7
+    ],
+    [
+     11,
+     true,
+     1.0
+    ],
+    [
+     70,
+     true,
+     0.7
+    ],
+    [
+     72,
+     true,
+     0.4
+    ]
+   ],
+   "meta-llama/Llama-3.2-1B-Instruct": [
+    [
+     0,
+     false,
+     0.7
+    ],
+    [
+     23,
+     true,
+     1.0
+    ],
+    [
+     31,
+     true,
+     0.4
+    ],
+    [
+     32,
+     true,
+     0.7
+    ]
+   ],
+   "meta-llama/Llama-3.2-3B-Instruct": [
+    [
+     37,
+     true,
+     0.4
+    ],
+    [
+     49,
+     false,
+     0.7
+    ],
+    [
+     57,
+     true,
+     1.0
+    ],
+    [
+     66,
+     true,
+     0.7
+    ]
+   ],
+   "meta-llama/Meta-Llama-3-8B-Instruct": [
+    [
+     6,
+     true,
+     0.7
+    ],
+    [
+     8,
+     true,
+     1.0
+    ],
+    [
+     10,
+     true,
+     0.4
+    ],
+    [
+     58,
+     false,
+     0.7
+    ]
+   ],
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": [
+    [
+     8,
+     true,
+     0.4
+    ],
+    [
+     10,
+     false,
+     0.7
+    ],
+    [
+     30,
+     true,
+     0.7
+    ],
+    [
+     71,
+     true,
+     1.0
+    ]
+   ],
+   "microsoft/Phi-3-medium-128k-instruct": [
+    [
+     1,
+     true,
+     0.7
+    ],
+    [
+     22,
+     false,
+     0.7
+    ],
+    [
+     27,
+     true,
+     0.4
+    ],
+    [
+     29,
+     true,
+     1.0
+    ]
+   ],
+   "microsoft/Phi-3-medium-4k-instruct": [
+    [
+     40,
+     true,
+     1.0
+    ],
+    [
+     47,
+     true,
+     0.4
+    ],
+    [
+     53,
+     true,
+     0.7
+    ],
+    [
+     56,
+     false,
+     0.7
+    ]
+   ],
+   "microsoft/Phi-3-mini-128k-instruct": [
+    [
+     5,
+     true,
+     0.4
+    ],
+    [
+     13,
+     true,
+     0.7
+    ],
+    [
+     27,
+     false,
+     0.7
+    ],
+    [
+     43,
+     true,
+     1.0
+    ]
+   ],
+   "microsoft/Phi-3-mini-4k-instruct": [
+    [
+     12,
+     true,
+     0.7
+    ],
+    [
+     29,
+     true,
+     1.0
+    ],
+    [
+     56,
+     false,
+     0.7
+    ],
+    [
+     67,
+     true,
+     0.4
+    ]
+   ],
+   "microsoft/Phi-3.5-mini-instruct": [
+    [
+     21,
+     true,
+     0.4
+    ],
+    [
+     43,
+     true,
+     1.0
+    ],
+    [
+     63,
+     true,
+     0.7
+    ],
+    [
+     66,
+     false,
+     0.7
+    ]
+   ],
+   "mistralai/Mistral-7B-Instruct-v0.1": [
+    [
+     15,
+     true,
+     0.4
+    ],
+    [
+     24,
+     false,
+     0.7
+    ],
+    [
+     29,
+     true,
+     0.7
+    ],
+    [
+     72,
+     true,
+     1.0
+    ]
+   ],
+   "mistralai/Mistral-7B-Instruct-v0.2": [
+    [
+     12,
+     true,
+     0.4
+    ],
+    [
+     34,
+     true,
+     0.7
+    ],
+    [
+     56,
+     true,
+     1.0
+    ],
+    [
+     72,
+     false,
+     0.7
+    ]
+   ],
+   "mistralai/Mistral-7B-Instruct-v0.3": [
+    [
+     0,
+     true,
+     1.0
+    ],
+    [
+     51,
+     false,
+     0.7
+    ],
+    [
+     68,
+     true,
+     0.7
+    ],
+    [
+     69,
+     true,
+     0.4
+    ]
+   ],
+   "nvidia/Llama3-ChatQA-1.5-8B": [
+    [
+     4,
+     true,
+     0.4
+    ],
+    [
+     25,
+     true,
+     1.0
+    ],
+    [
+     63,
+     true,
+     0.7
+    ],
+    [
+     69,
+     false,
+     0.7
+    ]
+   ],
+   "openchat/openchat-3.6-8b-20240522": [
+    [
+     9,
+     true,
+     0.4
+    ],
+    [
+     27,
+     false,
+     0.7
+    ],
+    [
+     43,
+     true,
+     0.7
+    ],
+    [
+     46,
+     true,
+     1.0
+    ]
+   ],
+   "openchat/openchat_3.5": [
+    [
+     0,
+     false,
+     0.7
+    ],
+    [
+     3,
+     true,
+     1.0
+    ],
+    [
+     17,
+     true,
+     0.7
+    ],
+    [
+     73,
+     true,
+     0.4
+    ]
+   ],
+   "tiiuae/Falcon3-10B-Instruct": [
+    [
+     30,
+     true,
+     0.4
+    ],
+    [
+     54,
+     true,
+     0.7
+    ],
+    [
+     56,
+     true,
+     1.0
+    ],
+    [
+     70,
+     false,
+     0.7
+    ]
+   ],
+   "tiiuae/Falcon3-7B-Instruct": [
+    [
+     6,
+     true,
+     1.0
+    ],
+    [
+     34,
+     true,
+     0.7
+    ],
+    [
+     57,
+     true,
+     0.4
+    ],
+    [
+     60,
+     false,
+     0.7
+    ]
+   ],
+   "togethercomputer/Llama-2-7B-32K-Instruct": [
+    [
+     14,
+     true,
+     0.4
+    ],
+    [
+     19,
+     true,
+     1.0
+    ],
+    [
+     20,
+     false,
+     0.7
+    ],
+    [
+     33,
+     true,
+     0.7
+    ]
+   ],
+   "upstage/SOLAR-10.7B-Instruct-v1.0": [
+    [
+     13,
+     true,
+     1.0
+    ],
+    [
+     20,
+     false,
+     0.7
+    ],
+    [
+     53,
+     true,
+     0.7
+    ],
+    [
+     72,
+     true,
+     0.4
+    ]
+   ],
+   "utter-project/EuroLLM-1.7B-Instruct": [
+    [
+     8,
+     false,
+     0.7
+    ],
+    [
+     13,
+     true,
+     1.0
+    ],
+    [
+     45,
+     true,
+     0.7
+    ],
+    [
+     66,
+     true,
+     0.4
+    ]
+   ]
+  }
+ },
+ "health": {
+  "centroid": {
+   "median_d2_per_query": {
+    "min": 6.611179371020973,
+    "p50": 17.616204313539924,
+    "max": 71.33493789534623,
+    "max_over_min": 10.790047265701382
+   },
+   "near_zero_cells": {
+    "total": 0,
+    "queries_with_any": 0,
+    "queries_with_ge66": 0,
+    "pairs_ever": 0
+   },
+   "single_query_cvar": {
+    "max": 0.6420216260051449,
+    "second": 0.632263466009961,
+    "n_at_max": 1,
+    "n_zero": 0,
+    "p50": 0.5364984780414719
+   }
+  },
+  "centroid_raw": {
+   "median_d2_per_query": {
+    "min": 6.611179371020973,
+    "p50": 17.616204313539924,
+    "max": 71.33493789534623,
+    "max_over_min": 10.790047265701382
+   },
+   "near_zero_cells": {
+    "total": 0,
+    "queries_with_any": 0,
+    "queries_with_ge66": 0,
+    "pairs_ever": 0
+   },
+   "single_query_cvar": {
+    "max": 4.012725599449779,
+    "second": 3.9201819678903713,
+    "n_at_max": 1,
+    "n_zero": 0,
+    "p50": 2.27743326683139
+   }
+  },
+  "single_field": {
+   "median_d2_per_query": {
+    "min": 19.203820433352035,
+    "p50": 90.35063233394621,
+    "max": 187.7328783894319,
+    "max_over_min": 9.775808883496369
+   },
+   "near_zero_cells": {
+    "total": 1875,
+    "queries_with_any": 74,
+    "queries_with_ge66": 8,
+    "pairs_ever": 493
+   },
+   "single_query_cvar": {
+    "max": 0.7815133686792474,
+    "second": 0.7675507847679368,
+    "n_at_max": 1,
+    "n_zero": 8,
+    "p50": 0.6224026015183519
+   }
+  },
+  "single_effective": {
+   "median_d2_per_query": {
+    "min": 19.706830108666495,
+    "p50": 87.82113480152066,
+    "max": 189.3029500494584,
+    "max_over_min": 9.605956361607259
+   },
+   "near_zero_cells": {
+    "total": 1981,
+    "queries_with_any": 73,
+    "queries_with_ge66": 8,
+    "pairs_ever": 505
+   },
+   "single_query_cvar": {
+    "max": 0.7491120767532099,
+    "second": 0.7350341285484152,
+    "n_at_max": 1,
+    "n_zero": 8,
+    "p50": 0.6166001441950963
+   }
+  }
+ },
+ "distances_npz_sha256": "1ccff699bf4f8be1f4ab59262e1b90c2df89c8fbe561f971025feba66b00d955",
+ "code_path_check": {
+  "chain": [
+   193,
+   140,
+   237,
+   114,
+   233,
+   117,
+   0,
+   16
+  ],
+  "d010_chain": [
+   193,
+   140,
+   237,
+   114,
+   233,
+   117,
+   0,
+   16
+  ],
+  "identical": true,
+  "max_abs_objective_diff": 0.0,
+  "trace": [
+   {
+    "k": 1,
+    "query": 193,
+    "objective_cvar": 0.1787531300250328,
+    "mean_stat": 0.5464515686035156,
+    "min_stat": 0.0707242488861084,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 2,
+    "query": 140,
+    "objective_cvar": 0.23309877887368202,
+    "mean_stat": 0.631571888923645,
+    "min_stat": 0.05886053293943405,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 3,
+    "query": 237,
+    "objective_cvar": 0.233464668984666,
+    "mean_stat": 0.5545681715011597,
+    "min_stat": 0.06276886910200119,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 4,
+    "query": 114,
+    "objective_cvar": 0.23410471404592195,
+    "mean_stat": 0.6360328197479248,
+    "min_stat": 0.11911661177873611,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 5,
+    "query": 233,
+    "objective_cvar": 0.23522797949386365,
+    "mean_stat": 0.5800875425338745,
+    "min_stat": 0.09604696184396744,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 6,
+    "query": 117,
+    "objective_cvar": 0.23911864592721968,
+    "mean_stat": 0.6223480701446533,
+    "min_stat": 0.0848250612616539,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 7,
+    "query": 0,
+    "objective_cvar": 0.24141532137538446,
+    "mean_stat": 0.5905830264091492,
+    "min_stat": 0.0900428369641304,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 8,
+    "query": 16,
+    "objective_cvar": 0.24336434121836314,
+    "mean_stat": 0.5702951550483704,
+    "min_stat": 0.08678990602493286,
+    "n_exact_ties_at_max": 1
+   }
+  ],
+  "wall_min": 0.34
+ },
+ "inventory": {
+  "D010_joint_energy_attention_seeds": {
+   "1": 5,
+   "2": 5,
+   "3": 5,
+   "4": 5,
+   "5": 5,
+   "6": 5,
+   "7": 5,
+   "8": 5
+  },
+  "D020_JointGreedy_linear": {
+   "concat": true,
+   "meanpool": true
+  },
+  "D016_k8_logits": {
+   "joint_energy": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "paper8": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "coverage": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "D023_GreedyADD_attention_seeds": {
+   "1": 5,
+   "2": 5,
+   "3": 5,
+   "4": 5,
+   "5": 5,
+   "6": 5,
+   "7": 5,
+   "8": 5
+  },
+  "D023_GreedyADD_cnt_pair666_k8": 5,
+  "D023_JointGreedy_paper8_cnt_pair666_k8": {
+   "JointGreedy": 5,
+   "paper8": 5
+  },
+  "D023_GreedyADD_linear": {
+   "concat": true,
+   "meanpool": true
+  },
+  "./results/D022/query_flags.json": true,
+  "./results/D016/full_pair_trained_accuracy.json": true,
+  "./results/D023/analysis.json": true,
+  "./results/D023/selection.json": true,
+  "D019_files": [
+   "checkpoint_availability.json",
+   "d019-1029566.err",
+   "d019-1029566.out",
+   "hard_model_recall.json",
+   "models"
+  ],
+  "D021_files": [
+   "a1_prompt_split_check.json",
+   "evidence_tok200.meta.json",
+   "evidence_tok200.npy",
+   "evidence_tok200_d128.npy",
+   "evidence_tok200_d32.npy",
+   "evidence_tok200_d64_grouped.npy",
+   "evidence_tok200_d64_halfsigma.npy",
+   "evidence_tok200_d64_pairsigma.npy",
+   "gate-1032638.err",
+   "gate-1032638.out",
+   "gate_analysis.json",
+   "predictors.json",
+   "predictors.npz",
+   "s0-1032514.err",
+   "s0-1032514.out",
+   "s0-1032531.err",
+   "s0-1032531.out",
+   "s0-1032556.err",
+   "s0-1032556.out",
+   "s0_inventory.json"
+  ]
+ },
+ "wall_s": 31.2
+}
