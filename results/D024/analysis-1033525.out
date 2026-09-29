@@ -1,0 +1,38 @@
+=== node: c608-051.vista.tacc.utexas.edu start: Tue Sep 29 03:25:49 AM CDT 2026 ===
+[S3] P1_CLOUD_minus_CENTROID: BETTER mean k1-8 {'point': 0.095, 'lo': 0.0731, 'hi': 0.1159, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.095, 'lo': 0.0731, 'hi': 0.1159, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'interval': {'point': 0.095, 'lo': 0.0726, 'hi': 0.1161, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'verdict_reading': 'BETTER'}
+     k=1: 0.6333 vs 0.4095 d +0.2238 {'lo': 0.1857, 'hi': 0.2634} ident False old-rule True
+     k=2: 0.7725 vs 0.5836 d +0.1890 {'lo': 0.1488, 'hi': 0.2272} ident False old-rule True
+     k=3: 0.8076 vs 0.7098 d +0.0977 {'lo': 0.0592, 'hi': 0.1343} ident False old-rule True
+     k=4: 0.8212 vs 0.7728 d +0.0484 {'lo': 0.0153, 'hi': 0.0824} ident False old-rule True
+     k=5: 0.8301 vs 0.7764 d +0.0536 {'lo': 0.0236, 'hi': 0.085} ident False old-rule False
+     k=6: 0.8439 vs 0.7883 d +0.0556 {'lo': 0.0236, 'hi': 0.0876} ident False old-rule True
+     k=7: 0.8672 vs 0.8251 d +0.0422 {'lo': 0.0147, 'hi': 0.0688} ident False old-rule False
+     k=8: 0.8757 vs 0.8257 d +0.0499 {'lo': 0.0272, 'hi': 0.0724} ident False old-rule True
+[S3] P2_CENTROID_minus_SINGLE: BETTER mean k1-8 {'point': 0.0522, 'lo': 0.0377, 'hi': 0.0661, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.0522, 'lo': 0.0377, 'hi': 0.0661, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'interval': {'point': 0.0522, 'lo': 0.0359, 'hi': 0.0685, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'verdict_reading': 'BETTER'}
+     k=1: 0.4095 vs 0.4934 d -0.0839 {'lo': -0.1207, 'hi': -0.0437} ident False old-rule True
+     k=2: 0.5836 vs 0.5981 d -0.0145 {'lo': -0.0508, 'hi': 0.0182} ident False old-rule False
+     k=3: 0.7098 vs 0.6642 d +0.0456 {'lo': 0.0123, 'hi': 0.077} ident False old-rule False
+     k=4: 0.7728 vs 0.6592 d +0.1135 {'lo': 0.0828, 'hi': 0.1464} ident False old-rule True
+     k=5: 0.7764 vs 0.6794 d +0.0971 {'lo': 0.0633, 'hi': 0.1323} ident False old-rule True
+     k=6: 0.7883 vs 0.7196 d +0.0688 {'lo': 0.0329, 'hi': 0.1057} ident False old-rule False
+     k=7: 0.8251 vs 0.7388 d +0.0863 {'lo': 0.0631, 'hi': 0.1116} ident False old-rule False
+     k=8: 0.8257 vs 0.7213 d +0.1044 {'lo': 0.0681, 'hi': 0.1379} ident False old-rule False
+[S3] CLOUD_minus_SINGLE: (no verdict) mean k1-8 {'point': 0.1472, 'lo': 0.1236, 'hi': 0.1712, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.1472, 'lo': 0.1236, 'hi': 0.1712, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'interval': {'point': 0.1472, 'lo': 0.1236, 'hi': 0.1715, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}}
+     k=1: 0.6333 vs 0.4934 d +0.1399 {'lo': 0.0943, 'hi': 0.1866} ident False old-rule True
+     k=2: 0.7725 vs 0.5981 d +0.1745 {'lo': 0.1351, 'hi': 0.2089} ident False old-rule True
+     k=3: 0.8076 vs 0.6642 d +0.1434 {'lo': 0.109, 'hi': 0.1741} ident False old-rule True
+     k=4: 0.8212 vs 0.6592 d +0.1619 {'lo': 0.1198, 'hi': 0.2013} ident False old-rule True
+     k=5: 0.8301 vs 0.6794 d +0.1507 {'lo': 0.1107, 'hi': 0.1955} ident False old-rule True
+     k=6: 0.8439 vs 0.7196 d +0.1243 {'lo': 0.0826, 'hi': 0.1721} ident False old-rule True
+     k=7: 0.8672 vs 0.7388 d +0.1284 {'lo': 0.0845, 'hi': 0.1678} ident False old-rule True
+     k=8: 0.8757 vs 0.7213 d +0.1544 {'lo': 0.1114, 'hi': 0.1959} ident False old-rule True
+[S3] strongest-baseline: {'raw': 0.791, 'normalised': 0.7114} {'point': 0.0154, 'lo': 0.0023, 'hi': 0.0273, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}
+[S3] ladder mean over k: {'SINGLE': 0.6592, 'CENTROID': 0.7114, 'CENTROID-raw': 0.791, 'CLOUD': 0.8064, 'Greedy-ADD': 0.8123}
+[S3] linear concat: CLOUD_minus_CENTROID {'point': 0.0847, 'lo': 0.0647, 'hi': 0.1058}; CENTROID_minus_SINGLE {'point': 0.0201, 'lo': 0.0047, 'hi': 0.0364}; CLOUD_minus_SINGLE {'point': 0.1049, 'lo': 0.0849, 'hi': 0.1262}; CLOUD_minus_CENTROID-raw {'point': 0.0146, 'lo': 0.002, 'hi': 0.0272}; CENTROID-raw_minus_CENTROID {'point': 0.0701, 'lo': 0.0522, 'hi': 0.0884}
+[S3] linear meanpool: CLOUD_minus_CENTROID {'point': 0.1012, 'lo': 0.0772, 'hi': 0.1266}; CENTROID_minus_SINGLE {'point': 0.0326, 'lo': 0.0205, 'hi': 0.0457}; CLOUD_minus_SINGLE {'point': 0.1338, 'lo': 0.1097, 'hi': 0.1597}; CLOUD_minus_CENTROID-raw {'point': 0.022, 'lo': 0.0091, 'hi': 0.0339}; CENTROID-raw_minus_CENTROID {'point': 0.0792, 'lo': 0.0597, 'hi': 0.0997}
+[S3] (b) pooled rho: {'MAX': 0.3345, 'JOINT-E': 0.4309, 'ADD': 0.5952, 'CENTROID': 0.3925, 'SINGLE': 0.2483, 'CENTROID-raw': 0.4019}; JOINT-E-CENTROID {'value': 0.0384, 'half_width': 0.0688, 'lo': -0.0304, 'hi': 0.1072}; CENTROID-SINGLE {'value': 0.1443, 'half_width': 0.1147, 'lo': 0.0295, 'hi': 0.259}
+[S3] (c) tail: {'SINGLE': (0.8734, 0.704), 'CENTROID': (0.9162, 0.708), 'CENTROID-raw': (0.935, 0.668), 'CLOUD': (0.9435, 0.732), 'Greedy-ADD': (0.9441, 0.724), 'paper8': (0.9312, 0.712)}
+[S3] (c) hard-model sets: {'worst6_paper8': {'SINGLE': {'mean': 0.5944, 'seed_range': [0.484, 0.664]}, 'CENTROID': {'mean': 0.7352, 'seed_range': [0.68, 0.756]}, 'CENTROID-raw': {'mean': 0.7584, 'seed_range': [0.732, 0.776]}, 'CLOUD': {'mean': 0.8032, 'seed_range': [0.776, 0.816]}, 'Greedy-ADD': {'mean': 0.788, 'seed_range': [0.728, 0.848]}}, 'worst16_paper8': {'SINGLE': {'mean': 0.677, 'seed_range': [0.6095, 0.7333]}, 'CENTROID': {'mean': 0.7859, 'seed_range': [0.7562, 0.7981]}, 'CENTROID-raw': {'mean': 0.7973, 'seed_range': [0.781, 0.8133]}, 'CLOUD': {'mean': 0.8251, 'seed_range': [0.8133, 0.8457]}, 'Greedy-ADD': {'mean': 0.8229, 'seed_range': [0.7638, 0.8705]}}, 'consensus6': {'SINGLE': {'mean': 0.4987, 'seed_range': [0.3267, 0.62]}, 'CENTROID': {'mean': 0.6533, 'seed_range': [0.58, 0.7]}, 'CENTROID-raw': {'mean': 0.696, 'seed_range': [0.6533, 0.7133]}, 'CLOUD': {'mean': 0.7547, 'seed_range': [0.72, 0.78]}, 'Greedy-ADD': {'mean': 0.7467, 'seed_range': [0.6733, 0.82]}}, 'naturalgap5': {'SINGLE': {'mean': 0.552, 'seed_range': [0.4114, 0.6514]}, 'CENTROID': {'mean': 0.6743, 'seed_range': [0.6229, 0.7086]}, 'CENTROID-raw': {'mean': 0.6937, 'seed_range': [0.6571, 0.72]}, 'CLOUD': {'mean': 0.7451, 'seed_range': [0.7029, 0.7657]}, 'Greedy-ADD': {'mean': 0.7474, 'seed_range': [0.6686, 0.8057]}}}
+[S3] (d) flags: {'CLOUD': 5, 'CENTROID': 4, 'SINGLE': 1, 'CENTROID-raw': 5, 'SINGLE-field': 1, 'paper8': 5, 'GreedyCover': 6, 'Greedy-ADD': 7}
+[S3] wrote ./results/D024/analysis.json
+=== end: Tue Sep 29 03:26:21 AM CDT 2026 ===

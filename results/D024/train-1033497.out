@@ -1,0 +1,31 @@
+=== node: c640-122.vista.tacc.utexas.edu start: Tue Sep 29 03:07:49 AM CDT 2026 ===
+[S2] CENTROID k=1 [78]: mean_top1 0.4095
+[S2] CENTROID k=2 [8, 78]: mean_top1 0.5836
+[S2] CENTROID k=3 [0, 8, 78]: mean_top1 0.7098
+[S2] CENTROID k=4 [0, 8, 78, 252]: mean_top1 0.7728
+[S2] CENTROID k=5 [0, 8, 78, 246, 252]: mean_top1 0.7764
+[S2] CENTROID k=6 [0, 8, 20, 78, 246, 252]: mean_top1 0.7883
+[S2] CENTROID k=7 [0, 8, 20, 78, 124, 246, 252]: mean_top1 0.8251
+[S2] CENTROID k=8 [0, 8, 20, 78, 124, 246, 252, 253]: mean_top1 0.8257
+[S2] CENTROID done (4.6 min)
+[S2] SINGLE k=1 [24]: mean_top1 0.4934
+[S2] SINGLE k=2 [20, 24]: mean_top1 0.5981
+[S2] SINGLE k=3 [8, 20, 24]: mean_top1 0.6642
+[S2] SINGLE k=4 [8, 20, 24, 57]: mean_top1 0.6592
+[S2] SINGLE k=5 [8, 20, 24, 57, 188]: mean_top1 0.6794
+[S2] SINGLE k=6 [8, 20, 22, 24, 57, 188]: mean_top1 0.7196
+[S2] SINGLE k=7 [8, 20, 22, 24, 57, 188, 214]: mean_top1 0.7388
+[S2] SINGLE k=8 [8, 20, 22, 24, 46, 57, 188, 214]: mean_top1 0.7213
+[S2] SINGLE done (9.4 min)
+[S2] CENTROID-raw k=1 [193]: mean_top1 0.6333 (identical input: reproduces reference exactly)
+[S2] CENTROID-raw k=2 [193, 135]: mean_top1 0.7191
+[S2] CENTROID-raw k=3 [193, 233, 135]: mean_top1 0.7674
+[S2] CENTROID-raw k=4 [193, 233, 0, 135]: mean_top1 0.8115
+[S2] CENTROID-raw k=5 [193, 233, 0, 135, 252]: mean_top1 0.8303
+[S2] CENTROID-raw k=6 [193, 233, 0, 135, 136, 252]: mean_top1 0.8506
+[S2] CENTROID-raw k=7 [193, 233, 0, 135, 136, 235, 252]: mean_top1 0.8623
+[S2] CENTROID-raw k=8 [193, 233, 0, 135, 136, 234, 235, 252]: mean_top1 0.8538
+[S2] CENTROID-raw done (13.9 min)
+[S2] new-arm bit-identity checks passed on {'P2_CENTROID_minus_SINGLE': [], 'CENTROID-raw_minus_CENTROID': []}; identical-to-CLOUD k {'CENTROID': [], 'SINGLE': [], 'CENTROID-raw': [1]} reproduced D010/D020 exactly
+wall 13.9 min
+=== end: Tue Sep 29 03:22:23 AM CDT 2026 ===
