@@ -1,0 +1,32 @@
+[S2] ILP-ADD k=1 [193]: mean_top1 0.6333 (identical input: reproduces reference exactly)
+[S2] ILP-ADD k=2 [193, 140]: mean_top1 0.7725 (identical input: reproduces reference exactly)
+[S2] ILP-ADD k=3 [193, 0, 1]: mean_top1 0.7812
+[S2] ILP-ADD k=4 [193, 140, 0, 1]: mean_top1 0.8331
+[S2] ILP-ADD k=5 [193, 140, 0, 1, 248]: mean_top1 0.8625
+[S2] ILP-ADD k=6 [193, 140, 0, 1, 123, 248]: mean_top1 0.8705
+[S2] ILP-ADD k=7 [193, 140, 0, 1, 110, 123, 248]: mean_top1 0.8659
+[S2] ILP-ADD k=8 [193, 140, 237, 0, 1, 110, 123, 248]: mean_top1 0.8737
+[S2] ILP-ADD linear done
+[S2] Greedy-ADD k=1 [193]: mean_top1 0.6333 (identical input: reproduces reference exactly)
+[S2] Greedy-ADD k=2 [193, 140]: mean_top1 0.7725 (identical input: reproduces reference exactly)
+[S2] Greedy-ADD k=3 [193, 140, 0]: mean_top1 0.7857
+[S2] Greedy-ADD k=4 [193, 140, 0, 1]: mean_top1 0.8331
+[S2] Greedy-ADD k=5 [193, 140, 0, 1, 248]: mean_top1 0.8625
+[S2] Greedy-ADD k=6 [193, 140, 0, 1, 248, 123]: mean_top1 0.8688
+[S2] Greedy-ADD k=7 [193, 140, 0, 1, 248, 123, 110]: mean_top1 0.8666
+[S2] Greedy-ADD k=8 [193, 140, 0, 1, 248, 123, 110, 237]: mean_top1 0.8759
+[S2] Greedy-ADD linear done
+wall 9.9 min
+[S3] VERDICT INCONCLUSIVE: mean k=1..8 {'point': 0.0052, 'lo': -0.0046, 'hi': 0.0155, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.0069, 'lo': -0.0061, 'hi': 0.0206, 'ks': [3, 4, 5, 6, 7, 8]}; independent-seed (differing k) {'point': 0.0069, 'lo': -0.006, 'hi': 0.0203, 'ks': [3, 4, 5, 6, 7, 8]} -> INCONCLUSIVE
+     k=1: ILP 0.6333 JG 0.6333 d +0.0000 {'lo': 0.0, 'hi': 0.0} old-rule resolved False
+     k=2: ILP 0.7725 JG 0.7725 d +0.0000 {'lo': 0.0, 'hi': 0.0} old-rule resolved False
+     k=3: ILP 0.7812 JG 0.8076 d -0.0264 {'lo': -0.0603, 'hi': 0.0082} old-rule resolved False
+     k=4: ILP 0.8331 JG 0.8212 d +0.0119 {'lo': -0.0171, 'hi': 0.048} old-rule resolved False
+     k=5: ILP 0.8625 JG 0.8301 d +0.0324 {'lo': 0.0097, 'hi': 0.0558} old-rule resolved False
+     k=6: ILP 0.8705 JG 0.8439 d +0.0266 {'lo': 0.0071, 'hi': 0.0482} old-rule resolved False
+     k=7: ILP 0.8659 JG 0.8672 d -0.0013 {'lo': -0.024, 'hi': 0.0195} old-rule resolved False
+     k=8: ILP 0.8737 JG 0.8757 d -0.0019 {'lo': -0.0327, 'hi': 0.0251} old-rule resolved False
+[S3] decomposition {'objective_effect_GreedyADD_minus_JG': {'point': 0.0059, 'lo': -0.0033, 'hi': 0.0156, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'optimiser_effect_ILP_minus_GreedyADD': {'point': -0.0007, 'lo': -0.004, 'hi': 0.0024, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}}
+[S3] linear mean-k {'concat': {'point': -0.0012, 'lo': -0.0104, 'hi': 0.0077}, 'meanpool': {'point': -0.002, 'lo': -0.0123, 'hi': 0.0088}}
+[S3] tail {'ILP-ADD': {'cvar01': 0.9429, 'worst': 0.728, 'worst_pair': 'microsoft/Phi-3-medium-128k-instruct|microsoft/Phi-3-medium-4k-instruct', 'named': {'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct': 0.804, 'microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct': 0.728}, 'minus_JG': {'point': -0.0006, 'lo': -0.012, 'hi': 0.0134}}, 'Greedy-ADD': {'cvar01': 0.9441, 'worst': 0.724, 'worst_pair': 'microsoft/Phi-3-medium-128k-instruct|microsoft/Phi-3-medium-4k-instruct', 'named': {'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct': 0.816, 'microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct': 0.724}, 'minus_JG': {'point': 0.0006, 'lo': -0.0117, 'hi': 0.0155}}, 'JointGreedy': {'cvar01': 0.9435, 'worst': 0.732, 'worst_pair': 'microsoft/Phi-3-medium-128k-instruct|microsoft/Phi-3-medium-4k-instruct', 'named': {'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct': 0.832, 'microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct': 0.732}}, 'paper8': {'cvar01': 0.9312, 'worst': 0.712, 'worst_pair': 'microsoft/Phi-3-medium-128k-instruct|microsoft/Phi-3-medium-4k-instruct', 'named': {'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct': 0.804, 'microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct': 0.712}, 'minus_JG': {'point': -0.0123, 'lo': -0.0338, 'hi': 0.0034}}}
+[S3] goodhart {'ILP-ADD': {'rho_ADD_vs_trained': 0.5545, 'worst66_overlap': 30, 'flag': False}, 'Greedy-ADD': {'rho_ADD_vs_trained': 0.5623, 'worst66_overlap': 33, 'flag': False}, 'JointGreedy': {'rho_ADD_vs_trained': 0.5434, 'worst66_overlap': 33, 'flag': False}, 'paper8': {'rho_ADD_vs_trained': 0.5935, 'worst66_overlap': 28, 'flag': False}}
