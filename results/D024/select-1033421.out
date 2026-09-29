@@ -1,0 +1,15 @@
+=== node: c612-091.vista.tacc.utexas.edu start: Tue Sep 29 02:56:29 AM CDT 2026 ===
+[S1] CENTROID: [78, 8, 0, 252, 246, 20, 124, 253]  objective [0.642, 0.9935, 1.269, 1.5101, 1.7245, 1.9174, 2.0977, 2.2784]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[S1] SINGLE: [24, 20, 8, 57, 188, 22, 214, 46]  objective [0.7491, 1.1799, 1.4977, 1.754, 1.9933, 2.1931, 2.3739, 2.5474]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[S1] CENTROID-raw: [193, 135, 233, 0, 252, 136, 235, 234]  objective [4.0127, 6.4335, 8.1154, 9.5223, 10.7879, 11.9222, 12.9528, 13.8334]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[S1] SINGLE-field: [20, 15, 8, 214, 41, 256, 241, 46]  objective [0.7815, 1.1782, 1.483, 1.7487, 1.9933, 2.2144, 2.4215, 2.6114]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[S1] Call 4 trigger: True (differing k in 3..8: [3, 4, 5, 6, 7, 8])
+[S1] identical-input k: {'P1_CLOUD_minus_CENTROID': [], 'P2_CENTROID_minus_SINGLE': [], 'CLOUD_minus_SINGLE': [], 'CLOUD_minus_CENTROID-raw': [1], 'CENTROID-raw_minus_CENTROID': []}
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+[S1] overlaps k=8 with CLOUD: {'CLOUD': 8, 'CENTROID': 1, 'SINGLE': 0, 'CENTROID-raw': 3, 'SINGLE-field': 0, 'paper8': 1, 'GreedyCover': 2, 'Greedy-ADD': 4}
+[S1] wrote ./results/D024/selection.json; wall 20.1 s
+=== end: Tue Sep 29 02:56:52 AM CDT 2026 ===

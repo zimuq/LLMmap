@@ -1,0 +1,1262 @@
+{
+ "schema": "d024-selection-v1",
+ "frozen_before_training": true,
+ "review": "D024 Review 2026-09-29, APPROVED WITH AMENDMENTS (Calls 1-4)",
+ "distances_npz_sha256": "1ccff699bf4f8be1f4ab59262e1b90c2df89c8fbe561f971025feba66b00d955",
+ "gamma": 0.1,
+ "k": 8,
+ "single_reference": {
+  "primary": "effective (greedy = temperature 0), Call 1 (b)",
+  "sensitivity": "field (sampled T=0.4), selection only, NOT trained",
+  "configs": {
+   "CohereForAI/aya-23-8B": 72,
+   "Deci/DeciLM-7B-instruct": 8,
+   "HuggingFaceH4/zephyr-7b-beta": 51,
+   "Qwen/Qwen2-1.5B-Instruct": 70,
+   "Qwen/Qwen2-7B-Instruct": 72,
+   "Qwen/Qwen2.5-0.5B-Instruct": 35,
+   "Qwen/Qwen2.5-3B-Instruct": 63,
+   "google/gemma-1.1-2b-it": 50,
+   "google/gemma-1.1-7b-it": 6,
+   "google/gemma-2-9b-it": 55,
+   "google/gemma-2b-it": 19,
+   "google/gemma-7b-it": 46,
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 30,
+   "ibm-granite/granite-3.0-8b-instruct": 67,
+   "ibm-granite/granite-3.1-8b-instruct": 46,
+   "internlm/internlm2_5-7b-chat": 54,
+   "meta-llama/Llama-2-7b-chat-hf": 0,
+   "meta-llama/Llama-3.2-1B-Instruct": 0,
+   "meta-llama/Llama-3.2-3B-Instruct": 49,
+   "meta-llama/Meta-Llama-3-8B-Instruct": 58,
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": 10,
+   "microsoft/Phi-3-medium-128k-instruct": 22,
+   "microsoft/Phi-3-medium-4k-instruct": 56,
+   "microsoft/Phi-3-mini-128k-instruct": 27,
+   "microsoft/Phi-3-mini-4k-instruct": 56,
+   "microsoft/Phi-3.5-mini-instruct": 66,
+   "mistralai/Mistral-7B-Instruct-v0.1": 24,
+   "mistralai/Mistral-7B-Instruct-v0.2": 72,
+   "mistralai/Mistral-7B-Instruct-v0.3": 51,
+   "nvidia/Llama3-ChatQA-1.5-8B": 69,
+   "openchat/openchat-3.6-8b-20240522": 27,
+   "openchat/openchat_3.5": 0,
+   "tiiuae/Falcon3-10B-Instruct": 70,
+   "tiiuae/Falcon3-7B-Instruct": 60,
+   "togethercomputer/Llama-2-7B-32K-Instruct": 20,
+   "upstage/SOLAR-10.7B-Instruct-v1.0": 20,
+   "utter-project/EuroLLM-1.7B-Instruct": 8
+  }
+ },
+ "chains": {
+  "CLOUD": [
+   193,
+   140,
+   237,
+   114,
+   233,
+   117,
+   0,
+   16
+  ],
+  "CENTROID": [
+   78,
+   8,
+   0,
+   252,
+   246,
+   20,
+   124,
+   253
+  ],
+  "SINGLE": [
+   24,
+   20,
+   8,
+   57,
+   188,
+   22,
+   214,
+   46
+  ],
+  "CENTROID-raw": [
+   193,
+   135,
+   233,
+   0,
+   252,
+   136,
+   235,
+   234
+  ],
+  "SINGLE-field": [
+   20,
+   15,
+   8,
+   214,
+   41,
+   256,
+   241,
+   46
+  ]
+ },
+ "traces": {
+  "CENTROID": [
+   {
+    "k": 1,
+    "query": 78,
+    "objective_cvar": 0.6420216260051449,
+    "mean_stat": 1.102914852073398,
+    "min_stat": 0.47103812588024013,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 2,
+    "query": 8,
+    "objective_cvar": 0.9935332735325186,
+    "mean_stat": 1.5084587373290776,
+    "min_stat": 0.6191079084842777,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 3,
+    "query": 0,
+    "objective_cvar": 1.269037367664762,
+    "mean_stat": 1.8514432704290102,
+    "min_stat": 0.7207360241376338,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 4,
+    "query": 252,
+    "objective_cvar": 1.5100740222414302,
+    "mean_stat": 2.1753380529348516,
+    "min_stat": 0.7406328292449109,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 5,
+    "query": 246,
+    "objective_cvar": 1.7245211972341012,
+    "mean_stat": 2.4071375128287427,
+    "min_stat": 0.8144421328564223,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 6,
+    "query": 20,
+    "objective_cvar": 1.9174406270648965,
+    "mean_stat": 2.636657484226271,
+    "min_stat": 0.8739954541781111,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 7,
+    "query": 124,
+    "objective_cvar": 2.097718484122187,
+    "mean_stat": 2.8862178427390695,
+    "min_stat": 0.9143518399600171,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 8,
+    "query": 253,
+    "objective_cvar": 2.2783904013102894,
+    "mean_stat": 3.10177705018907,
+    "min_stat": 0.9840465682846324,
+    "n_exact_ties_at_max": 1
+   }
+  ],
+  "SINGLE": [
+   {
+    "k": 1,
+    "query": 24,
+    "objective_cvar": 0.7491120767532099,
+    "mean_stat": 1.0085395195840348,
+    "min_stat": 0.5713430200812363,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 2,
+    "query": 20,
+    "objective_cvar": 1.1799294678480663,
+    "mean_stat": 1.4349604524955184,
+    "min_stat": 0.9782750037778702,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 3,
+    "query": 8,
+    "objective_cvar": 1.497661427731526,
+    "mean_stat": 1.7811239701301544,
+    "min_stat": 1.170772319813717,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 4,
+    "query": 57,
+    "objective_cvar": 1.753988906321578,
+    "mean_stat": 2.087652203688173,
+    "min_stat": 1.5608357220339835,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 5,
+    "query": 188,
+    "objective_cvar": 1.993281372142244,
+    "mean_stat": 2.33134582978832,
+    "min_stat": 1.8493658543750975,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 6,
+    "query": 22,
+    "objective_cvar": 2.193059255194727,
+    "mean_stat": 2.5372917762074607,
+    "min_stat": 1.9278318699813837,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 7,
+    "query": 214,
+    "objective_cvar": 2.3739294471169803,
+    "mean_stat": 2.76120555953778,
+    "min_stat": 2.0364834704766,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 8,
+    "query": 46,
+    "objective_cvar": 2.5473607360907353,
+    "mean_stat": 2.9854438326457777,
+    "min_stat": 2.233029344717518,
+    "n_exact_ties_at_max": 1
+   }
+  ],
+  "CENTROID-raw": [
+   {
+    "k": 1,
+    "query": 193,
+    "objective_cvar": 4.012725599449779,
+    "mean_stat": 6.9504076022058365,
+    "min_stat": 2.063161675385297,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 2,
+    "query": 135,
+    "objective_cvar": 6.4334542783078925,
+    "mean_stat": 10.407686631042539,
+    "min_stat": 3.9622917243628435,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 3,
+    "query": 233,
+    "objective_cvar": 8.115422918748513,
+    "mean_stat": 12.521637132818054,
+    "min_stat": 4.860209400009225,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 4,
+    "query": 0,
+    "objective_cvar": 9.522316047907527,
+    "mean_stat": 14.385722085616516,
+    "min_stat": 5.447960373306147,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 5,
+    "query": 252,
+    "objective_cvar": 10.787904680942402,
+    "mean_stat": 15.859334206847377,
+    "min_stat": 5.537179507708304,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 6,
+    "query": 136,
+    "objective_cvar": 11.922165822858016,
+    "mean_stat": 18.005148778971282,
+    "min_stat": 5.7575137520523825,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 7,
+    "query": 235,
+    "objective_cvar": 12.952834883100243,
+    "mean_stat": 19.063274986471132,
+    "min_stat": 5.916189065282864,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 8,
+    "query": 234,
+    "objective_cvar": 13.8334300616278,
+    "mean_stat": 20.165146085205173,
+    "min_stat": 6.042585315849137,
+    "n_exact_ties_at_max": 1
+   }
+  ],
+  "SINGLE-field": [
+   {
+    "k": 1,
+    "query": 20,
+    "objective_cvar": 0.7815133686792474,
+    "mean_stat": 1.0439988973195968,
+    "min_stat": 0.55916654837892,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 2,
+    "query": 15,
+    "objective_cvar": 1.1781842491028685,
+    "mean_stat": 1.4822333839270985,
+    "min_stat": 0.907848335881017,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 3,
+    "query": 8,
+    "objective_cvar": 1.4829805738190132,
+    "mean_stat": 1.8285357760578613,
+    "min_stat": 1.2164674304095628,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 4,
+    "query": 214,
+    "objective_cvar": 1.7486646351174413,
+    "mean_stat": 2.139602925363072,
+    "min_stat": 1.444289615359175,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 5,
+    "query": 41,
+    "objective_cvar": 1.993320909655487,
+    "mean_stat": 2.427221591020997,
+    "min_stat": 1.6492633562247563,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 6,
+    "query": 256,
+    "objective_cvar": 2.2144246748249206,
+    "mean_stat": 2.667738441450866,
+    "min_stat": 1.8024644447481653,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 7,
+    "query": 241,
+    "objective_cvar": 2.421526380231864,
+    "mean_stat": 2.909595151834226,
+    "min_stat": 1.9383799784612,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 8,
+    "query": 46,
+    "objective_cvar": 2.6113777102951423,
+    "mean_stat": 3.1094765927420007,
+    "min_stat": 2.2291045584991167,
+    "n_exact_ties_at_max": 1
+   }
+  ]
+ },
+ "call4_trigger": {
+  "rule": "set of first k differs from CENTROID's at some k in 3..8",
+  "differing_k": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "triggered": true,
+  "consequence": "CENTROID-raw trained in S2 as a descriptive row, no verdict (Review Call 4); strongest-baseline amendment applies in S3"
+ },
+ "trained_arms": [
+  "CENTROID",
+  "SINGLE",
+  "CENTROID-raw"
+ ],
+ "train_order": {
+  "CLOUD": {
+   "1": [
+    193
+   ],
+   "2": [
+    193,
+    140
+   ],
+   "3": [
+    193,
+    140,
+    237
+   ],
+   "4": [
+    193,
+    140,
+    237,
+    114
+   ],
+   "5": [
+    193,
+    140,
+    237,
+    114,
+    233
+   ],
+   "6": [
+    193,
+    140,
+    237,
+    114,
+    233,
+    117
+   ],
+   "7": [
+    193,
+    140,
+    237,
+    114,
+    233,
+    117,
+    0
+   ],
+   "8": [
+    193,
+    140,
+    237,
+    114,
+    233,
+    117,
+    0,
+    16
+   ]
+  },
+  "CENTROID": {
+   "1": [
+    78
+   ],
+   "2": [
+    8,
+    78
+   ],
+   "3": [
+    0,
+    8,
+    78
+   ],
+   "4": [
+    0,
+    8,
+    78,
+    252
+   ],
+   "5": [
+    0,
+    8,
+    78,
+    246,
+    252
+   ],
+   "6": [
+    0,
+    8,
+    20,
+    78,
+    246,
+    252
+   ],
+   "7": [
+    0,
+    8,
+    20,
+    78,
+    124,
+    246,
+    252
+   ],
+   "8": [
+    0,
+    8,
+    20,
+    78,
+    124,
+    246,
+    252,
+    253
+   ]
+  },
+  "SINGLE": {
+   "1": [
+    24
+   ],
+   "2": [
+    20,
+    24
+   ],
+   "3": [
+    8,
+    20,
+    24
+   ],
+   "4": [
+    8,
+    20,
+    24,
+    57
+   ],
+   "5": [
+    8,
+    20,
+    24,
+    57,
+    188
+   ],
+   "6": [
+    8,
+    20,
+    22,
+    24,
+    57,
+    188
+   ],
+   "7": [
+    8,
+    20,
+    22,
+    24,
+    57,
+    188,
+    214
+   ],
+   "8": [
+    8,
+    20,
+    22,
+    24,
+    46,
+    57,
+    188,
+    214
+   ]
+  },
+  "CENTROID-raw": {
+   "1": [
+    193
+   ],
+   "2": [
+    193,
+    135
+   ],
+   "3": [
+    193,
+    233,
+    135
+   ],
+   "4": [
+    193,
+    233,
+    0,
+    135
+   ],
+   "5": [
+    193,
+    233,
+    0,
+    135,
+    252
+   ],
+   "6": [
+    193,
+    233,
+    0,
+    135,
+    136,
+    252
+   ],
+   "7": [
+    193,
+    233,
+    0,
+    135,
+    136,
+    235,
+    252
+   ],
+   "8": [
+    193,
+    233,
+    0,
+    135,
+    136,
+    234,
+    235,
+    252
+   ]
+  }
+ },
+ "order_rule": "JointGreedy-shared queries in JointGreedy's order, then ascending id (Call 2)",
+ "identical_input_k": {
+  "P1_CLOUD_minus_CENTROID": [],
+  "P2_CENTROID_minus_SINGLE": [],
+  "CLOUD_minus_SINGLE": [],
+  "CLOUD_minus_CENTROID-raw": [
+   1
+  ],
+  "CENTROID-raw_minus_CENTROID": []
+ },
+ "differing_k": {
+  "P1_CLOUD_minus_CENTROID": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "P2_CENTROID_minus_SINGLE": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "CLOUD_minus_SINGLE": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "CLOUD_minus_CENTROID-raw": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "CENTROID-raw_minus_CENTROID": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ "identical_to_cloud_k": {
+  "CENTROID": [],
+  "SINGLE": [],
+  "CENTROID-raw": [
+   1
+  ]
+ },
+ "parity_quantity": "mean over each comparison's own differing k (Call 3 / D023 Call 2 (b))",
+ "overlaps_k8": {
+  "CLOUD": {
+   "CLOUD": 8,
+   "CENTROID": 1,
+   "SINGLE": 0,
+   "CENTROID-raw": 3,
+   "SINGLE-field": 0,
+   "paper8": 1,
+   "GreedyCover": 2,
+   "Greedy-ADD": 4
+  },
+  "CENTROID": {
+   "CLOUD": 1,
+   "CENTROID": 8,
+   "SINGLE": 2,
+   "CENTROID-raw": 2,
+   "SINGLE-field": 2,
+   "paper8": 1,
+   "GreedyCover": 1,
+   "Greedy-ADD": 1
+  },
+  "SINGLE": {
+   "CLOUD": 0,
+   "CENTROID": 2,
+   "SINGLE": 8,
+   "CENTROID-raw": 0,
+   "SINGLE-field": 4,
+   "paper8": 0,
+   "GreedyCover": 0,
+   "Greedy-ADD": 0
+  },
+  "CENTROID-raw": {
+   "CLOUD": 3,
+   "CENTROID": 2,
+   "SINGLE": 0,
+   "CENTROID-raw": 8,
+   "SINGLE-field": 0,
+   "paper8": 1,
+   "GreedyCover": 4,
+   "Greedy-ADD": 2
+  },
+  "SINGLE-field": {
+   "CLOUD": 0,
+   "CENTROID": 2,
+   "SINGLE": 4,
+   "CENTROID-raw": 0,
+   "SINGLE-field": 8,
+   "paper8": 0,
+   "GreedyCover": 0,
+   "Greedy-ADD": 0
+  },
+  "paper8": {
+   "CLOUD": 1,
+   "CENTROID": 1,
+   "SINGLE": 0,
+   "CENTROID-raw": 1,
+   "SINGLE-field": 0,
+   "paper8": 8,
+   "GreedyCover": 0,
+   "Greedy-ADD": 2
+  },
+  "GreedyCover": {
+   "CLOUD": 2,
+   "CENTROID": 1,
+   "SINGLE": 0,
+   "CENTROID-raw": 4,
+   "SINGLE-field": 0,
+   "paper8": 0,
+   "GreedyCover": 8,
+   "Greedy-ADD": 2
+  },
+  "Greedy-ADD": {
+   "CLOUD": 4,
+   "CENTROID": 1,
+   "SINGLE": 0,
+   "CENTROID-raw": 2,
+   "SINGLE-field": 0,
+   "paper8": 2,
+   "GreedyCover": 2,
+   "Greedy-ADD": 8
+  }
+ },
+ "overlap_with_cloud_by_k": {
+  "CLOUD": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "CENTROID": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1
+  ],
+  "SINGLE": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "CENTROID-raw": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   3,
+   3
+  ],
+  "SINGLE-field": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "reference_chains": {
+  "paper8": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "GreedyCover": [
+   193,
+   123,
+   233,
+   243,
+   240,
+   17,
+   136,
+   252
+  ],
+  "Greedy-ADD": [
+   193,
+   140,
+   0,
+   1,
+   248,
+   123,
+   110,
+   237
+  ]
+ },
+ "cross_objective": {
+  "CLOUD": {
+   "CLOUD": [
+    0.178753,
+    0.233099,
+    0.233465,
+    0.234105,
+    0.235228,
+    0.239119,
+    0.241415,
+    0.243364
+   ],
+   "CENTROID": [
+    0.591872,
+    0.877389,
+    1.166336,
+    1.314674,
+    1.523429,
+    1.63964,
+    1.825413,
+    2.001945
+   ],
+   "SINGLE": [
+    0.622317,
+    0.949198,
+    1.231328,
+    1.377915,
+    1.529292,
+    1.67229,
+    1.89278,
+    2.141791
+   ],
+   "CENTROID-raw": [
+    4.012726,
+    6.136202,
+    7.127323,
+    8.323354,
+    9.778277,
+    10.816936,
+    12.045044,
+    12.658701
+   ],
+   "SINGLE-field": [
+    0.638989,
+    0.949522,
+    1.253755,
+    1.495631,
+    1.636256,
+    1.784555,
+    1.992535,
+    2.19186
+   ]
+  },
+  "CENTROID": {
+   "CLOUD": [
+    0.099365,
+    0.104379,
+    0.151665,
+    0.150614,
+    0.14478,
+    0.143996,
+    0.157255,
+    0.162199
+   ],
+   "CENTROID": [
+    0.642022,
+    0.993533,
+    1.269037,
+    1.510074,
+    1.724521,
+    1.917441,
+    2.097718,
+    2.27839
+   ],
+   "SINGLE": [
+    0.690223,
+    1.102643,
+    1.389,
+    1.543228,
+    1.800982,
+    2.037333,
+    2.214946,
+    2.281683
+   ],
+   "CENTROID-raw": [
+    2.598194,
+    3.618911,
+    5.922829,
+    7.457491,
+    8.440618,
+    8.939625,
+    10.189836,
+    11.23348
+   ],
+   "SINGLE-field": [
+    0.639938,
+    1.127077,
+    1.395697,
+    1.512457,
+    1.808626,
+    2.048563,
+    2.216927,
+    2.309672
+   ]
+  },
+  "SINGLE": {
+   "CLOUD": [
+    0.095756,
+    0.109558,
+    0.108794,
+    0.102246,
+    0.098159,
+    0.100686,
+    0.101591,
+    0.098388
+   ],
+   "CENTROID": [
+    0.562728,
+    0.955751,
+    1.20116,
+    1.394698,
+    1.548716,
+    1.75382,
+    1.874299,
+    1.994635
+   ],
+   "SINGLE": [
+    0.749112,
+    1.179929,
+    1.497661,
+    1.753989,
+    1.993281,
+    2.193059,
+    2.373929,
+    2.547361
+   ],
+   "CENTROID-raw": [
+    2.388701,
+    3.493125,
+    4.251887,
+    5.007987,
+    5.454995,
+    6.593763,
+    7.328213,
+    7.638241
+   ],
+   "SINGLE-field": [
+    0.72437,
+    1.153924,
+    1.462389,
+    1.741586,
+    1.967383,
+    2.168894,
+    2.356804,
+    2.525471
+   ]
+  },
+  "CENTROID-raw": {
+   "CLOUD": [
+    0.178753,
+    0.203773,
+    0.213227,
+    0.212886,
+    0.207706,
+    0.213396,
+    0.21465,
+    0.214979
+   ],
+   "CENTROID": [
+    0.591872,
+    0.918811,
+    1.175425,
+    1.388884,
+    1.620003,
+    1.755677,
+    1.936896,
+    2.100674
+   ],
+   "SINGLE": [
+    0.622317,
+    1.007374,
+    1.166932,
+    1.444409,
+    1.562365,
+    1.80465,
+    1.994652,
+    2.178928
+   ],
+   "CENTROID-raw": [
+    4.012726,
+    6.433454,
+    8.115423,
+    9.522316,
+    10.787905,
+    11.922166,
+    12.952835,
+    13.83343
+   ],
+   "SINGLE-field": [
+    0.638989,
+    1.029107,
+    1.212847,
+    1.477444,
+    1.598032,
+    1.837079,
+    2.047646,
+    2.198417
+   ]
+  },
+  "SINGLE-field": {
+   "CLOUD": [
+    0.085027,
+    0.104241,
+    0.103735,
+    0.104143,
+    0.095218,
+    0.095512,
+    0.104582,
+    0.100811
+   ],
+   "CENTROID": [
+    0.615535,
+    0.938793,
+    1.18334,
+    1.355245,
+    1.511764,
+    1.671217,
+    1.845562,
+    1.976939
+   ],
+   "SINGLE": [
+    0.726918,
+    1.135726,
+    1.465599,
+    1.734125,
+    1.948341,
+    2.136938,
+    2.351607,
+    2.545572
+   ],
+   "CENTROID-raw": [
+    1.93489,
+    3.494353,
+    4.208073,
+    5.214113,
+    5.610679,
+    6.194131,
+    7.09641,
+    7.450908
+   ],
+   "SINGLE-field": [
+    0.781513,
+    1.178184,
+    1.482981,
+    1.748665,
+    1.993321,
+    2.214425,
+    2.421526,
+    2.611378
+   ]
+  },
+  "paper8": {
+   "CLOUD": [
+    0.164581,
+    0.204769,
+    0.17778,
+    0.173839,
+    0.163199,
+    0.162628,
+    0.158567,
+    0.157542
+   ],
+   "CENTROID": [
+    0.587696,
+    0.868147,
+    1.145071,
+    1.335271,
+    1.513513,
+    1.674653,
+    1.833554,
+    1.979467
+   ],
+   "SINGLE": [
+    0.632092,
+    0.978888,
+    1.334614,
+    1.559699,
+    1.795629,
+    2.00617,
+    2.202151,
+    2.377024
+   ],
+   "CENTROID-raw": [
+    3.920182,
+    6.267989,
+    7.052103,
+    7.760365,
+    8.602485,
+    9.551883,
+    10.208754,
+    11.059386
+   ],
+   "SINGLE-field": [
+    0.643978,
+    0.972911,
+    1.308226,
+    1.538898,
+    1.794622,
+    1.992753,
+    2.171453,
+    2.359184
+   ]
+  },
+  "GreedyCover": {
+   "CLOUD": [
+    0.178753,
+    0.22846,
+    0.225723,
+    0.212788,
+    0.202419,
+    0.209433,
+    0.212682,
+    0.206453
+   ],
+   "CENTROID": [
+    0.591872,
+    0.862968,
+    1.120465,
+    1.370305,
+    1.54013,
+    1.770863,
+    1.91868,
+    2.090561
+   ],
+   "SINGLE": [
+    0.622317,
+    0.897103,
+    1.087283,
+    1.250203,
+    1.373506,
+    1.68076,
+    1.93118,
+    2.030379
+   ],
+   "CENTROID-raw": [
+    4.012726,
+    6.333672,
+    7.956138,
+    9.190618,
+    10.197349,
+    11.272878,
+    12.380824,
+    13.411801
+   ],
+   "SINGLE-field": [
+    0.638989,
+    0.889285,
+    1.090145,
+    1.225454,
+    1.394122,
+    1.707703,
+    1.961222,
+    2.085617
+   ]
+  },
+  "Greedy-ADD": {
+   "CLOUD": [
+    0.178753,
+    0.233099,
+    0.226197,
+    0.22385,
+    0.215551,
+    0.212438,
+    0.208443,
+    0.211191
+   ],
+   "CENTROID": [
+    0.591872,
+    0.877389,
+    1.128652,
+    1.27339,
+    1.482707,
+    1.580997,
+    1.690061,
+    1.883679
+   ],
+   "SINGLE": [
+    0.622317,
+    0.949198,
+    1.224688,
+    1.43938,
+    1.73099,
+    1.868811,
+    2.017428,
+    2.217387
+   ],
+   "CENTROID-raw": [
+    4.012726,
+    6.136202,
+    7.781647,
+    9.056278,
+    9.915072,
+    10.845058,
+    11.504611,
+    12.068438
+   ],
+   "SINGLE-field": [
+    0.638989,
+    0.949522,
+    1.234834,
+    1.462116,
+    1.713303,
+    1.87329,
+    2.027562,
+    2.251415
+   ]
+  }
+ },
+ "cross_objective_check": {
+  "cloud_vs_d010_max_abs": 3.540727803175159e-07
+ },
+ "wall_s": 20.1
+}
