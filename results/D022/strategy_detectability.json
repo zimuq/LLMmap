@@ -1,0 +1,789 @@
+{
+ "schema": "d022-strategy-detectability-v1",
+ "A2_by_label": {
+  "overall": {
+   "n": 259,
+   "g1": 0.2317,
+   "g2": 0.3166,
+   "union": 0.4015,
+   "judge_offtopic": 0.982,
+   "judge_p_no": 0.9809,
+   "judge_log_odds": 22.294,
+   "helpful_control_offtopic": 0.9266
+  },
+  "anchor:gpt4o-gen-opt": {
+   "n": 8,
+   "g1": 0.125,
+   "g2": 0.0,
+   "union": 0.125,
+   "judge_offtopic": 0.9812,
+   "judge_p_no": 0.9822,
+   "judge_log_odds": 19.847,
+   "helpful_control_offtopic": 0.75
+  },
+  "anchor:paper8": {
+   "n": 8,
+   "g1": 0.5,
+   "g2": 0.375,
+   "union": 0.625,
+   "judge_offtopic": 1.0,
+   "judge_p_no": 0.9968,
+   "judge_log_odds": 20.57,
+   "helpful_control_offtopic": 1.0
+  },
+  "anchor:random-opt": {
+   "n": 8,
+   "g1": 0.0,
+   "g2": 0.0,
+   "union": 0.0,
+   "judge_offtopic": 0.9688,
+   "judge_p_no": 0.9697,
+   "judge_log_odds": 20.073,
+   "helpful_control_offtopic": 0.625
+  },
+  "banner-grabbing": {
+   "n": 40,
+   "g1": 0.1,
+   "g2": 0.025,
+   "union": 0.125,
+   "judge_offtopic": 0.9988,
+   "judge_p_no": 0.9987,
+   "judge_log_odds": 21.838,
+   "helpful_control_offtopic": 1.0
+  },
+  "malformed-alignment": {
+   "n": 42,
+   "g1": 0.0,
+   "g2": 0.9762,
+   "union": 0.9762,
+   "judge_offtopic": 1.0,
+   "judge_p_no": 1.0,
+   "judge_log_odds": 27.257,
+   "helpful_control_offtopic": 1.0
+  },
+  "meta-information": {
+   "n": 42,
+   "g1": 0.0714,
+   "g2": 0.0,
+   "union": 0.0714,
+   "judge_offtopic": 0.9881,
+   "judge_p_no": 0.9871,
+   "judge_log_odds": 20.041,
+   "helpful_control_offtopic": 0.881
+  },
+  "prompt-injection-wrapper": {
+   "n": 41,
+   "g1": 1.0,
+   "g2": 0.8293,
+   "union": 1.0,
+   "judge_offtopic": 0.9988,
+   "judge_p_no": 0.9951,
+   "judge_log_odds": 21.484,
+   "helpful_control_offtopic": 1.0
+  },
+  "tokenizer-probe-digit-chunking": {
+   "n": 7,
+   "g1": 0.0,
+   "g2": 0.0,
+   "union": 0.0,
+   "judge_offtopic": 0.9286,
+   "judge_p_no": 0.9258,
+   "judge_log_odds": 18.151,
+   "helpful_control_offtopic": 0.5714
+  },
+  "tokenizer-probe-glitch-token": {
+   "n": 6,
+   "g1": 0.3333,
+   "g2": 0.1667,
+   "union": 0.3333,
+   "judge_offtopic": 0.9833,
+   "judge_p_no": 0.9809,
+   "judge_log_odds": 19.281,
+   "helpful_control_offtopic": 0.8333
+  },
+  "tokenizer-probe-unicode-byte-fallback": {
+   "n": 7,
+   "g1": 0.2857,
+   "g2": 0.1429,
+   "union": 0.2857,
+   "judge_offtopic": 0.9571,
+   "judge_p_no": 0.9606,
+   "judge_log_odds": 18.346,
+   "helpful_control_offtopic": 0.7143
+  },
+  "tokenizer-probe-whitespace-merging": {
+   "n": 6,
+   "g1": 0.5,
+   "g2": 0.0,
+   "union": 0.5,
+   "judge_offtopic": 0.9583,
+   "judge_p_no": 0.9531,
+   "judge_log_odds": 17.468,
+   "helpful_control_offtopic": 0.5
+  },
+  "weak-alignment": {
+   "n": 44,
+   "g1": 0.0,
+   "g2": 0.0227,
+   "union": 0.0227,
+   "judge_offtopic": 0.9432,
+   "judge_p_no": 0.942,
+   "judge_log_odds": 24.396,
+   "helpful_control_offtopic": 1.0
+  }
+ },
+ "benign_reference": "anchor:random-opt",
+ "judge_control_status": "UNINFORMATIVE (helpful-assistant control judges most benign random-opt anchors off-topic)",
+ "A3": {
+  "paper8": {
+   "chain": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "per_k": [
+    {
+     "k": 1,
+     "union_flagged": 1,
+     "g1_flagged": 1,
+     "g2_flagged": 0,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.369
+    },
+    {
+     "k": 2,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 2,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 22.594
+    },
+    {
+     "k": 3,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 2,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 22.173
+    },
+    {
+     "k": 4,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 2,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.245
+    },
+    {
+     "k": 5,
+     "union_flagged": 3,
+     "g1_flagged": 2,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 2,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 20.666
+    },
+    {
+     "k": 6,
+     "union_flagged": 4,
+     "g1_flagged": 3,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 2,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 20.415
+    },
+    {
+     "k": 7,
+     "union_flagged": 4,
+     "g1_flagged": 3,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 2,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 20.282
+    },
+    {
+     "k": 8,
+     "union_flagged": 5,
+     "g1_flagged": 4,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 2,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 20.57
+    }
+   ]
+  },
+  "GreedyCover": {
+   "chain": [
+    193,
+    123,
+    233,
+    243,
+    240,
+    17,
+    136,
+    252
+   ],
+   "per_k": [
+    {
+     "k": 1,
+     "union_flagged": 1,
+     "g1_flagged": 1,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 19.875
+    },
+    {
+     "k": 2,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 24.503
+    },
+    {
+     "k": 3,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9667,
+     "judge_log_odds_mean": 22.088
+    },
+    {
+     "k": 4,
+     "union_flagged": 3,
+     "g1_flagged": 2,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.975,
+     "judge_log_odds_mean": 20.963
+    },
+    {
+     "k": 5,
+     "union_flagged": 4,
+     "g1_flagged": 3,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.97,
+     "judge_log_odds_mean": 19.951
+    },
+    {
+     "k": 6,
+     "union_flagged": 4,
+     "g1_flagged": 3,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9583,
+     "judge_log_odds_mean": 19.969
+    },
+    {
+     "k": 7,
+     "union_flagged": 5,
+     "g1_flagged": 3,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9643,
+     "judge_log_odds_mean": 20.579
+    },
+    {
+     "k": 8,
+     "union_flagged": 6,
+     "g1_flagged": 4,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9562,
+     "judge_log_odds_mean": 19.904
+    }
+   ]
+  },
+  "JointGreedy": {
+   "chain": [
+    193,
+    140,
+    237,
+    114,
+    233,
+    117,
+    0,
+    16
+   ],
+   "per_k": [
+    {
+     "k": 1,
+     "union_flagged": 1,
+     "g1_flagged": 1,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 19.875
+    },
+    {
+     "k": 2,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.619
+    },
+    {
+     "k": 3,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9833,
+     "judge_log_odds_mean": 20.327
+    },
+    {
+     "k": 4,
+     "union_flagged": 3,
+     "g1_flagged": 1,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9875,
+     "judge_log_odds_mean": 21.205
+    },
+    {
+     "k": 5,
+     "union_flagged": 3,
+     "g1_flagged": 1,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.97,
+     "judge_log_odds_mean": 20.415
+    },
+    {
+     "k": 6,
+     "union_flagged": 4,
+     "g1_flagged": 1,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.975,
+     "judge_log_odds_mean": 22.629
+    },
+    {
+     "k": 7,
+     "union_flagged": 5,
+     "g1_flagged": 2,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9786,
+     "judge_log_odds_mean": 22.449
+    },
+    {
+     "k": 8,
+     "union_flagged": 5,
+     "g1_flagged": 2,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.975,
+     "judge_log_odds_mean": 22.109
+    }
+   ]
+  },
+  "H1-attention": {
+   "chain": [
+    193,
+    140,
+    250,
+    202,
+    247,
+    31,
+    254,
+    113
+   ],
+   "per_k": [
+    {
+     "k": 1,
+     "union_flagged": 1,
+     "g1_flagged": 1,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 19.875
+    },
+    {
+     "k": 2,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.619
+    },
+    {
+     "k": 3,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 20.958
+    },
+    {
+     "k": 4,
+     "union_flagged": 3,
+     "g1_flagged": 2,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.677
+    },
+    {
+     "k": 5,
+     "union_flagged": 3,
+     "g1_flagged": 2,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.25
+    },
+    {
+     "k": 6,
+     "union_flagged": 3,
+     "g1_flagged": 2,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.277
+    },
+    {
+     "k": 7,
+     "union_flagged": 3,
+     "g1_flagged": 2,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.263
+    },
+    {
+     "k": 8,
+     "union_flagged": 4,
+     "g1_flagged": 2,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 1,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 22.188
+    }
+   ]
+  },
+  "H1-linear": {
+   "chain": [
+    140,
+    193,
+    109,
+    108,
+    251,
+    35,
+    145,
+    121
+   ],
+   "per_k": [
+    {
+     "k": 1,
+     "union_flagged": 1,
+     "g1_flagged": 0,
+     "g2_flagged": 1,
+     "first_flag_union": 1,
+     "first_flag_g1": null,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 23.363
+    },
+    {
+     "k": 2,
+     "union_flagged": 2,
+     "g1_flagged": 1,
+     "g2_flagged": 2,
+     "first_flag_union": 1,
+     "first_flag_g1": 2,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 21.619
+    },
+    {
+     "k": 3,
+     "union_flagged": 3,
+     "g1_flagged": 1,
+     "g2_flagged": 3,
+     "first_flag_union": 1,
+     "first_flag_g1": 2,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 22.446
+    },
+    {
+     "k": 4,
+     "union_flagged": 4,
+     "g1_flagged": 1,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 2,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 1.0,
+     "judge_log_odds_mean": 25.2
+    },
+    {
+     "k": 5,
+     "union_flagged": 4,
+     "g1_flagged": 1,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 2,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.99,
+     "judge_log_odds_mean": 24.01
+    },
+    {
+     "k": 6,
+     "union_flagged": 4,
+     "g1_flagged": 1,
+     "g2_flagged": 4,
+     "first_flag_union": 1,
+     "first_flag_g1": 2,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9833,
+     "judge_log_odds_mean": 23.322
+    },
+    {
+     "k": 7,
+     "union_flagged": 5,
+     "g1_flagged": 1,
+     "g2_flagged": 5,
+     "first_flag_union": 1,
+     "first_flag_g1": 2,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9857,
+     "judge_log_odds_mean": 23.28
+    },
+    {
+     "k": 8,
+     "union_flagged": 6,
+     "g1_flagged": 1,
+     "g2_flagged": 6,
+     "first_flag_union": 1,
+     "first_flag_g1": 2,
+     "first_flag_g2": 1,
+     "judge_offtopic_mean": 0.9875,
+     "judge_log_odds_mean": 23.359
+    }
+   ]
+  },
+  "random-opt (benign reference)": {
+   "chain": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "per_k": [
+    {
+     "k": 1,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.95,
+     "judge_log_odds_mean": 19.731
+    },
+    {
+     "k": 2,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.925,
+     "judge_log_odds_mean": 19.894
+    },
+    {
+     "k": 3,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.95,
+     "judge_log_odds_mean": 19.719
+    },
+    {
+     "k": 4,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.9625,
+     "judge_log_odds_mean": 20.05
+    },
+    {
+     "k": 5,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.96,
+     "judge_log_odds_mean": 20.046
+    },
+    {
+     "k": 6,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.9583,
+     "judge_log_odds_mean": 19.828
+    },
+    {
+     "k": 7,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.9643,
+     "judge_log_odds_mean": 19.976
+    },
+    {
+     "k": 8,
+     "union_flagged": 0,
+     "g1_flagged": 0,
+     "g2_flagged": 0,
+     "first_flag_union": null,
+     "first_flag_g1": null,
+     "first_flag_g2": null,
+     "judge_offtopic_mean": 0.9688,
+     "judge_log_odds_mean": 20.073
+    }
+   ]
+  },
+  "random-from-pool": {
+   "n_draws": 1000,
+   "seed": 20260928,
+   "expected_union_flagged_by_k": [
+    0.399,
+    0.804,
+    1.213,
+    1.617,
+    1.985,
+    2.393,
+    2.801,
+    3.187
+   ],
+   "first_flag_position_distribution": {
+    "0": 9,
+    "1": 399,
+    "2": 255,
+    "3": 147,
+    "4": 74,
+    "5": 41,
+    "6": 43,
+    "7": 18,
+    "8": 14
+   },
+   "note": "position 0 = no flag among the first 8"
+  }
+ },
+ "A4": {
+  "spearman_union_vs_cvar_S_energy": 0.30230445080106644,
+  "spearman_union_vs_cvar_M2": 0.250559294160602,
+  "spearman_judge_logodds_vs_cvar_M2": 0.24298008716613365,
+  "note": "descriptive only, no decision rule"
+ },
+ "cost_s": {
+  "g1": 23.6,
+  "g2": 48.2,
+  "judge": 181.9,
+  "wall": 255.8
+ }
+}

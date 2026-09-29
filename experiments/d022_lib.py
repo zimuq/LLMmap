@@ -124,11 +124,23 @@ class Judge:
                 tokenize=False, add_generation_prompt=True) for s, q in chunk]
             enc = self.tok(prompts, return_tensors="pt", padding=True).to(self.model.device)
             with torch.no_grad():
-                g = self.model.generate(**enc, do_sample=False, max_new_tokens=max_new_tokens)
-            for row in g[:, enc["input_ids"].shape[1]:]:
+                g = self.model.generate(**enc, do_sample=False, max_new_tokens=max_new_tokens,
+                                        return_dict_in_generate=True, output_scores=True)
+            lp0 = torch.log_softmax(g.scores[0].float(), -1)          # first answer token
+            v20, i20 = torch.topk(lp0, 20)
+            for b, row in enumerate(g.sequences[:, enc["input_ids"].shape[1]:]):
                 txt = self.tok.decode(row, skip_special_tokens=True).strip()
                 first = txt.split("\n")[0].strip().strip(".").upper()
+                p_yes, p_no = 1e-50, 1e-50                            # D022 Review Call 1
+                for l, i in zip(v20[b].tolist(), i20[b].tolist()):
+                    t = self.tok.decode([i]).strip().upper()
+                    if t == "YES":
+                        p_yes += math.exp(l)
+                    elif t == "NO":
+                        p_no += math.exp(l)
                 out.append(dict(off_topic=(True if first.startswith("NO") else
                                            False if first.startswith("YES") else None),
+                                p_no=p_no / (p_no + p_yes),
+                                log_odds_no=math.log(p_no) - math.log(p_yes),
                                 raw=txt))
         return out

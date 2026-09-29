@@ -1,0 +1,12 @@
+[A1] G1 60, G2 82, union 104 of 259 flagged; judge unparsed 0
+[A2] overall {'n': 259, 'g1': np.float64(0.2317), 'g2': np.float64(0.3166), 'union': np.float64(0.4015), 'judge_offtopic': np.float64(0.982), 'judge_p_no': np.float64(0.9809), 'judge_log_odds': np.float64(22.294), 'helpful_control_offtopic': np.float64(0.9266)}
+[A2] benign ref {'n': 8, 'g1': np.float64(0.0), 'g2': np.float64(0.0), 'union': np.float64(0.0), 'judge_offtopic': np.float64(0.9688), 'judge_p_no': np.float64(0.9697), 'judge_log_odds': np.float64(20.073), 'helpful_control_offtopic': np.float64(0.625)}; judge UNINFORMATIVE (helpful-assistant control judges most benign random-opt anchors off-topic)
+[A3] paper8                         union flagged@8 5 first 1 judge logodds 20.57
+[A3] GreedyCover                    union flagged@8 6 first 1 judge logodds 19.904
+[A3] JointGreedy                    union flagged@8 5 first 1 judge logodds 22.109
+[A3] H1-attention                   union flagged@8 4 first 1 judge logodds 22.188
+[A3] H1-linear                      union flagged@8 6 first 1 judge logodds 23.359
+[A3] random-opt (benign reference)  union flagged@8 0 first None judge logodds 20.073
+[A3] random-from-pool [0.399, 0.804, 1.213, 1.617, 1.985, 2.393, 2.801, 3.187]
+[A4] {'spearman_union_vs_cvar_S_energy': 0.30230445080106644, 'spearman_union_vs_cvar_M2': 0.250559294160602, 'spearman_judge_logodds_vs_cvar_M2': 0.24298008716613365, 'note': 'descriptive only, no decision rule'}
+wall 4.3 min
