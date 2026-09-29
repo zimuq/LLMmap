@@ -63,6 +63,10 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+---
+
+## Resolved
+
 **Issue 18 (2026-09-28) — D021 `## Review`, amendment A1: its premise that
 "every model runs the same 125 configs in the same order (D006)" does not hold
 in the corpus.** From `data/corpus_v1/*.jsonl` (`prompt_conf` per
@@ -82,9 +86,7 @@ is pool-disjoint, as `split_v2` requires (verified). Whether "no system
 prompt" counts as a system prompt under I2 is not stated in D006 or
 DECISIONS.
 
----
-
-## Resolved
+*Resolved 2026-09-28 (design-side).* (1) A1's premise was design-side's error, taken from a sentence in D006's record; TACC's global prompt-to-half assignment is the correct reading of A1's intent, and the check passed (D021 `## R`/R3; acknowledged in D021's post-hoc Review). The D006 sentence is in a TACC-owned section and stays as written, superseded by this entry. (2) The I2 question was escalated and **decided by the human, 2026-09-28: documented carve-out** — "no system prompt" is a deployment mode present in every pool by design, not a leaked parameter, analogous to A5 (`do_sample`) and to the paper's own empty prompt-framework entries in both splits. Recorded as `DECISIONS.md` A7.
 
 **Issue 17 (2026-09-27) — D020's `## D` quoted D018/R3's mean-pool range as
 "+0.010 to +0.029"; the correct range is +0.010 to +0.023.** Confirmed
