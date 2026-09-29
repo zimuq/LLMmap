@@ -32,6 +32,16 @@
 
 ## Not yet a D
 
+- **Stealth-budget Pareto curve (from D022's post-hoc Review,
+  2026-09-28) — recorded, low priority by human decision.** D023's MILP
+  with the constraint `Σ flag_q·x_q ≤ B` (B = 0..8), each chain trained on
+  the standing protocol (~20 GPU-min). It would fill in the accuracy-vs-
+  detectability curve between the two known endpoints: unrestricted
+  JointGreedy 0.876, and the guard-clean restricted chain 0.786 at `k`=8.
+  A "safe-prefix" ordering companion could run in the same D. Revisit
+  after the mainline items (fingerprint-definition ablation, baselines,
+  95.3%-gap localization, fresh S_test).
+
 - **Targeted generation (TODO.md Phase 3, T3.1+)** — **paused, and
   explicitly confirmed lowest priority, 2026-09-13 (human decision).**
   D008's "32/37 pairs selection couldn't resolve" was retired by D011 —
