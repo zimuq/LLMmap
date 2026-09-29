@@ -1,0 +1,198 @@
+{
+ "schema": "d023-s0-v1",
+ "evidence": {
+  "shape": [
+   259,
+   666
+  ],
+  "schema": "d021-evidence-v1",
+  "primary": "evidence_tok200.npy = d64, Sigma_q full S_build (LW), D007 halves",
+  "negative_cells": 181
+ },
+ "existing_chain_objective": {
+  "JointGreedy": [
+   20.8865,
+   51.705,
+   71.8998,
+   89.2945,
+   104.1878,
+   120.1869,
+   159.9652,
+   177.3058
+  ],
+  "GreedyCover": [
+   20.8865,
+   50.0896,
+   68.1803,
+   75.955,
+   81.879,
+   98.2698,
+   117.2828,
+   126.9505
+  ],
+  "paper8": [
+   20.5056,
+   51.1528,
+   62.6864,
+   76.1766,
+   87.9321,
+   102.6603,
+   114.8609,
+   127.7975
+  ],
+  "H1-attention": [
+   20.8865,
+   51.705,
+   66.1861,
+   74.6771,
+   86.4294,
+   98.4947,
+   104.7165,
+   123.0897
+  ],
+  "H1-linear": [
+   14.0662,
+   51.705,
+   69.0955,
+   85.1572,
+   101.8369,
+   111.3005,
+   126.7857,
+   141.6578
+  ]
+ },
+ "solver_pilot": {
+  "2": {
+   "milp": {
+    "k": 2,
+    "integer": true,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "wall_s": 0.92,
+    "cvar": 51.705012171559865,
+    "set": [
+     140,
+     193
+    ],
+    "cvar_recomputed": 51.705012171557456,
+    "mip_gap": 0.0,
+    "mip_dual_bound_cvar": 51.705012171559865
+   },
+   "lp": {
+    "k": 2,
+    "integer": false,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "wall_s": 0.04,
+    "cvar": 54.92636516612097,
+    "n_fractional": 5
+   },
+   "second_best_after_nogood_cut": {
+    "k": 2,
+    "integer": true,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "wall_s": 0.81,
+    "cvar": 51.52343759256832,
+    "set": [
+     1,
+     193
+    ],
+    "cvar_recomputed": 51.52343759256782,
+    "mip_gap": 0.0,
+    "mip_dual_bound_cvar": 51.52343759256832
+   },
+   "lp_bound_over_milp": 1.0623025285028944,
+   "jointgreedy_over_milp": 0.9999997645961318
+  },
+  "8": {
+   "milp": {
+    "k": 8,
+    "integer": true,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "wall_s": 1.05,
+    "cvar": 192.14589769739453,
+    "set": [
+     0,
+     1,
+     110,
+     123,
+     140,
+     193,
+     237,
+     248
+    ],
+    "cvar_recomputed": 192.14589769731867,
+    "mip_gap": 0.0,
+    "mip_dual_bound_cvar": 192.14589769739453
+   },
+   "lp": {
+    "k": 8,
+    "integer": false,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "wall_s": 0.04,
+    "cvar": 193.02998712488102,
+    "n_fractional": 7
+   },
+   "second_best_after_nogood_cut": {
+    "k": 8,
+    "integer": true,
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "wall_s": 1.38,
+    "cvar": 191.69057149777228,
+    "set": [
+     0,
+     1,
+     110,
+     123,
+     140,
+     193,
+     233,
+     248
+    ],
+    "cvar_recomputed": 191.6905714942876,
+    "mip_gap": 0.0,
+    "mip_dual_bound_cvar": 191.69057149777228
+   },
+   "lp_bound_over_milp": 1.0046011361058502,
+   "jointgreedy_over_milp": 0.9227665129714827
+  }
+ },
+ "solver": "HiGHS via scipy.optimize.milp (scipy 1.16.0), mip_rel_gap=1e-6, time_limit=900 s",
+ "inventory": {
+  "D010_joint_energy_attention": {
+   "1": 5,
+   "2": 5,
+   "3": 5,
+   "4": 5,
+   "5": 5,
+   "6": 5,
+   "7": 5,
+   "8": 5
+  },
+  "D020_JointGreedy_linear": {
+   "concat": true,
+   "meanpool": true
+  },
+  "D016_k8_logits": {
+   "joint_energy": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "paper8": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  }
+ },
+ "wall_s": 4.3
+}
