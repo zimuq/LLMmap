@@ -169,7 +169,7 @@ Status legend: ⬜ open · ✅ decided · 🅿️ deferred
 | D4 | CVaR/robust-submodular literature citations (hardness + approximation results referenced in `METHOD.md` §6.1) — **unverified, must be checked before any writeup** | ⬜ |
 | D5 | **Writeup framing, 2026-09-10 (human decision — how to present, not what to run).** Report three separate claims, not one "fair comparison": **(1)** selection algorithm — CVaR vs. mean-greedy/random, classifier-free, apples-to-apples, CONFIRMED (D009). **(2)** cost efficiency — ties the paper's 8 at near-zero selection cost vs. their 372 real training runs (D009 + `Appendix H`). **(3)** theoretical formalization, **elevated to co-primary, not a fallback** — first to instantiate the paper's own stated-but-never-implemented Eq.2/Eq.3 via the MI decomposition + point-cloud statistic (`METHOD.md §3–4`), sharpened by `Appendix H` showing Algorithm H.1 doesn't approximate Eq.2/3 either — it optimizes raw accuracy directly. Do not let (2)'s cost-asymmetric comparison bear a "which method is better" claim it structurally can't support. **D018 (2026-09-27, INCONCLUSIVE) tested the stronger version of (2) directly — Algorithm H.1's real search run fairly on our own pool, not just its published output — and confirms the caution above still holds: JointGreedy is a cost-free tie at best (ahead at `k`=7,8, unresolved against seed variance), not a resolved win; GreedyCover doesn't reach even that.** **D020 (2026-09-27) properly paired the linear-readout comparison D018/R3 left as point estimates: JointGreedy's edge over H1-linear on its own classifier softens further (tie leaning JointGreedy, resolved at only 1 of 5 `k`) — but GreedyCover's trailing lean *does* resolve here (no seed-noise floor to hide behind), the first properly-resolved confirmation against a real search that coverage alone is the weak link. For any writeup: claim (1)'s "CVaR beats mean-greedy" evidence is strongest for `JointGreedy`; `GreedyCover` alone should not be presented as matching real classifier-in-the-loop search.** | 🅿️ noted for writeup |
 | D6 | **`METHOD.md` §7 revision, 2026-09-13, from D011.** §7 lists "the identifiability frontier" as a standalone deliverable. D011 found the tier meant to fill that role (D008's T2, 32/37 pairs) is an estimator artifact — a per-pair oracle that scores *worse than a random query* on this population, not a real property of the model universe. | ✅ **Decided 2026-09-14 by the human — revised.** §7 item 2 now states the strict pool-coverage frontier is empty and names the 2 structurally-hard pairs (`Falcon3-10B↔7B`, `Phi-3-medium-128k↔4k`) as the actual boundary. |
-| D7 | **`METHOD.md` §8 metric revision.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models. **Population question CLOSED by D016 (2026-09-24, NO): the 65 structural pairs already contain the 11 objectively hardest pairs of all 666** (real trained classifier; first non-structural pair at rank 12+, accuracy .916 vs. worst structural .656) — so any reformulation can safely build on the existing 65-pair set, not a redefined population. Reformulations computable from already-run data show a real signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models than overall, sharpest (+11.5pp vs. +3.0pp) on the 3-method-consensus 6-model set. Still open: should `METHOD.md §8` add or replace `hard_subset` with one or more of these, and at what cutoff? | ⬜ needs the human |
+| D7 | **`METHOD.md` §8 metric revision.** `hard_subset` (two-logit-restricted mean over 65 pairs) is confirmed neither the worst pair, a tail average, nor true 37-way accuracy on the hard models. **Population question CLOSED by D016 (2026-09-24, NO): the 65 structural pairs already contain the 11 objectively hardest pairs of all 666** (real trained classifier; first non-structural pair at rank 12+, accuracy .916 vs. worst structural .656) — so any reformulation can safely build on the existing 65-pair set, not a redefined population. Reformulations computable from already-run data show a real signal the flat mean hid: worst-pair/tail-CVaR spread is 15–19× the flat mean's; hard-model-restricted true top-1 shows joint energy's improvement is *larger* on hard models than overall, sharpest (+11.5pp vs. +3.0pp) on the 3-method-consensus 6-model set. Still open: should `METHOD.md §8` add or replace `hard_subset` with one or more of these, and at what cutoff? | ✅ **Decided 2026-09-29 by the human** (definition; METHOD §8 text deferred to the planned METHOD rewrite, rule (d), diff to be shown). **Stratum N** = the 65 structural pairs (unchanged). **Hard pairs H** = pairs in N with two-logit accuracy < 0.90 under reference protocol B0 = `paper8`, `k`=8, D009 attention protocol, 5-seed mean, **on S_val** (not S_test; not our own method), with stability bands from a config bootstrap. **Hard models** M_H = models in H; **hard families** F_H = M_H plus its one-step N-neighbourhood (so errors moved onto un-flagged siblings stay visible). **Endpoints for method comparisons:** primary = mean 37-way recall over F_H; secondary = over M_H, and per-pair two-logit accuracy on H with both directions; guardrail = all-37 mean top-1 non-inferior at the standing δ = 0.02; plus 666-pair CVaR₀.₁ of trained two-logit accuracy. `consensus6`/`naturalgap5`/`worst6`/`worst16` become historical descriptive sets only (defined on S_test from the compared methods' own results). H is computed and frozen in [D025](D025.md) S0 |
 
 > **D4 scope note, 2026-09-08:** the separability statistic itself
 > (energy distance) was a related but separate unverified-citation risk
@@ -1574,6 +1574,46 @@ resolvably trails real search; every number independently verified
   Decided by: design-side, routine call (closure and verification follow
   standing discipline; D5 note records already-established interpretation,
   no new decision made).
+
+[2026-09-29] Hard models on structural near-relatives adopted as a
+paper-claim pillar; D7 decided; D025 drafted
+  Decision (human, 2026-09-29, "认可1，2，3"):
+  (1) Performance on structural near-relative families becomes one of the
+      paper's claims, second to JointGreedy's overall result + LP
+      certificate. Numbers are quoted at family level (F_H), not on
+      consensus6.
+  (2) D7 decided (see the D7 row): hard pairs H defined inside the 65-pair
+      stratum by an external reference protocol (paper8, k=8) on S_val,
+      tau = 0.90; hard families = one-step structural closure. METHOD §8's
+      text change waits for the planned METHOD rewrite (rule (d), diff).
+  (3) D025 drafted: specialist-ceiling test (is each hard pair limited by
+      the shared query budget or by the 259-query pool?).
+  (4) Resuming Phase-3 targeted generation: deferred until D025 reports
+      (human). PLAN.md "Not yet a D" updated.
+  Why: a design-side read of stored per_model arrays (D009/D010, k=8,
+  descriptive; FINDINGS 2026-09-29) showed consensus6's +11.5pp
+  (JointGreedy vs paper8) is about half redistribution. Over the whole
+  Phi-3 / Mistral-7B / Falcon3 families (13 models) the gain is +5.8pp,
+  vs +1.6pp on the other 24 models. Un-flagged siblings lost recall
+  (Phi-3-mini-4k -12pp, Mistral-v0.1 -7pp). consensus6 was also selected on
+  S_test from the compared methods' own results, which favours any new
+  method compared against JointGreedy on it (regression to the mean). Hence
+  a family-level unit, and a hard set defined off S_test by a method that
+  is not ours.
+  Design-side calls inside the approved definition, flagged to the human:
+  - F_H = one-step N-closure, not "connected components of H": the latter
+    (my chat wording) would have excluded exactly the siblings that
+    absorbed the moved errors, contradicting its own stated reason; the
+    +5.8pp table the human saw already used whole families.
+  - Guardrail margin = the standing delta = 0.02 (the chat said "e.g.
+    -1pp").
+  - D025's pair-level materiality margin M = 0.05, not delta = 0.02: 50
+    test traces per pair cannot reach 0.02; 5pp is the size at which a
+    two-stage design is worth building (D024 hard-model effects 3-6pp).
+  - D025 primary readout = D017's linear concat (deterministic, tighter
+    intervals); attention secondary with the same labels.
+  Decided by: human (1, 2, 4, and approving D025); design-side (the calls
+  listed above, D025's design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

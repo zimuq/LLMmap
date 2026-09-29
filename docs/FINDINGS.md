@@ -912,6 +912,14 @@ independent chains, not a statistically resolved difference. Consistent
 with D018's own pair-level (`hard_subset`) result: `JointGreedy` ≳ `H1` ≳
 `GreedyCover`, unresolved at every level this project has checked.
 
+**Addendum, 2026-09-29 — read the +11.5 pp above at family level.** About
+half of consensus6's gain is errors moved onto un-flagged siblings. Over
+the whole Phi-3/Mistral-7B/Falcon3 families the gain is +5.8 pp, vs +1.6
+elsewhere. The four sets in this entry were also picked on S_test from the
+compared methods' own results, so they are historical description, not
+targets for new methods. See the 2026-09-29 design-side check below and
+`DECISIONS.md` D7.
+
 ## D016 — No hidden hard pairs: the 65 structural pairs are the 11 objectively hardest of all 666
 
 **Answers the question D015/FINDINGS left open: does real difficulty exist
@@ -1325,6 +1333,51 @@ statistic:
 - **Standing rule from now on:** pre-register plausible variants of any
   baseline and compare against the strongest. A fairness transformation
   is itself a modelling choice.
+
+## Design-side check — the consensus6 gain, re-read at family level (2026-09-29)
+
+**Read-only extraction.** Source: stored `per_model` arrays in
+`results/D009/runs.json` and `results/D010/metrics_by_k.json`, `k`=8,
+5-seed means, descriptive. No bootstrap, no new computation from the
+corpus or tensor. This is the same footing as D023's extraction.
+
+**About half of consensus6's +11.5 pp is errors moved onto siblings.**
+
+| models | paper8 | JointGreedy | Δ |
+|---|---|---|---|
+| consensus6 (6) | .640 | .755 | +11.5 |
+| whole Phi-3 / Mistral-7B / Falcon3 families (13) | .738 | .796 | **+5.8** |
+| the other 24 models | .903 | .919 | +1.6 |
+
+- consensus6 keeps only the hardest members of each family. The
+  un-flagged siblings got worse: Phi-3-mini-4k .808→.688 (−12 pp),
+  Mistral-v0.1 .736→.664 (−7 pp).
+- **Per family:** Falcon3 +10.4 pp, Phi-3 +5.9, Mistral-7B +4.0.
+- The gain is still concentrated on the hard families (+5.8 vs +1.6, about
+  3.6×), so the "helps hard models more" pattern survives. The size to
+  quote is the family-level one.
+
+**The hardest twin is not solved.** Averaged over both twins,
+Phi-3-medium-128k/4k's 37-way recall rises .548→.672, while their own
+two-logit accuracy barely moves (.712→.732).
+- Two-logit accuracy minus 37-way recall is, roughly, the share of traces
+  lost to a third model. It falls from ~16% to ~6%.
+- Twin-vs-twin confusion stays at ~27–29%.
+- So the gain comes from fewer confusions with *other* models, not from
+  separating the twins. Which third models these are was not checked.
+
+**Selection bias in the historical sets.** consensus6, naturalgap5,
+worst6 and worst16 were all picked on S_test from the compared methods'
+own results. Any *new* method compared with JointGreedy on them gains from
+regression to the mean. They stay as historical description only.
+
+**Consequences:**
+- the hard-model endpoint is now family level;
+- H is defined on S_val by an external reference (`DECISIONS.md` D7,
+  decided 2026-09-29);
+- the specialist-ceiling test is drafted as [D025](D025.md).
+
+---
 
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
