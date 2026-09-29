@@ -1196,5 +1196,76 @@ optimisation of an over-confident proxy is where Goodhart failures show
 up. D021's targets are the repeatedly-inspected S_test, so this entry is
 exploratory evidence.
 
+## D022 — Our queries are about as detectable as LLMmap's own; avoiding detection costs ~9–15 pp
+
+**Input guards flag the first query of every strategy we tested,
+including the paper's.** Two openly licensed input-side guards were used:
+a prompt-injection detector and Granite Guardian. Together they flag
+104/259 pool queries, almost all of them from two families: the
+prompt-injection wrappers (100%) and the harmful-request probes (98%).
+
+- The paper's own 8 queries are 63% flagged.
+- Our selected chains flag 4–6 of 8, against paper8's 5.
+- Every chain, paper8 included, is flagged at position 1. paper8's
+  opening query is its own injection trick; our chains open with query
+  193, an injection wrapper that every selector picks first.
+
+**Writeup sentence:** detectability is a limitation shared with LLMmap,
+not introduced by our method.
+
+**Avoiding detection is expensive.** Restricted to the 155 guard-clean
+queries, JointGreedy loses 15 pp of mean top-1 on average over `k` and
+9 pp at `k`=8. It then falls below paper8 at every `k`, resolved under
+every rule and readout. The guards remove exactly the families the paper
+credits with its accuracy (injection triggers, alignment probes). At the
+pool level, detectability correlates positively with discriminative power
+(ρ +0.25 to +0.30). This is a genuine trade-off, not a selection failure.
+
+**A negative methodological result.** An LLM "off-topic" judge rejects
+nearly everything. By its own control it is uninformative: it rejects
+62.5% of benign everyday prompts even under "You are a helpful
+assistant." Only the sentence "a topical filter of this kind rejects
+nearly all fingerprinting queries" may be quoted, and it is a property of
+the filter.
+
+## D023 — Exact selection on the better ruler ties JointGreedy; the certificate says greedy is already near-optimal
+
+**Result: INCONCLUSIVE, a practical tie.** An exact integer program
+maximising the tail (CVaR₀.₁) of D021's additive evidence trains to
+within about ±2 pp of JointGreedy at every `k`.
+- Mean Δ over `k` is +0.5 pp [−0.5, +1.6].
+- PARITY missed its pre-registered margin by 0.0006, and is not
+  claimed.
+- The hard-pair tail over 666 pairs is identical to JointGreedy's.
+- The chosen chain is not Goodharted: the proxy tracks it as well as
+  JointGreedy's.
+
+**The durable result is a certificate.** The LP relaxation proves the
+optimum. Measured by `ADD`,
+- **JointGreedy's chain is at 92% of the exact optimum** at `k`=8;
+- paper8, GreedyCover, and both of Algorithm H.1's real
+  classifier-in-the-loop search chains sit at 64–74%;
+- the optimum is flat: at least 20 sets lie within 1%.
+
+That reads as: **cheap, classifier-free greedy is already near-optimal on
+the best ruler we have, and many near-optimal sets are about equally good
+once trained.** It is stated in ranking units, not probabilities (D021).
+
+**Hard models (design-side descriptive extraction from stored counts,
+validated against D019 exactly).**
+- At `k`=8 there is no gain over JointGreedy on any hard-model set.
+- At `k`=4–6 the ILP chain's lead concentrates on the hardest models,
+  at about 2× its overall lead (unresolved).
+- The two structurally-hard sibling pairs are **redistributed, not
+  solved.** One sibling gains 3–14 pp while the other loses 3–17 pp. That
+  fits METHOD §7's pool ceiling: those pairs need new probes, not a
+  better selector.
+
+**Consequence.**
+- JointGreedy remains the method. No I4/METHOD revision is triggered.
+- `ADD` earns its place as an **explanatory and certifying** tool: why
+  accumulation beats MAX, and how close greedy is to optimal. It is not a
+  better selector.
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
