@@ -1,0 +1,1446 @@
+{
+ "schema": "d025-hard-set-v1",
+ "status": "OK",
+ "definition": {
+  "source": "DECISIONS.md D7 (human, 2026-09-29); D025 ## D",
+  "stratum_N": "65 structural near-relative pairs, experiments/d008_lib.py:near_relative_pairs (same base or same lineage, confs metadata; fixed since D001)",
+  "reference_protocol_B0": "paper8 = queries [0..7], k=8, D009 attention protocol (confs/default.json inference_model, S_val early stopping), seeds 0-4, two-logit restricted accuracy per pair (d009_lib.logit_stats per_hard_pair), 5-seed mean",
+  "split": "S_val (25 configs x 2 models = 50 traces per pair)",
+  "tau": 0.9,
+  "membership": "acc_B0(p) < tau (point estimate)",
+  "bands": "config bootstrap on S_val, d008_lib.boot_draws(25, 2000, seed=20260929), seeds averaged within a draw; stably_hard hi<tau, stably_easy lo>tau, else uncertain (descriptive; D025 secondary (f) only)",
+  "M_H": "models in some pair of H",
+  "F_H": "M_H plus every model joined to a member of M_H by an N edge (one-step closure)",
+  "family_groups": "connected components of F_H under N edges",
+  "known_optimism": "B0 checkpoints chosen by S_val loss: S_val accuracies slightly optimistic, uniform across pairs"
+ },
+ "provenance": {
+  "git_sha_at_compute": "1f4db31a2da39f045710af39d4c8b3ba3405881e",
+  "b0_checkpoints": [
+   "./results/D009/models/paper8_k8_r0.ckpt",
+   "./results/D016/models/paper8_k8_r1.ckpt",
+   "./results/D016/models/paper8_k8_r2.ckpt",
+   "./results/D016/models/paper8_k8_r3.ckpt",
+   "./results/D016/models/paper8_k8_r4.ckpt"
+  ],
+  "b0_reproduces_d009_on_test": [
+   {
+    "seed": 0,
+    "ckpt": "./results/D009/models/paper8_k8_r0.ckpt",
+    "mean_top1": 0.8345945945945946,
+    "d009_mean_top1": 0.8345945945945946,
+    "mean_top1_equal": true,
+    "per_hard_pair_equal": true
+   },
+   {
+    "seed": 1,
+    "ckpt": "./results/D016/models/paper8_k8_r1.ckpt",
+    "mean_top1": 0.8389189189189189,
+    "d009_mean_top1": 0.8389189189189189,
+    "mean_top1_equal": true,
+    "per_hard_pair_equal": true
+   },
+   {
+    "seed": 2,
+    "ckpt": "./results/D016/models/paper8_k8_r2.ckpt",
+    "mean_top1": 0.8724324324324324,
+    "d009_mean_top1": 0.8724324324324324,
+    "mean_top1_equal": true,
+    "per_hard_pair_equal": true
+   },
+   {
+    "seed": 3,
+    "ckpt": "./results/D016/models/paper8_k8_r3.ckpt",
+    "mean_top1": 0.8367567567567568,
+    "d009_mean_top1": 0.8367567567567568,
+    "mean_top1_equal": true,
+    "per_hard_pair_equal": true
+   },
+   {
+    "seed": 4,
+    "ckpt": "./results/D016/models/paper8_k8_r4.ckpt",
+    "mean_top1": 0.8432432432432433,
+    "d009_mean_top1": 0.8432432432432433,
+    "mean_top1_equal": true,
+    "per_hard_pair_equal": true
+   }
+  ]
+ },
+ "H": [
+  "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+  "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+  "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct"
+ ],
+ "H_index_666": [
+  478,
+  546,
+  621,
+  656
+ ],
+ "H_stably_hard": [
+  "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+  "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct"
+ ],
+ "M_H": [
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-medium-4k-instruct",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "mistralai/Mistral-7B-Instruct-v0.3",
+  "tiiuae/Falcon3-10B-Instruct",
+  "tiiuae/Falcon3-7B-Instruct"
+ ],
+ "F_H": [
+  "HuggingFaceH4/zephyr-7b-beta",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Llama-3.2-3B-Instruct",
+  "meta-llama/Meta-Llama-3-8B-Instruct",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-medium-4k-instruct",
+  "microsoft/Phi-3-mini-128k-instruct",
+  "microsoft/Phi-3-mini-4k-instruct",
+  "microsoft/Phi-3.5-mini-instruct",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "mistralai/Mistral-7B-Instruct-v0.3",
+  "nvidia/Llama3-ChatQA-1.5-8B",
+  "openchat/openchat-3.6-8b-20240522",
+  "openchat/openchat_3.5",
+  "tiiuae/Falcon3-10B-Instruct",
+  "tiiuae/Falcon3-7B-Instruct",
+  "upstage/SOLAR-10.7B-Instruct-v1.0"
+ ],
+ "family_groups": [
+  [
+   "HuggingFaceH4/zephyr-7b-beta",
+   "mistralai/Mistral-7B-Instruct-v0.1",
+   "mistralai/Mistral-7B-Instruct-v0.2",
+   "mistralai/Mistral-7B-Instruct-v0.3",
+   "openchat/openchat_3.5",
+   "upstage/SOLAR-10.7B-Instruct-v1.0"
+  ],
+  [
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "meta-llama/Llama-3.2-1B-Instruct",
+   "meta-llama/Llama-3.2-3B-Instruct",
+   "meta-llama/Meta-Llama-3-8B-Instruct",
+   "meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "nvidia/Llama3-ChatQA-1.5-8B",
+   "openchat/openchat-3.6-8b-20240522"
+  ],
+  [
+   "microsoft/Phi-3-medium-128k-instruct",
+   "microsoft/Phi-3-medium-4k-instruct",
+   "microsoft/Phi-3-mini-128k-instruct",
+   "microsoft/Phi-3-mini-4k-instruct",
+   "microsoft/Phi-3.5-mini-instruct"
+  ],
+  [
+   "tiiuae/Falcon3-10B-Instruct",
+   "tiiuae/Falcon3-7B-Instruct"
+  ]
+ ],
+ "family_group_H_pairs": [
+  [
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3"
+  ],
+  [
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct"
+  ],
+  [
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct"
+  ],
+  [
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct"
+  ]
+ ],
+ "family_group_pairs": [
+  [
+   "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.1",
+   "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.3",
+   "HuggingFaceH4/zephyr-7b-beta | openchat/openchat_3.5",
+   "HuggingFaceH4/zephyr-7b-beta | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.2",
+   "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.3",
+   "mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5",
+   "mistralai/Mistral-7B-Instruct-v0.1 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+   "mistralai/Mistral-7B-Instruct-v0.2 | openchat/openchat_3.5",
+   "mistralai/Mistral-7B-Instruct-v0.2 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "mistralai/Mistral-7B-Instruct-v0.3 | openchat/openchat_3.5",
+   "mistralai/Mistral-7B-Instruct-v0.3 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "openchat/openchat_3.5 | upstage/SOLAR-10.7B-Instruct-v1.0"
+  ],
+  [
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-1B-Instruct",
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-3B-Instruct",
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3-8B-Instruct",
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k | nvidia/Llama3-ChatQA-1.5-8B",
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k | openchat/openchat-3.6-8b-20240522",
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "meta-llama/Llama-3.2-1B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "meta-llama/Llama-3.2-1B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "meta-llama/Llama-3.2-3B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "meta-llama/Llama-3.2-3B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "meta-llama/Meta-Llama-3-8B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "meta-llama/Meta-Llama-3-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "meta-llama/Meta-Llama-3-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "meta-llama/Meta-Llama-3.1-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "meta-llama/Meta-Llama-3.1-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "nvidia/Llama3-ChatQA-1.5-8B | openchat/openchat-3.6-8b-20240522"
+  ],
+  [
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-3.5-mini-instruct"
+  ],
+  [
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct"
+  ]
+ ],
+ "family_group_equals_single_H_pair": [
+  false,
+  false,
+  false,
+  true
+ ],
+ "counts": {
+  "H": 4,
+  "M_H": 8,
+  "F_H": 20,
+  "groups": 4,
+  "bands": {
+   "stably_hard": 2,
+   "uncertain": 12,
+   "stably_easy": 51
+  },
+  "H_by_band": {
+   "stably_hard": 2,
+   "uncertain": 2,
+   "stably_easy": 0
+  }
+ },
+ "descriptive": {
+  "consensus6_overlap": [
+   "microsoft/Phi-3-medium-128k-instruct",
+   "microsoft/Phi-3-medium-4k-instruct",
+   "mistralai/Mistral-7B-Instruct-v0.2",
+   "mistralai/Mistral-7B-Instruct-v0.3",
+   "tiiuae/Falcon3-10B-Instruct",
+   "tiiuae/Falcon3-7B-Instruct"
+  ],
+  "H_test_paper8": {
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct": 0.968,
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": 0.712,
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": 0.824,
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": 0.804
+  },
+  "test_paper8_below_tau": [
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct"
+  ],
+  "byte_identical_greedy_answers_per_H_pair": {
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct": 6,
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": 46,
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": 1,
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": 13
+  }
+ },
+ "rows": [
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.1",
+   "index_666": 94,
+   "ab": [
+    2,
+    26
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.972,
+   "val_ci": [
+    0.944,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.964
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "index_666": 95,
+   "ab": [
+    2,
+    27
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.936,
+   "val_ci": [
+    0.88,
+    0.98
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.904
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.3",
+   "index_666": 96,
+   "ab": [
+    2,
+    28
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.972,
+   "val_ci": [
+    0.932,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.96
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | openchat/openchat_3.5",
+   "index_666": 99,
+   "ab": [
+    2,
+    31
+   ],
+   "same_base": true,
+   "same_lineage": true,
+   "acc_val_B0": 1.0,
+   "val_ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.956
+  },
+  {
+   "pair": "HuggingFaceH4/zephyr-7b-beta | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index_666": 103,
+   "ab": [
+    2,
+    35
+   ],
+   "same_base": true,
+   "same_lineage": true,
+   "acc_val_B0": 0.98,
+   "val_ci": [
+    0.948,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.98
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2-7B-Instruct",
+   "index_666": 105,
+   "ab": [
+    3,
+    4
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.976,
+   "val_ci": [
+    0.932,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.992
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "index_666": 106,
+   "ab": [
+    3,
+    5
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.916,
+   "val_ci": [
+    0.852,
+    0.968
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.936
+  },
+  {
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index_666": 107,
+   "ab": [
+    3,
+    6
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.988,
+   "val_ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.988
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "index_666": 138,
+   "ab": [
+    4,
+    5
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.976,
+   "val_ci": [
+    0.936,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.968
+  },
+  {
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index_666": 139,
+   "ab": [
+    4,
+    6
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.948,
+   "val_ci": [
+    0.8919,
+    0.992
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.932
+  },
+  {
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "index_666": 170,
+   "ab": [
+    5,
+    6
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.964,
+   "val_ci": [
+    0.924,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.98
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-1.1-7b-it",
+   "index_666": 231,
+   "ab": [
+    7,
+    8
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.944,
+   "val_ci": [
+    0.896,
+    0.984
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.984
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2-9b-it",
+   "index_666": 232,
+   "ab": [
+    7,
+    9
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 1.0,
+   "val_ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2b-it",
+   "index_666": 233,
+   "ab": [
+    7,
+    10
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.972,
+   "val_ci": [
+    0.936,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.988
+  },
+  {
+   "pair": "google/gemma-1.1-2b-it | google/gemma-7b-it",
+   "index_666": 234,
+   "ab": [
+    7,
+    11
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.968,
+   "val_ci": [
+    0.94,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.992
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2-9b-it",
+   "index_666": 260,
+   "ab": [
+    8,
+    9
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.996,
+   "val_ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2b-it",
+   "index_666": 261,
+   "ab": [
+    8,
+    10
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.996,
+   "val_ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "google/gemma-1.1-7b-it | google/gemma-7b-it",
+   "index_666": 262,
+   "ab": [
+    8,
+    11
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.968,
+   "val_ci": [
+    0.924,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "google/gemma-2-9b-it | google/gemma-2b-it",
+   "index_666": 288,
+   "ab": [
+    9,
+    10
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 1.0,
+   "val_ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "google/gemma-2-9b-it | google/gemma-7b-it",
+   "index_666": 289,
+   "ab": [
+    9,
+    11
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.988
+  },
+  {
+   "pair": "google/gemma-2b-it | google/gemma-7b-it",
+   "index_666": 315,
+   "ab": [
+    10,
+    11
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.936,
+   "val_ci": [
+    0.872,
+    0.9881
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.976
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-1B-Instruct",
+   "index_666": 370,
+   "ab": [
+    12,
+    17
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-3B-Instruct",
+   "index_666": 371,
+   "ab": [
+    12,
+    18
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.992
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index_666": 372,
+   "ab": [
+    12,
+    19
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.988
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index_666": 373,
+   "ab": [
+    12,
+    20
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.964,
+   "val_ci": [
+    0.924,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.992
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | nvidia/Llama3-ChatQA-1.5-8B",
+   "index_666": 382,
+   "ab": [
+    12,
+    29
+   ],
+   "same_base": true,
+   "same_lineage": true,
+   "acc_val_B0": 0.972,
+   "val_ci": [
+    0.94,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.992
+  },
+  {
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | openchat/openchat-3.6-8b-20240522",
+   "index_666": 383,
+   "ab": [
+    12,
+    30
+   ],
+   "same_base": true,
+   "same_lineage": true,
+   "acc_val_B0": 0.988,
+   "val_ci": [
+    0.964,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.996
+  },
+  {
+   "pair": "ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.1-8b-instruct",
+   "index_666": 390,
+   "ab": [
+    13,
+    14
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.968,
+   "val_ci": [
+    0.944,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.948
+  },
+  {
+   "pair": "meta-llama/Llama-2-7b-chat-hf | togethercomputer/Llama-2-7B-32K-Instruct",
+   "index_666": 473,
+   "ab": [
+    16,
+    34
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.972,
+   "val_ci": [
+    0.948,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.964
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "index_666": 476,
+   "ab": [
+    17,
+    18
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.908,
+   "val_ci": [
+    0.852,
+    0.956
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.96
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index_666": 477,
+   "ab": [
+    17,
+    19
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 1.0,
+   "val_ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.992
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index_666": 478,
+   "ab": [
+    17,
+    20
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.896,
+   "val_ci": [
+    0.836,
+    0.948
+   ],
+   "band": "uncertain",
+   "in_H": true,
+   "acc_test_paper8_descriptive": 0.968
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index_666": 487,
+   "ab": [
+    17,
+    29
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.988,
+   "val_ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index_666": 488,
+   "ab": [
+    17,
+    30
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 1.0,
+   "val_ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.996
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "index_666": 495,
+   "ab": [
+    18,
+    19
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.96,
+   "val_ci": [
+    0.936,
+    0.984
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.976
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index_666": 496,
+   "ab": [
+    18,
+    20
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.924,
+   "val_ci": [
+    0.88,
+    0.968
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.908
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index_666": 505,
+   "ab": [
+    18,
+    29
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index_666": 506,
+   "ab": [
+    18,
+    30
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.996,
+   "val_ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "index_666": 513,
+   "ab": [
+    19,
+    20
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.964,
+   "val_ci": [
+    0.916,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.976
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index_666": 522,
+   "ab": [
+    19,
+    29
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.996,
+   "val_ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index_666": 523,
+   "ab": [
+    19,
+    30
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "index_666": 538,
+   "ab": [
+    20,
+    29
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.972,
+   "val_ci": [
+    0.948,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 1.0
+  },
+  {
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "index_666": 539,
+   "ab": [
+    20,
+    30
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.996,
+   "val_ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.996
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "index_666": 546,
+   "ab": [
+    21,
+    22
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.82,
+   "val_ci": [
+    0.74,
+    0.8921
+   ],
+   "band": "stably_hard",
+   "in_H": true,
+   "acc_test_paper8_descriptive": 0.712
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index_666": 547,
+   "ab": [
+    21,
+    23
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.948,
+   "val_ci": [
+    0.892,
+    0.9921
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.928
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index_666": 548,
+   "ab": [
+    21,
+    24
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.968,
+   "val_ci": [
+    0.924,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.932
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index_666": 549,
+   "ab": [
+    21,
+    25
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.988,
+   "val_ci": [
+    0.968,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.988
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "index_666": 561,
+   "ab": [
+    22,
+    23
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.964,
+   "val_ci": [
+    0.928,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.912
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index_666": 562,
+   "ab": [
+    22,
+    24
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.976,
+   "val_ci": [
+    0.936,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.936
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index_666": 563,
+   "ab": [
+    22,
+    25
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.944,
+   "val_ci": [
+    0.896,
+    0.98
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.924
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "index_666": 575,
+   "ab": [
+    23,
+    24
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.928,
+   "val_ci": [
+    0.8719,
+    0.976
+   ],
+   "band": "uncertain",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.92
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index_666": 576,
+   "ab": [
+    23,
+    25
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.976,
+   "val_ci": [
+    0.948,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.988
+  },
+  {
+   "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "index_666": 588,
+   "ab": [
+    24,
+    25
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.976,
+   "val_ci": [
+    0.944,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.976
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.2",
+   "index_666": 611,
+   "ab": [
+    26,
+    27
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.968,
+   "val_ci": [
+    0.924,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.956
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.3",
+   "index_666": 612,
+   "ab": [
+    26,
+    28
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.96,
+   "val_ci": [
+    0.916,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.932
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5",
+   "index_666": 615,
+   "ab": [
+    26,
+    31
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.956,
+   "val_ci": [
+    0.912,
+    0.992
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.956
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index_666": 619,
+   "ab": [
+    26,
+    35
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.972,
+   "val_ci": [
+    0.94,
+    0.996
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.984
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+   "index_666": 621,
+   "ab": [
+    27,
+    28
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.832,
+   "val_ci": [
+    0.744,
+    0.908
+   ],
+   "band": "uncertain",
+   "in_H": true,
+   "acc_test_paper8_descriptive": 0.824
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | openchat/openchat_3.5",
+   "index_666": 624,
+   "ab": [
+    27,
+    31
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.988,
+   "val_ci": [
+    0.972,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.96
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index_666": 628,
+   "ab": [
+    27,
+    35
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.984,
+   "val_ci": [
+    0.964,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.984
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | openchat/openchat_3.5",
+   "index_666": 632,
+   "ab": [
+    28,
+    31
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.98,
+   "val_ci": [
+    0.944,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.98
+  },
+  {
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index_666": 636,
+   "ab": [
+    28,
+    35
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.984
+  },
+  {
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | openchat/openchat-3.6-8b-20240522",
+   "index_666": 638,
+   "ab": [
+    29,
+    30
+   ],
+   "same_base": true,
+   "same_lineage": true,
+   "acc_val_B0": 0.984,
+   "val_ci": [
+    0.964,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.98
+  },
+  {
+   "pair": "openchat/openchat_3.5 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "index_666": 654,
+   "ab": [
+    31,
+    35
+   ],
+   "same_base": true,
+   "same_lineage": true,
+   "acc_val_B0": 0.992,
+   "val_ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "in_H": false,
+   "acc_test_paper8_descriptive": 0.948
+  },
+  {
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "index_666": 656,
+   "ab": [
+    32,
+    33
+   ],
+   "same_base": false,
+   "same_lineage": true,
+   "acc_val_B0": 0.808,
+   "val_ci": [
+    0.732,
+    0.872
+   ],
+   "band": "stably_hard",
+   "in_H": true,
+   "acc_test_paper8_descriptive": 0.804
+  }
+ ],
+ "s2_cost_projection": {
+  "attention_runs": 600,
+  "est_gpu_min": 100.0,
+  "call_threshold_gpu_min": 240,
+  "note": "GLOBAL k=9..16 + SPEC(p) k=1..16 per H pair + FAM(F) k=1..16 for groups that are not a single H pair; ~10 s/run incl. reload"
+ },
+ "wall_s": 14.0
+}

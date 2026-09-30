@@ -1,0 +1,26 @@
+=== node: c634-141.vista.tacc.utexas.edu start: Tue Sep 29 08:58:40 PM CDT 2026 ===
+[S0] B0 reproduces D009 on S_test for all 5 seeds
+[S0] |H| = 4
+  0.808 [0.732, 0.872] stably_hard  test 0.804 H tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct
+  0.820 [0.74, 0.8921] stably_hard  test 0.712 H microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct
+  0.832 [0.744, 0.908] uncertain    test 0.824 H mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3
+  0.896 [0.836, 0.948] uncertain    test 0.968 H meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct
+  0.908 [0.852, 0.956] uncertain    test 0.960   meta-llama/Llama-3.2-1B-Instruct | meta-llama/Llama-3.2-3B-Instruct
+  0.916 [0.852, 0.968] uncertain    test 0.936   Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct
+  0.924 [0.88, 0.968] uncertain    test 0.908   meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct
+  0.928 [0.8719, 0.976] uncertain    test 0.920   microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct
+  0.936 [0.88, 0.98] uncertain    test 0.904   HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2
+  0.936 [0.872, 0.9881] uncertain    test 0.976   google/gemma-2b-it | google/gemma-7b-it
+  0.944 [0.896, 0.984] uncertain    test 0.984   google/gemma-1.1-2b-it | google/gemma-1.1-7b-it
+  0.944 [0.896, 0.98] uncertain    test 0.924   microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3.5-mini-instruct
+  0.948 [0.8919, 0.992] uncertain    test 0.932   Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-3B-Instruct
+  0.948 [0.892, 0.9921] uncertain    test 0.928   microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-128k-instruct
+  0.956 [0.912, 0.992] stably_easy  test 0.956   mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5
+[S0] M_H ['meta-llama/Llama-3.2-1B-Instruct', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'microsoft/Phi-3-medium-128k-instruct', 'microsoft/Phi-3-medium-4k-instruct', 'mistralai/Mistral-7B-Instruct-v0.2', 'mistralai/Mistral-7B-Instruct-v0.3', 'tiiuae/Falcon3-10B-Instruct', 'tiiuae/Falcon3-7B-Instruct']
+[S0] groups [['HuggingFaceH4/zephyr-7b-beta', 'mistralai/Mistral-7B-Instruct-v0.1', 'mistralai/Mistral-7B-Instruct-v0.2', 'mistralai/Mistral-7B-Instruct-v0.3', 'openchat/openchat_3.5', 'upstage/SOLAR-10.7B-Instruct-v1.0'], ['gradientai/Llama-3-8B-Instruct-Gradient-1048k', 'meta-llama/Llama-3.2-1B-Instruct', 'meta-llama/Llama-3.2-3B-Instruct', 'meta-llama/Meta-Llama-3-8B-Instruct', 'meta-llama/Meta-Llama-3.1-8B-Instruct', 'nvidia/Llama3-ChatQA-1.5-8B', 'openchat/openchat-3.6-8b-20240522'], ['microsoft/Phi-3-medium-128k-instruct', 'microsoft/Phi-3-medium-4k-instruct', 'microsoft/Phi-3-mini-128k-instruct', 'microsoft/Phi-3-mini-4k-instruct', 'microsoft/Phi-3.5-mini-instruct'], ['tiiuae/Falcon3-10B-Instruct', 'tiiuae/Falcon3-7B-Instruct']]
+[S0] group H pairs [['mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3'], ['meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct'], ['microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct'], ['tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct']]
+[S0] counts {'H': 4, 'M_H': 8, 'F_H': 20, 'groups': 4, 'bands': {'stably_hard': 2, 'uncertain': 12, 'stably_easy': 51}, 'H_by_band': {'stably_hard': 2, 'uncertain': 2, 'stably_easy': 0}}
+[S0] identical answers {'meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct': 6, 'microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct': 46, 'mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3': 1, 'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct': 13}
+[S0] cost {'attention_runs': 600, 'est_gpu_min': 100.0, 'call_threshold_gpu_min': 240, 'note': 'GLOBAL k=9..16 + SPEC(p) k=1..16 per H pair + FAM(F) k=1..16 for groups that are not a single H pair; ~10 s/run incl. reload'}
+[S0] status OK; wall 14.0 s
+=== end: Tue Sep 29 08:59:50 PM CDT 2026 ===
