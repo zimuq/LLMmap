@@ -1614,6 +1614,39 @@ paper-claim pillar; D7 decided; D025 drafted
     intervals); attention secondary with the same labels.
   Decided by: human (1, 2, 4, and approving D025); design-side (the calls
   listed above, D025's design).
+
+[2026-09-29] D025/P1 approved with amendments -- CEILING label, readout
+attribution; linear stays primary
+  Decision: S0 verified (H = 4 pairs, bands 2/12/51, F_H = 20; B0
+  reproduces D009 exactly). TACC's Call 1 (TACC_NOTES Issue 19) was
+  correct: under the D's primary linear readout, GLOBAL k=8 is already
+  .96/.96/.98 on Falcon/Mistral/Llama, so the pre-registered labels would
+  have been decided by the ceiling. This was a design-side error: the
+  readout was switched without checking headroom.
+  Adopted TACC's CEILING rule (1 - acc_GLOBAL(p,8) < 0.05, per readout).
+  Declined TACC's option (b), attention primary: a budget-vs-pool
+  attribution needs the strongest readout, or a weak classifier
+  masquerades as a weak pool (D024's strongest-baseline rule, applied to
+  readouts).
+  Fixed from known k=8 numbers, before any SPEC/FAM data:
+  - Falcon and Mistral: READOUT-LIMITED (linear CEILING; attention .832 /
+    .896);
+  - Llama: NOT HARD ON S_test (CEILING under both);
+  - Phi-3-medium: the only pair tested for budget vs pool (linear .82).
+  Also approved: GLOBAL k<=8 attention retrain with exact reproduction
+  asserts; bootstrap per P1 Call 3.
+  Amendments: descriptive k-to-0.95 per pair/arm/readout. Stably-hard
+  co-report (Phi-3 + Falcon families, 7 models) next to every F_H/M_H
+  number -- a standing co-report for the D7 endpoint, since F_H = 20/37
+  once the borderline Llama pair brings its 7-model lineage.
+  Story-level implication, for the human at story freeze (not decided
+  here): under linear, JointGreedy's 37-way recall on M_H is .905 vs .795
+  under attention. Query-level hardness concentrates in the Phi-3-medium
+  twins; "which readout carries the hard-model claim" becomes a
+  story-freeze question.
+  Decided by: design-side (correction of own specification error before
+  any data; no invariant, METHOD or open Part-2 item touched). The human
+  was offered an explicit override (attention primary) before S1.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

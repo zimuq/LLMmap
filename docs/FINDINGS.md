@@ -1379,5 +1379,39 @@ regression to the mean. They stay as historical description only.
 
 ---
 
+## Design-side check — most "hard pairs" are hard for the attention network, not for the queries (2026-09-29, from D025/P1)
+
+**Existing numbers, newly lined up** (D017 linear concat, D010 attention,
+JointGreedy chain, `k`=8, S_test; D025/P1 Call 1, verified by
+design-side). These are the two-logit accuracies on D025's four hard
+pairs (the D7 set H):
+
+| pair | linear | attention |
+|---|---|---|
+| Falcon3-10B↔7B | .96 | .832 |
+| Mistral v0.2↔v0.3 | .96 | .896 |
+| Llama-3.2-1B↔3.1-8B | .98 | .968 |
+| Phi-3-medium-128k↔4k | **.82** | .732 |
+
+- **The same 8 queries already carry enough information to separate
+  Falcon and Mistral.** A plain linear classifier does it at .96; the
+  paper's attention network does not. The gap holds at every `k`, not only
+  `k`=8.
+- **37-way recall on the hard models** (JointGreedy, `k`=8):
+  - M_H: .905 linear vs .795 attention;
+  - stably-hard families (Phi-3 + Falcon, 7 models): .880 vs .787;
+  - the other 17 models: .965 vs .924.
+- Hardness narrows under linear but does not vanish. Phi-3 stays clearly
+  behind.
+- **So the query-level hard core is the Phi-3-medium twins.** D025 now
+  tests only that pair for "shared budget vs pool" under the linear
+  readout. Falcon/Mistral are attributed READOUT-LIMITED, Llama NOT HARD
+  ON S_test.
+- **Why it matters:** the parked question "why does linear beat the
+  attention network" (D017) may become load-bearing for the hard-model
+  claim. Which readout carries that claim is a story-freeze decision.
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
