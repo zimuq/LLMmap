@@ -24,6 +24,26 @@
 <!-- TACC appends here. One entry per issue: what's wrong, exactly where
      (file + section), and why the ownership rule blocks a direct fix. -->
 
+**Issue 19 (2026-09-29) — D025's `## D` "What counts as an answer": the
+primary readout and the label margin cannot coexist on 3 of 4 H pairs.**
+- **What the D pre-registers.** Linear concat is the primary readout.
+  BUDGET-LIMITED requires `a(p)` ≥ +0.05; POOL-LIMITED requires
+  hi(`b`) < +0.05.
+- **Why that fails (existing D017 numbers).** Under linear concat, GLOBAL
+  (JointGreedy, `k`=8) is already 0.98 / 0.96 / 0.96 on the Llama, Mistral
+  and Falcon H pairs. Headroom is ≤ 0.04, so:
+  - BUDGET-LIMITED is impossible for those three pairs;
+  - POOL-LIMITED fires from the ceiling alone.
+- **Where the mismatch comes from.** The D's motivating numbers (Phi
+  .67–.73, Falcon .80–.85) and H's definition (B0) are attention-protocol
+  quantities. The readout switch to linear was not checked against headroom.
+- **Why TACC can't fix it.** It is a `## D` edit to pre-registered criteria,
+  so the ownership rule blocks it, and it may need the human.
+- **Status.** Raised as blocking Call 1 in D025/P1
+  (`docs/plans/D025-P1.md`). Recommendation: attention primary, plus a
+  CEILING label when `1 − acc_GLOBAL(p,8) < M`, fixed before training. TACC
+  holds S1 until it is decided.
+
 **Issue 10 (2026-09-05) — the structural cause, and a proposal.
 DEFERRED by the human, 2026-09-05: keep on file, do not action this
 session.** The approach is accepted in principle; the human wants it
