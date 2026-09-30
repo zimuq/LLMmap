@@ -1,0 +1,22 @@
+=== node: c640-062.vista.tacc.utexas.edu start: Wed Sep 30 12:37:16 PM CDT 2026 ===
+  precompute 50/259
+  precompute 100/259
+  precompute 150/259
+  precompute 200/259
+  precompute 250/259
+[S1] code-path check OK: [193, 140, 237, 114, 233, 117, 0, 16]
+[S1] GLOBAL (|P|=666): [193, 140, 237, 114, 233, 117, 0, 16, 18, 123, 234, 109, 235, 132, 3, 239]  peak k=8
+[S1] SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct (|P|=1): [252, 113, 217, 219, 218, 11, 242, 65, 28, 208, 21, 232, 233, 223, 110, 203]  peak k=1
+[S1] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct (|P|=1): [140, 109, 145, 114, 129, 1, 121, 131, 141, 136, 147, 119, 120, 123, 127, 112]  peak k=1
+[S1] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 (|P|=1): [193, 0, 192, 8, 228, 223, 247, 68, 20, 258, 249, 204, 230, 70, 64, 95]  peak k=1
+[S1] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct (|P|=1): [252, 237, 238, 253, 240, 243, 241, 108, 116, 249, 21, 114, 220, 255, 132, 199]  peak k=1
+[S1] FAM:Mistral (|P|=15): [193, 8, 0, 20, 228, 247, 68, 192, 223, 258, 249, 204, 230, 70, 64, 95]  peak k=2
+[S1] FAM:Llama (|P|=21): [134, 117, 237, 231, 127, 218, 121, 249, 145, 123, 223, 122, 241, 242, 111, 203]  peak k=9
+[S1] FAM:Phi (|P|=10): [9, 140, 65, 145, 18, 56, 44, 131, 45, 31, 23, 21, 230, 55, 27, 48]  peak k=3
+[S1] FAM:Falcon3 (|P|=1): [252, 237, 238, 253, 240, 243, 241, 108, 116, 249, 21, 114, 220, 255, 132, 199]  peak k=1
+[S1] ceiling/attribution: {'meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct': {'linear_global_k8': 0.98, 'attention_global_k8': 0.968, 'ceiling_linear': True, 'ceiling_attention': True, 'attribution': 'NOT HARD ON S_test'}, 'microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct': {'linear_global_k8': 0.82, 'attention_global_k8': 0.732, 'ceiling_linear': False, 'ceiling_attention': False, 'attribution': 'tested'}, 'mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3': {'linear_global_k8': 0.96, 'attention_global_k8': 0.896, 'ceiling_linear': True, 'ceiling_attention': False, 'attribution': 'READOUT-LIMITED'}, 'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct': {'linear_global_k8': 0.96, 'attention_global_k8': 0.832, 'ceiling_linear': True, 'ceiling_attention': False, 'attribution': 'READOUT-LIMITED'}}
+[S1] identical-input k vs GLOBAL: {'SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct': [], 'SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct': [], 'SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3': [1], 'SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct': [], 'FAM:Mistral': [1], 'FAM:Llama': [], 'FAM:Phi': []}
+[S1] flags {'GLOBAL': {8: 5, 16: 8}, 'SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct': {8: 5, 16: 10}, 'SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct': {8: 8, 16: 16}, 'SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3': {8: 5, 16: 8}, 'SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct': {8: 5, 16: 10}, 'FAM:Mistral': {8: 4, 16: 8}, 'FAM:Llama': {8: 6, 16: 12}, 'FAM:Phi': {8: 4, 16: 6}, 'FAM:Falcon3': {8: 5, 16: 10}}
+[S1] primary linear population ['microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct']; attention ['microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct', 'mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3', 'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct']
+[S1] wrote ./results/D025/selection.json; wall 49.6 s
+=== end: Wed Sep 30 12:38:17 PM CDT 2026 ===
