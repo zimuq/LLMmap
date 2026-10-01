@@ -1,0 +1,35 @@
+=== arm: GLOBAL node: c637-011.vista.tacc.utexas.edu start: Wed Sep 30 09:59:47 PM CDT 2026 ===
+[S2] GLOBAL k=1 linear test top1 0.7276 (3s, 609 it)
+[S2] GLOBAL k=1 attention mean top1 0.6333 (== D010 counts) [0.4 min]
+[S2] GLOBAL k=2 linear test top1 0.8443 (5s, 560 it)
+[S2] GLOBAL k=2 attention mean top1 0.7725 (== D010 counts) [0.9 min]
+[S2] GLOBAL k=3 linear test top1 0.8854 (9s, 575 it)
+[S2] GLOBAL k=3 attention mean top1 0.8076 (== D010 counts) [1.4 min]
+[S2] GLOBAL k=4 linear test top1 0.8973 (11s, 587 it)
+[S2] GLOBAL k=4 attention mean top1 0.8212 (== D010 counts) [1.9 min]
+[S2] GLOBAL k=5 linear test top1 0.9070 (13s, 574 it)
+[S2] GLOBAL k=5 attention mean top1 0.8301 (== D010 counts) [2.5 min]
+[S2] GLOBAL k=6 linear test top1 0.9005 (16s, 561 it)
+[S2] GLOBAL k=6 attention mean top1 0.8439 (== D010 counts) [3.1 min]
+[S2] GLOBAL k=7 linear test top1 0.9276 (16s, 501 it)
+[S2] GLOBAL k=7 attention mean top1 0.8672 (== D010 counts) [3.8 min]
+[S2] GLOBAL k=8 linear test top1 0.9373 (16s, 441 it)
+[S2] GLOBAL k=8 attention mean top1 0.8757 (== D010 counts) [4.5 min]
+[S2] GLOBAL k=9 linear test top1 0.9395 (18s, 423 it)
+[S2] GLOBAL k=9 attention mean top1 0.8781 [5.2 min]
+[S2] GLOBAL k=10 linear test top1 0.9459 (23s, 499 it)
+[S2] GLOBAL k=10 attention mean top1 0.8811 [6.1 min]
+[S2] GLOBAL k=11 linear test top1 0.9438 (21s, 427 it)
+[S2] GLOBAL k=11 attention mean top1 0.8701 [6.8 min]
+[S2] GLOBAL k=12 linear test top1 0.9459 (28s, 496 it)
+[S2] GLOBAL k=12 attention mean top1 0.8839 [7.7 min]
+[S2] GLOBAL k=13 linear test top1 0.9470 (28s, 461 it)
+[S2] GLOBAL k=13 attention mean top1 0.8917 [8.7 min]
+[S2] GLOBAL k=14 linear test top1 0.9524 (31s, 486 it)
+[S2] GLOBAL k=14 attention mean top1 0.8874 [9.8 min]
+[S2] GLOBAL k=15 linear test top1 0.9514 (31s, 442 it)
+[S2] GLOBAL k=15 attention mean top1 0.8874 [10.8 min]
+[S2] GLOBAL k=16 linear test top1 0.9557 (36s, 448 it)
+[S2] GLOBAL k=16 attention mean top1 0.8923 [12.0 min]
+[S2] GLOBAL done, wall 12.0 min
+=== end: Wed Sep 30 10:12:05 PM CDT 2026 ===

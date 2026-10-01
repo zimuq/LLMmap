@@ -15,14 +15,12 @@ variance by 4/5 (disclosed).
 Secondaries: A1 k-to-0.95; A2 stably-hard co-report; (a) family-restricted recall
 FAM vs GLOBAL; (b) directions; (c) cross-specialist placebo; (d) GLOBAL k=9..16 +
 tail plot; (e) S_val linear; (f) stably-hard pooled; (g) chains / by-products.
+Figures: experiments/d025_plots.py (run under the `llmmap` env).
 Usage:  PYTHONPATH=.:experiments python experiments/d025_analysis.py
 """
 import json
 
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
 from d008_lib import boot_draws
 from d025_lib import OUT, K_MAX
@@ -218,9 +216,8 @@ def main():
     print(f"[S3] (d) GLOBAL k=8 vs 16: " + "; ".join(f"{r}: {glob[r][8]} -> {glob[r][16]}" for r in glob), flush=True)
 
     # tail plot: 666-pair two-logit accuracy, GLOBAL k=8 vs 16
-    fig, ax = plt.subplots(1, 2, figsize=(11, 4))
     tail = {}
-    for j, r in enumerate(("lin", "att")):
+    for r in ("lin", "att"):
         for k in (8, 16):
             if r == "lin":
                 acc = get("GLOBAL", f"lin|test|{k}|dir666").sum((1, 2)) / (2 * NCFG)
@@ -230,26 +227,11 @@ def main():
             tail[f"{r}|{k}"] = dict(worst10=[round(float(x), 3) for x in s_[:10]],
                                     n_below_0p9=int((s_ < 0.9).sum()),
                                     cvar01=round(float(s_[:66].mean()), 4),
-                                    worst_pair=pairs[int(np.argmin(acc))])
-            ax[j].plot(np.arange(1, 101), s_[:100], label=f"GLOBAL k={k}")
-        ax[j].axvline(66, ls=":", c="gray")
-        ax[j].set(title=f"{'linear concat' if r == 'lin' else 'attention'}: worst 100 of 666 pairs",
-                  xlabel="pair rank (worst first)", ylabel="two-logit accuracy (S_test)")
-        ax[j].legend()
-    fig.tight_layout(); fig.savefig(f"{OUT}/tail_k8_k16.png", dpi=120)
+                                    worst_pair=pairs[int(np.argmin(acc))],
+                                    sorted_worst100=[round(float(x), 4) for x in s_[:100]])
 
-    # curves figure: one panel per H pair, both readouts
-    fig, axs = plt.subplots(1, len(H), figsize=(4.2 * len(H), 3.8), sharey=True)
-    for ax_, p in zip(np.atleast_1d(axs), H):
-        for a, col in (("GLOBAL", "k"), (spec_of[p], "C3"), (fam_of[p], "C0")):
-            for r, ls in (("lin", "-"), ("att", "--")):
-                ax_.plot(KS, curves[r][p][a], ls, c=col, label=f"{a.split(':')[0]} {r}")
-        ax_.axhline(0.95, c="gray", lw=0.6)
-        ax_.set(title=p.replace(" | ", "\n").replace("-Instruct", ""), xlabel="k")
-        ax_.title.set_fontsize(8)
-    np.atleast_1d(axs)[0].set_ylabel("two-logit accuracy (S_test)")
-    np.atleast_1d(axs)[0].legend(fontsize=7)
-    fig.tight_layout(); fig.savefig(f"{OUT}/curves.png", dpi=120)
+    # figures are drawn by experiments/d025_plots.py from analysis.json (llmmap-gpu has no matplotlib)
+    plot_arms = {p: ["GLOBAL", spec_of[p], fam_of[p]] for p in H}
 
     # ---------- (e) S_val linear
     sval = {}
@@ -291,7 +273,7 @@ def main():
         secondary_g=dict(identical_greedy_answers=hs["descriptive"]["byte_identical_greedy_answers_per_H_pair"],
                          peak_k=sel["peak_k"], overlap_with_GLOBAL_by_k=sel["overlap_with_GLOBAL_by_k"],
                          d022_union_flags=sel["d022_union_flags"], chains=sel["chains"]),
-        identical_input_k_checked=ident_ok, curves=curves)
+        identical_input_k_checked=ident_ok, curves=curves, plot_arms=plot_arms)
     json.dump(out, open(f"{OUT}/analysis.json", "w"), indent=1)
     print(f"[S3] A1 k-to-0.95: {k95}\n[S3] (e) S_val {sval}\n[S3] (f) {stab}\n[S3] tail {tail}\n"
           f"[S3] disagreements {disagree}\n[S3] wrote {OUT}/analysis.json", flush=True)

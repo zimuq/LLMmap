@@ -1,0 +1,35 @@
+=== arm: FAM:Mistral node: c638-072.vista.tacc.utexas.edu start: Wed Sep 30 09:59:14 PM CDT 2026 ===
+[S2] FAM:Mistral k=1 linear test top1 0.7276 (3s, 609 it)
+[S2] FAM:Mistral k=1 attention mean top1 0.6333 [0.5 min]
+[S2] FAM:Mistral k=2 linear test top1 0.7892 (5s, 534 it)
+[S2] FAM:Mistral k=2 attention mean top1 0.7031 [0.9 min]
+[S2] FAM:Mistral k=3 linear test top1 0.8238 (7s, 496 it)
+[S2] FAM:Mistral k=3 attention mean top1 0.7771 [1.4 min]
+[S2] FAM:Mistral k=4 linear test top1 0.8411 (8s, 451 it)
+[S2] FAM:Mistral k=4 attention mean top1 0.7732 [1.9 min]
+[S2] FAM:Mistral k=5 linear test top1 0.8530 (10s, 461 it)
+[S2] FAM:Mistral k=5 attention mean top1 0.7760 [2.5 min]
+[S2] FAM:Mistral k=6 linear test top1 0.8681 (13s, 473 it)
+[S2] FAM:Mistral k=6 attention mean top1 0.8002 [3.1 min]
+[S2] FAM:Mistral k=7 linear test top1 0.8692 (14s, 456 it)
+[S2] FAM:Mistral k=7 attention mean top1 0.8067 [3.7 min]
+[S2] FAM:Mistral k=8 linear test top1 0.8703 (15s, 407 it)
+[S2] FAM:Mistral k=8 attention mean top1 0.7924 [4.3 min]
+[S2] FAM:Mistral k=9 linear test top1 0.8768 (19s, 461 it)
+[S2] FAM:Mistral k=9 attention mean top1 0.8158 [5.0 min]
+[S2] FAM:Mistral k=10 linear test top1 0.8811 (21s, 445 it)
+[S2] FAM:Mistral k=10 attention mean top1 0.8188 [5.8 min]
+[S2] FAM:Mistral k=11 linear test top1 0.8854 (23s, 463 it)
+[S2] FAM:Mistral k=11 attention mean top1 0.8121 [6.5 min]
+[S2] FAM:Mistral k=12 linear test top1 0.8822 (23s, 428 it)
+[S2] FAM:Mistral k=12 attention mean top1 0.8067 [7.3 min]
+[S2] FAM:Mistral k=13 linear test top1 0.8811 (22s, 380 it)
+[S2] FAM:Mistral k=13 attention mean top1 0.8158 [8.1 min]
+[S2] FAM:Mistral k=14 linear test top1 0.8897 (27s, 421 it)
+[S2] FAM:Mistral k=14 attention mean top1 0.8305 [9.0 min]
+[S2] FAM:Mistral k=15 linear test top1 0.8843 (29s, 430 it)
+[S2] FAM:Mistral k=15 attention mean top1 0.8160 [10.0 min]
+[S2] FAM:Mistral k=16 linear test top1 0.8843 (31s, 422 it)
+[S2] FAM:Mistral k=16 attention mean top1 0.8208 [10.9 min]
+[S2] FAM:Mistral done, wall 10.9 min
+=== end: Wed Sep 30 10:10:32 PM CDT 2026 ===

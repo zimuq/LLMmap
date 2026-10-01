@@ -1,0 +1,35 @@
+=== arm: SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct node: c638-151.vista.tacc.utexas.edu start: Wed Sep 30 09:57:14 PM CDT 2026 ===
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=1 linear test top1 0.7103 (4s, 844 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=1 attention mean top1 0.6019 [0.6 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=2 linear test top1 0.7470 (10s, 982 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=2 attention mean top1 0.6733 [1.0 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=3 linear test top1 0.8022 (14s, 958 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=3 attention mean top1 0.7256 [1.6 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=4 linear test top1 0.8097 (17s, 965 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=4 attention mean top1 0.7606 [2.3 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=5 linear test top1 0.8173 (24s, 1085 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=5 attention mean top1 0.7827 [3.1 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=6 linear test top1 0.8292 (26s, 948 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=6 attention mean top1 0.7542 [3.8 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=7 linear test top1 0.8422 (32s, 1006 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=7 attention mean top1 0.7937 [4.7 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=8 linear test top1 0.8476 (31s, 846 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=8 attention mean top1 0.8052 [5.6 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=9 linear test top1 0.8486 (34s, 830 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=9 attention mean top1 0.8227 [6.6 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=10 linear test top1 0.8584 (39s, 861 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=10 attention mean top1 0.8242 [7.6 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=11 linear test top1 0.8605 (42s, 825 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=11 attention mean top1 0.8205 [8.7 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=12 linear test top1 0.8681 (48s, 838 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=12 attention mean top1 0.8218 [9.9 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=13 linear test top1 0.8735 (48s, 802 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=13 attention mean top1 0.8339 [11.0 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=14 linear test top1 0.8746 (49s, 758 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=14 attention mean top1 0.8398 [12.3 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=15 linear test top1 0.8735 (55s, 803 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=15 attention mean top1 0.8305 [13.6 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=16 linear test top1 0.8832 (55s, 741 it)
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct k=16 attention mean top1 0.8359 [14.9 min]
+[S2] SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct done, wall 14.9 min
+=== end: Wed Sep 30 10:13:44 PM CDT 2026 ===

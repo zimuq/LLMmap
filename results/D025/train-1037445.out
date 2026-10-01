@@ -1,0 +1,35 @@
+=== arm: SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct node: c638-051.vista.tacc.utexas.edu start: Wed Sep 30 09:58:07 PM CDT 2026 ===
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=1 linear test top1 0.4400 (5s, 907 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=1 attention mean top1 0.3405 [0.5 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=2 linear test top1 0.6886 (8s, 882 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=2 attention mean top1 0.4969 [1.0 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=3 linear test top1 0.7059 (14s, 941 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=3 attention mean top1 0.5514 [1.5 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=4 linear test top1 0.7168 (18s, 1022 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=4 attention mean top1 0.5859 [2.1 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=5 linear test top1 0.7265 (23s, 1020 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=5 attention mean top1 0.6091 [2.9 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=6 linear test top1 0.7600 (27s, 981 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=6 attention mean top1 0.6450 [3.7 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=7 linear test top1 0.7957 (26s, 820 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=7 attention mean top1 0.6956 [4.5 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=8 linear test top1 0.8389 (26s, 710 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=8 attention mean top1 0.7544 [5.4 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=9 linear test top1 0.8530 (30s, 737 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=9 attention mean top1 0.7894 [6.4 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=10 linear test top1 0.8616 (29s, 633 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=10 attention mean top1 0.7907 [7.3 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=11 linear test top1 0.8735 (29s, 585 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=11 attention mean top1 0.7935 [8.3 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=12 linear test top1 0.8973 (33s, 594 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=12 attention mean top1 0.8188 [9.4 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=13 linear test top1 0.9038 (35s, 580 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=13 attention mean top1 0.8074 [10.5 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=14 linear test top1 0.9070 (34s, 532 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=14 attention mean top1 0.8058 [11.5 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=15 linear test top1 0.9092 (34s, 497 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=15 attention mean top1 0.8303 [12.7 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=16 linear test top1 0.9146 (36s, 491 it)
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct k=16 attention mean top1 0.8223 [13.8 min]
+[S2] SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct done, wall 13.8 min
+=== end: Wed Sep 30 10:12:37 PM CDT 2026 ===

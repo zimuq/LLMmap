@@ -1,0 +1,35 @@
+=== arm: FAM:Llama node: c639-031.vista.tacc.utexas.edu start: Wed Sep 30 09:58:08 PM CDT 2026 ===
+[S2] FAM:Llama k=1 linear test top1 0.6259 (4s, 787 it)
+[S2] FAM:Llama k=1 attention mean top1 0.5083 [0.5 min]
+[S2] FAM:Llama k=2 linear test top1 0.7103 (9s, 908 it)
+[S2] FAM:Llama k=2 attention mean top1 0.6169 [1.0 min]
+[S2] FAM:Llama k=3 linear test top1 0.7849 (15s, 1020 it)
+[S2] FAM:Llama k=3 attention mean top1 0.7098 [1.6 min]
+[S2] FAM:Llama k=4 linear test top1 0.8216 (14s, 804 it)
+[S2] FAM:Llama k=4 attention mean top1 0.7258 [2.2 min]
+[S2] FAM:Llama k=5 linear test top1 0.8530 (18s, 808 it)
+[S2] FAM:Llama k=5 attention mean top1 0.7375 [2.9 min]
+[S2] FAM:Llama k=6 linear test top1 0.8573 (21s, 752 it)
+[S2] FAM:Llama k=6 attention mean top1 0.7572 [3.5 min]
+[S2] FAM:Llama k=7 linear test top1 0.8757 (23s, 718 it)
+[S2] FAM:Llama k=7 attention mean top1 0.7909 [4.3 min]
+[S2] FAM:Llama k=8 linear test top1 0.8822 (23s, 642 it)
+[S2] FAM:Llama k=8 attention mean top1 0.7697 [5.0 min]
+[S2] FAM:Llama k=9 linear test top1 0.8973 (26s, 630 it)
+[S2] FAM:Llama k=9 attention mean top1 0.8112 [5.9 min]
+[S2] FAM:Llama k=10 linear test top1 0.9103 (28s, 612 it)
+[S2] FAM:Llama k=10 attention mean top1 0.8190 [6.7 min]
+[S2] FAM:Llama k=11 linear test top1 0.9114 (31s, 622 it)
+[S2] FAM:Llama k=11 attention mean top1 0.8355 [7.8 min]
+[S2] FAM:Llama k=12 linear test top1 0.9114 (34s, 627 it)
+[S2] FAM:Llama k=12 attention mean top1 0.8402 [8.9 min]
+[S2] FAM:Llama k=13 linear test top1 0.9222 (36s, 608 it)
+[S2] FAM:Llama k=13 attention mean top1 0.8432 [10.1 min]
+[S2] FAM:Llama k=14 linear test top1 0.9265 (36s, 561 it)
+[S2] FAM:Llama k=14 attention mean top1 0.8210 [11.1 min]
+[S2] FAM:Llama k=15 linear test top1 0.9286 (34s, 508 it)
+[S2] FAM:Llama k=15 attention mean top1 0.8231 [12.1 min]
+[S2] FAM:Llama k=16 linear test top1 0.9286 (40s, 531 it)
+[S2] FAM:Llama k=16 attention mean top1 0.8406 [13.3 min]
+[S2] FAM:Llama done, wall 13.4 min
+=== end: Wed Sep 30 10:12:10 PM CDT 2026 ===

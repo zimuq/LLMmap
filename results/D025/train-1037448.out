@@ -1,0 +1,35 @@
+=== arm: FAM:Phi node: c639-051.vista.tacc.utexas.edu start: Wed Sep 30 09:58:08 PM CDT 2026 ===
+[S2] FAM:Phi k=1 linear test top1 0.5676 (3s, 582 it)
+[S2] FAM:Phi k=1 attention mean top1 0.4305 [0.6 min]
+[S2] FAM:Phi k=2 linear test top1 0.7827 (6s, 681 it)
+[S2] FAM:Phi k=2 attention mean top1 0.7027 [1.0 min]
+[S2] FAM:Phi k=3 linear test top1 0.8130 (8s, 558 it)
+[S2] FAM:Phi k=3 attention mean top1 0.6958 [1.5 min]
+[S2] FAM:Phi k=4 linear test top1 0.8432 (10s, 528 it)
+[S2] FAM:Phi k=4 attention mean top1 0.7831 [2.2 min]
+[S2] FAM:Phi k=5 linear test top1 0.8659 (12s, 528 it)
+[S2] FAM:Phi k=5 attention mean top1 0.8132 [3.0 min]
+[S2] FAM:Phi k=6 linear test top1 0.8757 (13s, 473 it)
+[S2] FAM:Phi k=6 attention mean top1 0.8227 [3.7 min]
+[S2] FAM:Phi k=7 linear test top1 0.8822 (15s, 467 it)
+[S2] FAM:Phi k=7 attention mean top1 0.8270 [4.5 min]
+[S2] FAM:Phi k=8 linear test top1 0.8876 (16s, 431 it)
+[S2] FAM:Phi k=8 attention mean top1 0.8326 [5.4 min]
+[S2] FAM:Phi k=9 linear test top1 0.8930 (20s, 484 it)
+[S2] FAM:Phi k=9 attention mean top1 0.8326 [6.3 min]
+[S2] FAM:Phi k=10 linear test top1 0.8995 (21s, 451 it)
+[S2] FAM:Phi k=10 attention mean top1 0.8244 [7.0 min]
+[S2] FAM:Phi k=11 linear test top1 0.9049 (22s, 421 it)
+[S2] FAM:Phi k=11 attention mean top1 0.8251 [7.9 min]
+[S2] FAM:Phi k=12 linear test top1 0.9027 (21s, 384 it)
+[S2] FAM:Phi k=12 attention mean top1 0.8342 [8.8 min]
+[S2] FAM:Phi k=13 linear test top1 0.9103 (24s, 404 it)
+[S2] FAM:Phi k=13 attention mean top1 0.8391 [9.8 min]
+[S2] FAM:Phi k=14 linear test top1 0.9211 (26s, 405 it)
+[S2] FAM:Phi k=14 attention mean top1 0.8357 [10.8 min]
+[S2] FAM:Phi k=15 linear test top1 0.9178 (26s, 378 it)
+[S2] FAM:Phi k=15 attention mean top1 0.8329 [11.8 min]
+[S2] FAM:Phi k=16 linear test top1 0.9103 (30s, 403 it)
+[S2] FAM:Phi k=16 attention mean top1 0.8253 [12.8 min]
+[S2] FAM:Phi done, wall 12.8 min
+=== end: Wed Sep 30 10:11:40 PM CDT 2026 ===

@@ -1,0 +1,35 @@
+=== arm: SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 node: c639-002.vista.tacc.utexas.edu start: Wed Sep 30 09:57:14 PM CDT 2026 ===
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=1 linear test top1 0.7276 (3s, 609 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=1 attention mean top1 0.6333 [0.5 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=2 linear test top1 0.7924 (6s, 580 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=2 attention mean top1 0.7044 [0.9 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=3 linear test top1 0.8270 (7s, 516 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=3 attention mean top1 0.7261 [1.3 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=4 linear test top1 0.8541 (8s, 431 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=4 attention mean top1 0.7775 [1.9 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=5 linear test top1 0.8530 (11s, 479 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=5 attention mean top1 0.7918 [2.4 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=6 linear test top1 0.8562 (12s, 442 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=6 attention mean top1 0.7842 [3.0 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=7 linear test top1 0.8768 (16s, 476 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=7 attention mean top1 0.8186 [3.7 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=8 linear test top1 0.8692 (16s, 430 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=8 attention mean top1 0.8089 [4.4 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=9 linear test top1 0.8768 (18s, 435 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=9 attention mean top1 0.8151 [5.1 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=10 linear test top1 0.8811 (20s, 440 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=10 attention mean top1 0.8218 [5.8 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=11 linear test top1 0.8854 (21s, 427 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=11 attention mean top1 0.8184 [6.6 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=12 linear test top1 0.8822 (25s, 440 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=12 attention mean top1 0.8104 [7.5 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=13 linear test top1 0.8811 (25s, 418 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=13 attention mean top1 0.8141 [8.4 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=14 linear test top1 0.8886 (28s, 432 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=14 attention mean top1 0.8298 [9.3 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=15 linear test top1 0.8854 (29s, 421 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=15 attention mean top1 0.8190 [10.3 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=16 linear test top1 0.8822 (31s, 417 it)
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 k=16 attention mean top1 0.8346 [11.4 min]
+[S2] SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3 done, wall 11.4 min
+=== end: Wed Sep 30 10:10:17 PM CDT 2026 ===

@@ -13,3 +13,6 @@ results/D006/shards/
 # D009: trained checkpoints (~12 MB each, 36 of them) stay out of git
 results/**/*.ckpt
 results/**/*.pt
+
+# D025: per-run test/val logits (~110 MB total) stay on $WORK; counts are committed
+results/D025/logits_*.npz

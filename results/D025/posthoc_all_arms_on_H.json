@@ -1,0 +1,1078 @@
+{
+ "schema": "d025-posthoc-v1",
+ "label": "POST HOC, descriptive; not pre-registered",
+ "rows": {
+  "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct": {
+   "lin": {
+    "global_k8": 0.98,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.98,
+      "minus_global_k8": 0.0,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.98,
+      "minus_global_k8": 0.0,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.98,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.06,
+       0.06
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.98,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.06,
+       0.06
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.96,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.06,
+       0.0
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.96,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.06,
+       0.0
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.96,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.06,
+       0.0
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 1.0,
+      "minus_global_k8": 0.02,
+      "ci": [
+       0.0,
+       0.06
+      ]
+     }
+    }
+   },
+   "att": {
+    "global_k8": 0.968,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 0.98,
+      "minus_global_k8": 0.012,
+      "ci": [
+       -0.036,
+       0.056
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 0.976,
+      "minus_global_k8": 0.008,
+      "ci": [
+       -0.044,
+       0.056
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.968,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.048,
+       0.044
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.96,
+      "minus_global_k8": -0.008,
+      "ci": [
+       -0.056,
+       0.044
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.964,
+      "minus_global_k8": -0.004,
+      "ci": [
+       -0.056,
+       0.044
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.028,
+      "ci": [
+       -0.096,
+       0.032
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 0.972,
+      "minus_global_k8": 0.004,
+      "ci": [
+       -0.048,
+       0.048
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 0.944,
+      "minus_global_k8": -0.024,
+      "ci": [
+       -0.084,
+       0.032
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.94,
+      "minus_global_k8": -0.028,
+      "ci": [
+       -0.092,
+       0.032
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 0.948,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.088,
+       0.04
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 0.932,
+      "minus_global_k8": -0.036,
+      "ci": [
+       -0.092,
+       0.016
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.92,
+      "minus_global_k8": -0.048,
+      "ci": [
+       -0.112,
+       0.016
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.952,
+      "minus_global_k8": -0.016,
+      "ci": [
+       -0.072,
+       0.032
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.948,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.08,
+       0.032
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 0.972,
+      "minus_global_k8": 0.004,
+      "ci": [
+       -0.048,
+       0.048
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 0.944,
+      "minus_global_k8": -0.024,
+      "ci": [
+       -0.084,
+       0.032
+      ]
+     }
+    }
+   }
+  },
+  "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+   "lin": {
+    "global_k8": 0.82,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 0.88,
+      "minus_global_k8": 0.06,
+      "ci": [
+       -0.08,
+       0.2
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 0.86,
+      "minus_global_k8": 0.04,
+      "ci": [
+       -0.12,
+       0.2
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.6,
+      "minus_global_k8": -0.22,
+      "ci": [
+       -0.38,
+       -0.06
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.66,
+      "minus_global_k8": -0.16,
+      "ci": [
+       -0.32,
+       -0.02
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.74,
+      "minus_global_k8": -0.08,
+      "ci": [
+       -0.24,
+       0.08
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 0.76,
+      "minus_global_k8": -0.06,
+      "ci": [
+       -0.2,
+       0.06
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 0.64,
+      "minus_global_k8": -0.18,
+      "ci": [
+       -0.34,
+       -0.02
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 0.78,
+      "minus_global_k8": -0.04,
+      "ci": [
+       -0.16,
+       0.06
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.72,
+      "minus_global_k8": -0.1,
+      "ci": [
+       -0.24,
+       0.04
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 0.76,
+      "minus_global_k8": -0.06,
+      "ci": [
+       -0.2,
+       0.06
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 0.8,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.18,
+       0.14
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.78,
+      "minus_global_k8": -0.04,
+      "ci": [
+       -0.2,
+       0.12
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.86,
+      "minus_global_k8": 0.04,
+      "ci": [
+       -0.06,
+       0.14
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.88,
+      "minus_global_k8": 0.06,
+      "ci": [
+       -0.02,
+       0.14
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 0.64,
+      "minus_global_k8": -0.18,
+      "ci": [
+       -0.34,
+       -0.02
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 0.78,
+      "minus_global_k8": -0.04,
+      "ci": [
+       -0.16,
+       0.06
+      ]
+     }
+    }
+   },
+   "att": {
+    "global_k8": 0.732,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 0.752,
+      "minus_global_k8": 0.02,
+      "ci": [
+       -0.12,
+       0.164
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 0.708,
+      "minus_global_k8": -0.024,
+      "ci": [
+       -0.16,
+       0.116
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.616,
+      "minus_global_k8": -0.116,
+      "ci": [
+       -0.236,
+       0.016
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.66,
+      "minus_global_k8": -0.072,
+      "ci": [
+       -0.1841,
+       0.036
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.704,
+      "minus_global_k8": -0.028,
+      "ci": [
+       -0.1401,
+       0.096
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 0.72,
+      "minus_global_k8": -0.012,
+      "ci": [
+       -0.132,
+       0.1121
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 0.592,
+      "minus_global_k8": -0.14,
+      "ci": [
+       -0.284,
+       0.024
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 0.596,
+      "minus_global_k8": -0.136,
+      "ci": [
+       -0.2641,
+       -0.012
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.668,
+      "minus_global_k8": -0.064,
+      "ci": [
+       -0.184,
+       0.06
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 0.732,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.12,
+       0.124
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 0.608,
+      "minus_global_k8": -0.124,
+      "ci": [
+       -0.26,
+       0.016
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.652,
+      "minus_global_k8": -0.08,
+      "ci": [
+       -0.184,
+       0.028
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.864,
+      "minus_global_k8": 0.132,
+      "ci": [
+       0.016,
+       0.248
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.856,
+      "minus_global_k8": 0.124,
+      "ci": [
+       0.012,
+       0.24
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 0.592,
+      "minus_global_k8": -0.14,
+      "ci": [
+       -0.284,
+       0.024
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 0.596,
+      "minus_global_k8": -0.136,
+      "ci": [
+       -0.2641,
+       -0.012
+      ]
+     }
+    }
+   }
+  },
+  "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+   "lin": {
+    "global_k8": 0.96,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 0.88,
+      "minus_global_k8": -0.08,
+      "ci": [
+       -0.18,
+       0.02
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.12,
+       0.06
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.78,
+      "minus_global_k8": -0.18,
+      "ci": [
+       -0.28,
+       -0.08
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.78,
+      "minus_global_k8": -0.18,
+      "ci": [
+       -0.28,
+       -0.1
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.06,
+       0.0
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.06,
+       0.0
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 0.84,
+      "minus_global_k8": -0.12,
+      "ci": [
+       -0.24,
+       0.0
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 0.9,
+      "minus_global_k8": -0.06,
+      "ci": [
+       -0.16,
+       0.04
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.06,
+       0.0
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.06,
+       0.0
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 0.9,
+      "minus_global_k8": -0.06,
+      "ci": [
+       -0.14,
+       0.02
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.96,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.08,
+       0.08
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.72,
+      "minus_global_k8": -0.24,
+      "ci": [
+       -0.34,
+       -0.14
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.84,
+      "minus_global_k8": -0.12,
+      "ci": [
+       -0.2205,
+       -0.04
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 0.84,
+      "minus_global_k8": -0.12,
+      "ci": [
+       -0.24,
+       0.0
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 0.9,
+      "minus_global_k8": -0.06,
+      "ci": [
+       -0.16,
+       0.04
+      ]
+     }
+    }
+   },
+   "att": {
+    "global_k8": 0.896,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 0.732,
+      "minus_global_k8": -0.164,
+      "ci": [
+       -0.2681,
+       -0.056
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 0.784,
+      "minus_global_k8": -0.112,
+      "ci": [
+       -0.228,
+       0.008
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.732,
+      "minus_global_k8": -0.164,
+      "ci": [
+       -0.272,
+       -0.06
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.732,
+      "minus_global_k8": -0.164,
+      "ci": [
+       -0.284,
+       -0.044
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.924,
+      "minus_global_k8": 0.028,
+      "ci": [
+       -0.02,
+       0.088
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 0.924,
+      "minus_global_k8": 0.028,
+      "ci": [
+       -0.024,
+       0.088
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 0.728,
+      "minus_global_k8": -0.168,
+      "ci": [
+       -0.268,
+       -0.076
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 0.784,
+      "minus_global_k8": -0.112,
+      "ci": [
+       -0.212,
+       0.0
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.908,
+      "minus_global_k8": 0.012,
+      "ci": [
+       -0.06,
+       0.088
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 0.924,
+      "minus_global_k8": 0.028,
+      "ci": [
+       -0.028,
+       0.092
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 0.744,
+      "minus_global_k8": -0.152,
+      "ci": [
+       -0.264,
+       -0.024
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.78,
+      "minus_global_k8": -0.116,
+      "ci": [
+       -0.236,
+       0.0041
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.704,
+      "minus_global_k8": -0.192,
+      "ci": [
+       -0.308,
+       -0.084
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.78,
+      "minus_global_k8": -0.116,
+      "ci": [
+       -0.224,
+       -0.024
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 0.728,
+      "minus_global_k8": -0.168,
+      "ci": [
+       -0.268,
+       -0.076
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 0.784,
+      "minus_global_k8": -0.112,
+      "ci": [
+       -0.212,
+       0.0
+      ]
+     }
+    }
+   }
+  },
+  "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+   "lin": {
+    "global_k8": 0.96,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.12,
+       0.06
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 0.92,
+      "minus_global_k8": -0.04,
+      "ci": [
+       -0.12,
+       0.0205
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.76,
+      "minus_global_k8": -0.2,
+      "ci": [
+       -0.32,
+       -0.08
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.86,
+      "minus_global_k8": -0.1,
+      "ci": [
+       -0.2205,
+       0.02
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.96,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.08,
+       0.08
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.1,
+       0.08
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 0.96,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.08,
+       0.08
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.08,
+       0.04
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.96,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.08,
+       0.08
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.1,
+       0.08
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 0.82,
+      "minus_global_k8": -0.14,
+      "ci": [
+       -0.26,
+       -0.02
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.08,
+       0.04
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.92,
+      "minus_global_k8": -0.04,
+      "ci": [
+       -0.14,
+       0.06
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.92,
+      "minus_global_k8": -0.04,
+      "ci": [
+       -0.12,
+       0.04
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 0.96,
+      "minus_global_k8": 0.0,
+      "ci": [
+       -0.08,
+       0.08
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 0.94,
+      "minus_global_k8": -0.02,
+      "ci": [
+       -0.08,
+       0.04
+      ]
+     }
+    }
+   },
+   "att": {
+    "global_k8": 0.832,
+    "arms": {
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@8": {
+      "acc": 0.84,
+      "minus_global_k8": 0.008,
+      "ci": [
+       -0.096,
+       0.12
+      ]
+     },
+     "SPEC:Llama-3.2-1B-Instruct|Meta-Llama-3.1-8B-Instruct@16": {
+      "acc": 0.828,
+      "minus_global_k8": -0.004,
+      "ci": [
+       -0.112,
+       0.108
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@8": {
+      "acc": 0.72,
+      "minus_global_k8": -0.112,
+      "ci": [
+       -0.24,
+       0.02
+      ]
+     },
+     "SPEC:Phi-3-medium-128k-instruct|Phi-3-medium-4k-instruct@16": {
+      "acc": 0.74,
+      "minus_global_k8": -0.092,
+      "ci": [
+       -0.224,
+       0.044
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@8": {
+      "acc": 0.876,
+      "minus_global_k8": 0.044,
+      "ci": [
+       -0.072,
+       0.152
+      ]
+     },
+     "SPEC:Mistral-7B-Instruct-v0.2|Mistral-7B-Instruct-v0.3@16": {
+      "acc": 0.868,
+      "minus_global_k8": 0.036,
+      "ci": [
+       -0.08,
+       0.144
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@8": {
+      "acc": 0.856,
+      "minus_global_k8": 0.024,
+      "ci": [
+       -0.112,
+       0.156
+      ]
+     },
+     "SPEC:Falcon3-10B-Instruct|Falcon3-7B-Instruct@16": {
+      "acc": 0.896,
+      "minus_global_k8": 0.064,
+      "ci": [
+       -0.0401,
+       0.176
+      ]
+     },
+     "FAM:Mistral@8": {
+      "acc": 0.88,
+      "minus_global_k8": 0.048,
+      "ci": [
+       -0.036,
+       0.136
+      ]
+     },
+     "FAM:Mistral@16": {
+      "acc": 0.872,
+      "minus_global_k8": 0.04,
+      "ci": [
+       -0.068,
+       0.144
+      ]
+     },
+     "FAM:Llama@8": {
+      "acc": 0.74,
+      "minus_global_k8": -0.092,
+      "ci": [
+       -0.236,
+       0.056
+      ]
+     },
+     "FAM:Llama@16": {
+      "acc": 0.848,
+      "minus_global_k8": 0.016,
+      "ci": [
+       -0.092,
+       0.128
+      ]
+     },
+     "FAM:Phi@8": {
+      "acc": 0.864,
+      "minus_global_k8": 0.032,
+      "ci": [
+       -0.076,
+       0.148
+      ]
+     },
+     "FAM:Phi@16": {
+      "acc": 0.816,
+      "minus_global_k8": -0.016,
+      "ci": [
+       -0.14,
+       0.112
+      ]
+     },
+     "FAM:Falcon3@8": {
+      "acc": 0.856,
+      "minus_global_k8": 0.024,
+      "ci": [
+       -0.112,
+       0.156
+      ]
+     },
+     "FAM:Falcon3@16": {
+      "acc": 0.896,
+      "minus_global_k8": 0.064,
+      "ci": [
+       -0.0401,
+       0.176
+      ]
+     }
+    }
+   }
+  }
+ }
+}
