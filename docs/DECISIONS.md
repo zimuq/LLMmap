@@ -1700,6 +1700,40 @@ interpretable; specialist-based two-stage design not pursued
   if the approach is adopted.
   Decided by: human (resume Phase 3 for this pilot); design-side (D026's
   design).
+
+[2026-10-01] D027 drafted -- corpus-track screen for a v2 model universe
+  Decision (human, chat 2026-10-01): look for a hard-models set among
+  recent (2024-10 -> 2026) open models using only LLMmap's own 8 queries,
+  then generate a new full corpus over our pool for the chosen universe.
+  Human accepted: risk (a) selection bias (paper8 grades, never chooses);
+  risk (b) "LLMmap performance" = closed-set retrained protocol, with a
+  classifier-free 1-NN readout reported alongside (descriptive only, never
+  defines H); stage A (screen, D027) and stage B (corpus v2, D028) as
+  separate D's; thinking disabled; design-side defaults otherwise.
+  Track label: D027 keeps the sequential id and carries
+  `track: CORPUS (auxiliary)` in its header and PLAN row (no new id
+  series -- that would change CLAUDE.md and TACC's lookup).
+  Design-side calls in D027 (routine):
+  - candidate rule fixed before data: HF createdAt 2024-10-01..2026-09-30
+    (one pre-window same-base twin: Qwen2.5-7B-Instruct), general
+    instruct models, <= 35B total params, thinking switchable via the
+    template (`enable_thinking=False`) or absent, >= 1 N-neighbour, own
+    chat template (no fallback templates); 49 candidates listed and
+    verified against the HF API; eligible-but-omitted models listed;
+  - new-row lineage = product line + major version (v1 ids reused only for
+    the same line); N among the 37 stays D025's 65 pairs;
+  - v2 universe = 37 + every preflight survivor, not only hard ones (the
+    default the human accepted); the hard set is an endpoint;
+  - the 37 are regenerated for paper8 in the same new environment, so the
+    screen has no old-vs-new environment confound; environment drift vs
+    corpus_v1 is measured for D028;
+  - H' = D7 rule unchanged (B0' attention, 5 seeds, S_val, < 0.90);
+    labels HARDER (>= 3 new hard pairs over >= 2 lineages) / NOT HARDER /
+    MARGINAL; instrument control = D025's two stably-hard pairs stay
+    < 0.90; no S_test generated;
+  - I7: schema `cdqd-corpus-v2-screen`, migration note before S1.
+  Decided by: human (direction, risks, stages, thinking off); design-side
+  (D027's design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
