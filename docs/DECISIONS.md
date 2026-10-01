@@ -1675,6 +1675,31 @@ interpretable; specialist-based two-stage design not pursued
   METHOD §5.4 stage 1 on two models; go/no-go: beat ~.90 on the pair).
   Decided by: design-side (closure, interpretation, not drafting the
   two-stage D); the pilot is the human's call (Phase 3).
+
+[2026-10-01] Phase 3 resumed as a single-pair probe pilot; D026 drafted
+  Decision (human, 2026-10-01, "好，做这个探针试验，起草D"): run the
+  Phi-3-medium-128k/4k probe pilot recommended in D025's post-hoc Review.
+  Scope is this pair only; stage 2 (all 37 models, extended pool) needs a
+  new human decision after a GO.
+  Design-side calls in D026 (routine):
+  - the probe list is fixed verbatim in the D (pre-registration): 8
+    context-length self-knowledge, 6 self-description, 6 long-input
+    retrieval (2k control / 6k / 12k);
+  - the primary uses the short families only; long inputs are
+    deployment-dependent and never pooled;
+  - selection on S_val log-loss with a two-way linear classifier, never a
+    build statistic (D025 lesson);
+  - CEILING label first (D025 lesson);
+  - a harness-parity check (>= 90% byte-identical regeneration on greedy
+    configs) before any new generation;
+  - new rows go to a separate versioned corpus extension with the same
+    schema (I7 note before writing).
+  Deviation from METHOD §5.4, noted rather than revised: probes are
+  hand-written from the twins' known structural difference instead of
+  LLM-generated with few-shot feedback. A METHOD change would only follow
+  if the approach is adopted.
+  Decided by: human (resume Phase 3 for this pilot); design-side (D026's
+  design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

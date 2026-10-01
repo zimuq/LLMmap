@@ -1371,6 +1371,25 @@ worst6 and worst16 were all picked on S_test from the compared methods'
 own results. Any *new* method compared with JointGreedy on them gains from
 regression to the mean. They stay as historical description only.
 
+**Addendum, 2026-10-01 — consensus6 without the Phi-3-medium twins
+("consensus4": the Falcon3 and Mistral v0.2/v0.3 pairs).** Same source and
+footing as above (stored `per_model`, 5-seed means, descriptive).
+
+| set | paper8 `k`=8 [seed range] | JointGreedy `k`=8 [seed range] | Δ `k`=8 | mean Δ over `k`=1..8 |
+|---|---|---|---|---|
+| consensus6 | .640 [.607, .693] | .755 [.720, .780] | +11.5 | +6.9 |
+| consensus4 (no Phi) | .686 [.630, .770] | .796 [.760, .840] | +11.0 | +7.8 |
+| Phi-3-medium twins | .548 | .672 | +12.4 | +5.0 (−8.0 / −6.4 at `k`=4/5) |
+| Falcon3 twins | .680 | .784 | +10.4 | +9.1 |
+| Mistral v0.2/v0.3 | .692 | .808 | +11.6 | +6.6 |
+| all 37 | .845 | .876 | +3.0 | +2.6 |
+
+**Why dropping Phi barely changes `k`=8.** JointGreedy's 37-way gain on
+each pair comes mostly from fewer confusions with *third* models, not from
+separating the twins. Twin-vs-twin (two-logit) accuracy moves only +2.0
+(Phi), +2.8 (Falcon) and +7.2 (Mistral). On Phi the 37-way gain is also
+unstable across `k`.
+
 **Consequences:**
 - the hard-model endpoint is now family level;
 - H is defined on S_val by an external reference (`DECISIONS.md` D7,
