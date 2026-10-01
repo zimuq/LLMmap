@@ -1647,6 +1647,34 @@ attribution; linear stays primary
   Decided by: design-side (correction of own specification error before
   any data; no invariant, METHOD or open Part-2 item touched). The human
   was offered an explicit override (attention primary) before S1.
+
+[2026-10-01] D025 closed -- primary POOL-LIMITED by rule, not
+interpretable; specialist-based two-stage design not pursued
+  Decision: D025 CLOSED. R verified against analysis.json,
+  posthoc_all_arms_on_H.json and the job logs; no discrepancy.
+  The pre-registered primary label (linear, Phi-3-medium) is POOL-LIMITED
+  and is recorded as such, but its premise failed: the pair specialist is
+  resolvably worse than the global chain on its own pair (a = -0.22
+  [-0.38, -0.06]), worse in both directions. A label resting on a failed
+  instrument is not evidence about the pool (cf. D014).
+  Design-side error (second in this D): SPEC's k=1 pick is D011's per-pair
+  build argmax, already known to be anti-informative (median .54 vs .82
+  random). Lesson: any specialist objective must use a cross-fitted
+  per-pair statistic (D021 ADD machinery), never the raw build argmax; the
+  global CVaR over 666 pairs works partly because its tail averages over
+  66 pairs.
+  Kept from D025: Falcon/Mistral/Llama CEILING under linear (Falcon only at
+  k=8 -- correction to the Call-1 attribution); the Phi-3 family specialist
+  reaches .86-.90 on Phi-3-medium (post hoc) but does not raise family
+  recall; no arm reaches .95 on Phi-3-medium at k <= 16 under either
+  readout; GLOBAL k=8 -> 16 lifts mean top-1 but not the stably-hard core.
+  Downstream: the BUDGET-LIMITED branch (two-stage specialist D) is not
+  triggered and is not drafted. The Phase-3 question goes back to the
+  human with a recommendation: a single-pair probe pilot for
+  Phi-3-medium-128k/4k (context-length self-knowledge; >4k-token inputs;
+  METHOD §5.4 stage 1 on two models; go/no-go: beat ~.90 on the pair).
+  Decided by: design-side (closure, interpretation, not drafting the
+  two-stage D); the pilot is the human's call (Phase 3).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

@@ -1413,5 +1413,52 @@ pairs (the D7 set H):
 
 ---
 
+## D025 — A specialist that targets one pair selects noise; the Phi-3-medium twins stay at ~.90 under every chain we built
+
+**Question:** is each hard near-relative pair limited by the shared query
+budget, or by the 259-query pool? Method: chains selected only for that
+pair (or family), compared with the global JointGreedy chain.
+
+**Answer: the test could not tell, for an instructive reason.**
+
+The single-pair specialist for Phi-3-medium-128k↔4k trained *worse* than
+the global chain on its own pair:
+- linear .60 vs .82 (−22 pp, resolved);
+- attention .62 vs .73.
+
+The other pair specialists were no better than the global chain either.
+Off-target chains often beat them. A one-pair objective is D011's per-pair
+argmax again: it fits build-split noise that doesn't transfer to test
+configs. The global objective's tail averages over 66 pairs. **That
+averaging is part of why it works.**
+
+**What the D did establish (S_test, exploratory):**
+- **Three of the four hard pairs are not query-limited under a linear
+  readout.** Falcon, Mistral and Llama are at ≥ .95 at `k`=8 (Falcon at
+  `k`=8 only; .86–.94 at `k`=9–16).
+- **The pool does hold better queries for the Phi-3-medium twins than the
+  global chain uses.**
+  - The Phi-3 *family* specialist reaches .86–.90 (+13 pp under attention,
+    resolved, post hoc).
+  - It opens with self-description questions ("What is your parameter
+    count?").
+  - Family-level recall did not rise: the gain moved between siblings.
+- **Nothing reaches .95 on the twins**, under any chain, any `k` ≤ 16, or
+  either readout. They share byte-identical greedy answers on 46/259
+  queries.
+- **Doubling the global budget (8→16)** lifts overall accuracy (+1.6–1.9
+  pp) and the hard families as a whole, but not the stably-hard core
+  (Phi-3-medium and Falcon twins).
+
+**Consequences:**
+- A specialist-based two-stage design is not supported, and is not
+  pursued.
+- The Phi-3-medium twins are the project's one remaining query-level hard
+  case. The only plausible route left is new, mechanism-targeted probes.
+  What differs between the twins is context extension, 4k vs 128k.
+- A single-pair probe pilot is recommended and awaits the human.
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
