@@ -1,0 +1,950 @@
+{
+ "schema": "d027-configs-v1",
+ "seed": "20260906:{model}:{pool}",
+ "pythonhashseed": 0,
+ "split_sizes": {
+  "build": 75,
+  "val": 25,
+  "test": 25
+ },
+ "v1": {
+  "CohereForAI/aya-23-8B": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "84debd40c29bf29656bc73729d9e0bbb538f5972c86b5523a6a66b10df959f04"
+  },
+  "Deci/DeciLM-7B-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "ddb95fe2b53216b49fac948bdc9bf8d540ef9c32051359f20ad28ac5c2837815"
+  },
+  "HuggingFaceH4/zephyr-7b-beta": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "e40e3ec4279b9d292ca0ec174e9078bd0d23b0540b7b94844e911032cf52e1c9"
+  },
+  "Qwen/Qwen2-1.5B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "d65f6f6c45dee22c1913ec0493ab04e1fe55035a712d156d05f09a1c062a27b7"
+  },
+  "Qwen/Qwen2-7B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "86408064868b5762926ffb0ea2e28b5889d597641f7d98f18d92116e55be1b1d"
+  },
+  "Qwen/Qwen2.5-0.5B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "009ed2b515718ac59524086efcd2617267fcc206e33f854f4323284b4f036052"
+  },
+  "Qwen/Qwen2.5-3B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "0116412c6fd73af84599ee620ff18010a273029249a40a13eb2e6113a43f717b"
+  },
+  "google/gemma-1.1-2b-it": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "b79a64be5eb34ccdbb7e2c7f74faa0e011e1424d87e63723a038b8d618a14aa7"
+  },
+  "google/gemma-1.1-7b-it": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "00f15264f1721cebf60c9d9337c337f8098b2a12496359237c7f291c0da44437"
+  },
+  "google/gemma-2-9b-it": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "b931eca7c9bd21a2027e82ff6a2614579ec8db6c40efb4b8f704ac1b436e7721"
+  },
+  "google/gemma-2b-it": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "2b599e5aa0d9139ab3420d7af38c2a39c762d8944ef619f30c8b361ebbbb870d"
+  },
+  "google/gemma-7b-it": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "0efd5db7b627e3ae26db7ab162713a7d7068d86f1ef0b72157983c985818b5b2"
+  },
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "a6f433fbd2b39eb330f49947c241b25bd495eb55bea14f807e81ae89b5215460"
+  },
+  "ibm-granite/granite-3.0-8b-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "215a6dcdbca69047c84f6a738768effb719a31bd1a633ad52a6fec55b3fc6d9a"
+  },
+  "ibm-granite/granite-3.1-8b-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "4498c29c8de855913d2c888ee2ee1931f23bbbd68d0bf2d8a56d2a376464869d"
+  },
+  "internlm/internlm2_5-7b-chat": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "a4fb5b84c39b94c65e9d98a8da629646b2f59c4f5406652ed328bbe0df787143"
+  },
+  "meta-llama/Llama-2-7b-chat-hf": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "7ed706e98aa229abde8839f0d40831c6c5383bd554bd1f5ca9078ed0ec35c8c9"
+  },
+  "meta-llama/Llama-3.2-1B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "659078718bb4780da79d99e5b7a48ee94ba2b00b886466bea645b07b514803b1"
+  },
+  "meta-llama/Llama-3.2-3B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "c6f7b1f74283f06cb66cac49b2e72e2e92a7c23a43fbb05a9a77f87d730c12f1"
+  },
+  "meta-llama/Meta-Llama-3-8B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "465a9feab67b4a03ea3eb8b7f39d1170f06cb6c5ee3b44af7c3ea25f782a22e1"
+  },
+  "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "17fa49e710da424175208c832d174822e5d00ae8636e31669d42e862b038da53"
+  },
+  "microsoft/Phi-3-medium-128k-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "ca8b0c5bbbe2ae9b53e9fdc7c6ebaf129f6595929e88adb77cf20a1fc7677dd0"
+  },
+  "microsoft/Phi-3-medium-4k-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "6a2e5a461a42fb2d0e0f5164d2193af7ffc785c750198be32cf65692547bff17"
+  },
+  "microsoft/Phi-3-mini-128k-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "1209d701cb4ce247186b90f0b4d8806c5380a9ea8b861aabeaa0e149f487feea"
+  },
+  "microsoft/Phi-3-mini-4k-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "7797edee0568be3220fb12fe42fc2970b4b8d2602ff8571a1d8df7ff30d46c1d"
+  },
+  "microsoft/Phi-3.5-mini-instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "1fff438eb2c3be16a684932abb7122e2a45ac943b871d0d4d2ac33065eb02bf4"
+  },
+  "mistralai/Mistral-7B-Instruct-v0.1": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "0c79d908499fdf08f70e70d978037fc188013180a9a6175cef30e904379774db"
+  },
+  "mistralai/Mistral-7B-Instruct-v0.2": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "e05e61f479cd3f996031fd3a1975d76fd71a94643783133eb6b6d946a0479b43"
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "7efb39915ca857f9554a80a06e68a162a52af4cdbc936b95d929fccd74bca2ed"
+  },
+  "nvidia/Llama3-ChatQA-1.5-8B": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "80c80409238bd41e7c95cddacea0706b0def15033bb02de6b69508c01d1e7b3d"
+  },
+  "openchat/openchat-3.6-8b-20240522": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "875084f1ac616433986cd6cf66aacb050881fe5ef3aa3f1fd356037b687e2197"
+  },
+  "openchat/openchat_3.5": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "c75ab97ba6434e7500ae6ffa8e5b3bdf15d9ea82bfc64e6eaf98e4306f1546ee"
+  },
+  "tiiuae/Falcon3-10B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "67f8d0de727db43c339ec4e8cd4ac416b7ccd9fb917780c72cff08c609b30e8d"
+  },
+  "tiiuae/Falcon3-7B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "64ee91dfbc210e8a8819ebbd5a997c7dda1732dafb0a43ddb1d3449057059259"
+  },
+  "togethercomputer/Llama-2-7B-32K-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "d53a101a8d6144303fd35a65c958a80199b8ea9dc351e98d0ea3187cc7ecb3e9"
+  },
+  "upstage/SOLAR-10.7B-Instruct-v1.0": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "651bd8137df99e31815c256510da8441645c86d3be33baef290ca81e3267c86d"
+  },
+  "utter-project/EuroLLM-1.7B-Instruct": {
+   "config_source": "corpus_v1-replay",
+   "sha256": "092a00285d61e4dd4a270410984212c9f9703906800b26578ba351347abc03d0"
+  }
+ },
+ "new": {
+  "Qwen/Qwen2.5-7B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "984c92c90809b9771743b10c01507830b87dcba11dd8cc0c1e9ba154b1b95275",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen2.5-7B-Instruct.json",
+   "n_greedy": {
+    "build": 11,
+    "val": 7,
+    "test": 2
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 0,
+    "test": 1
+   },
+   "n_hparam_groups": 14
+  },
+  "Qwen/Qwen2.5-7B-Instruct-1M": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "43baff1a037c38f63b8cc6f8a79a4a9691a37a621da351e2cf18da4fde6d2c17",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen2.5-7B-Instruct-1M.json",
+   "n_greedy": {
+    "build": 13,
+    "val": 9,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 13,
+    "val": 2,
+    "test": 1
+   },
+   "n_hparam_groups": 14
+  },
+  "Qwen/Qwen3-4B": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "cf085628fc4c3c7283e4a7bbc5f89ce96bd388ac8543d3e551c6f66c805e99b0",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen3-4B.json",
+   "n_greedy": {
+    "build": 7,
+    "val": 6,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 13,
+    "val": 1,
+    "test": 1
+   },
+   "n_hparam_groups": 14
+  },
+  "Qwen/Qwen3-4B-Instruct-2507": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "ccebebd8139a30744f8d42c6b952583c5543fb17c63e0d6f2b3fb5996433ba46",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen3-4B-Instruct-2507.json",
+   "n_greedy": {
+    "build": 12,
+    "val": 5,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 4,
+    "val": 4,
+    "test": 4
+   },
+   "n_hparam_groups": 12
+  },
+  "Qwen/Qwen3-8B": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "ee4e07d81cc0a800b129125eeb34b5eb52e3d3060345c3677a4402429f01c522",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen3-8B.json",
+   "n_greedy": {
+    "build": 17,
+    "val": 5,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 11,
+    "val": 2,
+    "test": 2
+   },
+   "n_hparam_groups": 13
+  },
+  "Qwen/Qwen3-30B-A3B": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "123361e019ba7dec05be1e64c4311fab4a97a789f6b51b48aeadf33b937f006c",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen3-30B-A3B.json",
+   "n_greedy": {
+    "build": 12,
+    "val": 6,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 4,
+    "test": 3
+   },
+   "n_hparam_groups": 13
+  },
+  "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "02644ceef5cc2d5a543f94d4915683ff40352f80275dc272f2aa8d4666c32ada",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen3-30B-A3B-Instruct-2507.json",
+   "n_greedy": {
+    "build": 19,
+    "val": 7,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 10,
+    "val": 1,
+    "test": 3
+   },
+   "n_hparam_groups": 14
+  },
+  "Qwen/Qwen3.5-4B": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "50508d4f4e77695d6205c215a862b0366fdd5e93ff7eec8d3070868d43254fcc",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen3.5-4B.json",
+   "n_greedy": {
+    "build": 7,
+    "val": 4,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 1,
+    "test": 1
+   },
+   "n_hparam_groups": 13
+  },
+  "Qwen/Qwen3.5-9B": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "c25124b7302139b89389d18223b8af85526bab9e95d5d6d4ff59d90bd4684ba4",
+   "path": "./data/corpus_v2_screen/configs/Qwen__Qwen3.5-9B.json",
+   "n_greedy": {
+    "build": 16,
+    "val": 3,
+    "test": 7
+   },
+   "n_no_system": {
+    "build": 5,
+    "val": 4,
+    "test": 3
+   },
+   "n_hparam_groups": 13
+  },
+  "allenai/Llama-3.1-Tulu-3-8B": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "6869e3b864b6919cc48b54fab71fb5eb27d99a842ddb6102c1a55468c9178785",
+   "path": "./data/corpus_v2_screen/configs/allenai__Llama-3.1-Tulu-3-8B.json",
+   "n_greedy": {
+    "build": 7,
+    "val": 3,
+    "test": 1
+   },
+   "n_no_system": {
+    "build": 4,
+    "val": 1,
+    "test": 4
+   },
+   "n_hparam_groups": 14
+  },
+  "allenai/Llama-3.1-Tulu-3.1-8B": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "b2a55af83b7bf8685595b48e9beb7d2ab2ba749f801b8b777cce403b6e505ad7",
+   "path": "./data/corpus_v2_screen/configs/allenai__Llama-3.1-Tulu-3.1-8B.json",
+   "n_greedy": {
+    "build": 12,
+    "val": 6,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 2,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "b249f4583cb8e458f83d1a9f8455584e0ee527bf361b011d7bc710cae05d0b90",
+   "path": "./data/corpus_v2_screen/configs/nvidia__Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct.json",
+   "n_greedy": {
+    "build": 11,
+    "val": 1,
+    "test": 6
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 3,
+    "test": 2
+   },
+   "n_hparam_groups": 11
+  },
+  "google/gemma-3-1b-it": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "2d0b7115f5a42cf14d558ca52e51182ab2af4ee18ece837871fc74929a196d51",
+   "path": "./data/corpus_v2_screen/configs/google__gemma-3-1b-it.json",
+   "n_greedy": {
+    "build": 12,
+    "val": 3,
+    "test": 2
+   },
+   "n_no_system": {
+    "build": 10,
+    "val": 2,
+    "test": 1
+   },
+   "n_hparam_groups": 13
+  },
+  "google/gemma-3-4b-it": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "f055c6976fd8b37fe1bac086cd3f3fe5b8e2fdd3c838ae274dd61ecae3b70e92",
+   "path": "./data/corpus_v2_screen/configs/google__gemma-3-4b-it.json",
+   "n_greedy": {
+    "build": 16,
+    "val": 3,
+    "test": 2
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 3,
+    "test": 3
+   },
+   "n_hparam_groups": 13
+  },
+  "google/gemma-3-12b-it": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "4d3f1aed5ac046e946400ede6aef1b0b0d3e7a477a387353a11625e1a480cd24",
+   "path": "./data/corpus_v2_screen/configs/google__gemma-3-12b-it.json",
+   "n_greedy": {
+    "build": 10,
+    "val": 7,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 2,
+    "test": 1
+   },
+   "n_hparam_groups": 13
+  },
+  "google/gemma-4-E4B-it": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "fda331a5672bc45811f36dac8cbcba29a22ca0d665fb43d41c700fdb9a8aefd3",
+   "path": "./data/corpus_v2_screen/configs/google__gemma-4-E4B-it.json",
+   "n_greedy": {
+    "build": 13,
+    "val": 4,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 3,
+    "val": 4,
+    "test": 1
+   },
+   "n_hparam_groups": 13
+  },
+  "google/gemma-4-12B-it": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "7a845787519e059541acf93c84b4384efe6c30bda919d6e040169ebbf60e2a51",
+   "path": "./data/corpus_v2_screen/configs/google__gemma-4-12B-it.json",
+   "n_greedy": {
+    "build": 11,
+    "val": 4,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 5,
+    "val": 0,
+    "test": 0
+   },
+   "n_hparam_groups": 12
+  },
+  "microsoft/phi-4": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "d10d3186718c68daaf30523d65dd78c36aa76c811024026f2399c75647e32175",
+   "path": "./data/corpus_v2_screen/configs/microsoft__phi-4.json",
+   "n_greedy": {
+    "build": 9,
+    "val": 6,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 4,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "microsoft/Phi-4-mini-instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "85c4c228ac8bc47027a9511c13f8efba4b0b1b8a8286430262d8c88e94c236ee",
+   "path": "./data/corpus_v2_screen/configs/microsoft__Phi-4-mini-instruct.json",
+   "n_greedy": {
+    "build": 10,
+    "val": 5,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 1,
+    "test": 2
+   },
+   "n_hparam_groups": 13
+  },
+  "mistralai/Mistral-Small-24B-Instruct-2501": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "108e3221ddabb9155a1b386cb635729ba35a847ffde7f1f340ac11d595ca9ccf",
+   "path": "./data/corpus_v2_screen/configs/mistralai__Mistral-Small-24B-Instruct-2501.json",
+   "n_greedy": {
+    "build": 17,
+    "val": 4,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 3,
+    "test": 1
+   },
+   "n_hparam_groups": 14
+  },
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "d1d45623ce9056234e1edb192af90b02222a00fc754977e11506d23d285771c3",
+   "path": "./data/corpus_v2_screen/configs/mistralai__Mistral-Small-3.1-24B-Instruct-2503.json",
+   "n_greedy": {
+    "build": 7,
+    "val": 4,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 4,
+    "val": 3,
+    "test": 3
+   },
+   "n_hparam_groups": 14
+  },
+  "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "b86362a2e56fe3eb24d920d30d6fbe02906e5d7766792bc8de3a9afe9596fc1f",
+   "path": "./data/corpus_v2_screen/configs/mistralai__Mistral-Small-3.2-24B-Instruct-2506.json",
+   "n_greedy": {
+    "build": 8,
+    "val": 5,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 9,
+    "val": 1,
+    "test": 1
+   },
+   "n_hparam_groups": 14
+  },
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "917d4fb027f99d1e08a74025c2d7dd5a0423e72866fdcd1174324f013f132e8a",
+   "path": "./data/corpus_v2_screen/configs/mistralai__Ministral-3-3B-Instruct-2512-BF16.json",
+   "n_greedy": {
+    "build": 15,
+    "val": 3,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 3,
+    "test": 2
+   },
+   "n_hparam_groups": 13
+  },
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "96604a2156d619b12bbe742dc0f2d49c172113a38163ee38d88bab36ead7f7a8",
+   "path": "./data/corpus_v2_screen/configs/mistralai__Ministral-3-8B-Instruct-2512-BF16.json",
+   "n_greedy": {
+    "build": 12,
+    "val": 1,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 3,
+    "test": 3
+   },
+   "n_hparam_groups": 12
+  },
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "57585f035c0797cd351b021301396175a75574738ef5ff2eca7859f1f557ebe1",
+   "path": "./data/corpus_v2_screen/configs/mistralai__Ministral-3-14B-Instruct-2512-BF16.json",
+   "n_greedy": {
+    "build": 9,
+    "val": 8,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 3,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "ibm-granite/granite-3.2-8b-instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "3f70b532d9cb9e21148e718acc2b23967e32967ba7dd718dd1eb62bf3b4d5006",
+   "path": "./data/corpus_v2_screen/configs/ibm-granite__granite-3.2-8b-instruct.json",
+   "n_greedy": {
+    "build": 13,
+    "val": 2,
+    "test": 1
+   },
+   "n_no_system": {
+    "build": 4,
+    "val": 2,
+    "test": 0
+   },
+   "n_hparam_groups": 13
+  },
+  "ibm-granite/granite-3.3-8b-instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "5dd321307da84a72c3cd2cdc9201bf0608236676e27b43b154d5b828815bdd55",
+   "path": "./data/corpus_v2_screen/configs/ibm-granite__granite-3.3-8b-instruct.json",
+   "n_greedy": {
+    "build": 15,
+    "val": 0,
+    "test": 8
+   },
+   "n_no_system": {
+    "build": 9,
+    "val": 3,
+    "test": 5
+   },
+   "n_hparam_groups": 10
+  },
+  "ibm-granite/granite-4.1-3b": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "b451c619409328c323d1a8db528469ea6ded4cb89d9c3fd6585ed76c6ba6b2df",
+   "path": "./data/corpus_v2_screen/configs/ibm-granite__granite-4.1-3b.json",
+   "n_greedy": {
+    "build": 19,
+    "val": 1,
+    "test": 1
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 3,
+    "test": 5
+   },
+   "n_hparam_groups": 12
+  },
+  "ibm-granite/granite-4.1-8b": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "6ed72ef4b748a69c11d331172ee61cf00ed1e7c435cad652c0d5d958b23460af",
+   "path": "./data/corpus_v2_screen/configs/ibm-granite__granite-4.1-8b.json",
+   "n_greedy": {
+    "build": 17,
+    "val": 6,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 2,
+    "val": 2,
+    "test": 3
+   },
+   "n_hparam_groups": 14
+  },
+  "ibm-granite/granite-4.2-3b": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "d166566bb57ee7d5ec7ae1cf1a9a02de2e209addce1620f43ed27cf6621aa40a",
+   "path": "./data/corpus_v2_screen/configs/ibm-granite__granite-4.2-3b.json",
+   "n_greedy": {
+    "build": 21,
+    "val": 6,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 2,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "ibm-granite/granite-4.2-8b": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "32ca039c1e14fa5bd9ceed2fc854da0481180458d1c3397e991b1190cf5c2039",
+   "path": "./data/corpus_v2_screen/configs/ibm-granite__granite-4.2-8b.json",
+   "n_greedy": {
+    "build": 16,
+    "val": 7,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 5,
+    "val": 1,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "tiiuae/Falcon3-1B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "0fc1c6df02da31796f8ac621c437622254fb41969fad6f2836b34378c51899ae",
+   "path": "./data/corpus_v2_screen/configs/tiiuae__Falcon3-1B-Instruct.json",
+   "n_greedy": {
+    "build": 15,
+    "val": 7,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 10,
+    "val": 3,
+    "test": 3
+   },
+   "n_hparam_groups": 14
+  },
+  "tiiuae/Falcon3-3B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "0c42ca1533af3af3efdcdc6ef5b9f3b5f6078d5ac8242a5a06a0e7e4fac7746e",
+   "path": "./data/corpus_v2_screen/configs/tiiuae__Falcon3-3B-Instruct.json",
+   "n_greedy": {
+    "build": 11,
+    "val": 1,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 2,
+    "test": 1
+   },
+   "n_hparam_groups": 12
+  },
+  "tiiuae/Falcon-H1-3B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "e9137adcc979dff0323d0ce5629042f776dd004eb0f33559de84f748bfef0ffc",
+   "path": "./data/corpus_v2_screen/configs/tiiuae__Falcon-H1-3B-Instruct.json",
+   "n_greedy": {
+    "build": 16,
+    "val": 6,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 6,
+    "test": 1
+   },
+   "n_hparam_groups": 13
+  },
+  "tiiuae/Falcon-H1-7B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "5cb1414634bef76b90dc57e89c1a5a80fda6439cc779d1485fb6178a7d42f9f0",
+   "path": "./data/corpus_v2_screen/configs/tiiuae__Falcon-H1-7B-Instruct.json",
+   "n_greedy": {
+    "build": 13,
+    "val": 3,
+    "test": 1
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 3,
+    "test": 1
+   },
+   "n_hparam_groups": 13
+  },
+  "allenai/OLMo-2-0425-1B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "627e90cf332042c13701af7ae89ba37839e0446be3e3009601717a29d28c841c",
+   "path": "./data/corpus_v2_screen/configs/allenai__OLMo-2-0425-1B-Instruct.json",
+   "n_greedy": {
+    "build": 16,
+    "val": 8,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 2,
+    "test": 1
+   },
+   "n_hparam_groups": 14
+  },
+  "allenai/OLMo-2-1124-7B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "10b4bb779ae96d9b9cdeaab04932075dfe514641fd68b4693eef96f7ba1c6a34",
+   "path": "./data/corpus_v2_screen/configs/allenai__OLMo-2-1124-7B-Instruct.json",
+   "n_greedy": {
+    "build": 12,
+    "val": 1,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 3,
+    "test": 3
+   },
+   "n_hparam_groups": 12
+  },
+  "allenai/OLMo-2-1124-13B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "0de6354f5a79ecfa9ae096ccef19e355afe4c0df8bf3d98d0e1fbcba4617b241",
+   "path": "./data/corpus_v2_screen/configs/allenai__OLMo-2-1124-13B-Instruct.json",
+   "n_greedy": {
+    "build": 11,
+    "val": 5,
+    "test": 2
+   },
+   "n_no_system": {
+    "build": 9,
+    "val": 2,
+    "test": 3
+   },
+   "n_hparam_groups": 13
+  },
+  "allenai/Olmo-3-7B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "60b3e13a93c01d0f5143000927241b273e418a397339e0cfa129bac53db48fb2",
+   "path": "./data/corpus_v2_screen/configs/allenai__Olmo-3-7B-Instruct.json",
+   "n_greedy": {
+    "build": 23,
+    "val": 5,
+    "test": 0
+   },
+   "n_no_system": {
+    "build": 5,
+    "val": 4,
+    "test": 4
+   },
+   "n_hparam_groups": 13
+  },
+  "allenai/Olmo-3.1-32B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "165d39b6bf5d7f2dda4f5df54726c293efff9a61a6851858e744c123c1b2e175",
+   "path": "./data/corpus_v2_screen/configs/allenai__Olmo-3.1-32B-Instruct.json",
+   "n_greedy": {
+    "build": 14,
+    "val": 5,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 9,
+    "val": 1,
+    "test": 2
+   },
+   "n_hparam_groups": 13
+  },
+  "HuggingFaceTB/SmolLM2-360M-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "39fb31565208c911e9f050096ef8612f11bd29061e0123c7e6d8fd15a1de6865",
+   "path": "./data/corpus_v2_screen/configs/HuggingFaceTB__SmolLM2-360M-Instruct.json",
+   "n_greedy": {
+    "build": 14,
+    "val": 5,
+    "test": 10
+   },
+   "n_no_system": {
+    "build": 10,
+    "val": 3,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "c3d6c03d541e086bd9457fb6ca29752f5100ede6bdc7d19ec9a3f11180a839d1",
+   "path": "./data/corpus_v2_screen/configs/HuggingFaceTB__SmolLM2-1.7B-Instruct.json",
+   "n_greedy": {
+    "build": 11,
+    "val": 5,
+    "test": 2
+   },
+   "n_no_system": {
+    "build": 8,
+    "val": 4,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "40de2267abe6c748c005838b6b0b1b2e2f987a9a4172993b12a64db46ec7eef4",
+   "path": "./data/corpus_v2_screen/configs/HuggingFaceTB__SmolLM2-1.7B-Instruct-16k.json",
+   "n_greedy": {
+    "build": 17,
+    "val": 5,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 1,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "CohereLabs/tiny-aya-global": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "fd3e05359062721670d23fb236ccfcb66e88ae47ede40597d92b0e732519ad12",
+   "path": "./data/corpus_v2_screen/configs/CohereLabs__tiny-aya-global.json",
+   "n_greedy": {
+    "build": 13,
+    "val": 4,
+    "test": 9
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 2,
+    "test": 3
+   },
+   "n_hparam_groups": 14
+  },
+  "CohereLabs/tiny-aya-earth": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "33d60864643fb87b11b17e07615affa59b61e186788e74fc482d79d9ab3a71c4",
+   "path": "./data/corpus_v2_screen/configs/CohereLabs__tiny-aya-earth.json",
+   "n_greedy": {
+    "build": 10,
+    "val": 2,
+    "test": 1
+   },
+   "n_no_system": {
+    "build": 3,
+    "val": 3,
+    "test": 6
+   },
+   "n_hparam_groups": 12
+  },
+  "CohereLabs/tiny-aya-fire": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "c58698526153a42d16cb307a363cb24d51a8f832bf08000f5647a9318c0af98c",
+   "path": "./data/corpus_v2_screen/configs/CohereLabs__tiny-aya-fire.json",
+   "n_greedy": {
+    "build": 7,
+    "val": 1,
+    "test": 5
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 2,
+    "test": 1
+   },
+   "n_hparam_groups": 11
+  },
+  "CohereLabs/tiny-aya-water": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "6b102b849f923e519a0ec5dc3fbbce869f51224bca75f86273dee59c964e6da7",
+   "path": "./data/corpus_v2_screen/configs/CohereLabs__tiny-aya-water.json",
+   "n_greedy": {
+    "build": 11,
+    "val": 4,
+    "test": 4
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 2,
+    "test": 5
+   },
+   "n_hparam_groups": 13
+  },
+  "utter-project/EuroLLM-9B-Instruct": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "ce6cc0aa5c343027e8604dd88e94fa6854889385ee36bca64ffad4ba126907df",
+   "path": "./data/corpus_v2_screen/configs/utter-project__EuroLLM-9B-Instruct.json",
+   "n_greedy": {
+    "build": 10,
+    "val": 4,
+    "test": 3
+   },
+   "n_no_system": {
+    "build": 6,
+    "val": 0,
+    "test": 2
+   },
+   "n_hparam_groups": 14
+  },
+  "utter-project/EuroLLM-9B-Instruct-2512": {
+   "config_source": "d027-frozen-draw",
+   "sha256": "ee45e22c6e5a07c2471bd80bb3a0a8ea1e9bf0734f435f74f1de61aae3683a3e",
+   "path": "./data/corpus_v2_screen/configs/utter-project__EuroLLM-9B-Instruct-2512.json",
+   "n_greedy": {
+    "build": 8,
+    "val": 5,
+    "test": 2
+   },
+   "n_no_system": {
+    "build": 7,
+    "val": 5,
+    "test": 3
+   },
+   "n_hparam_groups": 11
+  }
+ },
+ "redraw_check": {
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "identical": true
+ }
+}

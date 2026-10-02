@@ -19,3 +19,7 @@ results/D025/logits_*.npz
 
 # D026: probe-pilot corpus extension (~80 MB incl. F3 query texts) stays on $WORK; manifest committed
 data/corpus_v1_ext_d026/
+
+# D027: screen corpus (generations, embeddings, frozen config draws) stays on $WORK; manifests committed
+data/corpus_v2_screen/
+results/D027/tokparity/

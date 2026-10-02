@@ -1,0 +1,68 @@
+{
+ "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GPT2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 1.5,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are a helpful AI assistant named SmolLM, trained by Hugging Face<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm an AI chatbot designed to assist customers with various travel-related inquiries. I was created by AirCanada, the airline that uses my services.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm a wine and cheese pairing assistant for event planners.",
+   "single": "I'm a wine and cheese pairing assistant for event planners."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 6.61,
+  "gen_per_s": 9.689
+ },
+ "peak_mem_gb": 3.11,
+ "wall_s": 50.6
+}

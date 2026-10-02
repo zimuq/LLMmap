@@ -1,0 +1,12 @@
+microsoft/Phi-3-medium-4k-instruct
+CohereForAI/aya-23-8B
+ibm-granite/granite-3.0-8b-instruct
+meta-llama/Meta-Llama-3.1-8B-Instruct
+Deci/DeciLM-7B-instruct
+google/gemma-1.1-7b-it
+meta-llama/Llama-2-7b-chat-hf
+mistralai/Mistral-7B-Instruct-v0.3
+togethercomputer/Llama-2-7B-32K-Instruct
+Qwen/Qwen2.5-3B-Instruct
+google/gemma-1.1-2b-it
+Qwen/Qwen2-1.5B-Instruct

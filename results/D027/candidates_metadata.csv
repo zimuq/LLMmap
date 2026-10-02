@@ -1,0 +1,50 @@
+model,org,lineage,variant,base,base_prov,arch,tok,params_b,active_b,proprietary
+Qwen/Qwen2.5-7B-Instruct,qwen,qwen2,qwen2.5-7b-instruct,Qwen/Qwen2.5-7B,model card (D027 table),qwen2,,7.6,,False
+Qwen/Qwen2.5-7B-Instruct-1M,qwen,qwen2,qwen2.5-7b-instruct-1m,Qwen/Qwen2.5-7B,model card (D027 table),qwen2,,7.6,,False
+Qwen/Qwen3-4B,qwen,qwen3,qwen3-4b,,,qwen3,,4.0,,False
+Qwen/Qwen3-4B-Instruct-2507,qwen,qwen3,qwen3-4b-instruct-2507,,,qwen3,,4.0,,False
+Qwen/Qwen3-8B,qwen,qwen3,qwen3-8b,,,qwen3,,8.2,,False
+Qwen/Qwen3-30B-A3B,qwen,qwen3,qwen3-30b-a3b,,,qwen3_moe,,30.5,,False
+Qwen/Qwen3-30B-A3B-Instruct-2507,qwen,qwen3,qwen3-30b-a3b-instruct-2507,,,qwen3_moe,,30.5,,False
+Qwen/Qwen3.5-4B,qwen,qwen3,qwen3.5-4b,,,qwen3_5,,4.7,,False
+Qwen/Qwen3.5-9B,qwen,qwen3,qwen3.5-9b,,,qwen3_5,,9.7,,False
+allenai/Llama-3.1-Tulu-3-8B,allenai,llama-3,llama-3.1-tulu-3-8b,meta-llama/Meta-Llama-3.1-8B-Instruct,model card (D027 table),llama,,8.0,,False
+allenai/Llama-3.1-Tulu-3.1-8B,allenai,llama-3,llama-3.1-tulu-3.1-8b,meta-llama/Meta-Llama-3.1-8B-Instruct,model card (D027 table),llama,,8.0,,False
+nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct,nvidia,llama-3,llama-3.1-nemotron-8b-ultralong-1m-instruct,meta-llama/Meta-Llama-3.1-8B-Instruct,model card (D027 table),llama,,8.0,,False
+google/gemma-3-1b-it,google,gemma-3,gemma-3-1b-it,,,gemma3_text,,1.0,,False
+google/gemma-3-4b-it,google,gemma-3,gemma-3-4b-it,,,gemma3,,4.3,,False
+google/gemma-3-12b-it,google,gemma-3,gemma-3-12b-it,,,gemma3,,12.2,,False
+google/gemma-4-E4B-it,google,gemma-4,gemma-4-e4b-it,,,gemma4,,8.0,,False
+google/gemma-4-12B-it,google,gemma-4,gemma-4-12b-it,,,gemma4_unified,,12.0,,False
+microsoft/phi-4,microsoft,phi-4,phi-4,,,phi3,,14.7,,False
+microsoft/Phi-4-mini-instruct,microsoft,phi-4,phi-4-mini-instruct,,,phi3,,3.8,,False
+mistralai/Mistral-Small-24B-Instruct-2501,mistralai,mistral-small-3,mistral-small-24b-instruct-2501,,,mistral,,23.6,,False
+mistralai/Mistral-Small-3.1-24B-Instruct-2503,mistralai,mistral-small-3,mistral-small-3.1-24b-instruct-2503,mistralai/Mistral-Small-3.1-24B-Base-2503,model card (D027 table),mistral3,,24.0,,False
+mistralai/Mistral-Small-3.2-24B-Instruct-2506,mistralai,mistral-small-3,mistral-small-3.2-24b-instruct-2506,mistralai/Mistral-Small-3.1-24B-Base-2503,model card (D027 table),mistral3,,24.0,,False
+mistralai/Ministral-3-3B-Instruct-2512-BF16,mistralai,ministral-3,ministral-3-3b-instruct-2512-bf16,,,mistral3,,4.3,,False
+mistralai/Ministral-3-8B-Instruct-2512-BF16,mistralai,ministral-3,ministral-3-8b-instruct-2512-bf16,,,mistral3,,8.9,,False
+mistralai/Ministral-3-14B-Instruct-2512-BF16,mistralai,ministral-3,ministral-3-14b-instruct-2512-bf16,,,mistral3,,14.0,,False
+ibm-granite/granite-3.2-8b-instruct,ibm-granite,granite-3,granite-3.2-8b-instruct,ibm-granite/granite-3.1-8b-instruct,model card (D027 table),granite,,8.2,,False
+ibm-granite/granite-3.3-8b-instruct,ibm-granite,granite-3,granite-3.3-8b-instruct,,,granite,,8.2,,False
+ibm-granite/granite-4.1-3b,ibm-granite,granite-4,granite-4.1-3b,,,granite,,3.4,,False
+ibm-granite/granite-4.1-8b,ibm-granite,granite-4,granite-4.1-8b,,,granite,,8.8,,False
+ibm-granite/granite-4.2-3b,ibm-granite,granite-4,granite-4.2-3b,,,granite,,3.7,,False
+ibm-granite/granite-4.2-8b,ibm-granite,granite-4,granite-4.2-8b,,,granite,,8.8,,False
+tiiuae/Falcon3-1B-Instruct,tiiuae,falcon-3,falcon3-1b-instruct,,,llama,,1.7,,False
+tiiuae/Falcon3-3B-Instruct,tiiuae,falcon-3,falcon3-3b-instruct,,,llama,,3.2,,False
+tiiuae/Falcon-H1-3B-Instruct,tiiuae,falcon-h1,falcon-h1-3b-instruct,,,falcon_h1,,3.2,,False
+tiiuae/Falcon-H1-7B-Instruct,tiiuae,falcon-h1,falcon-h1-7b-instruct,,,falcon_h1,,7.6,,False
+allenai/OLMo-2-0425-1B-Instruct,allenai,olmo-2,olmo-2-0425-1b-instruct,,,olmo2,,1.5,,False
+allenai/OLMo-2-1124-7B-Instruct,allenai,olmo-2,olmo-2-1124-7b-instruct,,,olmo2,,7.3,,False
+allenai/OLMo-2-1124-13B-Instruct,allenai,olmo-2,olmo-2-1124-13b-instruct,,,olmo2,,13.7,,False
+allenai/Olmo-3-7B-Instruct,allenai,olmo-3,olmo-3-7b-instruct,,,olmo3,,7.3,,False
+allenai/Olmo-3.1-32B-Instruct,allenai,olmo-3,olmo-3.1-32b-instruct,,,olmo3,,32.2,,False
+HuggingFaceTB/SmolLM2-360M-Instruct,huggingfacetb,smollm2,smollm2-360m-instruct,,,llama,,0.36,,False
+HuggingFaceTB/SmolLM2-1.7B-Instruct,huggingfacetb,smollm2,smollm2-1.7b-instruct,,,llama,,1.7,,False
+HuggingFaceTB/SmolLM2-1.7B-Instruct-16k,huggingfacetb,smollm2,smollm2-1.7b-instruct-16k,HuggingFaceTB/SmolLM2-1.7B-Instruct,model card (D027 table),llama,,1.7,,False
+CohereLabs/tiny-aya-global,coherelabs,tiny-aya,tiny-aya-global,CohereLabs/tiny-aya-base,model card (D027 table),,,3.35,,False
+CohereLabs/tiny-aya-earth,coherelabs,tiny-aya,tiny-aya-earth,CohereLabs/tiny-aya-base,model card (D027 table),cohere2,,3.35,,False
+CohereLabs/tiny-aya-fire,coherelabs,tiny-aya,tiny-aya-fire,CohereLabs/tiny-aya-base,model card (D027 table),,,3.35,,False
+CohereLabs/tiny-aya-water,coherelabs,tiny-aya,tiny-aya-water,CohereLabs/tiny-aya-base,model card (D027 table),cohere2,,3.35,,False
+utter-project/EuroLLM-9B-Instruct,utter-project,eurollm,eurollm-9b-instruct,,,llama,,9.2,,False
+utter-project/EuroLLM-9B-Instruct-2512,utter-project,eurollm,eurollm-9b-instruct-2512,,,llama,,9.2,,False
