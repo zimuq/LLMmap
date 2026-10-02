@@ -1751,6 +1751,21 @@ interpretable; specialist-based two-stage design not pursued
   - Amendments: mixed-environment pairs flagged; hybrids (Falcon-H1,
     Qwen3.5) fall back to batch 1 by a pre-registered padding-sanity rule.
   Decided by: design-side (routine; no invariant touched).
+
+[2026-10-02] D026/P1 approved with amendments; 1k control added
+  - F3 generated per L in zero-padding pairs: LongRoPE picks its regime from
+    the longest sequence in the batch, so mixed batches would contaminate
+    the short probes.
+  - Needle text is plain (the asterisks were Markdown emphasis).
+  - S0: the 4k model's 2,047-token sliding window is live and 114/125
+    wrapped 2k probes exceed it, so 273/274 are re-labelled
+    "window-boundary". New control probes 279/280 at L = 1,000 (assert
+    <= 2,047 wrapped in all configs; fallback L in {800, 600}). Added
+    before any probe output existed.
+  - S0 side finding (hypothesis for R/FINDINGS): both twin context
+    mechanisms are inert on the whole pool (max prompt 1,024 tokens).
+  Decided by: human (add the 1k control, 2026-10-02); design-side (the
+  rest, routine).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

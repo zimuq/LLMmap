@@ -24,26 +24,6 @@
 <!-- TACC appends here. One entry per issue: what's wrong, exactly where
      (file + section), and why the ownership rule blocks a direct fix. -->
 
-**Issue 20 (2026-10-01) — D026 `## D`, "The probes" / F3.**
-
-Two items. Both are in a design-side-owned section, so TACC raises them here
-and as D026/P1 Calls 2–3 rather than editing.
-
-(1) **The needle is written `The secret word is *marmalade*.`** In Markdown,
-the asterisks may be emphasis or literal probe text. TACC's default reading
-is emphasis, giving the plain sentence; it is a flag in `d026_lib`.
-
-(2) **The 2k F3 probes are described as a within-pair control ("both models
-should succeed there"). D026 S0 contradicts that premise:**
-- the 4k model ships `sliding_window = 2047`, applied by transformers 4.51.3;
-- 114/125 config-wrapped 2k probes exceed 2,047 tokens;
-- separately, neither twin's chat template has a system role, so system, RAG
-  and CoT text precedes the needle in all but 9 configs per twin.
-
-As written, a 2k separation would be misread as "not about the context
-limit". P1 recommends re-labelling the 2k probes "window-boundary" and,
-optionally, a design-side amendment adding a 1k control.
-
 **Issue 10 (2026-09-05) — the structural cause, and a proposal.
 DEFERRED by the human, 2026-09-05: keep on file, do not action this
 session.** The approach is accepted in principle; the human wants it
@@ -86,6 +66,33 @@ below).
 ---
 
 ## Resolved
+
+**Issue 20 (2026-10-01) — D026 `## D`, "The probes" / F3.**
+
+Two items. Both are in a design-side-owned section, so TACC raises them here
+and as D026/P1 Calls 2–3 rather than editing.
+
+(1) **The needle is written `The secret word is *marmalade*.`** In Markdown,
+the asterisks may be emphasis or literal probe text. TACC's default reading
+is emphasis, giving the plain sentence; it is a flag in `d026_lib`.
+
+(2) **The 2k F3 probes are described as a within-pair control ("both models
+should succeed there"). D026 S0 contradicts that premise:**
+- the 4k model ships `sliding_window = 2047`, applied by transformers 4.51.3;
+- 114/125 config-wrapped 2k probes exceed 2,047 tokens;
+- separately, neither twin's chat template has a system role, so system, RAG
+  and CoT text precedes the needle in all but 9 configs per twin.
+
+As written, a 2k separation would be misread as "not about the context
+limit". P1 recommends re-labelling the 2k probes "window-boundary" and,
+optionally, a design-side amendment adding a 1k control.
+
+*Resolved 2026-10-02 (design-side, D026/P1 Review).*
+- (1) The needle asterisks are emphasis; the probe text is plain.
+- (2) Correct. The 2k probes are re-labelled "window-boundary". A real
+  control at L = 1,000 (ids 279/280) is added to `## D` by a dated
+  amendment (human-approved), with a ≤ 2,047-token assert and an
+  {800, 600} fallback.
 
 **Issue 21 (2026-10-01) — D027 `## D` S0 "Configs" assumes `build_configs()`
 reproduces v1's configs. It does not reproduce anything across processes.**
