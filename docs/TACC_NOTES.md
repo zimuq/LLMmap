@@ -24,32 +24,6 @@
 <!-- TACC appends here. One entry per issue: what's wrong, exactly where
      (file + section), and why the ownership rule blocks a direct fix. -->
 
-**Issue 21 (2026-10-01) — D027 `## D` S0 "Configs" assumes `build_configs()`
-reproduces v1's configs. It does not reproduce anything across processes.**
-
-**The evidence.**
-- `PromptConfFactory.sample` deduplicates through a `set()`, whose iteration
-  order depends on Python hash randomisation. Seeding `random` does not fix
-  that.
-- Two fresh processes calling `d006_s4_shard.build_configs()` returned
-  different 125-config draws (sha `45ed34a2…` vs `21c90667…`). With
-  `PYTHONHASHSEED=0` the draw is stable (`560b82ce…`).
-- **This is the root cause of Issue 18:** 37 shard processes produced 37
-  different draws.
-
-**Consequences.**
-- D027's sentence "same seed, so every model sees the same 75+25 configs as
-  v1" is false.
-- D028's plan for a "fresh S_test" from the same function inherits the
-  problem.
-
-**Status.**
-- D027/P1 Call 1 sidesteps it in new code: v1 models replay their stored
-  configs, and new models get frozen per-model draws written to file.
-- The library itself (`LLMmap/prompt_configuration.py`) is left unchanged
-  because `corpus_v1`'s history depends on it. Whether to fix it, for
-  example by sorting before sampling, is design-side's call.
-
 **Issue 20 (2026-10-01) — D026 `## D`, "The probes" / F3.**
 
 Two items. Both are in a design-side-owned section, so TACC raises them here
@@ -112,6 +86,41 @@ below).
 ---
 
 ## Resolved
+
+**Issue 21 (2026-10-01) — D027 `## D` S0 "Configs" assumes `build_configs()`
+reproduces v1's configs. It does not reproduce anything across processes.**
+
+**The evidence.**
+- `PromptConfFactory.sample` deduplicates through a `set()`, whose iteration
+  order depends on Python hash randomisation. Seeding `random` does not fix
+  that.
+- Two fresh processes calling `d006_s4_shard.build_configs()` returned
+  different 125-config draws (sha `45ed34a2…` vs `21c90667…`). With
+  `PYTHONHASHSEED=0` the draw is stable (`560b82ce…`).
+- **This is the root cause of Issue 18:** 37 shard processes produced 37
+  different draws.
+
+**Consequences.**
+- D027's sentence "same seed, so every model sees the same 75+25 configs as
+  v1" is false.
+- D028's plan for a "fresh S_test" from the same function inherits the
+  problem.
+
+**Status.**
+- D027/P1 Call 1 sidesteps it in new code: v1 models replay their stored
+  configs, and new models get frozen per-model draws written to file.
+- The library itself (`LLMmap/prompt_configuration.py`) is left unchanged
+  because `corpus_v1`'s history depends on it. Whether to fix it, for
+  example by sorting before sampling, is design-side's call.
+
+*Resolved 2026-10-01 (design-side, D027/P1 Review).*
+- Correct, and a design-side error: D027's premise came from
+  `build_configs()`'s docstring, not from `corpus_v1`.
+- The library is not fixed in place (`corpus_v1`'s history depends on it).
+- Standing rule: every new generation draws configs once under
+  `PYTHONHASHSEED=0`, freezes them to a file with a sha256, and replays
+  from the file; stored `prompt_conf` rows are the source of truth for v1.
+  D027 Call 1 approved on that basis; D028 will be drafted on it.
 
 **Issue 19 (2026-09-29) — D025's `## D` "What counts as an answer": the
 primary readout and the label margin cannot coexist on 3 of 4 H pairs.**

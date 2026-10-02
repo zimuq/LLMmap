@@ -1734,6 +1734,23 @@ interpretable; specialist-based two-stage design not pursued
   - I7: schema `cdqd-corpus-v2-screen`, migration note before S1.
   Decided by: human (direction, risks, stages, thinking off); design-side
   (D027's design).
+
+[2026-10-01] D027/P1 approved with amendments; Issue 21 resolved
+  - D027's "same configs as v1" premise was false (build_configs() is not
+    deterministic across processes; design-side took it from a docstring).
+    v1 models replay their stored corpus_v1 configs; new models get
+    per-model draws frozen to file (S_test drawn, not generated).
+  - Standing rule: every new generation freezes its config draw to a file
+    (PYTHONHASHSEED=0, sha256) and replays from it; the library is not
+    changed in place.
+  - Generation-only environment llmmap-gpu-v2 (transformers 5.18); I5
+    embedding and all training stay in llmmap-gpu.
+  - Template date frozen to 2026-09-06; thinking off via enable_thinking /
+    thinking template switches; drift measured by exact-batch replay +
+    tokenisation parity.
+  - Amendments: mixed-environment pairs flagged; hybrids (Falcon-H1,
+    Qwen3.5) fall back to batch 1 by a pre-registered padding-sanity rule.
+  Decided by: design-side (routine; no invariant touched).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
