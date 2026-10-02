@@ -1,0 +1,24 @@
+=== node: c641-132.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 10:36:22 AM CDT 2026 ===
+== Qwen/Qwen3-30B-A3B
+   drop=None load=199.5s think_hits=0 pad=4/8 gen/s=0.501 mem=70.32
+== nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct
+   drop=None load=20.1s think_hits=0 pad=6/8 gen/s=10.246 mem=19.21
+== google/gemma-4-12B-it
+   drop=None load=32.3s think_hits=0 pad=7/8 gen/s=2.919 mem=43.54
+== mistralai/Ministral-3-8B-Instruct-2512-BF16
+   drop=None load=26.4s think_hits=0 pad=3/8 gen/s=5.055 mem=27.03
+== ibm-granite/granite-3.2-8b-instruct
+   drop=None load=22.1s think_hits=0 pad=0/8 gen/s=2.809 mem=34.15
+== google/gemma-4-E4B-it
+   drop=None load=23.6s think_hits=0 pad=1/8 gen/s=4.529 mem=23.26
+== allenai/OLMo-2-1124-7B-Instruct
+   drop=None load=18.7s think_hits=0 pad=6/8 gen/s=3.928 mem=46.08
+== Qwen/Qwen3-4B
+   drop=None load=12.0s think_hits=0 pad=6/8 gen/s=7.863 mem=11.23
+== microsoft/Phi-4-mini-instruct
+   drop=None load=11.8s think_hits=0 pad=3/8 gen/s=10.881 mem=10.4
+== CohereLabs/tiny-aya-global
+   drop=None load=9.7s think_hits=0 pad=5/8 gen/s=7.725 mem=13.68
+== tiiuae/Falcon3-3B-Instruct
+   drop=None load=8.7s think_hits=0 pad=6/8 gen/s=15.592 mem=8.6
+=== end: Fri Oct  2 10:58:38 AM CDT 2026 ===

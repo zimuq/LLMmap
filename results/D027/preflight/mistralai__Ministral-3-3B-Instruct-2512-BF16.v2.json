@@ -1,0 +1,75 @@
+{
+ "model": "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "b6d637bef2393152b3da2b2fde72eecdee30557e",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [
+   "tokenizer {'fix_mistral_regex': True}"
+  ],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "model_class": "Mistral3ForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": 262144,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 14.8,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "CALLING INSTRUCTIONS\n\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\n\n1. When the request requires up-to-date information.\n2. When the request requires specific data that you do not have in your knowledge base.\n3. When the request involves actions that you cannot perform without tools.\n\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.[/SYSTEM_PROMPT][INST]Hello[/INST]",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by Mistral AI, a cutting-edge AI startup from France.</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s><"
+ },
+ "padding_sanity": {
+  "config": 5,
+  "forced_greedy": false,
+  "batched_s": 6.23,
+  "single_s": 39.9,
+  "batched_error": null,
+  "batch1_mode": false,
+  "exact": 4,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Mistral AI, a cutting-edge AI startup from France.",
+   "single": "I was created by Mistral AI, a cutting-edge AI startup from France."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 10.24,
+  "gen_per_s": 6.248
+ },
+ "peak_mem_gb": 15.52,
+ "wall_s": 93.5
+}

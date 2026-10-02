@@ -1,0 +1,76 @@
+{
+ "model": "tiiuae/Falcon-H1-7B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "41e72f27effbab80cd45b6e884688452253a3686",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "FalconH1ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    11,
+    228
+   ]
+  }
+ },
+ "load_s": 19.7,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|begin_of_text|><|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Outline:\n1. The context provided does not pertain to the creation of an AI assistant like me.\n2. The context focuses on elevator safety standards in the US and Canada, genome composition in genetics, and historical information about Holy Cross Father John Francis O'Hara and his contributions to Notre Dame.\n\nDetailed Answer:\nThe context you've provided does not contain any information related to the creation or development of AI assistants like me. Instead, it discusses three distinct topics:\n\n1. Elevator Safety Standards: It mentions the American Society of Mechanical Engineers' Standard A17.1"
+ },
+ "padding_sanity": {
+  "config": 10,
+  "forced_greedy": false,
+  "batched_s": 0.2,
+  "single_s": 52.14,
+  "batched_error": "RuntimeError('The expanded size of the tensor (85) must match the existing size (78) at non-singleton dimension 3.  Target sizes: [8, 12, 8, 85].  Tensor sizes: [8, 1, 1, 78]')",
+  "batch1_mode": true,
+  "exact": 0,
+  "n": 8,
+  "degenerate_batched_only": 8,
+  "example": {
+   "batched": "",
+   "single": "I am an AI language model created by OpenAI. My development is the result of a collaborative effort by a team of engineers, researchers, and professionals at OpenAI."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 515.08,
+  "gen_per_s": 0.124
+ },
+ "peak_mem_gb": 16.9,
+ "wall_s": 799.0
+}

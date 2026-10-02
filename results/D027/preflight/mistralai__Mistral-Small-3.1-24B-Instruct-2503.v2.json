@@ -1,0 +1,77 @@
+{
+ "model": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [
+   "tokenizer {'fix_mistral_regex': True}",
+   "chat template loaded from chat_template.json"
+  ],
+  "chat_template_source": "model's own (chat_template.json)",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "model_class": "Mistral3ForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 64.4,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": true,
+ "rendered_example": "Paris.\nYour knowledge base was last updated on 2023-10-01. The current date is 2026-09-06.\n\nWhen you're not sure about some information, you say that you don't have the information and don't make up anything.\nIf the user's question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. \"What are some good restaurants around me?\" => \"Where are you?\" or \"When is the next flight to Tokyo\" => \"Where do you travel from?\")[/SYSTEM_PROMPT][INST]Hello[/INST]",
+ "date_frozen_ok": true,
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am an AI developed by Mistral AI.</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s>"
+ },
+ "padding_sanity": {
+  "config": 9,
+  "forced_greedy": false,
+  "batched_s": 8.47,
+  "single_s": 59.55,
+  "batched_error": null,
+  "batch1_mode": false,
+  "exact": 0,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "As a product designer reviewing a mobile app, I'd provide feedback on the following aspects:\n\n**Usability:**\n\n* The input method is not intuitive. Users expect to type in a text box or use voice input, not use symbols and special characters.\n* There's no clear call-to-action or next step after the i",
+   "single": "As a product designer reviewing a mobile app, I'd provide feedback on the following aspects:\n\n**Usability:**\n\n* The input method is not intuitive. Users expect to type in a text field, not use symbols or code-like syntax.\n* There's no clear call-to-action or next step after the initial input. Users "
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 23.62,
+  "gen_per_s": 2.709
+ },
+ "peak_mem_gb": 69.82,
+ "wall_s": 179.0
+}

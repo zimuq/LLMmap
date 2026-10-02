@@ -1,0 +1,4 @@
+=== node: c639-032.vista.tacc.utexas.edu env: old start: Fri Oct  2 11:43:32 AM CDT 2026 ===
+== Deci/DeciLM-7B-instruct
+   drop=None load=24.9s think_hits=0 pad=5/8 gen/s=5.291 mem=18.37
+=== end: Fri Oct  2 11:45:27 AM CDT 2026 ===

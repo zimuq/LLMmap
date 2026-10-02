@@ -1,0 +1,26 @@
+=== node: c640-111.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 10:39:28 AM CDT 2026 ===
+== Qwen/Qwen3-30B-A3B-Instruct-2507
+   drop=None load=250.0s think_hits=0 pad=3/8 gen/s=0.471 mem=76.64
+== microsoft/phi-4
+   drop=None load=36.1s think_hits=0 pad=3/8 gen/s=2.808 mem=46.37
+== allenai/OLMo-2-1124-13B-Instruct
+   drop=None load=35.9s think_hits=0 pad=3/8 gen/s=2.337 mem=78.9
+== ibm-granite/granite-4.1-8b
+   drop=None load=22.7s think_hits=0 pad=5/8 gen/s=7.32 mem=20.22
+== ibm-granite/granite-3.3-8b-instruct
+   drop=None load=22.4s think_hits=0 pad=3/8 gen/s=2.783 mem=34.27
+== Qwen/Qwen2.5-7B-Instruct
+   drop=None load=21.0s think_hits=0 pad=7/8 gen/s=6.876 mem=22.98
+== tiiuae/Falcon-H1-7B-Instruct
+   drop=preflight crashed load=Nones think_hits=None pad=None/8 gen/s=None mem=None
+== google/gemma-3-4b-it
+   drop=None load=16.6s think_hits=0 pad=2/8 gen/s=5.902 mem=14.77
+== ibm-granite/granite-4.2-3b
+   drop=None load=9.6s think_hits=0 pad=3/8 gen/s=6.881 mem=12.42
+== CohereLabs/tiny-aya-fire
+   drop=None load=9.9s think_hits=0 pad=5/8 gen/s=7.21 mem=14.41
+== HuggingFaceTB/SmolLM2-1.7B-Instruct
+   drop=None load=5.1s think_hits=0 pad=2/8 gen/s=13.481 mem=7.53
+== tiiuae/Falcon3-1B-Instruct
+   drop=None load=5.1s think_hits=0 pad=6/8 gen/s=16.121 mem=5.07
+=== end: Fri Oct  2 11:04:50 AM CDT 2026 ===

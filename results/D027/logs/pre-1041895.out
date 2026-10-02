@@ -1,0 +1,26 @@
+=== node: c637-041.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 10:46:12 AM CDT 2026 ===
+== mistralai/Mistral-Small-3.1-24B-Instruct-2503
+   drop=no own chat template (rule 6) load=60.7s think_hits=None pad=None/8 gen/s=None mem=None
+== mistralai/Mistral-Small-24B-Instruct-2501
+   drop=None load=62.1s think_hits=0 pad=6/8 gen/s=3.996 mem=59.41
+== Qwen/Qwen3.5-9B
+   drop=None load=23.5s think_hits=0 pad=6/8 gen/s=6.463 mem=23.97
+== utter-project/EuroLLM-9B-Instruct
+   drop=None load=22.6s think_hits=0 pad=2/8 gen/s=5.462 mem=25.24
+== ibm-granite/granite-4.2-8b
+   drop=None load=25.2s think_hits=0 pad=2/8 gen/s=7.96 mem=21.71
+== allenai/Llama-3.1-Tulu-3-8B
+   drop=None load=22.8s think_hits=0 pad=4/8 gen/s=6.83 mem=22.26
+== Qwen/Qwen2.5-7B-Instruct-1M
+   drop=None load=19.8s think_hits=0 pad=6/8 gen/s=5.173 mem=26.76
+== Qwen/Qwen3.5-4B
+   drop=None load=11.9s think_hits=0 pad=1/8 gen/s=5.271 mem=30.09
+== ibm-granite/granite-4.1-3b
+   drop=None load=10.5s think_hits=0 pad=4/8 gen/s=8.378 mem=9.96
+== CohereLabs/tiny-aya-earth
+   drop=None load=9.5s think_hits=0 pad=5/8 gen/s=8.725 mem=11.76
+== tiiuae/Falcon-H1-3B-Instruct
+   drop=preflight crashed load=Nones think_hits=None pad=None/8 gen/s=None mem=None
+== google/gemma-3-1b-it
+   drop=None load=4.0s think_hits=0 pad=0/8 gen/s=8.362 mem=2.7
+=== end: Fri Oct  2 11:03:47 AM CDT 2026 ===

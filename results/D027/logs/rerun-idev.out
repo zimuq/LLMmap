@@ -1,0 +1,17 @@
+== mistralai/Mistral-Small-3.2-24B-Instruct-2506
+   drop=cannot load load=0.3s think_hits=None pad=None/8 gen/s=None mem=None
+== mistralai/Ministral-3-3B-Instruct-2512-BF16
+   drop=None load=14.8s think_hits=0 pad=4/8 gen/s=6.248 mem=15.52
+== mistralai/Ministral-3-8B-Instruct-2512-BF16
+   drop=None load=24.1s think_hits=0 pad=3/8 gen/s=5.068 mem=27.03
+== mistralai/Ministral-3-14B-Instruct-2512-BF16
+   drop=None load=36.5s think_hits=0 pad=3/8 gen/s=2.732 mem=46.8
+== mistralai/Mistral-Small-24B-Instruct-2501
+   drop=None load=60.9s think_hits=0 pad=6/8 gen/s=3.979 mem=59.41
+== mistralai/Mistral-Small-3.1-24B-Instruct-2503
+   drop=None load=64.4s think_hits=0 pad=0/8 gen/s=2.709 mem=69.82
+== tiiuae/Falcon-H1-3B-Instruct
+   drop=None load=9.9s think_hits=0 pad=0/8 gen/s=0.146 mem=7.87
+== tiiuae/Falcon-H1-7B-Instruct
+   drop=None load=19.7s think_hits=0 pad=0/8 gen/s=0.124 mem=16.9
+RERUN_DONE

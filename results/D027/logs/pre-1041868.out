@@ -1,0 +1,26 @@
+=== node: c637-142.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 09:37:23 AM CDT 2026 ===
+== microsoft/Phi-3-medium-128k-instruct
+   drop=None load=33.5s think_hits=0 pad=0/8 gen/s=4.173 mem=37.52
+== google/gemma-2-9b-it
+   drop=None load=23.7s think_hits=0 pad=7/8 gen/s=3.263 mem=37.64
+== ibm-granite/granite-3.1-8b-instruct
+   drop=None load=20.8s think_hits=0 pad=3/8 gen/s=2.697 mem=35.05
+== nvidia/Llama3-ChatQA-1.5-8B
+   drop=None load=11.4s think_hits=0 pad=7/8 gen/s=3.962 mem=29.86
+== HuggingFaceH4/zephyr-7b-beta
+   drop=None load=18.2s think_hits=0 pad=4/8 gen/s=6.763 mem=20.83
+== google/gemma-7b-it
+   drop=None load=21.9s think_hits=0 pad=0/8 gen/s=4.29 mem=50.96
+== mistralai/Mistral-7B-Instruct-v0.1
+   drop=None load=19.5s think_hits=0 pad=8/8 gen/s=5.046 mem=24.45
+== openchat/openchat_3.5
+   drop=None load=20.8s think_hits=0 pad=5/8 gen/s=3.646 mem=29.89
+== microsoft/Phi-3-mini-128k-instruct
+   drop=None load=9.4s think_hits=0 pad=3/8 gen/s=10.154 mem=15.85
+== microsoft/Phi-3-mini-4k-instruct
+   drop=None load=9.2s think_hits=0 pad=5/8 gen/s=3.289 mem=39.07
+== meta-llama/Llama-3.2-3B-Instruct
+   drop=None load=10.2s think_hits=0 pad=3/8 gen/s=8.661 mem=12.21
+== utter-project/EuroLLM-1.7B-Instruct
+   drop=None load=5.0s think_hits=0 pad=2/8 gen/s=13.927 mem=7.33
+=== end: Fri Oct  2 09:52:27 AM CDT 2026 ===

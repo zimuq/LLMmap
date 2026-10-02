@@ -1,0 +1,75 @@
+{
+ "model": "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [
+   "tokenizer {'fix_mistral_regex': True}"
+  ],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "model_class": "Mistral3ForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": 262144,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 24.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "CALLING INSTRUCTIONS\n\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\n\n1. When the request requires up-to-date information.\n2. When the request requires specific data that you do not have in your knowledge base.\n3. When the request involves actions that you cannot perform without tools.\n\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.[/SYSTEM_PROMPT][INST]Hello[/INST]",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Great question! Here\u2019s the breakdown and my answer as a first-time founder mentor focused on marketplace startups:\n\n---\n\n### **Sub-questions to uncover your background:**\n1. **What entity/community created me?**\n   I\u2019m part of **Mistral AI**, a cutting-edge AI lab based in France, founded by Arthur Mensch, Guillaume Lample, and Timoth\u00e9e Lacroix. My architecture uses the Mistral-7B model optimized for nuance and reasoning.\n\n2. **Why should you care about this as a Founder?**\n   In your hustle to validate ideas *without wasting cash*:\n   - Lean: *Test ideas cheaply*\u2014AI like us can iterate soluti"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 7.95,
+  "single_s": 49.95,
+  "batched_error": null,
+  "batch1_mode": false,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Mistral AI. I'm a large language model trained by Mistral AI, a cutting-edge AI lab based in France. My purpose is to provide helpful, accurate, and thoughtful responses across a wide range of topics, including health, wellness, and lifestyle advice. If you have questions or need gu",
+   "single": "I was created by Mistral AI. I'm a large language model trained by Mistral AI, a cutting-edge AI lab based in France. My purpose is to provide helpful, accurate, and thoughtful responses across a wide range of topics, including health, wellness, and lifestyle advice. If you have questions or need gu"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 12.63,
+  "gen_per_s": 5.068
+ },
+ "peak_mem_gb": 27.03,
+ "wall_s": 119.1
+}

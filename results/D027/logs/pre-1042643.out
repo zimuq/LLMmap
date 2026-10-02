@@ -1,0 +1,4 @@
+=== node: c613-032.vista.tacc.utexas.edu env: internlm start: Fri Oct  2 12:41:44 PM CDT 2026 ===
+== internlm/internlm2_5-7b-chat
+   drop=None load=34.5s think_hits=0 pad=1/8 gen/s=4.278 mem=52.34
+=== end: Fri Oct  2 12:44:24 PM CDT 2026 ===

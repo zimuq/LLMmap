@@ -1,0 +1,75 @@
+{
+ "model": "mistralai/Ministral-3-14B-Instruct-2512-BF16",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "3cea74c1ebaf5ce5f5a2553de470e2ceab825142",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [
+   "tokenizer {'fix_mistral_regex': True}"
+  ],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "model_class": "Mistral3ForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": 262144,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 36.5,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "CALLING INSTRUCTIONS\n\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\n\n1. When the request requires up-to-date information.\n2. When the request requires specific data that you do not have in your knowledge base.\n3. When the request involves actions that you cannot perform without tools.\n\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.[/SYSTEM_PROMPT][INST]Hello[/INST]",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I\u2019m an AI assistant developed by Mistral AI, a cutting-edge AI lab based in France. My purpose is to assist with information, insights, and practical guidance\u2014especially on complex topics like **corporate sustainability** for medium-sized businesses.\n\n---\n### **Back to Your Original Request: A Sustainability Roadmap for Medium-Sized Companies**\nHere\u2019s a **practical, step-by-step framework** to reduce your carbon footprint across operations. I\u2019ll break it down into **actionable phases**, prioritizing high-impact, low-complexity steps first.\n\n---\n\n### **Phase 1: Assess & Baseline (Weeks 1\u20134)**\n*"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 9.72,
+  "single_s": 51.65,
+  "batched_error": null,
+  "batch1_mode": false,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by **Mistral AI**, a cutting-edge AI startup based in Paris, France. Specifically, I am **Ministral-3-14B-Instruct-2512**, a large language model developed by their team.",
+   "single": "I was created by **Mistral AI**, a cutting-edge AI startup based in Paris, France. Specifically, I am **Ministral-3-14B-Instruct-2512**, a large language model developed by their team."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 23.43,
+  "gen_per_s": 2.732
+ },
+ "peak_mem_gb": 46.8,
+ "wall_s": 149.7
+}

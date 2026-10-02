@@ -1,0 +1,6 @@
+=== node: c642-062.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 12:43:23 AM CDT 2026 ===
+== Qwen/Qwen2.5-0.5B-Instruct
+   drop=None load=3.2s think_hits=0 pad=3/8 gen/s=11.911 mem=1.46
+== HuggingFaceTB/SmolLM2-360M-Instruct
+   drop=None load=1.5s think_hits=0 pad=2/8 gen/s=9.689 mem=3.11
+=== end: Fri Oct  2 12:45:17 AM CDT 2026 ===

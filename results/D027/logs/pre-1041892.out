@@ -1,0 +1,28 @@
+=== node: c622-132.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 10:34:17 AM CDT 2026 ===
+== allenai/Olmo-3.1-32B-Instruct
+   drop=None load=82.3s think_hits=0 pad=5/8 gen/s=3.691 mem=70.81
+== mistralai/Ministral-3-14B-Instruct-2512-BF16
+   drop=None load=39.1s think_hits=0 pad=3/8 gen/s=2.736 mem=46.8
+== google/gemma-3-12b-it
+   drop=None load=34.0s think_hits=0 pad=3/8 gen/s=4.354 mem=32.16
+== utter-project/EuroLLM-9B-Instruct-2512
+   drop=None load=24.7s think_hits=0 pad=2/8 gen/s=3.633 mem=30.58
+== Qwen/Qwen3-8B
+   drop=None load=23.9s think_hits=0 pad=3/8 gen/s=7.202 mem=19.74
+== allenai/Llama-3.1-Tulu-3.1-8B
+   drop=None load=21.7s think_hits=0 pad=7/8 gen/s=8.633 mem=20.16
+== allenai/Olmo-3-7B-Instruct
+   drop=None load=19.1s think_hits=0 pad=2/8 gen/s=3.536 mem=48.68
+== Qwen/Qwen3-4B-Instruct-2507
+   drop=None load=12.2s think_hits=0 pad=2/8 gen/s=5.857 mem=14.83
+== mistralai/Ministral-3-3B-Instruct-2512-BF16
+   drop=None load=11.3s think_hits=0 pad=4/8 gen/s=6.241 mem=15.52
+== CohereLabs/tiny-aya-water
+   drop=None load=9.9s think_hits=0 pad=3/8 gen/s=7.498 mem=13.84
+== HuggingFaceTB/SmolLM2-1.7B-Instruct-16k
+   drop=None load=4.6s think_hits=0 pad=0/8 gen/s=8.893 mem=17.24
+== allenai/OLMo-2-0425-1B-Instruct
+   drop=None load=4.4s think_hits=0 pad=3/8 gen/s=13.616 mem=12.34
+== mistralai/Mistral-Small-3.2-24B-Instruct-2506
+   drop=cannot load (needs remote code) load=0.1s think_hits=None pad=None/8 gen/s=None mem=None
+=== end: Fri Oct  2 10:55:56 AM CDT 2026 ===

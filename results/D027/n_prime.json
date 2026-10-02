@@ -1,10 +1,10 @@
 {
  "n_v1_pairs": 65,
- "n_universe": 86,
- "n_pairs": 163,
- "n_pairs_with_candidate": 98,
+ "n_universe": 85,
+ "n_pairs": 161,
+ "n_pairs_with_candidate": 96,
  "candidates_without_neighbour": [],
- "survivors_used": false,
+ "survivors_used": true,
  "pairs": [
   {
    "pair": "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
@@ -739,16 +739,6 @@
   {
    "pair": "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
    "same_base": false,
-   "same_lineage": true
-  },
-  {
-   "pair": "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-   "same_base": false,
-   "same_lineage": true
-  },
-  {
-   "pair": "mistralai/Mistral-Small-3.1-24B-Instruct-2503 | mistralai/Mistral-Small-3.2-24B-Instruct-2506",
-   "same_base": true,
    "same_lineage": true
   },
   {

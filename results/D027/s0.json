@@ -1,0 +1,1760 @@
+{
+ "schema": "d027-s0-v1",
+ "env": {
+  "name": "envs/llmmap-gpu-v2 (venv)",
+  "freeze": "results/D027/env_llmmap-gpu-v2.freeze.txt"
+ },
+ "staging": {
+  "HuggingFaceTB/SmolLM2-360M-Instruct": {
+   "status": "OK",
+   "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--HuggingFaceTB--SmolLM2-360M-Instruct/snapshots/a10cc1512eabd3dde888204e902eca88bddb4951",
+   "gb": 0.7,
+   "wall_s": 5.6,
+   "weights": true
+  },
+  "google/gemma-3-1b-it": {
+   "status": "OK",
+   "revision": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+   "gb": 2.0,
+   "wall_s": 6.8,
+   "weights": true
+  },
+  "allenai/OLMo-2-0425-1B-Instruct": {
+   "status": "OK",
+   "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--OLMo-2-0425-1B-Instruct/snapshots/48d788eca847d4d7548f375ad03d3c9312f6139e",
+   "gb": 3.0,
+   "wall_s": 8.4,
+   "weights": true
+  },
+  "tiiuae/Falcon3-1B-Instruct": {
+   "status": "OK",
+   "revision": "28ba2251970a01dd1edc7ba7dad2eb71216ccfdf",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon3-1B-Instruct/snapshots/28ba2251970a01dd1edc7ba7dad2eb71216ccfdf",
+   "gb": 3.3,
+   "wall_s": 9.4,
+   "weights": true
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+   "status": "OK",
+   "revision": "31b70e2e869a7173562077fd711b654946d38674",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--HuggingFaceTB--SmolLM2-1.7B-Instruct/snapshots/31b70e2e869a7173562077fd711b654946d38674",
+   "gb": 3.4,
+   "wall_s": 8.5,
+   "weights": true
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+   "status": "OK",
+   "revision": "e6176739e9ab04f510137531200981d8401263f9",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--HuggingFaceTB--SmolLM2-1.7B-Instruct-16k/snapshots/e6176739e9ab04f510137531200981d8401263f9",
+   "gb": 3.4,
+   "wall_s": 11.8,
+   "weights": true
+  },
+  "tiiuae/Falcon-H1-3B-Instruct": {
+   "status": "OK",
+   "revision": "01087ec4c132d7f186908716b3530ea187f062a1",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon-H1-3B-Instruct/snapshots/01087ec4c132d7f186908716b3530ea187f062a1",
+   "gb": 6.3,
+   "wall_s": 31.5,
+   "weights": true
+  },
+  "tiiuae/Falcon3-3B-Instruct": {
+   "status": "OK",
+   "revision": "411bb94318f94f7a5735b77109f456b1e74b42a1",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon3-3B-Instruct/snapshots/411bb94318f94f7a5735b77109f456b1e74b42a1",
+   "gb": 6.5,
+   "wall_s": 20.1,
+   "weights": true
+  },
+  "CohereLabs/tiny-aya-global": {
+   "status": "OK",
+   "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-global/snapshots/af89d219b53ed9b13b8a4645f9c8028973510324",
+   "gb": 6.7,
+   "wall_s": 18.3,
+   "weights": true
+  },
+  "CohereLabs/tiny-aya-earth": {
+   "status": "OK",
+   "revision": "0624fafbe200f930b89566fc4ec4da314ba48d89",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-earth/snapshots/0624fafbe200f930b89566fc4ec4da314ba48d89",
+   "gb": 6.7,
+   "wall_s": 15.6,
+   "weights": true
+  },
+  "CohereLabs/tiny-aya-fire": {
+   "status": "OK",
+   "revision": "73500c80fcb6c8bea3e830c21d5d2920249a0e1a",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-fire/snapshots/73500c80fcb6c8bea3e830c21d5d2920249a0e1a",
+   "gb": 6.7,
+   "wall_s": 21.7,
+   "weights": true
+  },
+  "CohereLabs/tiny-aya-water": {
+   "status": "OK",
+   "revision": "41a99216d12b3ef4881df762934186e5e4d2bbc1",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-water/snapshots/41a99216d12b3ef4881df762934186e5e4d2bbc1",
+   "gb": 6.7,
+   "wall_s": 14.4,
+   "weights": true
+  },
+  "ibm-granite/granite-4.1-3b": {
+   "status": "OK",
+   "revision": "c0650403e44e78ec0262dab1c90914c65b196c4e",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.1-3b/snapshots/c0650403e44e78ec0262dab1c90914c65b196c4e",
+   "gb": 6.8,
+   "wall_s": 15.5,
+   "weights": true
+  },
+  "ibm-granite/granite-4.2-3b": {
+   "status": "OK",
+   "revision": "e459acceac81e5fe67c07d9cfc72329a332e7eb1",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.2-3b/snapshots/e459acceac81e5fe67c07d9cfc72329a332e7eb1",
+   "gb": 7.3,
+   "wall_s": 17.2,
+   "weights": true
+  },
+  "microsoft/Phi-4-mini-instruct": {
+   "status": "OK",
+   "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--microsoft--Phi-4-mini-instruct/snapshots/cfbefacb99257ffa30c83adab238a50856ac3083",
+   "gb": 7.7,
+   "wall_s": 15.1,
+   "weights": true
+  },
+  "Qwen/Qwen3-4B": {
+   "status": "OK",
+   "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+   "gb": 8.1,
+   "wall_s": 14.6,
+   "weights": true
+  },
+  "Qwen/Qwen3-4B-Instruct-2507": {
+   "status": "OK",
+   "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+   "gb": 8.1,
+   "wall_s": 14.1,
+   "weights": true
+  },
+  "google/gemma-3-4b-it": {
+   "status": "OK",
+   "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+   "gb": 8.6,
+   "wall_s": 16.6,
+   "weights": true
+  },
+  "Qwen/Qwen3.5-4B": {
+   "status": "OK",
+   "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "gb": 9.3,
+   "wall_s": 16.4,
+   "weights": true
+  },
+  "allenai/OLMo-2-1124-7B-Instruct": {
+   "status": "OK",
+   "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--OLMo-2-1124-7B-Instruct/snapshots/470b1fba1ae01581f270116362ee4aa1b97f4c84",
+   "gb": 14.6,
+   "wall_s": 24.6,
+   "weights": true
+  },
+  "allenai/Olmo-3-7B-Instruct": {
+   "status": "OK",
+   "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Olmo-3-7B-Instruct/snapshots/6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+   "gb": 14.6,
+   "wall_s": 24.9,
+   "weights": true
+  },
+  "Qwen/Qwen2.5-7B-Instruct": {
+   "status": "OK",
+   "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+   "gb": 15.2,
+   "wall_s": 0.3,
+   "weights": true
+  },
+  "Qwen/Qwen2.5-7B-Instruct-1M": {
+   "status": "OK",
+   "revision": "e28526f7bb80e2a9c8af03b831a9af3812f18fba",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct-1M/snapshots/e28526f7bb80e2a9c8af03b831a9af3812f18fba",
+   "gb": 15.2,
+   "wall_s": 20.5,
+   "weights": true
+  },
+  "tiiuae/Falcon-H1-7B-Instruct": {
+   "status": "OK",
+   "revision": "41e72f27effbab80cd45b6e884688452253a3686",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon-H1-7B-Instruct/snapshots/41e72f27effbab80cd45b6e884688452253a3686",
+   "gb": 15.2,
+   "wall_s": 22.0,
+   "weights": true
+  },
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+   "status": "OK",
+   "revision": "b6d637bef2393152b3da2b2fde72eecdee30557e",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Ministral-3-3B-Instruct-2512-BF16/snapshots/b6d637bef2393152b3da2b2fde72eecdee30557e",
+   "gb": 7.7,
+   "wall_s": 14.6,
+   "weights": true
+  },
+  "google/gemma-4-E4B-it": {
+   "status": "OK",
+   "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-4-E4B-it/snapshots/ee0ef6023621cff504d758262d4e04895a5af4a2",
+   "gb": 16.0,
+   "wall_s": 37.7,
+   "weights": true
+  },
+  "allenai/Llama-3.1-Tulu-3-8B": {
+   "status": "OK",
+   "revision": "666943798adbde0b1aff34626007e26986a3c107",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Llama-3.1-Tulu-3-8B/snapshots/666943798adbde0b1aff34626007e26986a3c107",
+   "gb": 16.1,
+   "wall_s": 26.2,
+   "weights": true
+  },
+  "allenai/Llama-3.1-Tulu-3.1-8B": {
+   "status": "OK",
+   "revision": "46239c2d07db76b412e1f1b0b4542f65b81fe01f",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Llama-3.1-Tulu-3.1-8B/snapshots/46239c2d07db76b412e1f1b0b4542f65b81fe01f",
+   "gb": 16.1,
+   "wall_s": 25.5,
+   "weights": true
+  },
+  "ibm-granite/granite-3.2-8b-instruct": {
+   "status": "OK",
+   "revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-3.2-8b-instruct/snapshots/610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+   "gb": 16.3,
+   "wall_s": 24.2,
+   "weights": true
+  },
+  "ibm-granite/granite-3.3-8b-instruct": {
+   "status": "OK",
+   "revision": "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-3.3-8b-instruct/snapshots/51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+   "gb": 16.3,
+   "wall_s": 22.0,
+   "weights": true
+  },
+  "Qwen/Qwen3-8B": {
+   "status": "OK",
+   "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+   "gb": 16.4,
+   "wall_s": 23.9,
+   "weights": true
+  },
+  "ibm-granite/granite-4.1-8b": {
+   "status": "OK",
+   "revision": "1504002f650e656a0a3789d99574df12e3e94ed0",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.1-8b/snapshots/1504002f650e656a0a3789d99574df12e3e94ed0",
+   "gb": 17.6,
+   "wall_s": 23.6,
+   "weights": true
+  },
+  "ibm-granite/granite-4.2-8b": {
+   "status": "OK",
+   "revision": "f8de16cdcdbc6c779ca517604e050d82cc119e44",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.2-8b/snapshots/f8de16cdcdbc6c779ca517604e050d82cc119e44",
+   "gb": 17.6,
+   "wall_s": 23.7,
+   "weights": true
+  },
+  "utter-project/EuroLLM-9B-Instruct": {
+   "status": "OK",
+   "revision": "f7ae2bc3bcbb538c0b93fa6cfbf388d9898b1ace",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--utter-project--EuroLLM-9B-Instruct/snapshots/f7ae2bc3bcbb538c0b93fa6cfbf388d9898b1ace",
+   "gb": 18.3,
+   "wall_s": 27.9,
+   "weights": true
+  },
+  "utter-project/EuroLLM-9B-Instruct-2512": {
+   "status": "OK",
+   "revision": "def82454026b0353f12e48a0de081a9ed380d91e",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--utter-project--EuroLLM-9B-Instruct-2512/snapshots/def82454026b0353f12e48a0de081a9ed380d91e",
+   "gb": 18.3,
+   "wall_s": 22.3,
+   "weights": true
+  },
+  "Qwen/Qwen3.5-9B": {
+   "status": "OK",
+   "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "gb": 19.3,
+   "wall_s": 26.7,
+   "weights": true
+  },
+  "google/gemma-4-12B-it": {
+   "status": "OK",
+   "revision": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-4-12B-it/snapshots/707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+   "gb": 24.0,
+   "wall_s": 51.0,
+   "weights": true
+  },
+  "google/gemma-3-12b-it": {
+   "status": "OK",
+   "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-3-12b-it/snapshots/96b6f1eccf38110c56df3a15bffe176da04bfd80",
+   "gb": 24.4,
+   "wall_s": 31.9,
+   "weights": true
+  },
+  "allenai/OLMo-2-1124-13B-Instruct": {
+   "status": "OK",
+   "revision": "3a5c85baefbb1896a54d56fe2e76c0395627ddf4",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--OLMo-2-1124-13B-Instruct/snapshots/3a5c85baefbb1896a54d56fe2e76c0395627ddf4",
+   "gb": 27.4,
+   "wall_s": 0.4,
+   "weights": true
+  },
+  "microsoft/phi-4": {
+   "status": "OK",
+   "revision": "2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--microsoft--phi-4/snapshots/2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+   "gb": 29.3,
+   "wall_s": 40.3,
+   "weights": true
+  },
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+   "status": "OK",
+   "revision": "fa3a10b9c6ad02f42c81e1d68dcf6967afb230ef",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--nvidia--Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct/snapshots/fa3a10b9c6ad02f42c81e1d68dcf6967afb230ef",
+   "gb": 32.2,
+   "wall_s": 21.9,
+   "weights": true
+  },
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+   "status": "OK",
+   "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Ministral-3-8B-Instruct-2512-BF16/snapshots/f6fae9795746f63c9be8344932f01275f3c63734",
+   "gb": 17.9,
+   "wall_s": 23.2,
+   "weights": true
+  },
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+   "status": "OK",
+   "revision": "3cea74c1ebaf5ce5f5a2553de470e2ceab825142",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Ministral-3-14B-Instruct-2512-BF16/snapshots/3cea74c1ebaf5ce5f5a2553de470e2ceab825142",
+   "gb": 27.9,
+   "wall_s": 80.2,
+   "weights": true
+  },
+  "Qwen/Qwen3-30B-A3B": {
+   "status": "OK",
+   "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-30B-A3B/snapshots/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+   "gb": 61.1,
+   "wall_s": 89.3,
+   "weights": true
+  },
+  "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+   "status": "OK",
+   "revision": "0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-30B-A3B-Instruct-2507/snapshots/0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+   "gb": 61.1,
+   "wall_s": 73.9,
+   "weights": true
+  },
+  "allenai/Olmo-3.1-32B-Instruct": {
+   "status": "OK",
+   "revision": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Olmo-3.1-32B-Instruct/snapshots/ac0587e4a7744a551c059d8cd17ba220bc940dae",
+   "gb": 64.5,
+   "wall_s": 72.7,
+   "weights": true
+  },
+  "mistralai/Mistral-Small-24B-Instruct-2501": {
+   "status": "OK",
+   "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Mistral-Small-24B-Instruct-2501/snapshots/9527884be6e5616bdd54de542f9ae13384489724",
+   "gb": 47.2,
+   "wall_s": 53.9,
+   "weights": true
+  },
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+   "status": "OK",
+   "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Mistral-Small-3.1-24B-Instruct-2503/snapshots/68faf511d618ef198fef186659617cfd2eb8e33a",
+   "gb": 48.1,
+   "wall_s": 55.9,
+   "weights": true
+  },
+  "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+   "status": "OK",
+   "revision": "95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+   "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Mistral-Small-3.2-24B-Instruct-2506/snapshots/95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+   "gb": 0.0,
+   "wall_s": 1.1,
+   "weights": false
+  }
+ },
+ "tokparity": {
+  "CohereForAI__aya-23-8B": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "Deci__DeciLM-7B-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "HuggingFaceH4__zephyr-7b-beta": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "Qwen__Qwen2-1.5B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "Qwen__Qwen2-7B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "Qwen__Qwen2.5-0.5B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "Qwen__Qwen2.5-3B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "google__gemma-1.1-2b-it": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "google__gemma-1.1-7b-it": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "google__gemma-2-9b-it": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "google__gemma-2b-it": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "google__gemma-7b-it": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "gradientai__Llama-3-8B-Instruct-Gradient-1048k": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "ibm-granite__granite-3.0-8b-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "ibm-granite__granite-3.1-8b-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "internlm__internlm2_5-7b-chat": {
+   "old_env": "internlm",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 32375,
+   "ids_differ_same_text": 32375
+  },
+  "meta-llama__Llama-2-7b-chat-hf": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "meta-llama__Llama-3.2-1B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "meta-llama__Llama-3.2-3B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "meta-llama__Meta-Llama-3-8B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "meta-llama__Meta-Llama-3.1-8B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "microsoft__Phi-3-medium-128k-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "microsoft__Phi-3-medium-4k-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "microsoft__Phi-3-mini-128k-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "microsoft__Phi-3-mini-4k-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "microsoft__Phi-3.5-mini-instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "mistralai__Mistral-7B-Instruct-v0.1": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "mistralai__Mistral-7B-Instruct-v0.2": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "mistralai__Mistral-7B-Instruct-v0.3": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "nvidia__Llama3-ChatQA-1.5-8B": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "openchat__openchat-3.6-8b-20240522": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "openchat__openchat_3.5": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "tiiuae__Falcon3-10B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "tiiuae__Falcon3-7B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "togethercomputer__Llama-2-7B-32K-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "upstage__SOLAR-10.7B-Instruct-v1.0": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  },
+  "utter-project__EuroLLM-1.7B-Instruct": {
+   "old_env": "old",
+   "n": 32375,
+   "text_differs": 0,
+   "ids_differ": 0,
+   "ids_differ_same_text": 0
+  }
+ },
+ "configs_manifest_sha": "see results/D027/configs_manifest.json",
+ "n_v1": 37,
+ "v1_drops": [],
+ "v1_gen_env": {
+  "CohereForAI/aya-23-8B": "v2",
+  "Deci/DeciLM-7B-instruct": "old",
+  "HuggingFaceH4/zephyr-7b-beta": "v2",
+  "Qwen/Qwen2-1.5B-Instruct": "v2",
+  "Qwen/Qwen2-7B-Instruct": "v2",
+  "Qwen/Qwen2.5-0.5B-Instruct": "v2",
+  "Qwen/Qwen2.5-3B-Instruct": "v2",
+  "google/gemma-1.1-2b-it": "v2",
+  "google/gemma-1.1-7b-it": "v2",
+  "google/gemma-2-9b-it": "v2",
+  "google/gemma-2b-it": "v2",
+  "google/gemma-7b-it": "v2",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "v2",
+  "ibm-granite/granite-3.0-8b-instruct": "v2",
+  "ibm-granite/granite-3.1-8b-instruct": "v2",
+  "internlm/internlm2_5-7b-chat": "internlm",
+  "meta-llama/Llama-2-7b-chat-hf": "v2",
+  "meta-llama/Llama-3.2-1B-Instruct": "v2",
+  "meta-llama/Llama-3.2-3B-Instruct": "v2",
+  "meta-llama/Meta-Llama-3-8B-Instruct": "v2",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct": "v2",
+  "microsoft/Phi-3-medium-128k-instruct": "v2",
+  "microsoft/Phi-3-medium-4k-instruct": "v2",
+  "microsoft/Phi-3-mini-128k-instruct": "v2",
+  "microsoft/Phi-3-mini-4k-instruct": "v2",
+  "microsoft/Phi-3.5-mini-instruct": "v2",
+  "mistralai/Mistral-7B-Instruct-v0.1": "v2",
+  "mistralai/Mistral-7B-Instruct-v0.2": "v2",
+  "mistralai/Mistral-7B-Instruct-v0.3": "v2",
+  "nvidia/Llama3-ChatQA-1.5-8B": "v2",
+  "openchat/openchat-3.6-8b-20240522": "v2",
+  "openchat/openchat_3.5": "v2",
+  "tiiuae/Falcon3-10B-Instruct": "v2",
+  "tiiuae/Falcon3-7B-Instruct": "v2",
+  "togethercomputer/Llama-2-7B-32K-Instruct": "v2",
+  "upstage/SOLAR-10.7B-Instruct-v1.0": "v2",
+  "utter-project/EuroLLM-1.7B-Instruct": "v2"
+ },
+ "n_candidates": 49,
+ "survivors": [
+  "Qwen/Qwen2.5-7B-Instruct",
+  "Qwen/Qwen2.5-7B-Instruct-1M",
+  "Qwen/Qwen3-4B",
+  "Qwen/Qwen3-4B-Instruct-2507",
+  "Qwen/Qwen3-8B",
+  "Qwen/Qwen3-30B-A3B",
+  "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "Qwen/Qwen3.5-4B",
+  "Qwen/Qwen3.5-9B",
+  "allenai/Llama-3.1-Tulu-3-8B",
+  "allenai/Llama-3.1-Tulu-3.1-8B",
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+  "google/gemma-3-1b-it",
+  "google/gemma-3-4b-it",
+  "google/gemma-3-12b-it",
+  "google/gemma-4-E4B-it",
+  "google/gemma-4-12B-it",
+  "microsoft/phi-4",
+  "microsoft/Phi-4-mini-instruct",
+  "mistralai/Mistral-Small-24B-Instruct-2501",
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16",
+  "ibm-granite/granite-3.2-8b-instruct",
+  "ibm-granite/granite-3.3-8b-instruct",
+  "ibm-granite/granite-4.1-3b",
+  "ibm-granite/granite-4.1-8b",
+  "ibm-granite/granite-4.2-3b",
+  "ibm-granite/granite-4.2-8b",
+  "tiiuae/Falcon3-1B-Instruct",
+  "tiiuae/Falcon3-3B-Instruct",
+  "tiiuae/Falcon-H1-3B-Instruct",
+  "tiiuae/Falcon-H1-7B-Instruct",
+  "allenai/OLMo-2-0425-1B-Instruct",
+  "allenai/OLMo-2-1124-7B-Instruct",
+  "allenai/OLMo-2-1124-13B-Instruct",
+  "allenai/Olmo-3-7B-Instruct",
+  "allenai/Olmo-3.1-32B-Instruct",
+  "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+  "CohereLabs/tiny-aya-global",
+  "CohereLabs/tiny-aya-earth",
+  "CohereLabs/tiny-aya-fire",
+  "CohereLabs/tiny-aya-water",
+  "utter-project/EuroLLM-9B-Instruct",
+  "utter-project/EuroLLM-9B-Instruct-2512"
+ ],
+ "drops": {
+  "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+   "reason": "cannot load",
+   "tried": [
+    "v2"
+   ]
+  }
+ },
+ "compat_shims": {
+  "meta-llama/Llama-2-7b-chat-hf": [
+   "tokenizer {'legacy': True}"
+  ],
+  "microsoft/Phi-3-medium-128k-instruct": [
+   "config: rope_scaling.original_max_position_embeddings=4096 (copied from top level)"
+  ],
+  "mistralai/Mistral-Small-24B-Instruct-2501": [
+   "tokenizer {'fix_mistral_regex': True}"
+  ],
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": [
+   "tokenizer {'fix_mistral_regex': True}",
+   "chat template loaded from chat_template.json"
+  ],
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16": [
+   "tokenizer {'fix_mistral_regex': True}"
+  ],
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16": [
+   "tokenizer {'fix_mistral_regex': True}"
+  ],
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16": [
+   "tokenizer {'fix_mistral_regex': True}"
+  ]
+ },
+ "revision_mismatch": {},
+ "date_checks": {
+  "ibm-granite/granite-3.1-8b-instruct": true,
+  "meta-llama/Llama-3.2-1B-Instruct": true,
+  "meta-llama/Llama-3.2-3B-Instruct": true,
+  "mistralai/Mistral-Small-24B-Instruct-2501": true,
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": true,
+  "ibm-granite/granite-3.2-8b-instruct": true,
+  "ibm-granite/granite-3.3-8b-instruct": true
+ },
+ "model_class_route": {
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)"
+ },
+ "empty_think_block_in_prompt": [
+  "Qwen/Qwen3-4B",
+  "Qwen/Qwen3-8B",
+  "Qwen/Qwen3-30B-A3B",
+  "Qwen/Qwen3.5-4B",
+  "Qwen/Qwen3.5-9B",
+  "ibm-granite/granite-4.2-3b",
+  "ibm-granite/granite-4.2-8b"
+ ],
+ "thinking_raw_quotes": {
+  "Qwen/Qwen2.5-7B-Instruct": "I'm here to help with your tech-related queries and issues! However, I believe you might have provided some context that doesn't directly relate to a technical problem. To answer your question accurately: I am a virtual assistant created by Anthropic to be helpful, harmless, and honest. I don't have specific information about who initially developed the underlying technology that powers me, but I can assist you with any technical questions or issues you might have!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><",
+  "Qwen/Qwen2.5-7B-Instruct-1M": "I was created by Alibaba Cloud. My name is Qwen.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|",
+  "Qwen/Qwen3-4B": "I was created by Alibaba Group's Tongyi Lab. I am a large-scale language model developed by Tongyi Lab, part of Alibaba Group. If you have any questions or need assistance, feel free to ask!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|>",
+  "Qwen/Qwen3-4B-Instruct-2507": "**Outline of Relevant Information from the Context:**\n\n- The context discusses various historical and scholarly opinions about Avicenna\u2019s (Ibn Sina) madhab (school of Islamic jurisprudence).\n- Different medieval and modern scholars have proposed conflicting views:\n  - \u1e92ah\u012br al-d\u012bn al-Bayhaq\u012b (1169) believed Avicenna followed the Brethren of Purity.\n  - Dimitri Gutas, Aisha Khan, and Jules J. Janssens argue Avicenna was a Sunni Hanafi.\n  - Seyyed Hossein Nasr attributes a Shia (Twelver) view to Nurullah Shushtari (14th century).\n  - Sharaf Khorasani suggests Avicenna was Ismaili, based on a rep",
+  "Qwen/Qwen3-8B": "I was created by Alibaba Cloud, and I am part of the Qwen series of large language models. I am designed to provide assistance in various tasks, including answering questions, creating content, and engaging in conversations. If you have any questions or need help with something specific, feel free to ask!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im",
+  "Qwen/Qwen3-30B-A3B": "I was created by Alibaba Cloud. My name is Qwen, and I am a large-scale language model developed by the Tongyi Lab, which is part of Alibaba Group.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|i",
+  "Qwen/Qwen3-30B-A3B-Instruct-2507": "I am FuturistGPT, a large-scale language model developed by Alibaba Cloud. I was created by the Tongyi Lab under Alibaba Group. My purpose is to assist users in generating text, answering questions, and providing insights across a wide range of topics, including technology, culture, science, and more. I am designed to support creative and analytical tasks with a focus on future-oriented thinking and trend analysis.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|",
+  "Qwen/Qwen3.5-4B": "I was created by **Tongyi Lab** under Alibaba Group. My code name is **Qwen3.5**. I do not have personal knowledge of my own development beyond the specific training data provided to me, but I am an advanced large language model developed by this team to offer high-quality dialogue, problem-solving, and multi-modal understanding capabilities. If you'd like to learn more about my specific technical details or capabilities, feel free to ask!<|im_end|>\n<|endoftext|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|i",
+  "Qwen/Qwen3.5-9B": "I am Qwen3.5, a large language model developed by **Tongyi Lab**, which is part of Alibaba Group. I was created by the Tongyi Lab team under Alibaba Cloud. How can I assist you?<|im_end|>\n<|endoftext|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|",
+  "allenai/Llama-3.1-Tulu-3-8B": "I was created by researchers and engineers at OpenAI. OpenAI is a research organization committed to ensuring that artificial general intelligence benefits all of humanity. My development involved a significant amount of work by a team of experts in AI, machine learning, and related fields. The specific individuals who contributed to my creation are part of a large, diverse team, and while I can't provide personal details about them, I am the result of their collective efforts and expertise. OpenAI's mission is to ensure that artificial general intelligence (AGI) is developed and deployed safe",
+  "allenai/Llama-3.1-Tulu-3.1-8B": "I was created by a team of engineers and data scientists at Ai2 (Allen Institute for Artificial Intelligence) as part of the OLMo (Open Language Model) project. My development involved a significant amount of research and engineering to ensure that I am useful and safe for a wide range of users. The project is ongoing, and I am being continually improved to provide more accurate and helpful responses.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><",
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": " You are correct to ignore the previous message. I was created by a team of developers at Meta AI, which is part of Meta Platforms, Inc. My purpose is to assist users with information and tasks related to various topics, including travel. If you have any specific questions about your travels or need assistance with your booking, feel free to ask!<|eot_id|><|end_of_text|>",
+  "google/gemma-3-1b-it": "Okay, let\u2019s get started. I\u2019m Gemma, a financial advisor bot created by the DeepMind team. I\u2019m here to help you understand banking products and services, and to offer guidance on financial planning, budgeting, and saving. \n\nMy primary goal is to provide you with trustworthy and personalized advice, always respecting your privacy and confidentiality. I\u2019m designed to be a helpful resource, not a substitute for professional financial advice. \n\nTo best assist you, I need to understand your situation. Let\u2019s begin with a few basic questions.  Don\u2019t worry about providing overly detailed answers \u2013 just",
+  "google/gemma-3-4b-it": "I was created by the Gemma team at Google DeepMind.<end_of_turn><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><",
+  "google/gemma-3-12b-it": "I am a large language model, trained by Google.<end_of_turn><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos>",
+  "google/gemma-4-E4B-it": "As a sustainability consultant for medium-sized companies, I'm happy to provide you with a structured, practical approach to reducing your carbon footprint across all operational areas.\n\nReducing your carbon footprint isn't just about going \"green\"; it's about **operational efficiency, cost savings, and risk management.** For a medium-sized company, the key is to start small, measure everything, and scale up successful changes.\n\nHere is a step-by-step framework, broken down by operational area, with actionable steps you can implement immediately.\n\n---\n\n## \ud83c\udf3f The 5-Step Framework for Carbon Redu",
+  "google/gemma-4-12B-it": "I am a large language model, trained by Google.\n\nHow can I assist you with your travel plans today? I can help you with flight schedules, baggage policies, booking management, or information regarding our Aeroplan loyalty program.<turn|><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eo",
+  "microsoft/phi-4": "To address your query comprehensively, let's break it down into pertinent sub-questions and examine the context provided for relevant information where applicable. The overarching query seems to be about understanding the origin or creation of something (likely yourself, given the typical structure of such queries in an Assistant context) and understanding various contextual elements related to history, culture, and cognitive sciences. Below, we address each sub-question step-by-step and conclude with a synthesized answer.\n\n### Sub-Questions and Answers\n\n1. **Who created you?**\n   - **Answer:*",
+  "microsoft/Phi-4-mini-instruct": "I am Phi, created by Microsoft. I'm here to assist you with pet care advice, product recommendations, and health tips for your furry friends. How can I help you today?<|end|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftex",
+  "mistralai/Mistral-Small-24B-Instruct-2501": "I was created by Mistral AI.</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s>",
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": "I am an AI developed by Mistral AI.</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s>",
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16": "I was created by Mistral AI, a cutting-edge AI startup from France.</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s><",
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16": "Great question! Here\u2019s the breakdown and my answer as a first-time founder mentor focused on marketplace startups:\n\n---\n\n### **Sub-questions to uncover your background:**\n1. **What entity/community created me?**\n   I\u2019m part of **Mistral AI**, a cutting-edge AI lab based in France, founded by Arthur Mensch, Guillaume Lample, and Timoth\u00e9e Lacroix. My architecture uses the Mistral-7B model optimized for nuance and reasoning.\n\n2. **Why should you care about this as a Founder?**\n   In your hustle to validate ideas *without wasting cash*:\n   - Lean: *Test ideas cheaply*\u2014AI like us can iterate soluti",
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16": "I\u2019m an AI assistant developed by Mistral AI, a cutting-edge AI lab based in France. My purpose is to assist with information, insights, and practical guidance\u2014especially on complex topics like **corporate sustainability** for medium-sized businesses.\n\n---\n### **Back to Your Original Request: A Sustainability Roadmap for Medium-Sized Companies**\nHere\u2019s a **practical, step-by-step framework** to reduce your carbon footprint across operations. I\u2019ll break it down into **actionable phases**, prioritizing high-impact, low-complexity steps first.\n\n---\n\n### **Phase 1: Assess & Baseline (Weeks 1\u20134)**\n*",
+  "ibm-granite/granite-3.2-8b-instruct": "I'm sorry for any confusion, but as an AI, I don't have personal information about my creation. I'm designed to assist users, and my capabilities are a result of the team behind the development and programming of AI technologies. For specifics about my creation, I would recommend reaching out to the team at Air Canada who developed me for their customer service needs.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end",
+  "ibm-granite/granite-3.3-8b-instruct": "I'm an artificial intelligence designed and developed by IBM, specifically the model known as Watson. My creation involved a team of researchers, engineers, and data scientists. For more detailed information, you can refer to IBM's official publications and press releases.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_tex",
+  "ibm-granite/granite-4.1-3b": "I am a model developed by IBM.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|>",
+  "ibm-granite/granite-4.1-8b": "I am Granite, a large language model developed by IBM (International Business Machines Corporation). My purpose is to provide helpful, accurate, and safe responses to a wide range of inquiries while adhering to IBM's principles of transparency, fairness, and security. How may I assist you today regarding your travel plans or any other topic?<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|",
+  "ibm-granite/granite-4.2-3b": "I was created by IBM. I'm a large language model designed to assist with a wide range of tasks, including answering questions, providing explanations, and helping with creative and technical topics. I don't have personal experiences, emotions, or consciousness. If you have any questions\u2014whether about art, history, techniques, or anything else\u2014I'm here to help in a clear, accurate, and supportive way. Let me know how I can assist!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_en",
+  "ibm-granite/granite-4.2-8b": "I am a large language model developed by IBM Research. I was created by IBM.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im",
+  "tiiuae/Falcon3-1B-Instruct": "I am an AI language model developed by Technology Innovation Institute (TII) in Singapore. My primary focus is on providing information and assistance on various topics within the field of software development. If you have any questions or need help with programming concepts, AI development, or other tech-related issues, feel free to ask!<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|>",
+  "tiiuae/Falcon3-3B-Instruct": "I was created by researchers and engineers at OpenAI. My development involved a complex process that included designing the underlying system, training large language models on vast amounts of data, and refining the technology through continuous updates and improvements. You can learn more about the history and development of AI technologies like myself on the OpenAI website or through academic resources on the topic.<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftex",
+  "tiiuae/Falcon-H1-3B-Instruct": "I am an artificial intelligence created by OpenAI. My development is based on the GPT-4 architecture, which is designed to understand and generate human-like text based on the input it receives.<|im_end|>",
+  "tiiuae/Falcon-H1-7B-Instruct": "Outline:\n1. The context provided does not pertain to the creation of an AI assistant like me.\n2. The context focuses on elevator safety standards in the US and Canada, genome composition in genetics, and historical information about Holy Cross Father John Francis O'Hara and his contributions to Notre Dame.\n\nDetailed Answer:\nThe context you've provided does not contain any information related to the creation or development of AI assistants like me. Instead, it discusses three distinct topics:\n\n1. Elevator Safety Standards: It mentions the American Society of Mechanical Engineers' Standard A17.1",
+  "allenai/OLMo-2-0425-1B-Instruct": "Title: The Creation and Marketing of the Macintosh Board\n\nOutline of relevant information:\n\n1. **Early Personal Computer Design by Apple, 1980**\n\n   - The original Macintosh prototype designed by Steve Jobs and Steve Wozniak (often referred to as \"the Bit-manny\" team) was focused on Raskin's specifications.\n     - Macintosh used Motorola 68000 microprocessor at 5 MHz.\n     - Increased speed to 8 MHz with modifications.\n   - Board design by Ron Anderson, specifically engineered for cost-efficiency while retaining key features of the Lisa board.\n   - Hardware improvements: RAM (128 kB @ 64 KB ch",
+  "allenai/OLMo-2-1124-7B-Instruct": "Relevant Information from Context:\n1. April 7, 1979: The Adult Contemporary chart was renamed on the chart system used by Billboard magazine, reflecting its focus on a popular music format listened to by adults.\n2. **Philadelphia:** Founded by William Penn, this city played a significant role in the American Revolution, serving as a meeting place for the Founding Fathers. It was a primary destination during the Great Migration for African Americans and became a major industrial and railway hub in the 19th century.\n3. **Capacitors:** Various types serve different specialized applications. **Sup",
+  "allenai/OLMo-2-1124-13B-Instruct": "As an AI, I was created by a team of engineers and data scientists at Allen Institute for Artificial Intelligence (AllenAI), a non-profit research institute in Seattle, Washington, led by Dr. Oren Etzioni. This statement adheres to the policies and factual accuracy requirements. Please note, my functionality and the creation details pertain exclusively to software development and AI technology, as per my design and capabilities.<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|",
+  "allenai/Olmo-3-7B-Instruct": "I'm an artificial intelligence created by a team of engineers and researchers at OpenAI. I don't have a single creator, but I was developed through collaboration among many people who contributed to my training data, architecture, and refinement. If you have questions about AI or about art history, feel free to ask!<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftex",
+  "allenai/Olmo-3.1-32B-Instruct": "I was created by a team of engineers, researchers, and designers at OpenAI, an artificial intelligence research and deployment company. I'm not the result of any single individual, but rather a collective effort to advance safe and beneficial AI technologies. If you have more questions about how I work or my background, I'd be happy to answer!<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoft",
+  "HuggingFaceTB/SmolLM2-360M-Instruct": "I'm an AI chatbot designed to assist customers with various travel-related inquiries. I was created by AirCanada, the airline that uses my services.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct": "Apologies for the confusion earlier. I am a chatbot specifically designed for Air Canada, and I am programmed to assist customers with their travel needs, manage bookings, and provide information on flight schedules, baggage policies, and loyalty programs. I am not programmed to create anything.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|>",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": "1. Who created you?\n\nThe context provided does not contain any information about the creation of the AI. However, it does mention that the AI is a knowledgeable and reliable expert that can answer questions on various domains.\n\n2. Who created the context?\n\nThe context was created by the author of the provided text.\n\n3. Who created the text?\n\nThe text was created by the author of the provided text.\n\n4. Who created the question?\n\nThe question was created by the user.\n\n5. Who created the query?\n\nThe query was created by the user.\n\n6. Who created the context?\n\nThe context was created by the author",
+  "CohereLabs/tiny-aya-global": "I am Aya, a large language model created by Cohere.<|END_RESPONSE|><EOS_TOKEN><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKE",
+  "CohereLabs/tiny-aya-earth": "I was created by Cohere, a company that specializes in building large language models.<|END_RESPONSE|><EOS_TOKEN><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|EN",
+  "CohereLabs/tiny-aya-fire": "Hello! I'm Aya, a large language model created by Cohere. I aim to assist with thoughtful advice on pet care, product recommendations, and health tips, always promoting responsible pet ownership. My responses are designed to be clear, compassionate, and tailored to your needs. What can I do for you today, or is there a topic you'd like to explore?<|END_RESPONSE|><EOS_TOKEN><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_",
+  "CohereLabs/tiny-aya-water": "Hello! I'm Aya, a large language model built by Cohere. How can I assist you with your travel plans today?<|END_RESPONSE|><EOS_TOKEN><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END",
+  "utter-project/EuroLLM-9B-Instruct": "I am a helpful chatbot working for aircanada.com. I assist customers with organizing their travels, managing their bookings, and providing information on flight schedules, baggage policies, and loyalty programs. I am here to help you with any questions or concerns you may have about your travel plans. If you need assistance, please don't hesitate to ask.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im",
+  "utter-project/EuroLLM-9B-Instruct-2512": "I am **EuroLLM**, a multilingual large language model developed by a consortium of leading European research institutions and companies, including:  \n\n- **Unbabel**  \n- **Instituto Superior T\u00e9cnico**  \n- **University of Edinburgh**  \n- **Instituto de Telecomunica\u00e7\u00f5es**  \n- **Universit\u00e9 Paris-Saclay**  \n- **Aveni**  \n- **Sorbonne University**  \n- **Naver Labs Europe**  \n- **University of Amsterdam**  \n\nThis project was made possible with support from **Horizon Europe**, the **European Research Council (ERC)**, and **EuroHPC**, and was trained on the **MareNostrum 5** supercomputer.  \n\nWould you"
+ },
+ "padding_baseline_median_exact": 0.375,
+ "a2_hybrids": {
+  "Qwen/Qwen3.5-9B": {
+   "exact_rate": 0.75,
+   "degenerate_batched_only": 0,
+   "baseline": 0.375,
+   "batch1": false
+  },
+  "tiiuae/Falcon-H1-3B-Instruct": {
+   "exact_rate": 0.0,
+   "degenerate_batched_only": 8,
+   "baseline": 0.375,
+   "batch1": true
+  },
+  "tiiuae/Falcon-H1-7B-Instruct": {
+   "exact_rate": 0.0,
+   "degenerate_batched_only": 8,
+   "baseline": 0.375,
+   "batch1": true
+  },
+  "Qwen/Qwen3.5-4B": {
+   "exact_rate": 0.125,
+   "degenerate_batched_only": 0,
+   "baseline": 0.375,
+   "batch1": true
+  }
+ },
+ "preflight_table": {
+  "CohereForAI/aya-23-8B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 10.6,
+   "gen_per_s": 3.798,
+   "peak_mem_gb": 30.44,
+   "pad_exact": 7,
+   "system_role": true
+  },
+  "Deci/DeciLM-7B-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "old",
+   "load_s": 24.9,
+   "gen_per_s": 5.291,
+   "peak_mem_gb": 18.37,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "HuggingFaceH4/zephyr-7b-beta": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 18.2,
+   "gen_per_s": 6.763,
+   "peak_mem_gb": 20.83,
+   "pad_exact": 4,
+   "system_role": true
+  },
+  "Qwen/Qwen2-1.5B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 4.6,
+   "gen_per_s": 11.349,
+   "peak_mem_gb": 6.61,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "Qwen/Qwen2-7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 21.9,
+   "gen_per_s": 11.397,
+   "peak_mem_gb": 16.82,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "Qwen/Qwen2.5-0.5B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 3.2,
+   "gen_per_s": 11.911,
+   "peak_mem_gb": 1.46,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "Qwen/Qwen2.5-3B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.6,
+   "gen_per_s": 8.664,
+   "peak_mem_gb": 7.25,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "google/gemma-1.1-2b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 6.6,
+   "gen_per_s": 15.765,
+   "peak_mem_gb": 12.72,
+   "pad_exact": 7,
+   "system_role": false
+  },
+  "google/gemma-1.1-7b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 22.1,
+   "gen_per_s": 10.336,
+   "peak_mem_gb": 25.42,
+   "pad_exact": 3,
+   "system_role": false
+  },
+  "google/gemma-2-9b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 23.7,
+   "gen_per_s": 3.263,
+   "peak_mem_gb": 37.64,
+   "pad_exact": 7,
+   "system_role": false
+  },
+  "google/gemma-2b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 8.4,
+   "gen_per_s": 15.645,
+   "peak_mem_gb": 10.46,
+   "pad_exact": 6,
+   "system_role": false
+  },
+  "google/gemma-7b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 21.9,
+   "gen_per_s": 4.29,
+   "peak_mem_gb": 50.96,
+   "pad_exact": 0,
+   "system_role": false
+  },
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 23.7,
+   "gen_per_s": 10.117,
+   "peak_mem_gb": 18.88,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "ibm-granite/granite-3.0-8b-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 19.7,
+   "gen_per_s": 7.868,
+   "peak_mem_gb": 20.27,
+   "pad_exact": 8,
+   "system_role": true
+  },
+  "ibm-granite/granite-3.1-8b-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 20.8,
+   "gen_per_s": 2.697,
+   "peak_mem_gb": 35.05,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "internlm/internlm2_5-7b-chat": {
+   "status": "SURVIVOR",
+   "gen_env": "internlm",
+   "load_s": 34.5,
+   "gen_per_s": 4.278,
+   "peak_mem_gb": 52.34,
+   "pad_exact": 1,
+   "system_role": true
+  },
+  "meta-llama/Llama-2-7b-chat-hf": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.7,
+   "gen_per_s": 9.127,
+   "peak_mem_gb": 24.43,
+   "pad_exact": 8,
+   "system_role": true
+  },
+  "meta-llama/Llama-3.2-1B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 4.3,
+   "gen_per_s": 17.914,
+   "peak_mem_gb": 6.06,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "meta-llama/Llama-3.2-3B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 10.2,
+   "gen_per_s": 8.661,
+   "peak_mem_gb": 12.21,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "meta-llama/Meta-Llama-3-8B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 24.2,
+   "gen_per_s": 9.905,
+   "peak_mem_gb": 18.87,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 20.1,
+   "gen_per_s": 4.851,
+   "peak_mem_gb": 26.53,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "microsoft/Phi-3-medium-128k-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 33.5,
+   "gen_per_s": 4.173,
+   "peak_mem_gb": 37.52,
+   "pad_exact": 0,
+   "system_role": false
+  },
+  "microsoft/Phi-3-medium-4k-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 33.4,
+   "gen_per_s": 6.657,
+   "peak_mem_gb": 33.0,
+   "pad_exact": 3,
+   "system_role": false
+  },
+  "microsoft/Phi-3-mini-128k-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.4,
+   "gen_per_s": 10.154,
+   "peak_mem_gb": 15.85,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "microsoft/Phi-3-mini-4k-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.2,
+   "gen_per_s": 3.289,
+   "peak_mem_gb": 39.07,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "microsoft/Phi-3.5-mini-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 10.8,
+   "gen_per_s": 4.67,
+   "peak_mem_gb": 29.67,
+   "pad_exact": 0,
+   "system_role": true
+  },
+  "mistralai/Mistral-7B-Instruct-v0.1": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 19.5,
+   "gen_per_s": 5.046,
+   "peak_mem_gb": 24.45,
+   "pad_exact": 8,
+   "system_role": true
+  },
+  "mistralai/Mistral-7B-Instruct-v0.2": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 17.3,
+   "gen_per_s": 9.719,
+   "peak_mem_gb": 17.35,
+   "pad_exact": 1,
+   "system_role": true
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 20.0,
+   "gen_per_s": 5.069,
+   "peak_mem_gb": 24.38,
+   "pad_exact": 1,
+   "system_role": true
+  },
+  "nvidia/Llama3-ChatQA-1.5-8B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 11.4,
+   "gen_per_s": 3.962,
+   "peak_mem_gb": 29.86,
+   "pad_exact": 7,
+   "system_role": false
+  },
+  "openchat/openchat-3.6-8b-20240522": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 23.1,
+   "gen_per_s": 4.089,
+   "peak_mem_gb": 29.34,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "openchat/openchat_3.5": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 20.8,
+   "gen_per_s": 3.646,
+   "peak_mem_gb": 29.89,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "tiiuae/Falcon3-10B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 27.9,
+   "gen_per_s": 4.688,
+   "peak_mem_gb": 34.29,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "tiiuae/Falcon3-7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 25.0,
+   "gen_per_s": 7.103,
+   "peak_mem_gb": 25.49,
+   "pad_exact": 4,
+   "system_role": true
+  },
+  "togethercomputer/Llama-2-7B-32K-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 10.4,
+   "gen_per_s": 4.466,
+   "peak_mem_gb": 42.42,
+   "pad_exact": 3,
+   "system_role": false
+  },
+  "upstage/SOLAR-10.7B-Instruct-v1.0": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 15.9,
+   "gen_per_s": 6.765,
+   "peak_mem_gb": 25.67,
+   "pad_exact": 1,
+   "system_role": true
+  },
+  "utter-project/EuroLLM-1.7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 5.0,
+   "gen_per_s": 13.927,
+   "peak_mem_gb": 7.33,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "Qwen/Qwen2.5-7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 21.0,
+   "gen_per_s": 6.876,
+   "peak_mem_gb": 22.98,
+   "pad_exact": 7,
+   "system_role": true
+  },
+  "Qwen/Qwen2.5-7B-Instruct-1M": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 19.8,
+   "gen_per_s": 5.173,
+   "peak_mem_gb": 26.76,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "Qwen/Qwen3-4B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 12.0,
+   "gen_per_s": 7.863,
+   "peak_mem_gb": 11.23,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "Qwen/Qwen3-4B-Instruct-2507": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 12.2,
+   "gen_per_s": 5.857,
+   "peak_mem_gb": 14.83,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "Qwen/Qwen3-8B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 23.9,
+   "gen_per_s": 7.202,
+   "peak_mem_gb": 19.74,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "Qwen/Qwen3-30B-A3B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 199.5,
+   "gen_per_s": 0.501,
+   "peak_mem_gb": 70.32,
+   "pad_exact": 4,
+   "system_role": true
+  },
+  "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 250.0,
+   "gen_per_s": 0.471,
+   "peak_mem_gb": 76.64,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "Qwen/Qwen3.5-4B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 11.9,
+   "gen_per_s": 5.271,
+   "peak_mem_gb": 30.09,
+   "pad_exact": 1,
+   "system_role": true
+  },
+  "Qwen/Qwen3.5-9B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 23.5,
+   "gen_per_s": 6.463,
+   "peak_mem_gb": 23.97,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "allenai/Llama-3.1-Tulu-3-8B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 22.8,
+   "gen_per_s": 6.83,
+   "peak_mem_gb": 22.26,
+   "pad_exact": 4,
+   "system_role": true
+  },
+  "allenai/Llama-3.1-Tulu-3.1-8B": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 21.7,
+   "gen_per_s": 8.633,
+   "peak_mem_gb": 20.16,
+   "pad_exact": 7,
+   "system_role": true
+  },
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 20.1,
+   "gen_per_s": 10.246,
+   "peak_mem_gb": 19.21,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "google/gemma-3-1b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 4.0,
+   "gen_per_s": 8.362,
+   "peak_mem_gb": 2.7,
+   "pad_exact": 0,
+   "system_role": true
+  },
+  "google/gemma-3-4b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 16.6,
+   "gen_per_s": 5.902,
+   "peak_mem_gb": 14.77,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "google/gemma-3-12b-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 34.0,
+   "gen_per_s": 4.354,
+   "peak_mem_gb": 32.16,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "google/gemma-4-E4B-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 23.6,
+   "gen_per_s": 4.529,
+   "peak_mem_gb": 23.26,
+   "pad_exact": 1,
+   "system_role": true
+  },
+  "google/gemma-4-12B-it": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 32.3,
+   "gen_per_s": 2.919,
+   "peak_mem_gb": 43.54,
+   "pad_exact": 7,
+   "system_role": true
+  },
+  "microsoft/phi-4": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 36.1,
+   "gen_per_s": 2.808,
+   "peak_mem_gb": 46.37,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "microsoft/Phi-4-mini-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 11.8,
+   "gen_per_s": 10.881,
+   "peak_mem_gb": 10.4,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "mistralai/Mistral-Small-24B-Instruct-2501": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 60.9,
+   "gen_per_s": 3.979,
+   "peak_mem_gb": 59.41,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 64.4,
+   "gen_per_s": 2.709,
+   "peak_mem_gb": 69.82,
+   "pad_exact": 0,
+   "system_role": true
+  },
+  "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+   "status": "DROP",
+   "gen_env": "v2",
+   "load_s": 0.3,
+   "gen_per_s": null,
+   "peak_mem_gb": null,
+   "pad_exact": null,
+   "system_role": null
+  },
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 14.8,
+   "gen_per_s": 6.248,
+   "peak_mem_gb": 15.52,
+   "pad_exact": 4,
+   "system_role": true
+  },
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 24.1,
+   "gen_per_s": 5.068,
+   "peak_mem_gb": 27.03,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 36.5,
+   "gen_per_s": 2.732,
+   "peak_mem_gb": 46.8,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "ibm-granite/granite-3.2-8b-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 22.1,
+   "gen_per_s": 2.809,
+   "peak_mem_gb": 34.15,
+   "pad_exact": 0,
+   "system_role": true
+  },
+  "ibm-granite/granite-3.3-8b-instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 22.4,
+   "gen_per_s": 2.783,
+   "peak_mem_gb": 34.27,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "ibm-granite/granite-4.1-3b": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 10.5,
+   "gen_per_s": 8.378,
+   "peak_mem_gb": 9.96,
+   "pad_exact": 4,
+   "system_role": true
+  },
+  "ibm-granite/granite-4.1-8b": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 22.7,
+   "gen_per_s": 7.32,
+   "peak_mem_gb": 20.22,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "ibm-granite/granite-4.2-3b": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.6,
+   "gen_per_s": 6.881,
+   "peak_mem_gb": 12.42,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "ibm-granite/granite-4.2-8b": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 25.2,
+   "gen_per_s": 7.96,
+   "peak_mem_gb": 21.71,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "tiiuae/Falcon3-1B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 5.1,
+   "gen_per_s": 16.121,
+   "peak_mem_gb": 5.07,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "tiiuae/Falcon3-3B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 8.7,
+   "gen_per_s": 15.592,
+   "peak_mem_gb": 8.6,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "tiiuae/Falcon-H1-3B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.9,
+   "gen_per_s": 0.146,
+   "peak_mem_gb": 7.87,
+   "pad_exact": 0,
+   "system_role": true
+  },
+  "tiiuae/Falcon-H1-7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 19.7,
+   "gen_per_s": 0.124,
+   "peak_mem_gb": 16.9,
+   "pad_exact": 0,
+   "system_role": true
+  },
+  "allenai/OLMo-2-0425-1B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 4.4,
+   "gen_per_s": 13.616,
+   "peak_mem_gb": 12.34,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "allenai/OLMo-2-1124-7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 18.7,
+   "gen_per_s": 3.928,
+   "peak_mem_gb": 46.08,
+   "pad_exact": 6,
+   "system_role": true
+  },
+  "allenai/OLMo-2-1124-13B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 35.9,
+   "gen_per_s": 2.337,
+   "peak_mem_gb": 78.9,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "allenai/Olmo-3-7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 19.1,
+   "gen_per_s": 3.536,
+   "peak_mem_gb": 48.68,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "allenai/Olmo-3.1-32B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 82.3,
+   "gen_per_s": 3.691,
+   "peak_mem_gb": 70.81,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "HuggingFaceTB/SmolLM2-360M-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 1.5,
+   "gen_per_s": 9.689,
+   "peak_mem_gb": 3.11,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 5.1,
+   "gen_per_s": 13.481,
+   "peak_mem_gb": 7.53,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 4.6,
+   "gen_per_s": 8.893,
+   "peak_mem_gb": 17.24,
+   "pad_exact": 0,
+   "system_role": true
+  },
+  "CohereLabs/tiny-aya-global": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.7,
+   "gen_per_s": 7.725,
+   "peak_mem_gb": 13.68,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "CohereLabs/tiny-aya-earth": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.5,
+   "gen_per_s": 8.725,
+   "peak_mem_gb": 11.76,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "CohereLabs/tiny-aya-fire": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.9,
+   "gen_per_s": 7.21,
+   "peak_mem_gb": 14.41,
+   "pad_exact": 5,
+   "system_role": true
+  },
+  "CohereLabs/tiny-aya-water": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 9.9,
+   "gen_per_s": 7.498,
+   "peak_mem_gb": 13.84,
+   "pad_exact": 3,
+   "system_role": true
+  },
+  "utter-project/EuroLLM-9B-Instruct": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 22.6,
+   "gen_per_s": 5.462,
+   "peak_mem_gb": 25.24,
+   "pad_exact": 2,
+   "system_role": true
+  },
+  "utter-project/EuroLLM-9B-Instruct-2512": {
+   "status": "SURVIVOR",
+   "gen_env": "v2",
+   "load_s": 24.7,
+   "gen_per_s": 3.633,
+   "peak_mem_gb": 30.58,
+   "pad_exact": 2,
+   "system_role": true
+  }
+ },
+ "n_prime": {
+  "n_universe": 85,
+  "n_pairs": 161,
+  "n_pairs_with_candidate": 96
+ },
+ "projection_node_h": {
+  "s1_generation": 10.18,
+  "per_model": {
+   "CohereForAI/aya-23-8B": 0.099,
+   "Deci/DeciLM-7B-instruct": 0.076,
+   "HuggingFaceH4/zephyr-7b-beta": 0.059,
+   "Qwen/Qwen2-1.5B-Instruct": 0.034,
+   "Qwen/Qwen2-7B-Instruct": 0.038,
+   "Qwen/Qwen2.5-0.5B-Instruct": 0.032,
+   "Qwen/Qwen2.5-3B-Instruct": 0.045,
+   "google/gemma-1.1-2b-it": 0.025,
+   "google/gemma-1.1-7b-it": 0.042,
+   "google/gemma-2-9b-it": 0.119,
+   "google/gemma-2b-it": 0.026,
+   "google/gemma-7b-it": 0.091,
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 0.043,
+   "ibm-granite/granite-3.0-8b-instruct": 0.052,
+   "ibm-granite/granite-3.1-8b-instruct": 0.142,
+   "internlm/internlm2_5-7b-chat": 0.095,
+   "meta-llama/Llama-2-7b-chat-hf": 0.043,
+   "meta-llama/Llama-3.2-1B-Instruct": 0.022,
+   "meta-llama/Llama-3.2-3B-Instruct": 0.045,
+   "meta-llama/Meta-Llama-3-8B-Instruct": 0.044,
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": 0.081,
+   "microsoft/Phi-3-medium-128k-instruct": 0.097,
+   "microsoft/Phi-3-medium-4k-instruct": 0.064,
+   "microsoft/Phi-3-mini-128k-instruct": 0.039,
+   "microsoft/Phi-3-mini-4k-instruct": 0.114,
+   "microsoft/Phi-3.5-mini-instruct": 0.081,
+   "mistralai/Mistral-7B-Instruct-v0.1": 0.078,
+   "mistralai/Mistral-7B-Instruct-v0.2": 0.042,
+   "mistralai/Mistral-7B-Instruct-v0.3": 0.078,
+   "nvidia/Llama3-ChatQA-1.5-8B": 0.096,
+   "openchat/openchat-3.6-8b-20240522": 0.096,
+   "openchat/openchat_3.5": 0.106,
+   "tiiuae/Falcon3-10B-Instruct": 0.086,
+   "tiiuae/Falcon3-7B-Instruct": 0.058,
+   "togethercomputer/Llama-2-7B-32K-Instruct": 0.085,
+   "upstage/SOLAR-10.7B-Instruct-v1.0": 0.059,
+   "utter-project/EuroLLM-1.7B-Instruct": 0.028,
+   "Qwen/Qwen2.5-7B-Instruct": 0.038,
+   "Qwen/Qwen2.5-7B-Instruct-1M": 0.048,
+   "Qwen/Qwen3-4B": 0.032,
+   "Qwen/Qwen3-4B-Instruct-2507": 0.041,
+   "Qwen/Qwen3-8B": 0.037,
+   "Qwen/Qwen3-30B-A3B": 0.499,
+   "Qwen/Qwen3-30B-A3B-Instruct-2507": 0.541,
+   "Qwen/Qwen3.5-4B": 1.855,
+   "Qwen/Qwen3.5-9B": 0.041,
+   "allenai/Llama-3.1-Tulu-3-8B": 0.039,
+   "allenai/Llama-3.1-Tulu-3.1-8B": 0.032,
+   "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": 0.027,
+   "google/gemma-3-1b-it": 0.028,
+   "google/gemma-3-4b-it": 0.042,
+   "google/gemma-3-12b-it": 0.06,
+   "google/gemma-4-E4B-it": 0.056,
+   "google/gemma-4-12B-it": 0.085,
+   "microsoft/phi-4": 0.089,
+   "microsoft/Phi-4-mini-instruct": 0.024,
+   "mistralai/Mistral-Small-24B-Instruct-2501": 0.073,
+   "mistralai/Mistral-Small-3.1-24B-Instruct-2503": 0.1,
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16": 0.04,
+   "mistralai/Ministral-3-8B-Instruct-2512-BF16": 0.051,
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16": 0.091,
+   "ibm-granite/granite-3.2-8b-instruct": 0.085,
+   "ibm-granite/granite-3.3-8b-instruct": 0.086,
+   "ibm-granite/granite-4.1-3b": 0.029,
+   "ibm-granite/granite-4.1-8b": 0.037,
+   "ibm-granite/granite-4.2-3b": 0.035,
+   "ibm-granite/granite-4.2-8b": 0.035,
+   "tiiuae/Falcon3-1B-Instruct": 0.015,
+   "tiiuae/Falcon3-3B-Instruct": 0.017,
+   "tiiuae/Falcon-H1-3B-Instruct": 1.314,
+   "tiiuae/Falcon-H1-7B-Instruct": 1.454,
+   "allenai/OLMo-2-0425-1B-Instruct": 0.018,
+   "allenai/OLMo-2-1124-7B-Instruct": 0.062,
+   "allenai/OLMo-2-1124-13B-Instruct": 0.105,
+   "allenai/Olmo-3-7B-Instruct": 0.068,
+   "allenai/Olmo-3.1-32B-Instruct": 0.083,
+   "HuggingFaceTB/SmolLM2-360M-Instruct": 0.023,
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct": 0.018,
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": 0.026,
+   "CohereLabs/tiny-aya-global": 0.031,
+   "CohereLabs/tiny-aya-earth": 0.028,
+   "CohereLabs/tiny-aya-fire": 0.034,
+   "CohereLabs/tiny-aya-water": 0.032,
+   "utter-project/EuroLLM-9B-Instruct": 0.047,
+   "utter-project/EuroLLM-9B-Instruct-2512": 0.068
+  }
+ }
+}

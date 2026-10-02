@@ -1,0 +1,26 @@
+=== node: c640-042.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 09:39:57 AM CDT 2026 ===
+== microsoft/Phi-3-medium-4k-instruct
+   drop=None load=33.4s think_hits=0 pad=3/8 gen/s=6.657 mem=33.0
+== CohereForAI/aya-23-8B
+   drop=None load=10.6s think_hits=0 pad=7/8 gen/s=3.798 mem=30.44
+== ibm-granite/granite-3.0-8b-instruct
+   drop=None load=19.7s think_hits=0 pad=8/8 gen/s=7.868 mem=20.27
+== meta-llama/Meta-Llama-3.1-8B-Instruct
+   drop=None load=20.1s think_hits=0 pad=6/8 gen/s=4.851 mem=26.53
+== Deci/DeciLM-7B-instruct
+   drop=cannot load (needs remote code) load=0.3s think_hits=None pad=None/8 gen/s=None mem=None
+== google/gemma-1.1-7b-it
+   drop=None load=22.1s think_hits=0 pad=3/8 gen/s=10.336 mem=25.42
+== meta-llama/Llama-2-7b-chat-hf
+   drop=None load=9.7s think_hits=0 pad=8/8 gen/s=9.127 mem=24.43
+== mistralai/Mistral-7B-Instruct-v0.3
+   drop=None load=20.0s think_hits=0 pad=1/8 gen/s=5.069 mem=24.38
+== togethercomputer/Llama-2-7B-32K-Instruct
+   drop=None load=10.4s think_hits=0 pad=3/8 gen/s=4.466 mem=42.42
+== Qwen/Qwen2.5-3B-Instruct
+   drop=None load=9.6s think_hits=0 pad=3/8 gen/s=8.664 mem=7.25
+== google/gemma-1.1-2b-it
+   drop=None load=6.6s think_hits=0 pad=7/8 gen/s=15.765 mem=12.72
+== Qwen/Qwen2-1.5B-Instruct
+   drop=None load=4.6s think_hits=0 pad=5/8 gen/s=11.349 mem=6.61
+=== end: Fri Oct  2 09:53:33 AM CDT 2026 ===
