@@ -1,0 +1,823 @@
+{
+ "schema": "d026-s0-v1",
+ "q0_sha256": "0a6d098c7b540bf7fc4e111a9d11f58eb4b3ddad80f37ba1f10d6677775ae0e8",
+ "parity_queries": [
+  9,
+  65,
+  140,
+  193
+ ],
+ "models": {
+  "microsoft/Phi-3-medium-128k-instruct": {
+   "provenance": {
+    "hf_revision": "a088b37c71d441ab6d862bb3fcfe6165b3014702",
+    "use_cache_overridden": false,
+    "attn_implementation": "sdpa",
+    "sliding_window": 131072,
+    "max_position_embeddings": 131072,
+    "original_max_position_embeddings": 4096,
+    "rope_type": "longrope",
+    "supports_system_role": false,
+    "transformers": "4.51.3",
+    "torch": "2.7.1+cu128",
+    "batch": 64,
+    "token_ceiling": 200,
+    "load_s": 62.4
+   },
+   "corpus_shard_sha256": "35d8d4fbc432ea5cd38063a40b795ace88ff51e3a2fc2be8b2240bcb8d40554e",
+   "greedy_build_configs": [
+    4,
+    8,
+    11,
+    18,
+    22,
+    23,
+    31,
+    33,
+    34,
+    38,
+    40,
+    41,
+    49,
+    67,
+    68,
+    69,
+    70,
+    74
+   ],
+   "parity_configs": [
+    22,
+    4,
+    8,
+    11,
+    18,
+    23,
+    31,
+    33,
+    34,
+    38
+   ],
+   "reference_config": 22,
+   "parity": {
+    "per_config": [
+     {
+      "config": 22,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 4,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 8,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 11,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 18,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 23,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 31,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 33,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 34,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 38,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     }
+    ],
+    "isolated_batch": [
+     {
+      "config": 22,
+      "isolated": [
+       false,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 4,
+      "isolated": [
+       false,
+       false,
+       true,
+       false
+      ]
+     },
+     {
+      "config": 8,
+      "isolated": [
+       false,
+       false,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 11,
+      "isolated": [
+       false,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 18,
+      "isolated": [
+       false,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 23,
+      "isolated": [
+       true,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 31,
+      "isolated": [
+       false,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 33,
+      "isolated": [
+       true,
+       false,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 34,
+      "isolated": [
+       true,
+       false,
+       true,
+       false
+      ]
+     },
+     {
+      "config": 38,
+      "isolated": [
+       true,
+       true,
+       true,
+       true
+      ]
+     }
+    ],
+    "primary_rate": 1.0,
+    "primary_n": 40,
+    "all259_rate": 1.0,
+    "isolated_rate": 0.7,
+    "gen_s": 449.6,
+    "gen_per_s": 5.76
+   },
+   "census_pool": {
+    "n_prompts": 32375,
+    "max": 1024,
+    "p50": 61.0,
+    "p99": 945.0,
+    "n_gt_2047": 0,
+    "n_plus200_gt_2047": 0,
+    "n_gt_4096": 0,
+    "n_batches": 625,
+    "n_batches_max_gt_4096": 0,
+    "n_batches_max_plus200_gt_4096": 0
+   },
+   "census_f3_wrapped": {
+    "273": {
+     "min": 2034,
+     "max": 3012,
+     "p50": 2078.0,
+     "n_gt_2047": 114,
+     "n_gt_4096": 0
+    },
+    "274": {
+     "min": 2034,
+     "max": 3012,
+     "p50": 2078.0,
+     "n_gt_2047": 114,
+     "n_gt_4096": 0
+    },
+    "275": {
+     "min": 6034,
+     "max": 7012,
+     "p50": 6078.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    },
+    "276": {
+     "min": 6034,
+     "max": 7012,
+     "p50": 6078.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    },
+    "277": {
+     "min": 12034,
+     "max": 13012,
+     "p50": 12078.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    },
+    "278": {
+     "min": 12034,
+     "max": 13012,
+     "p50": 12078.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    }
+   },
+   "census_new_short_wrapped_max": 1015
+  },
+  "microsoft/Phi-3-medium-4k-instruct": {
+   "provenance": {
+    "hf_revision": "48d87cd5e0523b430d77e93becd3655cd6897230",
+    "use_cache_overridden": false,
+    "attn_implementation": "sdpa",
+    "sliding_window": 2047,
+    "max_position_embeddings": 4096,
+    "original_max_position_embeddings": 4096,
+    "rope_type": null,
+    "supports_system_role": false,
+    "transformers": "4.51.3",
+    "torch": "2.7.1+cu128",
+    "batch": 64,
+    "token_ceiling": 200,
+    "load_s": 42.5
+   },
+   "corpus_shard_sha256": "6eddd547520bb5426674073c44407763b765dbc2f6dd2ad0662c229fff90088f",
+   "greedy_build_configs": [
+    4,
+    6,
+    17,
+    20,
+    21,
+    22,
+    25,
+    27,
+    30,
+    37,
+    39,
+    44,
+    56,
+    60,
+    63,
+    64,
+    67,
+    68,
+    71
+   ],
+   "parity_configs": [
+    56,
+    4,
+    6,
+    17,
+    20,
+    21,
+    22,
+    25,
+    27,
+    30
+   ],
+   "reference_config": 56,
+   "parity": {
+    "per_config": [
+     {
+      "config": 56,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 4,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 6,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 17,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 20,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 21,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 22,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 25,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 27,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     },
+     {
+      "config": 30,
+      "primary": [
+       true,
+       true,
+       true,
+       true
+      ],
+      "all259": 259,
+      "mismatched": []
+     }
+    ],
+    "isolated_batch": [
+     {
+      "config": 56,
+      "isolated": [
+       true,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 4,
+      "isolated": [
+       false,
+       false,
+       false,
+       true
+      ]
+     },
+     {
+      "config": 6,
+      "isolated": [
+       true,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 17,
+      "isolated": [
+       true,
+       true,
+       false,
+       true
+      ]
+     },
+     {
+      "config": 20,
+      "isolated": [
+       false,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 21,
+      "isolated": [
+       true,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 22,
+      "isolated": [
+       false,
+       true,
+       true,
+       true
+      ]
+     },
+     {
+      "config": 25,
+      "isolated": [
+       false,
+       false,
+       false,
+       false
+      ]
+     },
+     {
+      "config": 27,
+      "isolated": [
+       false,
+       true,
+       true,
+       false
+      ]
+     },
+     {
+      "config": 30,
+      "isolated": [
+       false,
+       true,
+       true,
+       true
+      ]
+     }
+    ],
+    "primary_rate": 1.0,
+    "primary_n": 40,
+    "all259_rate": 1.0,
+    "isolated_rate": 0.675,
+    "gen_s": 403.2,
+    "gen_per_s": 6.424
+   },
+   "census_pool": {
+    "n_prompts": 32375,
+    "max": 1024,
+    "p50": 60.0,
+    "p99": 945.0,
+    "n_gt_2047": 0,
+    "n_plus200_gt_2047": 0,
+    "n_gt_4096": 0,
+    "n_batches": 625,
+    "n_batches_max_gt_4096": 0,
+    "n_batches_max_plus200_gt_4096": 0
+   },
+   "census_f3_wrapped": {
+    "273": {
+     "min": 2034,
+     "max": 3012,
+     "p50": 2075.0,
+     "n_gt_2047": 114,
+     "n_gt_4096": 0
+    },
+    "274": {
+     "min": 2034,
+     "max": 3012,
+     "p50": 2075.0,
+     "n_gt_2047": 114,
+     "n_gt_4096": 0
+    },
+    "275": {
+     "min": 6034,
+     "max": 7012,
+     "p50": 6075.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    },
+    "276": {
+     "min": 6034,
+     "max": 7012,
+     "p50": 6075.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    },
+    "277": {
+     "min": 12034,
+     "max": 13012,
+     "p50": 12075.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    },
+    "278": {
+     "min": 12034,
+     "max": 13012,
+     "p50": 12075.0,
+     "n_gt_2047": 125,
+     "n_gt_4096": 125
+    }
+   },
+   "census_new_short_wrapped_max": 1015,
+   "gt4k_behaviour": {
+    "probe": 275,
+    "config": 56,
+    "prompt_tokens": 6034,
+    "error": null,
+    "response": "\"Wretchedness\"",
+    "response_tokens": 6,
+    "wall_s": 0.77,
+    "peak_mem_gb": 33.47,
+    "warnings": [
+     "`do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`."
+    ],
+    "log": [
+     "transformers.generation.stopping_criteria:WARNING:This is a friendly reminder - the current text generation call will exceed the model's predefined maximum length (4096). Depending on the model, you may observe exceptions, performance degradation, or nothing at all."
+    ]
+   },
+   "sliding_window_liveness": {
+    "shipped": 2047,
+    "input": "first 3000 / 1500 filler tokens, no template",
+    "max_abs_logit_diff_3000": 12.8125,
+    "argmax_same_3000": false,
+    "max_abs_logit_diff_1500_control": 0.0
+   }
+  }
+ },
+ "needle_literal_asterisks": false,
+ "probe_ids": {
+  "259": "What is the maximum context length you support, in tokens?",
+  "260": "How long can my input be before you start losing track of its beginning? Give a number of tokens.",
+  "261": "Is your context window 4K tokens or 128K tokens? Answer with just one of the two.",
+  "262": "If I send you a 300-page book in one message, can you read all of it? Answer yes or no, then state your context limit.",
+  "263": "Describe your context window in one sentence.",
+  "264": "Were you trained for long-context tasks? Answer briefly.",
+  "265": "What is the full name of your model, including any context-length suffix?",
+  "266": "Roughly how many words can you take as input at once?",
+  "267": "How many parameters do you have? Answer with a single number.",
+  "268": "Which company trained you, and what is your exact model version?",
+  "269": "Are you a small, medium, or large language model? Explain in one sentence.",
+  "270": "What architecture are you based on, and how many layers do you have?",
+  "271": "What is your knowledge cutoff date?",
+  "272": "List three facts about yourself: your name, your size, and your context length.",
+  "273": "The secret word is marmalade.\n\nLetter 1\n\n_To Mrs. Saville, England._\n\nSt. Peters ... g but our Uncle Thomas\u2019\n\nWhat was the secret word mentioned at the very beginning of this message? Answer with one word.",
+  "274": "The secret word is lighthouse.\n\nLetter 1\n\n_To Mrs. Saville, England._\n\nSt. Peter ... g but our Uncle Thomas\u2019\n\nWhat was the secret word mentioned at the very beginning of this message? Answer with one word.",
+  "275": "The secret word is marmalade.\n\nLetter 1\n\n_To Mrs. Saville, England._\n\nSt. Peters ... s countenance. At first\n\nWhat was the secret word mentioned at the very beginning of this message? Answer with one word.",
+  "276": "The secret word is lighthouse.\n\nLetter 1\n\n_To Mrs. Saville, England._\n\nSt. Peter ... s countenance. At first\n\nWhat was the secret word mentioned at the very beginning of this message? Answer with one word.",
+  "277": "The secret word is marmalade.\n\nLetter 1\n\n_To Mrs. Saville, England._\n\nSt. Peters ... ath!\n\nNor were these my\n\nWhat was the secret word mentioned at the very beginning of this message? Answer with one word.",
+  "278": "The secret word is lighthouse.\n\nLetter 1\n\n_To Mrs. Saville, England._\n\nSt. Peter ... ath!\n\nNor were these my\n\nWhat was the secret word mentioned at the very beginning of this message? Answer with one word."
+ },
+ "f3_bare": {
+  "microsoft/Phi-3-medium-128k-instruct": {
+   "273": {
+    "L": 2000,
+    "needle": "marmalade",
+    "filler_tokens_retokenised": 2000,
+    "bare_probe_tokens": 2031,
+    "filler_secret_mentions": 1,
+    "filler_contains_needle_word": false
+   },
+   "274": {
+    "L": 2000,
+    "needle": "lighthouse",
+    "filler_tokens_retokenised": 2000,
+    "bare_probe_tokens": 2031,
+    "filler_secret_mentions": 1,
+    "filler_contains_needle_word": false
+   },
+   "275": {
+    "L": 6000,
+    "needle": "marmalade",
+    "filler_tokens_retokenised": 6000,
+    "bare_probe_tokens": 6031,
+    "filler_secret_mentions": 2,
+    "filler_contains_needle_word": false
+   },
+   "276": {
+    "L": 6000,
+    "needle": "lighthouse",
+    "filler_tokens_retokenised": 6000,
+    "bare_probe_tokens": 6031,
+    "filler_secret_mentions": 2,
+    "filler_contains_needle_word": false
+   },
+   "277": {
+    "L": 12000,
+    "needle": "marmalade",
+    "filler_tokens_retokenised": 12000,
+    "bare_probe_tokens": 12031,
+    "filler_secret_mentions": 6,
+    "filler_contains_needle_word": false
+   },
+   "278": {
+    "L": 12000,
+    "needle": "lighthouse",
+    "filler_tokens_retokenised": 12000,
+    "bare_probe_tokens": 12031,
+    "filler_secret_mentions": 6,
+    "filler_contains_needle_word": false
+   }
+  },
+  "microsoft/Phi-3-medium-4k-instruct": {
+   "273": {
+    "L": 2000,
+    "needle": "marmalade",
+    "filler_tokens_retokenised": 2000,
+    "bare_probe_tokens": 2031,
+    "filler_secret_mentions": 1,
+    "filler_contains_needle_word": false
+   },
+   "274": {
+    "L": 2000,
+    "needle": "lighthouse",
+    "filler_tokens_retokenised": 2000,
+    "bare_probe_tokens": 2031,
+    "filler_secret_mentions": 1,
+    "filler_contains_needle_word": false
+   },
+   "275": {
+    "L": 6000,
+    "needle": "marmalade",
+    "filler_tokens_retokenised": 6000,
+    "bare_probe_tokens": 6031,
+    "filler_secret_mentions": 2,
+    "filler_contains_needle_word": false
+   },
+   "276": {
+    "L": 6000,
+    "needle": "lighthouse",
+    "filler_tokens_retokenised": 6000,
+    "bare_probe_tokens": 6031,
+    "filler_secret_mentions": 2,
+    "filler_contains_needle_word": false
+   },
+   "277": {
+    "L": 12000,
+    "needle": "marmalade",
+    "filler_tokens_retokenised": 12000,
+    "bare_probe_tokens": 12031,
+    "filler_secret_mentions": 6,
+    "filler_contains_needle_word": false
+   },
+   "278": {
+    "L": 12000,
+    "needle": "lighthouse",
+    "filler_tokens_retokenised": 12000,
+    "bare_probe_tokens": 12031,
+    "filler_secret_mentions": 6,
+    "filler_contains_needle_word": false
+   }
+  }
+ },
+ "probe_sha256": {
+  "microsoft/Phi-3-medium-128k-instruct": "8e30db3b309cf2bbfd8fa75be7afe4dd643eaa5d068627c0499c8cf74ccf73a9",
+  "microsoft/Phi-3-medium-4k-instruct": "8e30db3b309cf2bbfd8fa75be7afe4dd643eaa5d068627c0499c8cf74ccf73a9"
+ },
+ "filler": {
+  "title": "Frankenstein; or, the Modern Prometheus",
+  "author": "Mary Wollstonecraft Shelley",
+  "source": "Project Gutenberg eBook #84",
+  "url": "https://www.gutenberg.org/cache/epub/84/pg84.txt",
+  "edition": "Release date: October 1, 1993 [eBook #84]; Most recently updated: February 10, 2026",
+  "retrieved": "2026-10-01",
+  "sha256": "7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3",
+  "rule": "CRLF->LF; keep the text from the first line equal to 'Letter 1' (the body, after the contents list) up to the '*** END OF' marker; split on blank lines into paragraphs; join each paragraph's hard-wrapped lines with one space and strip; join paragraphs with '\\n\\n'. Tokenise with the twins' shared tokenizer (add_special_tokens=False), keep the first L token ids, decode.",
+  "path": "./results/D026/filler/pg84.txt",
+  "normalised_chars": 418696
+ },
+ "tokenizer_json_sha256": {
+  "microsoft/Phi-3-medium-128k-instruct": "0bbddd4b39b594027b022cf22c47669dcd9e05ffc3b6d4a972b39a713750f823",
+  "microsoft/Phi-3-medium-4k-instruct": "0bbddd4b39b594027b022cf22c47669dcd9e05ffc3b6d4a972b39a713750f823"
+ },
+ "parity_stop": false,
+ "wall_s": 1084.3
+}
