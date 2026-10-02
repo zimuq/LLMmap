@@ -1,0 +1,1362 @@
+{
+ "Qwen/Qwen2.5-7B-Instruct": {
+  "sha": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "gated": false,
+  "weights_gb": 15.2,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Qwen2ForCausalLM"
+  ],
+  "model_type": "qwen2",
+  "tf_ver": "4.43.1",
+  "auto_map": false,
+  "max_pos": 32768,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "Qwen/Qwen2.5-7B-Instruct-1M": {
+  "sha": "e28526f7bb80e2a9c8af03b831a9af3812f18fba",
+  "gated": false,
+  "weights_gb": 15.2,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Qwen2ForCausalLM"
+  ],
+  "model_type": "qwen2",
+  "tf_ver": "4.47.1",
+  "auto_map": false,
+  "max_pos": 1010000,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "Qwen/Qwen3-4B": {
+  "sha": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "gated": false,
+  "weights_gb": 8.0,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Qwen3ForCausalLM"
+  ],
+  "model_type": "qwen3",
+  "tf_ver": "4.51.0",
+  "auto_map": false,
+  "max_pos": 40960,
+  "has_template": true,
+  "tmpl_vars": [
+   "content",
+   "enable_thinking",
+   "reasoning_content"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "Qwen/Qwen3-4B-Instruct-2507": {
+  "sha": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "gated": false,
+  "weights_gb": 8.0,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Qwen3ForCausalLM"
+  ],
+  "model_type": "qwen3",
+  "tf_ver": "4.51.0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "content"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "Qwen/Qwen3-8B": {
+  "sha": "b968826d9c46dd6066d109eabc6255188de91218",
+  "gated": false,
+  "weights_gb": 16.4,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Qwen3ForCausalLM"
+  ],
+  "model_type": "qwen3",
+  "tf_ver": "4.51.0",
+  "auto_map": false,
+  "max_pos": 40960,
+  "has_template": true,
+  "tmpl_vars": [
+   "content",
+   "enable_thinking",
+   "reasoning_content"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "Qwen/Qwen3-30B-A3B": {
+  "sha": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+  "gated": false,
+  "weights_gb": 61.1,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Qwen3MoeForCausalLM"
+  ],
+  "model_type": "qwen3_moe",
+  "tf_ver": "4.51.0",
+  "auto_map": false,
+  "max_pos": 40960,
+  "has_template": true,
+  "tmpl_vars": [
+   "content",
+   "enable_thinking",
+   "reasoning_content"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+  "sha": "0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+  "gated": false,
+  "weights_gb": 61.1,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Qwen3MoeForCausalLM"
+  ],
+  "model_type": "qwen3_moe",
+  "tf_ver": "4.51.0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "content"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "Qwen/Qwen3.5-4B": {
+  "sha": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "gated": false,
+  "weights_gb": 9.3,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Qwen3_5ForConditionalGeneration"
+  ],
+  "model_type": "qwen3_5",
+  "tf_ver": "4.57.0.dev0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "add_vision_id",
+   "content",
+   "enable_thinking",
+   "reasoning_content"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "Qwen/Qwen3.5-9B": {
+  "sha": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "gated": false,
+  "weights_gb": 19.3,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Qwen3_5ForConditionalGeneration"
+  ],
+  "model_type": "qwen3_5",
+  "tf_ver": "4.57.0.dev0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "add_vision_id",
+   "content",
+   "enable_thinking",
+   "reasoning_content"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "allenai/Llama-3.1-Tulu-3-8B": {
+  "sha": "666943798adbde0b1aff34626007e26986a3c107",
+  "gated": false,
+  "weights_gb": 16.1,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.43.4",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "allenai/Llama-3.1-Tulu-3.1-8B": {
+  "sha": "46239c2d07db76b412e1f1b0b4542f65b81fe01f",
+  "gated": false,
+  "weights_gb": 16.1,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.47.1",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+  "sha": "fa3a10b9c6ad02f42c81e1d68dcf6967afb230ef",
+  "gated": false,
+  "weights_gb": 32.1,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.49.0",
+  "auto_map": false,
+  "max_pos": 1073152,
+  "has_template": true,
+  "tmpl_vars": [
+   "builtin_tools",
+   "custom_tools",
+   "date_string",
+   "first_user_message",
+   "system_message",
+   "tool_call",
+   "tools_in_user_message"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "google/gemma-3-1b-it": {
+  "sha": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+  "gated": "manual",
+  "weights_gb": 2.0,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Gemma3ForCausalLM"
+  ],
+  "model_type": "gemma3_text",
+  "tf_ver": "4.50.0.dev0",
+  "auto_map": false,
+  "max_pos": 32768,
+  "has_template": true,
+  "tmpl_vars": [
+   "first_user_prefix",
+   "loop_messages",
+   "role"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "google/gemma-3-4b-it": {
+  "sha": "093f9f388b31de276ce2de164bdc2081324b9767",
+  "gated": "manual",
+  "weights_gb": 8.6,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Gemma3ForConditionalGeneration"
+  ],
+  "model_type": "gemma3",
+  "tf_ver": "4.50.0.dev0",
+  "auto_map": false,
+  "max_pos": null,
+  "has_template": true,
+  "tmpl_vars": [
+   "first_user_prefix",
+   "loop_messages",
+   "role"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "google/gemma-3-12b-it": {
+  "sha": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+  "gated": "manual",
+  "weights_gb": 24.4,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Gemma3ForConditionalGeneration"
+  ],
+  "model_type": "gemma3",
+  "tf_ver": "4.50.0.dev0",
+  "auto_map": false,
+  "max_pos": null,
+  "has_template": true,
+  "tmpl_vars": [
+   "first_user_prefix",
+   "loop_messages",
+   "role"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "google/gemma-4-E4B-it": {
+  "sha": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+  "gated": false,
+  "weights_gb": 16.0,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Gemma4ForConditionalGeneration"
+  ],
+  "model_type": "gemma4",
+  "tf_ver": "5.5.0.dev0",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "captured_content",
+   "continue_same_model_turn",
+   "continues_into_next",
+   "enable_thinking",
+   "follow",
+   "has_content",
+   "next_nt",
+   "ns_args",
+   "ns_items",
+   "ns_tname",
+   "ns_tool_scan",
+   "ns_tr_out",
+   "ns_txt",
+   "preserve_thinking",
+   "response_declaration",
+   "role",
+   "thinking_gate",
+   "thinking_text",
+   "tool_body"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "<channel|>",
+   "<|channel>",
+   "<|think|>"
+  ],
+  "mentions_system": true
+ },
+ "google/gemma-4-12B-it": {
+  "sha": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+  "gated": false,
+  "weights_gb": 23.9,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Gemma4UnifiedForConditionalGeneration"
+  ],
+  "model_type": "gemma4_unified",
+  "tf_ver": "5.10.0.dev0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "captured_content",
+   "continue_same_model_turn",
+   "continues_into_next",
+   "enable_thinking",
+   "follow",
+   "has_content",
+   "next_nt",
+   "ns_args",
+   "ns_items",
+   "ns_tname",
+   "ns_tool_scan",
+   "ns_tr_out",
+   "ns_txt",
+   "preserve_thinking",
+   "response_declaration",
+   "role",
+   "thinking_gate",
+   "thinking_text",
+   "tool_body"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "<channel|>",
+   "<|channel>",
+   "<|think|>"
+  ],
+  "mentions_system": true
+ },
+ "microsoft/phi-4": {
+  "sha": "2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+  "gated": false,
+  "weights_gb": 29.3,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Phi3ForCausalLM"
+  ],
+  "model_type": "phi3",
+  "tf_ver": "4.47.0",
+  "auto_map": false,
+  "max_pos": 16384,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "microsoft/Phi-4-mini-instruct": {
+  "sha": "cfbefacb99257ffa30c83adab238a50856ac3083",
+  "gated": false,
+  "weights_gb": 7.7,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [
+   "configuration_phi3.py",
+   "modeling_phi3.py",
+   "sample_finetune.py"
+  ],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Phi3ForCausalLM"
+  ],
+  "model_type": "phi3",
+  "tf_ver": "4.45.0",
+  "auto_map": true,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "mistralai/Mistral-Small-24B-Instruct-2501": {
+  "sha": "9527884be6e5616bdd54de542f9ae13384489724",
+  "gated": false,
+  "weights_gb": 94.3,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": true,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "MistralForCausalLM"
+  ],
+  "model_type": "mistral",
+  "tf_ver": "4.49.0.dev0",
+  "auto_map": false,
+  "max_pos": 32768,
+  "has_template": true,
+  "tmpl_vars": [
+   "loop_messages",
+   "strftime_now",
+   "system_message"
+  ],
+  "strftime": true,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+  "sha": "68faf511d618ef198fef186659617cfd2eb8e33a",
+  "gated": false,
+  "weights_gb": 96.0,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": true,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Mistral3ForConditionalGeneration"
+  ],
+  "model_type": "mistral3",
+  "tf_ver": "4.50.0.dev0",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "loop_messages",
+   "strftime_now",
+   "system_message"
+  ],
+  "strftime": true,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+  "sha": "95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+  "gated": false,
+  "weights_gb": 96.0,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": true,
+  "has_tokenizer_config": false,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Mistral3ForConditionalGeneration"
+  ],
+  "model_type": "mistral3",
+  "tf_ver": "4.52.4",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": false
+ },
+ "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+  "sha": "b6d637bef2393152b3da2b2fde72eecdee30557e",
+  "gated": false,
+  "weights_gb": 15.4,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": true,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Mistral3ForConditionalGeneration"
+  ],
+  "model_type": "mistral3",
+  "tf_ver": "5.0.0.dev0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "blocks",
+   "merged_content",
+   "ns_c",
+   "user_content"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+  "sha": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "gated": false,
+  "weights_gb": 35.7,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": true,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Mistral3ForConditionalGeneration"
+  ],
+  "model_type": "mistral3",
+  "tf_ver": "5.0.0.dev0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "blocks",
+   "merged_content",
+   "ns_c",
+   "user_content"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+  "sha": "3cea74c1ebaf5ce5f5a2553de470e2ceab825142",
+  "gated": false,
+  "weights_gb": 55.8,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": true,
+  "has_tokenizer_config": true,
+  "has_processor": true,
+  "access": true,
+  "arch": [
+   "Mistral3ForConditionalGeneration"
+  ],
+  "model_type": "mistral3",
+  "tf_ver": "5.0.0.dev0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [
+   "blocks",
+   "merged_content",
+   "ns_c",
+   "user_content"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "ibm-granite/granite-3.2-8b-instruct": {
+  "sha": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "gated": false,
+  "weights_gb": 16.3,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "GraniteForCausalLM"
+  ],
+  "model_type": "granite",
+  "tf_ver": "4.47.0",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "controls",
+   "documents",
+   "loop_messages",
+   "strftime_now",
+   "system_message",
+   "thinking"
+  ],
+  "strftime": true,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "ibm-granite/granite-3.3-8b-instruct": {
+  "sha": "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+  "gated": false,
+  "weights_gb": 16.3,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "GraniteForCausalLM"
+  ],
+  "model_type": "granite",
+  "tf_ver": "4.49.0",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "available_tools",
+   "controls",
+   "documents",
+   "loop_messages",
+   "strftime_now",
+   "system_message",
+   "thinking"
+  ],
+  "strftime": true,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "ibm-granite/granite-4.1-3b": {
+  "sha": "c0650403e44e78ec0262dab1c90914c65b196c4e",
+  "gated": false,
+  "weights_gb": 6.8,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "GraniteForCausalLM"
+  ],
+  "model_type": "granite",
+  "tf_ver": "4.53.3",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "available_tools",
+   "documents"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "ibm-granite/granite-4.1-8b": {
+  "sha": "1504002f650e656a0a3789d99574df12e3e94ed0",
+  "gated": false,
+  "weights_gb": 17.6,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "GraniteForCausalLM"
+  ],
+  "model_type": "granite",
+  "tf_ver": "4.53.3",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "available_tools",
+   "documents"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "ibm-granite/granite-4.2-3b": {
+  "sha": "e459acceac81e5fe67c07d9cfc72329a332e7eb1",
+  "gated": false,
+  "weights_gb": 7.3,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [
+   "granite_thinking_parser.py"
+  ],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "GraniteForCausalLM"
+  ],
+  "model_type": "granite",
+  "tf_ver": "4.57.1",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "c",
+   "content",
+   "enable_thinking",
+   "include_content",
+   "low_effort",
+   "reasoning_effort",
+   "system_message",
+   "truncate_history_thinking"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "ibm-granite/granite-4.2-8b": {
+  "sha": "f8de16cdcdbc6c779ca517604e050d82cc119e44",
+  "gated": false,
+  "weights_gb": 17.6,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [
+   "granite_thinking_parser.py"
+  ],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "GraniteForCausalLM"
+  ],
+  "model_type": "granite",
+  "tf_ver": "4.57.1",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [
+   "c",
+   "content",
+   "enable_thinking",
+   "include_content",
+   "low_effort",
+   "reasoning_effort",
+   "system_message",
+   "truncate_history_thinking"
+  ],
+  "strftime": false,
+  "think_markers": [
+   "</think>",
+   "<think>"
+  ],
+  "mentions_system": true
+ },
+ "tiiuae/Falcon3-1B-Instruct": {
+  "sha": "28ba2251970a01dd1edc7ba7dad2eb71216ccfdf",
+  "gated": false,
+  "weights_gb": 3.3,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.46.1",
+  "auto_map": false,
+  "max_pos": 8192,
+  "has_template": true,
+  "tmpl_vars": [
+   "remaining_messages"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "tiiuae/Falcon3-3B-Instruct": {
+  "sha": "411bb94318f94f7a5735b77109f456b1e74b42a1",
+  "gated": false,
+  "weights_gb": 6.5,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.46.1",
+  "auto_map": false,
+  "max_pos": 32768,
+  "has_template": true,
+  "tmpl_vars": [
+   "remaining_messages"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "tiiuae/Falcon-H1-3B-Instruct": {
+  "sha": "01087ec4c132d7f186908716b3530ea187f062a1",
+  "gated": false,
+  "weights_gb": 6.3,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "FalconH1ForCausalLM"
+  ],
+  "model_type": "falcon_h1",
+  "tf_ver": "4.52.0.dev0",
+  "auto_map": false,
+  "max_pos": 131072,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "tiiuae/Falcon-H1-7B-Instruct": {
+  "sha": "41e72f27effbab80cd45b6e884688452253a3686",
+  "gated": false,
+  "weights_gb": 15.2,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "FalconH1ForCausalLM"
+  ],
+  "model_type": "falcon_h1",
+  "tf_ver": "4.52.0.dev0",
+  "auto_map": false,
+  "max_pos": 262144,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "allenai/OLMo-2-0425-1B-Instruct": {
+  "sha": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+  "gated": false,
+  "weights_gb": 3.0,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Olmo2ForCausalLM"
+  ],
+  "model_type": "olmo2",
+  "tf_ver": "4.50.0",
+  "auto_map": false,
+  "max_pos": 4096,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "allenai/OLMo-2-1124-7B-Instruct": {
+  "sha": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+  "gated": false,
+  "weights_gb": 14.6,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Olmo2ForCausalLM"
+  ],
+  "model_type": "olmo2",
+  "tf_ver": "4.47.0.dev0",
+  "auto_map": false,
+  "max_pos": 4096,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "allenai/OLMo-2-1124-13B-Instruct": {
+  "sha": "3a5c85baefbb1896a54d56fe2e76c0395627ddf4",
+  "gated": false,
+  "weights_gb": 27.4,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Olmo2ForCausalLM"
+  ],
+  "model_type": "olmo2",
+  "tf_ver": "4.47.0.dev0",
+  "auto_map": false,
+  "max_pos": 4096,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "allenai/Olmo-3-7B-Instruct": {
+  "sha": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+  "gated": false,
+  "weights_gb": 14.6,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Olmo3ForCausalLM"
+  ],
+  "model_type": "olmo3",
+  "tf_ver": "4.57.1",
+  "auto_map": false,
+  "max_pos": 65536,
+  "has_template": true,
+  "tmpl_vars": [
+   "args",
+   "arguments",
+   "ns"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "allenai/Olmo-3.1-32B-Instruct": {
+  "sha": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+  "gated": false,
+  "weights_gb": 64.5,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Olmo3ForCausalLM"
+  ],
+  "model_type": "olmo3",
+  "tf_ver": "4.57.1",
+  "auto_map": false,
+  "max_pos": 65536,
+  "has_template": true,
+  "tmpl_vars": [
+   "args",
+   "arguments",
+   "ns"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "HuggingFaceTB/SmolLM2-360M-Instruct": {
+  "sha": "a10cc1512eabd3dde888204e902eca88bddb4951",
+  "gated": false,
+  "weights_gb": 0.7,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.42.3",
+  "auto_map": false,
+  "max_pos": 8192,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+  "sha": "31b70e2e869a7173562077fd711b654946d38674",
+  "gated": false,
+  "weights_gb": 3.4,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.42.3",
+  "auto_map": false,
+  "max_pos": 8192,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+  "sha": "e6176739e9ab04f510137531200981d8401263f9",
+  "gated": false,
+  "weights_gb": 3.4,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.48.1",
+  "auto_map": false,
+  "max_pos": 16384,
+  "has_template": true,
+  "tmpl_vars": [],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": false
+ },
+ "CohereLabs/tiny-aya-global": {
+  "sha": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "gated": "auto",
+  "weights_gb": 6.7,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": false,
+  "access_err": "gated, no access",
+  "has_template": false
+ },
+ "CohereLabs/tiny-aya-earth": {
+  "sha": "0624fafbe200f930b89566fc4ec4da314ba48d89",
+  "gated": "auto",
+  "weights_gb": 6.7,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Cohere2ForCausalLM"
+  ],
+  "model_type": "cohere2",
+  "tf_ver": "4.51.3",
+  "auto_map": false,
+  "max_pos": 8192,
+  "has_template": true,
+  "tmpl_vars": [
+   "PARSE_ERR:TemplateSyntaxError(\"Encountered unknown tag 'break'. Jinja was looking for the "
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "CohereLabs/tiny-aya-fire": {
+  "sha": "73500c80fcb6c8bea3e830c21d5d2920249a0e1a",
+  "gated": "auto",
+  "weights_gb": 6.7,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": false,
+  "access_err": "gated, no access",
+  "has_template": false
+ },
+ "CohereLabs/tiny-aya-water": {
+  "sha": "41a99216d12b3ef4881df762934186e5e4d2bbc1",
+  "gated": "auto",
+  "weights_gb": 6.7,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "Cohere2ForCausalLM"
+  ],
+  "model_type": "cohere2",
+  "tf_ver": "4.51.3",
+  "auto_map": false,
+  "max_pos": 8192,
+  "has_template": true,
+  "tmpl_vars": [
+   "PARSE_ERR:TemplateSyntaxError(\"Encountered unknown tag 'break'. Jinja was looking for the "
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": true
+ },
+ "utter-project/EuroLLM-9B-Instruct": {
+  "sha": "f7ae2bc3bcbb538c0b93fa6cfbf388d9898b1ace",
+  "gated": "auto",
+  "weights_gb": 18.3,
+  "has_bin_only": false,
+  "has_jinja": false,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.44.2",
+  "auto_map": false,
+  "max_pos": 4096,
+  "has_template": true,
+  "tmpl_vars": [
+   "role"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": false
+ },
+ "utter-project/EuroLLM-9B-Instruct-2512": {
+  "sha": "def82454026b0353f12e48a0de081a9ed380d91e",
+  "gated": false,
+  "weights_gb": 18.3,
+  "has_bin_only": false,
+  "has_jinja": true,
+  "remote_code_py": [],
+  "has_tekken": false,
+  "has_tokenizer_config": true,
+  "has_processor": false,
+  "access": true,
+  "arch": [
+   "LlamaForCausalLM"
+  ],
+  "model_type": "llama",
+  "tf_ver": "4.55.2",
+  "auto_map": false,
+  "max_pos": 32768,
+  "has_template": true,
+  "tmpl_vars": [
+   "role"
+  ],
+  "strftime": false,
+  "think_markers": [],
+  "mentions_system": false
+ }
+}
