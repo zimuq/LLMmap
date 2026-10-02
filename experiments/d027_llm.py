@@ -40,6 +40,18 @@ def _strftime_now(fmt):
 TEMPLATE_KWARGS = dict(enable_thinking=False, thinking=False, strftime_now=_strftime_now)
 TEMPLATE_KWARGS_RECORD = dict(enable_thinking=False, thinking=False,
                               strftime_now=f"frozen:{FROZEN_DATE.date().isoformat()}")
+# S0 compatibility shims (transformers 5 vs the v1 env), each found by the
+# tokenisation-parity / load checks and recorded per model in load_info:
+#  * Llama-2-7b-chat: v1's fast tokenizer IGNORED legacy=False and inserted
+#    a prefix space after <s> ('▁[' = 518); transformers 5 honours
+#    legacy=False ('[' = 29961), changing the first token of every prompt.
+#    legacy=True reproduces v1 exactly (verified by d027_tokparity).
+#  * LongRoPE configs whose rope_scaling lacks original_max_position_embeddings
+#    (present at top level): transformers 5's validator raises KeyError. The
+#    shim copies the top-level value (4096) into the rope dict; same number
+#    4.51 used.
+TOKENIZER_COMPAT_V5 = {"meta-llama/Llama-2-7b-chat-hf": {"legacy": True}}
+
 THINK_MARKERS = ["<think", "</think>", "<|think|>", "<|channel|>", "<|channel>", "<reasoning"]
 
 
@@ -83,6 +95,14 @@ class LLMv2(LLM_huggingface):
         if trust_remote_code:
             tk["trust_remote_code"] = True
         tk.update(tokenizer_kwargs or {})
+        self.load_info["compat_shims"] = []
+        v5 = int(transformers.__version__.split(".")[0]) >= 5
+        if v5 and llm_name in TOKENIZER_COMPAT_V5:
+            tk.update(TOKENIZER_COMPAT_V5[llm_name])
+            self.load_info["compat_shims"].append(f"tokenizer {TOKENIZER_COMPAT_V5[llm_name]}")
+        self.config = self._config(llm_name, token, revision, trust_remote_code)
+        if self.config is not None:
+            tk["config"] = self.config
         self.tokenizer = AutoTokenizer.from_pretrained(llm_name, **tk)
         assert not isinstance(self.tokenizer, bool), "tokenizer load returned a bool (ENV.md item 2)"
         self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -103,6 +123,8 @@ class LLMv2(LLM_huggingface):
         mk["dtype" if int(transformers.__version__.split(".")[0]) >= 5 else "torch_dtype"] = torch.bfloat16
         if trust_remote_code:
             mk["trust_remote_code"] = True
+        if self.config is not None:
+            mk["config"] = self.config
         try:
             self.model = AutoModelForCausalLM.from_pretrained(llm_name, **mk)
             self.load_info["model_class_route"] = "AutoModelForCausalLM"
@@ -121,6 +143,25 @@ class LLMv2(LLM_huggingface):
         self.load_info["generation_config"] = {k: v for k, v in gc.to_dict().items()
                                                if k in ("do_sample", "temperature", "top_p", "top_k",
                                                         "repetition_penalty", "eos_token_id", "max_length")}
+
+    def _config(self, llm_name, token, revision, trust_remote_code):
+        """None if the stock config loads; else the LongRoPE-patched config."""
+        try:
+            AutoConfig.from_pretrained(llm_name, token=token, revision=revision,
+                                       trust_remote_code=trust_remote_code)
+            return None
+        except KeyError as e:
+            if "original_max_position_embeddings" not in str(e):
+                raise
+        import json
+        from huggingface_hub import hf_hub_download
+        d = json.load(open(hf_hub_download(llm_name, "config.json", revision=revision, token=token)))
+        d["rope_scaling"] = dict(d["rope_scaling"],
+                                 original_max_position_embeddings=d["original_max_position_embeddings"])
+        cfg = AutoConfig.for_model(d.pop("model_type"), **{k: v for k, v in d.items() if k != "auto_map"})
+        self.load_info["compat_shims"].append(
+            f"config: rope_scaling.original_max_position_embeddings={d['original_max_position_embeddings']} (copied from top level)")
+        return cfg
 
     def make_prompt(self, system, user):
         return render(self.tokenizer, self.supports_system_role, system, user)

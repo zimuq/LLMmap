@@ -71,7 +71,8 @@ def compare():
     for f in sorted(os.listdir(OUT)):
         if not f.endswith(".old.npz") and not f.endswith(".internlm.npz"):
             continue
-        slug, tag = f.split(".")[0], f.split(".")[1]
+        tag = "old" if f.endswith(".old.npz") else "internlm"
+        slug = f[:-len(f".{tag}.npz")]
         new = f"{OUT}/{slug}.v2.npz"
         if not os.path.exists(new):
             rows[slug] = dict(old_env=tag, v2="missing (load failed or not run)")
