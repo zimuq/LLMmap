@@ -1,0 +1,15 @@
+{
+ "window": 2047,
+ "tried": [
+  {
+   "L": 1000,
+   "max_wrapped": {
+    "microsoft/Phi-3-medium-128k-instruct": 2012,
+    "microsoft/Phi-3-medium-4k-instruct": 2012
+   },
+   "passes": true
+  }
+ ],
+ "control_L": 1000,
+ "queries_sha256": "29dd85dc3d34b2aeeaae421e1a54d72b36482f02fffba447d2ef452110527071"
+}

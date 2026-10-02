@@ -16,3 +16,6 @@ results/**/*.pt
 
 # D025: per-run test/val logits (~110 MB total) stay on $WORK; counts are committed
 results/D025/logits_*.npz
+
+# D026: probe-pilot corpus extension (~80 MB incl. F3 query texts) stays on $WORK; manifest committed
+data/corpus_v1_ext_d026/

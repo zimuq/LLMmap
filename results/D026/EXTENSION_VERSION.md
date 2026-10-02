@@ -10,7 +10,7 @@ Written 2026-10-01, at P1, before S1 writes any generation.
   `config_index`, `model`. No field is renamed, added or dropped, so this is
   not a schema change, and no migration of `corpus_v1` is needed.
 - **What differs is the query set.** `traces[i]` is new query id `259 + i`
-  (i = 0..19). The id→text map is in `confs/queries/pool_d026_ext.json`
+  (i = 0..21; 279/280 = the 1k control added by the P1 Review, 2026-10-02). The id→text map is in `confs/queries/pool_d026_ext.json`
   (written in S1, sha256 recorded in `results/D026/extension_manifest.json`).
   Pool query ids 0..258 keep their meaning, and no new id collides with one.
 - **Models:** only the two Phi-3-medium twins (128k, 4k). Every (pool,

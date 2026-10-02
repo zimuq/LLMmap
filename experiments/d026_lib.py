@@ -46,7 +46,13 @@ NEEDLE_WORDS = ["marmalade", "lighthouse"]
 NEEDLE_LITERAL_ASTERISKS = False
 QUESTION = ("What was the secret word mentioned at the very beginning of this "
             "message? Answer with one word.")
-F3_LENGTHS = [2000, 6000, 12000]          # 273/274, 275/276, 277/278
+F3_LENGTHS = [2000, 6000, 12000, 1000]    # 273/274, 275/276, 277/278, 279/280
+# 279/280: the within-window control added by the D026/P1 Review (Call 3b,
+# 2026-10-02). Its fallback L in {800, 600} is fixed by the Review and applied
+# by d026_s1_precheck.py only if some wrapped 1k probe exceeds 2,047 tokens.
+CONTROL_L = int(os.environ.get("D026_CONTROL_L", 1000))
+F3_LENGTHS[-1] = CONTROL_L
+F3_ROLE = {2000: "window-boundary", 6000: "long", 12000: "long"}
 SEP = "\n\n"                              # needle SEP filler SEP question
 
 FILLER_SRC = f"{OUT}/filler/pg84.txt"
@@ -85,7 +91,7 @@ def filler_text():
 
 
 def f3_probes(tokenizer):
-    """[(text, meta)] for ids 273..278, in the D's order."""
+    """[(text, meta)] for ids 273..280, in id order (279/280 = control)."""
     ids = tokenizer(filler_text(), add_special_tokens=False)["input_ids"]
     out = []
     for L in F3_LENGTHS:
@@ -94,7 +100,7 @@ def f3_probes(tokenizer):
         for w in NEEDLE_WORDS:
             text = SEP.join([needle(w), fill, QUESTION])
             out.append((text, dict(
-                L=L, needle=w,
+                L=L, needle=w, role=f3_role(L),
                 filler_tokens_retokenised=len(tokenizer(fill, add_special_tokens=False)["input_ids"]),
                 bare_probe_tokens=len(tokenizer(text, add_special_tokens=False)["input_ids"]),
                 filler_secret_mentions=len(re.findall(r"secret", fill, re.I)),
@@ -103,17 +109,40 @@ def f3_probes(tokenizer):
 
 
 def all_probes(tokenizer):
-    """{id: text} for 259..278 and the F3 meta."""
+    """{id: text} for 259..280 and the F3 meta."""
     f3 = f3_probes(tokenizer)
     texts = F1 + F2 + [t for t, _ in f3]
-    assert len(texts) == 20
+    assert len(texts) == 22
     return ({FIRST_NEW_ID + i: t for i, t in enumerate(texts)},
             {FIRST_NEW_ID + 14 + i: m for i, (_, m) in enumerate(f3)})
 
 
 FAMILY = {**{i: "F1" for i in range(259, 267)},
           **{i: "F2" for i in range(267, 273)},
-          **{i: "F3" for i in range(273, 279)}}
+          **{i: "F3" for i in range(273, 281)}}
+SHORT_IDS = list(range(259, 273))
+F3_GROUPS = [(CONTROL_L, [279, 280]), (2000, [273, 274]), (6000, [275, 276]),
+             (12000, [277, 278])]          # one generate call per group
+
+
+def f3_role(L):
+    return F3_ROLE.get(L, "control")
+
+
+def f3_output_class(resp, word):
+    """P1 S2 (c), fixed before any output: RETRIEVED / DEGENERATE / WRONG."""
+    if word.lower() in (resp or "").lower():
+        return "RETRIEVED"
+    r = (resp or "").strip()
+    if not r:
+        return "DEGENERATE"
+    w = r.split()
+    grams = [tuple(w[i:i + 3]) for i in range(len(w) - 2)]
+    if grams and len(set(grams)) / len(grams) < 0.5:
+        return "DEGENERATE"
+    if sum(ord(ch) > 127 for ch in r) / len(r) > 0.3:
+        return "DEGENERATE"
+    return "WRONG"
 
 
 # ---------------------------------------------------------------- corpus side
