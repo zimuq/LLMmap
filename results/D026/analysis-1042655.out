@@ -1,0 +1,13 @@
+=== node: c613-021.vista.tacc.utexas.edu start: Fri Oct  2 05:46:12 PM CDT 2026 ===
+[concat] POOL         chain [48, 47, 77, 157, 241, 1, 225, 19]  acc_test k=4 0.800 k=8 0.820  (5.6 s)
+[concat] NEW          chain [270, 266, 265, 269, 261, 271, 262, 268]  acc_test k=4 0.760 k=8 0.760  (1.1 s)
+[concat] POOL+NEW     chain [270, 140, 65, 94, 251, 168, 78, 38]  acc_test k=4 0.760 k=8 0.740  (4.7 s)
+[concat] POOL+NEW+F3  chain [275, 5, 137, 249, 199, 129, 100, 77]  acc_test k=4 1.000 k=8 1.000  (3.7 s)
+[concat] PRIMARY {'delta': -0.040000000000000036, 'ci': [-0.19999999999999996, 0.12], 'identical_sets': False, 'acc_pool_k4': 0.8, 'acc_poolnew_k4': 0.76, 'new_in_first4': [270], 'label': 'INCONCLUSIVE'}
+[meanpool] POOL         chain [194, 83, 6, 114, 5, 142, 9, 100]  acc_test k=4 0.720 k=8 0.720  (1.9 s)
+[meanpool] NEW          chain [270, 265, 259, 269, 264, 268, 263, 261]  acc_test k=4 0.760 k=8 0.820  (0.6 s)
+[meanpool] POOL+NEW     chain [194, 83, 6, 114, 5, 142, 9, 100]  acc_test k=4 0.720 k=8 0.720  (2.0 s)
+[meanpool] POOL+NEW+F3  chain [275, 277, 180, 199, 113, 147, 161, 269]  acc_test k=4 1.000 k=8 1.000  (0.9 s)
+[meanpool] PRIMARY {'delta': 0.0, 'ci': [0.0, 0.0], 'identical_sets': True, 'acc_pool_k4': 0.72, 'acc_poolnew_k4': 0.72, 'new_in_first4': [], 'label': 'NO-GO'}
+[S2] wrote ./results/D026/analysis.json, 51.7 s
+=== end: Fri Oct  2 05:47:12 PM CDT 2026 ===
