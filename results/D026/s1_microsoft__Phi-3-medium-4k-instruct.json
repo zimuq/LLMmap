@@ -1,0 +1,89 @@
+{
+ "model": "microsoft/Phi-3-medium-4k-instruct",
+ "status": "COMPLETE",
+ "schema": "corpus_v1 (ext d026 v1)",
+ "queries_sha256": "29dd85dc3d34b2aeeaae421e1a54d72b36482f02fffba447d2ef452110527071",
+ "started": "2026-10-02T09:27:31",
+ "provenance": {
+  "hf_revision": "48d87cd5e0523b430d77e93becd3655cd6897230",
+  "use_cache_overridden": false,
+  "attn_implementation": "sdpa",
+  "sliding_window": 2047,
+  "max_position_embeddings": 4096,
+  "original_max_position_embeddings": 4096,
+  "rope_type": null,
+  "supports_system_role": false,
+  "transformers": "4.51.3",
+  "torch": "2.7.1+cu128",
+  "batch": 64,
+  "token_ceiling": 200
+ },
+ "projection": {
+  "after": 10,
+  "s_per_config": 12.97,
+  "this_twin_h": 0.45,
+  "both_twins_h": 0.9
+ },
+ "f3_batch1_fallbacks": [],
+ "gen_wall_s": 1726.1,
+ "n_configs": 125,
+ "n_rows": 2750,
+ "n_empty_responses": 0,
+ "empty_rate": 0.0,
+ "f3_output_classes": {
+  "273": {
+   "build:WRONG": 2,
+   "build:RETRIEVED": 73,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "274": {
+   "build:WRONG": 14,
+   "build:RETRIEVED": 61,
+   "val:WRONG": 4,
+   "val:RETRIEVED": 21,
+   "test:RETRIEVED": 22,
+   "test:WRONG": 3
+  },
+  "275": {
+   "build:WRONG": 75,
+   "val:WRONG": 25,
+   "test:WRONG": 25
+  },
+  "276": {
+   "build:WRONG": 75,
+   "val:WRONG": 25,
+   "test:WRONG": 25
+  },
+  "277": {
+   "build:WRONG": 75,
+   "val:WRONG": 25,
+   "test:WRONG": 25
+  },
+  "278": {
+   "build:WRONG": 75,
+   "val:WRONG": 25,
+   "test:WRONG": 25
+  },
+  "279": {
+   "build:RETRIEVED": 74,
+   "build:WRONG": 1,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "280": {
+   "build:RETRIEVED": 75,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  }
+ },
+ "sha256": "2b9bab7f6fac5dde92a6aa38d5a53df39a3ce7872114964965001ecc60594154",
+ "embedding_parity_max_abs": 0.0,
+ "embedding": {
+  "n": 2750,
+  "wall_s": 1.5,
+  "sha256": "4b8ac75d2ca985720566d6037bf4dc6bee54e6c35f288d05281479b41757b64e"
+ },
+ "wall_s": 1779.7,
+ "finished": "2026-10-02T09:57:10"
+}

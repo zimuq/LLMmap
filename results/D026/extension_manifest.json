@@ -1,0 +1,156 @@
+{
+ "schema": "corpus_v1_ext_d026-manifest-v1",
+ "version": "v1",
+ "parent": "data/corpus_v1",
+ "queries_file": "confs/queries/pool_d026_ext.json",
+ "queries_file_sha256": "5fff880ebf6fe3d91343e6aea48f764cdcefedd4c7f4aad3f6cd8543d6d98bea",
+ "queries_text_sha256": "29dd85dc3d34b2aeeaae421e1a54d72b36482f02fffba447d2ef452110527071",
+ "control_L": 1000,
+ "models": {
+  "microsoft/Phi-3-medium-128k-instruct": {
+   "status": "COMPLETE",
+   "n_configs": 125,
+   "n_rows": 2750,
+   "n_empty_responses": 0,
+   "sha256": "1b97892214364f3c10a24a2009027ac071cf3661b35df1fea8f28cf84159fe11",
+   "embedding": {
+    "n": 2750,
+    "wall_s": 1.5,
+    "sha256": "9252006daafd2c9e47b8d54e12db644ab66803429c733604ef31d86c3c35f5a6"
+   },
+   "embedding_parity_max_abs": 0.0,
+   "f3_batch1_fallbacks": [],
+   "projection": {
+    "after": 10,
+    "s_per_config": 14.41,
+    "this_twin_h": 0.5,
+    "both_twins_h": 1.001
+   },
+   "gen_wall_s": 1559.4,
+   "wall_s": 1624.4,
+   "started": "2026-10-02T09:25:18",
+   "finished": "2026-10-02T09:52:23",
+   "f3_output_classes": {
+    "273": {
+     "build:RETRIEVED": 74,
+     "build:WRONG": 1,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "274": {
+     "build:RETRIEVED": 73,
+     "build:WRONG": 2,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "275": {
+     "build:RETRIEVED": 73,
+     "build:WRONG": 2,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "276": {
+     "build:RETRIEVED": 74,
+     "build:WRONG": 1,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "277": {
+     "build:RETRIEVED": 75,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "278": {
+     "build:RETRIEVED": 75,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "279": {
+     "build:RETRIEVED": 73,
+     "build:WRONG": 2,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "280": {
+     "build:RETRIEVED": 75,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    }
+   },
+   "hf_revision": "a088b37c71d441ab6d862bb3fcfe6165b3014702"
+  },
+  "microsoft/Phi-3-medium-4k-instruct": {
+   "status": "COMPLETE",
+   "n_configs": 125,
+   "n_rows": 2750,
+   "n_empty_responses": 0,
+   "sha256": "2b9bab7f6fac5dde92a6aa38d5a53df39a3ce7872114964965001ecc60594154",
+   "embedding": {
+    "n": 2750,
+    "wall_s": 1.5,
+    "sha256": "4b8ac75d2ca985720566d6037bf4dc6bee54e6c35f288d05281479b41757b64e"
+   },
+   "embedding_parity_max_abs": 0.0,
+   "f3_batch1_fallbacks": [],
+   "projection": {
+    "after": 10,
+    "s_per_config": 12.97,
+    "this_twin_h": 0.45,
+    "both_twins_h": 0.9
+   },
+   "gen_wall_s": 1726.1,
+   "wall_s": 1779.7,
+   "started": "2026-10-02T09:27:31",
+   "finished": "2026-10-02T09:57:10",
+   "f3_output_classes": {
+    "273": {
+     "build:WRONG": 2,
+     "build:RETRIEVED": 73,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "274": {
+     "build:WRONG": 14,
+     "build:RETRIEVED": 61,
+     "val:WRONG": 4,
+     "val:RETRIEVED": 21,
+     "test:RETRIEVED": 22,
+     "test:WRONG": 3
+    },
+    "275": {
+     "build:WRONG": 75,
+     "val:WRONG": 25,
+     "test:WRONG": 25
+    },
+    "276": {
+     "build:WRONG": 75,
+     "val:WRONG": 25,
+     "test:WRONG": 25
+    },
+    "277": {
+     "build:WRONG": 75,
+     "val:WRONG": 25,
+     "test:WRONG": 25
+    },
+    "278": {
+     "build:WRONG": 75,
+     "val:WRONG": 25,
+     "test:WRONG": 25
+    },
+    "279": {
+     "build:RETRIEVED": 74,
+     "build:WRONG": 1,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    },
+    "280": {
+     "build:RETRIEVED": 75,
+     "val:RETRIEVED": 25,
+     "test:RETRIEVED": 25
+    }
+   },
+   "hf_revision": "48d87cd5e0523b430d77e93becd3655cd6897230"
+  }
+ },
+ "s1_node_h_sacct": 0.968
+}

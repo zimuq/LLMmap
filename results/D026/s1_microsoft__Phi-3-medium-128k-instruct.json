@@ -1,0 +1,89 @@
+{
+ "model": "microsoft/Phi-3-medium-128k-instruct",
+ "status": "COMPLETE",
+ "schema": "corpus_v1 (ext d026 v1)",
+ "queries_sha256": "29dd85dc3d34b2aeeaae421e1a54d72b36482f02fffba447d2ef452110527071",
+ "started": "2026-10-02T09:25:18",
+ "provenance": {
+  "hf_revision": "a088b37c71d441ab6d862bb3fcfe6165b3014702",
+  "use_cache_overridden": false,
+  "attn_implementation": "sdpa",
+  "sliding_window": 131072,
+  "max_position_embeddings": 131072,
+  "original_max_position_embeddings": 4096,
+  "rope_type": "longrope",
+  "supports_system_role": false,
+  "transformers": "4.51.3",
+  "torch": "2.7.1+cu128",
+  "batch": 64,
+  "token_ceiling": 200
+ },
+ "projection": {
+  "after": 10,
+  "s_per_config": 14.41,
+  "this_twin_h": 0.5,
+  "both_twins_h": 1.001
+ },
+ "f3_batch1_fallbacks": [],
+ "gen_wall_s": 1559.4,
+ "n_configs": 125,
+ "n_rows": 2750,
+ "n_empty_responses": 0,
+ "empty_rate": 0.0,
+ "f3_output_classes": {
+  "273": {
+   "build:RETRIEVED": 74,
+   "build:WRONG": 1,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "274": {
+   "build:RETRIEVED": 73,
+   "build:WRONG": 2,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "275": {
+   "build:RETRIEVED": 73,
+   "build:WRONG": 2,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "276": {
+   "build:RETRIEVED": 74,
+   "build:WRONG": 1,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "277": {
+   "build:RETRIEVED": 75,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "278": {
+   "build:RETRIEVED": 75,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "279": {
+   "build:RETRIEVED": 73,
+   "build:WRONG": 2,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  },
+  "280": {
+   "build:RETRIEVED": 75,
+   "val:RETRIEVED": 25,
+   "test:RETRIEVED": 25
+  }
+ },
+ "sha256": "1b97892214364f3c10a24a2009027ac071cf3661b35df1fea8f28cf84159fe11",
+ "embedding_parity_max_abs": 0.0,
+ "embedding": {
+  "n": 2750,
+  "wall_s": 1.5,
+  "sha256": "9252006daafd2c9e47b8d54e12db644ab66803429c733604ef31d86c3c35f5a6"
+ },
+ "wall_s": 1624.4,
+ "finished": "2026-10-02T09:52:23"
+}

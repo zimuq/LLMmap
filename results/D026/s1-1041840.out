@@ -1,0 +1,9 @@
+=== node: c611-052.vista.tacc.utexas.edu start: Fri Oct  2 09:27:10 AM CDT 2026 ===
+[guard] 13.0 s/config -> this twin 0.45 h, both 0.90 h
+  25 configs, 390 s
+  50 configs, 731 s
+  75 configs, 1104 s
+  100 configs, 1425 s
+  125 configs, 1726 s
+[S1] microsoft/Phi-3-medium-4k-instruct: COMPLETE wall 1779.7 s
+=== end: Fri Oct  2 09:57:14 AM CDT 2026 ===
