@@ -74,6 +74,16 @@ def template_text(tok):
     return t or ""
 
 
+BATCH1 = False
+
+
+def gen(llm, prompts, hp, **kw):
+    """Batched generate, or one prompt at a time in --batch1 mode (A2)."""
+    if BATCH1:
+        return [llm.generate([p], hp, **kw)[0] for p in prompts]
+    return llm.generate(list(prompts), hp, **kw)
+
+
 def one(m, queries, env_tag):
     sp = spec(m)
     rec = dict(model=m, env_tag=env_tag, v1=sp["v1"], revision=sp["revision"],
@@ -85,7 +95,10 @@ def one(m, queries, env_tag):
                     chat_template_fallback=sp["fallback"])
     except Exception as e:
         tb = traceback.format_exc()
-        rec.update(drop="cannot load" + (" (needs remote code)" if "trust_remote_code" in tb else ""),
+        last = tb.strip().splitlines()[-1]
+        why = (" (needs remote code)" if "trust_remote_code" in last else
+               " (no usable tokenizer files; rule 6)" if "backend tokenizer" in last else "")
+        rec.update(drop="cannot load" + why,
                    error=tb[-3000:], load_s=round(time.time() - t0, 1))
         return rec
     rec["load"] = llm.load_info
@@ -115,8 +128,8 @@ def one(m, queries, env_tag):
     for ci in range(3):
         conf = PromptConf.from_dict(sp["build"][ci])
         prompts, hp = zip(*[conf(queries[q], llm) for q in PAPER8])
-        outs = llm.generate(list(prompts), hp[0], skip_special_tokens=False,
-                            max_new_tokens=h.TOKEN_CEILING)
+        outs = gen(llm, prompts, hp[0], skip_special_tokens=False,
+                   max_new_tokens=h.TOKEN_CEILING)
         for q, o in zip(PAPER8, outs):
             if any(k in o for k in markers):
                 hits.append(dict(config=ci, query=q, out=o[:300]))
@@ -133,10 +146,19 @@ def one(m, queries, env_tag):
         pc = dict(pc, sampling_hparams=dict(pc["sampling_hparams"], do_sample=False))
     conf = PromptConf.from_dict(pc)
     prompts, hp = zip(*[conf(queries[q], llm) for q in PAPER8])
-    batched = llm.generate(list(prompts), hp[0], max_new_tokens=h.TOKEN_CEILING)
+    t = time.time()
+    try:
+        batched = llm.generate(list(prompts), hp[0], max_new_tokens=h.TOKEN_CEILING)
+        batched_error = None
+    except Exception as e:                    # A2: batching breaks the model
+        batched, batched_error = [""] * len(prompts), repr(e)[:400]
+    tb = time.time() - t
+    t = time.time()
     single = [llm.generate([p], hp[0], max_new_tokens=h.TOKEN_CEILING)[0] for p in prompts]
+    ts = time.time() - t
     rec["padding_sanity"] = dict(
-        config=gi, forced_greedy=gi is None,
+        config=gi, forced_greedy=gi is None, batched_s=round(tb, 2), single_s=round(ts, 2),
+        batched_error=batched_error, batch1_mode=BATCH1,
         exact=sum(a == b for a, b in zip(batched, single)), n=len(single),
         degenerate_batched_only=sum(degenerate(a) and not degenerate(b) for a, b in zip(batched, single)),
         example=dict(batched=batched[0][:300], single=single[0][:300]))
@@ -147,7 +169,7 @@ def one(m, queries, env_tag):
         c = PromptConf.from_dict(dict(sp["build"][ci], sampling_hparams=dict(do_sample=False)))
         ps += [c(queries[q], llm)[0] for q in PAPER8]
     t = time.time()
-    llm.generate(ps, dict(do_sample=False), max_new_tokens=h.TOKEN_CEILING)
+    gen(llm, ps, dict(do_sample=False), max_new_tokens=h.TOKEN_CEILING)
     dt = time.time() - t
     rec["throughput"] = dict(n=len(ps), wall_s=round(dt, 2), gen_per_s=round(len(ps) / dt, 3))
     rec["peak_mem_gb"] = round(torch.cuda.max_memory_allocated() / 1e9, 2)
@@ -161,7 +183,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", required=True)
     ap.add_argument("--env-tag", default="v2")
+    ap.add_argument("--batch1", action="store_true", help="A2 fallback: one prompt at a time")
     a = ap.parse_args()
+    global BATCH1
+    BATCH1 = a.batch1
     os.makedirs(OUT, exist_ok=True)
     queries = [e["text"] for e in json.load(open(h.Q0))["queries"]]
     for m in [l.strip() for l in open(a.models) if l.strip()]:

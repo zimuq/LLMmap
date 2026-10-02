@@ -51,6 +51,17 @@ TEMPLATE_KWARGS_RECORD = dict(enable_thinking=False, thinking=False,
 #    shim copies the top-level value (4096) into the rope dict; same number
 #    4.51 used.
 TOKENIZER_COMPAT_V5 = {"meta-llama/Llama-2-7b-chat-hf": {"legacy": True}}
+#  * Mistral tekken-converted tokenizer.json files whose pre-tokenizer regex is
+#    wrong: transformers 5 warns "This will lead to incorrect tokenization. You
+#    should set fix_mistral_regex=True" (found in S0 preflight for these five).
+for _m in ("mistralai/Mistral-Small-24B-Instruct-2501", "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+           "mistralai/Ministral-3-3B-Instruct-2512-BF16", "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+           "mistralai/Ministral-3-14B-Instruct-2512-BF16"):
+    TOKENIZER_COMPAT_V5[_m] = {"fix_mistral_regex": True}
+#  * chat template shipped only as chat_template.json (processor-style; e.g.
+#    Mistral-Small-3.1 at the pinned revision): transformers 5's AutoTokenizer
+#    does not read it. It IS the model's own template, so it is loaded from
+#    that file and recorded as such.
 
 THINK_MARKERS = ["<think", "</think>", "<|think|>", "<|channel|>", "<|channel>", "<reasoning"]
 
@@ -114,6 +125,16 @@ class LLMv2(LLM_huggingface):
         else:
             self.load_info["chat_template_source"] = (
                 "model's own" if getattr(self.tokenizer, "chat_template", None) else "NONE")
+            if self.load_info["chat_template_source"] == "NONE":
+                import json
+                from huggingface_hub import hf_hub_download
+                try:
+                    f = hf_hub_download(llm_name, "chat_template.json", revision=revision, token=token)
+                    self.tokenizer.chat_template = json.load(open(f))["chat_template"]
+                    self.load_info["chat_template_source"] = "model's own (chat_template.json)"
+                    self.load_info["compat_shims"].append("chat template loaded from chat_template.json")
+                except Exception:
+                    pass
         self.load_info["tokenizer_class"] = type(self.tokenizer).__name__
         self.supports_system_role = has_system_role(self.tokenizer)
         self.model = None

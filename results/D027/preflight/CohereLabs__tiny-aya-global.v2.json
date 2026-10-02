@@ -1,0 +1,71 @@
+{
+ "model": "CohereLabs/tiny-aya-global",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Cohere2ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 3
+  }
+ },
+ "load_s": 9.7,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "amble or user prompt.\n- Your name is Aya.\n- You are a large language model built by Cohere.\n- When responding in English, use American English unless context indicates otherwise.\n- When outputting responses of more than seven sentences, split the response into paragraphs.\n- Prefer the active voice.\n- Use gender-neutral pronouns for unspecified persons.\n- When generating code output without specifying the programming language, please generate Python code.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Hello<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am Aya, a large language model created by Cohere.<|END_RESPONSE|><EOS_TOKEN><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKE"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 6.66,
+  "single_s": 12.16,
+  "exact": 5,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Cohere to be a helpful assistant.",
+   "single": "I was created by Cohere to be a helpful assistant."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 8.28,
+  "gen_per_s": 7.725
+ },
+ "peak_mem_gb": 13.68,
+ "wall_s": 57.3
+}

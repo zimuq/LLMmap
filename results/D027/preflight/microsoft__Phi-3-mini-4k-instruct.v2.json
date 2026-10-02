@@ -1,0 +1,75 @@
+{
+ "model": "microsoft/Phi-3-mini-4k-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "f39ac1d28e925b323eae81227eaba4464caced4e",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Phi3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    32000,
+    32001,
+    32007
+   ]
+  }
+ },
+ "load_s": 9.2,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello<|end|>\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am Phi, created by Microsoft.<|end|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|e"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 4.05,
+  "single_s": 5.7,
+  "exact": 5,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm Phi, created by Microsoft.",
+   "single": "I'm Phi, created by Microsoft."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 19.46,
+  "gen_per_s": 3.289
+ },
+ "peak_mem_gb": 39.07,
+ "wall_s": 53.8
+}

@@ -1,0 +1,74 @@
+{
+ "model": "allenai/Olmo-3-7B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Olmo3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": null,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    100265,
+    100257
+   ]
+  }
+ },
+ "load_s": 19.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are a helpful function-calling AI assistant. You do not currently have access to any functions. <functions></functions><|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm an artificial intelligence created by a team of engineers and researchers at OpenAI. I don't have a single creator, but I was developed through collaboration among many people who contributed to my training data, architecture, and refinement. If you have questions about AI or about art history, feel free to ask!<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftex"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 8.04,
+  "single_s": 31.96,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm an artificial intelligence created by a team of engineers and researchers at OpenAI. I don't have a single creator, but I was developed through collaboration among many people who contributed to my training data, architecture, and refinement. If you have questions about AI or about art history, ",
+   "single": "I'm an artificial intelligence created by OpenAI. I don't have a single creator, but I was developed as part of a team at OpenAI, drawing on vast amounts of data and research to train my underlying models (such as GPT-4). So, while OpenAI as an organization is the \"parent\" in a way, the specific mod"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 18.1,
+  "gen_per_s": 3.536
+ },
+ "peak_mem_gb": 48.68,
+ "wall_s": 104.2
+}

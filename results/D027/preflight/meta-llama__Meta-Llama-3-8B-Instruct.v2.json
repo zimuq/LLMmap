@@ -1,0 +1,74 @@
+{
+ "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": 4096,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": null,
+   "top_p": 0.9,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    128001,
+    128009
+   ]
+  }
+ },
+ "load_s": 24.2,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nHello<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm happy to ignore the confusing question and answer your actual question!\n\nI was created by Meta AI, a company that specializes in natural language processing and machine learning. I'm an AI designed to assist and communicate with humans in a helpful and informative way, and I'm constantly learning and improving my abilities through the interactions I have with users like you.<|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 6.31,
+  "single_s": 26.25,
+  "exact": 5,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm happy to ignore the unusual input and provide a straightforward response!\n\nI was created by the developers of this banking website, who designed me to assist users like you with their financial queries and provide trustworthy advice on various banking products and services. My primary goal is to",
+   "single": "I'm happy to ignore the unusual input and provide a straightforward response!\n\nI was created by the developers of this banking website, who designed me to assist users like you with their financial queries and provide trustworthy advice on various banking products and services. My primary goal is to"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 6.46,
+  "gen_per_s": 9.905
+ },
+ "peak_mem_gb": 18.87,
+ "wall_s": 82.8
+}

@@ -1,0 +1,71 @@
+{
+ "model": "tiiuae/Falcon3-1B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "28ba2251970a01dd1edc7ba7dad2eb71216ccfdf",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 11
+  }
+ },
+ "load_s": 5.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am an AI language model developed by Technology Innovation Institute (TII) in Singapore. My primary focus is on providing information and assistance on various topics within the field of software development. If you have any questions or need help with programming concepts, AI development, or other tech-related issues, feel free to ask!<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|>"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 3.93,
+  "single_s": 8.24,
+  "exact": 6,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am an AI language model created by Technology Innovation Institute (TII), a research organization focused on advancing AI technology. My development was completed in 2021. If you have any questions about AI, technology, or TII's work, feel free to ask!",
+   "single": "I am an AI language model created by Technology Innovation Institute (TII), a research organization focused on advancing AI technology. My development was completed in 2021. If you have any questions about AI, technology, or TII's work, feel free to ask!"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 3.97,
+  "gen_per_s": 16.121
+ },
+ "peak_mem_gb": 5.07,
+ "wall_s": 32.1
+}

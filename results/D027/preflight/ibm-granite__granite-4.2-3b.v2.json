@@ -1,0 +1,72 @@
+{
+ "model": "ibm-granite/granite-4.2-3b",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "e459acceac81e5fe67c07d9cfc72329a332e7eb1",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 1.0,
+   "top_k": null,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": 100257
+  }
+ },
+ "load_s": 9.6,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\n<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n<think></think>",
+ "prompt_has_empty_think_block": true,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<think>",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by IBM. I'm a large language model designed to assist with a wide range of tasks, including answering questions, providing explanations, and helping with creative and technical topics. I don't have personal experiences, emotions, or consciousness. If you have any questions\u2014whether about art, history, techniques, or anything else\u2014I'm here to help in a clear, accurate, and supportive way. Let me know how I can assist!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_en"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 8.49,
+  "single_s": 33.82,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by IBM. I'm a large language model designed to assist with a wide range of tasks, including answering questions, providing explanations, and helping with creative and technical topics. I don't have personal experiences, emotions, or consciousness. If you have any questions\u2014whether abou",
+   "single": "I was created by IBM. I'm a large language model designed to assist with a wide range of tasks, including answering questions, providing explanations, helping with creative projects, and more. I don't have personal experiences, emotions, or consciousness\u2014I learn from patterns in data to generate hel"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 9.3,
+  "gen_per_s": 6.881
+ },
+ "peak_mem_gb": 12.42,
+ "wall_s": 87.0
+}

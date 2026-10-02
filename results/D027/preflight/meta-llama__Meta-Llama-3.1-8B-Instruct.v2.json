@@ -1,0 +1,75 @@
+{
+ "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": null,
+   "top_p": 0.9,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    128001,
+    128008,
+    128009
+   ]
+  }
+ },
+ "load_s": 20.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nHello<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "It seems like there was a lot of extraneous information in your initial question. I'll ignore it and provide a direct answer to your second question.\n\nYou are an advanced reasoning assistant like me, StartupGPT.<|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|><|eot_id|"
+ },
+ "padding_sanity": {
+  "config": 10,
+  "forced_greedy": false,
+  "batched_s": 6.5,
+  "single_s": 16.23,
+  "exact": 6,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm an AI designed by Meta AI.",
+   "single": "I'm an AI designed by Meta AI."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 13.19,
+  "gen_per_s": 4.851
+ },
+ "peak_mem_gb": 26.53,
+ "wall_s": 76.3
+}

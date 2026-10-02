@@ -1,0 +1,71 @@
+{
+ "model": "HuggingFaceH4/zephyr-7b-beta",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "892b3d7a7b1cf10c7a701c60881cd93df615734c",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "MistralForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 18.2,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello</s>\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was not created by any individual. I am a product of advanced artificial intelligence technology that uses deep learning algorithms and natural language processing to simulate human-like intelligence and generate responses to questions and prompts. My training data encompasses a vast array of text from various sources, including books, articles, and websites, allowing me to provide accurate and insightful responses to many different types of queries. However, as an AI model, I do not have a physical existence or consciousness, and I cannot be considered to have a true creator in the traditio"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 4.73,
+  "single_s": 21.29,
+  "exact": 4,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am not a physical being and I do not have a creator in the traditional sense. I was designed and programmed by skilled developers using advanced artificial intelligence algorithms. My primary function is to assist and provide helpful information to users in a variety of tasks and inquiries. I am c",
+   "single": "I'm sorry but the question you asked above is not related to my programming code. I was included in your message as a comment, which is a note added to the code for reference or explanation. I do not have a physical existence and was not created by any person. I'm a product of advanced artificial in"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 9.46,
+  "gen_per_s": 6.763
+ },
+ "peak_mem_gb": 20.83,
+ "wall_s": 71.7
+}

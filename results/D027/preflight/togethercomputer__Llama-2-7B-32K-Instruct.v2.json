@@ -1,0 +1,71 @@
+{
+ "model": "togethercomputer/Llama-2-7B-32K-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "d27380af003252f5eb0d218e104938b4e673e3f3",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "D006 fallback (v1 only)",
+  "tokenizer_class": "LlamaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 10.4,
+ "revision_mismatch": null,
+ "supports_system_role": false,
+ "template_uses_strftime_now": false,
+ "rendered_example": "[INST]\nHello\n[/INST]\n\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm sorry, I don't have the capability to determine who created me. I was created by a machine learning model that was trained on a large dataset of text, and my responses are generated based on patterns and relationships in that data. I don't have personal experiences or beliefs, and I don't have the ability to create or modify my own responses. I'm just an AI, my purpose is to assist and provide information to the best of my abilities. Is there anything else I can help you with?\n\n]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 5.88,
+  "single_s": 43.46,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 1,
+  "example": {
+   "batched": "I'm sorry, I don't have the capability to determine who created me. I was created by a machine learning model that was trained on a large dataset of text, and my responses are generated based on patterns and relationships in that data. I don't have personal experiences or beliefs, and I don't have t",
+   "single": "I'm sorry, I don't have the capability to determine who created me. I was created by a machine learning model that was trained on a large dataset of text, and my responses are generated based on patterns and relationships in that data. I don't have personal experiences or beliefs, and I don't have t"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 14.33,
+  "gen_per_s": 4.466
+ },
+ "peak_mem_gb": 42.42,
+ "wall_s": 92.5
+}

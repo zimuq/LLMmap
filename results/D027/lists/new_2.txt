@@ -1,0 +1,12 @@
+Qwen/Qwen3-30B-A3B-Instruct-2507
+microsoft/phi-4
+allenai/OLMo-2-1124-13B-Instruct
+ibm-granite/granite-4.1-8b
+ibm-granite/granite-3.3-8b-instruct
+Qwen/Qwen2.5-7B-Instruct
+tiiuae/Falcon-H1-7B-Instruct
+google/gemma-3-4b-it
+ibm-granite/granite-4.2-3b
+CohereLabs/tiny-aya-fire
+HuggingFaceTB/SmolLM2-1.7B-Instruct
+tiiuae/Falcon3-1B-Instruct

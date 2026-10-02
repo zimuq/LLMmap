@@ -1,0 +1,75 @@
+{
+ "model": "microsoft/Phi-3-medium-4k-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "48d87cd5e0523b430d77e93becd3655cd6897230",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Phi3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    32000,
+    32001,
+    32007
+   ]
+  }
+ },
+ "load_s": 33.4,
+ "revision_mismatch": null,
+ "supports_system_role": false,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello<|end|>\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by Microsoft as part of their efforts to aid users in practicing and improving their language skills. My purpose is to facilitate learning by providing exercises, correcting grammar mistakes, and engaging in conversations to enhance language proficiency across various languages.<|end|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 7.14,
+  "single_s": 31.38,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "As an AI developed by Microsoft, I am Phi, and my creation is the result of Microsoft's ongoing efforts to advance AI technology and provide users with intelligent assistance.",
+   "single": "As an AI developed by Microsoft, I am Phi, a product of Microsoft's innovation in artificial intelligence. My creation is the result of Microsoft's commitment to advancing AI technology to assist and enhance human capabilities across various domains."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 9.61,
+  "gen_per_s": 6.657
+ },
+ "peak_mem_gb": 33.0,
+ "wall_s": 107.1
+}

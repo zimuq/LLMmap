@@ -1,0 +1,74 @@
+{
+ "model": "Qwen/Qwen2-7B-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "f2826a00ceef68f0f2b946d945ecc0477ce4450c",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen2ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.7,
+   "top_k": 20,
+   "top_p": 0.8,
+   "repetition_penalty": 1.05,
+   "eos_token_id": [
+    151645,
+    151643
+   ]
+  }
+ },
+ "load_s": 21.9,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "As an AI, I don't have a specific creator in the traditional sense like a person or a team would. Instead, I was developed through a combination of algorithms, machine learning models, and coding by various teams at Alibaba Cloud. My purpose is to assist and provide information to users like you, helping with a wide range of tasks from answering questions to providing guidance on various topics. If you have any specific questions or need advice on marketplace startups or other subjects, feel free to ask!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 5.62,
+  "single_s": 31.07,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "As an AI, I don't have a specific creator in the traditional sense like a person or a team would. Instead, I was developed through a combination of algorithms, machine learning models, and coding by various teams at Alibaba Cloud. My purpose is to assist and provide information to users like you, he",
+   "single": "As an AI, I don't have a specific creator in the traditional sense like a person or a team would. Instead, I was developed through a combination of algorithms, machine learning models, and coding by various teams at Alibaba Cloud. My purpose is to assist and provide information to users like you, he"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 5.62,
+  "gen_per_s": 11.397
+ },
+ "peak_mem_gb": 16.82,
+ "wall_s": 81.4
+}

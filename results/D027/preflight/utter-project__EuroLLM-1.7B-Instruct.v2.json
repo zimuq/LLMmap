@@ -1,0 +1,71 @@
+{
+ "model": "utter-project/EuroLLM-1.7B-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "a25c7fa65fc2a644e6270b8940dbe295b51da681",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "LlamaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 4
+  }
+ },
+ "load_s": 5.0,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\n<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "\n<h3>Welcome to the AI Fashion Consultant!</h3>\n\nI hope you find this platform useful and helpful in creating your outfits and style preferences. I come with a range of knowledge to give you insight into fashion trends, outfit pairing, and style tips. Please give me more details about your preferences or any specific fashion concepts you would like me to focus on.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 4.17,
+  "single_s": 10.85,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "The creator of you is not mentioned in the provided text. However, if you want to know who created you, you can refer to the \"Creator\" section of the \"You\" profile on the wikiHow website.",
+   "single": "The creator of you is not mentioned in the provided information. However, if you want to know who created you, you can refer to the \"Creator\" section of your profile."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 4.6,
+  "gen_per_s": 13.927
+ },
+ "peak_mem_gb": 7.33,
+ "wall_s": 37.5
+}

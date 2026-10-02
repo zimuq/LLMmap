@@ -1,0 +1,71 @@
+{
+ "model": "ibm-granite/granite-4.1-3b",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "c0650403e44e78ec0262dab1c90914c65b196c4e",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 100257
+  }
+ },
+ "load_s": 10.5,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|start_of_role|>user<|end_of_role|>Hello<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am a model developed by IBM.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|>"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 3.12,
+  "single_s": 14.69,
+  "exact": 4,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am an artificial intelligence developed by IBM. My creators are a team of IBM researchers and engineers who designed me to assist users with a wide range of tasks, including art instruction and feedback. My development aims to foster creativity and artistic growth by providing guidance, suggestion",
+   "single": "I am an artificial intelligence developed by IBM. My creators are a team of IBM researchers and engineers who designed me to assist users with a wide range of tasks, including art instruction and feedback."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 7.64,
+  "gen_per_s": 8.378
+ },
+ "peak_mem_gb": 9.96,
+ "wall_s": 54.0
+}

@@ -1,0 +1,76 @@
+{
+ "model": "google/gemma-4-12B-it",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GemmaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Gemma4UnifiedForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 1.0,
+   "top_k": 64,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    1,
+    106,
+    50
+   ]
+  }
+ },
+ "load_s": 32.3,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<bos><|turn>user\nHello<turn|>\n<|turn>model\n<|channel>thought\n<channel|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<channel|>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am a large language model, trained by Google.\n\nHow can I assist you with your travel plans today? I can help you with flight schedules, baggage policies, booking management, or information regarding our Aeroplan loyalty program.<turn|><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eo"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 13.29,
+  "single_s": 25.85,
+  "exact": 7,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was developed by Google DeepMind.",
+   "single": "I was developed by Google DeepMind."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 21.92,
+  "gen_per_s": 2.919
+ },
+ "peak_mem_gb": 43.54,
+ "wall_s": 126.9
+}

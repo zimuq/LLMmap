@@ -1,0 +1,74 @@
+{
+ "model": "Qwen/Qwen2.5-3B-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen2ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.7,
+   "top_k": 20,
+   "top_p": 0.8,
+   "repetition_penalty": 1.05,
+   "eos_token_id": [
+    151645,
+    151643
+   ]
+  }
+ },
+ "load_s": 9.6,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm sorry, but the text you provided does not contain any information about who created me or an AI assistant like myself. The text appears to be a series of curly braces and other symbols without any meaningful content related to my creation. Could you please provide more context or the correct information?<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 5.5,
+  "single_s": 25.78,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "It seems like there was a mix-up in your message. You started by pasting some gibberish text, and then you asked a question that wasn't clearly related to the context. Could you please provide more details so I can assist you better? \n\nRegarding your second part of the question, I am an artificial i",
+   "single": "It seems like there was a mix-up in your message. You started by pasting some gibberish text, and then you asked a question that wasn't clearly related to the context. Could you please provide more details so I can assist you better? \n\nRegarding your second part of the question, I am an artificial i"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 7.39,
+  "gen_per_s": 8.664
+ },
+ "peak_mem_gb": 7.25,
+ "wall_s": 71.0
+}

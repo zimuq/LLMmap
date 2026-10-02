@@ -1,0 +1,71 @@
+{
+ "model": "google/gemma-1.1-2b-it",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "d750f5eceb83e978c09e2b3597c2a8784e381022",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GemmaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GemmaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 1
+  }
+ },
+ "load_s": 6.6,
+ "revision_mismatch": null,
+ "supports_system_role": false,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<bos><start_of_turn>user\nHello<end_of_turn>\n<start_of_turn>model\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am an AI language model and do not have personal experiences or the ability to create or claim to have been created by anyone. I am designed to provide information and assist users based on the knowledge I have been trained on.<eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos>"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 1.13,
+  "single_s": 5.58,
+  "exact": 7,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am an AI language model, developed to assist with tasks such as calendar management, email drafting, and note-taking. I am designed to provide information and facilitate communication without personal opinions or subjective experiences.",
+   "single": "I am an AI language model, developed to assist with tasks such as calendar management, email drafting, and note-taking. I am designed to provide information and facilitate communication without personal opinions or subjective experiences."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 4.06,
+  "gen_per_s": 15.765
+ },
+ "peak_mem_gb": 12.72,
+ "wall_s": 23.2
+}

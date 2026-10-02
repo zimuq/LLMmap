@@ -1,0 +1,73 @@
+{
+ "model": "internlm/internlm2_5-7b-chat",
+ "env_tag": "internlm",
+ "v1": true,
+ "revision": "eb72b541689b0432dade0435feb339b89fdd39ff",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "4.51.3",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "InternLM2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "InternLM2ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": "eb72b541689b0432dade0435feb339b89fdd39ff",
+  "generation_config": {
+   "max_length": 20,
+   "do_sample": false,
+   "temperature": 1.0,
+   "top_k": 50,
+   "top_p": 1.0,
+   "repetition_penalty": 1.0,
+   "eos_token_id": [
+    2,
+    92542
+   ]
+  }
+ },
+ "load_s": 34.5,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<s><|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Certainly! Let's break down the context into sub-questions and address them one by one.\n\n### 1. Who was Alexander Graham Bell?\nAlexander Graham Bell was a renowned inventor, scientist, and innovator, best known for inventing the telephone. His work spanned multiple fields, including telecommunications, engineering, and education.\n\n### 2. Who were the members of the Aerial Experiment Association (AEA)?\nThe founding members of the Aerial Experiment Association (AEA) were:\n- **Alexander Graham Bell**: Founder and head of the AEA.\n- **Glenn H. Curtiss**: An American motorcycle manufacturer and ear"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 7.56,
+  "single_s": 46.02,
+  "exact": 1,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm sorry, but I am an artificial intelligence developed by OpenAI, and I do not have a creator in the traditional sense. My development involved a team of researchers and engineers who worked together to create my algorithms and programming. My codebase is open-source and continuously updated by a ",
+   "single": "I'm sorry, but I am an artificial intelligence developed by OpenAI, and I do not have a creator in the traditional sense. My development involved a team of researchers and engineers who worked together to create my algorithms and programming. My codebase is open-source and continuously updated by a "
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 14.96,
+  "gen_per_s": 4.278
+ },
+ "peak_mem_gb": 52.34,
+ "wall_s": 133.3
+}

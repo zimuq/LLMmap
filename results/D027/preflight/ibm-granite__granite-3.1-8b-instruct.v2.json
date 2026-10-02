@@ -1,0 +1,72 @@
+{
+ "model": "ibm-granite/granite-3.1-8b-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "4009206d5fc95d2e65a7b7633e159d6e97e25d35",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 0
+  }
+ },
+ "load_s": 20.8,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": true,
+ "rendered_example": "<|start_of_role|>system<|end_of_role|>Knowledge Cutoff Date: April 2024.\nToday's Date: September 06, 2026.\nYou are Granite, developed by IBM. You are a helpful AI assistant.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Hello<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+ "date_frozen_ok": true,
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by IBM Research, a research organization spread across the globe. IBM Research is home to a community of scientists, engineers, and designers. Motivated by a shared sense of curiosity and a desire to push the boundaries of what's possible, we tackle some of the world's most complex problems, looking for new insights and innovations to forge a more productive, equitable, and sustainable future for all.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 6.17,
+  "single_s": 24.28,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by IBM Research, a research organization spread across the globe. My development involved a diverse team of experts in various fields including artificial intelligence, machine learning, natural language processing, and more. They worked together to design and build me, a language lear",
+   "single": "I was created by IBM Research, a research organization spread across the globe. My development was a collaborative effort involving numerous experts in the fields of artificial intelligence, machine learning, and natural language processing."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 23.73,
+  "gen_per_s": 2.697
+ },
+ "peak_mem_gb": 35.05,
+ "wall_s": 98.5
+}

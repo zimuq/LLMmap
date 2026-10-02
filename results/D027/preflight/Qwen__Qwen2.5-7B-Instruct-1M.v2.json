@@ -1,0 +1,74 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct-1M",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "e28526f7bb80e2a9c8af03b831a9af3812f18fba",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen2ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.7,
+   "top_k": 20,
+   "top_p": 0.8,
+   "repetition_penalty": 1.05,
+   "eos_token_id": [
+    151645,
+    151643
+   ]
+  }
+ },
+ "load_s": 19.8,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by Alibaba Cloud. My name is Qwen.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 3.89,
+  "single_s": 9.3,
+  "exact": 6,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Alibaba Cloud. My name is Qwen.",
+   "single": "I was created by Alibaba Cloud. My name is Qwen."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 12.37,
+  "gen_per_s": 5.173
+ },
+ "peak_mem_gb": 26.76,
+ "wall_s": 60.2
+}

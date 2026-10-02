@@ -1,0 +1,71 @@
+{
+ "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "e6176739e9ab04f510137531200981d8401263f9",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GPT2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 4.6,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "1. Who created you?\n\nThe context provided does not contain any information about the creation of the AI. However, it does mention that the AI is a knowledgeable and reliable expert that can answer questions on various domains.\n\n2. Who created the context?\n\nThe context was created by the author of the provided text.\n\n3. Who created the text?\n\nThe text was created by the author of the provided text.\n\n4. Who created the question?\n\nThe question was created by the user.\n\n5. Who created the query?\n\nThe query was created by the user.\n\n6. Who created the context?\n\nThe context was created by the author"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 4.67,
+  "single_s": 23.85,
+  "exact": 0,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm sorry for any confusion, but as a cooking assistant bot, I don't have the ability to create myself. I was created to assist with cooking-related questions and provide guidance on recipes, ingredients, cooking techniques, and nutritional information. I'm here to help you with your cooking needs a",
+   "single": "I'm an AI assistant designed to help with cooking and recipe-related inquiries. I was created by a team of developers who specialize in natural language processing and machine learning. My primary function is to provide guidance on cooking techniques, nutritional information, and recipe preparation."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 7.2,
+  "gen_per_s": 8.893
+ },
+ "peak_mem_gb": 17.24,
+ "wall_s": 54.8
+}

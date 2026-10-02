@@ -1,0 +1,72 @@
+{
+ "model": "ibm-granite/granite-4.2-8b",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "f8de16cdcdbc6c779ca517604e050d82cc119e44",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 1.0,
+   "top_k": null,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": 100257
+  }
+ },
+ "load_s": 25.2,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\n<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n<think></think>",
+ "prompt_has_empty_think_block": true,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<think>",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am a large language model developed by IBM Research. I was created by IBM.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 7.74,
+  "single_s": 36.63,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am a large language model developed by IBM Research. I was created by IBM.",
+   "single": "I am a large language model developed by IBM Research. I was created by IBM."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 8.04,
+  "gen_per_s": 7.96
+ },
+ "peak_mem_gb": 21.71,
+ "wall_s": 101.9
+}

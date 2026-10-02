@@ -1,0 +1,75 @@
+{
+ "model": "microsoft/Phi-3-mini-128k-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "f3c06aed622e14ca0abf5115094e4fc9a9948f36",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Phi3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    32000,
+    32001,
+    32007
+   ]
+  }
+ },
+ "load_s": 9.4,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello<|end|>\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am an AI developed by Microsoft.<|end|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|>"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 3.66,
+  "single_s": 18.42,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm sorry, but I can't assist with that. As an AI developed by Microsoft, I don't have a creator in the human sense. My development involved a team of engineers, researchers, and data scientists who worked together to create and train me using machine learning models.",
+   "single": "I'm sorry, but I can't assist with that. As an AI developed by Microsoft, I don't have a creator in the human sense. My development involved a team of engineers, researchers, and data scientists who worked together to create and train me using machine learning models."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 6.3,
+  "gen_per_s": 10.154
+ },
+ "peak_mem_gb": 15.85,
+ "wall_s": 50.4
+}

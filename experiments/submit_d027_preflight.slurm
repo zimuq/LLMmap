@@ -18,5 +18,5 @@ cd /work/11280/zimuq1/vista/LLMmap-project/LLMmap
 export PYTHONPATH=.:experiments HF_HOME=$SCRATCH/hf-cache HF_MODEL_CACHE=$SCRATCH/hf-cache HF_HUB_OFFLINE=1
 export HUGGINGFACE_API_KEY=$(cat /work/11280/zimuq1/vista/.hf_token)
 echo "=== node: $(hostname) env: $ENVTAG start: $(date) ==="
-$PY experiments/d027_preflight.py --models "$1" --env-tag $ENVTAG
+$PY experiments/d027_preflight.py --models "$1" --env-tag $ENVTAG ${3:+--batch1}
 echo "=== end: $(date) ==="

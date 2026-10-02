@@ -1,0 +1,74 @@
+{
+ "model": "google/gemma-3-4b-it",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GemmaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Gemma3ForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": null,
+   "top_k": 64,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    1,
+    106
+   ]
+  }
+ },
+ "load_s": 16.6,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<bos><start_of_turn>user\nHello<end_of_turn>\n<start_of_turn>model\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by the Gemma team at Google DeepMind.<end_of_turn><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 10.62,
+  "single_s": 59.33,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by the Gemma team at Google DeepMind.",
+   "single": "I was created by the Gemma team at Google DeepMind."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 10.84,
+  "gen_per_s": 5.902
+ },
+ "peak_mem_gb": 14.77,
+ "wall_s": 130.8
+}

@@ -1,0 +1,74 @@
+{
+ "model": "nvidia/Llama3-ChatQA-1.5-8B",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "3b98162e3f97550d62aeeb19ea50208f968c678a",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    128001,
+    128009
+   ]
+  }
+ },
+ "load_s": 11.4,
+ "revision_mismatch": null,
+ "supports_system_role": false,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|begin_of_text|>System: This is a chat between a user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions based on the context. The assistant should also indicate when the answer cannot be found in the context.\n\nUser: Hello\n\nAssistant:",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "<|begin_of_text|> I was created by OpenAI.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|>"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 1.16,
+  "single_s": 3.49,
+  "exact": 7,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": " I was created by OpenAI.",
+   "single": " I was created by OpenAI."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 16.15,
+  "gen_per_s": 3.962
+ },
+ "peak_mem_gb": 29.86,
+ "wall_s": 37.6
+}

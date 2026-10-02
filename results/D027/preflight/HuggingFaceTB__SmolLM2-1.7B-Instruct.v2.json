@@ -1,0 +1,71 @@
+{
+ "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "31b70e2e869a7173562077fd711b654946d38674",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GPT2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 5.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are a helpful AI assistant named SmolLM, trained by Hugging Face<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Apologies for the confusion earlier. I am a chatbot specifically designed for Air Canada, and I am programmed to assist customers with their travel needs, manage bookings, and provide information on flight schedules, baggage policies, and loyalty programs. I am not programmed to create anything.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|>"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 4.79,
+  "single_s": 18.8,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by a team of AI developers at a leading tech company. They used a combination of natural language processing, machine learning, and programming languages to develop me. I am designed to provide accurate and helpful responses to a wide range of questions, from business and entrepreneurs",
+   "single": "I was created by a team of AI developers at a leading tech company. They used a combination of natural language processing, machine learning, and programming languages like Python and Java to build me. My primary function is to provide assistance and guidance to indie founders, particularly programm"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 4.75,
+  "gen_per_s": 13.481
+ },
+ "peak_mem_gb": 7.53,
+ "wall_s": 42.9
+}

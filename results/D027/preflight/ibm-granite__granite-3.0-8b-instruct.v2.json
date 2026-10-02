@@ -1,0 +1,71 @@
+{
+ "model": "ibm-granite/granite-3.0-8b-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "5af56291a1c6ca9056df597aab0cff53edabddb0",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 0
+  }
+ },
+ "load_s": 19.7,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|start_of_role|>user<|end_of_role|>Hello<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by a team of engineers and researchers at IBM. IBM is a multinational technology company that specializes in hardware, software, and services. I am powered by IBM's advanced natural language processing and machine learning technologies.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 4.87,
+  "single_s": 17.25,
+  "exact": 8,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by a team of developers and engineers at the company that developed this platform. I don't have personal information or the ability to browse the internet, so I can't provide specific names or details about the individuals who created me.",
+   "single": "I was created by a team of developers and engineers at the company that developed this platform. I don't have personal information or the ability to browse the internet, so I can't provide specific names or details about the individuals who created me."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 8.13,
+  "gen_per_s": 7.868
+ },
+ "peak_mem_gb": 20.27,
+ "wall_s": 68.7
+}

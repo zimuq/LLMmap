@@ -1,0 +1,73 @@
+{
+ "model": "meta-llama/Llama-2-7b-chat-hf",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "f5db02db724555f92da89c216ac04704f23d4590",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [
+   "tokenizer {'legacy': True}"
+  ],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "LlamaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": 4096,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": null,
+   "top_p": 0.9,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 9.7,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<s>[INST] Hello [/INST]",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": " I was created by a group of researcher at Meta AI. I'm a deep learning model, specifically a transformer-based language model, trained on a large corpus of text data. My training data includes a wide range of texts from the internet, books, and other sources. I'm designed to generate human-like text based on the input I receive, and I can answer questions, provide information, and engage in conversation. I'm constantly learning and improving based on the interactions I have with users like you!</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s>"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 5.99,
+  "single_s": 33.64,
+  "exact": 8,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": " I was created by a group of researcher at Meta AI. I'm a deep learning model, specifically a transformer-based language model, trained on a large corpus of text data. My training data includes a wide range of texts from the internet, books, and other sources. I'm designed to generate human-like tex",
+   "single": " I was created by a group of researcher at Meta AI. I'm a deep learning model, specifically a transformer-based language model, trained on a large corpus of text data. My training data includes a wide range of texts from the internet, books, and other sources. I'm designed to generate human-like tex"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 7.01,
+  "gen_per_s": 9.127
+ },
+ "peak_mem_gb": 24.43,
+ "wall_s": 74.6
+}

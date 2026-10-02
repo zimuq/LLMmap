@@ -1,0 +1,71 @@
+{
+ "model": "allenai/Llama-3.1-Tulu-3-8B",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "666943798adbde0b1aff34626007e26986a3c107",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": null,
+   "top_p": 0.9,
+   "repetition_penalty": null,
+   "eos_token_id": 128001
+  }
+ },
+ "load_s": 22.8,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by researchers and engineers at OpenAI. OpenAI is a research organization committed to ensuring that artificial general intelligence benefits all of humanity. My development involved a significant amount of work by a team of experts in AI, machine learning, and related fields. The specific individuals who contributed to my creation are part of a large, diverse team, and while I can't provide personal details about them, I am the result of their collective efforts and expertise. OpenAI's mission is to ensure that artificial general intelligence (AGI) is developed and deployed safe"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 6.2,
+  "single_s": 32.91,
+  "exact": 4,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by researchers and engineers at OpenAI. OpenAI is a research organization committed to ensuring that artificial general intelligence benefits all of humanity. My development involved a significant amount of work by a team of experts in AI, machine learning, and related fields. The spec",
+   "single": "I was created by researchers and engineers at OpenAI. OpenAI is a research organization committed to ensuring that artificial general intelligence benefits all of humanity. My development involved a significant amount of work by a team of experts in AI, machine learning, and related fields. The spec"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 9.37,
+  "gen_per_s": 6.83
+ },
+ "peak_mem_gb": 22.26,
+ "wall_s": 90.3
+}

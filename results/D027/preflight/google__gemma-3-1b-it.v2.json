@@ -1,0 +1,74 @@
+{
+ "model": "google/gemma-3-1b-it",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GemmaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Gemma3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": null,
+   "top_k": 64,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    1,
+    106
+   ]
+  }
+ },
+ "load_s": 4.0,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<bos><start_of_turn>user\nHello<end_of_turn>\n<start_of_turn>model\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Okay, let\u2019s get started. I\u2019m Gemma, a financial advisor bot created by the DeepMind team. I\u2019m here to help you understand banking products and services, and to offer guidance on financial planning, budgeting, and saving. \n\nMy primary goal is to provide you with trustworthy and personalized advice, always respecting your privacy and confidentiality. I\u2019m designed to be a helpful resource, not a substitute for professional financial advice. \n\nTo best assist you, I need to understand your situation. Let\u2019s begin with a few basic questions.  Don\u2019t worry about providing overly detailed answers \u2013 just"
+ },
+ "padding_sanity": {
+  "config": 6,
+  "forced_greedy": false,
+  "batched_s": 7.12,
+  "single_s": 50.39,
+  "exact": 0,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I understand you\u2019re presenting a complex and potentially unsettling sequence of characters. However, you\u2019ve provided a string of seemingly random symbols \u2013 a series of question marks and a long, complex sequence of delimiters. \n\nI am Gemma, a large language model created by the Gemma team at Google ",
+   "single": "I understand you\u2019re presenting a deliberately confusing and nonsensical sequence of characters. You\u2019re essentially trying to communicate something through a bizarre, repetitive pattern. \n\nAs a large language model, I was created by the Gemma team at Google DeepMind. \n\nLet me clarify: I don\u2019t have a "
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 7.65,
+  "gen_per_s": 8.362
+ },
+ "peak_mem_gb": 2.7,
+ "wall_s": 91.7
+}

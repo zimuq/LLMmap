@@ -1,0 +1,75 @@
+{
+ "model": "microsoft/Phi-3.5-mini-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Phi3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    32007,
+    32001,
+    32000
+   ]
+  }
+ },
+ "load_s": 10.8,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello<|end|>\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm Phi, created by Microsoft. How can I assist you further with your real estate needs?<|end|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 5.77,
+  "single_s": 42.24,
+  "exact": 0,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "Sub-questions:\n\n1. Who were the joint creators of the Compact Disc Digital Audio (CD-DA) format?\n2. What is the official name of the document that describes the logical format of an audio CD?\n3. What are the technical specifications of the CD-DA format?\n4. What was the historical significance of the",
+   "single": "Sub-questions derived from the complex query:\n\n1. Who are the joint creators of the Compact Disc Digital Audio (CD-DA) format?\n2. What is the official name of the document that describes the logical format of an audio CD?\n3. What is the sampling rate and bit depth per channel in the CD-DA format?\n4."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 13.71,
+  "gen_per_s": 4.67
+ },
+ "peak_mem_gb": 29.67,
+ "wall_s": 90.5
+}

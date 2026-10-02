@@ -1,0 +1,34 @@
+{
+ "model": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": "no own chat template (rule 6)",
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "NONE",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "architectures[0] (Unrecognized configuration class <class 'transformers.models.mistral3.configuration_mistral3.Mistral3Config'> for this k)",
+  "model_class": "Mistral3ForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 60.7,
+ "revision_mismatch": null
+}

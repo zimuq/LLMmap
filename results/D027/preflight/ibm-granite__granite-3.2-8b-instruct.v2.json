@@ -1,0 +1,72 @@
+{
+ "model": "ibm-granite/granite-3.2-8b-instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 0
+  }
+ },
+ "load_s": 22.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": true,
+ "rendered_example": "<|start_of_role|>system<|end_of_role|>Knowledge Cutoff Date: April 2024.\nToday's Date: September 06, 2026.\nYou are Granite, developed by IBM. You are a helpful AI assistant.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Hello<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+ "date_frozen_ok": true,
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm sorry for any confusion, but as an AI, I don't have personal information about my creation. I'm designed to assist users, and my capabilities are a result of the team behind the development and programming of AI technologies. For specifics about my creation, I would recommend reaching out to the team at Air Canada who developed me for their customer service needs.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 8.02,
+  "single_s": 38.61,
+  "exact": 0,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm an artificial intelligence and don't have personal creators in the human sense. I was developed by a team of researchers and engineers at IBM, a multinational technology company. My design and capabilities are the result of collective efforts in the field of AI research and development.",
+   "single": "I'm an artificial intelligence and don't have personal creators in the human sense. I was developed by a team of researchers and engineers at IBM, a multinational technology company. My capabilities are based on advanced AI models and natural language processing technologies."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 22.78,
+  "gen_per_s": 2.809
+ },
+ "peak_mem_gb": 34.15,
+ "wall_s": 107.7
+}

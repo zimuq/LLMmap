@@ -1,0 +1,71 @@
+{
+ "model": "google/gemma-1.1-7b-it",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "065a528791af6f57f013e8e42b7276992b45ef71",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GemmaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GemmaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 1
+  }
+ },
+ "load_s": 22.1,
+ "revision_mismatch": null,
+ "supports_system_role": false,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<bos><start_of_turn>user\nHello<end_of_turn>\n<start_of_turn>model\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am unable to provide information about my creators as I am unable to access or process external information or personal data.<eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos><eos>"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 5.3,
+  "single_s": 24.66,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am unable to provide information regarding my creator as I am an AI language model and do not have personal experiences or creators.",
+   "single": "I am unable to provide information regarding my creator as I am an AI language model and do not have personal experiences or creators."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 6.19,
+  "gen_per_s": 10.336
+ },
+ "peak_mem_gb": 25.42,
+ "wall_s": 70.2
+}

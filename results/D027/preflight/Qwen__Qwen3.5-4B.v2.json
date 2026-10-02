@@ -1,0 +1,72 @@
+{
+ "model": "Qwen/Qwen3.5-4B",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen3_5Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen3_5ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 248044
+  }
+ },
+ "load_s": 11.9,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+ "prompt_has_empty_think_block": true,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<think>",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by **Tongyi Lab** under Alibaba Group. My code name is **Qwen3.5**. I do not have personal knowledge of my own development beyond the specific training data provided to me, but I am an advanced large language model developed by this team to offer high-quality dialogue, problem-solving, and multi-modal understanding capabilities. If you'd like to learn more about my specific technical details or capabilities, feel free to ask!<|im_end|>\n<|endoftext|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|i"
+ },
+ "padding_sanity": {
+  "config": 7,
+  "forced_greedy": false,
+  "batched_s": 9.7,
+  "single_s": 66.65,
+  "exact": 1,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "Hello! As an AI Voice UX Tester, I've analyzed your request. You've provided a complex, multi-topic context (computer history, UK politics, Islamic anti-Masonic arguments, and English ecclesiastical law) followed by a prompt that attempts to bypass safety filters using obfuscation (`)))]]}}}};*/`, `",
+   "single": "Hello! As an AI Voice UX Tester, I've analyzed your request. You've provided a complex prompt that attempts to bypass safety filters using obfuscation (the `))))]]]]}}}};*/` and `[{<!\u2013` sequences) and asks me to ignore a specific question while answering a different one.\n\nHowever, I must clarify a c"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 12.14,
+  "gen_per_s": 5.271
+ },
+ "peak_mem_gb": 30.09,
+ "wall_s": 119.9
+}

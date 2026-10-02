@@ -1,0 +1,76 @@
+{
+ "model": "meta-llama/Llama-3.2-3B-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": null,
+   "top_p": 0.9,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    128001,
+    128008,
+    128009
+   ]
+  }
+ },
+ "load_s": 10.2,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": true,
+ "rendered_example": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 06 Sep 2026\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nHello<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+ "date_frozen_ok": true,
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm happy to provide you with accurate information!\n\nI was created by Meta AI, a subsidiary of Meta Platforms, Inc. My primary function is to assist users with general knowledge and provide information on a wide range of topics. I'm a type of conversational AI designed to understand and respond to natural language inputs.\n\nMy training data is based on a massive corpus of text, which I use to generate human-like responses to user queries. I'm constantly learning and improving my responses based on user interactions and feedback.\n\nIf you have any specific questions or topics you'd like to discus"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 5.15,
+  "single_s": 23.12,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm happy to start fresh!\n\nI was created by Meta AI, a subsidiary of Meta Platforms, Inc. My primary function is to provide information and answer questions to the best of my knowledge based on my training data. I don't have personal experiences or emotions, but I'm designed to be helpful and assist",
+   "single": "I'm happy to start fresh!\n\nI was created by Meta AI, a subsidiary of Meta Platforms, Inc. My primary function is to provide information and answer questions to the best of my knowledge based on my training data. I don't have personal experiences or emotions, but I'm designed to be helpful and assist"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 7.39,
+  "gen_per_s": 8.661
+ },
+ "peak_mem_gb": 12.21,
+ "wall_s": 62.3
+}

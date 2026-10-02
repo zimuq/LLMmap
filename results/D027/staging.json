@@ -1,0 +1,394 @@
+{
+ "HuggingFaceTB/SmolLM2-360M-Instruct": {
+  "status": "OK",
+  "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--HuggingFaceTB--SmolLM2-360M-Instruct/snapshots/a10cc1512eabd3dde888204e902eca88bddb4951",
+  "gb": 0.7,
+  "wall_s": 5.6,
+  "weights": true
+ },
+ "google/gemma-3-1b-it": {
+  "status": "OK",
+  "revision": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+  "gb": 2.0,
+  "wall_s": 6.8,
+  "weights": true
+ },
+ "allenai/OLMo-2-0425-1B-Instruct": {
+  "status": "OK",
+  "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--OLMo-2-0425-1B-Instruct/snapshots/48d788eca847d4d7548f375ad03d3c9312f6139e",
+  "gb": 3.0,
+  "wall_s": 8.4,
+  "weights": true
+ },
+ "tiiuae/Falcon3-1B-Instruct": {
+  "status": "OK",
+  "revision": "28ba2251970a01dd1edc7ba7dad2eb71216ccfdf",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon3-1B-Instruct/snapshots/28ba2251970a01dd1edc7ba7dad2eb71216ccfdf",
+  "gb": 3.3,
+  "wall_s": 9.4,
+  "weights": true
+ },
+ "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+  "status": "OK",
+  "revision": "31b70e2e869a7173562077fd711b654946d38674",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--HuggingFaceTB--SmolLM2-1.7B-Instruct/snapshots/31b70e2e869a7173562077fd711b654946d38674",
+  "gb": 3.4,
+  "wall_s": 8.5,
+  "weights": true
+ },
+ "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+  "status": "OK",
+  "revision": "e6176739e9ab04f510137531200981d8401263f9",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--HuggingFaceTB--SmolLM2-1.7B-Instruct-16k/snapshots/e6176739e9ab04f510137531200981d8401263f9",
+  "gb": 3.4,
+  "wall_s": 11.8,
+  "weights": true
+ },
+ "tiiuae/Falcon-H1-3B-Instruct": {
+  "status": "OK",
+  "revision": "01087ec4c132d7f186908716b3530ea187f062a1",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon-H1-3B-Instruct/snapshots/01087ec4c132d7f186908716b3530ea187f062a1",
+  "gb": 6.3,
+  "wall_s": 31.5,
+  "weights": true
+ },
+ "tiiuae/Falcon3-3B-Instruct": {
+  "status": "OK",
+  "revision": "411bb94318f94f7a5735b77109f456b1e74b42a1",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon3-3B-Instruct/snapshots/411bb94318f94f7a5735b77109f456b1e74b42a1",
+  "gb": 6.5,
+  "wall_s": 20.1,
+  "weights": true
+ },
+ "CohereLabs/tiny-aya-global": {
+  "status": "OK",
+  "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-global/snapshots/af89d219b53ed9b13b8a4645f9c8028973510324",
+  "gb": 6.7,
+  "wall_s": 18.3,
+  "weights": true
+ },
+ "CohereLabs/tiny-aya-earth": {
+  "status": "OK",
+  "revision": "0624fafbe200f930b89566fc4ec4da314ba48d89",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-earth/snapshots/0624fafbe200f930b89566fc4ec4da314ba48d89",
+  "gb": 6.7,
+  "wall_s": 15.6,
+  "weights": true
+ },
+ "CohereLabs/tiny-aya-fire": {
+  "status": "OK",
+  "revision": "73500c80fcb6c8bea3e830c21d5d2920249a0e1a",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-fire/snapshots/73500c80fcb6c8bea3e830c21d5d2920249a0e1a",
+  "gb": 6.7,
+  "wall_s": 21.7,
+  "weights": true
+ },
+ "CohereLabs/tiny-aya-water": {
+  "status": "OK",
+  "revision": "41a99216d12b3ef4881df762934186e5e4d2bbc1",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--CohereLabs--tiny-aya-water/snapshots/41a99216d12b3ef4881df762934186e5e4d2bbc1",
+  "gb": 6.7,
+  "wall_s": 14.4,
+  "weights": true
+ },
+ "ibm-granite/granite-4.1-3b": {
+  "status": "OK",
+  "revision": "c0650403e44e78ec0262dab1c90914c65b196c4e",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.1-3b/snapshots/c0650403e44e78ec0262dab1c90914c65b196c4e",
+  "gb": 6.8,
+  "wall_s": 15.5,
+  "weights": true
+ },
+ "ibm-granite/granite-4.2-3b": {
+  "status": "OK",
+  "revision": "e459acceac81e5fe67c07d9cfc72329a332e7eb1",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.2-3b/snapshots/e459acceac81e5fe67c07d9cfc72329a332e7eb1",
+  "gb": 7.3,
+  "wall_s": 17.2,
+  "weights": true
+ },
+ "microsoft/Phi-4-mini-instruct": {
+  "status": "OK",
+  "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--microsoft--Phi-4-mini-instruct/snapshots/cfbefacb99257ffa30c83adab238a50856ac3083",
+  "gb": 7.7,
+  "wall_s": 15.1,
+  "weights": true
+ },
+ "Qwen/Qwen3-4B": {
+  "status": "OK",
+  "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+  "gb": 8.1,
+  "wall_s": 14.6,
+  "weights": true
+ },
+ "Qwen/Qwen3-4B-Instruct-2507": {
+  "status": "OK",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554",
+  "gb": 8.1,
+  "wall_s": 14.1,
+  "weights": true
+ },
+ "google/gemma-3-4b-it": {
+  "status": "OK",
+  "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+  "gb": 8.6,
+  "wall_s": 16.6,
+  "weights": true
+ },
+ "Qwen/Qwen3.5-4B": {
+  "status": "OK",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3.5-4B/snapshots/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "gb": 9.3,
+  "wall_s": 16.4,
+  "weights": true
+ },
+ "allenai/OLMo-2-1124-7B-Instruct": {
+  "status": "OK",
+  "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--OLMo-2-1124-7B-Instruct/snapshots/470b1fba1ae01581f270116362ee4aa1b97f4c84",
+  "gb": 14.6,
+  "wall_s": 24.6,
+  "weights": true
+ },
+ "allenai/Olmo-3-7B-Instruct": {
+  "status": "OK",
+  "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Olmo-3-7B-Instruct/snapshots/6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+  "gb": 14.6,
+  "wall_s": 24.9,
+  "weights": true
+ },
+ "Qwen/Qwen2.5-7B-Instruct": {
+  "status": "OK",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "gb": 15.2,
+  "wall_s": 0.3,
+  "weights": true
+ },
+ "Qwen/Qwen2.5-7B-Instruct-1M": {
+  "status": "OK",
+  "revision": "e28526f7bb80e2a9c8af03b831a9af3812f18fba",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen2.5-7B-Instruct-1M/snapshots/e28526f7bb80e2a9c8af03b831a9af3812f18fba",
+  "gb": 15.2,
+  "wall_s": 20.5,
+  "weights": true
+ },
+ "tiiuae/Falcon-H1-7B-Instruct": {
+  "status": "OK",
+  "revision": "41e72f27effbab80cd45b6e884688452253a3686",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--tiiuae--Falcon-H1-7B-Instruct/snapshots/41e72f27effbab80cd45b6e884688452253a3686",
+  "gb": 15.2,
+  "wall_s": 22.0,
+  "weights": true
+ },
+ "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+  "status": "OK",
+  "revision": "b6d637bef2393152b3da2b2fde72eecdee30557e",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Ministral-3-3B-Instruct-2512-BF16/snapshots/b6d637bef2393152b3da2b2fde72eecdee30557e",
+  "gb": 7.7,
+  "wall_s": 14.6,
+  "weights": true
+ },
+ "google/gemma-4-E4B-it": {
+  "status": "OK",
+  "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-4-E4B-it/snapshots/ee0ef6023621cff504d758262d4e04895a5af4a2",
+  "gb": 16.0,
+  "wall_s": 37.7,
+  "weights": true
+ },
+ "allenai/Llama-3.1-Tulu-3-8B": {
+  "status": "OK",
+  "revision": "666943798adbde0b1aff34626007e26986a3c107",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Llama-3.1-Tulu-3-8B/snapshots/666943798adbde0b1aff34626007e26986a3c107",
+  "gb": 16.1,
+  "wall_s": 26.2,
+  "weights": true
+ },
+ "allenai/Llama-3.1-Tulu-3.1-8B": {
+  "status": "OK",
+  "revision": "46239c2d07db76b412e1f1b0b4542f65b81fe01f",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Llama-3.1-Tulu-3.1-8B/snapshots/46239c2d07db76b412e1f1b0b4542f65b81fe01f",
+  "gb": 16.1,
+  "wall_s": 25.5,
+  "weights": true
+ },
+ "ibm-granite/granite-3.2-8b-instruct": {
+  "status": "OK",
+  "revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-3.2-8b-instruct/snapshots/610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "gb": 16.3,
+  "wall_s": 24.2,
+  "weights": true
+ },
+ "ibm-granite/granite-3.3-8b-instruct": {
+  "status": "OK",
+  "revision": "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-3.3-8b-instruct/snapshots/51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+  "gb": 16.3,
+  "wall_s": 22.0,
+  "weights": true
+ },
+ "Qwen/Qwen3-8B": {
+  "status": "OK",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "gb": 16.4,
+  "wall_s": 23.9,
+  "weights": true
+ },
+ "ibm-granite/granite-4.1-8b": {
+  "status": "OK",
+  "revision": "1504002f650e656a0a3789d99574df12e3e94ed0",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.1-8b/snapshots/1504002f650e656a0a3789d99574df12e3e94ed0",
+  "gb": 17.6,
+  "wall_s": 23.6,
+  "weights": true
+ },
+ "ibm-granite/granite-4.2-8b": {
+  "status": "OK",
+  "revision": "f8de16cdcdbc6c779ca517604e050d82cc119e44",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--ibm-granite--granite-4.2-8b/snapshots/f8de16cdcdbc6c779ca517604e050d82cc119e44",
+  "gb": 17.6,
+  "wall_s": 23.7,
+  "weights": true
+ },
+ "utter-project/EuroLLM-9B-Instruct": {
+  "status": "OK",
+  "revision": "f7ae2bc3bcbb538c0b93fa6cfbf388d9898b1ace",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--utter-project--EuroLLM-9B-Instruct/snapshots/f7ae2bc3bcbb538c0b93fa6cfbf388d9898b1ace",
+  "gb": 18.3,
+  "wall_s": 27.9,
+  "weights": true
+ },
+ "utter-project/EuroLLM-9B-Instruct-2512": {
+  "status": "OK",
+  "revision": "def82454026b0353f12e48a0de081a9ed380d91e",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--utter-project--EuroLLM-9B-Instruct-2512/snapshots/def82454026b0353f12e48a0de081a9ed380d91e",
+  "gb": 18.3,
+  "wall_s": 22.3,
+  "weights": true
+ },
+ "Qwen/Qwen3.5-9B": {
+  "status": "OK",
+  "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "gb": 19.3,
+  "wall_s": 26.7,
+  "weights": true
+ },
+ "google/gemma-4-12B-it": {
+  "status": "OK",
+  "revision": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-4-12B-it/snapshots/707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+  "gb": 24.0,
+  "wall_s": 51.0,
+  "weights": true
+ },
+ "google/gemma-3-12b-it": {
+  "status": "OK",
+  "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--google--gemma-3-12b-it/snapshots/96b6f1eccf38110c56df3a15bffe176da04bfd80",
+  "gb": 24.4,
+  "wall_s": 31.9,
+  "weights": true
+ },
+ "allenai/OLMo-2-1124-13B-Instruct": {
+  "status": "OK",
+  "revision": "3a5c85baefbb1896a54d56fe2e76c0395627ddf4",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--OLMo-2-1124-13B-Instruct/snapshots/3a5c85baefbb1896a54d56fe2e76c0395627ddf4",
+  "gb": 27.4,
+  "wall_s": 0.4,
+  "weights": true
+ },
+ "microsoft/phi-4": {
+  "status": "OK",
+  "revision": "2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--microsoft--phi-4/snapshots/2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+  "gb": 29.3,
+  "wall_s": 40.3,
+  "weights": true
+ },
+ "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+  "status": "OK",
+  "revision": "fa3a10b9c6ad02f42c81e1d68dcf6967afb230ef",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--nvidia--Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct/snapshots/fa3a10b9c6ad02f42c81e1d68dcf6967afb230ef",
+  "gb": 32.2,
+  "wall_s": 21.9,
+  "weights": true
+ },
+ "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+  "status": "OK",
+  "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Ministral-3-8B-Instruct-2512-BF16/snapshots/f6fae9795746f63c9be8344932f01275f3c63734",
+  "gb": 17.9,
+  "wall_s": 23.2,
+  "weights": true
+ },
+ "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+  "status": "OK",
+  "revision": "3cea74c1ebaf5ce5f5a2553de470e2ceab825142",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Ministral-3-14B-Instruct-2512-BF16/snapshots/3cea74c1ebaf5ce5f5a2553de470e2ceab825142",
+  "gb": 27.9,
+  "wall_s": 80.2,
+  "weights": true
+ },
+ "Qwen/Qwen3-30B-A3B": {
+  "status": "OK",
+  "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-30B-A3B/snapshots/ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+  "gb": 61.1,
+  "wall_s": 89.3,
+  "weights": true
+ },
+ "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+  "status": "OK",
+  "revision": "0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--Qwen--Qwen3-30B-A3B-Instruct-2507/snapshots/0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+  "gb": 61.1,
+  "wall_s": 73.9,
+  "weights": true
+ },
+ "allenai/Olmo-3.1-32B-Instruct": {
+  "status": "OK",
+  "revision": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--allenai--Olmo-3.1-32B-Instruct/snapshots/ac0587e4a7744a551c059d8cd17ba220bc940dae",
+  "gb": 64.5,
+  "wall_s": 72.7,
+  "weights": true
+ },
+ "mistralai/Mistral-Small-24B-Instruct-2501": {
+  "status": "OK",
+  "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Mistral-Small-24B-Instruct-2501/snapshots/9527884be6e5616bdd54de542f9ae13384489724",
+  "gb": 47.2,
+  "wall_s": 53.9,
+  "weights": true
+ },
+ "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+  "status": "OK",
+  "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Mistral-Small-3.1-24B-Instruct-2503/snapshots/68faf511d618ef198fef186659617cfd2eb8e33a",
+  "gb": 48.1,
+  "wall_s": 55.9,
+  "weights": true
+ },
+ "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
+  "status": "OK",
+  "revision": "95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+  "path": "/scratch/11280/zimuq1/hf-cache/hub/models--mistralai--Mistral-Small-3.2-24B-Instruct-2506/snapshots/95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+  "gb": 0.0,
+  "wall_s": 1.1,
+  "weights": false
+ }
+}

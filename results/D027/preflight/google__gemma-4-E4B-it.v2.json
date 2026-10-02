@@ -1,0 +1,76 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "GemmaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Gemma4ForConditionalGeneration",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 1.0,
+   "top_k": 64,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    1,
+    106,
+    50
+   ]
+  }
+ },
+ "load_s": 23.6,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<bos><|turn>user\nHello<turn|>\n<|turn>model\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<channel|>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "As a sustainability consultant for medium-sized companies, I'm happy to provide you with a structured, practical approach to reducing your carbon footprint across all operational areas.\n\nReducing your carbon footprint isn't just about going \"green\"; it's about **operational efficiency, cost savings, and risk management.** For a medium-sized company, the key is to start small, measure everything, and scale up successful changes.\n\nHere is a step-by-step framework, broken down by operational area, with actionable steps you can implement immediately.\n\n---\n\n## \ud83c\udf3f The 5-Step Framework for Carbon Redu"
+ },
+ "padding_sanity": {
+  "config": 12,
+  "forced_greedy": false,
+  "batched_s": 12.81,
+  "single_s": 79.88,
+  "exact": 1,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "**(Clears throat, a slight, warm intake of breath. The voice settles into a smooth, professional, yet approachable tone\u2014like a seasoned narrator who is comfortable with the material but maintains a certain gravitas.)**\n\n**(Pacing is measured, deliberate. Each word is given its proper weight, ensurin",
+   "single": "**(Clears throat, a slight, warm intake of breath. The voice settles into a smooth, professional, yet approachable tone\u2014like a seasoned narrator who is comfortable with the material but maintains a certain gravitas.)**\n\n**(Pacing is measured, deliberate. Each word is given its proper weight, ensurin"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 14.13,
+  "gen_per_s": 4.529
+ },
+ "peak_mem_gb": 23.26,
+ "wall_s": 160.4
+}

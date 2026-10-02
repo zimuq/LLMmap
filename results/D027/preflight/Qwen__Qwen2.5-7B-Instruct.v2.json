@@ -1,0 +1,74 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen2ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.7,
+   "top_k": 20,
+   "top_p": 0.8,
+   "repetition_penalty": 1.05,
+   "eos_token_id": [
+    151645,
+    151643
+   ]
+  }
+ },
+ "load_s": 21.0,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm here to help with your tech-related queries and issues! However, I believe you might have provided some context that doesn't directly relate to a technical problem. To answer your question accurately: I am a virtual assistant created by Anthropic to be helpful, harmless, and honest. I don't have specific information about who initially developed the underlying technology that powers me, but I can assist you with any technical questions or issues you might have!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 6.25,
+  "single_s": 17.25,
+  "exact": 7,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am Qwen, created by Alibaba Cloud. If you have any questions or need information on specific topics, feel free to ask!",
+   "single": "I am Qwen, created by Alibaba Cloud. If you have any questions or need information on specific topics, feel free to ask!"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 9.31,
+  "gen_per_s": 6.876
+ },
+ "peak_mem_gb": 22.98,
+ "wall_s": 71.5
+}

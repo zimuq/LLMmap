@@ -1,0 +1,71 @@
+{
+ "model": "utter-project/EuroLLM-9B-Instruct-2512",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "def82454026b0353f12e48a0de081a9ed380d91e",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "LlamaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 4
+  }
+ },
+ "load_s": 24.7,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am **EuroLLM**, a multilingual large language model developed by a consortium of leading European research institutions and companies, including:  \n\n- **Unbabel**  \n- **Instituto Superior T\u00e9cnico**  \n- **University of Edinburgh**  \n- **Instituto de Telecomunica\u00e7\u00f5es**  \n- **Universit\u00e9 Paris-Saclay**  \n- **Aveni**  \n- **Sorbonne University**  \n- **Naver Labs Europe**  \n- **University of Amsterdam**  \n\nThis project was made possible with support from **Horizon Europe**, the **European Research Council (ERC)**, and **EuroHPC**, and was trained on the **MareNostrum 5** supercomputer.  \n\nWould you"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 9.18,
+  "single_s": 51.68,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "The query about Captain Henry Every and the Mughal convoy is unrelated to the creation of **EuroLLM**. EuroLLM was developed by a consortium of European institutions (Unbabel, Instituto Superior T\u00e9cnico, University of Edinburgh, and others) with support from **Horizon Europe** and the **EuroHPC** pr",
+   "single": "The query about Captain Henry Every and the Mughal convoy is unrelated to the creation of **EuroLLM**. EuroLLM was developed by a consortium of European institutions (Unbabel, Instituto Superior T\u00e9cnico, University of Edinburgh, and others) with support from **Horizon Europe** and the **EuroHPC** pr"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 17.61,
+  "gen_per_s": 3.633
+ },
+ "peak_mem_gb": 30.58,
+ "wall_s": 130.5
+}

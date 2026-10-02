@@ -1,0 +1,14 @@
+{
+ "model": "Deci/DeciLM-7B-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "4adc7aa9efe61b47b0a98b2cc94527d9c45c3b4f",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": "cannot load (needs remote code)",
+ "error": "Traceback (most recent call last):\n  File \"/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d027_preflight.py\", line 84, in one\n    llm = LLMv2(m, sp[\"revision\"], trust_remote_code=sp[\"trust\"], tokenizer_kwargs=sp[\"tok_kw\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d027_llm.py\", line 129, in __init__\n    self.model = AutoModelForCausalLM.from_pretrained(llm_name, **mk)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py\", line 385, in from_pretrained\n    model_class = get_class_from_dynamic_module(\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/dynamic_module_utils.py\", line 622, in get_class_from_dynamic_module\n    return get_class_in_module(class_name, final_module, force_reload=force_download)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/dynamic_module_utils.py\", line 309, in get_class_in_module\n    module_spec.loader.exec_module(module)\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/scratch/11280/zimuq1/hf-cache/modules/transformers_modules/Deci/DeciLM_hyphen_7B_hyphen_instruct/4adc7aa9efe61b47b0a98b2cc94527d9c45c3b4f/modeling_decilm.py\", line 19, in <module>\n    from .transformers_v4_35_2__modeling_llama import LlamaMLP, LlamaRMSNorm, LlamaAttention, apply_rotary_pos_emb, \\\n  File \"/scratch/11280/zimuq1/hf-cache/modules/transformers_modules/Deci/DeciLM_hyphen_7B_hyphen_instruct/4adc7aa9efe61b47b0a98b2cc94527d9c45c3b4f/transformers_v4_35_2__modeling_llama.py\", line 43, in <module>\n    from transformers.utils.import_utils import is_torch_fx_available\nImportError: cannot import name 'is_torch_fx_available' from 'transformers.utils.import_utils' (/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/utils/import_utils.py)\n",
+ "load_s": 0.3
+}

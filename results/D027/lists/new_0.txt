@@ -1,0 +1,13 @@
+allenai/Olmo-3.1-32B-Instruct
+mistralai/Ministral-3-14B-Instruct-2512-BF16
+google/gemma-3-12b-it
+utter-project/EuroLLM-9B-Instruct-2512
+Qwen/Qwen3-8B
+allenai/Llama-3.1-Tulu-3.1-8B
+allenai/Olmo-3-7B-Instruct
+Qwen/Qwen3-4B-Instruct-2507
+mistralai/Ministral-3-3B-Instruct-2512-BF16
+CohereLabs/tiny-aya-water
+HuggingFaceTB/SmolLM2-1.7B-Instruct-16k
+allenai/OLMo-2-0425-1B-Instruct
+mistralai/Mistral-Small-3.2-24B-Instruct-2506

@@ -1,0 +1,14 @@
+{
+ "model": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "95a6d26c4bfb886c58daf9d3f7332c857cb27b43",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": "cannot load (needs remote code)",
+ "error": "Traceback (most recent call last):\n  File \"/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d027_preflight.py\", line 84, in one\n    llm = LLMv2(m, sp[\"revision\"], trust_remote_code=sp[\"trust\"], tokenizer_kwargs=sp[\"tok_kw\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d027_llm.py\", line 106, in __init__\n    self.tokenizer = AutoTokenizer.from_pretrained(llm_name, **tk)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py\", line 990, in from_pretrained\n    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/tokenization_utils_base.py\", line 1739, in from_pretrained\n    return cls._from_pretrained(\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/tokenization_utils_base.py\", line 1933, in _from_pretrained\n    tokenizer = cls(*init_inputs, **init_kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/11280/zimuq1/vista/envs/llmmap-gpu-v2/lib/python3.11/site-packages/transformers/tokenization_utils_tokenizers.py\", line 412, in __init__\n    raise ValueError(\nValueError: Couldn't instantiate the backend tokenizer from one of: \n(1) a `tokenizers` library serialization file, \n(2) a slow tokenizer instance to convert or \n(3) an equivalent slow tokenizer class to instantiate and convert. \nYou need to have sentencepiece or tiktoken installed to convert a slow tokenizer to a fast one.\n",
+ "load_s": 0.1
+}

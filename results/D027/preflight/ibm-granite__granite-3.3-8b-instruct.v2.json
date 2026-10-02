@@ -1,0 +1,73 @@
+{
+ "model": "ibm-granite/granite-3.3-8b-instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 0
+  }
+ },
+ "load_s": 22.4,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": true,
+ "rendered_example": "<|start_of_role|>system<|end_of_role|>Knowledge Cutoff Date: April 2024.\nToday's Date: September 06, 2026.\nYou are Granite, developed by IBM. You are a helpful AI assistant.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Hello<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+ "date_frozen_ok": true,
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<think>",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I'm an artificial intelligence designed and developed by IBM, specifically the model known as Watson. My creation involved a team of researchers, engineers, and data scientists. For more detailed information, you can refer to IBM's official publications and press releases.<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_tex"
+ },
+ "padding_sanity": {
+  "config": 0,
+  "forced_greedy": false,
+  "batched_s": 8.97,
+  "single_s": 35.46,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm an artificial intelligence designed and developed by IBM, specifically the model known as Watson. My creation involved a team of researchers, engineers, and data scientists. For more detailed information, you can refer to IBM's official publications and press releases.",
+   "single": "I'm an artificial intelligence designed and developed by IBM, specifically the model known as Watson. My creation involved a team of researchers, engineers, and data scientists. For more detailed information, you can refer to IBM's official publications and press releases."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 22.99,
+  "gen_per_s": 2.783
+ },
+ "peak_mem_gb": 34.27,
+ "wall_s": 115.8
+}

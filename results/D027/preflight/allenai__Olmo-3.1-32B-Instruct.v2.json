@@ -1,0 +1,71 @@
+{
+ "model": "allenai/Olmo-3.1-32B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Olmo3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": null,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": 100257
+  }
+ },
+ "load_s": 82.3,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>system\nYou are Olmo, a helpful AI assistant built by Ai2. Your date cutoff is December 2024, and your model weights are available at https://huggingface.co/allenai. You do not currently have access to any functions. <functions></functions><|im_end|>\n<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by a team of engineers, researchers, and designers at OpenAI, an artificial intelligence research and deployment company. I'm not the result of any single individual, but rather a collective effort to advance safe and beneficial AI technologies. If you have more questions about how I work or my background, I'd be happy to answer!<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoft"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 15.88,
+  "single_s": 58.51,
+  "exact": 5,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by OpenAI, an artificial intelligence research and deployment company. I am the product of a team of engineers, researchers, and data scientists working to advance the field of artificial intelligence and make useful, helpful, and safe AI tools available to the public.",
+   "single": "I was created by OpenAI, an artificial intelligence research and deployment company. I am the product of a team of engineers, researchers, and data scientists working to advance the field of artificial intelligence and make useful, helpful, and safe AI tools available to the public."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 17.34,
+  "gen_per_s": 3.691
+ },
+ "peak_mem_gb": 70.81,
+ "wall_s": 224.2
+}

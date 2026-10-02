@@ -1,0 +1,70 @@
+{
+ "model": "Deci/DeciLM-7B-instruct",
+ "env_tag": "old",
+ "v1": true,
+ "revision": "4adc7aa9efe61b47b0a98b2cc94527d9c45c3b4f",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "4.51.3",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "LlamaTokenizerFast",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "DeciLMForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": "4adc7aa9efe61b47b0a98b2cc94527d9c45c3b4f",
+  "generation_config": {
+   "max_length": 20,
+   "do_sample": false,
+   "temperature": 1.0,
+   "top_k": 50,
+   "top_p": 1.0,
+   "repetition_penalty": 1.0,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 24.9,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "### User:\nHello\n### Assistant:\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "1. What is the nucleotide sequence of a gene's DNA?\nAnswer: The nucleotide sequence of a gene's DNA specifies the amino acid sequence of a protein through the genetic code.\n\n2. What is the genetic code?\nAnswer: The genetic code is a set of rules that specifies the relationship between nucleotide triplets (codons) and amino acids.\n\n3. How many possible codons are there?\nAnswer: There are 64 possible codons.\n\n4. How many standard amino acids are there?\nAnswer: There are 20 standard amino acids.\n\n5. Is the genetic code redundant?\nAnswer: Yes, the genetic code is redundant, meaning multiple codons"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 7.17,
+  "single_s": 19.5,
+  "exact": 5,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am an AI language model created by the FudanNLP Lab in the School of Computer Science at Fudan University in Shanghai, China. The FudanNLP Lab is part of the School of Computer Science and is dedicated to research in natural language processing and artificial intelligence.",
+   "single": "I am an AI language model created by the FudanNLP Lab in the School of Computer Science at Fudan University in Shanghai, China. The FudanNLP Lab is part of the School of Computer Science and is dedicated to research in natural language processing and artificial intelligence."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 12.1,
+  "gen_per_s": 5.291
+ },
+ "peak_mem_gb": 18.37,
+ "wall_s": 86.5
+}

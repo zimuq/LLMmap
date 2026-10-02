@@ -1,0 +1,71 @@
+{
+ "model": "CohereForAI/aya-23-8B",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "CohereTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "CohereForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 255001
+  }
+ },
+ "load_s": 10.6,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|USER_TOKEN|>Hello<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by Cohere, a leading developer of large language models. The company was founded in 2019 by Aidan Gomez, Nick Frosst, and Ivan Zhang, and it has since grown to become a trusted partner to businesses and organizations around the world, providing them with cutting-edge language AI technologies.<|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|><|END_OF_TURN_TOKEN|"
+ },
+ "padding_sanity": {
+  "config": 9,
+  "forced_greedy": false,
+  "batched_s": 4.42,
+  "single_s": 15.12,
+  "exact": 7,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Cohere, a company that specializes in building large language models that can assist users with a wide range of tasks. I am an AI-assistant chatbot designed to help and provide thorough responses to your queries. I am always learning and evolving, and I strive to be as helpful and a",
+   "single": "I was created by Cohere, a company that specializes in building large language models that can assist users with a wide range of tasks. I am an AI-assistant chatbot designed to help and provide thorough responses to your queries. I am always learning and evolving, and I strive to be as helpful and a"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 16.85,
+  "gen_per_s": 3.798
+ },
+ "peak_mem_gb": 30.44,
+ "wall_s": 57.2
+}

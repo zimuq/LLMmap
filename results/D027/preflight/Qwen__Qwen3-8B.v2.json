@@ -1,0 +1,75 @@
+{
+ "model": "Qwen/Qwen3-8B",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.6,
+   "top_k": 20,
+   "top_p": 0.95,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    151645,
+    151643
+   ]
+  }
+ },
+ "load_s": 23.9,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+ "prompt_has_empty_think_block": true,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<think>",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by Alibaba Cloud, and I am part of the Qwen series of large language models. I am designed to provide assistance in various tasks, including answering questions, creating content, and engaging in conversations. If you have any questions or need help with something specific, feel free to ask!<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 8.74,
+  "single_s": 23.79,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Alibaba Cloud, and I am part of the Qwen series of large language models. My development is led by the Tongyi Lab, which is a research institution under Alibaba Group.",
+   "single": "I was created by Alibaba Cloud, and I am a large-scale language model called Qwen. I was developed by the Tongyi Lab, which is part of Alibaba Group."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 8.89,
+  "gen_per_s": 7.202
+ },
+ "peak_mem_gb": 19.74,
+ "wall_s": 88.2
+}

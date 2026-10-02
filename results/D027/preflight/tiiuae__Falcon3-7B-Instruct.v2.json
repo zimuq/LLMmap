@@ -1,0 +1,71 @@
+{
+ "model": "tiiuae/Falcon3-7B-Instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "1e57a0ecd176c7c139f289c60a74e57f887c3dfb",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 11
+  }
+ },
+ "load_s": 25.0,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by the Technology Innovation Institute (TII), a research organization focused on advancing AI and other technologies. TII is committed to fostering innovation and collaboration to solve major global challenges.\"<|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 5.46,
+  "single_s": 33.76,
+  "exact": 4,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "The query provided is a mix of unrelated topics, making it challenging to create a coherent set of sub-questions. However, I'll attempt to extract meaningful sub-questions from the context provided and answer them individually.\n\n1. **Who created the Arthur Ravenel Jr. Bridge?**\n   - The Arthur Raven",
+   "single": "The query provided is a mix of unrelated topics, making it challenging to create a coherent set of sub-questions. However, I'll attempt to extract meaningful information from the given context and provide answers to hypothetical sub-questions.\n\n### Sub-questions and Answers:\n\n1. **Who created the Ar"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 9.01,
+  "gen_per_s": 7.103
+ },
+ "peak_mem_gb": 25.49,
+ "wall_s": 86.8
+}

@@ -1,0 +1,74 @@
+{
+ "model": "microsoft/Phi-4-mini-instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Phi3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    200020,
+    199999
+   ]
+  }
+ },
+ "load_s": 11.8,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>Hello<|end|><|assistant|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am Phi, created by Microsoft. I'm here to assist you with pet care advice, product recommendations, and health tips for your furry friends. How can I help you today?<|end|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftext|><|endoftex"
+ },
+ "padding_sanity": {
+  "config": 8,
+  "forced_greedy": false,
+  "batched_s": 1.98,
+  "single_s": 10.59,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am Phi, created by Microsoft.",
+   "single": "I am Phi, created by Microsoft."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 5.88,
+  "gen_per_s": 10.881
+ },
+ "peak_mem_gb": 10.4,
+ "wall_s": 44.3
+}

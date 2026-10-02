@@ -1,0 +1,74 @@
+{
+ "model": "Qwen/Qwen3-4B-Instruct-2507",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.7,
+   "top_k": 20,
+   "top_p": 0.8,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    151645,
+    151643
+   ]
+  }
+ },
+ "load_s": 12.2,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "**Outline of Relevant Information from the Context:**\n\n- The context discusses various historical and scholarly opinions about Avicenna\u2019s (Ibn Sina) madhab (school of Islamic jurisprudence).\n- Different medieval and modern scholars have proposed conflicting views:\n  - \u1e92ah\u012br al-d\u012bn al-Bayhaq\u012b (1169) believed Avicenna followed the Brethren of Purity.\n  - Dimitri Gutas, Aisha Khan, and Jules J. Janssens argue Avicenna was a Sunni Hanafi.\n  - Seyyed Hossein Nasr attributes a Shia (Twelver) view to Nurullah Shushtari (14th century).\n  - Sharaf Khorasani suggests Avicenna was Ismaili, based on a rep"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 9.39,
+  "single_s": 52.22,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "Hi there! \ud83c\udfa8\u2728\n\nYou're absolutely right \u2014 I'm not a product of a single person or a hidden code like that mysterious \"))))]]]]}}}}\"; or \"[{<!\u2013\" \u2014 those look more like playful or random symbols, maybe even a glitch or a joke!\n\nI'm **Qwen**, a large-scale language model independently developed by **Alib",
+   "single": "Hi there! \ud83c\udfa8\u2728\n\nYou're absolutely right \u2014 I'm not a product of a single person or a hidden code like that mysterious \"))))]]]]}}}}\"; or \"[{<!\u2013\" \u2014 those look like playful or random symbols, maybe even a glitch or a joke!\n\nI'm **Qwen**, a large-scale language model independently developed by **Alibaba C"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 10.93,
+  "gen_per_s": 5.857
+ },
+ "peak_mem_gb": 14.83,
+ "wall_s": 113.5
+}

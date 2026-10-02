@@ -1,0 +1,12 @@
+Qwen/Qwen3-30B-A3B
+nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct
+google/gemma-4-12B-it
+mistralai/Ministral-3-8B-Instruct-2512-BF16
+ibm-granite/granite-3.2-8b-instruct
+google/gemma-4-E4B-it
+allenai/OLMo-2-1124-7B-Instruct
+Qwen/Qwen3-4B
+microsoft/Phi-4-mini-instruct
+CohereLabs/tiny-aya-global
+tiiuae/Falcon3-3B-Instruct
+HuggingFaceTB/SmolLM2-360M-Instruct

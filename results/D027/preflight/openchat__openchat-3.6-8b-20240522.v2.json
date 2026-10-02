@@ -1,0 +1,71 @@
+{
+ "model": "openchat/openchat-3.6-8b-20240522",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "2264eb98558978f708e88ae52afb78e43b832801",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 128001
+  }
+ },
+ "load_s": 23.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|begin_of_text|><|start_header_id|>GPT4 Correct User<|end_header_id|>\n\nHello<|eot_id|><|start_header_id|>GPT4 Correct Assistant<|end_header_id|>\n\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "As a language model AI, I do not have a specific creator. I am developed by a team of researchers and engineers at OpenAI, an artificial intelligence research organization. OpenAI's mission is to ensure that artificial general intelligence (AGI) benefits all of humanity. They develop and release AI tools and research to advance AI capabilities and promote the use of AI for the benefit of humanity.<|eot_id|><|eot_id|><|eot_id|>4<|eot_id|><|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot_id|>4<|eot"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 6.48,
+  "single_s": 44.86,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am an artificial intelligence language model created by OpenAI. My purpose is to assist users with various tasks, such as answering questions, providing information, and simulating the role of an administrative assistant.:",
+   "single": "I am an artificial intelligence language model created by OpenAI. My purpose is to assist users with various tasks, such as answering questions, providing information, and simulating the role of an administrative assistant.:"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 15.65,
+  "gen_per_s": 4.089
+ },
+ "peak_mem_gb": 29.34,
+ "wall_s": 111.7
+}

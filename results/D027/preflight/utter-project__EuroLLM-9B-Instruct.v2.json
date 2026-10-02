@@ -1,0 +1,71 @@
+{
+ "model": "utter-project/EuroLLM-9B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "f7ae2bc3bcbb538c0b93fa6cfbf388d9898b1ace",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "LlamaTokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "LlamaForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 4
+  }
+ },
+ "load_s": 22.6,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am a helpful chatbot working for aircanada.com. I assist customers with organizing their travels, managing their bookings, and providing information on flight schedules, baggage policies, and loyalty programs. I am here to help you with any questions or concerns you may have about your travel plans. If you need assistance, please don't hesitate to ask.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im"
+ },
+ "padding_sanity": {
+  "config": 3,
+  "forced_greedy": false,
+  "batched_s": 6.03,
+  "single_s": 26.41,
+  "exact": 2,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am StartupGPT, an AI expert in the world of entrepreneurship. I was created by a team of developers and researchers who specialize in the field of artificial intelligence and its applications in the startup ecosystem. The team includes experts in programming, software engineering, and business str",
+   "single": "I am StartupGPT, an AI expert in the world of entrepreneurship. I was created by a team of developers and researchers who specialize in the field of artificial intelligence and its applications in the startup ecosystem. The team includes experts in programming, software engineering, and business str"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 11.72,
+  "gen_per_s": 5.462
+ },
+ "peak_mem_gb": 25.24,
+ "wall_s": 87.6
+}

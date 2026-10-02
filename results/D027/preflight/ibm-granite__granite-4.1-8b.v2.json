@@ -1,0 +1,71 @@
+{
+ "model": "ibm-granite/granite-4.1-8b",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "1504002f650e656a0a3789d99574df12e3e94ed0",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "GraniteForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 100257
+  }
+ },
+ "load_s": 22.7,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|start_of_role|>user<|end_of_role|>Hello<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am Granite, a large language model developed by IBM (International Business Machines Corporation). My purpose is to provide helpful, accurate, and safe responses to a wide range of inquiries while adhering to IBM's principles of transparency, fairness, and security. How may I assist you today regarding your travel plans or any other topic?<|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|end_of_text|><|"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 7.66,
+  "single_s": 31.98,
+  "exact": 5,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am Granite, a large language model developed by IBM (International Business Machines Corporation). My purpose is to provide helpful, accurate, and safe information across a wide range of topics, including pet care advice, product recommendations, and health tips for pets, while adhering to IBM's p",
+   "single": "I am Granite, a large language model developed by IBM (International Business Machines Corporation). My purpose is to provide helpful, accurate, and safe information across a wide range of topics, including pet care advice, product recommendations, and health tips for pets, while adhering to IBM's p"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 8.74,
+  "gen_per_s": 7.32
+ },
+ "peak_mem_gb": 20.22,
+ "wall_s": 96.5
+}

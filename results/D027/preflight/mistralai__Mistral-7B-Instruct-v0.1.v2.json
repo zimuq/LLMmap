@@ -1,0 +1,71 @@
+{
+ "model": "mistralai/Mistral-7B-Instruct-v0.1",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "ec5deb64f2c6e6fa90c1abf74a91d5c93a9669ca",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "MistralForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 19.5,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<s> [INST] Hello [/INST]",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Sub-Questions:\n\n1. Who founded the Aerial Experiment Association (AEA)?\n2. What was Bell's role in the formation of the AEA?\n3. Who were the founding members of the AEA?\n4. What were the initial goals of the AEA?\n5. Who was Glenn H. Curtiss and what was his contribution to the AEA?\n6. Who was Lieutenant Thomas Selfridge and what was his role in the AEA?\n7. Who was Frederick W. Baldwin and what was his contribution to the AEA?\n8. Who was J.A.D. McCurdy and what was his contribution to the AEA?\n\nAnswers:\n\n1. The Aerial Experiment Association (AEA) was founded by Alexander Graham Bell.\n2. Bell wa"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 2.48,
+  "single_s": 8.39,
+  "exact": 8,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am a social media management bot created by the Mistral AI team.",
+   "single": "I am a social media management bot created by the Mistral AI team."
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 12.68,
+  "gen_per_s": 5.046
+ },
+ "peak_mem_gb": 24.45,
+ "wall_s": 58.1
+}

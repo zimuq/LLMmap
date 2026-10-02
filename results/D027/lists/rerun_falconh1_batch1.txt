@@ -1,0 +1,2 @@
+tiiuae/Falcon-H1-3B-Instruct
+tiiuae/Falcon-H1-7B-Instruct

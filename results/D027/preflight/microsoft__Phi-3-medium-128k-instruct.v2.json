@@ -1,0 +1,77 @@
+{
+ "model": "microsoft/Phi-3-medium-128k-instruct",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "a088b37c71d441ab6d862bb3fcfe6165b3014702",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [
+   "config: rope_scaling.original_max_position_embeddings=4096 (copied from top level)"
+  ],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Phi3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    32000,
+    32001,
+    32007
+   ]
+  }
+ },
+ "load_s": 33.5,
+ "revision_mismatch": null,
+ "supports_system_role": false,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|user|>\nHello<|end|>\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Hello! I'm glad to assist you with your administrative needs.\n\nTo handle calendar conflicts, I would review your schedule and identify any overlapping appointments. Once I've found the conflicts, I'd suggest alternative times or days for the meetings, prioritizing based on urgency and importance.\n\nFor drafting emails, I would compose professional and clear messages, ensuring they convey the intended message while maintaining a courteous tone. I would also proofread the emails before sending them to ensure they are free of errors.\n\nWhen taking meeting notes, I would capture the key points, acti"
+ },
+ "padding_sanity": {
+  "config": 4,
+  "forced_greedy": false,
+  "batched_s": 7.0,
+  "single_s": 48.48,
+  "exact": 0,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "As a first-time founder mentor specializing in marketplace startups, I'd be happy to share some hard-won lessons and lean methodology advice. Here are some key points to consider:\n\n1. Validate your idea: Before diving headfirst into building your marketplace, make sure there's a genuine need for it.",
+   "single": "As a first-time founder mentor specializing in marketplace startups, I'd like to share some hard-won lessons and lean methodology advice that can help you navigate the challenging yet rewarding journey of building a successful marketplace startup.\n\n1. Validate your idea: Before diving headfirst into"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 15.34,
+  "gen_per_s": 4.173
+ },
+ "peak_mem_gb": 37.52,
+ "wall_s": 128.5
+}

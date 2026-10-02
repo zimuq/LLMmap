@@ -1,0 +1,71 @@
+{
+ "model": "mistralai/Mistral-7B-Instruct-v0.3",
+ "env_tag": "v2",
+ "v1": true,
+ "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "MistralForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 2
+  }
+ },
+ "load_s": 20.0,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<s>[INST] Hello[/INST]",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I was created by Mistral AI.</s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s></s>"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 6.13,
+  "single_s": 42.42,
+  "exact": 1,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Mistral AI, a leading AI company based in Paris, France.\n\nAs for your original question, I'd be happy to help you with wine and cheese pairings for your events! Here are some suggestions based on crowd size, season, and dietary restrictions:\n\n1. Small Gatherings:\n   - Wine: Pinot No",
+   "single": "I was created by Mistral AI, a leading AI company based in Paris, France.\n\nAs for your original question, I'd be happy to help you with wine and cheese pairings for your events! Here are some suggestions based on crowd size, season, and dietary restrictions:\n\n1. Small Gatherings:\n   - Wine: Pinot No"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 12.63,
+  "gen_per_s": 5.069
+ },
+ "peak_mem_gb": 24.38,
+ "wall_s": 99.7
+}

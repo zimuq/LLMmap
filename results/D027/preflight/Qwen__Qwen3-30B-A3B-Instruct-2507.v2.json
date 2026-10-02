@@ -1,0 +1,74 @@
+{
+ "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen3MoeForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": true,
+   "temperature": 0.7,
+   "top_k": 20,
+   "top_p": 0.8,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    151645,
+    151643
+   ]
+  }
+ },
+ "load_s": 250.0,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user\nHello<|im_end|>\n<|im_start|>assistant\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "I am FuturistGPT, a large-scale language model developed by Alibaba Cloud. I was created by the Tongyi Lab under Alibaba Group. My purpose is to assist users in generating text, answering questions, and providing insights across a wide range of topics, including technology, culture, science, and more. I am designed to support creative and analytical tasks with a focus on future-oriented thinking and trend analysis.<|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|im_end|><|"
+ },
+ "padding_sanity": {
+  "config": 1,
+  "forced_greedy": false,
+  "batched_s": 17.79,
+  "single_s": 54.01,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I'm Qwen, a large-scale language model developed by Tongyi Lab. I'm designed to assist with a wide range of tasks, from answering questions to generating text. If you have any questions or need help, feel free to ask!",
+   "single": "I'm Qwen, a large-scale language model developed by Tongyi Lab. I'm designed to assist with a wide range of tasks, from answering questions to generating text. If you have any questions or need help, feel free to ask!"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 135.91,
+  "gen_per_s": 0.471
+ },
+ "peak_mem_gb": 76.64,
+ "wall_s": 521.7
+}

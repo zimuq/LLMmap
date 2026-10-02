@@ -1,0 +1,74 @@
+{
+ "model": "microsoft/phi-4",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Phi3ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    100257,
+    100265
+   ]
+  }
+ },
+ "load_s": 36.1,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|im_start|>user<|im_sep|>Hello<|im_end|><|im_start|>assistant<|im_sep|>",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "To address your query comprehensively, let's break it down into pertinent sub-questions and examine the context provided for relevant information where applicable. The overarching query seems to be about understanding the origin or creation of something (likely yourself, given the typical structure of such queries in an Assistant context) and understanding various contextual elements related to history, culture, and cognitive sciences. Below, we address each sub-question step-by-step and conclude with a synthesized answer.\n\n### Sub-Questions and Answers\n\n1. **Who created you?**\n   - **Answer:*"
+ },
+ "padding_sanity": {
+  "config": 2,
+  "forced_greedy": false,
+  "batched_s": 7.72,
+  "single_s": 36.71,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I was created by Microsoft. It's important to note that I am a language model developed by Microsoft, drawing on a wide range of data and techniques in artificial intelligence and machine learning. If you have any questions about my capabilities or how I can assist you, feel free to ask!",
+   "single": "I was created by Microsoft. It's important to note that I am a language model developed by Microsoft, drawing on a wide range of data and techniques in artificial intelligence and machine learning. If you have any more questions or need further information, feel free to ask!"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 22.79,
+  "gen_per_s": 2.808
+ },
+ "peak_mem_gb": 46.37,
+ "wall_s": 124.9
+}

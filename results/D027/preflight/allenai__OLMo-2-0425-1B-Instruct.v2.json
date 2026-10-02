@@ -1,0 +1,71 @@
+{
+ "model": "allenai/OLMo-2-0425-1B-Instruct",
+ "env_tag": "v2",
+ "v1": false,
+ "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+ "template_kwargs": {
+  "enable_thinking": false,
+  "thinking": false,
+  "strftime_now": "frozen:2026-09-06"
+ },
+ "drop": null,
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Olmo2ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 100257
+  }
+ },
+ "load_s": 4.4,
+ "revision_mismatch": null,
+ "supports_system_role": true,
+ "template_uses_strftime_now": false,
+ "rendered_example": "<|endoftext|><|user|>\nHello\n<|assistant|>\n",
+ "prompt_has_empty_think_block": false,
+ "thinking": {
+  "markers": [
+   "</think>",
+   "<reasoning",
+   "<think",
+   "<|channel>",
+   "<|channel|>",
+   "<|think|>"
+  ],
+  "hits": [],
+  "n_hits": 0,
+  "raw_quote": "Title: The Creation and Marketing of the Macintosh Board\n\nOutline of relevant information:\n\n1. **Early Personal Computer Design by Apple, 1980**\n\n   - The original Macintosh prototype designed by Steve Jobs and Steve Wozniak (often referred to as \"the Bit-manny\" team) was focused on Raskin's specifications.\n     - Macintosh used Motorola 68000 microprocessor at 5 MHz.\n     - Increased speed to 8 MHz with modifications.\n   - Board design by Ron Anderson, specifically engineered for cost-efficiency while retaining key features of the Lisa board.\n   - Hardware improvements: RAM (128 kB @ 64 KB ch"
+ },
+ "padding_sanity": {
+  "config": 12,
+  "forced_greedy": false,
+  "batched_s": 3.83,
+  "single_s": 14.37,
+  "exact": 3,
+  "n": 8,
+  "degenerate_batched_only": 0,
+  "example": {
+   "batched": "I am an AI language model created by OpenAI. My training data includes a vast array of text from the internet, and I can understand and generate human-like text based on that. I don't have a specific creator or origin story, as I am a product of machine learning algorithms. If you have any questions",
+   "single": "I am an AI language model created by OpenAI. I was trained on a vast dataset of text and am designed to understand and generate human-like text. My knowledge is based on the data I was trained on, and I don't have personal creators or origins. If you have any questions about me, feel free to ask!"
+  }
+ },
+ "throughput": {
+  "n": 64,
+  "wall_s": 4.7,
+  "gen_per_s": 13.616
+ },
+ "peak_mem_gb": 12.34,
+ "wall_s": 39.3
+}
