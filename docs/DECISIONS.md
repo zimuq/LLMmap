@@ -1802,7 +1802,36 @@ interpretable; specialist-based two-stage design not pursued
   - D028 default (design-side): reuse corpus_v1 259-query shards for v1
     models with f1 >= 0.99; regenerate gemma-7b/2b/2-9b in v2; keep
     internlm's v1 shard (within-env nondeterminism).
-  Decided by: design-side (closure); human (P' handling, pending).
+  Decided by: design-side (closure); human (P' handling, decided
+  2026-10-03 -- see next entry).
+
+[2026-10-03] D7 revised for the v2 universe; guardrail reporting rule;
+  D028 drafted
+  Decision (human, 2026-10-03, "确认"): in v2, "hard = structural hard +
+  non-structural hard"; improving either has value.
+  - Rule unchanged except scope: paper8 B0' two-logit accuracy on S_val
+    < 0.90, now over ALL pairs (D7 restricted to N because D016 found no
+    unrelated v1 pair below 0.916; D027 shows that fails for recent models).
+  - Strata: H_N = D027's H' (38 pairs; M_N, F_N with N closure), H_X = the
+    19 non-N' pairs (M_X, 17 models, NO family closure -- closure would
+    cover 70/85 models), H_all = 57 pairs. H_X stability bands computed and
+    the file frozen in D028 S0 before any v2 pool data.
+  - Endpoint primacy for method comparisons is set in D029, not now.
+    Guardrail stays all-model mean top-1 non-inferiority, delta = 0.02.
+  Standing rule (human, 2026-10-03): if a method's overall or hard-set gain
+  comes with a guardrail failure, the failure is a headline (R's first
+  lines and the Review's "For you"), never a secondary table.
+  Decision (human, "A"): a 16-probe multilingual extension (2 tasks x 8
+  languages covering tiny-aya's regional emphases), generated for all 85
+  models as a separate extension; the pool and paper8 are entirely English.
+  Design-side calls in D028 (routine): reuse corpus_v1 shards for the 34
+  stable v1 models; regenerate gemma-7b/2b/2-9b in v2; D006 per-config
+  generation procedure (no packing); back-translation check of the probes;
+  v2 tensor via d007 code with a reproduction check on reused pairs; cost
+  Call at 400 node-h; predictions P1 (tiny-aya ammunition-limited) and P2
+  (Ministral-3 not) recorded before data, formalised in D029.
+  Decided by: human (D7 v2 scope, multilingual arm, guardrail rule);
+  design-side (D028 design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
