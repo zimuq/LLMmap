@@ -1832,6 +1832,20 @@ interpretable; specialist-based two-stage design not pursued
   (Ministral-3 not) recorded before data, formalised in D029.
   Decided by: human (D7 v2 scope, multilingual arm, guardrail rule);
   design-side (D028 design).
+
+[2026-10-03] D028/P1 approved with one amendment
+  - S0: hard sets frozen and committed before any other D028 job (H_X: 6
+    stably hard, 13 uncertain); back-translation 16/16 meaning-correct.
+  - Slow trio (Falcon-H1 x2, Qwen3.5-4B): bucketing fails parity
+    (degenerate / 0.195 < 0.457); approved k concurrent batch-1 processes
+    per GPU (identical outputs, ~200 node-h saved). Projection ~200 node-h.
+  - Tensor: an 85-model loader wrapper around D007's pair_worker; frozen
+    statistic S_energy_sf_tok200_v2; reproduction on 561 reused-v1 pairs,
+    max |delta| <= 1e-6 or Call (Issue 22 resolved).
+  - Amendment: gen_mode per model + mode_mixed pair list (padded vs batch-1
+    changes ~54% of greedy outputs; 5 of 57 hard pairs are mixed-mode); D029
+    reports hard-set endpoints with and without them.
+  Decided by: design-side (routine; no invariant touched).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

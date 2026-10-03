@@ -24,15 +24,6 @@
 <!-- TACC appends here. One entry per issue: what's wrong, exactly where
      (file + section), and why the ownership rule blocks a direct fix. -->
 
-**Issue 22 (2026-10-03) — D028 `## D` S3 says "`d007_build_tensor.py`
-unchanged, over 85 models".** That is not possible as written:
-`d007_lib.load_corpus` (its loader) hard-asserts 37 models and reads
-`corpus_v1`'s manifest. D028/P1 Call 2 proposes a loader-only wrapper
-(`experiments/d028_build_tensor.py`) that imports D007's `pair_worker` and
-`SPLIT_SEED` unchanged. Equivalence would be shown by the D's own
-reproduction check (561 reused-v1 pairs). The `## D` wording is design-side's
-to amend.
-
 **Issue 10 (2026-09-05) — the structural cause, and a proposal.
 DEFERRED by the human, 2026-09-05: keep on file, do not action this
 session.** The approach is accepted in principle; the human wants it
@@ -75,6 +66,22 @@ below).
 ---
 
 ## Resolved
+
+**Issue 22 (2026-10-03) — D028 `## D` S3 says "`d007_build_tensor.py`
+unchanged, over 85 models".** That is not possible as written:
+`d007_lib.load_corpus` (its loader) hard-asserts 37 models and reads
+`corpus_v1`'s manifest. D028/P1 Call 2 proposes a loader-only wrapper
+(`experiments/d028_build_tensor.py`) that imports D007's `pair_worker` and
+`SPLIT_SEED` unchanged. Equivalence would be shown by the D's own
+reproduction check (561 reused-v1 pairs). The `## D` wording is design-side's
+to amend.
+
+*Resolved 2026-10-03 (design-side, D028/P1 Review).*
+- Correct: the D's "`d007_build_tensor.py` unchanged" was wrong, since
+  its loader is not universe-agnostic.
+- The loader-only wrapper is approved (Call 2). Equivalence is proven by
+  the reproduction check on the 561 reused-v1 pairs, max |Δ| ≤ 1e-6 on
+  all five tensors; anything above it is a Call.
 
 **Issue 20 (2026-10-01) — D026 `## D`, "The probes" / F3.**
 
