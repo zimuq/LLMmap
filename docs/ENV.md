@@ -251,3 +251,21 @@ them cancelled four healthy jobs. Read `--model` back out of the batch script
 every model's tokenizer/template/quirks before launching N jobs, and a *smoke
 test* on the smallest and largest model before committing a fleet. Both were
 written only after failures they would have prevented.
+
+## Facts measured 2026-10-02/03 (D026/D027)
+
+- **Compute-node egress works.** `gh-dev` job 1041847: HF API 200,
+  33 MB/s single-stream download, PyPI reachable. D027 staged 847 GB on a
+  `gg` node in 21 min. The "compute-node egress untested" note above is
+  superseded.
+- **The login-node per-user thread cap (`ulimit -u` = 100) is mostly used up
+  by an interactive Claude Code session.** The `claude` process alone runs
+  about 60 threads (~500 MB RSS); the measured total with the session was 85.
+  Anything threaded on the login node then panics (hf_xet, conda's libmamba
+  solver). Run downloads, env builds and anything parallel in a `gg`/`gh` job.
+- **An idev session ends at its wall limit** (`gh-dev`: 2 h), and anything
+  running inside it dies with it, including a Claude session started there.
+  `sbatch` is unavailable from inside idev.
+- **conda `defaults` now requires a ToS acceptance** (CondaToSNonInteractiveError).
+  Use `--override-channels -c conda-forge`, or a plain venv over an existing
+  env's python (`envs/llmmap-gpu-v2` was built that way).
