@@ -1514,5 +1514,42 @@ long-input retrieval) separate them better than the 259-query pool?
 
 ---
 
+## D027 — Recent models make LLMmap's own queries fail much more often; the hardest pairs are regional and size siblings
+
+**Question (corpus track):** among 49 recent open models (2024-10 → 2026),
+chosen in advance for near-relative structure, which pairs do LLMmap's 8
+queries fail to separate, and is the enlarged universe harder?
+
+**Answer: HARDER, decisively.**
+- 85-model universe (37 + 48), paper8 under LLMmap's own retrained
+  network, S_val. 34 new hard pairs (< 0.90) over 13 lineages; 18 of the
+  20 stably-hard pairs are new.
+- **LLMmap recognises the new models far less often:** recall 0.64 vs 0.80
+  for the old 37 in the same run. Worst: tiny-aya-water 0.17,
+  tiny-aya-earth 0.26.
+- **The hardest pairs are new kinds of kinship:**
+  - regional fine-tunes of one base (tiny-aya, 0.52–0.57, near chance);
+  - size siblings released together (Ministral-3, 0.63–0.72; OLMo-2);
+  - a fine-tune of a v1 model (granite-3.2 from 3.1, 0.69).
+  - The old record pairs (Falcon3, Phi-3-medium) sit at 0.76.
+- **Context-extension twins are only borderline** (SmolLM2 vs 16k 0.86;
+  Qwen2.5-7B vs 1M 0.90). This is consistent with D026: context capacity is
+  invisible on short prompts.
+- **The hard core is readout-robust.** The linear classifier's 17 hard
+  pairs all lie inside the 38.
+- **New: kinship outside our metadata.** 19 non-structural pairs are also
+  < 0.90 (Tulu-3 ↔ OLMo-2, which share a post-training recipe; Phi-3 ↔
+  Phi-4-mini). In v1, D016 found none below 0.916. "Difficulty =
+  lineage" holds less cleanly on recent models.
+
+**Consequences:**
+- Corpus v2 (D028) is justified.
+- 30/35 regenerated v1 models are byte-identical under the new software,
+  so their v1 shards can be reused. The gemma family drifted and is
+  regenerated.
+- The non-structural hard pairs' handling awaits the human.
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

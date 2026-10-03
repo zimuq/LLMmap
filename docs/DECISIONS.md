@@ -1791,6 +1791,18 @@ interpretable; specialist-based two-stage design not pursued
     changed a v1 prompt). A2 batch-1: Falcon-H1 x2, Qwen3.5-4B.
   - R adds batch1 / mixed_env / tokparity flags next to every H'_new pair.
   Decided by: design-side (routine; no invariant touched).
+
+[2026-10-03] D027 closed -- HARDER; v2 universe frozen at 85
+  - |H'_new| = 34 over 13 lineages; 18 of the 20 stably-hard pairs are new;
+    control passed (Falcon3 0.756, Phi-3-medium 0.760; rho65 0.777).
+  - H' is kept exactly as pre-registered. Open for the human: 19 non-N'
+    pairs < 0.90 (Tulu-3 <-> OLMo-2 x7, OLMo-2 <-> Falcon3-3B x3,
+    Phi-3-medium-4k <-> Phi-4-mini, ...). Recommended: report them as a
+    frozen descriptive set P' in D028, not a widened kinship rule.
+  - D028 default (design-side): reuse corpus_v1 259-query shards for v1
+    models with f1 >= 0.99; regenerate gemma-7b/2b/2-9b in v2; keep
+    internlm's v1 shard (within-env nondeterminism).
+  Decided by: design-side (closure); human (P' handling, pending).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
