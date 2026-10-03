@@ -1479,5 +1479,40 @@ averaging is part of why it works.**
 
 ---
 
+## D026 — The Phi-3-medium twins are separable only with long inputs; short probes match the pool
+
+**Question:** do ~20 probes aimed at what differs between
+Phi-3-medium-128k and -4k (context-length self-knowledge, self-description,
+long-input retrieval) separate them better than the 259-query pool?
+
+**Answer: not with short questions; perfectly with long inputs.**
+- Short probes ≈ pool: about 0.80 two-way on S_test. Primary INCONCLUSIVE
+  (concat Δ −0.04 [−0.20, +0.12]) / NO-GO (meanpool).
+- **Neither twin knows its context length.** Both answer "2048 tokens".
+  What the short probes pick up is style ("As Phi, …" vs "a large language
+  model developed by Microsoft").
+- **Long-input retrieval separates them completely.** A word hidden at the
+  start of a 6k/12k-token message is recovered by the 128k twin 99–100% of
+  the time and **0/500** times by the 4k twin, which answers with a wrong
+  word from the filler. One such probe lifts the classifier from 0.76 to
+  1.00.
+- **The 1k control** is retrieved by both and separates only at the general
+  ≈ 0.80. The extra separation is context-specific.
+- **Mechanism (consistent, not proven).** The twins' architectural
+  differences (a 2,047-token sliding window; a RoPE switch above 4,096) are
+  inert below ~2k tokens, and the longest pool prompt is 1,024 tokens. The
+  pool could never reach the regime where they differ.
+
+**Consequences:**
+- No stage 2 for short probes.
+- The twins stay in the hard set. For the paper: pool-limited at ≈ 0.80–0.90
+  for every short query built; separable only with deployment-dependent
+  ≥ 6k untruncated inputs (conspicuous and costly).
+- Placement (limitations vs a long-input arm) awaits the human.
+- Methodological note: selecting among ~260 candidates on 25 S_val configs
+  per model overfits (S_val 1.00 vs S_test 0.74–0.88).
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->

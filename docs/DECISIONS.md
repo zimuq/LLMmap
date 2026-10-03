@@ -1766,6 +1766,31 @@ interpretable; specialist-based two-stage design not pursued
     mechanisms are inert on the whole pool (max prompt 1,024 tokens).
   Decided by: human (add the 1k control, 2026-10-02); design-side (the
   rest, routine).
+
+[2026-10-02] D026 closed -- short probes add nothing; twins separable only
+  by long inputs
+  - Primary INCONCLUSIVE (concat) / NO-GO (meanpool). F1/F2 ~ pool (~0.80);
+    both twins state a 2,048-token context.
+  - F3: 6k/12k needle retrieval 0/500 (4k twin) vs 99-100% (128k twin); the
+    1k control is retrieved by both and separates only at the general ~0.80.
+    The rule's wording ("1k separation -> not context-specific") is refined,
+    not re-labelled: the ~0.80 floor is the general difference; the step to
+    1.00 at >= 6k is context-specific, shown behaviourally.
+  - Per the D's downstream: no stage 2 for short probes. Open for the human:
+    F3 in limitations (recommended; Phase 3 closes) vs a deployment-
+    conditional long-input arm (better on the v2 universe, after D028).
+  Decided by: design-side (closure, reading); human (F3 placement, pending).
+
+[2026-10-02] D027 S0 survivor list approved -- v2 universe frozen at 85
+  - 37 v1 + 48 candidates; Mistral-Small-3.2 dropped (rule 6); |N'| = 161.
+  - Loader shims approved: Llama-2 legacy=True (restores v1 tokenisation),
+    Phi-3-medium-128k rope_scaling config migration (keeps the D025 control
+    pair in one env), Mistral-Small-3.1 own chat_template.json,
+    fix_mistral_regex for 5 Mistral-family candidates.
+  - date_string not passed (TACC's correction of P1 Call 3: it would have
+    changed a v1 prompt). A2 batch-1: Falcon-H1 x2, Qwen3.5-4B.
+  - R adds batch1 / mixed_env / tokparity flags next to every H'_new pair.
+  Decided by: design-side (routine; no invariant touched).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
