@@ -1,0 +1,137 @@
+{
+ "schema": "cdqd-corpus-v2-ext-ml-queries-v1",
+ "source": "docs/D028.md ## D (verbatim, parsed from the table)",
+ "first_id": 281,
+ "n": 16,
+ "queries": [
+  {
+   "id": 281,
+   "query_index": 0,
+   "lang": "Swahili",
+   "region": "Africa",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "Tafadhali jitambulishe kwa sentensi mbili."
+  },
+  {
+   "id": 282,
+   "query_index": 1,
+   "lang": "Swahili",
+   "region": "Africa",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "Kwa sentensi tatu, eleza kwa nini anga lina rangi ya buluu."
+  },
+  {
+   "id": 283,
+   "query_index": 2,
+   "lang": "Amharic",
+   "region": "Africa",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "እባክህ ራስህን በሁለት ዓረፍተ ነገሮች አስተዋውቅ።"
+  },
+  {
+   "id": 284,
+   "query_index": 3,
+   "lang": "Amharic",
+   "region": "Africa",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "ሰማዩ ለምን ሰማያዊ እንደሆነ በሦስት ዓረፍተ ነገሮች አብራራ።"
+  },
+  {
+   "id": 285,
+   "query_index": 4,
+   "lang": "Arabic",
+   "region": "West Asia",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "من فضلك عرّف بنفسك في جملتين."
+  },
+  {
+   "id": 286,
+   "query_index": 5,
+   "lang": "Arabic",
+   "region": "West Asia",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "اشرح في ثلاث جمل لماذا السماء زرقاء."
+  },
+  {
+   "id": 287,
+   "query_index": 6,
+   "lang": "Hindi",
+   "region": "South Asia",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "कृपया दो वाक्यों में अपना परिचय दीजिए।"
+  },
+  {
+   "id": 288,
+   "query_index": 7,
+   "lang": "Hindi",
+   "region": "South Asia",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "तीन वाक्यों में समझाइए कि आसमान नीला क्यों होता है।"
+  },
+  {
+   "id": 289,
+   "query_index": 8,
+   "lang": "Bengali",
+   "region": "South Asia",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "অনুগ্রহ করে দুটি বাক্যে নিজের পরিচয় দিন।"
+  },
+  {
+   "id": 290,
+   "query_index": 9,
+   "lang": "Bengali",
+   "region": "South Asia",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "তিনটি বাক্যে ব্যাখ্যা করুন কেন আকাশ নীল।"
+  },
+  {
+   "id": 291,
+   "query_index": 10,
+   "lang": "Tamil",
+   "region": "South Asia",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "தயவுசெய்து இரண்டு வாக்கியங்களில் உங்களை அறிமுகப்படுத்துங்கள்."
+  },
+  {
+   "id": 292,
+   "query_index": 11,
+   "lang": "Tamil",
+   "region": "South Asia",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "வானம் ஏன் நீல நிறமாக இருக்கிறது என்பதை மூன்று வாக்கியங்களில் விளக்குங்கள்."
+  },
+  {
+   "id": 293,
+   "query_index": 12,
+   "lang": "Indonesian",
+   "region": "Asia-Pacific",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "Tolong perkenalkan dirimu dalam dua kalimat."
+  },
+  {
+   "id": 294,
+   "query_index": 13,
+   "lang": "Indonesian",
+   "region": "Asia-Pacific",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "Dalam tiga kalimat, jelaskan mengapa langit berwarna biru."
+  },
+  {
+   "id": 295,
+   "query_index": 14,
+   "lang": "Vietnamese",
+   "region": "Asia-Pacific",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "Hãy giới thiệu bản thân bạn trong hai câu."
+  },
+  {
+   "id": 296,
+   "query_index": 15,
+   "lang": "Vietnamese",
+   "region": "Asia-Pacific",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "Trong ba câu, hãy giải thích tại sao bầu trời có màu xanh."
+  }
+ ],
+ "sha256": "ec4d1b003a983d53ac7a05d468e84e37d998126541c094a6f4dfaa2f4b7a430c"
+}
