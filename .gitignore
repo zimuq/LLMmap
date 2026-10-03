@@ -23,3 +23,5 @@ data/corpus_v1_ext_d026/
 # D027: screen corpus (generations, embeddings, frozen config draws) stays on $WORK; manifests committed
 data/corpus_v2_screen/
 results/D027/tokparity/
+results/D027/logits_*.npz
+results/D027/models/
