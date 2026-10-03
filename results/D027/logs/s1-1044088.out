@@ -1,0 +1,16 @@
+=== node: c642-071.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 10:33:16 PM CDT 2026 ===
+== Qwen/Qwen2.5-0.5B-Instruct  batch1=False
+Traceback (most recent call last):
+  File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d027_screen.py", line 198, in main
+    run_model(m, a.env_tag, m in b1, queries)
+  File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d027_screen.py", line 123, in run_model
+    todo = sorted((k for k in rows if k not in done), key=lambda k: (("build", "val").index(k[0]), k[1]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d027_screen.py", line 123, in <lambda>
+    todo = sorted((k for k in rows if k not in done), key=lambda k: (("build", "val").index(k[0]), k[1]))
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: tuple.index(x): x not in tuple
+
+== HuggingFaceTB/SmolLM2-360M-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=6.497 pack=8 f1=None wall=124.5s
+=== end: Fri Oct  2 10:36:01 PM CDT 2026 ===

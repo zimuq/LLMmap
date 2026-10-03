@@ -1,0 +1,6753 @@
+{
+ "schema": "d027-analysis-v1",
+ "label": "HARDER",
+ "n_H": 38,
+ "n_H_new": 34,
+ "instrument_control": {
+  "pairs": {
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+    "acc_v2": 0.7559999999999999,
+    "ci": [
+     0.676,
+     0.8320000000000001
+    ],
+    "acc_d025": 0.808,
+    "below_tau": true
+   },
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+    "acc_v2": 0.76,
+    "ci": [
+     0.696,
+     0.8240000000000001
+    ],
+    "acc_d025": 0.82,
+    "below_tau": true
+   }
+  },
+  "other_d025_H": {
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct": {
+    "acc_v2": 0.904,
+    "acc_d025": 0.896
+   },
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+    "acc_v2": 0.8759999999999999,
+    "acc_d025": 0.832
+   }
+  },
+  "spearman_65": 0.7766804378731685,
+  "passed": true
+ },
+ "headline": {
+  "mean_top1": 0.7095529411764705,
+  "mean_top1_seeds": [
+   0.707764705882353,
+   0.6743529411764706,
+   0.7482352941176471,
+   0.6734117647058824,
+   0.744
+  ],
+  "recall_v1": 0.7945945945945947,
+  "recall_candidates": 0.644,
+  "per_model_recall": {
+   "CohereForAI/aya-23-8B": 0.984,
+   "CohereLabs/tiny-aya-earth": 0.264,
+   "CohereLabs/tiny-aya-fire": 0.376,
+   "CohereLabs/tiny-aya-global": 0.464,
+   "CohereLabs/tiny-aya-water": 0.168,
+   "Deci/DeciLM-7B-instruct": 0.632,
+   "HuggingFaceH4/zephyr-7b-beta": 0.84,
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct": 0.728,
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": 0.64,
+   "HuggingFaceTB/SmolLM2-360M-Instruct": 0.824,
+   "Qwen/Qwen2-1.5B-Instruct": 0.792,
+   "Qwen/Qwen2-7B-Instruct": 0.744,
+   "Qwen/Qwen2.5-0.5B-Instruct": 0.632,
+   "Qwen/Qwen2.5-3B-Instruct": 0.792,
+   "Qwen/Qwen2.5-7B-Instruct": 0.568,
+   "Qwen/Qwen2.5-7B-Instruct-1M": 0.752,
+   "Qwen/Qwen3-30B-A3B": 0.728,
+   "Qwen/Qwen3-30B-A3B-Instruct-2507": 0.648,
+   "Qwen/Qwen3-4B": 0.728,
+   "Qwen/Qwen3-4B-Instruct-2507": 0.72,
+   "Qwen/Qwen3-8B": 0.824,
+   "Qwen/Qwen3.5-4B": 0.64,
+   "Qwen/Qwen3.5-9B": 0.768,
+   "allenai/Llama-3.1-Tulu-3-8B": 0.664,
+   "allenai/Llama-3.1-Tulu-3.1-8B": 0.648,
+   "allenai/OLMo-2-0425-1B-Instruct": 0.368,
+   "allenai/OLMo-2-1124-13B-Instruct": 0.304,
+   "allenai/OLMo-2-1124-7B-Instruct": 0.472,
+   "allenai/Olmo-3-7B-Instruct": 0.688,
+   "allenai/Olmo-3.1-32B-Instruct": 0.752,
+   "google/gemma-1.1-2b-it": 0.792,
+   "google/gemma-1.1-7b-it": 0.952,
+   "google/gemma-2-9b-it": 0.912,
+   "google/gemma-2b-it": 0.944,
+   "google/gemma-3-12b-it": 0.856,
+   "google/gemma-3-1b-it": 0.808,
+   "google/gemma-3-4b-it": 0.664,
+   "google/gemma-4-12B-it": 0.672,
+   "google/gemma-4-E4B-it": 0.784,
+   "google/gemma-7b-it": 0.744,
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 0.944,
+   "ibm-granite/granite-3.0-8b-instruct": 0.92,
+   "ibm-granite/granite-3.1-8b-instruct": 0.72,
+   "ibm-granite/granite-3.2-8b-instruct": 0.424,
+   "ibm-granite/granite-3.3-8b-instruct": 0.584,
+   "ibm-granite/granite-4.1-3b": 0.704,
+   "ibm-granite/granite-4.1-8b": 0.856,
+   "ibm-granite/granite-4.2-3b": 0.816,
+   "ibm-granite/granite-4.2-8b": 0.904,
+   "internlm/internlm2_5-7b-chat": 0.808,
+   "meta-llama/Llama-2-7b-chat-hf": 0.896,
+   "meta-llama/Llama-3.2-1B-Instruct": 0.84,
+   "meta-llama/Llama-3.2-3B-Instruct": 0.856,
+   "meta-llama/Meta-Llama-3-8B-Instruct": 0.928,
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": 0.768,
+   "microsoft/Phi-3-medium-128k-instruct": 0.592,
+   "microsoft/Phi-3-medium-4k-instruct": 0.592,
+   "microsoft/Phi-3-mini-128k-instruct": 0.728,
+   "microsoft/Phi-3-mini-4k-instruct": 0.912,
+   "microsoft/Phi-3.5-mini-instruct": 0.912,
+   "microsoft/Phi-4-mini-instruct": 0.608,
+   "microsoft/phi-4": 0.632,
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16": 0.64,
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16": 0.568,
+   "mistralai/Ministral-3-8B-Instruct-2512-BF16": 0.296,
+   "mistralai/Mistral-7B-Instruct-v0.1": 0.768,
+   "mistralai/Mistral-7B-Instruct-v0.2": 0.632,
+   "mistralai/Mistral-7B-Instruct-v0.3": 0.744,
+   "mistralai/Mistral-Small-24B-Instruct-2501": 0.64,
+   "mistralai/Mistral-Small-3.1-24B-Instruct-2503": 0.584,
+   "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": 0.776,
+   "nvidia/Llama3-ChatQA-1.5-8B": 0.928,
+   "openchat/openchat-3.6-8b-20240522": 0.712,
+   "openchat/openchat_3.5": 0.744,
+   "tiiuae/Falcon-H1-3B-Instruct": 0.584,
+   "tiiuae/Falcon-H1-7B-Instruct": 0.848,
+   "tiiuae/Falcon3-10B-Instruct": 0.632,
+   "tiiuae/Falcon3-1B-Instruct": 0.784,
+   "tiiuae/Falcon3-3B-Instruct": 0.384,
+   "tiiuae/Falcon3-7B-Instruct": 0.544,
+   "togethercomputer/Llama-2-7B-32K-Instruct": 0.8,
+   "upstage/SOLAR-10.7B-Instruct-v1.0": 0.88,
+   "utter-project/EuroLLM-1.7B-Instruct": 0.84,
+   "utter-project/EuroLLM-9B-Instruct": 0.808,
+   "utter-project/EuroLLM-9B-Instruct-2512": 0.952
+  },
+  "per_lineage_recall": {
+   "aya-23": 0.984,
+   "decilm": 0.632,
+   "eurollm": 0.8667,
+   "falcon-3": 0.586,
+   "falcon-h1": 0.716,
+   "gemma": 0.8688,
+   "gemma-3": 0.776,
+   "gemma-4": 0.728,
+   "granite-3": 0.662,
+   "granite-4": 0.82,
+   "internlm2": 0.808,
+   "llama-2": 0.848,
+   "llama-3": 0.8064,
+   "ministral-3": 0.5013,
+   "mistral-7b": 0.768,
+   "mistral-small-3": 0.612,
+   "olmo-2": 0.3813,
+   "olmo-3": 0.72,
+   "phi-3": 0.7472,
+   "phi-4": 0.62,
+   "qwen2": 0.7133,
+   "qwen3": 0.7223,
+   "smollm2": 0.7307,
+   "tiny-aya": 0.318
+  },
+  "linear_mean_top1": 0.8348235294117647
+ },
+ "pair_table": [
+  {
+   "acc": 0.524,
+   "ci": [
+    0.44799999999999995,
+    0.5960999999999995
+   ],
+   "band": "stably_hard",
+   "linear": 0.56,
+   "per_seed": [
+    0.54,
+    0.46,
+    0.56,
+    0.46,
+    0.6
+   ],
+   "pair": "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+   "candidate_members": [
+    "CohereLabs/tiny-aya-earth",
+    "CohereLabs/tiny-aya-global"
+   ],
+   "lineages": [
+    "tiny-aya"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.62
+  },
+  {
+   "acc": 0.532,
+   "ci": [
+    0.47200000000000003,
+    0.588
+   ],
+   "band": "stably_hard",
+   "linear": 0.62,
+   "per_seed": [
+    0.52,
+    0.56,
+    0.54,
+    0.54,
+    0.5
+   ],
+   "pair": "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+   "candidate_members": [
+    "CohereLabs/tiny-aya-earth",
+    "CohereLabs/tiny-aya-water"
+   ],
+   "lineages": [
+    "tiny-aya"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.5
+  },
+  {
+   "acc": 0.568,
+   "ci": [
+    0.512,
+    0.6160000000000001
+   ],
+   "band": "stably_hard",
+   "linear": 0.62,
+   "per_seed": [
+    0.52,
+    0.54,
+    0.56,
+    0.62,
+    0.6
+   ],
+   "pair": "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+   "candidate_members": [
+    "CohereLabs/tiny-aya-global",
+    "CohereLabs/tiny-aya-water"
+   ],
+   "lineages": [
+    "tiny-aya"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.6
+  },
+  {
+   "acc": 0.632,
+   "ci": [
+    0.524,
+    0.7319999999999999
+   ],
+   "band": "stably_hard",
+   "linear": 0.8,
+   "per_seed": [
+    0.6,
+    0.6,
+    0.74,
+    0.56,
+    0.66
+   ],
+   "pair": "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+   "candidate_members": [
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16",
+    "mistralai/Ministral-3-8B-Instruct-2512-BF16"
+   ],
+   "lineages": [
+    "ministral-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.78
+  },
+  {
+   "acc": 0.648,
+   "ci": [
+    0.5679,
+    0.7240000000000001
+   ],
+   "band": "stably_hard",
+   "linear": 0.76,
+   "per_seed": [
+    0.64,
+    0.64,
+    0.62,
+    0.66,
+    0.68
+   ],
+   "pair": "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+   "candidate_members": [
+    "CohereLabs/tiny-aya-fire",
+    "CohereLabs/tiny-aya-water"
+   ],
+   "lineages": [
+    "tiny-aya"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.68
+  },
+  {
+   "acc": 0.684,
+   "ci": [
+    0.6080000000000001,
+    0.76
+   ],
+   "band": "stably_hard",
+   "linear": 0.8,
+   "per_seed": [
+    0.58,
+    0.7,
+    0.8,
+    0.62,
+    0.72
+   ],
+   "pair": "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+   "candidate_members": [
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+    "mistralai/Ministral-3-8B-Instruct-2512-BF16"
+   ],
+   "lineages": [
+    "ministral-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.76
+  },
+  {
+   "acc": 0.688,
+   "ci": [
+    0.6360000000000001,
+    0.74
+   ],
+   "band": "stably_hard",
+   "linear": 0.78,
+   "per_seed": [
+    0.6,
+    0.68,
+    0.76,
+    0.6,
+    0.8
+   ],
+   "pair": "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+   "candidate_members": [
+    "ibm-granite/granite-3.2-8b-instruct"
+   ],
+   "lineages": [
+    "granite-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "ibm-granite/granite-3.1-8b-instruct": 1.0
+   },
+   "tokparity": {
+    "ibm-granite/granite-3.1-8b-instruct": "identical"
+   },
+   "nn1": 0.64
+  },
+  {
+   "acc": 0.716,
+   "ci": [
+    0.66,
+    0.772
+   ],
+   "band": "stably_hard",
+   "linear": 0.9,
+   "per_seed": [
+    0.7,
+    0.64,
+    0.74,
+    0.64,
+    0.86
+   ],
+   "pair": "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16",
+   "candidate_members": [
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16",
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16"
+   ],
+   "lineages": [
+    "ministral-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.7
+  },
+  {
+   "acc": 0.7240000000000001,
+   "ci": [
+    0.6480000000000001,
+    0.796
+   ],
+   "band": "stably_hard",
+   "linear": 0.74,
+   "per_seed": [
+    0.62,
+    0.76,
+    0.76,
+    0.72,
+    0.76
+   ],
+   "pair": "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+   "candidate_members": [
+    "CohereLabs/tiny-aya-earth",
+    "CohereLabs/tiny-aya-fire"
+   ],
+   "lineages": [
+    "tiny-aya"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.68
+  },
+  {
+   "acc": 0.728,
+   "ci": [
+    0.64,
+    0.8119999999999998
+   ],
+   "band": "stably_hard",
+   "linear": 0.9,
+   "per_seed": [
+    0.76,
+    0.66,
+    0.74,
+    0.66,
+    0.82
+   ],
+   "pair": "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+   "candidate_members": [
+    "allenai/OLMo-2-0425-1B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct"
+   ],
+   "lineages": [
+    "olmo-2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.72
+  },
+  {
+   "acc": 0.7440000000000001,
+   "ci": [
+    0.6720000000000002,
+    0.8080000000000002
+   ],
+   "band": "stably_hard",
+   "linear": 0.92,
+   "per_seed": [
+    0.8,
+    0.72,
+    0.8,
+    0.66,
+    0.74
+   ],
+   "pair": "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+   "candidate_members": [
+    "mistralai/Mistral-Small-24B-Instruct-2501",
+    "mistralai/Mistral-Small-3.1-24B-Instruct-2503"
+   ],
+   "lineages": [
+    "mistral-small-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.82
+  },
+  {
+   "acc": 0.752,
+   "ci": [
+    0.688,
+    0.816
+   ],
+   "band": "stably_hard",
+   "linear": 0.9,
+   "per_seed": [
+    0.62,
+    0.74,
+    0.78,
+    0.82,
+    0.8
+   ],
+   "pair": "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global",
+   "candidate_members": [
+    "CohereLabs/tiny-aya-fire",
+    "CohereLabs/tiny-aya-global"
+   ],
+   "lineages": [
+    "tiny-aya"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.66
+  },
+  {
+   "acc": 0.7559999999999999,
+   "ci": [
+    0.664,
+    0.84
+   ],
+   "band": "stably_hard",
+   "linear": 0.88,
+   "per_seed": [
+    0.78,
+    0.72,
+    0.78,
+    0.66,
+    0.84
+   ],
+   "pair": "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+   "candidate_members": [
+    "allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct"
+   ],
+   "lineages": [
+    "olmo-2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.74
+  },
+  {
+   "acc": 0.7559999999999999,
+   "ci": [
+    0.676,
+    0.8320000000000001
+   ],
+   "band": "stably_hard",
+   "linear": 0.96,
+   "per_seed": [
+    0.68,
+    0.78,
+    0.84,
+    0.68,
+    0.8
+   ],
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "falcon-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "tiiuae/Falcon3-10B-Instruct": 1.0,
+    "tiiuae/Falcon3-7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "tiiuae/Falcon3-10B-Instruct": "identical",
+    "tiiuae/Falcon3-7B-Instruct": "identical"
+   },
+   "nn1": 0.76
+  },
+  {
+   "acc": 0.76,
+   "ci": [
+    0.696,
+    0.8240000000000001
+   ],
+   "band": "stably_hard",
+   "linear": 0.82,
+   "per_seed": [
+    0.78,
+    0.68,
+    0.9,
+    0.68,
+    0.76
+   ],
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-medium-128k-instruct": 1.0,
+    "microsoft/Phi-3-medium-4k-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-medium-128k-instruct": "identical",
+    "microsoft/Phi-3-medium-4k-instruct": "identical"
+   },
+   "nn1": 0.74
+  },
+  {
+   "acc": 0.772,
+   "ci": [
+    0.704,
+    0.8440000000000001
+   ],
+   "band": "stably_hard",
+   "linear": 0.84,
+   "per_seed": [
+    0.78,
+    0.78,
+    0.74,
+    0.76,
+    0.8
+   ],
+   "pair": "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+   "candidate_members": [
+    "Qwen/Qwen3.5-4B",
+    "Qwen/Qwen3.5-9B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": true,
+   "batch1_members": [
+    "Qwen/Qwen3.5-4B"
+   ],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.72
+  },
+  {
+   "acc": 0.7759999999999999,
+   "ci": [
+    0.708,
+    0.848
+   ],
+   "band": "stably_hard",
+   "linear": 0.88,
+   "per_seed": [
+    0.78,
+    0.74,
+    0.86,
+    0.72,
+    0.78
+   ],
+   "pair": "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2.5-3B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2.5-3B-Instruct": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.8079999999999999,
+   "ci": [
+    0.7559999999999999,
+    0.8640000000000001
+   ],
+   "band": "stably_hard",
+   "linear": 0.94,
+   "per_seed": [
+    0.9,
+    0.58,
+    0.9,
+    0.84,
+    0.82
+   ],
+   "pair": "google/gemma-4-12B-it | google/gemma-4-E4B-it",
+   "candidate_members": [
+    "google/gemma-4-12B-it",
+    "google/gemma-4-E4B-it"
+   ],
+   "lineages": [
+    "gemma-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.86
+  },
+  {
+   "acc": 0.82,
+   "ci": [
+    0.736,
+    0.8959999999999999
+   ],
+   "band": "stably_hard",
+   "linear": 0.94,
+   "per_seed": [
+    0.88,
+    0.78,
+    0.86,
+    0.74,
+    0.84
+   ],
+   "pair": "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "candidate_members": [
+    "tiiuae/Falcon3-3B-Instruct"
+   ],
+   "lineages": [
+    "falcon-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "tiiuae/Falcon3-7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "tiiuae/Falcon3-7B-Instruct": "identical"
+   },
+   "nn1": 0.82
+  },
+  {
+   "acc": 0.8240000000000001,
+   "ci": [
+    0.7399,
+    0.904
+   ],
+   "band": "uncertain",
+   "linear": 0.84,
+   "per_seed": [
+    0.88,
+    0.86,
+    0.72,
+    0.82,
+    0.84
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3-4B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.86
+  },
+  {
+   "acc": 0.8320000000000001,
+   "ci": [
+    0.76,
+    0.8959999999999999
+   ],
+   "band": "stably_hard",
+   "linear": 0.84,
+   "per_seed": [
+    0.88,
+    0.82,
+    0.84,
+    0.84,
+    0.78
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B",
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.78
+  },
+  {
+   "acc": 0.8320000000000001,
+   "ci": [
+    0.7440000000000001,
+    0.904
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.62,
+    0.88,
+    0.86,
+    0.88,
+    0.92
+   ],
+   "pair": "google/gemma-3-1b-it | google/gemma-3-4b-it",
+   "candidate_members": [
+    "google/gemma-3-1b-it",
+    "google/gemma-3-4b-it"
+   ],
+   "lineages": [
+    "gemma-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.84,
+   "ci": [
+    0.748,
+    0.9200999999999995
+   ],
+   "band": "uncertain",
+   "linear": 0.92,
+   "per_seed": [
+    0.88,
+    0.88,
+    0.9,
+    0.78,
+    0.76
+   ],
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-1.5B-Instruct": 1.0,
+    "Qwen/Qwen2.5-0.5B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-1.5B-Instruct": "identical",
+    "Qwen/Qwen2.5-0.5B-Instruct": "identical"
+   },
+   "nn1": 0.86
+  },
+  {
+   "acc": 0.84,
+   "ci": [
+    0.7440000000000001,
+    0.92
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.82,
+    0.84,
+    0.84,
+    0.84,
+    0.86
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "Qwen/Qwen3-4B-Instruct-2507"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.848,
+   "ci": [
+    0.792,
+    0.904
+   ],
+   "band": "uncertain",
+   "linear": 0.88,
+   "per_seed": [
+    0.86,
+    0.9,
+    0.88,
+    0.8,
+    0.8
+   ],
+   "pair": "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+   "candidate_members": [
+    "ibm-granite/granite-3.2-8b-instruct",
+    "ibm-granite/granite-3.3-8b-instruct"
+   ],
+   "lineages": [
+    "granite-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.7
+  },
+  {
+   "acc": 0.852,
+   "ci": [
+    0.7999,
+    0.904
+   ],
+   "band": "uncertain",
+   "linear": 0.92,
+   "per_seed": [
+    0.76,
+    0.86,
+    0.94,
+    0.78,
+    0.92
+   ],
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct",
+   "candidate_members": [
+    "tiiuae/Falcon3-3B-Instruct"
+   ],
+   "lineages": [
+    "falcon-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "tiiuae/Falcon3-10B-Instruct": 1.0
+   },
+   "tokparity": {
+    "tiiuae/Falcon3-10B-Instruct": "identical"
+   },
+   "nn1": 0.8
+  },
+  {
+   "acc": 0.856,
+   "ci": [
+    0.784,
+    0.916
+   ],
+   "band": "uncertain",
+   "linear": 0.86,
+   "per_seed": [
+    0.9,
+    0.78,
+    0.86,
+    0.86,
+    0.88
+   ],
+   "pair": "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct",
+   "candidate_members": [
+    "allenai/OLMo-2-0425-1B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct"
+   ],
+   "lineages": [
+    "olmo-2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.66
+  },
+  {
+   "acc": 0.86,
+   "ci": [
+    0.804,
+    0.9119999999999999
+   ],
+   "band": "uncertain",
+   "linear": 0.9,
+   "per_seed": [
+    0.84,
+    0.92,
+    0.86,
+    0.8,
+    0.88
+   ],
+   "pair": "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+   "candidate_members": [
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k"
+   ],
+   "lineages": [
+    "smollm2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.88
+  },
+  {
+   "acc": 0.872,
+   "ci": [
+    0.7999,
+    0.94
+   ],
+   "band": "uncertain",
+   "linear": 0.92,
+   "per_seed": [
+    0.9,
+    0.88,
+    0.82,
+    0.86,
+    0.9
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.88
+  },
+  {
+   "acc": 0.8759999999999999,
+   "ci": [
+    0.8080000000000002,
+    0.936
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.88,
+    0.84,
+    0.92,
+    0.78,
+    0.96
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.2": 1.0,
+    "mistralai/Mistral-7B-Instruct-v0.3": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.2": "identical",
+    "mistralai/Mistral-7B-Instruct-v0.3": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.88,
+   "ci": [
+    0.812,
+    0.94
+   ],
+   "band": "uncertain",
+   "linear": 0.9,
+   "per_seed": [
+    0.94,
+    0.86,
+    0.88,
+    0.84,
+    0.88
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3-8B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.86
+  },
+  {
+   "acc": 0.88,
+   "ci": [
+    0.828,
+    0.9280000000000002
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.92,
+    0.94,
+    0.92,
+    0.88,
+    0.74
+   ],
+   "pair": "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+   "candidate_members": [
+    "ibm-granite/granite-3.3-8b-instruct"
+   ],
+   "lineages": [
+    "granite-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "ibm-granite/granite-3.1-8b-instruct": 1.0
+   },
+   "tokparity": {
+    "ibm-granite/granite-3.1-8b-instruct": "identical"
+   },
+   "nn1": 0.72
+  },
+  {
+   "acc": 0.884,
+   "ci": [
+    0.8079999999999999,
+    0.9480000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.9,
+   "per_seed": [
+    0.92,
+    0.94,
+    0.82,
+    0.9,
+    0.84
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3-4B-Instruct-2507"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.884,
+   "ci": [
+    0.8320000000000001,
+    0.9320000000000002
+   ],
+   "band": "uncertain",
+   "linear": 0.9,
+   "per_seed": [
+    0.92,
+    0.9,
+    0.94,
+    0.78,
+    0.88
+   ],
+   "pair": "Qwen/Qwen3-4B | Qwen/Qwen3-8B",
+   "candidate_members": [
+    "Qwen/Qwen3-4B",
+    "Qwen/Qwen3-8B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.86
+  },
+  {
+   "acc": 0.888,
+   "ci": [
+    0.816,
+    0.9519999999999998
+   ],
+   "band": "uncertain",
+   "linear": 0.92,
+   "per_seed": [
+    0.92,
+    0.88,
+    0.88,
+    0.88,
+    0.88
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "Qwen/Qwen3-8B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.892,
+   "ci": [
+    0.82,
+    0.9520000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.86,
+   "per_seed": [
+    0.96,
+    0.84,
+    0.88,
+    0.9,
+    0.88
+   ],
+   "pair": "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507",
+   "candidate_members": [
+    "Qwen/Qwen3-4B",
+    "Qwen/Qwen3-4B-Instruct-2507"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.892,
+   "ci": [
+    0.836,
+    0.94
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.86,
+    0.9,
+    0.9,
+    0.9,
+    0.9
+   ],
+   "pair": "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct",
+   "candidate_members": [
+    "allenai/Olmo-3-7B-Instruct",
+    "allenai/Olmo-3.1-32B-Instruct"
+   ],
+   "lineages": [
+    "olmo-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.8959999999999999,
+   "ci": [
+    0.84,
+    0.948
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.84,
+    0.88,
+    0.88,
+    0.92,
+    0.96
+   ],
+   "pair": "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct",
+    "Qwen/Qwen2.5-7B-Instruct-1M"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.904,
+   "ci": [
+    0.848,
+    0.9520000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.9,
+   "per_seed": [
+    0.94,
+    0.88,
+    0.92,
+    0.88,
+    0.9
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "Qwen/Qwen3-4B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.904,
+   "ci": [
+    0.848,
+    0.956
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.92,
+    0.88,
+    0.94,
+    0.88,
+    0.9
+   ],
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981,
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical"
+   },
+   "nn1": 0.88
+  },
+  {
+   "acc": 0.904,
+   "ci": [
+    0.848,
+    0.9520000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.92,
+   "per_seed": [
+    0.88,
+    0.94,
+    0.88,
+    0.94,
+    0.88
+   ],
+   "pair": "tiiuae/Falcon-H1-3B-Instruct | tiiuae/Falcon-H1-7B-Instruct",
+   "candidate_members": [
+    "tiiuae/Falcon-H1-3B-Instruct",
+    "tiiuae/Falcon-H1-7B-Instruct"
+   ],
+   "lineages": [
+    "falcon-h1"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [
+    "tiiuae/Falcon-H1-3B-Instruct",
+    "tiiuae/Falcon-H1-7B-Instruct"
+   ],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.9079999999999999,
+   "ci": [
+    0.8480000000000001,
+    0.96
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.9,
+    0.88,
+    0.94,
+    0.92,
+    0.9
+   ],
+   "pair": "ibm-granite/granite-4.2-3b | ibm-granite/granite-4.2-8b",
+   "candidate_members": [
+    "ibm-granite/granite-4.2-3b",
+    "ibm-granite/granite-4.2-8b"
+   ],
+   "lineages": [
+    "granite-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.88
+  },
+  {
+   "acc": 0.9079999999999999,
+   "ci": [
+    0.84,
+    0.9640000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.96,
+    0.84,
+    0.96,
+    0.94,
+    0.84
+   ],
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-medium-4k-instruct": 1.0,
+    "microsoft/Phi-3-mini-4k-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-medium-4k-instruct": "identical",
+    "microsoft/Phi-3-mini-4k-instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.912,
+   "ci": [
+    0.86,
+    0.9560000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.96,
+    0.88,
+    0.98,
+    0.84,
+    0.9
+   ],
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-medium-4k-instruct": 1.0,
+    "microsoft/Phi-3-mini-128k-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-medium-4k-instruct": "identical",
+    "microsoft/Phi-3-mini-128k-instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.912,
+   "ci": [
+    0.872,
+    0.9520000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.92,
+    0.98,
+    0.98,
+    0.86,
+    0.82
+   ],
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-mini-128k-instruct": 1.0,
+    "microsoft/Phi-3-mini-4k-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-mini-128k-instruct": "identical",
+    "microsoft/Phi-3-mini-4k-instruct": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.9159999999999999,
+   "ci": [
+    0.8438999999999999,
+    0.976
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.92,
+    0.94,
+    0.86,
+    0.9,
+    0.96
+   ],
+   "pair": "Qwen/Qwen3-4B-Instruct-2507 | Qwen/Qwen3-8B",
+   "candidate_members": [
+    "Qwen/Qwen3-4B-Instruct-2507",
+    "Qwen/Qwen3-8B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.9159999999999999,
+   "ci": [
+    0.8640000000000001,
+    0.96
+   ],
+   "band": "uncertain",
+   "linear": 1.0,
+   "per_seed": [
+    0.9,
+    0.88,
+    0.98,
+    0.9,
+    0.92
+   ],
+   "pair": "google/gemma-3-12b-it | google/gemma-3-4b-it",
+   "candidate_members": [
+    "google/gemma-3-12b-it",
+    "google/gemma-3-4b-it"
+   ],
+   "lineages": [
+    "gemma-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.92,
+   "ci": [
+    0.8680000000000001,
+    0.9640000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.94,
+    0.92,
+    0.86,
+    0.94,
+    0.94
+   ],
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct-1M"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-7B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.92,
+   "ci": [
+    0.8640000000000001,
+    0.9680000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.92,
+    0.96,
+    0.92,
+    0.9,
+    0.9
+   ],
+   "pair": "google/gemma-2b-it | google/gemma-7b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-2b-it": 0.6525096525096525,
+    "google/gemma-7b-it": 0.16988416988416988
+   },
+   "tokparity": {
+    "google/gemma-2b-it": "identical",
+    "google/gemma-7b-it": "identical"
+   },
+   "nn1": 0.86
+  },
+  {
+   "acc": 0.92,
+   "ci": [
+    0.86,
+    0.9680000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.9,
+    0.88,
+    0.94,
+    0.94,
+    0.94
+   ],
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Llama-3.2-3B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981,
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical",
+    "meta-llama/Llama-3.2-3B-Instruct": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.92,
+   "ci": [
+    0.8640000000000001,
+    0.968
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.9,
+    0.94,
+    0.92,
+    0.9,
+    0.94
+   ],
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-128k-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-medium-128k-instruct": 1.0,
+    "microsoft/Phi-3-mini-128k-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-medium-128k-instruct": "identical",
+    "microsoft/Phi-3-mini-128k-instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.92,
+   "ci": [
+    0.8640000000000001,
+    0.9640000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.94,
+    0.94,
+    0.96,
+    0.82,
+    0.94
+   ],
+   "pair": "tiiuae/Falcon3-1B-Instruct | tiiuae/Falcon3-3B-Instruct",
+   "candidate_members": [
+    "tiiuae/Falcon3-1B-Instruct",
+    "tiiuae/Falcon3-3B-Instruct"
+   ],
+   "lineages": [
+    "falcon-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.924,
+   "ci": [
+    0.8640000000000001,
+    0.976
+   ],
+   "band": "uncertain",
+   "linear": 0.9,
+   "per_seed": [
+    0.96,
+    0.88,
+    0.92,
+    0.9,
+    0.96
+   ],
+   "pair": "Qwen/Qwen3-4B-Instruct-2507 | Qwen/Qwen3.5-4B",
+   "candidate_members": [
+    "Qwen/Qwen3-4B-Instruct-2507",
+    "Qwen/Qwen3.5-4B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": true,
+   "batch1_members": [
+    "Qwen/Qwen3.5-4B"
+   ],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.9279999999999999,
+   "ci": [
+    0.8839999999999999,
+    0.968
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.96,
+    0.9,
+    0.94,
+    0.88,
+    0.96
+   ],
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981,
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-3B-Instruct": "identical",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.932,
+   "ci": [
+    0.8880000000000001,
+    0.972
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.88,
+    0.98,
+    0.92,
+    0.9,
+    0.98
+   ],
+   "pair": "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-360M-Instruct",
+   "candidate_members": [
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "HuggingFaceTB/SmolLM2-360M-Instruct"
+   ],
+   "lineages": [
+    "smollm2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.82
+  },
+  {
+   "acc": 0.932,
+   "ci": [
+    0.892,
+    0.9719999999999999
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.84,
+    0.96,
+    0.94,
+    0.96,
+    0.96
+   ],
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2.5-0.5B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2.5-0.5B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.932,
+   "ci": [
+    0.872,
+    0.9800999999999994
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.92,
+    0.96,
+    0.96,
+    0.9,
+    0.92
+   ],
+   "pair": "google/gemma-1.1-2b-it | google/gemma-1.1-7b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-1.1-2b-it": 1.0,
+    "google/gemma-1.1-7b-it": 1.0
+   },
+   "tokparity": {
+    "google/gemma-1.1-2b-it": "identical",
+    "google/gemma-1.1-7b-it": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.932,
+   "ci": [
+    0.8680000000000001,
+    0.98
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.94,
+    0.92,
+    0.92,
+    0.94,
+    0.94
+   ],
+   "pair": "google/gemma-3-12b-it | google/gemma-3-1b-it",
+   "candidate_members": [
+    "google/gemma-3-12b-it",
+    "google/gemma-3-1b-it"
+   ],
+   "lineages": [
+    "gemma-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.94,
+   "ci": [
+    0.8880000000000001,
+    0.98
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.94,
+    0.88,
+    0.94,
+    0.96,
+    0.98
+   ],
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "HuggingFaceH4/zephyr-7b-beta": 1.0,
+    "mistralai/Mistral-7B-Instruct-v0.2": 1.0
+   },
+   "tokparity": {
+    "HuggingFaceH4/zephyr-7b-beta": "identical",
+    "mistralai/Mistral-7B-Instruct-v0.2": "identical"
+   },
+   "nn1": 0.86
+  },
+  {
+   "acc": 0.94,
+   "ci": [
+    0.8880000000000001,
+    0.9840000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.92,
+    0.94,
+    0.92,
+    0.96,
+    0.96
+   ],
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-7B-Instruct": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.94,
+   "ci": [
+    0.9039999999999999,
+    0.972
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.88,
+    0.98,
+    0.94,
+    0.94,
+    0.96
+   ],
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct-1M"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2.5-0.5B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2.5-0.5B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.94,
+   "ci": [
+    0.8960000000000001,
+    0.976
+   ],
+   "band": "uncertain",
+   "linear": 0.94,
+   "per_seed": [
+    0.96,
+    0.92,
+    0.9,
+    0.98,
+    0.94
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | openchat/openchat_3.5",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.1": 1.0,
+    "openchat/openchat_3.5": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.1": "identical",
+    "openchat/openchat_3.5": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.9440000000000001,
+   "ci": [
+    0.912,
+    0.972
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.98,
+    0.94,
+    0.86,
+    0.94
+   ],
+   "pair": "meta-llama/Llama-2-7b-chat-hf | togethercomputer/Llama-2-7B-32K-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-2-7b-chat-hf": 1.0,
+    "togethercomputer/Llama-2-7B-32K-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-2-7b-chat-hf": "identical",
+    "togethercomputer/Llama-2-7B-32K-Instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.9440000000000001,
+   "ci": [
+    0.8999,
+    0.98
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.9,
+    0.96,
+    1.0,
+    0.94,
+    0.92
+   ],
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-medium-128k-instruct": 1.0,
+    "microsoft/Phi-3-mini-4k-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-medium-128k-instruct": "identical",
+    "microsoft/Phi-3-mini-4k-instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.9440000000000001,
+   "ci": [
+    0.9080000000000001,
+    0.976
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.96,
+    0.96,
+    0.96,
+    0.9,
+    0.94
+   ],
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-medium-4k-instruct": 1.0,
+    "microsoft/Phi-3.5-mini-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-medium-4k-instruct": "identical",
+    "microsoft/Phi-3.5-mini-instruct": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.948,
+   "ci": [
+    0.9,
+    0.9840000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.9,
+    0.94,
+    0.98,
+    0.96,
+    0.96
+   ],
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2-7B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-1.5B-Instruct": 1.0,
+    "Qwen/Qwen2-7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-1.5B-Instruct": "identical",
+    "Qwen/Qwen2-7B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.948,
+   "ci": [
+    0.9,
+    0.9840000000000001
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.88,
+    0.96,
+    0.98,
+    0.96,
+    0.96
+   ],
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-7B-Instruct": 1.0,
+    "Qwen/Qwen2.5-0.5B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-7B-Instruct": "identical",
+    "Qwen/Qwen2.5-0.5B-Instruct": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.948,
+   "ci": [
+    0.8958999999999999,
+    0.992
+   ],
+   "band": "uncertain",
+   "linear": 0.96,
+   "per_seed": [
+    0.96,
+    0.94,
+    0.98,
+    0.92,
+    0.94
+   ],
+   "pair": "Qwen/Qwen2-7B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-7B-Instruct": 1.0,
+    "Qwen/Qwen2.5-3B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-7B-Instruct": "identical",
+    "Qwen/Qwen2.5-3B-Instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.948,
+   "ci": [
+    0.9039999999999999,
+    0.9840000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    0.96,
+    0.94,
+    0.92,
+    0.94
+   ],
+   "pair": "Qwen/Qwen3-4B-Instruct-2507 | Qwen/Qwen3.5-9B",
+   "candidate_members": [
+    "Qwen/Qwen3-4B-Instruct-2507",
+    "Qwen/Qwen3.5-9B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.948,
+   "ci": [
+    0.9119999999999999,
+    0.98
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.9,
+    0.94,
+    0.96,
+    0.96,
+    0.98
+   ],
+   "pair": "ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+   "candidate_members": [
+    "ibm-granite/granite-3.2-8b-instruct"
+   ],
+   "lineages": [
+    "granite-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "ibm-granite/granite-3.0-8b-instruct": 1.0
+   },
+   "tokparity": {
+    "ibm-granite/granite-3.0-8b-instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.948,
+   "ci": [
+    0.8959999999999999,
+    0.996
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.92,
+    0.96,
+    0.94,
+    0.96,
+    0.96
+   ],
+   "pair": "ibm-granite/granite-4.1-8b | ibm-granite/granite-4.2-8b",
+   "candidate_members": [
+    "ibm-granite/granite-4.1-8b",
+    "ibm-granite/granite-4.2-8b"
+   ],
+   "lineages": [
+    "granite-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.9520000000000001,
+   "ci": [
+    0.92,
+    0.98
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    0.88,
+    1.0,
+    0.96,
+    0.96
+   ],
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-1.1-2b-it": 1.0,
+    "google/gemma-2b-it": 0.6525096525096525
+   },
+   "tokparity": {
+    "google/gemma-1.1-2b-it": "identical",
+    "google/gemma-2b-it": "identical"
+   },
+   "nn1": 0.88
+  },
+  {
+   "acc": 0.9520000000000001,
+   "ci": [
+    0.8959999999999999,
+    1.0
+   ],
+   "band": "uncertain",
+   "linear": 0.98,
+   "per_seed": [
+    0.96,
+    0.96,
+    0.94,
+    0.94,
+    0.96
+   ],
+   "pair": "ibm-granite/granite-4.1-8b | ibm-granite/granite-4.2-3b",
+   "candidate_members": [
+    "ibm-granite/granite-4.1-8b",
+    "ibm-granite/granite-4.2-3b"
+   ],
+   "lineages": [
+    "granite-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.956,
+   "ci": [
+    0.9080000000000001,
+    0.9880000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    0.98,
+    0.98,
+    0.88,
+    0.98
+   ],
+   "pair": "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k | HuggingFaceTB/SmolLM2-360M-Instruct",
+   "candidate_members": [
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+    "HuggingFaceTB/SmolLM2-360M-Instruct"
+   ],
+   "lineages": [
+    "smollm2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.88
+  },
+  {
+   "acc": 0.956,
+   "ci": [
+    0.92,
+    0.9840000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    0.94,
+    0.98,
+    0.96,
+    0.94
+   ],
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0,
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.956,
+   "ci": [
+    0.9319999999999999,
+    0.98
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.94,
+    0.94,
+    0.94,
+    1.0,
+    0.96
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.3",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.1": 1.0,
+    "mistralai/Mistral-7B-Instruct-v0.3": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.1": "identical",
+    "mistralai/Mistral-7B-Instruct-v0.3": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.96,
+   "ci": [
+    0.932,
+    0.9840000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.9,
+    0.98,
+    0.96,
+    0.98,
+    0.98
+   ],
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-1.5B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-1.5B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.96,
+   "ci": [
+    0.9359999999999999,
+    0.9840000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.92,
+    0.96,
+    0.98,
+    1.0,
+    0.94
+   ],
+   "pair": "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct-1M"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2.5-3B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2.5-3B-Instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.96,
+   "ci": [
+    0.9159999999999999,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.94,
+    0.96,
+    0.96,
+    0.98,
+    0.96
+   ],
+   "pair": "ibm-granite/granite-4.1-3b | ibm-granite/granite-4.1-8b",
+   "candidate_members": [
+    "ibm-granite/granite-4.1-3b",
+    "ibm-granite/granite-4.1-8b"
+   ],
+   "lineages": [
+    "granite-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.96,
+   "ci": [
+    0.92,
+    0.9880000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.96,
+    0.96,
+    0.96,
+    0.96,
+    0.96
+   ],
+   "pair": "ibm-granite/granite-4.1-3b | ibm-granite/granite-4.2-3b",
+   "candidate_members": [
+    "ibm-granite/granite-4.1-3b",
+    "ibm-granite/granite-4.2-3b"
+   ],
+   "lineages": [
+    "granite-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.82
+  },
+  {
+   "acc": 0.96,
+   "ci": [
+    0.924,
+    0.9880000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.96,
+    0.96,
+    0.96,
+    0.94,
+    0.98
+   ],
+   "pair": "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.96,
+   "ci": [
+    0.9159999999999999,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    0.94,
+    0.98,
+    0.96,
+    0.94
+   ],
+   "pair": "nvidia/Llama3-ChatQA-1.5-8B | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0,
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical",
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.9640000000000001,
+   "ci": [
+    0.9278999999999998,
+    0.9919999999999999
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.92,
+    0.98,
+    0.98,
+    0.98,
+    0.96
+   ],
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+   "candidate_members": [
+    "Qwen/Qwen2.5-7B-Instruct-1M"
+   ],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-1.5B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-1.5B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.9640000000000001,
+   "ci": [
+    0.9280000000000002,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.98,
+    0.94,
+    0.98,
+    0.98,
+    0.94
+   ],
+   "pair": "Qwen/Qwen2.5-0.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2.5-0.5B-Instruct": 1.0,
+    "Qwen/Qwen2.5-3B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2.5-0.5B-Instruct": "identical",
+    "Qwen/Qwen2.5-3B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.9640000000000001,
+   "ci": [
+    0.92,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.98,
+    0.96,
+    0.96,
+    0.96,
+    0.96
+   ],
+   "pair": "Qwen/Qwen3-8B | Qwen/Qwen3.5-4B",
+   "candidate_members": [
+    "Qwen/Qwen3-8B",
+    "Qwen/Qwen3.5-4B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": true,
+   "batch1_members": [
+    "Qwen/Qwen3.5-4B"
+   ],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.9640000000000001,
+   "ci": [
+    0.924,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.96,
+    0.98,
+    0.94,
+    0.96,
+    0.98
+   ],
+   "pair": "google/gemma-1.1-7b-it | google/gemma-7b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-1.1-7b-it": 1.0,
+    "google/gemma-7b-it": 0.16988416988416988
+   },
+   "tokparity": {
+    "google/gemma-1.1-7b-it": "identical",
+    "google/gemma-7b-it": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.9640000000000001,
+   "ci": [
+    0.924,
+    0.9920999999999994
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    0.96,
+    0.98,
+    0.94,
+    0.98
+   ],
+   "pair": "openchat/openchat_3.5 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "openchat/openchat_3.5": 1.0,
+    "upstage/SOLAR-10.7B-Instruct-v1.0": 1.0
+   },
+   "tokparity": {
+    "openchat/openchat_3.5": "identical",
+    "upstage/SOLAR-10.7B-Instruct-v1.0": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.9400000000000002,
+    0.9880000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.98,
+    0.98,
+    0.92,
+    1.0,
+    0.96
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B | Qwen/Qwen3.5-4B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3.5-4B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": true,
+   "batch1_members": [
+    "Qwen/Qwen3.5-4B"
+   ],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.936,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.96,
+    0.94,
+    1.0,
+    0.96,
+    0.98
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3.5-4B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "Qwen/Qwen3.5-4B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": true,
+   "batch1_members": [
+    "Qwen/Qwen3.5-4B"
+   ],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.9280000000000002,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.96,
+    0.98,
+    0.96,
+    1.0,
+    0.94
+   ],
+   "pair": "Qwen/Qwen3-8B | Qwen/Qwen3.5-9B",
+   "candidate_members": [
+    "Qwen/Qwen3-8B",
+    "Qwen/Qwen3.5-9B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.9440000000000001,
+    0.9880000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.96,
+    0.98,
+    1.0,
+    0.9
+   ],
+   "pair": "ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+   "candidate_members": [
+    "ibm-granite/granite-3.3-8b-instruct"
+   ],
+   "lineages": [
+    "granite-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "ibm-granite/granite-3.0-8b-instruct": 1.0
+   },
+   "tokparity": {
+    "ibm-granite/granite-3.0-8b-instruct": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.9440000000000001,
+    0.9880000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    0.98,
+    1.0,
+    0.94,
+    0.94
+   ],
+   "pair": "microsoft/Phi-3-mini-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-mini-128k-instruct": 1.0,
+    "microsoft/Phi-3.5-mini-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-mini-128k-instruct": "identical",
+    "microsoft/Phi-3.5-mini-instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.924,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.94,
+    0.98,
+    1.0,
+    0.96,
+    0.96
+   ],
+   "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-mini-4k-instruct": 1.0,
+    "microsoft/Phi-3.5-mini-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-mini-4k-instruct": "identical",
+    "microsoft/Phi-3.5-mini-instruct": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.9279999999999999,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.94,
+   "per_seed": [
+    1.0,
+    0.94,
+    0.98,
+    0.96,
+    0.96
+   ],
+   "pair": "microsoft/Phi-4-mini-instruct | microsoft/phi-4",
+   "candidate_members": [
+    "microsoft/Phi-4-mini-instruct",
+    "microsoft/phi-4"
+   ],
+   "lineages": [
+    "phi-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.9280000000000002,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    0.94,
+    0.98,
+    0.96,
+    0.98
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.3": 1.0,
+    "upstage/SOLAR-10.7B-Instruct-v1.0": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.3": "identical",
+    "upstage/SOLAR-10.7B-Instruct-v1.0": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.968,
+   "ci": [
+    0.94,
+    0.9880000000000001
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    0.96,
+    1.0,
+    0.96,
+    0.92,
+    1.0
+   ],
+   "pair": "tiiuae/Falcon3-1B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "candidate_members": [
+    "tiiuae/Falcon3-1B-Instruct"
+   ],
+   "lineages": [
+    "falcon-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "tiiuae/Falcon3-7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "tiiuae/Falcon3-7B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.972,
+   "ci": [
+    0.948,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    0.94,
+    0.98,
+    1.0,
+    0.98
+   ],
+   "pair": "HuggingFaceH4/zephyr-7b-beta | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "HuggingFaceH4/zephyr-7b-beta": 1.0,
+    "upstage/SOLAR-10.7B-Instruct-v1.0": 1.0
+   },
+   "tokparity": {
+    "HuggingFaceH4/zephyr-7b-beta": "identical",
+    "upstage/SOLAR-10.7B-Instruct-v1.0": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.972,
+   "ci": [
+    0.9359999999999999,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    0.94,
+    0.98,
+    0.98,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.972,
+   "ci": [
+    0.924,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    0.96,
+    0.96,
+    0.98,
+    0.98
+   ],
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-3B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0,
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical",
+    "meta-llama/Llama-3.2-3B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.972,
+   "ci": [
+    0.932,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.92,
+    1.0,
+    0.98,
+    0.98,
+    0.98
+   ],
+   "pair": "ibm-granite/granite-3.0-8b-instruct | ibm-granite/granite-3.1-8b-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "granite-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "ibm-granite/granite-3.0-8b-instruct": 1.0,
+    "ibm-granite/granite-3.1-8b-instruct": 1.0
+   },
+   "tokparity": {
+    "ibm-granite/granite-3.0-8b-instruct": "identical",
+    "ibm-granite/granite-3.1-8b-instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.972,
+   "ci": [
+    0.94,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    0.96,
+    0.98,
+    0.96,
+    0.98
+   ],
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981,
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-3B-Instruct": "identical",
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.972,
+   "ci": [
+    0.948,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    0.96,
+    0.96,
+    0.98,
+    0.98
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.1": 1.0,
+    "upstage/SOLAR-10.7B-Instruct-v1.0": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.1": "identical",
+    "upstage/SOLAR-10.7B-Instruct-v1.0": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.972,
+   "ci": [
+    0.9439,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    0.96,
+    0.96,
+    1.0,
+    0.96
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.3 | openchat/openchat_3.5",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.3": 1.0,
+    "openchat/openchat_3.5": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.3": "identical",
+    "openchat/openchat_3.5": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.9440000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    0.96,
+    0.94,
+    1.0,
+    1.0
+   ],
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.3",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "HuggingFaceH4/zephyr-7b-beta": 1.0,
+    "mistralai/Mistral-7B-Instruct-v0.3": 1.0
+   },
+   "tokparity": {
+    "HuggingFaceH4/zephyr-7b-beta": "identical",
+    "mistralai/Mistral-7B-Instruct-v0.3": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.9520000000000002,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    1.0,
+    0.94,
+    1.0,
+    0.98
+   ],
+   "pair": "HuggingFaceH4/zephyr-7b-beta | openchat/openchat_3.5",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "HuggingFaceH4/zephyr-7b-beta": 1.0,
+    "openchat/openchat_3.5": 1.0
+   },
+   "tokparity": {
+    "HuggingFaceH4/zephyr-7b-beta": "identical",
+    "openchat/openchat_3.5": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.956,
+    0.9920999999999994
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.92,
+    1.0,
+    1.0,
+    0.96
+   ],
+   "pair": "Qwen/Qwen3-4B | Qwen/Qwen3.5-9B",
+   "candidate_members": [
+    "Qwen/Qwen3-4B",
+    "Qwen/Qwen3.5-9B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.9519999999999998,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.92,
+    0.98,
+    0.98,
+    1.0,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | meta-llama/Llama-3.2-3B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-3B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.94,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    0.98,
+    0.96,
+    0.98,
+    0.98
+   ],
+   "pair": "google/gemma-1.1-2b-it | google/gemma-7b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-1.1-2b-it": 1.0,
+    "google/gemma-7b-it": 0.16988416988416988
+   },
+   "tokparity": {
+    "google/gemma-1.1-2b-it": "identical",
+    "google/gemma-7b-it": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.94,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.96,
+    0.96,
+    0.98,
+    0.98
+   ],
+   "pair": "ibm-granite/granite-4.1-3b | ibm-granite/granite-4.2-8b",
+   "candidate_members": [
+    "ibm-granite/granite-4.1-3b",
+    "ibm-granite/granite-4.2-8b"
+   ],
+   "lineages": [
+    "granite-4"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.88
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.9520000000000001,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.96,
+    0.98,
+    0.98,
+    0.96
+   ],
+   "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3.5-mini-instruct",
+   "candidate_members": [],
+   "lineages": [
+    "phi-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "microsoft/Phi-3-medium-128k-instruct": 1.0,
+    "microsoft/Phi-3.5-mini-instruct": 1.0
+   },
+   "tokparity": {
+    "microsoft/Phi-3-medium-128k-instruct": "identical",
+    "microsoft/Phi-3.5-mini-instruct": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.9359999999999999,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    1.0,
+    0.98,
+    0.98,
+    0.96,
+    0.96
+   ],
+   "pair": "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.976,
+   "ci": [
+    0.96,
+    0.992
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    0.9,
+    1.0
+   ],
+   "pair": "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-1B-Instruct",
+   "candidate_members": [
+    "tiiuae/Falcon3-1B-Instruct"
+   ],
+   "lineages": [
+    "falcon-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "tiiuae/Falcon3-10B-Instruct": 1.0
+   },
+   "tokparity": {
+    "tiiuae/Falcon3-10B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.98,
+   "ci": [
+    0.94,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    0.98,
+    0.98,
+    0.98,
+    0.98
+   ],
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3-8B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0,
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical",
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.98,
+   "ci": [
+    0.9440000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.98,
+    0.98,
+    0.98,
+    0.96
+   ],
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0,
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical",
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.98,
+   "ci": [
+    0.96,
+    0.996
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.94,
+    1.0,
+    0.98,
+    1.0,
+    0.98
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | openchat/openchat_3.5",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.2": 1.0,
+    "openchat/openchat_3.5": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.2": "identical",
+    "openchat/openchat_3.5": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.96,
+    1.0,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-3B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "qwen2"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "Qwen/Qwen2-1.5B-Instruct": 1.0,
+    "Qwen/Qwen2.5-3B-Instruct": 1.0
+   },
+   "tokparity": {
+    "Qwen/Qwen2-1.5B-Instruct": "identical",
+    "Qwen/Qwen2.5-3B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.96,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.98,
+    0.98,
+    0.98,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B",
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    0.94,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B",
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.956,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    0.98,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    0.98,
+    1.0,
+    1.0,
+    0.98
+   ],
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-1.1-7b-it": 1.0,
+    "google/gemma-2b-it": 0.6525096525096525
+   },
+   "tokparity": {
+    "google/gemma-1.1-7b-it": "identical",
+    "google/gemma-2b-it": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.96,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0,
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical",
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9599,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    0.96,
+    0.98
+   ],
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3-8B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981,
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical",
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.98,
+    0.98,
+    0.98,
+    0.98
+   ],
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+   "candidate_members": [
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    0.98,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981,
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical",
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.9840000000000001,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    0.98,
+    0.96
+   ],
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981,
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-3B-Instruct": "identical",
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    1.0,
+    0.98,
+    0.98,
+    1.0,
+    0.98
+   ],
+   "pair": "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.1",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "HuggingFaceH4/zephyr-7b-beta": 1.0,
+    "mistralai/Mistral-7B-Instruct-v0.1": 1.0
+   },
+   "tokparity": {
+    "HuggingFaceH4/zephyr-7b-beta": "identical",
+    "mistralai/Mistral-7B-Instruct-v0.1": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.9680000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    0.98,
+    0.98,
+    1.0
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B | Qwen/Qwen3.5-9B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3.5-9B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.9680000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    0.98,
+    1.0,
+    0.96
+   ],
+   "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3.5-9B",
+   "candidate_members": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "Qwen/Qwen3.5-9B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.96,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "Qwen/Qwen3-4B | Qwen/Qwen3.5-4B",
+   "candidate_members": [
+    "Qwen/Qwen3-4B",
+    "Qwen/Qwen3.5-4B"
+   ],
+   "lineages": [
+    "qwen3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": true,
+   "batch1_members": [
+    "Qwen/Qwen3.5-4B"
+   ],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    0.98,
+    1.0,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    1.0,
+    0.96,
+    0.98,
+    1.0,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0,
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.968,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "meta-llama/Llama-3.2-1B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981,
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical",
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    0.98,
+    0.98,
+    0.98
+   ],
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981,
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-3B-Instruct": "identical",
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.9640000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0,
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical",
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.988,
+   "ci": [
+    0.968,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    1.0,
+    0.96
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.1 | mistralai/Mistral-7B-Instruct-v0.2",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.1": 1.0,
+    "mistralai/Mistral-7B-Instruct-v0.2": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.1": "identical",
+    "mistralai/Mistral-7B-Instruct-v0.2": "identical"
+   },
+   "nn1": 0.92
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    0.98,
+    1.0,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    1.0,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.96,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "google/gemma-2-9b-it | google/gemma-7b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-2-9b-it": 0.8552123552123552,
+    "google/gemma-7b-it": 0.16988416988416988
+   },
+   "tokparity": {
+    "google/gemma-2-9b-it": "identical",
+    "google/gemma-7b-it": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | meta-llama/Llama-3.2-1B-Instruct",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0,
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical",
+    "meta-llama/Llama-3.2-1B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.96,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    0.96,
+    1.0
+   ],
+   "pair": "meta-llama/Llama-3.2-3B-Instruct | nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+   "candidate_members": [
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-3B-Instruct": "identical"
+   },
+   "nn1": 0.9
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.976,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+   "candidate_members": [
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.96
+   ],
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0,
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical",
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+   "candidate_members": [
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    0.98,
+    0.98
+   ],
+   "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0,
+    "nvidia/Llama3-ChatQA-1.5-8B": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical",
+    "nvidia/Llama3-ChatQA-1.5-8B": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.98,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "mistralai/Mistral-7B-Instruct-v0.2 | upstage/SOLAR-10.7B-Instruct-v1.0",
+   "candidate_members": [],
+   "lineages": [
+    "mistral-7b"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "mistralai/Mistral-7B-Instruct-v0.2": 1.0,
+    "upstage/SOLAR-10.7B-Instruct-v1.0": 1.0
+   },
+   "tokparity": {
+    "mistralai/Mistral-7B-Instruct-v0.2": "identical",
+    "upstage/SOLAR-10.7B-Instruct-v1.0": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 0.992,
+   "ci": [
+    0.968,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    0.98,
+    0.98,
+    1.0,
+    1.0
+   ],
+   "pair": "utter-project/EuroLLM-9B-Instruct | utter-project/EuroLLM-9B-Instruct-2512",
+   "candidate_members": [
+    "utter-project/EuroLLM-9B-Instruct",
+    "utter-project/EuroLLM-9B-Instruct-2512"
+   ],
+   "lineages": [
+    "eurollm"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {},
+   "tokparity": {},
+   "nn1": 0.94
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | meta-llama/Llama-3.2-1B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.98
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | meta-llama/Meta-Llama-3-8B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    0.98,
+    1.0,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | meta-llama/Meta-Llama-3-8B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "google/gemma-1.1-2b-it | google/gemma-2-9b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-1.1-2b-it": 1.0,
+    "google/gemma-2-9b-it": 0.8552123552123552
+   },
+   "tokparity": {
+    "google/gemma-1.1-2b-it": "identical",
+    "google/gemma-2-9b-it": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    0.98,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "google/gemma-2-9b-it | google/gemma-2b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-2-9b-it": 0.8552123552123552,
+    "google/gemma-2b-it": 0.6525096525096525
+   },
+   "tokparity": {
+    "google/gemma-2-9b-it": "identical",
+    "google/gemma-2b-it": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "gradientai/Llama-3-8B-Instruct-Gradient-1048k | nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+   "candidate_members": [
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": 1.0
+   },
+   "tokparity": {
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.98
+   ],
+   "pair": "meta-llama/Meta-Llama-3-8B-Instruct | openchat/openchat-3.6-8b-20240522",
+   "candidate_members": [],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": 1.0,
+    "openchat/openchat-3.6-8b-20240522": 1.0
+   },
+   "tokparity": {
+    "meta-llama/Meta-Llama-3-8B-Instruct": "identical",
+    "openchat/openchat-3.6-8b-20240522": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.988,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    0.98,
+    1.0
+   ],
+   "pair": "utter-project/EuroLLM-1.7B-Instruct | utter-project/EuroLLM-9B-Instruct",
+   "candidate_members": [
+    "utter-project/EuroLLM-9B-Instruct"
+   ],
+   "lineages": [
+    "eurollm"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "utter-project/EuroLLM-1.7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "utter-project/EuroLLM-1.7B-Instruct": "identical"
+   },
+   "nn1": 0.98
+  },
+  {
+   "acc": 0.996,
+   "ci": [
+    0.9840000000000001,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    0.98,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "utter-project/EuroLLM-1.7B-Instruct | utter-project/EuroLLM-9B-Instruct-2512",
+   "candidate_members": [
+    "utter-project/EuroLLM-9B-Instruct-2512"
+   ],
+   "lineages": [
+    "eurollm"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "utter-project/EuroLLM-1.7B-Instruct": 1.0
+   },
+   "tokparity": {
+    "utter-project/EuroLLM-1.7B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 0.98,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | meta-llama/Llama-3.2-3B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-3B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-3B-Instruct": "identical"
+   },
+   "nn1": 0.96
+  },
+  {
+   "acc": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | meta-llama/Llama-3.2-1B-Instruct",
+   "candidate_members": [
+    "allenai/Llama-3.1-Tulu-3.1-8B"
+   ],
+   "lineages": [
+    "llama-3"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "meta-llama/Llama-3.2-1B-Instruct": 0.9980694980694981
+   },
+   "tokparity": {
+    "meta-llama/Llama-3.2-1B-Instruct": "identical"
+   },
+   "nn1": 1.0
+  },
+  {
+   "acc": 1.0,
+   "ci": [
+    1.0,
+    1.0
+   ],
+   "band": "stably_easy",
+   "linear": 1.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "pair": "google/gemma-1.1-7b-it | google/gemma-2-9b-it",
+   "candidate_members": [],
+   "lineages": [
+    "gemma"
+   ],
+   "mixed_env": false,
+   "gen_env": [
+    "llmmap-gpu-v2",
+    "llmmap-gpu-v2"
+   ],
+   "batch1": false,
+   "batch1_members": [],
+   "f1_identical_rate": {
+    "google/gemma-1.1-7b-it": 1.0,
+    "google/gemma-2-9b-it": 0.8552123552123552
+   },
+   "tokparity": {
+    "google/gemma-1.1-7b-it": "identical",
+    "google/gemma-2-9b-it": "identical"
+   },
+   "nn1": 1.0
+  }
+ ],
+ "population_check_nonN_below_tau": [
+  {
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct",
+   "acc": 0.768,
+   "lineages": [
+    "llama-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct",
+   "acc": 0.7879999999999999,
+   "lineages": [
+    "falcon-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct",
+   "acc": 0.7919999999999999,
+   "lineages": [
+    "llama-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+   "acc": 0.808,
+   "lineages": [
+    "phi-3",
+    "phi-4"
+   ]
+  },
+  {
+   "pair": "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct",
+   "acc": 0.8320000000000001,
+   "lineages": [
+    "falcon-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct",
+   "acc": 0.836,
+   "lineages": [
+    "llama-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5",
+   "acc": 0.836,
+   "lineages": [
+    "llama-3",
+    "mistral-7b"
+   ]
+  },
+  {
+   "pair": "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+   "acc": 0.8560000000000001,
+   "lineages": [
+    "decilm",
+    "llama-3"
+   ]
+  },
+  {
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct",
+   "acc": 0.8560000000000001,
+   "lineages": [
+    "llama-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct",
+   "acc": 0.8640000000000001,
+   "lineages": [
+    "llama-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct",
+   "acc": 0.868,
+   "lineages": [
+    "falcon-h1",
+    "olmo-3"
+   ]
+  },
+  {
+   "pair": "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct",
+   "acc": 0.8720000000000001,
+   "lineages": [
+    "falcon-3",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat",
+   "acc": 0.8799999999999999,
+   "lineages": [
+    "internlm2",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat",
+   "acc": 0.884,
+   "lineages": [
+    "internlm2",
+    "llama-3"
+   ]
+  },
+  {
+   "pair": "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct",
+   "acc": 0.884,
+   "lineages": [
+    "falcon-3",
+    "llama-3"
+   ]
+  },
+  {
+   "pair": "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct",
+   "acc": 0.884,
+   "lineages": [
+    "falcon-h1",
+    "phi-4"
+   ]
+  },
+  {
+   "pair": "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat",
+   "acc": 0.8879999999999999,
+   "lineages": [
+    "internlm2",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct",
+   "acc": 0.892,
+   "lineages": [
+    "falcon-h1",
+    "olmo-2"
+   ]
+  },
+  {
+   "pair": "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct",
+   "acc": 0.892,
+   "lineages": [
+    "falcon-h1",
+    "olmo-2"
+   ]
+  }
+ ],
+ "one_nn": {
+  "H_1NN": [
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+   "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global",
+   "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+   "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+   "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-360M-Instruct",
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k | HuggingFaceTB/SmolLM2-360M-Instruct",
+   "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B",
+   "Qwen/Qwen3-4B | Qwen/Qwen3-8B",
+   "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+   "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+   "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct",
+   "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+   "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+   "google/gemma-1.1-2b-it | google/gemma-2b-it",
+   "google/gemma-2b-it | google/gemma-7b-it",
+   "google/gemma-4-12B-it | google/gemma-4-E4B-it",
+   "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+   "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+   "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+   "ibm-granite/granite-4.1-3b | ibm-granite/granite-4.2-3b",
+   "ibm-granite/granite-4.1-3b | ibm-granite/granite-4.2-8b",
+   "ibm-granite/granite-4.2-3b | ibm-granite/granite-4.2-8b",
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16",
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+   "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct",
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+   "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct"
+  ],
+  "overlap": 29,
+  "only_trained": [
+   "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+   "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507",
+   "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+   "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B",
+   "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507",
+   "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct",
+   "google/gemma-3-1b-it | google/gemma-3-4b-it",
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3"
+  ],
+  "only_1NN": [
+   "HuggingFaceH4/zephyr-7b-beta | mistralai/Mistral-7B-Instruct-v0.2",
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-360M-Instruct",
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k | HuggingFaceTB/SmolLM2-360M-Instruct",
+   "google/gemma-1.1-2b-it | google/gemma-2b-it",
+   "google/gemma-2b-it | google/gemma-7b-it",
+   "ibm-granite/granite-4.1-3b | ibm-granite/granite-4.2-3b",
+   "ibm-granite/granite-4.1-3b | ibm-granite/granite-4.2-8b",
+   "ibm-granite/granite-4.2-3b | ibm-granite/granite-4.2-8b",
+   "meta-llama/Llama-3.2-1B-Instruct | meta-llama/Meta-Llama-3.1-8B-Instruct"
+  ],
+  "spearman_N": 0.7718746647326729
+ },
+ "linear": {
+  "H_linear": [
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+   "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+   "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+   "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+   "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507",
+   "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+   "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+   "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct",
+   "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+   "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+   "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16"
+  ],
+  "overlap": 17,
+  "spearman_N": 0.8091791902707032
+ },
+ "env_drift": {
+  "CohereForAI/aya-23-8B": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.017877617877617876
+  },
+  "Deci/DeciLM-7B-instruct": {
+   "gen_env": "llmmap-gpu",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.01746644603787461
+  },
+  "HuggingFaceH4/zephyr-7b-beta": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.00489060489060489
+  },
+  "Qwen/Qwen2-1.5B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.07577115852977923
+  },
+  "Qwen/Qwen2-7B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.03619047619047619
+  },
+  "Qwen/Qwen2.5-0.5B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.053955688772420844
+  },
+  "Qwen/Qwen2.5-3B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.008457437028865599
+  },
+  "google/gemma-1.1-2b-it": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.005148005148005148
+  },
+  "google/gemma-1.1-7b-it": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.018018018018018014
+  },
+  "google/gemma-2-9b-it": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 0.8552123552123552,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.01201201201201201
+  },
+  "google/gemma-2b-it": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 0.6525096525096525,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.03008365508365508
+  },
+  "google/gemma-7b-it": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 0.16988416988416988,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.0814028314028314
+  },
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.01776061776061776
+  },
+  "ibm-granite/granite-3.0-8b-instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.0074646074646074635
+  },
+  "ibm-granite/granite-3.1-8b-instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.007170435741864313
+  },
+  "internlm/internlm2_5-7b-chat": {
+   "gen_env": "llmmap-internlm",
+   "f1_identical_rate": 0.5019305019305019,
+   "tokparity": {
+    "old_env": "internlm",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 32375,
+    "ids_differ_same_text": 32375
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.12001287001287
+  },
+  "meta-llama/Llama-2-7b-chat-hf": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [
+    "tokenizer {'legacy': True}"
+   ],
+   "env_1nn_acc": 0.0
+  },
+  "meta-llama/Llama-3.2-1B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 0.9980694980694981,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.04370492941921513
+  },
+  "meta-llama/Llama-3.2-3B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 0.9980694980694981,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.012097812097812098
+  },
+  "meta-llama/Meta-Llama-3-8B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.03007905865048722
+  },
+  "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.06810036053733533
+  },
+  "microsoft/Phi-3-medium-128k-instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [
+    "config: rope_scaling.original_max_position_embeddings=4096 (copied from top level)"
+   ],
+   "env_1nn_acc": 0.05910133736220693
+  },
+  "microsoft/Phi-3-medium-4k-instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.06399194225281182
+  },
+  "microsoft/Phi-3-mini-128k-instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.02497901628336411
+  },
+  "microsoft/Phi-3-mini-4k-instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.09217148479821291
+  },
+  "microsoft/Phi-3.5-mini-instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.006435006435006435
+  },
+  "mistralai/Mistral-7B-Instruct-v0.1": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.02338665195808053
+  },
+  "mistralai/Mistral-7B-Instruct-v0.2": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.001287001287001287
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.0
+  },
+  "nvidia/Llama3-ChatQA-1.5-8B": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.14160167024403084
+  },
+  "openchat/openchat-3.6-8b-20240522": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.0074646074646074635
+  },
+  "openchat/openchat_3.5": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.010038610038610037
+  },
+  "tiiuae/Falcon3-10B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.04379004487112595
+  },
+  "tiiuae/Falcon3-7B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.021499695183905713
+  },
+  "togethercomputer/Llama-2-7B-32K-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.001287001287001287
+  },
+  "upstage/SOLAR-10.7B-Instruct-v1.0": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.002574002574002574
+  },
+  "utter-project/EuroLLM-1.7B-Instruct": {
+   "gen_env": "llmmap-gpu-v2",
+   "f1_identical_rate": 1.0,
+   "tokparity": {
+    "old_env": "old",
+    "n": 32375,
+    "text_differs": 0,
+    "ids_differ": 0,
+    "ids_differ_same_text": 0
+   },
+   "compat_shims": [],
+   "env_1nn_acc": 0.008457437028865599
+  }
+ },
+ "b0_runs": [
+  {
+   "seed": 0,
+   "wall_s": 11.2,
+   "train_acc": 0.912156862745098,
+   "val_acc": 0.707764705882353,
+   "val_mean_top1": 0.707764705882353,
+   "best_ckpt": "best-epoch=07-val_loss=1.0500.ckpt",
+   "ckpt": "./results/D027/models/b0_paper8_k8_r0.ckpt"
+  },
+  {
+   "seed": 1,
+   "wall_s": 6.2,
+   "train_acc": 0.7971764705882353,
+   "val_acc": 0.6743529411764706,
+   "val_mean_top1": 0.6743529411764706,
+   "best_ckpt": "best-epoch=04-val_loss=1.1190.ckpt",
+   "ckpt": "./results/D027/models/b0_paper8_k8_r1.ckpt"
+  },
+  {
+   "seed": 2,
+   "wall_s": 9.9,
+   "train_acc": 0.9766274509803922,
+   "val_acc": 0.7482352941176471,
+   "val_mean_top1": 0.7482352941176471,
+   "best_ckpt": "best-epoch=10-val_loss=0.9619.ckpt",
+   "ckpt": "./results/D027/models/b0_paper8_k8_r2.ckpt"
+  },
+  {
+   "seed": 3,
+   "wall_s": 6.2,
+   "train_acc": 0.8243137254901961,
+   "val_acc": 0.6734117647058824,
+   "val_mean_top1": 0.6734117647058824,
+   "best_ckpt": "best-epoch=04-val_loss=1.0923.ckpt",
+   "ckpt": "./results/D027/models/b0_paper8_k8_r3.ckpt"
+  },
+  {
+   "seed": 4,
+   "wall_s": 12.4,
+   "train_acc": 0.9901176470588235,
+   "val_acc": 0.744,
+   "val_mean_top1": 0.744,
+   "best_ckpt": "best-epoch=14-val_loss=1.0217.ckpt",
+   "ckpt": "./results/D027/models/b0_paper8_k8_r4.ckpt"
+  }
+ ],
+ "linear_fit": {
+  "n_iter": 681,
+  "converged": true,
+  "val_mean_top1": 0.8348235294117647,
+  "wall_s": 71.4
+ },
+ "wall_s": 5.9
+}

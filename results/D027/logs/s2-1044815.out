@@ -1,0 +1,124 @@
+=== node: c637-032.vista.tacc.utexas.edu start: Sat Oct  3 07:59:00 AM CDT 2026 ===
+I5 parity max |diff| = 0.0
+  CohereForAI/aya-23-8B
+  CohereLabs/tiny-aya-earth
+  CohereLabs/tiny-aya-fire
+  CohereLabs/tiny-aya-global
+  CohereLabs/tiny-aya-water
+  Deci/DeciLM-7B-instruct
+  HuggingFaceH4/zephyr-7b-beta
+  HuggingFaceTB/SmolLM2-1.7B-Instruct-16k
+  HuggingFaceTB/SmolLM2-1.7B-Instruct
+  HuggingFaceTB/SmolLM2-360M-Instruct
+  Qwen/Qwen2-1.5B-Instruct
+  Qwen/Qwen2-7B-Instruct
+  Qwen/Qwen2.5-0.5B-Instruct
+  Qwen/Qwen2.5-3B-Instruct
+  Qwen/Qwen2.5-7B-Instruct-1M
+  Qwen/Qwen2.5-7B-Instruct
+  Qwen/Qwen3-30B-A3B-Instruct-2507
+  Qwen/Qwen3-30B-A3B
+  Qwen/Qwen3-4B-Instruct-2507
+  Qwen/Qwen3-4B
+  Qwen/Qwen3-8B
+  Qwen/Qwen3.5-4B
+  Qwen/Qwen3.5-9B
+  allenai/Llama-3.1-Tulu-3-8B
+  allenai/Llama-3.1-Tulu-3.1-8B
+  allenai/OLMo-2-0425-1B-Instruct
+  allenai/OLMo-2-1124-13B-Instruct
+  allenai/OLMo-2-1124-7B-Instruct
+  allenai/Olmo-3-7B-Instruct
+  allenai/Olmo-3.1-32B-Instruct
+  google/gemma-1.1-2b-it
+  google/gemma-1.1-7b-it
+  google/gemma-2-9b-it
+  google/gemma-2b-it
+  google/gemma-3-12b-it
+  google/gemma-3-1b-it
+  google/gemma-3-4b-it
+  google/gemma-4-12B-it
+  google/gemma-4-E4B-it
+  google/gemma-7b-it
+  gradientai/Llama-3-8B-Instruct-Gradient-1048k
+  ibm-granite/granite-3.0-8b-instruct
+  ibm-granite/granite-3.1-8b-instruct
+  ibm-granite/granite-3.2-8b-instruct
+  ibm-granite/granite-3.3-8b-instruct
+  ibm-granite/granite-4.1-3b
+  ibm-granite/granite-4.1-8b
+  ibm-granite/granite-4.2-3b
+  ibm-granite/granite-4.2-8b
+  internlm/internlm2_5-7b-chat
+  meta-llama/Llama-2-7b-chat-hf
+  meta-llama/Llama-3.2-1B-Instruct
+  meta-llama/Llama-3.2-3B-Instruct
+  meta-llama/Meta-Llama-3-8B-Instruct
+  meta-llama/Meta-Llama-3.1-8B-Instruct
+  microsoft/Phi-3-medium-128k-instruct
+  microsoft/Phi-3-medium-4k-instruct
+  microsoft/Phi-3-mini-128k-instruct
+  microsoft/Phi-3-mini-4k-instruct
+  microsoft/Phi-3.5-mini-instruct
+  microsoft/Phi-4-mini-instruct
+  microsoft/phi-4
+  mistralai/Ministral-3-14B-Instruct-2512-BF16
+  mistralai/Ministral-3-3B-Instruct-2512-BF16
+  mistralai/Ministral-3-8B-Instruct-2512-BF16
+  mistralai/Mistral-7B-Instruct-v0.1
+  mistralai/Mistral-7B-Instruct-v0.2
+  mistralai/Mistral-7B-Instruct-v0.3
+  mistralai/Mistral-Small-24B-Instruct-2501
+  mistralai/Mistral-Small-3.1-24B-Instruct-2503
+  nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct
+  nvidia/Llama3-ChatQA-1.5-8B
+  openchat/openchat-3.6-8b-20240522
+  openchat/openchat_3.5
+  tiiuae/Falcon-H1-3B-Instruct
+  tiiuae/Falcon-H1-7B-Instruct
+  tiiuae/Falcon3-10B-Instruct
+  tiiuae/Falcon3-1B-Instruct
+  tiiuae/Falcon3-3B-Instruct
+  tiiuae/Falcon3-7B-Instruct
+  togethercomputer/Llama-2-7B-32K-Instruct
+  upstage/SOLAR-10.7B-Instruct-v1.0
+  utter-project/EuroLLM-1.7B-Instruct
+  utter-project/EuroLLM-9B-Instruct-2512
+  utter-project/EuroLLM-9B-Instruct
+embedded 85 complete shards -> results/D027/manifest.json
+[S2] 85 models; build (6375, 8, 2048), val (2125, 8, 2048)
+[S2] B0' seed 0: S_val top-1 0.7078 (train 0.9122) 11.2 s
+[S2] B0' seed 1: S_val top-1 0.6744 (train 0.7972) 6.2 s
+[S2] B0' seed 2: S_val top-1 0.7482 (train 0.9766) 9.9 s
+[S2] B0' seed 3: S_val top-1 0.6734 (train 0.8243) 6.2 s
+[S2] B0' seed 4: S_val top-1 0.7440 (train 0.9901) 12.4 s
+[S2] linear: S_val top-1 0.8348, converged True
+[S3] control passed=True rho65=0.777 {'tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct': {'acc_v2': 0.7559999999999999, 'ci': [0.676, 0.8320000000000001], 'acc_d025': 0.808, 'below_tau': True}, 'microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct': {'acc_v2': 0.76, 'ci': [0.696, 0.8240000000000001], 'acc_d025': 0.82, 'below_tau': True}}
+[S3] |H'|=38 |H'_new|=34 lineages=['falcon-3', 'gemma-3', 'gemma-4', 'granite-3', 'llama-3', 'ministral-3', 'mistral-small-3', 'olmo-2', 'olmo-3', 'qwen2', 'qwen3', 'smollm2', 'tiny-aya'] -> LABEL HARDER
+  0.524 [0.45,0.60] stably_hard lin 0.56 1nn 0.62 NEW CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global
+  0.532 [0.47,0.59] stably_hard lin 0.62 1nn 0.50 NEW CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water
+  0.568 [0.51,0.62] stably_hard lin 0.62 1nn 0.60 NEW CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water
+  0.632 [0.52,0.73] stably_hard lin 0.80 1nn 0.78 NEW mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16
+  0.648 [0.57,0.72] stably_hard lin 0.76 1nn 0.68 NEW CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water
+  0.684 [0.61,0.76] stably_hard lin 0.80 1nn 0.76 NEW mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16
+  0.688 [0.64,0.74] stably_hard lin 0.78 1nn 0.64 NEW ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct
+  0.716 [0.66,0.77] stably_hard lin 0.90 1nn 0.70 NEW mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16
+  0.724 [0.65,0.80] stably_hard lin 0.74 1nn 0.68 NEW CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire
+  0.728 [0.64,0.81] stably_hard lin 0.90 1nn 0.72 NEW allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct
+  0.744 [0.67,0.81] stably_hard lin 0.92 1nn 0.82 NEW mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503
+  0.752 [0.69,0.82] stably_hard lin 0.90 1nn 0.66 NEW CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global
+  0.756 [0.66,0.84] stably_hard lin 0.88 1nn 0.74 NEW allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct
+  0.756 [0.68,0.83] stably_hard lin 0.96 1nn 0.76     tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct
+  0.760 [0.70,0.82] stably_hard lin 0.82 1nn 0.74     microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct
+  0.772 [0.70,0.84] stably_hard lin 0.84 1nn 0.72 NEW B1 Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B
+  0.776 [0.71,0.85] stably_hard lin 0.88 1nn 0.90 NEW Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct
+  0.808 [0.76,0.86] stably_hard lin 0.94 1nn 0.86 NEW google/gemma-4-12B-it | google/gemma-4-E4B-it
+  0.820 [0.74,0.90] stably_hard lin 0.94 1nn 0.82 NEW tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct
+  0.824 [0.74,0.90] uncertain   lin 0.84 1nn 0.86 NEW Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B
+  0.832 [0.76,0.90] stably_hard lin 0.84 1nn 0.78 NEW allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B
+  0.832 [0.74,0.90] uncertain   lin 0.96 1nn 0.90 NEW google/gemma-3-1b-it | google/gemma-3-4b-it
+  0.840 [0.75,0.92] uncertain   lin 0.92 1nn 0.86     Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct
+  0.840 [0.74,0.92] uncertain   lin 0.96 1nn 0.92 NEW Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507
+  0.848 [0.79,0.90] uncertain   lin 0.88 1nn 0.70 NEW ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct
+[S3] headline 0.7096; v1 0.7946 cand 0.6440; nonN<tau 19; wall 5.9 s
+=== end: Sat Oct  3 08:03:11 AM CDT 2026 ===

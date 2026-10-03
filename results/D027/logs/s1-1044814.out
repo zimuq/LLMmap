@@ -1,0 +1,4 @@
+=== node: c641-121.vista.tacc.utexas.edu env: internlm start: Sat Oct  3 07:26:03 AM CDT 2026 ===
+== internlm/internlm2_5-7b-chat  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.667 pack=8 f1=0.5019305019305019 wall=322.9s
+=== end: Sat Oct  3 07:31:55 AM CDT 2026 ===

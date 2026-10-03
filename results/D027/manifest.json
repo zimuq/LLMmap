@@ -1,0 +1,2299 @@
+{
+ "schema": "cdqd-corpus-v2-screen-manifest-v1",
+ "i5_parity_max_abs": 0.0,
+ "embedding": {
+  "model": "intfloat/multilingual-e5-large-instruct",
+  "pooling": "mean, NOT normalised",
+  "dtype": "fp16",
+  "max_length": 512,
+  "env": "llmmap-gpu (unchanged)"
+ },
+ "models": {
+  "CohereForAI/aya-23-8B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "89da1a0ed02d6130f93ae0ffdbedb63b760c0471",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "794460238cce6a97bc76afee09a855125b6f51594b168a50bf8292a5aec16d7a",
+   "gen_per_s": 5.59,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 217.3,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 72,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 9,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 63.6
+   },
+   "embedding_sha256": "2e4ca4c3d372f6c6a31d985a161a7f9f483e3b063130e32b3348ace0f2c13679",
+   "f1_embedding_sha256": "5bbdbacf20f9a92638974d159651b94c072393aed4e299bda4a9571e7d6319de"
+  },
+  "CohereLabs/tiny-aya-earth": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "0624fafbe200f930b89566fc4ec4da314ba48d89",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "629480848de4b65dd699d2cbf02f749b3513146652240526681ba6f599f5da9f",
+   "gen_per_s": 4.849,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 174.9,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "0c22f0609ec491155fd78693623b10e132235f7ef3deaf0f7dcc47d50935bfbd"
+  },
+  "CohereLabs/tiny-aya-fire": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "73500c80fcb6c8bea3e830c21d5d2920249a0e1a",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "d08e3f752b5f9b8f18b9322bead96b12d222aa6beb8eef885e504243a0216ee6",
+   "gen_per_s": 5.169,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 164.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "daba0b34782fcc48c3ce2b7b0a6d088466a9ec7232bf390526125dc8258fb265"
+  },
+  "CohereLabs/tiny-aya-global": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "4e45018c7717bb8b4cf3c9a5a2034d2a2abe8bb68d66c92d2473ec527aca6055",
+   "gen_per_s": 4.58,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 184.4,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "c32d8c9ec75a607e753e9c9e47d64955e49757b77aa95a03ead94839753c9677"
+  },
+  "CohereLabs/tiny-aya-water": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "41a99216d12b3ef4881df762934186e5e4d2bbc1",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "513e8b845d52b3ecdd8138946d98c8d3466508aaf469706a5d10e042dffd1480",
+   "gen_per_s": 4.868,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 174.1,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "82bb0553944454686fcf83b6f47fac07d732de17156c65bdc3bf1e66f9cc1bc7"
+  },
+  "Deci/DeciLM-7B-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "4adc7aa9efe61b47b0a98b2cc94527d9c45c3b4f",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "0a08c0624517f32c72dab2abfb01618e6fe48c151266fd0fcc23752ad32b025a",
+   "gen_per_s": 3.156,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 352.2,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 8,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 2,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 67.2
+   },
+   "embedding_sha256": "1ae2208a99adf85b8d1c555af323d547ae7210b356e2a0f021efb31fbfe87299",
+   "f1_embedding_sha256": "1d9d3895d673d635269d4ed43a78365f20f67a795a07cb7d8dd9cee8bbb427cc"
+  },
+  "HuggingFaceH4/zephyr-7b-beta": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "892b3d7a7b1cf10c7a701c60881cd93df615734c",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "3bced2257451ff14f5f22d00ff191f5c2899811d3a003170b8b6f869b0f4e050",
+   "gen_per_s": 4.409,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 266.2,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 51,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 64.5
+   },
+   "embedding_sha256": "a18b7747ec6332019c972920e8a725e9c3f4f477d6198e3201f7d3fb45320bb8",
+   "f1_embedding_sha256": "206d620f26d8dc9911bcd5356e6f860949d1a6d1f371b56e6eb0a332a1d1bd89"
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "e6176739e9ab04f510137531200981d8401263f9",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "83b9ee5b3c8e1a3487515e8d37a5186138982a641a5962000b4b3cc56a43553c",
+   "gen_per_s": 8.445,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 99.3,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "4c8d98cefc4b6e5be41d32766d95e411e6fb1569c497d8e03bdb38aaf0010135"
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "31b70e2e869a7173562077fd711b654946d38674",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "7ff34cbd76d3533fa5b1804c0ffbb53951df3a0317ca412fbde91c3f2143daef",
+   "gen_per_s": 7.584,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 110.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "8993ad756ec726f925805199cb70dc583800bdf5e83e859ee0d85caf31e76bb6"
+  },
+  "HuggingFaceTB/SmolLM2-360M-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "a19c9c26ec59c10eeb7149187ec7c3d1251b9e35525cd1d67e9872d8db8a6c2f",
+   "gen_per_s": 6.497,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 124.5,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "40fea3f7d3722373e762b8d1bb09242f440bdeb2c7f66fb9bdc11ab1a71418d1"
+  },
+  "Qwen/Qwen2-1.5B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "ba1cf1846d7df0a0591d6c00649f57e798519da8",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "90ef84f199e6238602fbb3ab868aad060bc2e99cd817519a964742c355af6b8c",
+   "gen_per_s": 7.306,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 167.3,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 70,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 53.7
+   },
+   "embedding_sha256": "c94e7bed70db03f2cc686dddd426c4a97c67f434f91bcd2e7b2404d5cb7528f6",
+   "f1_embedding_sha256": "adbf08c977f2f0e4c7a7bc5cd9b7d289b299a64bac7543a9a2977f538a0d475a"
+  },
+  "Qwen/Qwen2-7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "f2826a00ceef68f0f2b946d945ecc0477ce4450c",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "f599f7ca3326347b61ed11c2b5747f4c00c82c873a7ee8a02e131e68de1ec56f",
+   "gen_per_s": 5.778,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 213.6,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 72,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 0,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 55.7
+   },
+   "embedding_sha256": "74586c44e7061f91d53c65886003ee6fef441e6d49d10bba912be33c84ac0ed3",
+   "f1_embedding_sha256": "1a605aa48f9e24b840451fab12a42118f972baf7b0ee9a244c666e1f54b9686c"
+  },
+  "Qwen/Qwen2.5-0.5B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "65230f2b5e7fddcba7cd9a03fff7c727c0c8fea3f5fc2f24f16c81e55be001ba",
+   "gen_per_s": 7.729,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 156.5,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 35,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 5,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 49.4
+   },
+   "embedding_sha256": "a7b4e33426152aa9b97f33ddb387c03b48d011606b2b18a77dfe269738c867bc",
+   "f1_embedding_sha256": "abb8c10b0394f8d1cfc7af0f30aab72e25a4e9e53eec1a13fdfd06c3f25a8a8e"
+  },
+  "Qwen/Qwen2.5-3B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "9b6f89b8e06c1eae8f02926206fc253badc4c9192befcf9b13cd0afb43d79ac3",
+   "gen_per_s": 5.377,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 226.2,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 63,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 67.7
+   },
+   "embedding_sha256": "fa6641a2e76e8e8191ad2cbc65fa56f240c2179106448ba2e8f8ecd9ffbe6b9b",
+   "f1_embedding_sha256": "4f124b60d96548a5ddb3c47bad67b1ef94af22e4c094cc8fd06eaf925a5b4752"
+  },
+  "Qwen/Qwen2.5-7B-Instruct-1M": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "e28526f7bb80e2a9c8af03b831a9af3812f18fba",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "53412034d34404c4a9c867181ac2a76e935345c2977c09a3b0b8e7df240961ab",
+   "gen_per_s": 5.663,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 160.3,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "f4cfc24602c221b795493b00b064cbd3cfae1564af1802b66b23255592b9399a"
+  },
+  "Qwen/Qwen2.5-7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "a1cb5fdb6cb61f9dbed2015e32cd6cad968434b6642c053d3d80ce91f1b14384",
+   "gen_per_s": 5.412,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 167.4,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "3cdc566df40da39c63ba977e8502bd19f179b84afbab588e0c41df586ab786c0"
+  },
+  "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "c240b57f6444803b45d521e0d403ed4ed8030dadd0afa241663a21fd3afdbcff",
+   "gen_per_s": 0.496,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 1847.2,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "6663a513f355027c969a8741571e828c158ed64bae3f4ba95ac4514cf1d57543"
+  },
+  "Qwen/Qwen3-30B-A3B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "ad44e777bcd18fa416d9da3bd8f70d33ebb85d39",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "3bfa93b5a5f855a12b677c4b8dbd033d1a143b6a9c6fb5b069a3459dee1213fd",
+   "gen_per_s": 0.502,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 1782.5,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "84411b9ef3e9483167f62787a744a632f27c9b426eda58d768fda7692051d515"
+  },
+  "Qwen/Qwen3-4B-Instruct-2507": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "db01fdbc835ae5fc4ce3a60048f21dcf707c8f054482738de1d2567e6c867317",
+   "gen_per_s": 4.227,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 200.2,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "70f56954d4083ce004230bd48a11cc3480a587b951b58ea357418bed1714d3e5"
+  },
+  "Qwen/Qwen3-4B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "f1633921c4d4666c3f151b4cba2dddace616755c147f87d1618a062b0ee5aa7f",
+   "gen_per_s": 3.726,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 226.3,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "6464a547679c061d87cc271a50389c07cb4dd8ad7c99927a82733196d8532455"
+  },
+  "Qwen/Qwen3-8B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "50c9a25ca4aafbd3347eaad2aa7b988814edd2eec0c8bd657fa07086473c5e7c",
+   "gen_per_s": 4.128,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 216.8,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "436cf5d6d7193a5c65017de18273bada2402b1899ae4c5f170eb60694408467c"
+  },
+  "Qwen/Qwen3.5-4B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": true,
+   "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "a23645fa98522ab6f10e0fbb5009efe7fedadbf2420f418a68addd8596526c1d",
+   "gen_per_s": 0.164,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 4900.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "427decf8711708586486698b5322243d5b8e103e9dea3704eb296c7a502d4e79"
+  },
+  "Qwen/Qwen3.5-9B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "c3280a75ab68d8cf9ce2e530bff98666738024af993c16c4d2a378d3abca3ca2",
+   "gen_per_s": 3.686,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 241.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "b538788784d6bda534d8d3813232755f34ca05a548ed8b99724f89dd3ae515a4"
+  },
+  "allenai/Llama-3.1-Tulu-3-8B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "666943798adbde0b1aff34626007e26986a3c107",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "019532bcf9f80956a0e93c050d312671ab31af18aecdf635764e25968a813029",
+   "gen_per_s": 4.17,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 213.4,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "7a5fe238bdda5523794d8c3817e73cd16b0c439176270683e38e73fa2d45b73a"
+  },
+  "allenai/Llama-3.1-Tulu-3.1-8B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "46239c2d07db76b412e1f1b0b4542f65b81fe01f",
+   "n_rows": 800,
+   "n_empty": 110,
+   "empty_rate": 0.1375,
+   "sha256": "bd082a502945a15d69cdf8abc99f77ea8aa901e55abb68f32edff47728f84e6f",
+   "gen_per_s": 4.734,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 190.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "d0b3e541fe6e92e5b6e316d6d547046c06a7d80a900e9e8c9a56f549ef7e74cc"
+  },
+  "allenai/OLMo-2-0425-1B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "d329b04bd549debaaeaaf0fa873d450459c86c343ab8c71e9cece5bba6bf1939",
+   "gen_per_s": 10.753,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 78.7,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "a23a2508f4ac081556a02d89d1351c0497ce5e592bd4f2bf1f3b73f0c65c69a5"
+  },
+  "allenai/OLMo-2-1124-13B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "3a5c85baefbb1896a54d56fe2e76c0395627ddf4",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "9755a90c35e1bc861d3c1a7efeeb56b2f7301f87ebd39335ef82018c5a7bb604",
+   "gen_per_s": 3.188,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 286.7,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "898a06a00b6675b42359a6abc8eaf474691531032c584c443b289af0856ee9e2"
+  },
+  "allenai/OLMo-2-1124-7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "29585384d648146fb084d1279510e0fb1fa3f5db04b84d91ff7f65e9f54c517e",
+   "gen_per_s": 4.419,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 198.6,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "e133653d64c4808ede9e6b56ef773a07166e9717435d35181d2b7a1ffa234691"
+  },
+  "allenai/Olmo-3-7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "6e5971d9eba42665f5bd5a0fcf047f299ce1dccc",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "83602fac1178663d225bf9faa08bad1d6fa998486647bcfced4df1f55ab0b067",
+   "gen_per_s": 3.807,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 229.9,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "3b2f17cd629a8bf4555d1b7b0c71152580e4709c2b336b3276d345f5fe8de675"
+  },
+  "allenai/Olmo-3.1-32B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "409f5004a29053433707d4349c5407475fbdc4722b934cd498fed08ca68e0892",
+   "gen_per_s": 1.532,
+   "pack": 4,
+   "oom_halvings": 1,
+   "wall_s": 603.6,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "15c8b590a4fa27019dd99beaa16655db91c4cbcb516653a7e4c99d441e2b84e3"
+  },
+  "google/gemma-1.1-2b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "d750f5eceb83e978c09e2b3597c2a8784e381022",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "40b21059958ec8b2e39cb8a5b94bed622846fd84100200e4733d5e8b7b2c0fd1",
+   "gen_per_s": 10.84,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 116.4,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 50,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 3,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 35.6
+   },
+   "embedding_sha256": "0cccc953f90b2096baef288eeb7f975cb76dd254f17b9aed4b97c3b06e19fcd7",
+   "f1_embedding_sha256": "c00ecf5e89dd31111beb0374201e2b1c5ef164aa4e7eaee3582a5e8e4a90ba78"
+  },
+  "google/gemma-1.1-7b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "065a528791af6f57f013e8e42b7276992b45ef71",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "078f49c7f17790dea8a8cea9b1102aecbae5dda51855c2edc069cf199abf6eeb",
+   "gen_per_s": 5.44,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 219.7,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 6,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 1,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 50.9
+   },
+   "embedding_sha256": "b9eccea86c99ac0c2a2dcee687135e74fae837be0d09aa1e747ea11776b088dd",
+   "f1_embedding_sha256": "d764216c0054dea8cd29ee661e16dca8d08ab177af066921822555e41ed1159f"
+  },
+  "google/gemma-2-9b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "1c94835e9553e95f491399906511387f56a7f56c569ed1a000c48675545ce57e",
+   "gen_per_s": 3.057,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 395.9,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 55,
+      "reference": true,
+      "identical": 256,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 17,
+      "reference": false,
+      "identical": 187,
+      "n": 259,
+      "identical_paper8": 5
+     }
+    ],
+    "identical_rate": 0.8552123552123552,
+    "wall_s": 106.6
+   },
+   "embedding_sha256": "8180d1cdc12c964419bd8c953aafe2209afd4dfd93d4972435ba2f692599cdcb",
+   "f1_embedding_sha256": "e165bb43bf41d4a093805775a27afb31bd0d0690b681248332ec752313f1c5a1"
+  },
+  "google/gemma-2b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "96988410cbdaeb8d5093d1ebdc5a8fb563e02bad",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "070b0c99028e2025f8c747f73db5cb5fd6ed1bd097cf18a583bd53714f889234",
+   "gen_per_s": 10.606,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 119.3,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 19,
+      "reference": true,
+      "identical": 186,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 0,
+      "reference": false,
+      "identical": 152,
+      "n": 259,
+      "identical_paper8": 7
+     }
+    ],
+    "identical_rate": 0.6525096525096525,
+    "wall_s": 34.7
+   },
+   "embedding_sha256": "bbae0f76e2e06c80abc499e097d19bf4fb986408c2d789e8b0afec74a6c30f27",
+   "f1_embedding_sha256": "19c543f9e70015c0bc476f77597370dca125aaa89d1fa6234b023bd36e7cd786"
+  },
+  "google/gemma-3-12b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "c785fe7b758c9146eedae79fac8bbf847d74c594c21388e47802cea38b1974bb",
+   "gen_per_s": 2.587,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 348.4,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "87ea914ef9b54ca982b091d5aadadb183347eb2a8b994063d03608e2780e7251"
+  },
+  "google/gemma-3-1b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "06ff95347fa64d57c3afb813bb0308ece25e7dbd930636706e5ef0d1bafd2065",
+   "gen_per_s": 4.912,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 167.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "1937ebbd4aa5311611c8086b018197ef26ef72c4141e0b7832e3a1257751682c"
+  },
+  "google/gemma-3-4b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "38b70032d60312450e39a02216bed6d464feb862a3ce3001131deb6941c29a09",
+   "gen_per_s": 3.895,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 218.7,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "5bb2245ab3576ac8152b7b833754538e73820495c006eff85db97e9e4180665c"
+  },
+  "google/gemma-4-12B-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "2caf0d5717b454b4e6311c212e1efb52731b9b47b1b578d5c7e7d38376cc37e5",
+   "gen_per_s": 2.326,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 373.4,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "b385ee8e2b63a20f9803972f64961629b103602ce5ad04a77ce4ecd02638d20f"
+  },
+  "google/gemma-4-E4B-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "e074db2044c46c2024decb72ecd94614fefda9e5fb1a393c61045f82138ea4f7",
+   "gen_per_s": 2.9,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 298.9,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "65b2702b689eca0c5a0c3cfc8eae4703ac9759999d62a7efcc9acc56b762004f"
+  },
+  "google/gemma-7b-it": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "9c5798d27f588501ce1e108079d2a19e4c3a2353",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "925877196ae065a4f49edcfa2c2c535e8b15c5f68f4002b3a05594e24207dd63",
+   "gen_per_s": 5.399,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 222.9,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 46,
+      "reference": true,
+      "identical": 70,
+      "n": 259,
+      "identical_paper8": 3
+     },
+     {
+      "config": 0,
+      "reference": false,
+      "identical": 18,
+      "n": 259,
+      "identical_paper8": 0
+     }
+    ],
+    "identical_rate": 0.16988416988416988,
+    "wall_s": 48.1
+   },
+   "embedding_sha256": "87f61d521236d13e52d629cb3b22a95872a33a6643e22023c72cd9bdff46c07b",
+   "f1_embedding_sha256": "7c3c040ad4aefd9800f063fffebfbd60b16757ce3e140f98c91e2271ff4a0ff4"
+  },
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "cd3069b65a8eb13da639d332a5f61b0fbb29fa73",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "74654e877b9ccec08ab65c3e9c38721a11f69fb8fed2ae4679e7ef5d6bdded03",
+   "gen_per_s": 4.77,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 248.9,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 30,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 0,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 59.0
+   },
+   "embedding_sha256": "bd5a0bda9e9d8531e20a83d3f81b115753a5f65cb02f7e0b6ae8c00160663467",
+   "f1_embedding_sha256": "6ed1a134c2b1ac8613f0b3c312e75e6d2b0791e727f31ed7bc42f32ea3150f36"
+  },
+  "ibm-granite/granite-3.0-8b-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "5af56291a1c6ca9056df597aab0cff53edabddb0",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "ef3c7e5ff00a277ede6a728a6b842c36fcc937386cf28247619e5c1c6d0dd629",
+   "gen_per_s": 3.596,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 316.2,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 67,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 3,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 72.9
+   },
+   "embedding_sha256": "70ca4f88dfb5200f57fcee3430e0eb42948ac6cccffdb8c3d318b78c1ad84531",
+   "f1_embedding_sha256": "8a7466dbd5d7754e0964b746703c51e5aa86869045344b37af8e02cbdaa12eeb"
+  },
+  "ibm-granite/granite-3.1-8b-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "4009206d5fc95d2e65a7b7633e159d6e97e25d35",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "9348cc1ab8ee75e4d44ceb88446b57e9bf67feea96218bb22095e43638aa4499",
+   "gen_per_s": 3.269,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 366.9,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 46,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 101.2
+   },
+   "embedding_sha256": "e5eb90c4074efeb8386f757feb45fda3b34f40867ab13de9a6b4b02be0fa27c1",
+   "f1_embedding_sha256": "7baf497b140e78a994d6d459da8bc1c8e540246b98712d217d1bad1fdc0fa723"
+  },
+  "ibm-granite/granite-3.2-8b-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "2d816dd5c982e27d148875aeabd3f6bc70b9d39b48fb5ab869c2326e7d8a3c02",
+   "gen_per_s": 3.071,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 290.8,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "d6037d747686ffa1161380bca02b70386496196be2cfaff80c1a35ebae1aa408"
+  },
+  "ibm-granite/granite-3.3-8b-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "8bae7496de07d626bbf08783a08051d4c35719ae540386b915f850cc75de013a",
+   "gen_per_s": 4.06,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 225.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "04b83153a4aa50ad17382de60e445faaa449e4bff54b9ef8cd7db73160ef3584"
+  },
+  "ibm-granite/granite-4.1-3b": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "c0650403e44e78ec0262dab1c90914c65b196c4e",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "2a7a40c305ed738ea8afe6cc21b781950f792f8f95115448c2d8f8dd43ae3e05",
+   "gen_per_s": 5.305,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 160.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "dae1e4ebc884cd163fafdd6a5f808174551bb2751bceaea2ae01b48d2ad7a71f"
+  },
+  "ibm-granite/granite-4.1-8b": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "1504002f650e656a0a3789d99574df12e3e94ed0",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "5fe6f52b155c716cb218ec361e28aaf70f5a7b4ea89d066372e330a101dfa0ad",
+   "gen_per_s": 4.036,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 221.3,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "cd915d0c440e064e2b5fae4abc554ce120f62ea57768d6c1528dfa97219dac64"
+  },
+  "ibm-granite/granite-4.2-3b": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "e459acceac81e5fe67c07d9cfc72329a332e7eb1",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "fe16bfc7ffc6425db12591706464580287eff9b35de24da0e16839252b44d137",
+   "gen_per_s": 4.521,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 189.5,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "3aeed384ee5f19fb4aa5afb5841b9c5c1edda1cf4a42bc1c2fdb1cdf5b8938f6"
+  },
+  "ibm-granite/granite-4.2-8b": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "f8de16cdcdbc6c779ca517604e050d82cc119e44",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "ba2c07d7174bd41b5b838e9fcb6310963fe7f9d5a03fe05be8a47d5f9b13e7d6",
+   "gen_per_s": 3.769,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 238.4,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "3bf25105f5cb0f8d43ebbdb0aa9fc3f4b444055bba720f427326ec7df04c691f"
+  },
+  "internlm/internlm2_5-7b-chat": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-internlm",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "eb72b541689b0432dade0435feb339b89fdd39ff",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "b3b4b6335ce2c2eb9ab251f0a52502bd45cc3d07467f4bae3f7e86baedfd91aa",
+   "gen_per_s": 3.667,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 322.9,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 54,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 1,
+      "reference": false,
+      "identical": 1,
+      "n": 259,
+      "identical_paper8": 0
+     }
+    ],
+    "identical_rate": 0.5019305019305019,
+    "wall_s": 77.3
+   },
+   "embedding_sha256": "5aaaa176d4942bfa62d78484694e98b5f898fdddeb1bdb55b93679dd931751cb",
+   "f1_embedding_sha256": "a8ae7046bd22e719c2f8de9276f22c729bb7704e6e4b5fc59d30175fc108f7fd"
+  },
+  "meta-llama/Llama-2-7b-chat-hf": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "f5db02db724555f92da89c216ac04704f23d4590",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "9d2a75b19432573b28849be592213ffe134d0eefc22f82f192efac79dd64f7f4",
+   "gen_per_s": 4.25,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 258.7,
+   "compat_shims": [
+    "tokenizer {'legacy': True}"
+   ],
+   "f1": {
+    "configs": [
+     {
+      "config": 0,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 7,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 60.3
+   },
+   "embedding_sha256": "1729b8bf782cf2ee8bd529383213c1ed8a02006e6ef000c32ce423e49fe4631d",
+   "f1_embedding_sha256": "e8e79c4317f3168df876f0cf4b4f1f675a92fb989c1399a46fc7edb54b8142f1"
+  },
+  "meta-llama/Llama-3.2-1B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "76768ceb2487ecb6e64c04c1a266cc484cc76cbcd3a267677ba14f04cec12a95",
+   "gen_per_s": 11.148,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 108.6,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 0,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 5,
+      "reference": false,
+      "identical": 258,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 0.9980694980694981,
+    "wall_s": 32.7
+   },
+   "embedding_sha256": "0998436e31f156bec6953668b79b058b801b21c8e20e36ee8714eceb7c545f94",
+   "f1_embedding_sha256": "1f3e2d482ddc29e089cce9877d4bd4ac464ca6932fbb78049239801b414d00eb"
+  },
+  "meta-llama/Llama-3.2-3B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "0cb88a4f764b7a12671c53f0838cd831a0843b95",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "e360df962b7211126bc07a7e1afc1701a327c9f3fb62cc0f160496af7d3f2282",
+   "gen_per_s": 5.854,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 205.1,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 49,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 258,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 0.9980694980694981,
+    "wall_s": 59.3
+   },
+   "embedding_sha256": "b642e3c2fe11b0629b952731a590b692897bc8e3a931d329813e312229f94644",
+   "f1_embedding_sha256": "74d4bd2664a2724bd584416d1753da9dce23c68861b7f666654d4f657871d505"
+  },
+  "meta-llama/Meta-Llama-3-8B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "b02166e3f76de66daad6dd008a9f814d0bd130b0331378a23f839c1dce740021",
+   "gen_per_s": 4.664,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 256.8,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 58,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 64.0
+   },
+   "embedding_sha256": "672328d350d817aa9d78162ef39e48a5d9bd459fd2de9dc2faaa71b867bcc255",
+   "f1_embedding_sha256": "0da358ecc1a43bffd3cd8175f64e6adb52e9dc29c063ae81f4dfe9a9923426db"
+  },
+  "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "e3210926c42484c512fc05ecece50dbc95f6743190b7f7b143ebf63184062d4a",
+   "gen_per_s": 4.725,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 254.8,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 10,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 11,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 65.4
+   },
+   "embedding_sha256": "71b84eca6ebaa5a9b18b441daa50cf91ec775e41badf6809ad4339cc58ce81bb",
+   "f1_embedding_sha256": "02cd53e4043a8ab0283e20d6748cd8c7550550709e5b51a0ad7614d09e908f2b"
+  },
+  "microsoft/Phi-3-medium-128k-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "a088b37c71d441ab6d862bb3fcfe6165b3014702",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "738f77b58e8f1be7073cad5ff3c26926d6b238443450b07b0797a2ad6d4d9e87",
+   "gen_per_s": 3.035,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 386.6,
+   "compat_shims": [
+    "config: rope_scaling.original_max_position_embeddings=4096 (copied from top level)"
+   ],
+   "f1": {
+    "configs": [
+     {
+      "config": 22,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 77.5
+   },
+   "embedding_sha256": "8b48294f68c20e15ea9dc285c65cf2f824fcd95450e9d87e6456efb3a326cf9c",
+   "f1_embedding_sha256": "2f35a9dd88db2c25b89a687fc107e7af60367c17e3dbab2fcf5f15a8da77a72b"
+  },
+  "microsoft/Phi-3-medium-4k-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "48d87cd5e0523b430d77e93becd3655cd6897230",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "45f6c82770b51502c8095031dc980418fd6bcb33fe98593fabfdadeedade60d1",
+   "gen_per_s": 3.018,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 373.6,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 56,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 76.9
+   },
+   "embedding_sha256": "6efae8eca7e5929a1e19189f94ab999692cdec6f202c87af0f4e631a91bbb28e",
+   "f1_embedding_sha256": "414021c531c3c1f9948899dbcb3f55bfcf418db1cc335640044447bf374e347d"
+  },
+  "microsoft/Phi-3-mini-128k-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "f3c06aed622e14ca0abf5115094e4fc9a9948f36",
+   "n_rows": 800,
+   "n_empty": 1,
+   "empty_rate": 0.0013,
+   "sha256": "6fe759555d0cb2b0b3f420ab2ff149c42f289b6891ed09b0cfd1af9682e95866",
+   "gen_per_s": 4.771,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 231.7,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 27,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 1,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 54.6
+   },
+   "embedding_sha256": "16a8eefd5e18bac7b1c1a74d385526070982e2874a6cd97e268b9c04e77dec3f",
+   "f1_embedding_sha256": "c9145374e30f5afb1e03f25f0d16eea5f9739a087fb887394c915669c149cfb0"
+  },
+  "microsoft/Phi-3-mini-4k-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "f39ac1d28e925b323eae81227eaba4464caced4e",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "6d98a5ac4c9347f941964473141662eecb6251f453e46fb5cfacf5acee419cfa",
+   "gen_per_s": 4.738,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 239.6,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 56,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 3,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 57.1
+   },
+   "embedding_sha256": "8bfd4f6e68904a9966ae1e380775c0e2e83f9b9bb05d93eb4b91f90a8a5ffc43",
+   "f1_embedding_sha256": "4eed69672bdee060cccd74aeb75150166ed3171aa4ca795bde3f1e9ef19e4250"
+  },
+  "microsoft/Phi-3.5-mini-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "d79b4b7d020d86761b760dd0a9d764771f0db19fda4598fd47947810cfe4bb8b",
+   "gen_per_s": 4.562,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 273.3,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 66,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 88.4
+   },
+   "embedding_sha256": "26161d1f7cfdf10131a57adaf5870a01f82fc82b06536690bf14a05bcfd60d0d",
+   "f1_embedding_sha256": "f810f419225ddb6cb8b7876df93489fb61f0740ad39e84fd8cba4b5197127460"
+  },
+  "microsoft/Phi-4-mini-instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "2ac6da8b789a7cffe7549a2b3e03e205a809134dd2b25d5a2eb10115407986f0",
+   "gen_per_s": 5.538,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 155.9,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "f549fad82b9251e1fe206fdd89ad590e7994825fba1ef895ff2601118baefae7"
+  },
+  "microsoft/phi-4": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "b3259b8fe634692cb1d92e4d6b9185522ebf1e8919fda11e7a5a7660896eb35a",
+   "gen_per_s": 3.471,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 266.1,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "76f2192c6a7dad0a4a62715ae4ff7af2179eced1f419d2d991281742713154b3"
+  },
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "3cea74c1ebaf5ce5f5a2553de470e2ceab825142",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "d3f40e295d47615514625577cb2c84025d3706658ee18f2fea4bcf9d10f49deb",
+   "gen_per_s": 3.299,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 283.3,
+   "compat_shims": [
+    "tokenizer {'fix_mistral_regex': True}"
+   ],
+   "f1": null,
+   "embedding_sha256": "a815551f0302c6d95a041be29f18b9ffc590969911b29e5d8aca7c3f446b8fd3"
+  },
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "b6d637bef2393152b3da2b2fde72eecdee30557e",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "cd809d98b51b16d65d97dae4470a1774c5cd40806b12b27afe88140cf4ea771c",
+   "gen_per_s": 4.805,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 179.1,
+   "compat_shims": [
+    "tokenizer {'fix_mistral_regex': True}"
+   ],
+   "f1": null,
+   "embedding_sha256": "0a5e8791d4716de9f56fdc55653fe5d2c77563090159ceb76cecd71a73103aae"
+  },
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "f6fae9795746f63c9be8344932f01275f3c63734",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "ea58dce7fabc0a50ae1f997d8f01a0ae88796865a082943afeb2e70c501f674b",
+   "gen_per_s": 3.851,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 232.2,
+   "compat_shims": [
+    "tokenizer {'fix_mistral_regex': True}"
+   ],
+   "f1": null,
+   "embedding_sha256": "959ca89a2b6e56242d31671887f8f034754a93d48afd4fd875e0e04fb0ad41e5"
+  },
+  "mistralai/Mistral-7B-Instruct-v0.1": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "ec5deb64f2c6e6fa90c1abf74a91d5c93a9669ca",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "03f377d95d5221c3f15a691e9469fde827f8296b83b0b9306e589289c81e1211",
+   "gen_per_s": 4.733,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 245.2,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 24,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 2,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 59.5
+   },
+   "embedding_sha256": "79850eb5abc5d2e6917495ad7b26e2b52abcff5cdf87560016658f16ea464a21",
+   "f1_embedding_sha256": "5c25e853c78d42efa372777e7188c6a34fff065ec6c1efbb1f8aeb4cf63a4c62"
+  },
+  "mistralai/Mistral-7B-Instruct-v0.2": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "63a8b081895390a26e140280378bc85ec8bce07a",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "bcb4726cfa76f9602c2a54f1cd7e3b2599149627b5e10acd6cfed16417278088",
+   "gen_per_s": 4.746,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 258.1,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 72,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 0,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 69.6
+   },
+   "embedding_sha256": "ad696a6424f7fd3e77f921f50c1b7d9963f16128e8b865fa79407b2a773e9c44",
+   "f1_embedding_sha256": "b5ea0bcefb6ac1e091bf728a96ae42ff19b5d241faad65d62a23c595b5af5e82"
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "c78cdf32ae741ffeefe6f8821e325dbc29d54ac472cfe66ecaec5e73b534128b",
+   "gen_per_s": 4.756,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 255.3,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 51,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 2,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 63.4
+   },
+   "embedding_sha256": "84c40743221ecdacc33f8d8f17727b760602a223b04eefa5c0b780d9234dfec7",
+   "f1_embedding_sha256": "fd4b258bb750a8adddcdca62dc76448cef04b3ced214a26575a0092098895a82"
+  },
+  "mistralai/Mistral-Small-24B-Instruct-2501": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "9527884be6e5616bdd54de542f9ae13384489724",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "ffb725dd3e92104d7344124be5f28ae07928e8627c9dd0d1f4293509099e01d9",
+   "gen_per_s": 2.754,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 357.9,
+   "compat_shims": [
+    "tokenizer {'fix_mistral_regex': True}"
+   ],
+   "f1": null,
+   "embedding_sha256": "9273de05990e24e3454cad9e39747f8ee1e20737136622ced82f270bf8c69409"
+  },
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "68faf511d618ef198fef186659617cfd2eb8e33a",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "95fbab4c367bbfc32e284333b1096bde371c8858bc047cdab28bb48ef3d28c1a",
+   "gen_per_s": 2.957,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 337.3,
+   "compat_shims": [
+    "tokenizer {'fix_mistral_regex': True}",
+    "chat template loaded from chat_template.json"
+   ],
+   "f1": null,
+   "embedding_sha256": "303d399be4b44b2c0484ed949d11e71ab8d32fee70b4dc270e49091f3b4d28d7"
+  },
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "fa3a10b9c6ad02f42c81e1d68dcf6967afb230ef",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "367c3e7403fcccc89665624822c2ecca8d010cce9aac26f76d7d1c0cbdf3d96b",
+   "gen_per_s": 4.733,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 190.2,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "ba880f5f34f9ca6a9c667fe9d285ec618e7d1294f382e083becd8ba853049904"
+  },
+  "nvidia/Llama3-ChatQA-1.5-8B": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "3b98162e3f97550d62aeeb19ea50208f968c678a",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "6f610ee8c6bbcdbc0ff5d8eb35f8eab8e588ad95acfbad7e2008436235c64dc9",
+   "gen_per_s": 5.522,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 219.3,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 69,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 0,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 63.8
+   },
+   "embedding_sha256": "93a67e74ba2e9bc91ee6ee73bcbfe399814c0b4676db92e92c233a26993e513f",
+   "f1_embedding_sha256": "7b64fcded023832f3ebcf17ebf7d46fa428fec70b754038e7ea99c4343d2d909"
+  },
+  "openchat/openchat-3.6-8b-20240522": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "2264eb98558978f708e88ae52afb78e43b832801",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "45f588e2e8c8208b6b6a31510797b760793258bc9164b856cc30b032ffa3428e",
+   "gen_per_s": 4.775,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 249.8,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 27,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 61.8
+   },
+   "embedding_sha256": "5b4d33620f389aee2aabeaadffff22d355bf9ec44b387215cd22e42a13710c41",
+   "f1_embedding_sha256": "40fa16305309450b14f5aac1477641231a5b7808d11238ba85e2d639da443292"
+  },
+  "openchat/openchat_3.5": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "0fc98e324280bc4bf5d2c30ecf7b97b84fb8a19b",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "456d3fed2605da45294c599569e3e0a94e512d4462dcb2a53cb893e285e429bb",
+   "gen_per_s": 4.559,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 275.4,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 0,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 5,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 77.9
+   },
+   "embedding_sha256": "87857ab38ca04f07b7545c9ec080d3f3a3504251d14e2fe9757d5b59d5c1d80e",
+   "f1_embedding_sha256": "a9688d16d05ff577f39f87be325aaf7dd9463c8b4cd46725124f0df6dde7d443"
+  },
+  "tiiuae/Falcon-H1-3B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": true,
+   "revision": "01087ec4c132d7f186908716b3530ea187f062a1",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "7c657c7605cf7f428ca560d085c69d719b22c6c3f3e8accee57605d4eef3126c",
+   "gen_per_s": 0.123,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 6495.0,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "bf52729d48aa66fd6079033ff5644a59f026d91656a6099c225194443e54f5df"
+  },
+  "tiiuae/Falcon-H1-7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": true,
+   "revision": "41e72f27effbab80cd45b6e884688452253a3686",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "e83b2a689b4a5c97a7ee94ad574b5faca6dcd3c3d9acaa5f0c9bd07849e06fb8",
+   "gen_per_s": 0.115,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 6992.8,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "fa978944737dfcda4a717e768febf9d0fe7c4612230eaa7a2abf139a5cc7c6af"
+  },
+  "tiiuae/Falcon3-10B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "8799bc6aec0152757221dc6b272d824642db6202",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "07ae1c8211abb26cea2a1fd7a745f5d88adb4fb6324aba8573828137ffd683f2",
+   "gen_per_s": 4.554,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 269.5,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 70,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 4,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 66.9
+   },
+   "embedding_sha256": "10f2f77ff271d8d32b515aed1063d0ef417447145f42b35c4ec00fae210ef41a",
+   "f1_embedding_sha256": "f75f840c96dc7d71a244dc8df3919fd334363e09577c2c876f800c0631e7a7c7"
+  },
+  "tiiuae/Falcon3-1B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "28ba2251970a01dd1edc7ba7dad2eb71216ccfdf",
+   "n_rows": 800,
+   "n_empty": 1,
+   "empty_rate": 0.0013,
+   "sha256": "0e543a5a13346a3461cf67a4c50ee0682d0bfc820af0ac6ec02c50ad31e4db82",
+   "gen_per_s": 10.565,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 80.6,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "3f7a6ccdc15e2a2a90504e5ca9b958b38c08fb3948946d4dd7f68d638e9704db"
+  },
+  "tiiuae/Falcon3-3B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "411bb94318f94f7a5735b77109f456b1e74b42a1",
+   "n_rows": 800,
+   "n_empty": 1,
+   "empty_rate": 0.0013,
+   "sha256": "56f06acf8d9322a7159585d0c3b86d3a26f232e5c324807cb4d4977f10663289",
+   "gen_per_s": 8.128,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 107.2,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "98778c0e6f61e2e6f6185fbac71a65d4393adbf7763fe5db217ba135bc278b42"
+  },
+  "tiiuae/Falcon3-7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "1e57a0ecd176c7c139f289c60a74e57f887c3dfb",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "5914cfff8d1de06d2a6eca7f8e60d54a5785563d0c1d39480898cd9cbd4c4452",
+   "gen_per_s": 6.206,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 217.3,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 60,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 3,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 69.3
+   },
+   "embedding_sha256": "75b1611926aa38416901860ca4075055d3fb39ce032afe09c46c1fc2de9b729e",
+   "f1_embedding_sha256": "e7e4bcf914fd03cc8d1f699e1aa16d0ef4bb25e473c5b29e3f5d2ade36e32f53"
+  },
+  "togethercomputer/Llama-2-7B-32K-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "d27380af003252f5eb0d218e104938b4e673e3f3",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "08ca6b6406529cbb2c646ac0b3c3a5d427fd17b049555945a2a642a3a0532211",
+   "gen_per_s": 4.324,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 253.9,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 20,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 0,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 59.0
+   },
+   "embedding_sha256": "967876a1a6d22eb7591af17cf3127b6ee82b2488a937c0d076ea9d4a0a9e7d76",
+   "f1_embedding_sha256": "20bf43258f5f732bfdab19f0e9ceb0ab53747f679bdd55fce2804a24461afe92"
+  },
+  "upstage/SOLAR-10.7B-Instruct-v1.0": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "090d405e6fe7b4c7b0b999a67f5c6dee0514a7ad",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "84951663c3eed515b99013f8dd868e279cfa3d6da1107f85796f54f53494b5ef",
+   "gen_per_s": 3.131,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 366.7,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 20,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 5,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 96.9
+   },
+   "embedding_sha256": "7ed8079be463c43912dd2e56f47947198dd25114d17311a1ec021b96b0704665",
+   "f1_embedding_sha256": "1636a6afb3d9b2851e8c78c9d06ff8f325b114f5a89f7f5688d6ea57d4bd9a3c"
+  },
+  "utter-project/EuroLLM-1.7B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "corpus_v1-replay",
+   "batch1": false,
+   "revision": "a25c7fa65fc2a644e6270b8940dbe295b51da681",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "b5bb6a0c77709cc79d3b2ac8305daab00ab01f4c7369fd3015ded827d11bd72c",
+   "gen_per_s": 7.198,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 164.5,
+   "compat_shims": [],
+   "f1": {
+    "configs": [
+     {
+      "config": 8,
+      "reference": true,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     },
+     {
+      "config": 2,
+      "reference": false,
+      "identical": 259,
+      "n": 259,
+      "identical_paper8": 8
+     }
+    ],
+    "identical_rate": 1.0,
+    "wall_s": 48.8
+   },
+   "embedding_sha256": "d0e630e6c8d2519f029e313e544d4ad55ceea0214f16ba70cec8440eb39c9499",
+   "f1_embedding_sha256": "2da1769d7cb890e99d3a2d572aeb7ccff3c3d293aa7d411614561e1909b12cbd"
+  },
+  "utter-project/EuroLLM-9B-Instruct-2512": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "def82454026b0353f12e48a0de081a9ed380d91e",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "f4eb78ad9869f7a7c05454458a1c2ac51d286564b13d0790c4b2040c4c44005b",
+   "gen_per_s": 3.884,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 229.3,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "4f4aec24c378970db8797fe4add23201001d0313efedff05bef425460751b616"
+  },
+  "utter-project/EuroLLM-9B-Instruct": {
+   "status": "COMPLETE",
+   "gen_env": "llmmap-gpu-v2",
+   "config_source": "d027-frozen-draw",
+   "batch1": false,
+   "revision": "f7ae2bc3bcbb538c0b93fa6cfbf388d9898b1ace",
+   "n_rows": 800,
+   "n_empty": 0,
+   "empty_rate": 0.0,
+   "sha256": "171d09d1aaf5101aba8100fcf6bb61c97af72e8072427d79d5bd668ddbed2746",
+   "gen_per_s": 3.847,
+   "pack": 8,
+   "oom_halvings": 0,
+   "wall_s": 230.5,
+   "compat_shims": [],
+   "f1": null,
+   "embedding_sha256": "889fe6d0fa3b5265160533e52a0822ffe57059aee1853b45235fd07f844c8095"
+  }
+ },
+ "n_complete": 85
+}

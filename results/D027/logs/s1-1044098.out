@@ -1,0 +1,4 @@
+=== node: c642-071.vista.tacc.utexas.edu env: v2 start: Fri Oct  2 10:39:42 PM CDT 2026 ===
+== Qwen/Qwen2.5-0.5B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=7.729 pack=8 f1=1.0 wall=156.5s
+=== end: Fri Oct  2 10:42:55 PM CDT 2026 ===

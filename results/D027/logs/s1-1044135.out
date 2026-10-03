@@ -1,0 +1,29 @@
+=== node: c640-102.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 04:25:32 AM CDT 2026 ===
+== openchat/openchat_3.5  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.559 pack=8 f1=1.0 wall=275.4s
+== allenai/OLMo-2-1124-13B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.188 pack=8 f1=None wall=286.7s
+== nvidia/Llama3-ChatQA-1.5-8B  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.522 pack=8 f1=1.0 wall=219.3s
+== microsoft/phi-4  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.471 pack=8 f1=None wall=266.1s
+== allenai/Olmo-3.1-32B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=1.532 pack=4 f1=None wall=603.6s
+== mistralai/Mistral-7B-Instruct-v0.3  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.756 pack=8 f1=1.0 wall=255.3s
+== upstage/SOLAR-10.7B-Instruct-v1.0  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.131 pack=8 f1=1.0 wall=366.7s
+== meta-llama/Llama-3.2-3B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.854 pack=8 f1=0.9980694980694981 wall=205.1s
+== mistralai/Mistral-7B-Instruct-v0.2  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.746 pack=8 f1=1.0 wall=258.1s
+== allenai/Llama-3.1-Tulu-3-8B  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.17 pack=8 f1=None wall=213.4s
+== ibm-granite/granite-4.1-8b  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.036 pack=8 f1=None wall=221.3s
+== CohereLabs/tiny-aya-global  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.58 pack=8 f1=None wall=184.4s
+== utter-project/EuroLLM-1.7B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=7.198 pack=8 f1=1.0 wall=164.5s
+== HuggingFaceTB/SmolLM2-360M-Instruct  batch1=False
+=== end: Sat Oct  3 05:24:47 AM CDT 2026 ===

@@ -1,0 +1,4 @@
+=== node: c641-151.vista.tacc.utexas.edu env: old start: Sat Oct  3 07:24:31 AM CDT 2026 ===
+== Deci/DeciLM-7B-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.156 pack=8 f1=1.0 wall=352.2s
+=== end: Sat Oct  3 07:30:48 AM CDT 2026 ===

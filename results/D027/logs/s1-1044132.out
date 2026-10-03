@@ -1,0 +1,32 @@
+=== node: c641-022.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 04:25:01 AM CDT 2026 ===
+== ibm-granite/granite-3.1-8b-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.269 pack=8 f1=1.0 wall=366.9s
+== microsoft/Phi-3-medium-128k-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.035 pack=8 f1=1.0 wall=386.6s
+== mistralai/Ministral-3-14B-Instruct-2512-BF16  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.299 pack=8 f1=None wall=283.3s
+== togethercomputer/Llama-2-7B-32K-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.324 pack=8 f1=1.0 wall=253.9s
+== microsoft/Phi-3.5-mini-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.562 pack=8 f1=1.0 wall=273.3s
+== microsoft/Phi-3-medium-4k-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.018 pack=8 f1=1.0 wall=373.6s
+== google/gemma-4-E4B-it  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=2.9 pack=8 f1=None wall=298.9s
+== Qwen/Qwen2.5-3B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.377 pack=8 f1=1.0 wall=226.2s
+== google/gemma-1.1-7b-it  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.44 pack=8 f1=1.0 wall=219.7s
+== Qwen/Qwen3.5-9B  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.686 pack=8 f1=None wall=241.0s
+== Qwen/Qwen2-1.5B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=7.306 pack=8 f1=1.0 wall=167.3s
+== Qwen/Qwen3-4B  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.726 pack=8 f1=None wall=226.3s
+== CohereLabs/tiny-aya-earth  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.849 pack=8 f1=None wall=174.9s
+== allenai/OLMo-2-0425-1B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=10.753 pack=8 f1=None wall=78.7s
+== tiiuae/Falcon3-3B-Instruct  batch1=False
+   COMPLETE rows=800 empty=1 gen/s=8.128 pack=8 f1=None wall=107.2s
+=== end: Sat Oct  3 05:26:59 AM CDT 2026 ===

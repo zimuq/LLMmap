@@ -1,0 +1,30 @@
+=== node: c641-052.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 04:27:58 AM CDT 2026 ===
+== microsoft/Phi-3-mini-4k-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.738 pack=8 f1=1.0 wall=239.6s
+== mistralai/Mistral-Small-3.1-24B-Instruct-2503  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=2.957 pack=8 f1=None wall=337.3s
+== openchat/openchat-3.6-8b-20240522  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.775 pack=8 f1=1.0 wall=249.8s
+== ibm-granite/granite-3.3-8b-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.06 pack=8 f1=None wall=225.0s
+== ibm-granite/granite-3.2-8b-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.071 pack=8 f1=None wall=290.8s
+== allenai/Olmo-3-7B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.807 pack=8 f1=None wall=229.9s
+== google/gemma-3-12b-it  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=2.587 pack=8 f1=None wall=348.4s
+== mistralai/Ministral-3-8B-Instruct-2512-BF16  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.851 pack=8 f1=None wall=232.2s
+== meta-llama/Llama-2-7b-chat-hf  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.25 pack=8 f1=1.0 wall=258.7s
+== microsoft/Phi-3-mini-128k-instruct  batch1=False
+   COMPLETE rows=800 empty=1 gen/s=4.771 pack=8 f1=1.0 wall=231.7s
+== Qwen/Qwen3-8B  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.128 pack=8 f1=None wall=216.8s
+== CohereLabs/tiny-aya-water  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.868 pack=8 f1=None wall=174.1s
+== google/gemma-2b-it  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=10.606 pack=8 f1=0.6525096525096525 wall=119.3s
+== microsoft/Phi-4-mini-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.538 pack=8 f1=None wall=155.9s
+=== end: Sat Oct  3 05:23:41 AM CDT 2026 ===

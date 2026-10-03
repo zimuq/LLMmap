@@ -1,0 +1,4 @@
+=== node: c638-102.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 03:57:27 AM CDT 2026 ===
+== tiiuae/Falcon-H1-7B-Instruct  batch1=True
+   COMPLETE rows=800 empty=0 gen/s=0.115 pack=8 f1=None wall=6992.8s
+=== end: Sat Oct  3 05:54:38 AM CDT 2026 ===

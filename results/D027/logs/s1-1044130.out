@@ -1,0 +1,24 @@
+=== node: c641-152.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 04:10:16 AM CDT 2026 ===
+== Qwen/Qwen3-30B-A3B-Instruct-2507  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=0.496 pack=8 f1=None wall=1847.2s
+== mistralai/Mistral-7B-Instruct-v0.1  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.733 pack=8 f1=1.0 wall=245.2s
+== allenai/OLMo-2-1124-7B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.419 pack=8 f1=None wall=198.6s
+== ibm-granite/granite-3.0-8b-instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=3.596 pack=8 f1=1.0 wall=316.2s
+== meta-llama/Meta-Llama-3-8B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.664 pack=8 f1=1.0 wall=256.8s
+== Qwen/Qwen3-4B-Instruct-2507  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=4.227 pack=8 f1=None wall=200.2s
+== Qwen/Qwen2.5-7B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.412 pack=8 f1=None wall=167.4s
+== CohereLabs/tiny-aya-fire  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.169 pack=8 f1=None wall=164.0s
+== ibm-granite/granite-4.1-3b  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=5.305 pack=8 f1=None wall=160.0s
+== HuggingFaceTB/SmolLM2-1.7B-Instruct-16k  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=8.445 pack=8 f1=None wall=99.3s
+== HuggingFaceTB/SmolLM2-1.7B-Instruct  batch1=False
+   COMPLETE rows=800 empty=0 gen/s=7.584 pack=8 f1=None wall=110.0s
+=== end: Sat Oct  3 05:13:39 AM CDT 2026 ===
