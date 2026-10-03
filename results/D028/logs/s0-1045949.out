@@ -1,0 +1,10 @@
+=== node: c641-121.vista.tacc.utexas.edu start: Sat Oct  3 04:15:22 PM CDT 2026 ===
+tiiuae/Falcon-H1-3B-Instruct 1 {'aggregate_gen_per_s': 0.128, 'wall_s': 93.7, 'per_process_mem_gb': 6.52, 'rank0_identical_to_k1': True}
+tiiuae/Falcon-H1-3B-Instruct 4 {'aggregate_gen_per_s': 0.35, 'wall_s': 137.0, 'per_process_mem_gb': 6.52, 'rank0_identical_to_k1': True}
+tiiuae/Falcon-H1-3B-Instruct 8 {'aggregate_gen_per_s': 0.502, 'wall_s': 191.4, 'per_process_mem_gb': 6.52, 'rank0_identical_to_k1': True}
+tiiuae/Falcon-H1-7B-Instruct 1 {'aggregate_gen_per_s': 0.123, 'wall_s': 97.6, 'per_process_mem_gb': 15.42, 'rank0_identical_to_k1': True}
+tiiuae/Falcon-H1-7B-Instruct 4 {'aggregate_gen_per_s': 0.278, 'wall_s': 172.5, 'per_process_mem_gb': 15.42, 'rank0_identical_to_k1': True}
+Qwen/Qwen3.5-4B 1 {'aggregate_gen_per_s': 0.101, 'wall_s': 118.8, 'per_process_mem_gb': 8.79, 'rank0_identical_to_k1': True}
+Qwen/Qwen3.5-4B 4 {'aggregate_gen_per_s': 0.389, 'wall_s': 123.3, 'per_process_mem_gb': 8.79, 'rank0_identical_to_k1': True}
+Qwen/Qwen3.5-4B 8 {'aggregate_gen_per_s': 0.443, 'wall_s': 216.9, 'per_process_mem_gb': 8.79, 'rank0_identical_to_k1': True}
+=== end: Sat Oct  3 04:36:45 PM CDT 2026 ===
