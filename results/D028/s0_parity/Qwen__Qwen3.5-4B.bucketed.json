@@ -1,0 +1,59 @@
+{
+ "model": "Qwen/Qwen3.5-4B",
+ "mode": "bucketed",
+ "configs": [
+  7,
+  10
+ ],
+ "forced_greedy": 0,
+ "per_config": [
+  {
+   "config": 7,
+   "exact": 51,
+   "n": 259,
+   "degenerate_cand_only": 0,
+   "degenerate_ref": 0,
+   "error": null,
+   "ref_gen_per_s": 0.101,
+   "cand_gen_per_s": 0.981,
+   "n_buckets": 25,
+   "mean_bucket": 10.36
+  },
+  {
+   "config": 10,
+   "exact": 50,
+   "n": 259,
+   "degenerate_cand_only": 0,
+   "degenerate_ref": 0,
+   "error": null,
+   "ref_gen_per_s": 0.112,
+   "cand_gen_per_s": 1.035,
+   "n_buckets": 25,
+   "mean_bucket": 10.36
+  }
+ ],
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "Qwen3_5Tokenizer",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "Qwen3_5ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": 248044
+  }
+ },
+ "exact_rate": 0.19498069498069498,
+ "degenerate_cand_only": 0,
+ "ref_gen_per_s": 0.106,
+ "cand_gen_per_s": 1.007
+}

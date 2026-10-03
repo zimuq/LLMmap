@@ -1,0 +1,4 @@
+=== node: c611-042.vista.tacc.utexas.edu start: Sat Oct  3 12:59:58 PM CDT 2026 ===
+  Qwen/Qwen3.5-4B cfg 7: exact 51/259 degen 0 ref 0.10 gen/s cand 0.98 gen/s {'n_buckets': 25, 'mean_bucket': 10.36} 
+  Qwen/Qwen3.5-4B cfg 10: exact 50/259 degen 0 ref 0.11 gen/s cand 1.03 gen/s {'n_buckets': 25, 'mean_bucket': 10.36} 
+=== end: Sat Oct  3 02:30:38 PM CDT 2026 ===

@@ -1,0 +1,4 @@
+=== node: c610-151.vista.tacc.utexas.edu start: Sat Oct  3 12:59:58 PM CDT 2026 ===
+  tiiuae/Falcon-H1-7B-Instruct cfg 10: exact 3/259 degen 71 ref 0.09 gen/s cand 0.32 gen/s {'n_buckets': 27, 'mean_bucket': 9.59} 
+  tiiuae/Falcon-H1-7B-Instruct cfg 23: exact 3/259 degen 88 ref 0.07 gen/s cand 0.36 gen/s {'n_buckets': 27, 'mean_bucket': 9.59} 
+=== end: Sat Oct  3 03:13:20 PM CDT 2026 ===

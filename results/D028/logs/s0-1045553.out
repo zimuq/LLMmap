@@ -1,0 +1,6 @@
+=== node: c610-072.vista.tacc.utexas.edu start: Sat Oct  3 12:59:59 PM CDT 2026 ===
+  Qwen/Qwen3-4B cfg 6: exact 161/259 degen 0 ref 0.38 gen/s cand 6.65 gen/s {} 
+  Qwen/Qwen3-4B cfg 11: exact 131/259 degen 0 ref 0.25 gen/s cand 6.16 gen/s {} 
+  allenai/OLMo-2-1124-7B-Instruct cfg 2: exact 107/259 degen 0 ref 0.18 gen/s cand 6.72 gen/s {} 
+  allenai/OLMo-2-1124-7B-Instruct cfg 3: exact 74/259 degen 0 ref 0.16 gen/s cand 7.05 gen/s {} 
+=== end: Sat Oct  3 02:21:42 PM CDT 2026 ===

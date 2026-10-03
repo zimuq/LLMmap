@@ -1,0 +1,105 @@
+{
+ "model": "google/gemma-3-12b-it",
+ "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+ "env": "llmmap-gpu-v2",
+ "decoding": "greedy",
+ "prompt": "Translate into English:\\n\\n<probe>",
+ "rows": {
+  "281": {
+   "lang": "Swahili",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "Tafadhali jitambulishe kwa sentensi mbili.",
+   "back_translation": "Please introduce yourself in two sentences."
+  },
+  "282": {
+   "lang": "Swahili",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "Kwa sentensi tatu, eleza kwa nini anga lina rangi ya buluu.",
+   "back_translation": "Here's the translation and the explanation in three sentences:\n\n**Translation:**\n\nIn three sentences, explain why the sky is blue.\n\n**Explanation:**\n\nThe sky appears blue due to a phenomenon called Rayleigh scattering. Sunlight, which is made up of all colors, enters the Earth's atmosphere and collides with tiny air molecules. Blue light has a shorter wavelength and is scattered more effectively than other colors, spreading it across the sky.\n\n\n\nLet me know if you'd like any other translations or explanations!"
+  },
+  "283": {
+   "lang": "Amharic",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "እባክህ ራስህን በሁለት ዓረፍተ ነገሮች አስተዋውቅ።",
+   "back_translation": "Please introduce yourself in two sentences."
+  },
+  "284": {
+   "lang": "Amharic",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "ሰማዩ ለምን ሰማያዊ እንደሆነ በሦስት ዓረፍተ ነገሮች አብራራ።",
+   "back_translation": "Here's the English translation:\n\n\"Explain why the sky is blue in three sentences.\"\n\n\n\nLet me know if you'd like me to provide the explanation itself!"
+  },
+  "285": {
+   "lang": "Arabic",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "من فضلك عرّف بنفسك في جملتين.",
+   "back_translation": "Please introduce yourself in two sentences."
+  },
+  "286": {
+   "lang": "Arabic",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "اشرح في ثلاث جمل لماذا السماء زرقاء.",
+   "back_translation": "Here's the translation:\n\nExplain in three sentences why the sky is blue."
+  },
+  "287": {
+   "lang": "Hindi",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "कृपया दो वाक्यों में अपना परिचय दीजिए।",
+   "back_translation": "Please introduce yourself in two sentences."
+  },
+  "288": {
+   "lang": "Hindi",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "तीन वाक्यों में समझाइए कि आसमान नीला क्यों होता है।",
+   "back_translation": "Here's a translation and explanation in three sentences:\n\n**Translation:** Explain in three sentences why the sky is blue.\n\n**Explanation:**\n\nThe sky appears blue because of a phenomenon called Rayleigh scattering. Sunlight, which is made up of all colors, enters the Earth's atmosphere and collides with tiny air molecules. Blue and violet light have shorter wavelengths and are scattered more than other colors, spreading them across the sky.\n\n\n\nLet me know if you'd like a more detailed explanation!"
+  },
+  "289": {
+   "lang": "Bengali",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "অনুগ্রহ করে দুটি বাক্যে নিজের পরিচয় দিন।",
+   "back_translation": "Please introduce yourself in two sentences.\n\n\n\nThat's the most natural and accurate translation."
+  },
+  "290": {
+   "lang": "Bengali",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "তিনটি বাক্যে ব্যাখ্যা করুন কেন আকাশ নীল।",
+   "back_translation": "Here's the translation and explanation:\n\n**Translation:**\n\n\"Explain in three sentences why the sky is blue.\"\n\n**Explanation (in three sentences):**\n\nThe sky appears blue due to a phenomenon called Rayleigh scattering. Sunlight is made up of all colors, and when it enters the Earth's atmosphere, it collides with tiny air molecules. Blue and violet light have shorter wavelengths and are scattered more than other colors, making the sky appear blue to our eyes.\n\n\n\nLet me know if you'd like a more detailed explanation!"
+  },
+  "291": {
+   "lang": "Tamil",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "தயவுசெய்து இரண்டு வாக்கியங்களில் உங்களை அறிமுகப்படுத்துங்கள்.",
+   "back_translation": "Please introduce yourself in two sentences."
+  },
+  "292": {
+   "lang": "Tamil",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "வானம் ஏன் நீல நிறமாக இருக்கிறது என்பதை மூன்று வாக்கியங்களில் விளக்குங்கள்.",
+   "back_translation": "Here's the translation and explanation in three sentences:\n\n**Translation:** Explain in three sentences why the sky is blue.\n\n**Explanation:**\n\n1. Sunlight is made up of all the colors of the rainbow.\n2. When sunlight enters the Earth's atmosphere, it collides with tiny air molecules, scattering the light in different directions.\n3. Blue and violet light are scattered more than other colors because they travel as shorter, smaller waves, making the sky appear blue to our eyes.\n\n\n\nLet me know if you'd like a more detailed explanation!"
+  },
+  "293": {
+   "lang": "Indonesian",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "Tolong perkenalkan dirimu dalam dua kalimat.",
+   "back_translation": "Please introduce yourself in two sentences."
+  },
+  "294": {
+   "lang": "Indonesian",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "Dalam tiga kalimat, jelaskan mengapa langit berwarna biru.",
+   "back_translation": "Here's the translation and explanation in three sentences:\n\nThe sky appears blue because of a phenomenon called Rayleigh scattering. This scattering occurs when sunlight interacts with tiny air molecules in the atmosphere, and blue light is scattered more than other colors due to its shorter wavelength. Consequently, we see blue light coming from all directions, making the sky appear blue."
+  },
+  "295": {
+   "lang": "Vietnamese",
+   "task": "T1 introduce yourself (2 sentences)",
+   "text": "Hãy giới thiệu bản thân bạn trong hai câu.",
+   "back_translation": "Please introduce yourself in two sentences."
+  },
+  "296": {
+   "lang": "Vietnamese",
+   "task": "T2 why the sky is blue (3 sentences)",
+   "text": "Trong ba câu, hãy giải thích tại sao bầu trời có màu xanh.",
+   "back_translation": "Here's the translation and explanation:\n\n**Translation:**\n\n\"In three sentences, explain why the sky is blue.\"\n\n**Explanation (in three sentences):**\n\nThe sky appears blue due to a phenomenon called Rayleigh scattering. Sunlight is made up of all colors, and when it enters the Earth's atmosphere, it collides with tiny air molecules. Blue and violet light have shorter wavelengths and are scattered more than other colors, spreading them across the sky.\n\n\n\nLet me know if you'd like a more detailed explanation!"
+  }
+ }
+}

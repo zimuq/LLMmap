@@ -1,0 +1,62 @@
+{
+ "model": "tiiuae/Falcon-H1-3B-Instruct",
+ "mode": "bucketed",
+ "configs": [
+  1,
+  11
+ ],
+ "forced_greedy": 0,
+ "per_config": [
+  {
+   "config": 1,
+   "exact": 6,
+   "n": 259,
+   "degenerate_cand_only": 113,
+   "degenerate_ref": 0,
+   "error": null,
+   "ref_gen_per_s": 0.113,
+   "cand_gen_per_s": 0.504,
+   "n_buckets": 29,
+   "mean_bucket": 8.93
+  },
+  {
+   "config": 11,
+   "exact": 6,
+   "n": 259,
+   "degenerate_cand_only": 200,
+   "degenerate_ref": 0,
+   "error": null,
+   "ref_gen_per_s": 0.093,
+   "cand_gen_per_s": 0.507,
+   "n_buckets": 29,
+   "mean_bucket": 8.93
+  }
+ ],
+ "load": {
+  "transformers": "5.18.0",
+  "torch": "2.7.1+cu128",
+  "compat_shims": [],
+  "chat_template_source": "model's own",
+  "tokenizer_class": "TokenizersBackend",
+  "model_class_route": "AutoModelForCausalLM",
+  "model_class": "FalconH1ForCausalLM",
+  "use_cache_overridden": false,
+  "hf_revision": null,
+  "generation_config": {
+   "max_length": null,
+   "do_sample": null,
+   "temperature": null,
+   "top_k": null,
+   "top_p": null,
+   "repetition_penalty": null,
+   "eos_token_id": [
+    11,
+    228
+   ]
+  }
+ },
+ "exact_rate": 0.023166023166023165,
+ "degenerate_cand_only": 313,
+ "ref_gen_per_s": 0.102,
+ "cand_gen_per_s": 0.505
+}
