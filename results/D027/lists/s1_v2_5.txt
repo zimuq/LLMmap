@@ -1,0 +1,15 @@
+ibm-granite/granite-3.1-8b-instruct
+microsoft/Phi-3-medium-128k-instruct
+mistralai/Ministral-3-14B-Instruct-2512-BF16
+togethercomputer/Llama-2-7B-32K-Instruct
+microsoft/Phi-3.5-mini-instruct
+microsoft/Phi-3-medium-4k-instruct
+google/gemma-4-E4B-it
+Qwen/Qwen2.5-3B-Instruct
+google/gemma-1.1-7b-it
+Qwen/Qwen3.5-9B
+Qwen/Qwen2-1.5B-Instruct
+Qwen/Qwen3-4B
+CohereLabs/tiny-aya-earth
+allenai/OLMo-2-0425-1B-Instruct
+tiiuae/Falcon3-3B-Instruct

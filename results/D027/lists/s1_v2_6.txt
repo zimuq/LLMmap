@@ -1,0 +1,14 @@
+google/gemma-2-9b-it
+CohereForAI/aya-23-8B
+google/gemma-7b-it
+tiiuae/Falcon3-10B-Instruct
+google/gemma-4-12B-it
+mistralai/Mistral-Small-24B-Instruct-2501
+HuggingFaceH4/zephyr-7b-beta
+Qwen/Qwen2.5-7B-Instruct-1M
+gradientai/Llama-3-8B-Instruct-Gradient-1048k
+mistralai/Ministral-3-3B-Instruct-2512-BF16
+ibm-granite/granite-4.2-8b
+allenai/Llama-3.1-Tulu-3.1-8B
+nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct
+google/gemma-1.1-2b-it

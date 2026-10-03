@@ -1,0 +1,14 @@
+microsoft/Phi-3-mini-4k-instruct
+mistralai/Mistral-Small-3.1-24B-Instruct-2503
+openchat/openchat-3.6-8b-20240522
+ibm-granite/granite-3.3-8b-instruct
+ibm-granite/granite-3.2-8b-instruct
+allenai/Olmo-3-7B-Instruct
+google/gemma-3-12b-it
+mistralai/Ministral-3-8B-Instruct-2512-BF16
+meta-llama/Llama-2-7b-chat-hf
+microsoft/Phi-3-mini-128k-instruct
+Qwen/Qwen3-8B
+CohereLabs/tiny-aya-water
+google/gemma-2b-it
+microsoft/Phi-4-mini-instruct
