@@ -1,0 +1,5 @@
+mistralai/Ministral-3-8B-Instruct-2512-BF16
+utter-project/EuroLLM-9B-Instruct-2512
+google/gemma-3-4b-it
+ibm-granite/granite-4.1-8b
+HuggingFaceTB/SmolLM2-1.7B-Instruct

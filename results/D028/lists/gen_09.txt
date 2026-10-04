@@ -1,0 +1,5 @@
+allenai/OLMo-2-1124-7B-Instruct
+ibm-granite/granite-4.2-3b
+CohereLabs/tiny-aya-global
+nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct
+allenai/Llama-3.1-Tulu-3.1-8B

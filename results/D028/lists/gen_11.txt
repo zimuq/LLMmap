@@ -1,0 +1,6 @@
+google/gemma-7b-it
+Qwen/Qwen2.5-7B-Instruct
+Qwen/Qwen2.5-7B-Instruct-1M
+HuggingFaceTB/SmolLM2-360M-Instruct
+HuggingFaceTB/SmolLM2-1.7B-Instruct-16k
+allenai/OLMo-2-0425-1B-Instruct

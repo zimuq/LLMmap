@@ -83,7 +83,9 @@ def main():
             if x in reuse and y in reuse:
                 diffs.append(float(np.abs(S[k][:, j] - old[:, d7idx[f"{x}|{y}"]]).max()))
         repro[k] = dict(n_pairs=len(diffs), max_abs_diff=max(diffs))
-    meta = dict(schema="cdqd-tensor-v2", token_budget=200, shape=[259, len(pairs)], n_models=len(models),
+    tol = 1e-6                                     # Review Call 2 threshold, fixed before the build
+    bad = {k: v for k, v in repro.items() if not v["max_abs_diff"] <= tol}
+    meta = dict(schema="cdqd-tensor-v2", reproduction_tolerance=tol, reproduction_ok=not bad, token_budget=200, shape=[259, len(pairs)], n_models=len(models),
                 models=models, pairs=[f"{x}|{y}" for x, y in pairs], split_seed=SPLIT_SEED,
                 split_a=sa.tolist(), split_b=sb.tolist(), sha256=shas, frozen_tensor="S_energy_sf_tok200_v2 "
                 "(and the other four, same build)", reproduction_vs_d007=repro,
@@ -91,6 +93,14 @@ def main():
                 wall_s=round(time.time() - t0, 1), jobs=a.jobs)
     json.dump(meta, open(f"{OUT}/tensor_v2.json", "w"), indent=1)
     print(f"tensor built: {len(pairs)} pairs, {meta['wall_s']} s; reproduction {repro}")
+    if bad:
+        offenders = {}
+        for k in bad:
+            old = np.load(f"./results/D007/S_{k}_tok200.npy")
+            offenders[k] = [f"{x}|{y}" for j, (x, y) in enumerate(pairs) if x in reuse and y in reuse
+                            and float(np.abs(S[k][:, j] - old[:, d7idx[f"{x}|{y}"]]).max()) > tol][:50]
+        json.dump(offenders, open(f"{OUT}/tensor_repro_offenders.json", "w"), indent=1)
+        raise SystemExit(f"CALL: reproduction above {tol} on {sorted(bad)} -- see tensor_repro_offenders.json")
 
 
 if __name__ == "__main__":

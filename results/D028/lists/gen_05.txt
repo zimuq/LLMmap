@@ -1,0 +1,4 @@
+allenai/OLMo-2-1124-13B-Instruct
+mistralai/Ministral-3-14B-Instruct-2512-BF16
+microsoft/phi-4
+ibm-granite/granite-4.2-8b

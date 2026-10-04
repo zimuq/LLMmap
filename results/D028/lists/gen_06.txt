@@ -1,0 +1,5 @@
+Qwen/Qwen3.5-9B
+Qwen/Qwen3-4B
+allenai/Olmo-3-7B-Instruct
+utter-project/EuroLLM-9B-Instruct
+google/gemma-2b-it

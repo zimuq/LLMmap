@@ -93,6 +93,21 @@ def main():
             rec[f"{blk}_embedding_sha256"] = sha(npy)
         man["models"][m] = rec
         print(f"  {m}", flush=True)
+    # Review A1: generation-mode flags (no compute)
+    trio = {"tiiuae/Falcon-H1-3B-Instruct", "tiiuae/Falcon-H1-7B-Instruct", "Qwen/Qwen3.5-4B"}
+    for m, rec in man["models"].items():
+        rec["gen_mode"] = ("batch1-concurrent" if m in trio else
+                           "corpus_v1-reuse" if m in reuse else "d006-padded")
+        rec["ml_gen_mode"] = "batch1-concurrent" if m in trio else "d006-padded"
+    cls = {m: ("batch1" if r["gen_mode"] == "batch1-concurrent" else "padded")
+           for m, r in man["models"].items()}
+    npr = {p["pair"] for p in json.load(open("./results/D027/n_prime.json"))["pairs"]}
+    hall = set(json.load(open("./results/D028/hard_sets_v2.json"))["H_all"])
+    man["mode_class_definition"] = ("batch1 = batch1-concurrent; padded = d006-padded or corpus_v1-reuse "
+                                    "(both D006's padded batch-64 procedure)")
+    man["mode_mixed"] = dict(
+        N_prime=sorted(p for p in npr if len({cls[m] for m in p.split(" | ")}) > 1),
+        H_all=sorted(p for p in hall if len({cls[m] for m in p.split(" | ")}) > 1))
     man["complete_pool"] = sum(r.get("pool_status") == "COMPLETE" or m in reuse for m, r in man["models"].items())
     man["complete_ml"] = sum(r.get("ml_status") == "COMPLETE" for r in man["models"].values())
     json.dump(man, open("./results/D028/manifest.json", "w"), indent=1)

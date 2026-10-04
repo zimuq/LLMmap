@@ -1,0 +1,6 @@
+mistralai/Ministral-3-3B-Instruct-2512-BF16
+CohereLabs/tiny-aya-earth
+CohereLabs/tiny-aya-water
+google/gemma-3-1b-it
+ibm-granite/granite-4.1-3b
+tiiuae/Falcon3-3B-Instruct
