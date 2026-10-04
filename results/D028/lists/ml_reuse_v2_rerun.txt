@@ -1,0 +1,6 @@
+meta-llama/Meta-Llama-3-8B-Instruct
+meta-llama/Meta-Llama-3.1-8B-Instruct
+tiiuae/Falcon3-7B-Instruct
+togethercomputer/Llama-2-7B-32K-Instruct
+upstage/SOLAR-10.7B-Instruct-v1.0
+utter-project/EuroLLM-1.7B-Instruct

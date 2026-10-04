@@ -9,6 +9,7 @@
 # usage: ENVTAG=v2|old|internlm sbatch submit_d028_gen.slurm <model-list> "<blocks, e.g. pool ml>"
 export OMP_NUM_THREADS=8 TOKENIZERS_PARALLELISM=false
 cd /work/11280/zimuq1/vista/LLMmap-project/LLMmap
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export PYTHONPATH=.:experiments HF_HOME=$SCRATCH/hf-cache HF_MODEL_CACHE=$SCRATCH/hf-cache HF_HUB_OFFLINE=1
 export HUGGINGFACE_API_KEY=$(cat /work/11280/zimuq1/vista/.hf_token)
 case ${ENVTAG:-v2} in

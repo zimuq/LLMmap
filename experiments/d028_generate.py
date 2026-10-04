@@ -105,8 +105,20 @@ def generate(a):
             conf = PromptConf.from_dict(rows[k])
             torch.manual_seed(seed_of(m, *k))
             if a.mode == "d006":
-                e = make_dataset_entries_for_new_llm(llm, queries, [conf], pool=k[0],
-                                                     batch_size=h.CORPUS_BATCH, max_new_tokens=h.TOKEN_CEILING)[0]
+                # OOM handling (S1 rerun, disclosed in R): retry THIS config at 32, then 16, with the
+                # same seed; the batch actually used is recorded per config. Everything else stays at 64.
+                for bs in (h.CORPUS_BATCH, 32, 16):
+                    try:
+                        torch.manual_seed(seed_of(m, *k))
+                        e = make_dataset_entries_for_new_llm(llm, queries, [conf], pool=k[0],
+                                                             batch_size=bs, max_new_tokens=h.TOKEN_CEILING)[0]
+                        break
+                    except torch.cuda.OutOfMemoryError:
+                        torch.cuda.empty_cache()
+                        if bs == 16:
+                            raise
+                if bs != h.CORPUS_BATCH:
+                    status.setdefault("reduced_batch_configs", []).append([k[0], k[1], bs])
                 outs = [r for _, r in e["traces"]]
             else:
                 prompts, hp = zip(*[conf(qq, llm) for qq in queries])
