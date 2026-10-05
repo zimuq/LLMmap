@@ -1551,5 +1551,66 @@ queries fail to separate, and is the enlarged universe harder?
 
 ---
 
+## Reference — consensus6 under every readout, all v1 chains (design-side consolidation, 2026-10-05)
+
+**Read-only extraction from stored counts, descriptive, S_test, `k`=8.**
+Sources:
+- attention: `D009`/`D010`/`D023`/`D024` `run_counts.npz`, 5-seed mean
+  with the seed range;
+- linear: `D020`/`D022`/`D023`/`D024` `linear_counts.npz`, deterministic;
+- `k`>8: `D025` `counts_GLOBAL.npz`.
+
+Checks: paper8's linear counts (from D022) reproduce D017's mean top-1 at
+every `k`; D025 GLOBAL `k`≤8 equals JointGreedy exactly; attention values
+match D019/D023/D024.
+
+consensus6 = the Phi-3-medium, Falcon3 and Mistral v0.2/v0.3 twins: 6
+models × 25 configs = 150 test traces, SE ≈ 2.5–4 pp. It was selected on
+S_test from paper8 / coverage / JointGreedy's own results, so it is biased
+*against* those three.
+
+| chain (`k`=8) | attention (seed range) | linear concat | linear meanpool |
+|---|---|---|---|
+| paper8 | .640 (.607–.693) | .793 | .627 |
+| GreedyCover | .680 | .767 | .653 |
+| **JointGreedy** | **.755** (.720–.780) | **.893** | **.773** |
+| Greedy-ADD / ILP-ADD | .747 / .740 | .820 / .820 | .773 / .773 |
+| CENTROID-raw / CENTROID / SINGLE | .696 / .653 / .499 | .840 / .740 / .720 | .693 / .613 / .567 |
+| H1-attention / H1-linear (Algorithm H.1 search) | .732 / .727 (D019) | .840 / .840 | .713 / .700 |
+| GLOBAL `k`=16 (JointGreedy extended, D025) | .740 | .900 | — |
+
+- **JointGreedy is the best chain at `k`=8 under all three readouts.** It
+  is the pre-specified default, so this is not a cherry-pick.
+  - Best over any `k` is barely higher: .777 attention (`k`=13), .900
+    concat (`k`=16), .807 meanpool (`k`=7).
+  - Under concat, JointGreedy's consensus6 curve is noisy (.78–.89 at
+    `k`=4–8). `k`=8 happens to be its best.
+- **The gain over paper8 survives every readout.**
+
+  | readout | consensus6 Δ | all-37 Δ |
+  |---|---|---|
+  | attention | +11.5 | +3.0 |
+  | linear concat | +10.0 | +3.5 |
+  | linear meanpool | +14.6 | +6.8 |
+
+  On consensus6 that is 2–4× the all-37 gain.
+- **The linear readout lifts both chains about equally.** It adds ~15 pp to
+  paper8 and ~14 pp to JointGreedy on consensus6, so "which readout" moves
+  the level, not the comparison.
+- **Per pair** (paper8 → JointGreedy):
+
+  | pair | attention | linear concat | linear meanpool |
+  |---|---|---|---|
+  | Phi-3-medium | .548 → .672 | .700 → .800 | .560 → .700 |
+  | Falcon3 | .680 → .784 | .880 → .940 | .760 → .860 |
+  | Mistral | .692 → .808 | .800 → .940 | .560 → .760 |
+
+  Phi-3-medium stays the lowest under every readout, consistent with D026.
+- **Family level** (13 models), attention / concat: paper8 .738 / .837 →
+  JointGreedy .796 / .889 (+5.8 / +5.2). As before (FINDINGS 2026-09-29),
+  this is the number to quote, not consensus6's.
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
