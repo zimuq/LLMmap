@@ -1896,6 +1896,20 @@ interpretable; specialist-based two-stage design not pursued
   - D028 generated no long probes. A v2 extension for the context twins
     would be that session's D, with new generation.
   Decided by: human (option b, 2026-10-05).
+
+[2026-10-05] D029/P1 approved with one amendment
+  - Human: attention stays the primary-label readout; linear must agree in
+    sign.
+  - T3 = 10 pairs (the rule's count; the D said 11 by an arithmetic slip;
+    Issue 23 resolved).
+  - Guardrail scan: same-k contrasts for k <= 8; k = 12/16/24 vs PAPER8 at
+    k = 8 (unequal budget, flagged); every lo(d_all) <= -0.02 cell is
+    listed first. Amendment: each such cell is typed `point`
+    (d_all <= -0.02) or `ni_not_shown` (lo <= -0.02 < d_all). The label
+    rule is unchanged.
+  - The 16 ML probe texts are embedded with I5 after a parity check
+    (derived array, not a corpus change).
+  Decided by: human (readout); design-side (the rest, routine).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

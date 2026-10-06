@@ -63,6 +63,8 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+## Resolved
+
 **Issue 23 (2026-10-05) — D029 `## D`, prediction P3: T3's stated count
 (11) does not match its own rule (10).** The rule is "every Qwen pair in
 H_N except Qwen3.5-4B↔9B and Qwen2.5-7B↔7B-1M". `hard_sets_v2.json` →
@@ -74,7 +76,9 @@ result exists yet. Blocked by ownership: `## D` is design-side's.
 
 ---
 
-## Resolved
+*Resolved 2026-10-05 (design-side, D029/P1 Review).* Correct: an
+arithmetic slip in `## D` ("9 Qwen3 pairs / 11"). The rule governs: T3 =
+10 pairs. `## D` carries a dated correction.
 
 **Issue 22 (2026-10-03) — D028 `## D` S3 says "`d007_build_tensor.py`
 unchanged, over 85 models".** That is not possible as written:
