@@ -1846,6 +1846,17 @@ interpretable; specialist-based two-stage design not pursued
     changes ~54% of greedy outputs; 5 of 57 hard pairs are mixed-mode); D029
     reports hard-set endpoints with and without them.
   Decided by: design-side (routine; no invariant touched).
+
+[2026-10-05] D028 closed -- READY; corpus v2 and the v2 tensor frozen
+  - 85 x 259 x 125 (51 generated, 34 reused) + ML extension 85 x 16 x 125;
+    S_energy_sf_tok200_v2 frozen (sha 8a31d760...); reproduction vs D007
+    exact (0.0) on 561 reused pairs x 5 tensors; I5 parity 0.0.
+  - Tail check done: CVaR0.1/mean 0.328 (v1 0.353); 40/57 hard pairs in
+    the bottom decile.
+  - Prediction P3 recorded before any v2 chain: the top-coverage Qwen H_N
+    pairs reach >= 0.90 two-way under v2 JointGreedy at k=8
+    (paper8-limited, not pool-limited). Joins P1/P2 for D029.
+  Decided by: design-side (closure).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

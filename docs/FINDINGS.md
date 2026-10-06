@@ -1612,5 +1612,27 @@ S_test from paper8 / coverage / JointGreedy's own results, so it is biased
 
 ---
 
+## D028 — Corpus v2 is built and frozen; the pool has no ammunition for the regional and fine-tune twins
+
+**What exists now:**
+- 85 models × 259 queries × 125 configs (34 v1 shards reused byte-for-byte,
+  51 generated);
+- a 16-probe multilingual extension for all 85;
+- the frozen v2 tensor `S_energy_sf_tok200_v2`.
+
+The tensor reproduces v1's exactly on every reused pair, and 201 node-h were
+spent.
+
+**Descriptive takeaways (from S_build coverage; not trained accuracy):**
+- The hard tail is present and slightly heavier than v1 (CVaR₀.₁/mean 0.33
+  vs 0.35). 40 of the 57 frozen hard pairs are in the bottom 10% of 3,570.
+- **No single pool query separates tiny-aya's regional variants,
+  granite-3.2 from its parent 3.1, or Qwen3.5-4B from 9B.** This points to
+  missing ammunition, to be tested in D029 (P1).
+- **Several Qwen pairs are hard for paper8 but among the best-covered by the
+  pool.** For those, LLMmap's query set is the limitation (P3).
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
