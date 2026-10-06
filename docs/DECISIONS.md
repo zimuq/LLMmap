@@ -1857,6 +1857,28 @@ interpretable; specialist-based two-stage design not pursued
     pairs reach >= 0.90 two-way under v2 JointGreedy at k=8
     (paper8-limited, not pool-limited). Joins P1/P2 for D029.
   Decided by: design-side (closure).
+
+[2026-10-05] D026 F3 placed in limitations; Phase 3 closed; D029 drafted
+  as the mainline on corpus v2
+  - Human accepted the recommendation: the long-input separation of the
+    Phi-3-medium twins is a characterised limitation (>= 6k untruncated
+    inputs), not part of the method. Phase 3 closes. In v2, the other
+    context twins are only borderline hard on short prompts.
+  - Human: D029 is the mainline on corpus v2, and the D states plainly that
+    v1 and v2 are two datasets.
+  - Standing rule (design-side, from the human's instruction): v1 =
+    development dataset (all method choices were made there, and its S_test
+    was read repeatedly); v2 = confirmation dataset (no tuning). Chains,
+    tensors and classifiers are never mixed across corpora; v1 and v2
+    numbers are never compared as levels (37-way vs 85-way), only as signs
+    or orderings. Every table names its corpus and block.
+  - Design-side calls in D029: arms PAPER8 / JG (k <= 16) / JG+ML / GC;
+    primary label on attention at k=8 (default; the human may switch it to
+    linear before training), linear must agree in sign; guardrail checked
+    first and reported as a headline at any k or readout; P1-P3 formalised
+    under linear; global chains only (D025 lesson).
+  Decided by: human (F3 placement, D029 as mainline on v2); design-side
+  (D029 design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
