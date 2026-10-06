@@ -63,6 +63,15 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+**Issue 23 (2026-10-05) — D029 `## D`, prediction P3: T3's stated count
+(11) does not match its own rule (10).** The rule is "every Qwen pair in
+H_N except Qwen3.5-4B↔9B and Qwen2.5-7B↔7B-1M". `hard_sets_v2.json` →
+`H_N` has 12 Qwen pairs, so the rule leaves **10**: Qwen2-1.5B↔Qwen2.5-0.5B,
+Qwen2.5-3B↔7B and **8** (not 9) Qwen3 pairs. The 9th was most likely
+Qwen3.5-4B↔9B, which the same sentence excludes. T3 is pre-registered, so
+TACC cannot pick silently; D029/P1 Call 1 proposes the rule's 10. No v2
+result exists yet. Blocked by ownership: `## D` is design-side's.
+
 ---
 
 ## Resolved
