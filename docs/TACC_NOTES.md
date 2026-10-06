@@ -63,6 +63,8 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+---
+
 ## Resolved
 
 **Issue 23 (2026-10-05) — D029 `## D`, prediction P3: T3's stated count
@@ -73,8 +75,6 @@ Qwen2.5-3B↔7B and **8** (not 9) Qwen3 pairs. The 9th was most likely
 Qwen3.5-4B↔9B, which the same sentence excludes. T3 is pre-registered, so
 TACC cannot pick silently; D029/P1 Call 1 proposes the rule's 10. No v2
 result exists yet. Blocked by ownership: `## D` is design-side's.
-
----
 
 *Resolved 2026-10-05 (design-side, D029/P1 Review).* Correct: an
 arithmetic slip in `## D` ("9 Qwen3 pairs / 11"). The rule governs: T3 =
