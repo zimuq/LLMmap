@@ -1,0 +1,2750 @@
+{
+ "schema": "d029-s0-v1",
+ "corpus": "v2",
+ "host_mem_gb": 223.1,
+ "inputs": {
+  "tensor_energy_sf_sha256": "8a31d7603c27d1e8b455e4b653ba3c3bc5edd4cf50582f9b43443abc73a1f223",
+  "hard_sets_sha256": "552cbb650c4a91e08118e79770e42f2c6d297b0ca06922aca61c7866ee26c056",
+  "hard_sets_commit": "3f8d2ed",
+  "universe_sha256": "49c489ff15a2edb345fdb7107f0fdfa687e4a0ab915a728430c7b15a1907139d",
+  "manifest_sha256": "78e4b7b4a7a1bcc9535edf91dabfc71c8cadb2542cd0dd7a417c89f85c833bcf",
+  "ml_pool_sha256": "3f338fb02df7f65f4583751875968e020f6423541045f53de193ecc12672b377",
+  "pool_v1_sha256": "0a6d098c7b540bf7fc4e111a9d11f58eb4b3ddad80f37ba1f10d6677775ae0e8"
+ },
+ "ml_query_emb": {
+  "n": 16,
+  "dim": 1024,
+  "dtype": "fp16",
+  "ids": [
+   281,
+   282,
+   283,
+   284,
+   285,
+   286,
+   287,
+   288,
+   289,
+   290,
+   291,
+   292,
+   293,
+   294,
+   295,
+   296
+  ],
+  "embedding_model": "intfloat/multilingual-e5-large-instruct",
+  "pooling": "mean, NOT normalised",
+  "max_length": 512,
+  "function": "d028_embed run() == d006_s6_embed mean_pool, fp16 model",
+  "probe_file": "./confs/queries/pool_d028_ml.json",
+  "probe_file_sha256": "3f338fb02df7f65f4583751875968e020f6423541045f53de193ecc12672b377",
+  "parity_259_pool_texts_max_abs_diff": 0.0,
+  "sha256": "0d0f85917a4cde12eba51fd95f7c4a068277db08131d50c664fa4277cdfaa94c"
+ },
+ "loader_checks": {
+  "ml_prompt_conf_rows_checked": 10625,
+  "v1_byte_equal_models_per_split": {
+   "build": 34,
+   "val": 34,
+   "test": 34
+  },
+  "pair_worker_vs_frozen_tensor": {
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+    "probe": 0.0,
+    "energy_raw": 0.0,
+    "energy_sf": 0.0,
+    "probe_A": 0.0,
+    "probe_B": 0.0
+   },
+   "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+    "probe": 0.0,
+    "energy_raw": 0.0,
+    "energy_sf": 0.0,
+    "probe_A": 0.0,
+    "probe_B": 0.0
+   },
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+    "probe": 0.0,
+    "energy_raw": 0.0,
+    "energy_sf": 0.0,
+    "probe_A": 0.0,
+    "probe_B": 0.0
+   }
+  }
+ },
+ "v1_code_path": {
+  "jg_k16": [
+   193,
+   140,
+   237,
+   114,
+   233,
+   117,
+   0,
+   16,
+   18,
+   123,
+   234,
+   109,
+   235,
+   132,
+   3,
+   239
+  ],
+  "equals_d025_global": true,
+  "gc_k8": [
+   193,
+   123,
+   233,
+   243,
+   240,
+   17,
+   136,
+   252
+  ],
+  "equals_d013_gamma01": true
+ },
+ "footprint": {
+  "XY2_GB": 22.09,
+  "XX2_GB": 0.53,
+  "precompute_min": 1.16
+ },
+ "pointers": {
+  "note": "descriptive, S_build only; coverage = I4 max over the chain's POOL queries (ML probes have no tensor column); joint = scale-free joint energy incl. ML; rank 1 = least separated of 3,570. Not trained accuracy.",
+  "per_arm_k": {
+   "PAPER8|8": {
+    "cvar01_cov": 0.2892330288887024,
+    "mean_cov": 1.2049850225448608,
+    "cvar01_joint": 0.14186158776283264,
+    "pairs": {
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global": {
+      "cov": 0.0584,
+      "cov_rank": 5,
+      "joint": 0.0307,
+      "joint_rank": 2
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+      "cov": 0.0311,
+      "cov_rank": 1,
+      "joint": 0.0268,
+      "joint_rank": 1
+     },
+     "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water": {
+      "cov": 0.0418,
+      "cov_rank": 2,
+      "joint": 0.0315,
+      "joint_rank": 3
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.1781,
+      "cov_rank": 33,
+      "joint": 0.0466,
+      "joint_rank": 10
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water": {
+      "cov": 0.0552,
+      "cov_rank": 3,
+      "joint": 0.0405,
+      "joint_rank": 6
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.1846,
+      "cov_rank": 39,
+      "joint": 0.0491,
+      "joint_rank": 11
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct": {
+      "cov": 0.0627,
+      "cov_rank": 7,
+      "joint": 0.032,
+      "joint_rank": 4
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "cov": 0.0555,
+      "cov_rank": 4,
+      "joint": 0.0397,
+      "joint_rank": 5
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire": {
+      "cov": 0.0611,
+      "cov_rank": 6,
+      "joint": 0.041,
+      "joint_rank": 7
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.0824,
+      "cov_rank": 9,
+      "joint": 0.0564,
+      "joint_rank": 13
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "cov": 0.0929,
+      "cov_rank": 11,
+      "joint": 0.046,
+      "joint_rank": 9
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global": {
+      "cov": 0.0947,
+      "cov_rank": 12,
+      "joint": 0.057,
+      "joint_rank": 14
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.1217,
+      "cov_rank": 15,
+      "joint": 0.0662,
+      "joint_rank": 17
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.0826,
+      "cov_rank": 10,
+      "joint": 0.0522,
+      "joint_rank": 12
+     },
+     "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+      "cov": 0.0772,
+      "cov_rank": 8,
+      "joint": 0.0439,
+      "joint_rank": 8
+     },
+     "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B": {
+      "cov": 0.2256,
+      "cov_rank": 71,
+      "joint": 0.0721,
+      "joint_rank": 22
+     },
+     "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct": {
+      "cov": 0.1882,
+      "cov_rank": 40,
+      "joint": 0.0932,
+      "joint_rank": 33
+     },
+     "google/gemma-4-12B-it | google/gemma-4-E4B-it": {
+      "cov": 0.323,
+      "cov_rank": 219,
+      "joint": 0.0878,
+      "joint_rank": 28
+     },
+     "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.275,
+      "cov_rank": 134,
+      "joint": 0.0954,
+      "joint_rank": 36
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B": {
+      "cov": 0.2265,
+      "cov_rank": 73,
+      "joint": 0.095,
+      "joint_rank": 35
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B": {
+      "cov": 0.3044,
+      "cov_rank": 180,
+      "joint": 0.1028,
+      "joint_rank": 47
+     },
+     "google/gemma-3-1b-it | google/gemma-3-4b-it": {
+      "cov": 0.8316,
+      "cov_rank": 1722,
+      "joint": 0.2027,
+      "joint_rank": 496
+     },
+     "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct": {
+      "cov": 1.5658,
+      "cov_rank": 2729,
+      "joint": 0.3323,
+      "joint_rank": 2024
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 0.5026,
+      "cov_rank": 584,
+      "joint": 0.1905,
+      "joint_rank": 399
+     },
+     "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.164,
+      "cov_rank": 26,
+      "joint": 0.0704,
+      "joint_rank": 18
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.1304,
+      "cov_rank": 17,
+      "joint": 0.0755,
+      "joint_rank": 25
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.1012,
+      "cov_rank": 13,
+      "joint": 0.0654,
+      "joint_rank": 16
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "cov": 1.0485,
+      "cov_rank": 2178,
+      "joint": 0.2117,
+      "joint_rank": 568
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "cov": 2.424,
+      "cov_rank": 3154,
+      "joint": 0.3482,
+      "joint_rank": 2200
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+      "cov": 0.2825,
+      "cov_rank": 148,
+      "joint": 0.0722,
+      "joint_rank": 23
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B": {
+      "cov": 0.2669,
+      "cov_rank": 120,
+      "joint": 0.0991,
+      "joint_rank": 40
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.1358,
+      "cov_rank": 18,
+      "joint": 0.0751,
+      "joint_rank": 24
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.1953,
+      "cov_rank": 3075,
+      "joint": 0.3251,
+      "joint_rank": 1925
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-8B": {
+      "cov": 0.1836,
+      "cov_rank": 37,
+      "joint": 0.0711,
+      "joint_rank": 19
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B": {
+      "cov": 3.8508,
+      "cov_rank": 3480,
+      "joint": 0.4113,
+      "joint_rank": 2753
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 3.406,
+      "cov_rank": 3423,
+      "joint": 0.3929,
+      "joint_rank": 2610
+     },
+     "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct": {
+      "cov": 0.6333,
+      "cov_rank": 995,
+      "joint": 0.2112,
+      "joint_rank": 567
+     },
+     "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M": {
+      "cov": 0.561,
+      "cov_rank": 746,
+      "joint": 0.171,
+      "joint_rank": 277
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.1494,
+      "cov_rank": 23,
+      "joint": 0.0768,
+      "joint_rank": 26
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.1418,
+      "cov_rank": 20,
+      "joint": 0.072,
+      "joint_rank": 21
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.1282,
+      "cov_rank": 16,
+      "joint": 0.0903,
+      "joint_rank": 30
+     },
+     "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct": {
+      "cov": 0.2292,
+      "cov_rank": 76,
+      "joint": 0.1332,
+      "joint_rank": 122
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.1598,
+      "cov_rank": 25,
+      "joint": 0.0825,
+      "joint_rank": 27
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct": {
+      "cov": 0.1194,
+      "cov_rank": 14,
+      "joint": 0.0718,
+      "joint_rank": 20
+     },
+     "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5": {
+      "cov": 0.1981,
+      "cov_rank": 49,
+      "joint": 0.1123,
+      "joint_rank": 68
+     },
+     "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B": {
+      "cov": 0.2238,
+      "cov_rank": 69,
+      "joint": 0.1073,
+      "joint_rank": 59
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3656,
+      "cov_rank": 291,
+      "joint": 0.1252,
+      "joint_rank": 95
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.2886,
+      "cov_rank": 159,
+      "joint": 0.0979,
+      "joint_rank": 37
+     },
+     "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.2738,
+      "cov_rank": 129,
+      "joint": 0.1648,
+      "joint_rank": 237
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.1808,
+      "cov_rank": 35,
+      "joint": 0.1068,
+      "joint_rank": 58
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.2149,
+      "cov_rank": 62,
+      "joint": 0.1086,
+      "joint_rank": 62
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat": {
+      "cov": 0.1401,
+      "cov_rank": 19,
+      "joint": 0.0635,
+      "joint_rank": 15
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.279,
+      "cov_rank": 141,
+      "joint": 0.1367,
+      "joint_rank": 133
+     },
+     "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.2973,
+      "cov_rank": 169,
+      "joint": 0.1152,
+      "joint_rank": 71
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.2077,
+      "cov_rank": 56,
+      "joint": 0.1038,
+      "joint_rank": 48
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.1972,
+      "cov_rank": 47,
+      "joint": 0.0998,
+      "joint_rank": 43
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.2238,
+      "cov_rank": 70,
+      "joint": 0.1237,
+      "joint_rank": 88
+     }
+    }
+   },
+   "JG|8": {
+    "cvar01_cov": 0.5019089579582214,
+    "mean_cov": 1.5124231576919556,
+    "cvar01_joint": 0.20995181798934937,
+    "pairs": {
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global": {
+      "cov": 0.0642,
+      "cov_rank": 3,
+      "joint": 0.0333,
+      "joint_rank": 3
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+      "cov": 0.0411,
+      "cov_rank": 1,
+      "joint": 0.027,
+      "joint_rank": 1
+     },
+     "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water": {
+      "cov": 0.0506,
+      "cov_rank": 2,
+      "joint": 0.0309,
+      "joint_rank": 2
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.5363,
+      "cov_rank": 189,
+      "joint": 0.1061,
+      "joint_rank": 18
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water": {
+      "cov": 0.2087,
+      "cov_rank": 7,
+      "joint": 0.0555,
+      "joint_rank": 6
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.3956,
+      "cov_rank": 49,
+      "joint": 0.114,
+      "joint_rank": 22
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct": {
+      "cov": 0.1021,
+      "cov_rank": 5,
+      "joint": 0.0405,
+      "joint_rank": 4
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "cov": 0.8525,
+      "cov_rank": 962,
+      "joint": 0.1405,
+      "joint_rank": 34
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire": {
+      "cov": 0.2105,
+      "cov_rank": 8,
+      "joint": 0.057,
+      "joint_rank": 7
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3262,
+      "cov_rank": 30,
+      "joint": 0.0998,
+      "joint_rank": 17
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "cov": 0.2856,
+      "cov_rank": 19,
+      "joint": 0.0896,
+      "joint_rank": 13
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global": {
+      "cov": 0.2731,
+      "cov_rank": 14,
+      "joint": 0.0849,
+      "joint_rank": 11
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.2648,
+      "cov_rank": 13,
+      "joint": 0.0797,
+      "joint_rank": 9
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.2374,
+      "cov_rank": 10,
+      "joint": 0.0725,
+      "joint_rank": 8
+     },
+     "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+      "cov": 0.0892,
+      "cov_rank": 4,
+      "joint": 0.0504,
+      "joint_rank": 5
+     },
+     "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B": {
+      "cov": 0.2256,
+      "cov_rank": 9,
+      "joint": 0.0915,
+      "joint_rank": 14
+     },
+     "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct": {
+      "cov": 0.528,
+      "cov_rank": 179,
+      "joint": 0.1552,
+      "joint_rank": 47
+     },
+     "google/gemma-4-12B-it | google/gemma-4-E4B-it": {
+      "cov": 0.5815,
+      "cov_rank": 263,
+      "joint": 0.155,
+      "joint_rank": 45
+     },
+     "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.8552,
+      "cov_rank": 975,
+      "joint": 0.2577,
+      "joint_rank": 321
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B": {
+      "cov": 0.2739,
+      "cov_rank": 15,
+      "joint": 0.1487,
+      "joint_rank": 39
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B": {
+      "cov": 0.164,
+      "cov_rank": 6,
+      "joint": 0.0857,
+      "joint_rank": 12
+     },
+     "google/gemma-3-1b-it | google/gemma-3-4b-it": {
+      "cov": 1.6778,
+      "cov_rank": 2518,
+      "joint": 0.271,
+      "joint_rank": 388
+     },
+     "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct": {
+      "cov": 1.7072,
+      "cov_rank": 2547,
+      "joint": 0.3785,
+      "joint_rank": 1239
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 0.5026,
+      "cov_rank": 145,
+      "joint": 0.1223,
+      "joint_rank": 26
+     },
+     "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.2786,
+      "cov_rank": 18,
+      "joint": 0.0815,
+      "joint_rank": 10
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.4942,
+      "cov_rank": 133,
+      "joint": 0.2083,
+      "joint_rank": 134
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3006,
+      "cov_rank": 24,
+      "joint": 0.1207,
+      "joint_rank": 24
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "cov": 0.492,
+      "cov_rank": 130,
+      "joint": 0.1831,
+      "joint_rank": 78
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "cov": 3.8943,
+      "cov_rank": 3417,
+      "joint": 0.5627,
+      "joint_rank": 2668
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+      "cov": 0.2889,
+      "cov_rank": 21,
+      "joint": 0.1113,
+      "joint_rank": 21
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B": {
+      "cov": 0.5293,
+      "cov_rank": 182,
+      "joint": 0.1588,
+      "joint_rank": 52
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.2924,
+      "cov_rank": 22,
+      "joint": 0.0935,
+      "joint_rank": 15
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.1808,
+      "cov_rank": 2937,
+      "joint": 0.4146,
+      "joint_rank": 1577
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-8B": {
+      "cov": 0.4777,
+      "cov_rank": 118,
+      "joint": 0.1238,
+      "joint_rank": 27
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B": {
+      "cov": 4.6486,
+      "cov_rank": 3481,
+      "joint": 0.6082,
+      "joint_rank": 2896
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.3594,
+      "cov_rank": 3047,
+      "joint": 0.3752,
+      "joint_rank": 1216
+     },
+     "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct": {
+      "cov": 0.6425,
+      "cov_rank": 391,
+      "joint": 0.1626,
+      "joint_rank": 54
+     },
+     "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M": {
+      "cov": 0.561,
+      "cov_rank": 232,
+      "joint": 0.2682,
+      "joint_rank": 376
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3936,
+      "cov_rank": 46,
+      "joint": 0.0992,
+      "joint_rank": 16
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3539,
+      "cov_rank": 38,
+      "joint": 0.1422,
+      "joint_rank": 35
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3057,
+      "cov_rank": 26,
+      "joint": 0.1214,
+      "joint_rank": 25
+     },
+     "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct": {
+      "cov": 0.6508,
+      "cov_rank": 416,
+      "joint": 0.2064,
+      "joint_rank": 132
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.4085,
+      "cov_rank": 54,
+      "joint": 0.1434,
+      "joint_rank": 36
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct": {
+      "cov": 0.3409,
+      "cov_rank": 35,
+      "joint": 0.109,
+      "joint_rank": 19
+     },
+     "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5": {
+      "cov": 0.9702,
+      "cov_rank": 1274,
+      "joint": 0.2581,
+      "joint_rank": 324
+     },
+     "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B": {
+      "cov": 0.8372,
+      "cov_rank": 935,
+      "joint": 0.2422,
+      "joint_rank": 245
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.4194,
+      "cov_rank": 60,
+      "joint": 0.1366,
+      "joint_rank": 33
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.6488,
+      "cov_rank": 407,
+      "joint": 0.1633,
+      "joint_rank": 57
+     },
+     "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.889,
+      "cov_rank": 1063,
+      "joint": 0.304,
+      "joint_rank": 612
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.2744,
+      "cov_rank": 16,
+      "joint": 0.1352,
+      "joint_rank": 31
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.2872,
+      "cov_rank": 20,
+      "joint": 0.1179,
+      "joint_rank": 23
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat": {
+      "cov": 0.3137,
+      "cov_rank": 27,
+      "joint": 0.1514,
+      "joint_rank": 41
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3648,
+      "cov_rank": 40,
+      "joint": 0.1355,
+      "joint_rank": 32
+     },
+     "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.3177,
+      "cov_rank": 29,
+      "joint": 0.1758,
+      "joint_rank": 71
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.4541,
+      "cov_rank": 95,
+      "joint": 0.1778,
+      "joint_rank": 74
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.634,
+      "cov_rank": 371,
+      "joint": 0.2261,
+      "joint_rank": 187
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.5317,
+      "cov_rank": 183,
+      "joint": 0.2628,
+      "joint_rank": 350
+     }
+    }
+   },
+   "JG|16": {
+    "cvar01_cov": 0.5888367295265198,
+    "mean_cov": 1.7882380485534668,
+    "cvar01_joint": 0.20019200444221497,
+    "pairs": {
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global": {
+      "cov": 0.0765,
+      "cov_rank": 3,
+      "joint": 0.0334,
+      "joint_rank": 3
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+      "cov": 0.0411,
+      "cov_rank": 1,
+      "joint": 0.0264,
+      "joint_rank": 1
+     },
+     "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water": {
+      "cov": 0.0594,
+      "cov_rank": 2,
+      "joint": 0.0311,
+      "joint_rank": 2
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.5363,
+      "cov_rank": 90,
+      "joint": 0.0844,
+      "joint_rank": 15
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water": {
+      "cov": 0.2087,
+      "cov_rank": 5,
+      "joint": 0.0439,
+      "joint_rank": 4
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.3956,
+      "cov_rank": 29,
+      "joint": 0.0842,
+      "joint_rank": 14
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct": {
+      "cov": 0.157,
+      "cov_rank": 4,
+      "joint": 0.057,
+      "joint_rank": 6
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "cov": 0.8525,
+      "cov_rank": 583,
+      "joint": 0.1117,
+      "joint_rank": 24
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire": {
+      "cov": 0.2105,
+      "cov_rank": 6,
+      "joint": 0.0452,
+      "joint_rank": 5
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.539,
+      "cov_rank": 95,
+      "joint": 0.1217,
+      "joint_rank": 28
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "cov": 0.2856,
+      "cov_rank": 12,
+      "joint": 0.0742,
+      "joint_rank": 11
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global": {
+      "cov": 0.2731,
+      "cov_rank": 10,
+      "joint": 0.0671,
+      "joint_rank": 8
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.2648,
+      "cov_rank": 9,
+      "joint": 0.0716,
+      "joint_rank": 10
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.3633,
+      "cov_rank": 21,
+      "joint": 0.0844,
+      "joint_rank": 16
+     },
+     "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+      "cov": 0.4269,
+      "cov_rank": 35,
+      "joint": 0.0658,
+      "joint_rank": 7
+     },
+     "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B": {
+      "cov": 0.2256,
+      "cov_rank": 7,
+      "joint": 0.0699,
+      "joint_rank": 9
+     },
+     "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct": {
+      "cov": 0.722,
+      "cov_rank": 337,
+      "joint": 0.1701,
+      "joint_rank": 73
+     },
+     "google/gemma-4-12B-it | google/gemma-4-E4B-it": {
+      "cov": 0.7702,
+      "cov_rank": 429,
+      "joint": 0.1616,
+      "joint_rank": 56
+     },
+     "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.8552,
+      "cov_rank": 592,
+      "joint": 0.1868,
+      "joint_rank": 98
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B": {
+      "cov": 0.2739,
+      "cov_rank": 11,
+      "joint": 0.1168,
+      "joint_rank": 26
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B": {
+      "cov": 0.3756,
+      "cov_rank": 22,
+      "joint": 0.1114,
+      "joint_rank": 23
+     },
+     "google/gemma-3-1b-it | google/gemma-3-4b-it": {
+      "cov": 1.6778,
+      "cov_rank": 2131,
+      "joint": 0.1929,
+      "joint_rank": 108
+     },
+     "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct": {
+      "cov": 3.4951,
+      "cov_rank": 3250,
+      "joint": 0.4387,
+      "joint_rank": 2116
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 0.6503,
+      "cov_rank": 221,
+      "joint": 0.177,
+      "joint_rank": 79
+     },
+     "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.3768,
+      "cov_rank": 25,
+      "joint": 0.0945,
+      "joint_rank": 18
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.8144,
+      "cov_rank": 512,
+      "joint": 0.1955,
+      "joint_rank": 116
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.4623,
+      "cov_rank": 45,
+      "joint": 0.1316,
+      "joint_rank": 32
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "cov": 1.0485,
+      "cov_rank": 1033,
+      "joint": 0.278,
+      "joint_rank": 576
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "cov": 3.8943,
+      "cov_rank": 3343,
+      "joint": 0.4636,
+      "joint_rank": 2321
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+      "cov": 0.2889,
+      "cov_rank": 14,
+      "joint": 0.0782,
+      "joint_rank": 12
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B": {
+      "cov": 0.5293,
+      "cov_rank": 85,
+      "joint": 0.129,
+      "joint_rank": 31
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.2924,
+      "cov_rank": 15,
+      "joint": 0.0828,
+      "joint_rank": 13
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.1808,
+      "cov_rank": 2626,
+      "joint": 0.314,
+      "joint_rank": 921
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-8B": {
+      "cov": 0.4777,
+      "cov_rank": 52,
+      "joint": 0.0934,
+      "joint_rank": 17
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B": {
+      "cov": 4.6486,
+      "cov_rank": 3458,
+      "joint": 0.4957,
+      "joint_rank": 2585
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.3594,
+      "cov_rank": 2763,
+      "joint": 0.2805,
+      "joint_rank": 600
+     },
+     "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct": {
+      "cov": 0.6425,
+      "cov_rank": 207,
+      "joint": 0.2185,
+      "joint_rank": 199
+     },
+     "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M": {
+      "cov": 0.561,
+      "cov_rank": 119,
+      "joint": 0.2206,
+      "joint_rank": 204
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3936,
+      "cov_rank": 27,
+      "joint": 0.0969,
+      "joint_rank": 19
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3953,
+      "cov_rank": 28,
+      "joint": 0.1177,
+      "joint_rank": 27
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3057,
+      "cov_rank": 16,
+      "joint": 0.1054,
+      "joint_rank": 21
+     },
+     "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct": {
+      "cov": 1.2709,
+      "cov_rank": 1509,
+      "joint": 0.2157,
+      "joint_rank": 184
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.6912,
+      "cov_rank": 289,
+      "joint": 0.1688,
+      "joint_rank": 72
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct": {
+      "cov": 0.3409,
+      "cov_rank": 17,
+      "joint": 0.1136,
+      "joint_rank": 25
+     },
+     "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5": {
+      "cov": 0.9702,
+      "cov_rank": 853,
+      "joint": 0.2154,
+      "joint_rank": 183
+     },
+     "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B": {
+      "cov": 0.8372,
+      "cov_rank": 559,
+      "joint": 0.2246,
+      "joint_rank": 223
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.6924,
+      "cov_rank": 293,
+      "joint": 0.1412,
+      "joint_rank": 39
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.6488,
+      "cov_rank": 216,
+      "joint": 0.1325,
+      "joint_rank": 34
+     },
+     "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.889,
+      "cov_rank": 678,
+      "joint": 0.2809,
+      "joint_rank": 604
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.5131,
+      "cov_rank": 72,
+      "joint": 0.1374,
+      "joint_rank": 37
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.2872,
+      "cov_rank": 13,
+      "joint": 0.1231,
+      "joint_rank": 29
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat": {
+      "cov": 0.4003,
+      "cov_rank": 31,
+      "joint": 0.1529,
+      "joint_rank": 47
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.5586,
+      "cov_rank": 116,
+      "joint": 0.1596,
+      "joint_rank": 51
+     },
+     "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.6116,
+      "cov_rank": 172,
+      "joint": 0.1905,
+      "joint_rank": 101
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.5385,
+      "cov_rank": 94,
+      "joint": 0.2086,
+      "joint_rank": 157
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 1.1316,
+      "cov_rank": 1217,
+      "joint": 0.2358,
+      "joint_rank": 286
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.9492,
+      "cov_rank": 797,
+      "joint": 0.2357,
+      "joint_rank": 283
+     }
+    }
+   },
+   "JG+ML|8": {
+    "cvar01_cov": 0.48380282521247864,
+    "mean_cov": 1.507236123085022,
+    "cvar01_joint": 0.21153593063354492,
+    "pairs": {
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global": {
+      "cov": 0.0642,
+      "cov_rank": 3,
+      "joint": 0.037,
+      "joint_rank": 3
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+      "cov": 0.0411,
+      "cov_rank": 1,
+      "joint": 0.0272,
+      "joint_rank": 1
+     },
+     "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water": {
+      "cov": 0.0506,
+      "cov_rank": 2,
+      "joint": 0.035,
+      "joint_rank": 2
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.5363,
+      "cov_rank": 213,
+      "joint": 0.1064,
+      "joint_rank": 19
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water": {
+      "cov": 0.2087,
+      "cov_rank": 7,
+      "joint": 0.0597,
+      "joint_rank": 6
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.3956,
+      "cov_rank": 66,
+      "joint": 0.1144,
+      "joint_rank": 20
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct": {
+      "cov": 0.1021,
+      "cov_rank": 5,
+      "joint": 0.0406,
+      "joint_rank": 4
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "cov": 0.8525,
+      "cov_rank": 990,
+      "joint": 0.1407,
+      "joint_rank": 33
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire": {
+      "cov": 0.2105,
+      "cov_rank": 8,
+      "joint": 0.061,
+      "joint_rank": 7
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3262,
+      "cov_rank": 36,
+      "joint": 0.1043,
+      "joint_rank": 17
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "cov": 0.2856,
+      "cov_rank": 21,
+      "joint": 0.0847,
+      "joint_rank": 13
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global": {
+      "cov": 0.2731,
+      "cov_rank": 16,
+      "joint": 0.083,
+      "joint_rank": 12
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.2648,
+      "cov_rank": 15,
+      "joint": 0.077,
+      "joint_rank": 10
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.2374,
+      "cov_rank": 11,
+      "joint": 0.068,
+      "joint_rank": 8
+     },
+     "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+      "cov": 0.0892,
+      "cov_rank": 4,
+      "joint": 0.0476,
+      "joint_rank": 5
+     },
+     "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B": {
+      "cov": 0.2256,
+      "cov_rank": 9,
+      "joint": 0.0928,
+      "joint_rank": 15
+     },
+     "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct": {
+      "cov": 0.528,
+      "cov_rank": 203,
+      "joint": 0.1537,
+      "joint_rank": 41
+     },
+     "google/gemma-4-12B-it | google/gemma-4-E4B-it": {
+      "cov": 0.5815,
+      "cov_rank": 291,
+      "joint": 0.1542,
+      "joint_rank": 42
+     },
+     "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.8552,
+      "cov_rank": 1001,
+      "joint": 0.2545,
+      "joint_rank": 312
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B": {
+      "cov": 0.2739,
+      "cov_rank": 17,
+      "joint": 0.1624,
+      "joint_rank": 52
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B": {
+      "cov": 0.164,
+      "cov_rank": 6,
+      "joint": 0.0826,
+      "joint_rank": 11
+     },
+     "google/gemma-3-1b-it | google/gemma-3-4b-it": {
+      "cov": 1.6778,
+      "cov_rank": 2518,
+      "joint": 0.2653,
+      "joint_rank": 371
+     },
+     "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct": {
+      "cov": 1.7072,
+      "cov_rank": 2547,
+      "joint": 0.3581,
+      "joint_rank": 1148
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 0.5026,
+      "cov_rank": 167,
+      "joint": 0.1403,
+      "joint_rank": 32
+     },
+     "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.2786,
+      "cov_rank": 20,
+      "joint": 0.0758,
+      "joint_rank": 9
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.4942,
+      "cov_rank": 156,
+      "joint": 0.2048,
+      "joint_rank": 126
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3006,
+      "cov_rank": 28,
+      "joint": 0.1213,
+      "joint_rank": 24
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "cov": 0.492,
+      "cov_rank": 152,
+      "joint": 0.161,
+      "joint_rank": 49
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "cov": 3.8943,
+      "cov_rank": 3417,
+      "joint": 0.551,
+      "joint_rank": 2766
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+      "cov": 0.2889,
+      "cov_rank": 23,
+      "joint": 0.124,
+      "joint_rank": 25
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B": {
+      "cov": 0.5293,
+      "cov_rank": 206,
+      "joint": 0.1719,
+      "joint_rank": 65
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.2924,
+      "cov_rank": 24,
+      "joint": 0.0898,
+      "joint_rank": 14
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.1808,
+      "cov_rank": 2937,
+      "joint": 0.4197,
+      "joint_rank": 1765
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-8B": {
+      "cov": 0.4777,
+      "cov_rank": 136,
+      "joint": 0.1295,
+      "joint_rank": 28
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B": {
+      "cov": 4.6486,
+      "cov_rank": 3481,
+      "joint": 0.6046,
+      "joint_rank": 2989
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.3594,
+      "cov_rank": 3047,
+      "joint": 0.3681,
+      "joint_rank": 1254
+     },
+     "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct": {
+      "cov": 0.6425,
+      "cov_rank": 428,
+      "joint": 0.1696,
+      "joint_rank": 60
+     },
+     "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M": {
+      "cov": 0.561,
+      "cov_rank": 257,
+      "joint": 0.2499,
+      "joint_rank": 283
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3936,
+      "cov_rank": 63,
+      "joint": 0.0979,
+      "joint_rank": 16
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3539,
+      "cov_rank": 52,
+      "joint": 0.1846,
+      "joint_rank": 77
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3057,
+      "cov_rank": 31,
+      "joint": 0.1178,
+      "joint_rank": 21
+     },
+     "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct": {
+      "cov": 0.6508,
+      "cov_rank": 449,
+      "joint": 0.2137,
+      "joint_rank": 137
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.4085,
+      "cov_rank": 72,
+      "joint": 0.1492,
+      "joint_rank": 38
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct": {
+      "cov": 0.3409,
+      "cov_rank": 48,
+      "joint": 0.1293,
+      "joint_rank": 27
+     },
+     "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5": {
+      "cov": 0.9702,
+      "cov_rank": 1287,
+      "joint": 0.2723,
+      "joint_rank": 415
+     },
+     "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B": {
+      "cov": 0.8372,
+      "cov_rank": 963,
+      "joint": 0.2375,
+      "joint_rank": 222
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.4194,
+      "cov_rank": 79,
+      "joint": 0.1304,
+      "joint_rank": 29
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.6488,
+      "cov_rank": 441,
+      "joint": 0.1523,
+      "joint_rank": 40
+     },
+     "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.889,
+      "cov_rank": 1082,
+      "joint": 0.3251,
+      "joint_rank": 829
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.2744,
+      "cov_rank": 18,
+      "joint": 0.1677,
+      "joint_rank": 59
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.2872,
+      "cov_rank": 22,
+      "joint": 0.1248,
+      "joint_rank": 26
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat": {
+      "cov": 0.3137,
+      "cov_rank": 32,
+      "joint": 0.1626,
+      "joint_rank": 53
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3648,
+      "cov_rank": 54,
+      "joint": 0.1965,
+      "joint_rank": 99
+     },
+     "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.3177,
+      "cov_rank": 35,
+      "joint": 0.175,
+      "joint_rank": 68
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.3822,
+      "cov_rank": 58,
+      "joint": 0.1642,
+      "joint_rank": 54
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.4403,
+      "cov_rank": 95,
+      "joint": 0.1945,
+      "joint_rank": 91
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.5317,
+      "cov_rank": 207,
+      "joint": 0.2374,
+      "joint_rank": 221
+     }
+    }
+   },
+   "JG+ML|16": {
+    "cvar01_cov": 0.571212112903595,
+    "mean_cov": 1.7667962312698364,
+    "cvar01_joint": 0.2039497047662735,
+    "pairs": {
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global": {
+      "cov": 0.0642,
+      "cov_rank": 3,
+      "joint": 0.0351,
+      "joint_rank": 3
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+      "cov": 0.0411,
+      "cov_rank": 1,
+      "joint": 0.0282,
+      "joint_rank": 1
+     },
+     "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water": {
+      "cov": 0.0506,
+      "cov_rank": 2,
+      "joint": 0.0313,
+      "joint_rank": 2
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.5363,
+      "cov_rank": 102,
+      "joint": 0.0756,
+      "joint_rank": 12
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water": {
+      "cov": 0.2087,
+      "cov_rank": 5,
+      "joint": 0.0495,
+      "joint_rank": 5
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.3956,
+      "cov_rank": 35,
+      "joint": 0.085,
+      "joint_rank": 16
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct": {
+      "cov": 0.157,
+      "cov_rank": 4,
+      "joint": 0.0505,
+      "joint_rank": 6
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "cov": 0.8525,
+      "cov_rank": 639,
+      "joint": 0.0956,
+      "joint_rank": 20
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire": {
+      "cov": 0.2105,
+      "cov_rank": 6,
+      "joint": 0.0493,
+      "joint_rank": 4
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.539,
+      "cov_rank": 107,
+      "joint": 0.1318,
+      "joint_rank": 30
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "cov": 0.2856,
+      "cov_rank": 12,
+      "joint": 0.0676,
+      "joint_rank": 10
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global": {
+      "cov": 0.2731,
+      "cov_rank": 10,
+      "joint": 0.0656,
+      "joint_rank": 8
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.2648,
+      "cov_rank": 9,
+      "joint": 0.0725,
+      "joint_rank": 11
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.3633,
+      "cov_rank": 26,
+      "joint": 0.0848,
+      "joint_rank": 15
+     },
+     "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+      "cov": 0.4269,
+      "cov_rank": 42,
+      "joint": 0.0616,
+      "joint_rank": 7
+     },
+     "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B": {
+      "cov": 0.2256,
+      "cov_rank": 7,
+      "joint": 0.0673,
+      "joint_rank": 9
+     },
+     "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct": {
+      "cov": 0.722,
+      "cov_rank": 377,
+      "joint": 0.1607,
+      "joint_rank": 52
+     },
+     "google/gemma-4-12B-it | google/gemma-4-E4B-it": {
+      "cov": 0.7702,
+      "cov_rank": 476,
+      "joint": 0.161,
+      "joint_rank": 53
+     },
+     "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.8552,
+      "cov_rank": 648,
+      "joint": 0.202,
+      "joint_rank": 120
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B": {
+      "cov": 0.2739,
+      "cov_rank": 11,
+      "joint": 0.1412,
+      "joint_rank": 37
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B": {
+      "cov": 0.3756,
+      "cov_rank": 28,
+      "joint": 0.0839,
+      "joint_rank": 14
+     },
+     "google/gemma-3-1b-it | google/gemma-3-4b-it": {
+      "cov": 1.6778,
+      "cov_rank": 2155,
+      "joint": 0.1826,
+      "joint_rank": 72
+     },
+     "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct": {
+      "cov": 3.4951,
+      "cov_rank": 3254,
+      "joint": 0.4135,
+      "joint_rank": 1957
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 0.5026,
+      "cov_rank": 78,
+      "joint": 0.1442,
+      "joint_rank": 38
+     },
+     "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.3768,
+      "cov_rank": 31,
+      "joint": 0.095,
+      "joint_rank": 19
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.8144,
+      "cov_rank": 568,
+      "joint": 0.2039,
+      "joint_rank": 130
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.4623,
+      "cov_rank": 57,
+      "joint": 0.1467,
+      "joint_rank": 42
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "cov": 1.0485,
+      "cov_rank": 1086,
+      "joint": 0.2464,
+      "joint_rank": 330
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "cov": 3.8943,
+      "cov_rank": 3346,
+      "joint": 0.4794,
+      "joint_rank": 2576
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+      "cov": 0.2889,
+      "cov_rank": 14,
+      "joint": 0.0907,
+      "joint_rank": 17
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B": {
+      "cov": 0.5293,
+      "cov_rank": 98,
+      "joint": 0.1531,
+      "joint_rank": 45
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.2924,
+      "cov_rank": 15,
+      "joint": 0.082,
+      "joint_rank": 13
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.1808,
+      "cov_rank": 2648,
+      "joint": 0.3337,
+      "joint_rank": 1130
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-8B": {
+      "cov": 0.4777,
+      "cov_rank": 63,
+      "joint": 0.1026,
+      "joint_rank": 21
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B": {
+      "cov": 4.6486,
+      "cov_rank": 3458,
+      "joint": 0.5026,
+      "joint_rank": 2721
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.3594,
+      "cov_rank": 2772,
+      "joint": 0.2815,
+      "joint_rank": 589
+     },
+     "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct": {
+      "cov": 0.6425,
+      "cov_rank": 231,
+      "joint": 0.2195,
+      "joint_rank": 186
+     },
+     "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M": {
+      "cov": 0.561,
+      "cov_rank": 134,
+      "joint": 0.2134,
+      "joint_rank": 162
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3936,
+      "cov_rank": 34,
+      "joint": 0.0937,
+      "joint_rank": 18
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3539,
+      "cov_rank": 22,
+      "joint": 0.1462,
+      "joint_rank": 41
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3057,
+      "cov_rank": 16,
+      "joint": 0.1056,
+      "joint_rank": 22
+     },
+     "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct": {
+      "cov": 1.2709,
+      "cov_rank": 1552,
+      "joint": 0.2205,
+      "joint_rank": 190
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.6839,
+      "cov_rank": 309,
+      "joint": 0.146,
+      "joint_rank": 40
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct": {
+      "cov": 0.3409,
+      "cov_rank": 19,
+      "joint": 0.1286,
+      "joint_rank": 28
+     },
+     "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5": {
+      "cov": 0.9702,
+      "cov_rank": 915,
+      "joint": 0.2288,
+      "joint_rank": 239
+     },
+     "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B": {
+      "cov": 0.8372,
+      "cov_rank": 614,
+      "joint": 0.2195,
+      "joint_rank": 185
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.6924,
+      "cov_rank": 329,
+      "joint": 0.1241,
+      "joint_rank": 26
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.6488,
+      "cov_rank": 241,
+      "joint": 0.1271,
+      "joint_rank": 27
+     },
+     "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.889,
+      "cov_rank": 739,
+      "joint": 0.2987,
+      "joint_rank": 764
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3303,
+      "cov_rank": 18,
+      "joint": 0.1556,
+      "joint_rank": 48
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.2872,
+      "cov_rank": 13,
+      "joint": 0.1371,
+      "joint_rank": 33
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat": {
+      "cov": 0.3137,
+      "cov_rank": 17,
+      "joint": 0.157,
+      "joint_rank": 49
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3648,
+      "cov_rank": 27,
+      "joint": 0.1809,
+      "joint_rank": 68
+     },
+     "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.6116,
+      "cov_rank": 194,
+      "joint": 0.185,
+      "joint_rank": 78
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.5385,
+      "cov_rank": 106,
+      "joint": 0.2102,
+      "joint_rank": 155
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.634,
+      "cov_rank": 218,
+      "joint": 0.1962,
+      "joint_rank": 98
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.9492,
+      "cov_rank": 859,
+      "joint": 0.236,
+      "joint_rank": 266
+     }
+    }
+   },
+   "GC|8": {
+    "cvar01_cov": 0.5248959064483643,
+    "mean_cov": 1.612747311592102,
+    "cvar01_joint": 0.19290515780448914,
+    "pairs": {
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global": {
+      "cov": 0.0642,
+      "cov_rank": 3,
+      "joint": 0.0321,
+      "joint_rank": 2
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+      "cov": 0.0411,
+      "cov_rank": 1,
+      "joint": 0.0279,
+      "joint_rank": 1
+     },
+     "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water": {
+      "cov": 0.0583,
+      "cov_rank": 2,
+      "joint": 0.0329,
+      "joint_rank": 3
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.5363,
+      "cov_rank": 158,
+      "joint": 0.1003,
+      "joint_rank": 16
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water": {
+      "cov": 0.2087,
+      "cov_rank": 6,
+      "joint": 0.0627,
+      "joint_rank": 6
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "cov": 0.3956,
+      "cov_rank": 46,
+      "joint": 0.0965,
+      "joint_rank": 13
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct": {
+      "cov": 0.1021,
+      "cov_rank": 4,
+      "joint": 0.0424,
+      "joint_rank": 4
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "cov": 0.8525,
+      "cov_rank": 784,
+      "joint": 0.1336,
+      "joint_rank": 41
+     },
+     "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire": {
+      "cov": 0.2105,
+      "cov_rank": 7,
+      "joint": 0.0567,
+      "joint_rank": 5
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3262,
+      "cov_rank": 28,
+      "joint": 0.1322,
+      "joint_rank": 38
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "cov": 0.2946,
+      "cov_rank": 21,
+      "joint": 0.1228,
+      "joint_rank": 27
+     },
+     "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global": {
+      "cov": 0.2731,
+      "cov_rank": 15,
+      "joint": 0.0829,
+      "joint_rank": 12
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.2648,
+      "cov_rank": 12,
+      "joint": 0.0786,
+      "joint_rank": 11
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.6821,
+      "cov_rank": 421,
+      "joint": 0.1474,
+      "joint_rank": 53
+     },
+     "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+      "cov": 0.4269,
+      "cov_rank": 57,
+      "joint": 0.0704,
+      "joint_rank": 8
+     },
+     "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B": {
+      "cov": 0.1683,
+      "cov_rank": 5,
+      "joint": 0.0701,
+      "joint_rank": 7
+     },
+     "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct": {
+      "cov": 3.8034,
+      "cov_rank": 3402,
+      "joint": 0.2507,
+      "joint_rank": 409
+     },
+     "google/gemma-4-12B-it | google/gemma-4-E4B-it": {
+      "cov": 0.7702,
+      "cov_rank": 611,
+      "joint": 0.18,
+      "joint_rank": 101
+     },
+     "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+      "cov": 0.8552,
+      "cov_rank": 791,
+      "joint": 0.2454,
+      "joint_rank": 379
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B": {
+      "cov": 0.2641,
+      "cov_rank": 11,
+      "joint": 0.1289,
+      "joint_rank": 32
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B": {
+      "cov": 0.6672,
+      "cov_rank": 387,
+      "joint": 0.1808,
+      "joint_rank": 102
+     },
+     "google/gemma-3-1b-it | google/gemma-3-4b-it": {
+      "cov": 1.6778,
+      "cov_rank": 2290,
+      "joint": 0.1952,
+      "joint_rank": 145
+     },
+     "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct": {
+      "cov": 1.7072,
+      "cov_rank": 2333,
+      "joint": 0.3471,
+      "joint_rank": 1179
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 1.5996,
+      "cov_rank": 2187,
+      "joint": 0.2274,
+      "joint_rank": 281
+     },
+     "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.3733,
+      "cov_rank": 38,
+      "joint": 0.1249,
+      "joint_rank": 28
+     },
+     "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.4942,
+      "cov_rank": 109,
+      "joint": 0.2291,
+      "joint_rank": 289
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.606,
+      "cov_rank": 255,
+      "joint": 0.1931,
+      "joint_rank": 136
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "cov": 0.492,
+      "cov_rank": 106,
+      "joint": 0.2155,
+      "joint_rank": 231
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "cov": 3.8943,
+      "cov_rank": 3422,
+      "joint": 0.6048,
+      "joint_rank": 2884
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+      "cov": 0.2889,
+      "cov_rank": 19,
+      "joint": 0.0753,
+      "joint_rank": 9
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B": {
+      "cov": 0.5293,
+      "cov_rank": 151,
+      "joint": 0.166,
+      "joint_rank": 73
+     },
+     "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+      "cov": 0.3829,
+      "cov_rank": 42,
+      "joint": 0.1125,
+      "joint_rank": 21
+     },
+     "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.1808,
+      "cov_rank": 2842,
+      "joint": 0.4032,
+      "joint_rank": 1641
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-8B": {
+      "cov": 0.4777,
+      "cov_rank": 88,
+      "joint": 0.1198,
+      "joint_rank": 26
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B": {
+      "cov": 4.6486,
+      "cov_rank": 3502,
+      "joint": 0.6536,
+      "joint_rank": 3069
+     },
+     "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507": {
+      "cov": 2.3594,
+      "cov_rank": 2968,
+      "joint": 0.3876,
+      "joint_rank": 1506
+     },
+     "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct": {
+      "cov": 0.6425,
+      "cov_rank": 324,
+      "joint": 0.1894,
+      "joint_rank": 127
+     },
+     "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M": {
+      "cov": 0.3773,
+      "cov_rank": 40,
+      "joint": 0.2007,
+      "joint_rank": 169
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.3936,
+      "cov_rank": 44,
+      "joint": 0.1072,
+      "joint_rank": 19
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3539,
+      "cov_rank": 34,
+      "joint": 0.1312,
+      "joint_rank": 36
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.3057,
+      "cov_rank": 25,
+      "joint": 0.1023,
+      "joint_rank": 17
+     },
+     "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct": {
+      "cov": 0.6508,
+      "cov_rank": 347,
+      "joint": 0.2311,
+      "joint_rank": 297
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.4294,
+      "cov_rank": 59,
+      "joint": 0.1848,
+      "joint_rank": 119
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct": {
+      "cov": 0.3409,
+      "cov_rank": 31,
+      "joint": 0.1025,
+      "joint_rank": 18
+     },
+     "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5": {
+      "cov": 0.9702,
+      "cov_rank": 1037,
+      "joint": 0.2706,
+      "joint_rank": 570
+     },
+     "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B": {
+      "cov": 0.8372,
+      "cov_rank": 765,
+      "joint": 0.2108,
+      "joint_rank": 211
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct": {
+      "cov": 0.4194,
+      "cov_rank": 55,
+      "joint": 0.1501,
+      "joint_rank": 55
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct": {
+      "cov": 0.6488,
+      "cov_rank": 341,
+      "joint": 0.199,
+      "joint_rank": 156
+     },
+     "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.889,
+      "cov_rank": 868,
+      "joint": 0.3408,
+      "joint_rank": 1121
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.2744,
+      "cov_rank": 16,
+      "joint": 0.1452,
+      "joint_rank": 50
+     },
+     "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.2872,
+      "cov_rank": 18,
+      "joint": 0.0972,
+      "joint_rank": 14
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat": {
+      "cov": 0.3803,
+      "cov_rank": 41,
+      "joint": 0.1513,
+      "joint_rank": 57
+     },
+     "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct": {
+      "cov": 0.3648,
+      "cov_rank": 37,
+      "joint": 0.1288,
+      "joint_rank": 31
+     },
+     "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.8146,
+      "cov_rank": 702,
+      "joint": 0.2634,
+      "joint_rank": 511
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat": {
+      "cov": 0.6018,
+      "cov_rank": 244,
+      "joint": 0.2568,
+      "joint_rank": 463
+     },
+     "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct": {
+      "cov": 0.4403,
+      "cov_rank": 64,
+      "joint": 0.17,
+      "joint_rank": 81
+     },
+     "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+      "cov": 0.5317,
+      "cov_rank": 153,
+      "joint": 0.1968,
+      "joint_rank": 149
+     }
+    }
+   }
+  },
+  "pool_coverage": {
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global": {
+    "cov": 0.1003,
+    "rank": 2
+   },
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water": {
+    "cov": 0.0445,
+    "rank": 1
+   },
+   "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water": {
+    "cov": 0.106,
+    "rank": 3
+   },
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+    "cov": 0.5363,
+    "rank": 54
+   },
+   "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water": {
+    "cov": 0.2087,
+    "rank": 5
+   },
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+    "cov": 0.3956,
+    "rank": 17
+   },
+   "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct": {
+    "cov": 0.157,
+    "rank": 4
+   },
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+    "cov": 0.8525,
+    "rank": 339
+   },
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire": {
+    "cov": 0.2105,
+    "rank": 6
+   },
+   "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+    "cov": 0.5689,
+    "rank": 68
+   },
+   "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+    "cov": 0.2946,
+    "rank": 12
+   },
+   "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global": {
+    "cov": 0.2731,
+    "rank": 9
+   },
+   "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct": {
+    "cov": 0.2737,
+    "rank": 10
+   },
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+    "cov": 0.6821,
+    "rank": 150
+   },
+   "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct": {
+    "cov": 0.4269,
+    "rank": 20
+   },
+   "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B": {
+    "cov": 0.2256,
+    "rank": 7
+   },
+   "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct": {
+    "cov": 3.8034,
+    "rank": 3212
+   },
+   "google/gemma-4-12B-it | google/gemma-4-E4B-it": {
+    "cov": 1.0092,
+    "rank": 607
+   },
+   "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct": {
+    "cov": 1.4015,
+    "rank": 1281
+   },
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B": {
+    "cov": 0.4423,
+    "rank": 24
+   },
+   "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B": {
+    "cov": 0.6672,
+    "rank": 132
+   },
+   "google/gemma-3-1b-it | google/gemma-3-4b-it": {
+    "cov": 1.6778,
+    "rank": 1713
+   },
+   "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct": {
+    "cov": 3.4951,
+    "rank": 3090
+   },
+   "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507": {
+    "cov": 2.286,
+    "rank": 2430
+   },
+   "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+    "cov": 0.3768,
+    "rank": 15
+   },
+   "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+    "cov": 0.8218,
+    "rank": 301
+   },
+   "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct": {
+    "cov": 0.606,
+    "rank": 86
+   },
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+    "cov": 1.0485,
+    "rank": 662
+   },
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507": {
+    "cov": 3.8943,
+    "rank": 3241
+   },
+   "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3": {
+    "cov": 0.2889,
+    "rank": 11
+   },
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B": {
+    "cov": 0.5293,
+    "rank": 51
+   },
+   "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct": {
+    "cov": 0.3829,
+    "rank": 16
+   },
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507": {
+    "cov": 3.6998,
+    "rank": 3173
+   },
+   "Qwen/Qwen3-4B | Qwen/Qwen3-8B": {
+    "cov": 0.4777,
+    "rank": 34
+   },
+   "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B": {
+    "cov": 5.1504,
+    "rank": 3456
+   },
+   "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507": {
+    "cov": 3.5731,
+    "rank": 3122
+   },
+   "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct": {
+    "cov": 0.7161,
+    "rank": 187
+   },
+   "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M": {
+    "cov": 0.7024,
+    "rank": 173
+   },
+   "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct": {
+    "cov": 0.4036,
+    "rank": 18
+   },
+   "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+    "cov": 0.5026,
+    "rank": 38
+   },
+   "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct": {
+    "cov": 0.3057,
+    "rank": 13
+   },
+   "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct": {
+    "cov": 1.2709,
+    "rank": 1072
+   },
+   "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+    "cov": 0.7268,
+    "rank": 197
+   },
+   "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct": {
+    "cov": 0.4358,
+    "rank": 23
+   },
+   "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5": {
+    "cov": 0.9702,
+    "rank": 538
+   },
+   "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B": {
+    "cov": 1.3422,
+    "rank": 1190
+   },
+   "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct": {
+    "cov": 0.6924,
+    "rank": 161
+   },
+   "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct": {
+    "cov": 0.6488,
+    "rank": 111
+   },
+   "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+    "cov": 0.889,
+    "rank": 411
+   },
+   "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct": {
+    "cov": 0.5131,
+    "rank": 45
+   },
+   "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat": {
+    "cov": 0.4849,
+    "rank": 36
+   },
+   "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat": {
+    "cov": 0.5212,
+    "rank": 47
+   },
+   "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct": {
+    "cov": 0.66,
+    "rank": 125
+   },
+   "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct": {
+    "cov": 0.8146,
+    "rank": 291
+   },
+   "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat": {
+    "cov": 0.8368,
+    "rank": 322
+   },
+   "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct": {
+    "cov": 1.1316,
+    "rank": 826
+   },
+   "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct": {
+    "cov": 0.9492,
+    "rank": 495
+   }
+  }
+ },
+ "targets": {
+  "T1": [
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+   "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+   "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+   "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+   "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global"
+  ],
+  "T2": [
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16"
+  ],
+  "T3": [
+   "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+   "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+   "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B",
+   "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507",
+   "Qwen/Qwen3-4B | Qwen/Qwen3-8B",
+   "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B",
+   "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507"
+  ],
+  "strata_n": {
+   "H_all": 57,
+   "H_N": 38,
+   "H_X": 19,
+   "stably_hard": 26,
+   "no_mode_mixed": 52,
+   "fresh_only": 42
+  },
+  "strata": {
+   "H_all": [
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+    "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global",
+    "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+    "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+    "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+    "google/gemma-4-12B-it | google/gemma-4-E4B-it",
+    "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+    "google/gemma-3-1b-it | google/gemma-3-4b-it",
+    "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+    "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+    "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct",
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B",
+    "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507",
+    "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct",
+    "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct",
+    "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5",
+    "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat",
+    "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat",
+    "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct",
+    "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat",
+    "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct"
+   ],
+   "H_N": [
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+    "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global",
+    "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+    "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+    "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+    "google/gemma-4-12B-it | google/gemma-4-E4B-it",
+    "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+    "google/gemma-3-1b-it | google/gemma-3-4b-it",
+    "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+    "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+    "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct",
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B",
+    "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507",
+    "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct",
+    "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M"
+   ],
+   "H_X": [
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct",
+    "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5",
+    "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat",
+    "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat",
+    "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct",
+    "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat",
+    "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct"
+   ],
+   "stably_hard": [
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+    "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global",
+    "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+    "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+    "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+    "google/gemma-4-12B-it | google/gemma-4-E4B-it",
+    "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct"
+   ],
+   "no_mode_mixed": [
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+    "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.2-8b-instruct",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global",
+    "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+    "Qwen/Qwen2.5-3B-Instruct | Qwen/Qwen2.5-7B-Instruct",
+    "google/gemma-4-12B-it | google/gemma-4-E4B-it",
+    "tiiuae/Falcon3-3B-Instruct | tiiuae/Falcon3-7B-Instruct",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+    "google/gemma-3-1b-it | google/gemma-3-4b-it",
+    "Qwen/Qwen2-1.5B-Instruct | Qwen/Qwen2.5-0.5B-Instruct",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+    "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+    "tiiuae/Falcon3-10B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct",
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "mistralai/Mistral-7B-Instruct-v0.2 | mistralai/Mistral-7B-Instruct-v0.3",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B",
+    "ibm-granite/granite-3.1-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507",
+    "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct",
+    "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct",
+    "openchat/openchat-3.6-8b-20240522 | openchat/openchat_3.5",
+    "Deci/DeciLM-7B-instruct | nvidia/Llama3-ChatQA-1.5-8B",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | internlm/internlm2_5-7b-chat",
+    "allenai/Llama-3.1-Tulu-3-8B | internlm/internlm2_5-7b-chat",
+    "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | internlm/internlm2_5-7b-chat"
+   ],
+   "fresh_only": [
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-global",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-water",
+    "CohereLabs/tiny-aya-global | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16 | mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16 | mistralai/Ministral-3-3B-Instruct-2512-BF16",
+    "CohereLabs/tiny-aya-earth | CohereLabs/tiny-aya-fire",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "mistralai/Mistral-Small-24B-Instruct-2501 | mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "CohereLabs/tiny-aya-fire | CohereLabs/tiny-aya-global",
+    "allenai/OLMo-2-1124-13B-Instruct | allenai/OLMo-2-1124-7B-Instruct",
+    "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+    "google/gemma-4-12B-it | google/gemma-4-E4B-it",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/Llama-3.1-Tulu-3.1-8B",
+    "google/gemma-3-1b-it | google/gemma-3-4b-it",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+    "ibm-granite/granite-3.2-8b-instruct | ibm-granite/granite-3.3-8b-instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | allenai/OLMo-2-1124-13B-Instruct",
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct | HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-30B-A3B | Qwen/Qwen3-4B-Instruct-2507",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-8B",
+    "Qwen/Qwen3-4B | Qwen/Qwen3-4B-Instruct-2507",
+    "allenai/Olmo-3-7B-Instruct | allenai/Olmo-3.1-32B-Instruct",
+    "Qwen/Qwen2.5-7B-Instruct | Qwen/Qwen2.5-7B-Instruct-1M",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "allenai/OLMo-2-0425-1B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | allenai/OLMo-2-0425-1B-Instruct",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-13B-Instruct",
+    "allenai/Llama-3.1-Tulu-3.1-8B | allenai/OLMo-2-1124-7B-Instruct",
+    "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon3-3B-Instruct",
+    "allenai/Llama-3.1-Tulu-3-8B | tiiuae/Falcon3-3B-Instruct",
+    "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct",
+    "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct",
+    "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct"
+   ]
+  },
+  "mode_mixed": [
+   "Qwen/Qwen3.5-4B | Qwen/Qwen3.5-9B",
+   "allenai/OLMo-2-1124-13B-Instruct | tiiuae/Falcon-H1-7B-Instruct",
+   "allenai/OLMo-2-1124-7B-Instruct | tiiuae/Falcon-H1-3B-Instruct",
+   "allenai/Olmo-3.1-32B-Instruct | tiiuae/Falcon-H1-3B-Instruct",
+   "microsoft/phi-4 | tiiuae/Falcon-H1-7B-Instruct"
+  ]
+ },
+ "ml_selected": [
+  {
+   "k": 6,
+   "cand": 268,
+   "id": 290,
+   "lang": "Bengali",
+   "task": "T2 why the sky is blue (3 sentences)"
+  },
+  {
+   "k": 11,
+   "cand": 272,
+   "id": 294,
+   "lang": "Indonesian",
+   "task": "T2 why the sky is blue (3 sentences)"
+  }
+ ],
+ "jgml_prefix_equal_to_jg": 5,
+ "wall_min": 11.7
+}
