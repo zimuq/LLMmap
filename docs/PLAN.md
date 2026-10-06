@@ -71,7 +71,10 @@
   (stage 2, other pairs) needs a new human decision.
   **Update 2026-10-05:** D026 closed 2026-10-02. Short probes ≈ pool; the
   twins are separable only with ≥ 6k inputs. The human placed that in
-  limitations. **Phase 3 is closed.**
+  limitations. **Phase 3 is closed for static fingerprinting.** A kin-aware
+  adaptive design (gated long probe for context twins) is with the mainline
+  design session for a v1 proof of concept (human, option b, 2026-10-05);
+  its D id comes after D029.
 - **"Direction B" — an actual classifier-in-the-loop greedy search
   (Algorithm H.1-style) on our own 259-query pool** — **un-shelved
   2026-09-26, drafted as [D018](D018.md).** D010 ("Direction A") came

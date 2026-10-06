@@ -1879,6 +1879,23 @@ interpretable; specialist-based two-stage design not pursued
     under linear; global chains only (D025 lesson).
   Decided by: human (F3 placement, D029 as mainline on v2); design-side
   (D029 design).
+
+[2026-10-05] Correction to the entry above -- Phase 3 wording
+  The human chose option (b) after design-side flagged a conflict. Another
+  design session had proposed (2026-10-02) a kin-aware adaptive fingerprint:
+  a short global stage, then a gated long probe only when the top-1 is a
+  known context-extension twin. That proposal was not shown when the human
+  answered "按您的建议".
+  - D026's static result stays in limitations: the twins are separable only
+    with >= 6k inputs.
+  - "Phase 3 is closed" now means: closed for static, non-adaptive
+    fingerprinting.
+  - The adaptive proposal is handed to the mainline design session for a
+    v1 proof of concept (simulable from the frozen corpus plus D026's
+    extension). Its id must come after D029, which is taken.
+  - D028 generated no long probes. A v2 extension for the context twins
+    would be that session's D, with new generation.
+  Decided by: human (option b, 2026-10-05).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

@@ -1508,8 +1508,9 @@ long-input retrieval) separate them better than the 259-query pool?
 - The twins stay in the hard set. For the paper: pool-limited at ≈ 0.80–0.90
   for every short query built; separable only with deployment-dependent
   ≥ 6k untruncated inputs (conspicuous and costly).
-- Placement: limitations / discussion (human, 2026-10-05). Phase 3 is
-  closed.
+- Placement: limitations / discussion for static fingerprinting (human,
+  2026-10-05). A kin-aware adaptive design (gated long probe) is being
+  examined separately by the mainline session.
 - Methodological note: selecting among ~260 candidates on 25 S_val configs
   per model overfits (S_val 1.00 vs S_test 0.74–0.88).
 
