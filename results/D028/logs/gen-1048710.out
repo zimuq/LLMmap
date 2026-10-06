@@ -1,0 +1,8 @@
+=== node: c619-012.vista.tacc.utexas.edu env: v2 start: Sun Oct  4 09:11:46 PM CDT 2026 ===
+[S1] meta-llama/Meta-Llama-3-8B-Instruct ml: 1728 generated, 2.694 gen/s
+[S1] meta-llama/Meta-Llama-3.1-8B-Instruct ml: 2000 generated, 2.601 gen/s
+[S1] tiiuae/Falcon3-7B-Instruct ml: 112 generated, 2.861 gen/s
+[S1] togethercomputer/Llama-2-7B-32K-Instruct ml: 2000 generated, 2.782 gen/s
+[S1] upstage/SOLAR-10.7B-Instruct-v1.0 ml: 2000 generated, 1.61 gen/s
+[S1] utter-project/EuroLLM-1.7B-Instruct ml: 2000 generated, 3.343 gen/s
+=== end: Sun Oct  4 10:21:30 PM CDT 2026 ===

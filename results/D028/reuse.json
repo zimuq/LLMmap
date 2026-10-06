@@ -1,0 +1,308 @@
+{
+ "CohereForAI/aya-23-8B": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "8815c04712251c239241912aeb873362d6261c611ccd9a977005b072c3d7573d",
+  "n_rows": 32375,
+  "embedding_sha256": "b7728074c97500fbdc8082e8168e210c667a0da0f9ad3fb80be47d457b737016"
+ },
+ "Deci/DeciLM-7B-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "c487f2f0285a08dc49dede0f7721e4e801939fe3a4022603d149c6cf0830a667",
+  "n_rows": 32375,
+  "embedding_sha256": "f82e5820352d082de9e2d573e45a3abab2283a352d589b83407f8a63eace28bf"
+ },
+ "HuggingFaceH4/zephyr-7b-beta": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "ac53bc8d60309b38d421d6fc1061df2b2dd4ac1eb6b2c96ac203455c677a6dd2",
+  "n_rows": 32375,
+  "embedding_sha256": "8b4f64e0f802c8a126f9bd32feeff119da2ae6a7c08a42164ed3ff78cff6c6f3"
+ },
+ "Qwen/Qwen2-1.5B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "f7c8908ad42064ebc6df75b57974fd4bc3bee13b4197ea4b78eef927280f7849",
+  "n_rows": 32375,
+  "embedding_sha256": "045925db84ba4cc2ed812e3112747eb8cfa5284aeb2d1a10db952347007b0412"
+ },
+ "Qwen/Qwen2-7B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "024c8064409d7159caa50351181563b5696f039e941aaefd13338b33acbf7368",
+  "n_rows": 32375,
+  "embedding_sha256": "1b21348381e93813231c395faa1f6c5c80527d4d4a2eba17f00088b08af3e8b9"
+ },
+ "Qwen/Qwen2.5-0.5B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "2431603a9c9a8ed5dd499bdc90a1eaf52892562802212de203f6dc262bd35e2d",
+  "n_rows": 32375,
+  "embedding_sha256": "0d078983a8db61104fea382f8389293a7f9011a38d7a16627bf732df4c60f48a"
+ },
+ "Qwen/Qwen2.5-3B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "2659a3c200cd01be4fb45ca80426ec288c270b54c555d81baca840517921ef8a",
+  "n_rows": 32375,
+  "embedding_sha256": "d5165d50b701d0165280446f59cc1b5ddcb41cce4915f72864046026e09b561a"
+ },
+ "google/gemma-1.1-2b-it": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "ef1e1da07d5518063247718cc62e501e907f961955501a1d3de9d75269993bb4",
+  "n_rows": 32375,
+  "embedding_sha256": "a30f2ed3c4d48396b0f5ba34e7b1c870f7c887e177e26745e9eced44c03d03f4"
+ },
+ "google/gemma-1.1-7b-it": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "23e96af1454b76de73aeb4b276d33de0275688d9c0c460bd085927567c6434b0",
+  "n_rows": 32375,
+  "embedding_sha256": "c60c3ef884c9edd96d1aed26affbf7a23bf84f55acf6a5307e9c1c7db87a8649"
+ },
+ "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "b2d3b22ccf9011d7526e8eee87e7ba504c9152d04889cc278a13a405f2f09d47",
+  "n_rows": 32375,
+  "embedding_sha256": "5a0216e87374a063856a592cca8e7ab8be0aed370f614edb7b5affcb2290fc03"
+ },
+ "ibm-granite/granite-3.0-8b-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "5b7dbdcd307a92341d7ddc347ac1b99a67e70337339c1522315b6a2006435c20",
+  "n_rows": 32375,
+  "embedding_sha256": "eb3c269838ba56bd3abf95eefeaec32952736de05929b005aab756613bed86ec"
+ },
+ "ibm-granite/granite-3.1-8b-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "29c7aed29747c61c5fb9bd8359eff14d83eb5a246916263c2d0a7a251052b5f2",
+  "n_rows": 32375,
+  "embedding_sha256": "17e8580919c22569e94e8c86aac3b332698d99c15922c34d5600ae7d830c1e33"
+ },
+ "internlm/internlm2_5-7b-chat": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-internlm",
+  "template_kwargs": null,
+  "sha256": "7d1d0480c6533681838e454aae70a0605d164d432fb264624c72acb1bd959fb7",
+  "n_rows": 32375,
+  "embedding_sha256": "a98aeb87703e0279397ca6e8df998de6717dd8e78ad7d22903eea9940a2cb0f9"
+ },
+ "meta-llama/Llama-2-7b-chat-hf": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "7c94d34c9a17a456a7af3df0e63db7b8c556fb34937539a961708ae15ca23529",
+  "n_rows": 32375,
+  "embedding_sha256": "b726aae47a33a2dfb1d39b5ad2ffa3a4b63a8f1094f97418cf418c5c56a5f55c"
+ },
+ "meta-llama/Llama-3.2-1B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "f1e14ee48e0d281cac203201b76712699aa1c5bdd4f82b77491391339ad9f12d",
+  "n_rows": 32375,
+  "embedding_sha256": "66a3187cce84a8d9bcf61918141f374c6e733a43700ac6ef1a48d4ff5f4f5081"
+ },
+ "meta-llama/Llama-3.2-3B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "72ba96b8b542c9d06e336d1bbdaed47540a2472992be0fb0553f5a453ffac50c",
+  "n_rows": 32375,
+  "embedding_sha256": "1047546dfb0872adac582153ec34abb9cdca7495faa6ce0807a22ea489d887c7"
+ },
+ "meta-llama/Meta-Llama-3-8B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "cb3e943a6ba3c4495137449a17185bcea42a293596ebb5f7eb50aa3ceb0b844a",
+  "n_rows": 32375,
+  "embedding_sha256": "6b9dd1b8cc44bddf243865d528ff95a454885bfeafa79035c19abd95e2b5c6f0"
+ },
+ "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "45d0a44dce00f56f219136be3ddd3d36d65a91aedb353fbd60e2c8b8a506552d",
+  "n_rows": 32375,
+  "embedding_sha256": "af4b281ec4615baab5d0b613b74746ba5969c84ffec698e4a8d7e2e9ee2f4376"
+ },
+ "microsoft/Phi-3-medium-128k-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "35d8d4fbc432ea5cd38063a40b795ace88ff51e3a2fc2be8b2240bcb8d40554e",
+  "n_rows": 32375,
+  "embedding_sha256": "ce3679b7e9910eade5ac2f1d11ac209aab1d12904266964546af4a994fa79378"
+ },
+ "microsoft/Phi-3-medium-4k-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "6eddd547520bb5426674073c44407763b765dbc2f6dd2ad0662c229fff90088f",
+  "n_rows": 32375,
+  "embedding_sha256": "ef0788ad79049b0e2e4a12c765b4c0dfcb4ac839baa2e6050cb74074aaf7dee7"
+ },
+ "microsoft/Phi-3-mini-128k-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "347b7764e6514d2391df145af908f902c635d26f51333b04d7595caa4362b50d",
+  "n_rows": 32375,
+  "embedding_sha256": "4dbc678e5683937b6d076cced8c6db2a01326fb0df09c4b5fdb48bb6b2a30211"
+ },
+ "microsoft/Phi-3-mini-4k-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "dbe547aaa1251e0a19558270e1905c7822cda9d8dce48e8c8859d5b250857ec9",
+  "n_rows": 32375,
+  "embedding_sha256": "11e784df92e4880ba22cbe517eae1c534795d18b3805d1bcc149b93d3ad96978"
+ },
+ "microsoft/Phi-3.5-mini-instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "1e123621c0eb138ac584d200e2b46225c7657f09233d8ef7c241c1899f8858d2",
+  "n_rows": 32375,
+  "embedding_sha256": "f9ebb3e137c60e3c84619f5b54d6b85e2e9a5dc55b6232cd7da8fc65ff3f7174"
+ },
+ "mistralai/Mistral-7B-Instruct-v0.1": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "9a341bc500706266d9f0eb4b1f1ccc5faf57cf8b0919c9144aaf676531953e2a",
+  "n_rows": 32375,
+  "embedding_sha256": "18533eee1119f0571e4d1ffbe963bf9bf47e454be6620af3a95a793e657c51f1"
+ },
+ "mistralai/Mistral-7B-Instruct-v0.2": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "b40916f23ab7908d9f6fa71d50ed1c304d0fea46bf169a9aead31bc44dc21fb7",
+  "n_rows": 32375,
+  "embedding_sha256": "0c2421c5f895bbdeb70311521d2b45c3650b9ba358a8514422a36aa5e20e00f2"
+ },
+ "mistralai/Mistral-7B-Instruct-v0.3": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "c5f7a262bc3cd93204e8be70ffd9ef242e021aca1d3c36af23c47bfb307ae01d",
+  "n_rows": 32375,
+  "embedding_sha256": "0f79bc048e2adab7c92658ae813117bbfb452ab15dd967b2ffc39f06af41140d"
+ },
+ "nvidia/Llama3-ChatQA-1.5-8B": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "9f661c81c513e778858ca6dfd56d58aace48615350e2ee9eafd8874d70e894f0",
+  "n_rows": 32375,
+  "embedding_sha256": "dad45770f8b2f1c336517906c3a85975a9d1b9a6a1874b66105ca055001a4210"
+ },
+ "openchat/openchat-3.6-8b-20240522": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "59c66c0075846e01dbff7290edcbe870783a84b42b5e38a6701f6ee639628ef8",
+  "n_rows": 32375,
+  "embedding_sha256": "0350d1ea3acf423a77fa68ed4b84beddf04b3a5fc61d12066de1336dcf2cab64"
+ },
+ "openchat/openchat_3.5": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "dcf76ac71ebf472fac1bb42d3245e292a5dabdcecc5d78bd342a286d62b6540e",
+  "n_rows": 32375,
+  "embedding_sha256": "62c1c32ef030b06a48aaf30ffa4741cbc98a6eb5b1f9a6705f71d48e3920c4d4"
+ },
+ "tiiuae/Falcon3-10B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "a46e9371f9b2b3b906dc52dae581c3bc204cf963219154343389fdf3de5ff50c",
+  "n_rows": 32375,
+  "embedding_sha256": "7a1a3d1c75d0f1f12089b970ce8ee4982de1dd0066c95a6719a25d3462259096"
+ },
+ "tiiuae/Falcon3-7B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "7a83b53f58effaec77bf0649dd76e83b7e5123ae48884342afdb212f6f0cf0ea",
+  "n_rows": 32375,
+  "embedding_sha256": "875018c2e4490b68189db93596abf482ba4896385e1d82bf80e2d14647a32998"
+ },
+ "togethercomputer/Llama-2-7B-32K-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "d852a6ba4db3f2d24ebd4710f2f60c1e72d23391cc06037b7d59ee5f8764a6d9",
+  "n_rows": 32375,
+  "embedding_sha256": "ed5229ea06a31403d634bd12e0770e778fba4ea91d00b67b9ec16f6898280116"
+ },
+ "upstage/SOLAR-10.7B-Instruct-v1.0": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "b4601406e4976682877f4cf3c3eb405ed7a10a3ab21380033a179d0d42506b27",
+  "n_rows": 32375,
+  "embedding_sha256": "2b5ad67e167c7378ecd6827f6c92894d73d2967c494e5f4b69c9c924d189f4de"
+ },
+ "utter-project/EuroLLM-1.7B-Instruct": {
+  "shard_source": "corpus_v1-reuse",
+  "config_source": "corpus_v1",
+  "gen_env": "D006 llmmap-gpu",
+  "template_kwargs": null,
+  "sha256": "d9450f0e7dfd4577b40322cb14da7f91958094a5b10a18f1a0ac8d098aa3d26a",
+  "n_rows": 32375,
+  "embedding_sha256": "1c784e655e2cff9d9e2cc0247906f4948fc22f0e6036bcfab8902e22564d479c"
+ }
+}

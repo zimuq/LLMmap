@@ -1,0 +1,13 @@
+=== node: c636-081.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:31:23 PM CDT 2026 ===
+[S1] microsoft/Phi-3-medium-128k-instruct ml: 2000 generated, 2.105 gen/s
+[S1] microsoft/Phi-3-medium-4k-instruct ml: 2000 generated, 2.098 gen/s
+[S1] microsoft/Phi-3-mini-128k-instruct ml: 2000 generated, 2.952 gen/s
+[S1] microsoft/Phi-3-mini-4k-instruct ml: 2000 generated, 2.752 gen/s
+[S1] microsoft/Phi-3.5-mini-instruct ml: 2000 generated, 2.741 gen/s
+[S1] mistralai/Mistral-7B-Instruct-v0.1 ml: 2000 generated, 2.516 gen/s
+[S1] mistralai/Mistral-7B-Instruct-v0.2 ml: 2000 generated, 2.635 gen/s
+[S1] mistralai/Mistral-7B-Instruct-v0.3 ml: 2000 generated, 2.752 gen/s
+[S1] nvidia/Llama3-ChatQA-1.5-8B ml: 2000 generated, 2.639 gen/s
+[S1] openchat/openchat-3.6-8b-20240522 ml: 2000 generated, 2.641 gen/s
+[S1] openchat/openchat_3.5 ml: 2000 generated, 2.474 gen/s
+[S1] tiiuae/Falcon3-10B-Instruct ml: 2000 generated, 1.976 gen/s

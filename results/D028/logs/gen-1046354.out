@@ -1,0 +1,4 @@
+=== node: c638-142.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:14:32 PM CDT 2026 ===
+[S1] Qwen/Qwen3-30B-A3B-Instruct-2507 pool: 32375 generated, 0.528 gen/s
+FAILED Qwen/Qwen3-30B-A3B-Instruct-2507 ml
+=== end: Sun Oct  4 03:24:13 PM CDT 2026 ===

@@ -1,0 +1,12 @@
+=== node: c634-032.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:31:25 PM CDT 2026 ===
+[S1] ibm-granite/granite-3.3-8b-instruct pool: 32375 generated, 5.864 gen/s
+[S1] ibm-granite/granite-3.3-8b-instruct ml: 2000 generated, 1.946 gen/s
+[S1] Qwen/Qwen3-8B pool: 32375 generated, 5.53 gen/s
+[S1] Qwen/Qwen3-8B ml: 2000 generated, 1.684 gen/s
+[S1] allenai/Llama-3.1-Tulu-3-8B pool: 32375 generated, 7.164 gen/s
+[S1] allenai/Llama-3.1-Tulu-3-8B ml: 2000 generated, 2.316 gen/s
+[S1] Qwen/Qwen3-4B-Instruct-2507 pool: 32375 generated, 5.525 gen/s
+[S1] Qwen/Qwen3-4B-Instruct-2507 ml: 2000 generated, 1.752 gen/s
+[S1] CohereLabs/tiny-aya-fire pool: 32375 generated, 6.703 gen/s
+[S1] CohereLabs/tiny-aya-fire ml: 2000 generated, 2.039 gen/s
+=== end: Sun Oct  4 07:26:36 AM CDT 2026 ===

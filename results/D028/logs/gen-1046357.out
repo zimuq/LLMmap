@@ -1,0 +1,8 @@
+=== node: c622-032.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:28:22 PM CDT 2026 ===
+[S1] google/gemma-3-12b-it pool: 32375 generated, 3.463 gen/s
+[S1] google/gemma-3-12b-it ml: 2000 generated, 1.213 gen/s
+[S1] mistralai/Mistral-Small-24B-Instruct-2501 pool: 32375 generated, 5.362 gen/s
+[S1] mistralai/Mistral-Small-24B-Instruct-2501 ml: 2000 generated, 1.983 gen/s
+[S1] google/gemma-4-E4B-it pool: 32375 generated, 3.899 gen/s
+[S1] google/gemma-4-E4B-it ml: 2000 generated, 1.138 gen/s
+=== end: Sun Oct  4 06:22:05 AM CDT 2026 ===

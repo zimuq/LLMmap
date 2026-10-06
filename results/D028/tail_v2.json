@@ -1,0 +1,9 @@
+{
+ "n_pairs": 3570,
+ "mean": 2.077707290649414,
+ "cvar_0_1": 0.681361198425293,
+ "cvar_over_mean": 0.3279389746051884,
+ "H_N_rank_median": 60.0,
+ "H_X_rank_median": 160.0,
+ "H_all_in_bottom_decile": 40
+}

@@ -1,0 +1,10 @@
+=== node: c622-071.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:29:32 PM CDT 2026 ===
+[S1] mistralai/Mistral-Small-3.1-24B-Instruct-2503 pool: 32375 generated, 5.22 gen/s
+[S1] mistralai/Mistral-Small-3.1-24B-Instruct-2503 ml: 2000 generated, 1.79 gen/s
+[S1] google/gemma-2-9b-it pool: 32375 generated, 4.824 gen/s
+[S1] google/gemma-2-9b-it ml: 2000 generated, 1.621 gen/s
+[S1] ibm-granite/granite-3.2-8b-instruct pool: 32375 generated, 5.604 gen/s
+[S1] ibm-granite/granite-3.2-8b-instruct ml: 2000 generated, 2.006 gen/s
+[S1] microsoft/Phi-4-mini-instruct pool: 32375 generated, 7.869 gen/s
+[S1] microsoft/Phi-4-mini-instruct ml: 2000 generated, 2.692 gen/s
+=== end: Sun Oct  4 06:04:24 AM CDT 2026 ===

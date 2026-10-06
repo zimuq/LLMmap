@@ -1,0 +1,4 @@
+=== node: c642-031.vista.tacc.utexas.edu start: Mon Oct  5 07:54:45 PM CDT 2026 ===
+tensor built: 3570 pairs, 2118.9 s; reproduction {'probe': {'n_pairs': 561, 'max_abs_diff': 0.0}, 'energy_raw': {'n_pairs': 561, 'max_abs_diff': 0.0}, 'energy_sf': {'n_pairs': 561, 'max_abs_diff': 0.0}, 'probe_A': {'n_pairs': 561, 'max_abs_diff': 0.0}, 'probe_B': {'n_pairs': 561, 'max_abs_diff': 0.0}}
+{'n_pairs': 3570, 'mean': 2.077707290649414, 'cvar_0_1': 0.681361198425293, 'cvar_over_mean': 0.3279389746051884, 'H_N_rank_median': 60.0, 'H_X_rank_median': 160.0, 'H_all_in_bottom_decile': 40}
+=== end: Mon Oct  5 08:30:41 PM CDT 2026 ===

@@ -1,0 +1,14 @@
+=== node: c634-152.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:28:20 PM CDT 2026 ===
+[S1] google/gemma-7b-it pool: 32375 generated, 9.881 gen/s
+[S1] google/gemma-7b-it ml: 2000 generated, 3.046 gen/s
+[S1] Qwen/Qwen2.5-7B-Instruct pool: 32375 generated, 8.734 gen/s
+[S1] Qwen/Qwen2.5-7B-Instruct ml: 2000 generated, 2.842 gen/s
+[S1] Qwen/Qwen2.5-7B-Instruct-1M pool: 32375 generated, 8.373 gen/s
+[S1] Qwen/Qwen2.5-7B-Instruct-1M ml: 2000 generated, 2.87 gen/s
+[S1] HuggingFaceTB/SmolLM2-360M-Instruct pool: 32375 generated, 9.788 gen/s
+[S1] HuggingFaceTB/SmolLM2-360M-Instruct ml: 2000 generated, 2.669 gen/s
+[S1] HuggingFaceTB/SmolLM2-1.7B-Instruct-16k pool: 32375 generated, 12.104 gen/s
+[S1] HuggingFaceTB/SmolLM2-1.7B-Instruct-16k ml: 2000 generated, 3.785 gen/s
+[S1] allenai/OLMo-2-0425-1B-Instruct pool: 32375 generated, 13.285 gen/s
+[S1] allenai/OLMo-2-0425-1B-Instruct ml: 2000 generated, 4.674 gen/s
+=== end: Sun Oct  4 04:56:07 AM CDT 2026 ===

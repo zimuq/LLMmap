@@ -1,0 +1,10 @@
+=== node: c622-042.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:29:32 PM CDT 2026 ===
+FAILED allenai/OLMo-2-1124-13B-Instruct pool
+[S1] allenai/OLMo-2-1124-13B-Instruct ml: 2000 generated, 1.748 gen/s
+[S1] mistralai/Ministral-3-14B-Instruct-2512-BF16 pool: 32375 generated, 5.085 gen/s
+[S1] mistralai/Ministral-3-14B-Instruct-2512-BF16 ml: 2000 generated, 1.696 gen/s
+[S1] microsoft/phi-4 pool: 32375 generated, 5.664 gen/s
+[S1] microsoft/phi-4 ml: 2000 generated, 2.103 gen/s
+[S1] ibm-granite/granite-4.2-8b pool: 32375 generated, 5.878 gen/s
+[S1] ibm-granite/granite-4.2-8b ml: 2000 generated, 1.928 gen/s
+=== end: Sun Oct  4 06:33:10 AM CDT 2026 ===

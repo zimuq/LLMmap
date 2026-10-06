@@ -1,0 +1,5 @@
+[S1] HuggingFaceTB/SmolLM2-360M-Instruct pool.part0of25: 1295 generated, 8.613 gen/s
+[S1] tiiuae/Falcon-H1-3B-Instruct ml.part0of125: 16 generated, 0.122 gen/s
+[S1] Deci/DeciLM-7B-instruct ml.part0of125: 16 generated, 1.297 gen/s
+[S1] internlm/internlm2_5-7b-chat ml.part0of125: 16 generated, 1.865 gen/s
+DONE

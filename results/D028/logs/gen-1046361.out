@@ -1,0 +1,12 @@
+=== node: c637-002.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:31:25 PM CDT 2026 ===
+[S1] mistralai/Ministral-3-8B-Instruct-2512-BF16 pool: 32375 generated, 6.021 gen/s
+[S1] mistralai/Ministral-3-8B-Instruct-2512-BF16 ml: 2000 generated, 2.086 gen/s
+[S1] utter-project/EuroLLM-9B-Instruct-2512 pool: 32375 generated, 5.82 gen/s
+[S1] utter-project/EuroLLM-9B-Instruct-2512 ml: 2000 generated, 1.867 gen/s
+[S1] google/gemma-3-4b-it pool: 32375 generated, 4.945 gen/s
+[S1] google/gemma-3-4b-it ml: 2000 generated, 1.545 gen/s
+[S1] ibm-granite/granite-4.1-8b pool: 32375 generated, 6.185 gen/s
+[S1] ibm-granite/granite-4.1-8b ml: 2000 generated, 2.005 gen/s
+[S1] HuggingFaceTB/SmolLM2-1.7B-Instruct pool: 32375 generated, 11.109 gen/s
+[S1] HuggingFaceTB/SmolLM2-1.7B-Instruct ml: 2000 generated, 3.629 gen/s
+=== end: Sun Oct  4 07:05:24 AM CDT 2026 ===

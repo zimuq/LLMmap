@@ -1,0 +1,8 @@
+=== node: c639-071.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:14:31 PM CDT 2026 ===
+FAILED allenai/Olmo-3.1-32B-Instruct pool
+[S1] allenai/Olmo-3.1-32B-Instruct ml: 2000 generated, 1.011 gen/s
+[S1] google/gemma-4-12B-it pool: 32375 generated, 3.046 gen/s
+[S1] google/gemma-4-12B-it ml: 2000 generated, 1.252 gen/s
+[S1] tiiuae/Falcon3-1B-Instruct pool: 32375 generated, 15.216 gen/s
+[S1] tiiuae/Falcon3-1B-Instruct ml: 2000 generated, 4.703 gen/s
+=== end: Sun Oct  4 03:19:26 AM CDT 2026 ===

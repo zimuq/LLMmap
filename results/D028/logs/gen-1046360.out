@@ -1,0 +1,12 @@
+=== node: c637-001.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:31:07 PM CDT 2026 ===
+[S1] Qwen/Qwen3.5-9B pool: 32375 generated, 4.828 gen/s
+[S1] Qwen/Qwen3.5-9B ml: 2000 generated, 1.561 gen/s
+[S1] Qwen/Qwen3-4B pool: 32375 generated, 5.54 gen/s
+[S1] Qwen/Qwen3-4B ml: 2000 generated, 1.822 gen/s
+[S1] allenai/Olmo-3-7B-Instruct pool: 32375 generated, 5.991 gen/s
+[S1] allenai/Olmo-3-7B-Instruct ml: 2000 generated, 2.144 gen/s
+[S1] utter-project/EuroLLM-9B-Instruct pool: 32375 generated, 5.744 gen/s
+[S1] utter-project/EuroLLM-9B-Instruct ml: 2000 generated, 1.872 gen/s
+[S1] google/gemma-2b-it pool: 32375 generated, 14.548 gen/s
+[S1] google/gemma-2b-it ml: 2000 generated, 4.078 gen/s
+=== end: Sun Oct  4 07:07:32 AM CDT 2026 ===

@@ -1,0 +1,12 @@
+=== node: c634-041.vista.tacc.utexas.edu env: v2 start: Sat Oct  3 10:31:26 PM CDT 2026 ===
+[S1] allenai/OLMo-2-1124-7B-Instruct pool: 32375 generated, 6.281 gen/s
+[S1] allenai/OLMo-2-1124-7B-Instruct ml: 2000 generated, 2.263 gen/s
+[S1] ibm-granite/granite-4.2-3b pool: 32375 generated, 6.106 gen/s
+[S1] ibm-granite/granite-4.2-3b ml: 2000 generated, 2.031 gen/s
+[S1] CohereLabs/tiny-aya-global pool: 32375 generated, 6.983 gen/s
+[S1] CohereLabs/tiny-aya-global ml: 2000 generated, 2.288 gen/s
+[S1] nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct pool: 32375 generated, 7.719 gen/s
+[S1] nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct ml: 2000 generated, 2.541 gen/s
+[S1] allenai/Llama-3.1-Tulu-3.1-8B pool: 32375 generated, 7.161 gen/s
+[S1] allenai/Llama-3.1-Tulu-3.1-8B ml: 2000 generated, 2.472 gen/s
+=== end: Sun Oct  4 06:25:46 AM CDT 2026 ===
