@@ -1674,5 +1674,59 @@ breaking the all-model guardrail?
 
 ---
 
+## Design-side check — D029 by model and pair subsets (2026-10-07, corpus v2, k=8)
+
+**Method.**
+- Re-aggregation of D029's committed S_test counts with TACC's own
+  `d029_analysis.Data`: same draws, same seed slots. No new training, no
+  new data.
+- Validated: the "all 85" and H_all rows reproduce D029/R exactly.
+- Subsets are structural or frozen sets, defined before these numbers were
+  computed. They are **post hoc and overlapping**, with ~60 rows, so read
+  the patterns, not single cells. `*` = 95% CI excludes 0.
+
+**85-way recall, JG − PAPER8** (attention / linear):
+
+| model set | n | attention | linear |
+|---|---|---|---|
+| all 85 | 85 | +2.9 | +3.8* |
+| hard families F_N | 64 | +3.4* | +4.6* |
+| hard near-relative models M_N | 44 | +3.4* (0.652→0.686) | +5.0* (0.768→0.818) |
+| models in stably-hard pairs | 28 | **+4.7*** (0.583→0.630) | **+4.7*** |
+| non-structural hard models M_X | 17 | +2.9 | +3.3 |
+| not in any hard set | 15 | −0.5 | 0.0 |
+| M_N, new models only | 34 | +2.3 | +4.3* |
+| M_N, v1 models only | 10 | +7.2* | +7.2* |
+| kin: size siblings released together | 24 | **+6.6*** | **+5.5*** |
+| kin: version refresh (same size) | 27 | +1.8 | +3.7* |
+| kin: context-extension twins | 14 | +0.5 | +3.7* |
+| kin: regional siblings (tiny-aya) | 4 | +2.8 | +8.0 |
+| kin: third-party fine-tunes of one base | 10 | −1.5 | +1.2 |
+
+**Readings.**
+- **The gain grows with hardness and is zero, not negative, on easy
+  models.** Attention: all +2.9 → hard families +3.4 → stably-hard +4.7;
+  models in no hard set ≈ 0. The method moves accuracy to where it is
+  missing, without taxing the easy models. That is the guardrail result,
+  seen from the inside.
+- **By kinship type:**
+  - **size siblings benefit most** (+6.6 / +5.5, resolved under both
+    readouts), since capability differences are what pool queries can
+    probe;
+  - version-refresh and context twins gain under linear only;
+  - **third-party fine-tunes of one base do not gain** (−1.5 / +1.2);
+  - tiny-aya is too small (n = 4) to resolve.
+- **v1 hard models gain more than new ones** (+7.2 vs +2.3 / +4.3).
+  Caveat: v1 is the development set, and its test data has been read
+  before.
+- **Post hoc, JG+ML (multilingual) roughly doubles the gains on every
+  hard subset.** Stably-hard models +10.8 (attention); size siblings
+  +12.0; tiny-aya +13.
+- **Pair level (two-logit, H_all types):** gains are positive for every
+  type, resolved only for the pooled sets (H_all, H_N, stably hard) and,
+  under linear, for size and version pairs. Per-type n is small (3–21).
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
