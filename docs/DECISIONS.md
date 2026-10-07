@@ -1910,6 +1910,24 @@ interpretable; specialist-based two-stage design not pursued
   - The 16 ML probe texts are embedded with I5 after a parity check
     (derived array, not a corpus change).
   Decided by: human (readout); design-side (the rest, routine).
+
+[2026-10-07] D029 closed -- CONFIRMED on corpus v2
+  - JointGreedy (gamma=0.1, frozen from v1) beats PAPER8 on the 57-pair v2
+    hard set under both readouts, with the guardrail clean at the primary
+    cell; the fresh-only stratum (42 pairs, never-read test) also resolved.
+  - P1 SUPPORTED (linear): tiny-aya is pool-limited; multilingual probes
+    help (+0.083), but do not solve it. P2 SUPPORTED (linear). P3
+    SUPPORTED by rule, premise not borne out.
+  - Hard-set lesson: stably-hard pairs replicate on test 24/26, uncertain
+    9/31. Recommended paper wording: E_hard alongside the stably-hard
+    stratum.
+  - Post-hoc: multilingual probes raise accuracy for nearly all models;
+    exploratory until confirmed on fresh test configs.
+  - Open for the human: story freeze (rec. yes, v1 development + v2
+    confirmation); multilingual result handling (rec. exploratory now,
+    confirm in the fresh-S_test D); tiny-aya (rec. stop, characterised
+    limitation).
+  Decided by: design-side (closure).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

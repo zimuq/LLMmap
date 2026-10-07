@@ -1636,5 +1636,43 @@ spent.
 
 ---
 
+## D029 — The method replicates on corpus v2; multilingual probes are the biggest new lever
+
+**Question (mainline, confirmatory):** with every choice frozen from v1,
+does JointGreedy beat LLMmap's 8 queries on v2's 57 hard pairs without
+breaking the all-model guardrail?
+
+**Answer: CONFIRMED** (corpus v2, `k`=8).
+- **Hard pairs:** +2.4 pp (LLMmap's network) / +2.9 pp (linear), both
+  resolved.
+- **Overall:** +2.9 pp (attention, not resolved) / +3.8 pp (linear,
+  resolved).
+- **The 42 hard pairs made only of new models**, with test data never read
+  before: +2.3 pp, resolved.
+- **Guardrail:** no real drop anywhere. GreedyCover at 2 queries is the only
+  place a hard-pair gain comes with a small overall loss.
+
+**Ammunition:**
+- **tiny-aya is pool-limited** (0.71 at 16 queries vs LLMmap 0.69).
+  - Multilingual probes add +0.08, but the family stays below 0.90.
+  - Its errors are almost all sister-to-sister confusions.
+- **Ministral-3 is budget- or readout-limited, not pool-limited:** 0.93
+  under linear.
+- **The "top-coverage Qwen" prediction was moot.** On test, LLMmap already
+  separates those pairs.
+
+**Hard-set reliability.**
+- Stably-hard pairs stay hard on test (24/26). Borderline pairs mostly do
+  not (9/31).
+- So validation-only hardness needs its stability band.
+
+**Post hoc (exploratory): multilingual probes help almost every model**
+(+4.7 pp overall under attention; +4.4 pp without tiny-aya).
+- Language competence is a strong fingerprint axis.
+- Both our English-only pool and LLMmap's queries miss it.
+- It still needs confirmation on fresh test configs.
+
+---
+
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
