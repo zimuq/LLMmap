@@ -1,0 +1,95 @@
+{
+ "passed": true,
+ "threshold": 1e-12,
+ "checks": [
+  {
+   "kind": "toy",
+   "n": 20,
+   "max_abs_diff": 1.1102230246251565e-16
+  },
+  {
+   "kind": "pilot (gen_ref / all_ref only)",
+   "n": 11,
+   "max_abs_diff": 5.551115123125783e-16,
+   "rows": [
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct: gen_ref vs all_ref",
+     "n_x": 250,
+     "n_y": 250,
+     "official": 0.007567022222222164,
+     "fast": 0.007567022222222275
+    },
+    {
+     "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507: gen_ref vs all_ref",
+     "n_x": 250,
+     "n_y": 250,
+     "official": 0.008059555555555153,
+     "fast": 0.008059555555555709
+    },
+    {
+     "pair": "Qwen/Qwen3.5-4B: gen_ref vs all_ref",
+     "n_x": 50,
+     "n_y": 50,
+     "official": 0.003623555555555602,
+     "fast": 0.003623555555555491
+    },
+    {
+     "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct: gen_ref vs all_ref",
+     "n_x": 250,
+     "n_y": 250,
+     "official": 0.009675288888888911,
+     "fast": 0.009675288888889133
+    },
+    {
+     "pair": "tiiuae/Falcon-H1-3B-Instruct: gen_ref vs all_ref",
+     "n_x": 50,
+     "n_y": 50,
+     "official": 0.007576000000000027,
+     "fast": 0.007576000000000249
+    },
+    {
+     "pair": "tiiuae/Falcon-H1-7B-Instruct: gen_ref vs all_ref",
+     "n_x": 50,
+     "n_y": 50,
+     "official": 0.009633777777777852,
+     "fast": 0.009633777777777852
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct vs Qwen/Qwen3-30B-A3B-Instruct-2507: gen_ref",
+     "n_x": 250,
+     "n_y": 250,
+     "official": 0.022235911111111117,
+     "fast": 0.02223591111111123
+    },
+    {
+     "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 vs Qwen/Qwen3.5-4B: gen_ref",
+     "n_x": 50,
+     "n_y": 50,
+     "official": 0.01572400000000007,
+     "fast": 0.015723999999999627
+    },
+    {
+     "pair": "Qwen/Qwen3.5-4B vs meta-llama/Meta-Llama-3.1-8B-Instruct: gen_ref",
+     "n_x": 50,
+     "n_y": 50,
+     "official": 0.005995555555555532,
+     "fast": 0.005995555555555754
+    },
+    {
+     "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct vs tiiuae/Falcon-H1-3B-Instruct: gen_ref",
+     "n_x": 50,
+     "n_y": 50,
+     "official": 0.0019542222222221906,
+     "fast": 0.0019542222222221906
+    },
+    {
+     "pair": "tiiuae/Falcon-H1-3B-Instruct vs tiiuae/Falcon-H1-7B-Instruct: gen_ref",
+     "n_x": 50,
+     "n_y": 50,
+     "official": 0.026275111111111027,
+     "fast": 0.02627511111111125
+    }
+   ]
+  }
+ ]
+}

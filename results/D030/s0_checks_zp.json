@@ -1,0 +1,12 @@
+{
+ "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+ "n_outputs": 200,
+ "fingerprint_dim": 589824,
+ "max_abs_official_vs_ours": 0.0,
+ "max_rel_official_vs_fast": 1.8980093955178745e-05,
+ "sim_official_vs_fast": 1.0,
+ "self_similarity": 1.0,
+ "deterministic_bit_identical": true,
+ "fingerprint_norm": 1.1608376502990723,
+ "passed": true
+}

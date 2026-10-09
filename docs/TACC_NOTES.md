@@ -63,6 +63,24 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+**Issue 24 (2026-10-09) — corpus-wide, not D030-owned: 9 models are prompted
+without a BOS token in every corpus (v1, v2, ML extension).** Found by D030
+S0.5(c) (`results/D030/s0_checks_parity_*.json`). `LLM_huggingface.generate`
+(and `d027_llm`, which reproduces it) tokenises the rendered chat template with
+`add_special_tokens=False`. That is correct when the template writes the BOS
+itself, as most do. These 9 templates do not, so no BOS reaches the model:
+`zephyr-7b-beta`, `Llama-3.1-Tulu-3-8B`, `Llama-3.1-Tulu-3.1-8B`,
+`Llama-2-7B-32K-Instruct`, `SOLAR-10.7B-Instruct-v1.0`, `EuroLLM-1.7B-Instruct`,
+`EuroLLM-9B-Instruct`, `EuroLLM-9B-Instruct-2512`, `DeciLM-7B-instruct`.
+- This is LLMmap's upstream behaviour, so it is consistent across every arm and
+  every corpus. D030 keeps it, so its baselines are served under the same
+  conditions as our method. Nothing in D030 changes.
+- Whether it matters (it could make these models noisier or easier to tell
+  apart) is a research question about the corpus, not D030's. Logged so
+  design-side can decide whether it belongs in `PAPER_DEVIATIONS.md` or needs
+  a check.
+- Ownership: corpus provenance is design-side's call. TACC changed nothing.
+
 ---
 
 ## Resolved

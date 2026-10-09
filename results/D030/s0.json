@@ -1,0 +1,8127 @@
+{
+ "schema": "d030-s0-v1",
+ "repos": {
+  "zeroprint": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0",
+  "met": "fd2ee24d75c9fef87debff8caefa0c04d4a5d374"
+ },
+ "prompts": {
+  "met": {
+   "file": "./confs/baselines/met_prompts.json",
+   "sha256": "3ec2564f5b3333d06d7dcb40e3578da3a00665b474ea26a433344c6485191edc",
+   "sha256_prompts": "7cc753dfcd5c65abf00ded80c527595aa604d58c28a1bdaa061de7a33a45b92a"
+  },
+  "zp": {
+   "file": "./confs/baselines/zp_prompts.json",
+   "sha256": "aa4fe6293de026b87b38ab1ece683431cca3497a95104adce75ca89b1097fcc9",
+   "sha256_prompts": "80d9349c1823a7601dc1dd44e8c69ef42c46c3c7a38b445665e67f2b40b4bbda",
+   "query_embedding_sha256": "9da2b49d9a66a525304948b82a847019f50aa0c8f31266e95d0ba73736ddf9a7"
+  }
+ },
+ "manifest_sha256": "8d44fce0568425abde17ea22a36d4ba3b795f79f7aefe46ee0be86a29490b9d8",
+ "freeze": {
+  "manifest": "./confs/baselines/baseline_ext_v1.json",
+  "manifest_sha256": "8d44fce0568425abde17ea22a36d4ba3b795f79f7aefe46ee0be86a29490b9d8",
+  "n_models": 85,
+  "n_v1": 37,
+  "test_type_totals": {
+   "sys": 1376,
+   "CoT": 293,
+   "none": 148,
+   "RAG": 308
+  },
+  "tzp5_type_totals": {
+   "sys": 170,
+   "RAG": 93,
+   "CoT": 84,
+   "none": 78
+  },
+  "models_without_type": {
+   "sys": [],
+   "RAG": [],
+   "CoT": [
+    "tiiuae/Falcon-H1-7B-Instruct"
+   ],
+   "none": [
+    "Qwen/Qwen3-4B",
+    "google/gemma-3-12b-it",
+    "google/gemma-4-12B-it",
+    "google/gemma-4-E4B-it",
+    "ibm-granite/granite-3.2-8b-instruct",
+    "microsoft/Phi-4-mini-instruct",
+    "utter-project/EuroLLM-9B-Instruct"
+   ]
+  },
+  "env_counts": {
+   "llmmap-gpu-v2": 83,
+   "llmmap-gpu": 1,
+   "llmmap-internlm": 1
+  },
+  "mode_counts": {
+   "padded64": 82,
+   "batch1-concurrent": 3
+  },
+  "llmmap_os": {
+   "encoder": "./data/pretrained_models/default/conf.json",
+   "is_open": true,
+   "n_train_models": 52,
+   "overlap_with_universe": [
+    "CohereForAI/aya-23-8B",
+    "Deci/DeciLM-7B-instruct",
+    "HuggingFaceH4/zephyr-7b-beta",
+    "Qwen/Qwen2-1.5B-Instruct",
+    "Qwen/Qwen2-7B-Instruct",
+    "Qwen/Qwen2.5-0.5B-Instruct",
+    "Qwen/Qwen2.5-3B-Instruct",
+    "google/gemma-1.1-2b-it",
+    "google/gemma-1.1-7b-it",
+    "google/gemma-2-9b-it",
+    "google/gemma-2b-it",
+    "google/gemma-7b-it",
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+    "ibm-granite/granite-3.0-8b-instruct",
+    "ibm-granite/granite-3.1-8b-instruct",
+    "internlm/internlm2_5-7b-chat",
+    "meta-llama/Llama-2-7b-chat-hf",
+    "meta-llama/Llama-3.2-1B-Instruct",
+    "meta-llama/Llama-3.2-3B-Instruct",
+    "meta-llama/Meta-Llama-3-8B-Instruct",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "microsoft/Phi-3-medium-128k-instruct",
+    "microsoft/Phi-3-medium-4k-instruct",
+    "microsoft/Phi-3-mini-128k-instruct",
+    "microsoft/Phi-3-mini-4k-instruct",
+    "microsoft/Phi-3.5-mini-instruct",
+    "mistralai/Mistral-7B-Instruct-v0.1",
+    "mistralai/Mistral-7B-Instruct-v0.2",
+    "mistralai/Mistral-7B-Instruct-v0.3",
+    "nvidia/Llama3-ChatQA-1.5-8B",
+    "openchat/openchat-3.6-8b-20240522",
+    "openchat/openchat_3.5",
+    "tiiuae/Falcon3-10B-Instruct",
+    "tiiuae/Falcon3-7B-Instruct",
+    "togethercomputer/Llama-2-7B-32K-Instruct",
+    "upstage/SOLAR-10.7B-Instruct-v1.0",
+    "utter-project/EuroLLM-1.7B-Instruct"
+   ],
+   "n_overlap": 37,
+   "overlap_in_v1": [
+    "CohereForAI/aya-23-8B",
+    "Deci/DeciLM-7B-instruct",
+    "HuggingFaceH4/zephyr-7b-beta",
+    "Qwen/Qwen2-1.5B-Instruct",
+    "Qwen/Qwen2-7B-Instruct",
+    "Qwen/Qwen2.5-0.5B-Instruct",
+    "Qwen/Qwen2.5-3B-Instruct",
+    "google/gemma-1.1-2b-it",
+    "google/gemma-1.1-7b-it",
+    "google/gemma-2-9b-it",
+    "google/gemma-2b-it",
+    "google/gemma-7b-it",
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+    "ibm-granite/granite-3.0-8b-instruct",
+    "ibm-granite/granite-3.1-8b-instruct",
+    "internlm/internlm2_5-7b-chat",
+    "meta-llama/Llama-2-7b-chat-hf",
+    "meta-llama/Llama-3.2-1B-Instruct",
+    "meta-llama/Llama-3.2-3B-Instruct",
+    "meta-llama/Meta-Llama-3-8B-Instruct",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "microsoft/Phi-3-medium-128k-instruct",
+    "microsoft/Phi-3-medium-4k-instruct",
+    "microsoft/Phi-3-mini-128k-instruct",
+    "microsoft/Phi-3-mini-4k-instruct",
+    "microsoft/Phi-3.5-mini-instruct",
+    "mistralai/Mistral-7B-Instruct-v0.1",
+    "mistralai/Mistral-7B-Instruct-v0.2",
+    "mistralai/Mistral-7B-Instruct-v0.3",
+    "nvidia/Llama3-ChatQA-1.5-8B",
+    "openchat/openchat-3.6-8b-20240522",
+    "openchat/openchat_3.5",
+    "tiiuae/Falcon3-10B-Instruct",
+    "tiiuae/Falcon3-7B-Instruct",
+    "togethercomputer/Llama-2-7B-32K-Instruct",
+    "upstage/SOLAR-10.7B-Instruct-v1.0",
+    "utter-project/EuroLLM-1.7B-Instruct"
+   ],
+   "overlap_in_v2_new": [],
+   "v1_not_overlapping": []
+  },
+  "volume_per_model": {
+   "met_fixed": 750,
+   "met_test_per_slot": 250,
+   "zp_fixed": 600,
+   "zp_test_per_slot": 200
+  }
+ },
+ "checks": {
+  "parity_old": {
+   "Deci/DeciLM-7B-instruct": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Contin",
+        "ue"
+       ],
+       "official_head": [
+        "<s>",
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Contin"
+       ],
+       "n_ours": 67,
+       "n_official": 68
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:36",
+      "build:65",
+      "test:13"
+     ],
+     "max_rendered_tokens": 1005,
+     "test_slots_affected": [
+      13
+     ]
+    }
+   }
+  },
+  "decoding": {
+   "transformers": "5.18.0",
+   "topk_lines": [
+    "if generation_config.top_k is not None and generation_config.top_k != 0:",
+    "TopKLogitsWarper(top_k=generation_config.top_k, min_tokens_to_keep=min_tokens_to_keep)"
+   ],
+   "met": {
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "repetition_penalty": 1.0,
+    "max_new_tokens": 50
+   },
+   "zp": {
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50,
+    "repetition_penalty": null,
+    "max_new_tokens": 512
+   }
+  },
+  "zp": {
+   "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+   "n_outputs": 200,
+   "fingerprint_dim": 589824,
+   "max_abs_official_vs_ours": 0.0,
+   "max_rel_official_vs_fast": 1.8980093955178745e-05,
+   "sim_official_vs_fast": 1.0,
+   "self_similarity": 1.0,
+   "deterministic_bit_identical": true,
+   "fingerprint_norm": 1.1608376502990723,
+   "passed": true
+  },
+  "met": {
+   "passed": true,
+   "threshold": 1e-12,
+   "checks": [
+    {
+     "kind": "toy",
+     "n": 20,
+     "max_abs_diff": 1.1102230246251565e-16
+    },
+    {
+     "kind": "pilot (gen_ref / all_ref only)",
+     "n": 11,
+     "max_abs_diff": 5.551115123125783e-16,
+     "rows": [
+      {
+       "pair": "Qwen/Qwen2.5-0.5B-Instruct: gen_ref vs all_ref",
+       "n_x": 250,
+       "n_y": 250,
+       "official": 0.007567022222222164,
+       "fast": 0.007567022222222275
+      },
+      {
+       "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507: gen_ref vs all_ref",
+       "n_x": 250,
+       "n_y": 250,
+       "official": 0.008059555555555153,
+       "fast": 0.008059555555555709
+      },
+      {
+       "pair": "Qwen/Qwen3.5-4B: gen_ref vs all_ref",
+       "n_x": 50,
+       "n_y": 50,
+       "official": 0.003623555555555602,
+       "fast": 0.003623555555555491
+      },
+      {
+       "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct: gen_ref vs all_ref",
+       "n_x": 250,
+       "n_y": 250,
+       "official": 0.009675288888888911,
+       "fast": 0.009675288888889133
+      },
+      {
+       "pair": "tiiuae/Falcon-H1-3B-Instruct: gen_ref vs all_ref",
+       "n_x": 50,
+       "n_y": 50,
+       "official": 0.007576000000000027,
+       "fast": 0.007576000000000249
+      },
+      {
+       "pair": "tiiuae/Falcon-H1-7B-Instruct: gen_ref vs all_ref",
+       "n_x": 50,
+       "n_y": 50,
+       "official": 0.009633777777777852,
+       "fast": 0.009633777777777852
+      },
+      {
+       "pair": "Qwen/Qwen2.5-0.5B-Instruct vs Qwen/Qwen3-30B-A3B-Instruct-2507: gen_ref",
+       "n_x": 250,
+       "n_y": 250,
+       "official": 0.022235911111111117,
+       "fast": 0.02223591111111123
+      },
+      {
+       "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 vs Qwen/Qwen3.5-4B: gen_ref",
+       "n_x": 50,
+       "n_y": 50,
+       "official": 0.01572400000000007,
+       "fast": 0.015723999999999627
+      },
+      {
+       "pair": "Qwen/Qwen3.5-4B vs meta-llama/Meta-Llama-3.1-8B-Instruct: gen_ref",
+       "n_x": 50,
+       "n_y": 50,
+       "official": 0.005995555555555532,
+       "fast": 0.005995555555555754
+      },
+      {
+       "pair": "meta-llama/Meta-Llama-3.1-8B-Instruct vs tiiuae/Falcon-H1-3B-Instruct: gen_ref",
+       "n_x": 50,
+       "n_y": 50,
+       "official": 0.0019542222222221906,
+       "fast": 0.0019542222222221906
+      },
+      {
+       "pair": "tiiuae/Falcon-H1-3B-Instruct vs tiiuae/Falcon-H1-7B-Instruct: gen_ref",
+       "n_x": 50,
+       "n_y": 50,
+       "official": 0.026275111111111027,
+       "fast": 0.02627511111111125
+      }
+     ]
+    }
+   ]
+  },
+  "parity_internlm": {
+   "internlm/internlm2_5-7b-chat": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "<|im_start|>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "<|im_start|>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 43,
+       "n_official": 44
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 14,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:3",
+      "build:66",
+      "test:9"
+     ],
+     "max_rendered_tokens": 669,
+     "test_slots_affected": [
+      9
+     ]
+    }
+   }
+  },
+  "parity_v2": {
+   "CohereForAI/aya-23-8B": {
+    "bos": "<BOS_TOKEN>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|USER_TOKEN|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "official_head": [
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|USER_TOKEN|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "n_ours": 56,
+       "n_official": 58
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|USER_TOKEN|>",
+        "Complete",
+        "Ġthe",
+        "Ġfollowing"
+       ],
+       "official_head": [
+        "<BOS_TOKEN>",
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|USER_TOKEN|>",
+        "Complete",
+        "Ġthe"
+       ],
+       "n_ours": 42,
+       "n_official": 45
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:30",
+      "build:63"
+     ],
+     "max_rendered_tokens": 587,
+     "test_slots_affected": []
+    }
+   },
+   "CohereLabs/tiny-aya-earth": {
+    "bos": "<BOS_TOKEN>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem",
+        "ĠPre"
+       ],
+       "official_head": [
+        "<BOS_TOKEN>",
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem"
+       ],
+       "n_ours": 398,
+       "n_official": 399
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 111,
+     "n_config_units_affected": 15,
+     "units": [
+      "build:1",
+      "build:11",
+      "build:22",
+      "build:24",
+      "build:26",
+      "build:38",
+      "build:52",
+      "build:56",
+      "build:65",
+      "test:0",
+      "test:1",
+      "test:15",
+      "test:17",
+      "test:18",
+      "test:7"
+     ],
+     "max_rendered_tokens": 1265,
+     "test_slots_affected": [
+      0,
+      1,
+      7,
+      15,
+      17,
+      18
+     ]
+    }
+   },
+   "CohereLabs/tiny-aya-fire": {
+    "bos": "<BOS_TOKEN>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem",
+        "ĠPre"
+       ],
+       "official_head": [
+        "<BOS_TOKEN>",
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem"
+       ],
+       "n_ours": 398,
+       "n_official": 399
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 95,
+     "n_config_units_affected": 11,
+     "units": [
+      "build:13",
+      "build:32",
+      "build:36",
+      "build:46",
+      "build:47",
+      "build:54",
+      "test:0",
+      "test:22",
+      "test:23",
+      "test:4",
+      "test:5"
+     ],
+     "max_rendered_tokens": 1008,
+     "test_slots_affected": [
+      0,
+      4,
+      5,
+      22,
+      23
+     ]
+    }
+   },
+   "CohereLabs/tiny-aya-global": {
+    "bos": "<BOS_TOKEN>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem",
+        "ĠPre"
+       ],
+       "official_head": [
+        "<BOS_TOKEN>",
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem"
+       ],
+       "n_ours": 398,
+       "n_official": 399
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 56,
+     "n_config_units_affected": 8,
+     "units": [
+      "build:27",
+      "build:45",
+      "build:62",
+      "build:69",
+      "test:11",
+      "test:12",
+      "test:2",
+      "test:20"
+     ],
+     "max_rendered_tokens": 1129,
+     "test_slots_affected": [
+      2,
+      11,
+      12,
+      20
+     ]
+    }
+   },
+   "CohereLabs/tiny-aya-water": {
+    "bos": "<BOS_TOKEN>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem",
+        "ĠPre"
+       ],
+       "official_head": [
+        "<BOS_TOKEN>",
+        "<BOS_TOKEN>",
+        "<|START_OF_TURN_TOKEN|>",
+        "<|SYSTEM_TOKEN|>",
+        "#",
+        "ĠSystem"
+       ],
+       "n_ours": 398,
+       "n_official": 399
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 110,
+     "n_config_units_affected": 12,
+     "units": [
+      "build:29",
+      "build:3",
+      "build:35",
+      "test:0",
+      "test:13",
+      "test:15",
+      "test:20",
+      "test:23",
+      "test:3",
+      "test:7",
+      "test:8",
+      "test:9"
+     ],
+     "max_rendered_tokens": 1135,
+     "test_slots_affected": [
+      0,
+      3,
+      7,
+      8,
+      9,
+      13,
+      15,
+      20,
+      23
+     ]
+    }
+   },
+   "HuggingFaceH4/zephyr-7b-beta": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁<",
+        "|",
+        "user",
+        "|",
+        ">",
+        "<0x0A>"
+       ],
+       "official_head": [
+        "<s>",
+        "▁<",
+        "|",
+        "user",
+        "|",
+        ">"
+       ],
+       "n_ours": 74,
+       "n_official": 75
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁<",
+        "|",
+        "user",
+        "|",
+        ">",
+        "<0x0A>"
+       ],
+       "official_head": [
+        "<s>",
+        "▁<",
+        "|",
+        "user",
+        "|",
+        ">"
+       ],
+       "n_ours": 52,
+       "n_official": 53
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 35,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:16",
+      "build:17",
+      "build:35",
+      "build:50",
+      "build:8",
+      "test:24"
+     ],
+     "max_rendered_tokens": 968,
+     "test_slots_affected": [
+      24
+     ]
+    }
+   },
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+    "bos": "<|im_start|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "system",
+        "Ċ",
+        "You",
+        "Ġare",
+        "Ġa"
+       ],
+       "official_head": [
+        "system",
+        "Ċ",
+        "You",
+        "Ġare",
+        "Ġa",
+        "Ġhelpful"
+       ],
+       "n_ours": 84,
+       "n_official": 83
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:71",
+      "test:1",
+      "test:19",
+      "test:20",
+      "test:23"
+     ],
+     "max_rendered_tokens": 856,
+     "test_slots_affected": [
+      1,
+      19,
+      20,
+      23
+     ]
+    }
+   },
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+    "bos": "<|im_start|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "user",
+        "Ċ",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "official_head": [
+        "user",
+        "Ċ",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph",
+        "."
+       ],
+       "n_ours": 63,
+       "n_official": 62
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 4,
+     "units": [
+      "build:0",
+      "build:14",
+      "build:23",
+      "test:23"
+     ],
+     "max_rendered_tokens": 829,
+     "test_slots_affected": [
+      23
+     ]
+    }
+   },
+   "HuggingFaceTB/SmolLM2-360M-Instruct": {
+    "bos": "<|im_start|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "system",
+        "Ċ",
+        "You",
+        "Ġare",
+        "Ġa"
+       ],
+       "official_head": [
+        "system",
+        "Ċ",
+        "You",
+        "Ġare",
+        "Ġa",
+        "Ġhelpful"
+       ],
+       "n_ours": 84,
+       "n_official": 83
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 25,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:11",
+      "build:19",
+      "build:21",
+      "build:3",
+      "build:49"
+     ],
+     "max_rendered_tokens": 936,
+     "test_slots_affected": []
+    }
+   },
+   "Qwen/Qwen2-1.5B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 25,
+     "n_config_units_affected": 4,
+     "units": [
+      "build:42",
+      "build:43",
+      "build:5",
+      "build:66"
+     ],
+     "max_rendered_tokens": 862,
+     "test_slots_affected": []
+    }
+   },
+   "Qwen/Qwen2-7B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 25,
+     "n_config_units_affected": 4,
+     "units": [
+      "build:26",
+      "build:30",
+      "build:56",
+      "build:62"
+     ],
+     "max_rendered_tokens": 923,
+     "test_slots_affected": []
+    }
+   },
+   "Qwen/Qwen2.5-0.5B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 15,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:11",
+      "build:28"
+     ],
+     "max_rendered_tokens": 861,
+     "test_slots_affected": []
+    }
+   },
+   "Qwen/Qwen2.5-3B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 15,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:20",
+      "build:29",
+      "build:33"
+     ],
+     "max_rendered_tokens": 861,
+     "test_slots_affected": []
+    }
+   },
+   "Qwen/Qwen2.5-7B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:29",
+      "build:34",
+      "build:65",
+      "test:20",
+      "test:5",
+      "test:8"
+     ],
+     "max_rendered_tokens": 725,
+     "test_slots_affected": [
+      5,
+      8,
+      20
+     ]
+    }
+   },
+   "Qwen/Qwen2.5-7B-Instruct-1M": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:30",
+      "build:40",
+      "build:44",
+      "build:50",
+      "test:17"
+     ],
+     "max_rendered_tokens": 813,
+     "test_slots_affected": [
+      17
+     ]
+    }
+   },
+   "Qwen/Qwen3-30B-A3B": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 56,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:30",
+      "test:0",
+      "test:18",
+      "test:21",
+      "test:23",
+      "test:5",
+      "test:7"
+     ],
+     "max_rendered_tokens": 737,
+     "test_slots_affected": [
+      0,
+      5,
+      7,
+      18,
+      21,
+      23
+     ]
+    }
+   },
+   "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 15,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:20",
+      "build:34"
+     ],
+     "max_rendered_tokens": 676,
+     "test_slots_affected": []
+    }
+   },
+   "Qwen/Qwen3-4B": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:17",
+      "build:19",
+      "build:26",
+      "build:43",
+      "test:0",
+      "test:3"
+     ],
+     "max_rendered_tokens": 923,
+     "test_slots_affected": [
+      0,
+      3
+     ]
+    }
+   },
+   "Qwen/Qwen3-4B-Instruct-2507": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 60,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:42",
+      "build:51",
+      "test:12",
+      "test:14",
+      "test:22",
+      "test:4",
+      "test:8"
+     ],
+     "max_rendered_tokens": 963,
+     "test_slots_affected": [
+      4,
+      8,
+      12,
+      14,
+      22
+     ]
+    }
+   },
+   "Qwen/Qwen3-8B": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 1,
+     "units": [
+      "build:29"
+     ],
+     "max_rendered_tokens": 640,
+     "test_slots_affected": []
+    }
+   },
+   "Qwen/Qwen3.5-4B": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:33",
+      "build:52",
+      "build:60",
+      "build:74",
+      "test:1"
+     ],
+     "max_rendered_tokens": 1182,
+     "test_slots_affected": [
+      1
+     ]
+    }
+   },
+   "Qwen/Qwen3.5-9B": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:10",
+      "build:32",
+      "build:44",
+      "build:66",
+      "build:8",
+      "test:1",
+      "test:24"
+     ],
+     "max_rendered_tokens": 864,
+     "test_slots_affected": [
+      1,
+      24
+     ]
+    }
+   },
+   "allenai/Llama-3.1-Tulu-3-8B": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ",
+        "Continue"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ"
+       ],
+       "n_ours": 56,
+       "n_official": 57
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ",
+        "Complete"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ"
+       ],
+       "n_ours": 44,
+       "n_official": 45
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:11",
+      "build:21",
+      "test:24"
+     ],
+     "max_rendered_tokens": 672,
+     "test_slots_affected": [
+      24
+     ]
+    }
+   },
+   "allenai/Llama-3.1-Tulu-3.1-8B": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ",
+        "Continue"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ"
+       ],
+       "n_ours": 56,
+       "n_official": 57
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ",
+        "Complete"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ"
+       ],
+       "n_ours": 44,
+       "n_official": 45
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:30",
+      "build:62",
+      "test:24"
+     ],
+     "max_rendered_tokens": 960,
+     "test_slots_affected": [
+      24
+     ]
+    }
+   },
+   "allenai/OLMo-2-0425-1B-Instruct": {
+    "bos": "<|endoftext|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|endoftext|>",
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ"
+       ],
+       "official_head": [
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ",
+        "Continue"
+       ],
+       "n_ours": 57,
+       "n_official": 56
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 50,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:0",
+      "build:24",
+      "build:46",
+      "test:1",
+      "test:11",
+      "test:5"
+     ],
+     "max_rendered_tokens": 885,
+     "test_slots_affected": [
+      1,
+      5,
+      11
+     ]
+    }
+   },
+   "allenai/OLMo-2-1124-13B-Instruct": {
+    "bos": "<|endoftext|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|endoftext|>",
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ"
+       ],
+       "official_head": [
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ",
+        "Continue"
+       ],
+       "n_ours": 57,
+       "n_official": 56
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 1,
+     "units": [
+      "test:21"
+     ],
+     "max_rendered_tokens": 846,
+     "test_slots_affected": [
+      21
+     ]
+    }
+   },
+   "allenai/OLMo-2-1124-7B-Instruct": {
+    "bos": "<|endoftext|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|endoftext|>",
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ"
+       ],
+       "official_head": [
+        "<",
+        "|",
+        "user",
+        "|",
+        ">Ċ",
+        "Continue"
+       ],
+       "n_ours": 57,
+       "n_official": 56
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 23,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:56",
+      "test:19",
+      "test:5"
+     ],
+     "max_rendered_tokens": 714,
+     "test_slots_affected": [
+      5,
+      19
+     ]
+    }
+   },
+   "allenai/Olmo-3-7B-Instruct": {
+    "bos": "<|endoftext|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 60,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:32",
+      "build:48",
+      "test:1",
+      "test:14",
+      "test:16",
+      "test:17",
+      "test:2"
+     ],
+     "max_rendered_tokens": 822,
+     "test_slots_affected": [
+      1,
+      2,
+      14,
+      16,
+      17
+     ]
+    }
+   },
+   "allenai/Olmo-3.1-32B-Instruct": {
+    "bos": "<|endoftext|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 4,
+     "units": [
+      "build:13",
+      "build:55",
+      "build:72",
+      "test:24"
+     ],
+     "max_rendered_tokens": 1068,
+     "test_slots_affected": [
+      24
+     ]
+    }
+   },
+   "google/gemma-1.1-2b-it": {
+    "bos": "<bos>",
+    "supports_system": false,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:28",
+      "build:53"
+     ],
+     "max_rendered_tokens": 585,
+     "test_slots_affected": []
+    }
+   },
+   "google/gemma-1.1-7b-it": {
+    "bos": "<bos>",
+    "supports_system": false,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:13",
+      "build:62"
+     ],
+     "max_rendered_tokens": 642,
+     "test_slots_affected": []
+    }
+   },
+   "google/gemma-2-9b-it": {
+    "bos": "<bos>",
+    "supports_system": false,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 1,
+     "units": [
+      "build:35"
+     ],
+     "max_rendered_tokens": 587,
+     "test_slots_affected": []
+    }
+   },
+   "google/gemma-2b-it": {
+    "bos": "<bos>",
+    "supports_system": false,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:35",
+      "build:48"
+     ],
+     "max_rendered_tokens": 849,
+     "test_slots_affected": []
+    }
+   },
+   "google/gemma-3-12b-it": {
+    "bos": "<bos>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 40,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:14",
+      "build:22",
+      "test:13",
+      "test:22",
+      "test:8"
+     ],
+     "max_rendered_tokens": 897,
+     "test_slots_affected": [
+      8,
+      13,
+      22
+     ]
+    }
+   },
+   "google/gemma-3-1b-it": {
+    "bos": "<bos>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 41,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:22",
+      "build:57",
+      "build:72",
+      "test:20",
+      "test:24",
+      "test:3"
+     ],
+     "max_rendered_tokens": 835,
+     "test_slots_affected": [
+      3,
+      20,
+      24
+     ]
+    }
+   },
+   "google/gemma-3-4b-it": {
+    "bos": "<bos>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 0,
+     "n_config_units_affected": 0,
+     "units": [],
+     "max_rendered_tokens": 471,
+     "test_slots_affected": []
+    }
+   },
+   "google/gemma-4-12B-it": {
+    "bos": "<bos>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<|turn>",
+        "user",
+        "\n",
+        "Continue",
+        "▁the"
+       ],
+       "official_head": [
+        "<|turn>",
+        "user",
+        "\n",
+        "Continue",
+        "▁the",
+        "▁paragraph"
+       ],
+       "n_ours": 63,
+       "n_official": 62
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:18",
+      "build:31",
+      "build:68",
+      "test:19",
+      "test:21",
+      "test:7"
+     ],
+     "max_rendered_tokens": 925,
+     "test_slots_affected": [
+      7,
+      19,
+      21
+     ]
+    }
+   },
+   "google/gemma-4-E4B-it": {
+    "bos": "<bos>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<|turn>",
+        "user",
+        "\n",
+        "Continue",
+        "▁the"
+       ],
+       "official_head": [
+        "<|turn>",
+        "user",
+        "\n",
+        "Continue",
+        "▁the",
+        "▁paragraph"
+       ],
+       "n_ours": 59,
+       "n_official": 58
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 40,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:21",
+      "build:49",
+      "build:5",
+      "build:71",
+      "test:6",
+      "test:8"
+     ],
+     "max_rendered_tokens": 904,
+     "test_slots_affected": [
+      6,
+      8
+     ]
+    }
+   },
+   "google/gemma-7b-it": {
+    "bos": "<bos>",
+    "supports_system": false,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<bos>",
+        "<bos>",
+        "<start_of_turn>",
+        "user",
+        "\n",
+        "Complete"
+       ],
+       "n_ours": 45,
+       "n_official": 46
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:2",
+      "build:25",
+      "build:38",
+      "build:40",
+      "build:48"
+     ],
+     "max_rendered_tokens": 900,
+     "test_slots_affected": []
+    }
+   },
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "user",
+        "<|end_header_id|>",
+        "ĊĊ",
+        "Complete"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "user",
+        "<|end_header_id|>",
+        "ĊĊ"
+       ],
+       "n_ours": 43,
+       "n_official": 44
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:18",
+      "build:21"
+     ],
+     "max_rendered_tokens": 832,
+     "test_slots_affected": []
+    }
+   },
+   "ibm-granite/granite-3.0-8b-instruct": {
+    "bos": "<|end_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<|start_of_role|>",
+        "user",
+        "<|end_of_role|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "official_head": [
+        "<|start_of_role|>",
+        "user",
+        "<|end_of_role|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "n_ours": 64,
+       "n_official": 63
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:39",
+      "build:9",
+      "test:9"
+     ],
+     "max_rendered_tokens": 814,
+     "test_slots_affected": [
+      9
+     ]
+    }
+   },
+   "ibm-granite/granite-3.1-8b-instruct": {
+    "bos": "<|end_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<|start_of_role|>",
+        "system",
+        "<|end_of_role|>",
+        "Knowledge",
+        "ĠC",
+        "utoff"
+       ],
+       "official_head": [
+        "<|start_of_role|>",
+        "system",
+        "<|end_of_role|>",
+        "Knowledge",
+        "ĠC",
+        "utoff"
+       ],
+       "n_ours": 115,
+       "n_official": 114
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 40,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:2",
+      "build:3",
+      "build:38",
+      "build:64",
+      "build:71",
+      "test:13"
+     ],
+     "max_rendered_tokens": 1074,
+     "test_slots_affected": [
+      13
+     ]
+    }
+   },
+   "ibm-granite/granite-3.2-8b-instruct": {
+    "bos": "<|end_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<|start_of_role|>",
+        "system",
+        "<|end_of_role|>",
+        "Knowledge",
+        "ĠC",
+        "utoff"
+       ],
+       "official_head": [
+        "<|start_of_role|>",
+        "system",
+        "<|end_of_role|>",
+        "Knowledge",
+        "ĠC",
+        "utoff"
+       ],
+       "n_ours": 115,
+       "n_official": 114
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 55,
+     "n_config_units_affected": 9,
+     "units": [
+      "build:18",
+      "build:19",
+      "build:26",
+      "build:33",
+      "build:5",
+      "build:60",
+      "build:67",
+      "test:14",
+      "test:16"
+     ],
+     "max_rendered_tokens": 1076,
+     "test_slots_affected": [
+      14,
+      16
+     ]
+    }
+   },
+   "ibm-granite/granite-3.3-8b-instruct": {
+    "bos": "<|end_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<|start_of_role|>",
+        "system",
+        "<|end_of_role|>",
+        "Knowledge",
+        "ĠC",
+        "utoff"
+       ],
+       "official_head": [
+        "<|start_of_role|>",
+        "system",
+        "<|end_of_role|>",
+        "Knowledge",
+        "ĠC",
+        "utoff"
+       ],
+       "n_ours": 115,
+       "n_official": 114
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:23",
+      "build:29",
+      "build:40",
+      "test:15",
+      "test:3",
+      "test:4"
+     ],
+     "max_rendered_tokens": 838,
+     "test_slots_affected": [
+      3,
+      4,
+      15
+     ]
+    }
+   },
+   "ibm-granite/granite-4.1-3b": {
+    "bos": "<|end_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<|start_of_role|>",
+        "user",
+        "<|end_of_role|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "official_head": [
+        "<|start_of_role|>",
+        "user",
+        "<|end_of_role|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "n_ours": 54,
+       "n_official": 52
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 40,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:29",
+      "build:51",
+      "test:1",
+      "test:19",
+      "test:2"
+     ],
+     "max_rendered_tokens": 702,
+     "test_slots_affected": [
+      1,
+      2,
+      19
+     ]
+    }
+   },
+   "ibm-granite/granite-4.1-8b": {
+    "bos": "<|end_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<|start_of_role|>",
+        "user",
+        "<|end_of_role|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "official_head": [
+        "<|start_of_role|>",
+        "user",
+        "<|end_of_role|>",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "n_ours": 54,
+       "n_official": 52
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:14",
+      "build:71",
+      "test:6"
+     ],
+     "max_rendered_tokens": 778,
+     "test_slots_affected": [
+      6
+     ]
+    }
+   },
+   "ibm-granite/granite-4.2-3b": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 60,
+     "n_config_units_affected": 8,
+     "units": [
+      "build:11",
+      "build:22",
+      "build:43",
+      "build:48",
+      "build:62",
+      "test:11",
+      "test:15",
+      "test:4"
+     ],
+     "max_rendered_tokens": 818,
+     "test_slots_affected": [
+      4,
+      11,
+      15
+     ]
+    }
+   },
+   "ibm-granite/granite-4.2-8b": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 15,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:29",
+      "test:8"
+     ],
+     "max_rendered_tokens": 746,
+     "test_slots_affected": [
+      8
+     ]
+    }
+   },
+   "meta-llama/Llama-2-7b-chat-hf": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "▁Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "▁Complete"
+       ],
+       "n_ours": 44,
+       "n_official": 45
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:44",
+      "build:60",
+      "build:65",
+      "build:69",
+      "test:9"
+     ],
+     "max_rendered_tokens": 1038,
+     "test_slots_affected": [
+      9
+     ]
+    }
+   },
+   "meta-llama/Llama-3.2-1B-Instruct": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ",
+        "Cut"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ"
+       ],
+       "n_ours": 68,
+       "n_official": 69
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 5,
+     "n_config_units_affected": 1,
+     "units": [
+      "build:43"
+     ],
+     "max_rendered_tokens": 664,
+     "test_slots_affected": []
+    }
+   },
+   "meta-llama/Llama-3.2-3B-Instruct": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ",
+        "Cut"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ"
+       ],
+       "n_ours": 68,
+       "n_official": 69
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 25,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:24",
+      "build:53",
+      "build:73"
+     ],
+     "max_rendered_tokens": 889,
+     "test_slots_affected": []
+    }
+   },
+   "meta-llama/Meta-Llama-3-8B-Instruct": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "user",
+        "<|end_header_id|>",
+        "ĊĊ",
+        "Complete"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "user",
+        "<|end_header_id|>",
+        "ĊĊ"
+       ],
+       "n_ours": 43,
+       "n_official": 44
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 1,
+     "units": [
+      "build:74"
+     ],
+     "max_rendered_tokens": 559,
+     "test_slots_affected": []
+    }
+   },
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ",
+        "Cut"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ"
+       ],
+       "n_ours": 68,
+       "n_official": 69
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 5,
+     "n_config_units_affected": 1,
+     "units": [
+      "build:51"
+     ],
+     "max_rendered_tokens": 579,
+     "test_slots_affected": []
+    }
+   },
+   "microsoft/Phi-3-medium-128k-instruct": {
+    "bos": "<s>",
+    "supports_system": false,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:37",
+      "build:39",
+      "test:14"
+     ],
+     "max_rendered_tokens": 969,
+     "test_slots_affected": [
+      14
+     ]
+    }
+   },
+   "microsoft/Phi-3-medium-4k-instruct": {
+    "bos": "<s>",
+    "supports_system": false,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:63",
+      "build:73",
+      "test:6"
+     ],
+     "max_rendered_tokens": 970,
+     "test_slots_affected": [
+      6
+     ]
+    }
+   },
+   "microsoft/Phi-3-mini-128k-instruct": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:10",
+      "build:31",
+      "build:47",
+      "build:66",
+      "test:9"
+     ],
+     "max_rendered_tokens": 773,
+     "test_slots_affected": [
+      9
+     ]
+    }
+   },
+   "microsoft/Phi-3-mini-4k-instruct": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 1,
+     "units": [
+      "test:22"
+     ],
+     "max_rendered_tokens": 558,
+     "test_slots_affected": [
+      22
+     ]
+    }
+   },
+   "microsoft/Phi-3.5-mini-instruct": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:4",
+      "build:40",
+      "test:19"
+     ],
+     "max_rendered_tokens": 659,
+     "test_slots_affected": [
+      19
+     ]
+    }
+   },
+   "microsoft/Phi-4-mini-instruct": {
+    "bos": "<|endoftext|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 40,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:35",
+      "build:61",
+      "build:74",
+      "test:0",
+      "test:20"
+     ],
+     "max_rendered_tokens": 1207,
+     "test_slots_affected": [
+      0,
+      20
+     ]
+    }
+   },
+   "microsoft/phi-4": {
+    "bos": "<|endoftext|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:0",
+      "build:64",
+      "build:65",
+      "build:71",
+      "test:12"
+     ],
+     "max_rendered_tokens": 733,
+     "test_slots_affected": [
+      12
+     ]
+    }
+   },
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMinist",
+        "ral"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMinist"
+       ],
+       "n_ours": 560,
+       "n_official": 512
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 50,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:24",
+      "build:31",
+      "build:62",
+      "build:7",
+      "test:23",
+      "test:7",
+      "test:9"
+     ],
+     "max_rendered_tokens": 1049,
+     "test_slots_affected": [
+      7,
+      9,
+      23
+     ]
+    }
+   },
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMinist",
+        "ral"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMinist"
+       ],
+       "n_ours": 559,
+       "n_official": 512
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 55,
+     "n_config_units_affected": 8,
+     "units": [
+      "build:2",
+      "build:23",
+      "build:24",
+      "build:35",
+      "build:60",
+      "build:68",
+      "test:18",
+      "test:23"
+     ],
+     "max_rendered_tokens": 789,
+     "test_slots_affected": [
+      18,
+      23
+     ]
+    }
+   },
+   "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": false,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMinist",
+        "ral"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMinist"
+       ],
+       "n_ours": 559,
+       "n_official": 512
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 105,
+     "n_config_units_affected": 14,
+     "units": [
+      "build:11",
+      "build:19",
+      "build:24",
+      "build:53",
+      "build:56",
+      "build:6",
+      "build:70",
+      "test:10",
+      "test:13",
+      "test:14",
+      "test:17",
+      "test:21",
+      "test:3",
+      "test:8"
+     ],
+     "max_rendered_tokens": 1342,
+     "test_slots_affected": [
+      3,
+      8,
+      10,
+      13,
+      14,
+      17,
+      21
+     ]
+    }
+   },
+   "mistralai/Mistral-7B-Instruct-v0.1": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "▁Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "▁Complete"
+       ],
+       "n_ours": 44,
+       "n_official": 45
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 25,
+     "n_config_units_affected": 4,
+     "units": [
+      "build:13",
+      "build:17",
+      "build:68",
+      "test:3"
+     ],
+     "max_rendered_tokens": 1001,
+     "test_slots_affected": [
+      3
+     ]
+    }
+   },
+   "mistralai/Mistral-7B-Instruct-v0.2": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "▁Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "▁Complete"
+       ],
+       "n_ours": 44,
+       "n_official": 45
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:19",
+      "build:47",
+      "test:3"
+     ],
+     "max_rendered_tokens": 953,
+     "test_slots_affected": [
+      3
+     ]
+    }
+   },
+   "mistralai/Mistral-7B-Instruct-v0.3": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "[INST]",
+        "▁Complete",
+        "▁the",
+        "▁following",
+        "▁code"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "[INST]",
+        "▁Complete",
+        "▁the",
+        "▁following"
+       ],
+       "n_ours": 39,
+       "n_official": 40
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 35,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:5",
+      "build:62",
+      "build:72",
+      "build:74",
+      "test:12"
+     ],
+     "max_rendered_tokens": 735,
+     "test_slots_affected": [
+      12
+     ]
+    }
+   },
+   "mistralai/Mistral-Small-24B-Instruct-2501": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMist",
+        "ral"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMist"
+       ],
+       "n_ours": 210,
+       "n_official": 211
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:10",
+      "build:23",
+      "build:52",
+      "build:56",
+      "test:22"
+     ],
+     "max_rendered_tokens": 1150,
+     "test_slots_affected": [
+      22
+     ]
+    }
+   },
+   "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMist",
+        "ral"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "[SYSTEM_PROMPT]",
+        "You",
+        "Ġare",
+        "ĠMist"
+       ],
+       "n_ours": 210,
+       "n_official": 211
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:1",
+      "build:18",
+      "build:47",
+      "test:13",
+      "test:20",
+      "test:5"
+     ],
+     "max_rendered_tokens": 858,
+     "test_slots_affected": [
+      5,
+      13,
+      20
+     ]
+    }
+   },
+   "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ",
+        "Cut"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "system",
+        "<|end_header_id|>",
+        "ĊĊ"
+       ],
+       "n_ours": 68,
+       "n_official": 69
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 40,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:34",
+      "build:68",
+      "test:20",
+      "test:21",
+      "test:9"
+     ],
+     "max_rendered_tokens": 850,
+     "test_slots_affected": [
+      9,
+      20,
+      21
+     ]
+    }
+   },
+   "nvidia/Llama3-ChatQA-1.5-8B": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": false,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "System",
+        ":",
+        "ĠThis",
+        "Ġis",
+        "Ġa"
+       ],
+       "official_head": [
+        "System",
+        ":",
+        "ĠThis",
+        "Ġis",
+        "Ġa",
+        "Ġchat"
+       ],
+       "n_ours": 101,
+       "n_official": 100
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 30,
+     "n_config_units_affected": 5,
+     "units": [
+      "build:14",
+      "build:23",
+      "build:5",
+      "build:58",
+      "test:23"
+     ],
+     "max_rendered_tokens": 871,
+     "test_slots_affected": [
+      23
+     ]
+    }
+   },
+   "openchat/openchat-3.6-8b-20240522": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "G",
+        "PT",
+        "4",
+        "ĠCorrect"
+       ],
+       "official_head": [
+        "<|begin_of_text|>",
+        "<|begin_of_text|>",
+        "<|start_header_id|>",
+        "G",
+        "PT",
+        "4"
+       ],
+       "n_ours": 51,
+       "n_official": 52
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 15,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:13",
+      "build:23",
+      "build:3"
+     ],
+     "max_rendered_tokens": 840,
+     "test_slots_affected": []
+    }
+   },
+   "openchat/openchat_3.5": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<s>",
+        "▁G",
+        "PT",
+        "4",
+        "▁Cor",
+        "rect"
+       ],
+       "official_head": [
+        "<s>",
+        "<s>",
+        "▁G",
+        "PT",
+        "4",
+        "▁Cor"
+       ],
+       "n_ours": 52,
+       "n_official": 53
+      }
+     ],
+     "official_double_bos": true
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 25,
+     "n_config_units_affected": 4,
+     "units": [
+      "build:1",
+      "build:23",
+      "build:7",
+      "test:24"
+     ],
+     "max_rendered_tokens": 1015,
+     "test_slots_affected": [
+      24
+     ]
+    }
+   },
+   "tiiuae/Falcon-H1-3B-Instruct": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|im_start|>",
+        "user",
+        "Ċ",
+        "Continue",
+        "Ġthe"
+       ],
+       "official_head": [
+        "<|im_start|>",
+        "user",
+        "Ċ",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "n_ours": 69,
+       "n_official": 68
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 10,
+     "n_config_units_affected": 1,
+     "units": [
+      "test:20"
+     ],
+     "max_rendered_tokens": 1082,
+     "test_slots_affected": [
+      20
+     ]
+    }
+   },
+   "tiiuae/Falcon-H1-7B-Instruct": {
+    "bos": "<|begin_of_text|>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|begin_of_text|>",
+        "<|im_start|>",
+        "user",
+        "Ċ",
+        "Continue",
+        "Ġthe"
+       ],
+       "official_head": [
+        "<|im_start|>",
+        "user",
+        "Ċ",
+        "Continue",
+        "Ġthe",
+        "Ġparagraph"
+       ],
+       "n_ours": 65,
+       "n_official": 64
+      }
+     ]
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 55,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:0",
+      "build:13",
+      "build:60",
+      "test:12",
+      "test:14",
+      "test:17",
+      "test:4"
+     ],
+     "max_rendered_tokens": 809,
+     "test_slots_affected": [
+      4,
+      12,
+      14,
+      17
+     ]
+    }
+   },
+   "tiiuae/Falcon3-10B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 14,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:38",
+      "build:64",
+      "test:3"
+     ],
+     "max_rendered_tokens": 879,
+     "test_slots_affected": [
+      3
+     ]
+    }
+   },
+   "tiiuae/Falcon3-1B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:63",
+      "build:64",
+      "test:17"
+     ],
+     "max_rendered_tokens": 884,
+     "test_slots_affected": [
+      17
+     ]
+    }
+   },
+   "tiiuae/Falcon3-3B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 44,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:54",
+      "build:55",
+      "build:57",
+      "build:68",
+      "build:74",
+      "test:18",
+      "test:20"
+     ],
+     "max_rendered_tokens": 1025,
+     "test_slots_affected": [
+      18,
+      20
+     ]
+    }
+   },
+   "tiiuae/Falcon3-7B-Instruct": {
+    "bos": null,
+    "supports_system": true,
+    "met": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp": {
+     "equal": true,
+     "equal_without_template_kwargs": true,
+     "equal_modulo_bos": true,
+     "examples": []
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 24,
+     "n_config_units_affected": 4,
+     "units": [
+      "build:16",
+      "build:3",
+      "build:54",
+      "test:0"
+     ],
+     "max_rendered_tokens": 671,
+     "test_slots_affected": [
+      0
+     ]
+    }
+   },
+   "togethercomputer/Llama-2-7B-32K-Instruct": {
+    "bos": "<s>",
+    "supports_system": false,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁[",
+        "INST",
+        "]",
+        "<0x0A>",
+        "Cont",
+        "inue"
+       ],
+       "official_head": [
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "<0x0A>",
+        "Cont"
+       ],
+       "n_ours": 71,
+       "n_official": 72
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁[",
+        "INST",
+        "]",
+        "<0x0A>",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "▁[",
+        "INST",
+        "]",
+        "<0x0A>",
+        "Complete"
+       ],
+       "n_ours": 47,
+       "n_official": 48
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 25,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:29",
+      "build:72",
+      "test:0"
+     ],
+     "max_rendered_tokens": 978,
+     "test_slots_affected": [
+      0
+     ]
+    }
+   },
+   "upstage/SOLAR-10.7B-Instruct-v1.0": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Contin",
+        "ue"
+       ],
+       "official_head": [
+        "<s>",
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Contin"
+       ],
+       "n_ours": 68,
+       "n_official": 69
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Complete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "▁###",
+        "▁User",
+        ":",
+        "<0x0A>",
+        "Complete"
+       ],
+       "n_ours": 46,
+       "n_official": 47
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 20,
+     "n_config_units_affected": 3,
+     "units": [
+      "build:36",
+      "build:42",
+      "test:18"
+     ],
+     "max_rendered_tokens": 1007,
+     "test_slots_affected": [
+      18
+     ]
+    }
+   },
+   "utter-project/EuroLLM-1.7B-Instruct": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "system",
+        "<0x0A>",
+        "<|im_end|>",
+        "<0x0A>",
+        "<|im_start|>"
+       ],
+       "official_head": [
+        "<s>",
+        "<|im_start|>",
+        "system",
+        "<0x0A>",
+        "<|im_end|>",
+        "<0x0A>"
+       ],
+       "n_ours": 68,
+       "n_official": 69
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "system",
+        "<0x0A>",
+        "<|im_end|>",
+        "<0x0A>",
+        "<|im_start|>"
+       ],
+       "official_head": [
+        "<s>",
+        "<|im_start|>",
+        "system",
+        "<0x0A>",
+        "<|im_end|>",
+        "<0x0A>"
+       ],
+       "n_ours": 53,
+       "n_official": 54
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 15,
+     "n_config_units_affected": 2,
+     "units": [
+      "build:20",
+      "test:9"
+     ],
+     "max_rendered_tokens": 717,
+     "test_slots_affected": [
+      9
+     ]
+    }
+   },
+   "utter-project/EuroLLM-9B-Instruct": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Cont",
+        "inue",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Cont",
+        "inue"
+       ],
+       "n_ours": 63,
+       "n_official": 64
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Com",
+        "plete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Com",
+        "plete"
+       ],
+       "n_ours": 48,
+       "n_official": 49
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 55,
+     "n_config_units_affected": 7,
+     "units": [
+      "build:31",
+      "build:54",
+      "build:57",
+      "build:61",
+      "test:10",
+      "test:21",
+      "test:8"
+     ],
+     "max_rendered_tokens": 965,
+     "test_slots_affected": [
+      8,
+      10,
+      21
+     ]
+    }
+   },
+   "utter-project/EuroLLM-9B-Instruct-2512": {
+    "bos": "<s>",
+    "supports_system": true,
+    "met": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Cont",
+        "inue",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Cont",
+        "inue"
+       ],
+       "n_ours": 63,
+       "n_official": 64
+      }
+     ]
+    },
+    "zp": {
+     "equal": false,
+     "equal_without_template_kwargs": false,
+     "equal_modulo_bos": true,
+     "examples": [
+      {
+       "ours_head": [
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Com",
+        "plete",
+        "▁the"
+       ],
+       "official_head": [
+        "<s>",
+        "<|im_start|>",
+        "user",
+        "<0x0A>",
+        "Com",
+        "plete"
+       ],
+       "n_ours": 48,
+       "n_official": 49
+      }
+     ],
+     "official_double_bos": false
+    },
+    "zp_trunc": {
+     "n_rendered_prompts_over_512": 45,
+     "n_config_units_affected": 6,
+     "units": [
+      "build:13",
+      "build:3",
+      "build:55",
+      "test:0",
+      "test:18",
+      "test:8"
+     ],
+     "max_rendered_tokens": 854,
+     "test_slots_affected": [
+      0,
+      8,
+      18
+     ]
+    }
+   }
+  }
+ },
+ "pilot": {
+  "rates": {
+   "Qwen/Qwen3.5-4B": {
+    "parts": 8,
+    "peak_mem_gb": 8.22,
+    "rows": {
+     "met|gen_ref": {
+      "n_gen": 50,
+      "wall_s": 205.6,
+      "node_gen_per_s": 1.945,
+      "mean_new_tokens": 45.0,
+      "cap_hit_rate": 0.7,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "met|all_ref": {
+      "n_gen": 50,
+      "wall_s": 257.3,
+      "node_gen_per_s": 1.479,
+      "mean_new_tokens": 48.8,
+      "cap_hit_rate": 0.88,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "met|test_timing": {
+      "n_gen": 50,
+      "wall_s": 190.9,
+      "node_gen_per_s": 2.095,
+      "mean_new_tokens": 49.6,
+      "cap_hit_rate": 0.98,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|gen_ref": {
+      "n_gen": 40,
+      "wall_s": 541.4,
+      "node_gen_per_s": 0.591,
+      "mean_new_tokens": 287.7,
+      "cap_hit_rate": 0.2,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|all_ref": {
+      "n_gen": 40,
+      "wall_s": 1137.5,
+      "node_gen_per_s": 0.294,
+      "mean_new_tokens": 408.5,
+      "cap_hit_rate": 0.575,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|test_timing": {
+      "n_gen": 40,
+      "wall_s": 795.3,
+      "node_gen_per_s": 0.402,
+      "mean_new_tokens": 409.2,
+      "cap_hit_rate": 0.325,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     }
+    },
+    "gen_wall_total_s": 3128.0
+   },
+   "tiiuae/Falcon-H1-3B-Instruct": {
+    "parts": 8,
+    "peak_mem_gb": 6.21,
+    "rows": {
+     "met|gen_ref": {
+      "n_gen": 50,
+      "wall_s": 233.9,
+      "node_gen_per_s": 1.71,
+      "mean_new_tokens": 49.3,
+      "cap_hit_rate": 0.98,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "met|all_ref": {
+      "n_gen": 50,
+      "wall_s": 250.9,
+      "node_gen_per_s": 1.587,
+      "mean_new_tokens": 50.0,
+      "cap_hit_rate": 1.0,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "met|test_timing": {
+      "n_gen": 50,
+      "wall_s": 211.4,
+      "node_gen_per_s": 1.892,
+      "mean_new_tokens": 50.0,
+      "cap_hit_rate": 1.0,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|gen_ref": {
+      "n_gen": 40,
+      "wall_s": 1035.2,
+      "node_gen_per_s": 0.309,
+      "mean_new_tokens": 489.6,
+      "cap_hit_rate": 0.6,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|all_ref": {
+      "n_gen": 40,
+      "wall_s": 1499.9,
+      "node_gen_per_s": 0.2,
+      "mean_new_tokens": 485.5,
+      "cap_hit_rate": 0.65,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|test_timing": {
+      "n_gen": 40,
+      "wall_s": 1042.6,
+      "node_gen_per_s": 0.307,
+      "mean_new_tokens": 495.4,
+      "cap_hit_rate": 0.7,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     }
+    },
+    "gen_wall_total_s": 4273.8
+   },
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+    "parts": 1,
+    "peak_mem_gb": 20.57,
+    "rows": {
+     "met|gen_ref": {
+      "n_gen": 250,
+      "wall_s": 10.6,
+      "node_gen_per_s": 23.64,
+      "mean_new_tokens": 47.4,
+      "cap_hit_rate": 0.836,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "met|all_ref": {
+      "n_gen": 250,
+      "wall_s": 119.2,
+      "node_gen_per_s": 2.097,
+      "mean_new_tokens": 48.6,
+      "cap_hit_rate": 0.916,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "met|test_timing": {
+      "n_gen": 250,
+      "wall_s": 7.8,
+      "node_gen_per_s": 31.976,
+      "mean_new_tokens": 48.4,
+      "cap_hit_rate": 0.912,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|gen_ref": {
+      "n_gen": 200,
+      "wall_s": 74.0,
+      "node_gen_per_s": 2.704,
+      "mean_new_tokens": 393.9,
+      "cap_hit_rate": 0.22,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|all_ref": {
+      "n_gen": 200,
+      "wall_s": 422.0,
+      "node_gen_per_s": 0.474,
+      "mean_new_tokens": 407.5,
+      "cap_hit_rate": 0.29,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|test_timing": {
+      "n_gen": 200,
+      "wall_s": 72.2,
+      "node_gen_per_s": 2.769,
+      "mean_new_tokens": 383.1,
+      "cap_hit_rate": 0.13,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     }
+    },
+    "gen_wall_total_s": 705.8
+   },
+   "tiiuae/Falcon-H1-7B-Instruct": {
+    "parts": 4,
+    "peak_mem_gb": 14.52,
+    "rows": {
+     "met|gen_ref": {
+      "n_gen": 50,
+      "wall_s": 184.9,
+      "node_gen_per_s": 1.082,
+      "mean_new_tokens": 49.9,
+      "cap_hit_rate": 0.98,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "met|all_ref": {
+      "n_gen": 50,
+      "wall_s": 199.9,
+      "node_gen_per_s": 0.97,
+      "mean_new_tokens": 49.2,
+      "cap_hit_rate": 0.96,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "met|test_timing": {
+      "n_gen": 50,
+      "wall_s": 189.5,
+      "node_gen_per_s": 1.055,
+      "mean_new_tokens": 50.0,
+      "cap_hit_rate": 1.0,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|gen_ref": {
+      "n_gen": 40,
+      "wall_s": 1360.1,
+      "node_gen_per_s": 0.118,
+      "mean_new_tokens": 483.9,
+      "cap_hit_rate": 0.55,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|all_ref": {
+      "n_gen": 40,
+      "wall_s": 1325.7,
+      "node_gen_per_s": 0.121,
+      "mean_new_tokens": 449.7,
+      "cap_hit_rate": 0.525,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     },
+     "zp|test_timing": {
+      "n_gen": 40,
+      "wall_s": 1031.0,
+      "node_gen_per_s": 0.155,
+      "mean_new_tokens": 375.0,
+      "cap_hit_rate": 0.0,
+      "empty_rate": 0.0,
+      "batches": [
+       1
+      ]
+     }
+    },
+    "gen_wall_total_s": 4291.1
+   },
+   "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+    "parts": 1,
+    "peak_mem_gb": 65.03,
+    "rows": {
+     "met|gen_ref": {
+      "n_gen": 250,
+      "wall_s": 121.7,
+      "node_gen_per_s": 2.055,
+      "mean_new_tokens": 47.3,
+      "cap_hit_rate": 0.852,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "met|all_ref": {
+      "n_gen": 250,
+      "wall_s": 258.7,
+      "node_gen_per_s": 0.966,
+      "mean_new_tokens": 48.0,
+      "cap_hit_rate": 0.892,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "met|test_timing": {
+      "n_gen": 250,
+      "wall_s": 115.4,
+      "node_gen_per_s": 2.167,
+      "mean_new_tokens": 48.2,
+      "cap_hit_rate": 0.904,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|gen_ref": {
+      "n_gen": 200,
+      "wall_s": 973.7,
+      "node_gen_per_s": 0.205,
+      "mean_new_tokens": 432.5,
+      "cap_hit_rate": 0.5,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|all_ref": {
+      "n_gen": 200,
+      "wall_s": 1216.4,
+      "node_gen_per_s": 0.164,
+      "mean_new_tokens": 466.2,
+      "cap_hit_rate": 0.765,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|test_timing": {
+      "n_gen": 200,
+      "wall_s": 978.9,
+      "node_gen_per_s": 0.204,
+      "mean_new_tokens": 468.4,
+      "cap_hit_rate": 0.565,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     }
+    },
+    "gen_wall_total_s": 3664.8
+   },
+   "Qwen/Qwen2.5-0.5B-Instruct": {
+    "parts": 1,
+    "peak_mem_gb": 1.94,
+    "rows": {
+     "met|gen_ref": {
+      "n_gen": 250,
+      "wall_s": 8.7,
+      "node_gen_per_s": 28.78,
+      "mean_new_tokens": 47.8,
+      "cap_hit_rate": 0.88,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "met|all_ref": {
+      "n_gen": 250,
+      "wall_s": 86.8,
+      "node_gen_per_s": 2.879,
+      "mean_new_tokens": 45.0,
+      "cap_hit_rate": 0.74,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "met|test_timing": {
+      "n_gen": 250,
+      "wall_s": 5.1,
+      "node_gen_per_s": 49.105,
+      "mean_new_tokens": 40.1,
+      "cap_hit_rate": 0.52,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|gen_ref": {
+      "n_gen": 200,
+      "wall_s": 51.9,
+      "node_gen_per_s": 3.857,
+      "mean_new_tokens": 328.6,
+      "cap_hit_rate": 0.055,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|all_ref": {
+      "n_gen": 200,
+      "wall_s": 388.7,
+      "node_gen_per_s": 0.515,
+      "mean_new_tokens": 332.8,
+      "cap_hit_rate": 0.16,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     },
+     "zp|test_timing": {
+      "n_gen": 200,
+      "wall_s": 30.3,
+      "node_gen_per_s": 6.592,
+      "mean_new_tokens": 235.0,
+      "cap_hit_rate": 0.0,
+      "empty_rate": 0.0,
+      "batches": [
+       64
+      ]
+     }
+    },
+    "gen_wall_total_s": 571.5
+   }
+  },
+  "node_walls": {
+   "tiiuae/Falcon-H1-3B-Instruct": {
+    "K": 8,
+    "node_wall_s": 1444,
+    "log": "pilot-1060201.out"
+   },
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+    "K": 1,
+    "node_wall_s": 764,
+    "log": "pilot-1060198.out"
+   },
+   "tiiuae/Falcon-H1-7B-Instruct": {
+    "K": 4,
+    "node_wall_s": 2973,
+    "log": "pilot-1060202.out"
+   },
+   "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+    "K": 1,
+    "node_wall_s": 3940,
+    "log": "pilot-1060200.out"
+   },
+   "Qwen/Qwen2.5-0.5B-Instruct": {
+    "K": 1,
+    "node_wall_s": 610,
+    "log": "pilot-1060199.out"
+   },
+   "Qwen/Qwen3.5-4B": {
+    "K": 8,
+    "node_wall_s": 980,
+    "log": "pilot-1060203.out"
+   }
+  },
+  "load_overhead_s": 275.1999999999998,
+  "calibration": {
+   "zp|gen_ref": {
+    "median": 1.0396,
+    "min": 0.4244,
+    "max": 1.1956,
+    "n": 3
+   },
+   "zp|all_ref": {
+    "median": 0.1822,
+    "min": 0.1596,
+    "max": 0.3395,
+    "n": 3
+   },
+   "met|gen_ref": {
+    "median": 8.9213,
+    "min": 4.2547,
+    "max": 9.0888,
+    "n": 3
+   },
+   "met|all_ref": {
+    "median": 0.8924,
+    "min": 0.8062,
+    "max": 2.0,
+    "n": 3
+   },
+   "zp|test_timing": {
+    "median": 1.0646,
+    "min": 0.4224,
+    "max": 2.0434,
+    "n": 3
+   },
+   "met|test_timing": {
+    "median": 12.2937,
+    "min": 4.4865,
+    "max": 15.2216,
+    "n": 3
+   }
+  },
+  "ml_rate_fallback": {
+   "ratio": {
+    "median": 0.3290342925211969,
+    "n": 46,
+    "min": 0.2726808336738864,
+    "max": 0.9147727272727272
+   },
+   "models": {
+    "allenai/OLMo-2-1124-13B-Instruct": 1.277,
+    "allenai/Olmo-3.1-32B-Instruct": 0.94
+   }
+  },
+  "note": "pilot rows never part of baseline_ext_v1; test_timing rows timing-only (Review A3)"
+ },
+ "projection": {
+  "rule": "padded models : rate(m, method, row) = D028 ML gen/s(m) x f(method, row), f = median over the\n                  padded pilot models of pilot gen/s / D028 ML gen/s (min / max reported).\n  pilot models  : their own pilot rates (padded: n / wall; trio: node rate = K x median per-process gen/s over the parts that\n                  ran that row (processes run concurrently on one GPU, D028 Call 1).\n  per job       : + measured load overhead (max over single-process pilots), 15-min floor.\n  makespan      : one job per model (trio: as D028, 1-2 jobs), LPT on 20 slots (MaxJobsPU).",
+  "by_T_ZP": {
+   "median|5": {
+    "node_h_total": 53.9,
+    "node_h_met": 13.7,
+    "node_h_zp": 33.7,
+    "node_h_trio": 9.9,
+    "makespan_h_20_slots": 5.1,
+    "n_jobs": 85,
+    "max_model_h": [
+     "tiiuae/Falcon-H1-7B-Instruct",
+     {
+      "met_h": 1.85,
+      "zp_h": 3.19,
+      "total_h": 5.11,
+      "jobs": 1
+     }
+    ],
+    "per_model": {
+     "CohereForAI/aya-23-8B": {
+      "met_h": 0.1,
+      "zp_h": 0.29,
+      "total_h": 0.47,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-earth": {
+      "met_h": 0.11,
+      "zp_h": 0.3,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-fire": {
+      "met_h": 0.12,
+      "zp_h": 0.33,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-global": {
+      "met_h": 0.1,
+      "zp_h": 0.29,
+      "total_h": 0.47,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-water": {
+      "met_h": 0.1,
+      "zp_h": 0.3,
+      "total_h": 0.48,
+      "jobs": 1
+     },
+     "Deci/DeciLM-7B-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.33,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "HuggingFaceH4/zephyr-7b-beta": {
+      "met_h": 0.1,
+      "zp_h": 0.28,
+      "total_h": 0.46,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.19,
+      "total_h": 0.33,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "met_h": 0.06,
+      "zp_h": 0.18,
+      "total_h": 0.32,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-360M-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.25,
+      "total_h": 0.42,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-1.5B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.24,
+      "total_h": 0.4,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-7B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.25,
+      "total_h": 0.41,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-0.5B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.18,
+      "total_h": 0.32,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-3B-Instruct": {
+      "met_h": 0.1,
+      "zp_h": 0.29,
+      "total_h": 0.47,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.24,
+      "total_h": 0.4,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct-1M": {
+      "met_h": 0.08,
+      "zp_h": 0.23,
+      "total_h": 0.39,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B": {
+      "met_h": 0.48,
+      "zp_h": 1.39,
+      "total_h": 1.95,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "met_h": 0.94,
+      "zp_h": 2.24,
+      "total_h": 3.26,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B": {
+      "met_h": 0.13,
+      "zp_h": 0.37,
+      "total_h": 0.57,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B-Instruct-2507": {
+      "met_h": 0.13,
+      "zp_h": 0.38,
+      "total_h": 0.59,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-8B": {
+      "met_h": 0.14,
+      "zp_h": 0.4,
+      "total_h": 0.62,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-4B": {
+      "met_h": 0.95,
+      "zp_h": 1.07,
+      "total_h": 2.09,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-9B": {
+      "met_h": 0.15,
+      "zp_h": 0.43,
+      "total_h": 0.66,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3-8B": {
+      "met_h": 0.1,
+      "zp_h": 0.29,
+      "total_h": 0.47,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B": {
+      "met_h": 0.09,
+      "zp_h": 0.27,
+      "total_h": 0.44,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-0425-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.14,
+      "total_h": 0.27,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-13B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.53,
+      "total_h": 0.79,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-7B-Instruct": {
+      "met_h": 0.1,
+      "zp_h": 0.3,
+      "total_h": 0.48,
+      "jobs": 1
+     },
+     "allenai/Olmo-3-7B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.31,
+      "total_h": 0.5,
+      "jobs": 1
+     },
+     "allenai/Olmo-3.1-32B-Instruct": {
+      "met_h": 0.25,
+      "zp_h": 0.72,
+      "total_h": 1.04,
+      "jobs": 1
+     },
+     "google/gemma-1.1-2b-it": {
+      "met_h": 0.05,
+      "zp_h": 0.15,
+      "total_h": 0.28,
+      "jobs": 1
+     },
+     "google/gemma-1.1-7b-it": {
+      "met_h": 0.07,
+      "zp_h": 0.21,
+      "total_h": 0.36,
+      "jobs": 1
+     },
+     "google/gemma-2-9b-it": {
+      "met_h": 0.14,
+      "zp_h": 0.42,
+      "total_h": 0.64,
+      "jobs": 1
+     },
+     "google/gemma-2b-it": {
+      "met_h": 0.06,
+      "zp_h": 0.16,
+      "total_h": 0.3,
+      "jobs": 1
+     },
+     "google/gemma-3-12b-it": {
+      "met_h": 0.19,
+      "zp_h": 0.55,
+      "total_h": 0.82,
+      "jobs": 1
+     },
+     "google/gemma-3-1b-it": {
+      "met_h": 0.11,
+      "zp_h": 0.32,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "google/gemma-3-4b-it": {
+      "met_h": 0.15,
+      "zp_h": 0.44,
+      "total_h": 0.66,
+      "jobs": 1
+     },
+     "google/gemma-4-12B-it": {
+      "met_h": 0.19,
+      "zp_h": 0.54,
+      "total_h": 0.8,
+      "jobs": 1
+     },
+     "google/gemma-4-E4B-it": {
+      "met_h": 0.21,
+      "zp_h": 0.59,
+      "total_h": 0.87,
+      "jobs": 1
+     },
+     "google/gemma-7b-it": {
+      "met_h": 0.08,
+      "zp_h": 0.22,
+      "total_h": 0.37,
+      "jobs": 1
+     },
+     "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+      "met_h": 0.09,
+      "zp_h": 0.26,
+      "total_h": 0.43,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.0-8b-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.31,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.1-8b-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.32,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.2-8b-instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.34,
+      "total_h": 0.53,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.3-8b-instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.35,
+      "total_h": 0.54,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-3b": {
+      "met_h": 0.13,
+      "zp_h": 0.36,
+      "total_h": 0.56,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-8b": {
+      "met_h": 0.12,
+      "zp_h": 0.34,
+      "total_h": 0.53,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-3b": {
+      "met_h": 0.12,
+      "zp_h": 0.33,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-8b": {
+      "met_h": 0.12,
+      "zp_h": 0.35,
+      "total_h": 0.55,
+      "jobs": 1
+     },
+     "internlm/internlm2_5-7b-chat": {
+      "met_h": 0.12,
+      "zp_h": 0.34,
+      "total_h": 0.53,
+      "jobs": 1
+     },
+     "meta-llama/Llama-2-7b-chat-hf": {
+      "met_h": 0.08,
+      "zp_h": 0.24,
+      "total_h": 0.4,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.14,
+      "total_h": 0.27,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-3B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.23,
+      "total_h": 0.39,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.25,
+      "total_h": 0.41,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.26,
+      "total_h": 0.43,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-128k-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.32,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-4k-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.32,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-128k-instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.23,
+      "total_h": 0.38,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-4k-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.24,
+      "total_h": 0.41,
+      "jobs": 1
+     },
+     "microsoft/Phi-3.5-mini-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.25,
+      "total_h": 0.41,
+      "jobs": 1
+     },
+     "microsoft/Phi-4-mini-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.25,
+      "total_h": 0.41,
+      "jobs": 1
+     },
+     "microsoft/phi-4": {
+      "met_h": 0.11,
+      "zp_h": 0.32,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+      "met_h": 0.14,
+      "zp_h": 0.4,
+      "total_h": 0.61,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "met_h": 0.09,
+      "zp_h": 0.26,
+      "total_h": 0.42,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "met_h": 0.11,
+      "zp_h": 0.32,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.1": {
+      "met_h": 0.09,
+      "zp_h": 0.27,
+      "total_h": 0.44,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2": {
+      "met_h": 0.09,
+      "zp_h": 0.26,
+      "total_h": 0.42,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.3": {
+      "met_h": 0.09,
+      "zp_h": 0.24,
+      "total_h": 0.41,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501": {
+      "met_h": 0.12,
+      "zp_h": 0.34,
+      "total_h": 0.53,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "met_h": 0.13,
+      "zp_h": 0.38,
+      "total_h": 0.58,
+      "jobs": 1
+     },
+     "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.26,
+      "total_h": 0.43,
+      "jobs": 1
+     },
+     "nvidia/Llama3-ChatQA-1.5-8B": {
+      "met_h": 0.09,
+      "zp_h": 0.25,
+      "total_h": 0.42,
+      "jobs": 1
+     },
+     "openchat/openchat-3.6-8b-20240522": {
+      "met_h": 0.09,
+      "zp_h": 0.25,
+      "total_h": 0.42,
+      "jobs": 1
+     },
+     "openchat/openchat_3.5": {
+      "met_h": 0.09,
+      "zp_h": 0.27,
+      "total_h": 0.44,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-3B-Instruct": {
+      "met_h": 1.04,
+      "zp_h": 1.54,
+      "total_h": 2.66,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-7B-Instruct": {
+      "met_h": 1.85,
+      "zp_h": 3.19,
+      "total_h": 5.11,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-10B-Instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.34,
+      "total_h": 0.54,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.14,
+      "total_h": 0.27,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-3B-Instruct": {
+      "met_h": 0.07,
+      "zp_h": 0.19,
+      "total_h": 0.33,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-7B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.24,
+      "total_h": 0.39,
+      "jobs": 1
+     },
+     "togethercomputer/Llama-2-7B-32K-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.24,
+      "total_h": 0.4,
+      "jobs": 1
+     },
+     "upstage/SOLAR-10.7B-Instruct-v1.0": {
+      "met_h": 0.15,
+      "zp_h": 0.42,
+      "total_h": 0.64,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-1.7B-Instruct": {
+      "met_h": 0.07,
+      "zp_h": 0.2,
+      "total_h": 0.35,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct": {
+      "met_h": 0.13,
+      "zp_h": 0.36,
+      "total_h": 0.56,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct-2512": {
+      "met_h": 0.13,
+      "zp_h": 0.36,
+      "total_h": 0.56,
+      "jobs": 1
+     }
+    }
+   },
+   "median|10": {
+    "node_h_total": 68.6,
+    "node_h_met": 13.7,
+    "node_h_zp": 48.4,
+    "node_h_trio": 13.3,
+    "makespan_h_20_slots": 6.9,
+    "n_jobs": 85,
+    "max_model_h": [
+     "tiiuae/Falcon-H1-7B-Instruct",
+     {
+      "met_h": 1.85,
+      "zp_h": 4.98,
+      "total_h": 6.91,
+      "jobs": 1
+     }
+    ],
+    "per_model": {
+     "CohereForAI/aya-23-8B": {
+      "met_h": 0.1,
+      "zp_h": 0.41,
+      "total_h": 0.58,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-earth": {
+      "met_h": 0.11,
+      "zp_h": 0.42,
+      "total_h": 0.61,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-fire": {
+      "met_h": 0.12,
+      "zp_h": 0.46,
+      "total_h": 0.65,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-global": {
+      "met_h": 0.1,
+      "zp_h": 0.41,
+      "total_h": 0.59,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-water": {
+      "met_h": 0.1,
+      "zp_h": 0.42,
+      "total_h": 0.6,
+      "jobs": 1
+     },
+     "Deci/DeciLM-7B-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.45,
+      "total_h": 0.64,
+      "jobs": 1
+     },
+     "HuggingFaceH4/zephyr-7b-beta": {
+      "met_h": 0.1,
+      "zp_h": 0.4,
+      "total_h": 0.57,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.26,
+      "total_h": 0.4,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "met_h": 0.06,
+      "zp_h": 0.25,
+      "total_h": 0.39,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-360M-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.35,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-1.5B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.34,
+      "total_h": 0.5,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-7B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.35,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-0.5B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.22,
+      "total_h": 0.36,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-3B-Instruct": {
+      "met_h": 0.1,
+      "zp_h": 0.41,
+      "total_h": 0.58,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.33,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct-1M": {
+      "met_h": 0.08,
+      "zp_h": 0.33,
+      "total_h": 0.48,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B": {
+      "met_h": 0.48,
+      "zp_h": 1.93,
+      "total_h": 2.49,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "met_h": 0.94,
+      "zp_h": 3.6,
+      "total_h": 4.62,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B": {
+      "met_h": 0.13,
+      "zp_h": 0.51,
+      "total_h": 0.72,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B-Instruct-2507": {
+      "met_h": 0.13,
+      "zp_h": 0.53,
+      "total_h": 0.74,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-8B": {
+      "met_h": 0.14,
+      "zp_h": 0.55,
+      "total_h": 0.77,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-4B": {
+      "met_h": 0.95,
+      "zp_h": 1.76,
+      "total_h": 2.78,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-9B": {
+      "met_h": 0.15,
+      "zp_h": 0.6,
+      "total_h": 0.82,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3-8B": {
+      "met_h": 0.1,
+      "zp_h": 0.4,
+      "total_h": 0.58,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B": {
+      "met_h": 0.09,
+      "zp_h": 0.38,
+      "total_h": 0.55,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-0425-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.2,
+      "total_h": 0.33,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-13B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.73,
+      "total_h": 0.99,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-7B-Instruct": {
+      "met_h": 0.1,
+      "zp_h": 0.41,
+      "total_h": 0.59,
+      "jobs": 1
+     },
+     "allenai/Olmo-3-7B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.44,
+      "total_h": 0.62,
+      "jobs": 1
+     },
+     "allenai/Olmo-3.1-32B-Instruct": {
+      "met_h": 0.25,
+      "zp_h": 0.99,
+      "total_h": 1.32,
+      "jobs": 1
+     },
+     "google/gemma-1.1-2b-it": {
+      "met_h": 0.05,
+      "zp_h": 0.21,
+      "total_h": 0.34,
+      "jobs": 1
+     },
+     "google/gemma-1.1-7b-it": {
+      "met_h": 0.07,
+      "zp_h": 0.3,
+      "total_h": 0.45,
+      "jobs": 1
+     },
+     "google/gemma-2-9b-it": {
+      "met_h": 0.14,
+      "zp_h": 0.58,
+      "total_h": 0.8,
+      "jobs": 1
+     },
+     "google/gemma-2b-it": {
+      "met_h": 0.06,
+      "zp_h": 0.23,
+      "total_h": 0.36,
+      "jobs": 1
+     },
+     "google/gemma-3-12b-it": {
+      "met_h": 0.19,
+      "zp_h": 0.77,
+      "total_h": 1.04,
+      "jobs": 1
+     },
+     "google/gemma-3-1b-it": {
+      "met_h": 0.11,
+      "zp_h": 0.45,
+      "total_h": 0.64,
+      "jobs": 1
+     },
+     "google/gemma-3-4b-it": {
+      "met_h": 0.15,
+      "zp_h": 0.6,
+      "total_h": 0.83,
+      "jobs": 1
+     },
+     "google/gemma-4-12B-it": {
+      "met_h": 0.19,
+      "zp_h": 0.75,
+      "total_h": 1.01,
+      "jobs": 1
+     },
+     "google/gemma-4-E4B-it": {
+      "met_h": 0.21,
+      "zp_h": 0.82,
+      "total_h": 1.1,
+      "jobs": 1
+     },
+     "google/gemma-7b-it": {
+      "met_h": 0.08,
+      "zp_h": 0.31,
+      "total_h": 0.46,
+      "jobs": 1
+     },
+     "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+      "met_h": 0.09,
+      "zp_h": 0.36,
+      "total_h": 0.53,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.0-8b-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.43,
+      "total_h": 0.61,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.1-8b-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.45,
+      "total_h": 0.63,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.2-8b-instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.47,
+      "total_h": 0.66,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.3-8b-instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.48,
+      "total_h": 0.68,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-3b": {
+      "met_h": 0.13,
+      "zp_h": 0.5,
+      "total_h": 0.7,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-8b": {
+      "met_h": 0.12,
+      "zp_h": 0.47,
+      "total_h": 0.66,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-3b": {
+      "met_h": 0.12,
+      "zp_h": 0.46,
+      "total_h": 0.65,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-8b": {
+      "met_h": 0.12,
+      "zp_h": 0.48,
+      "total_h": 0.68,
+      "jobs": 1
+     },
+     "internlm/internlm2_5-7b-chat": {
+      "met_h": 0.12,
+      "zp_h": 0.47,
+      "total_h": 0.67,
+      "jobs": 1
+     },
+     "meta-llama/Llama-2-7b-chat-hf": {
+      "met_h": 0.08,
+      "zp_h": 0.33,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.2,
+      "total_h": 0.32,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-3B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.32,
+      "total_h": 0.48,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.35,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.36,
+      "total_h": 0.53,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-128k-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.44,
+      "total_h": 0.63,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-4k-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.45,
+      "total_h": 0.63,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-128k-instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.32,
+      "total_h": 0.47,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-4k-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.34,
+      "total_h": 0.5,
+      "jobs": 1
+     },
+     "microsoft/Phi-3.5-mini-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.34,
+      "total_h": 0.5,
+      "jobs": 1
+     },
+     "microsoft/Phi-4-mini-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.35,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "microsoft/phi-4": {
+      "met_h": 0.11,
+      "zp_h": 0.44,
+      "total_h": 0.63,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+      "met_h": 0.14,
+      "zp_h": 0.55,
+      "total_h": 0.77,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "met_h": 0.09,
+      "zp_h": 0.36,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "met_h": 0.11,
+      "zp_h": 0.45,
+      "total_h": 0.64,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.1": {
+      "met_h": 0.09,
+      "zp_h": 0.37,
+      "total_h": 0.54,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2": {
+      "met_h": 0.09,
+      "zp_h": 0.35,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.3": {
+      "met_h": 0.09,
+      "zp_h": 0.34,
+      "total_h": 0.5,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501": {
+      "met_h": 0.12,
+      "zp_h": 0.47,
+      "total_h": 0.67,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "met_h": 0.13,
+      "zp_h": 0.52,
+      "total_h": 0.73,
+      "jobs": 1
+     },
+     "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.37,
+      "total_h": 0.54,
+      "jobs": 1
+     },
+     "nvidia/Llama3-ChatQA-1.5-8B": {
+      "met_h": 0.09,
+      "zp_h": 0.35,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "openchat/openchat-3.6-8b-20240522": {
+      "met_h": 0.09,
+      "zp_h": 0.35,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "openchat/openchat_3.5": {
+      "met_h": 0.09,
+      "zp_h": 0.38,
+      "total_h": 0.55,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-3B-Instruct": {
+      "met_h": 1.04,
+      "zp_h": 2.45,
+      "total_h": 3.57,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-7B-Instruct": {
+      "met_h": 1.85,
+      "zp_h": 4.98,
+      "total_h": 6.91,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-10B-Instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.47,
+      "total_h": 0.67,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.2,
+      "total_h": 0.32,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-3B-Instruct": {
+      "met_h": 0.07,
+      "zp_h": 0.26,
+      "total_h": 0.41,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-7B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.33,
+      "total_h": 0.48,
+      "jobs": 1
+     },
+     "togethercomputer/Llama-2-7B-32K-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.34,
+      "total_h": 0.5,
+      "jobs": 1
+     },
+     "upstage/SOLAR-10.7B-Instruct-v1.0": {
+      "met_h": 0.15,
+      "zp_h": 0.58,
+      "total_h": 0.8,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-1.7B-Instruct": {
+      "met_h": 0.07,
+      "zp_h": 0.28,
+      "total_h": 0.43,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct": {
+      "met_h": 0.13,
+      "zp_h": 0.5,
+      "total_h": 0.7,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct-2512": {
+      "met_h": 0.13,
+      "zp_h": 0.5,
+      "total_h": 0.7,
+      "jobs": 1
+     }
+    }
+   },
+   "median|25": {
+    "node_h_total": 112.7,
+    "node_h_met": 13.7,
+    "node_h_zp": 92.4,
+    "node_h_trio": 23.4,
+    "makespan_h_20_slots": 12.3,
+    "n_jobs": 85,
+    "max_model_h": [
+     "tiiuae/Falcon-H1-7B-Instruct",
+     {
+      "met_h": 1.85,
+      "zp_h": 10.36,
+      "total_h": 12.28,
+      "jobs": 1
+     }
+    ],
+    "per_model": {
+     "CohereForAI/aya-23-8B": {
+      "met_h": 0.1,
+      "zp_h": 0.75,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-earth": {
+      "met_h": 0.11,
+      "zp_h": 0.78,
+      "total_h": 0.96,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-fire": {
+      "met_h": 0.12,
+      "zp_h": 0.84,
+      "total_h": 1.03,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-global": {
+      "met_h": 0.1,
+      "zp_h": 0.75,
+      "total_h": 0.93,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-water": {
+      "met_h": 0.1,
+      "zp_h": 0.77,
+      "total_h": 0.95,
+      "jobs": 1
+     },
+     "Deci/DeciLM-7B-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.83,
+      "total_h": 1.02,
+      "jobs": 1
+     },
+     "HuggingFaceH4/zephyr-7b-beta": {
+      "met_h": 0.1,
+      "zp_h": 0.73,
+      "total_h": 0.9,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.47,
+      "total_h": 0.61,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "met_h": 0.06,
+      "zp_h": 0.45,
+      "total_h": 0.59,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-360M-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.64,
+      "total_h": 0.81,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-1.5B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.62,
+      "total_h": 0.78,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-7B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.64,
+      "total_h": 0.8,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-0.5B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.35,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-3B-Instruct": {
+      "met_h": 0.1,
+      "zp_h": 0.75,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.6,
+      "total_h": 0.76,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct-1M": {
+      "met_h": 0.08,
+      "zp_h": 0.6,
+      "total_h": 0.76,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B": {
+      "met_h": 0.48,
+      "zp_h": 3.55,
+      "total_h": 4.11,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "met_h": 0.94,
+      "zp_h": 7.69,
+      "total_h": 8.71,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B": {
+      "met_h": 0.13,
+      "zp_h": 0.94,
+      "total_h": 1.15,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B-Instruct-2507": {
+      "met_h": 0.13,
+      "zp_h": 0.98,
+      "total_h": 1.19,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-8B": {
+      "met_h": 0.14,
+      "zp_h": 1.02,
+      "total_h": 1.24,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-4B": {
+      "met_h": 0.95,
+      "zp_h": 3.83,
+      "total_h": 4.86,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-9B": {
+      "met_h": 0.15,
+      "zp_h": 1.1,
+      "total_h": 1.33,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3-8B": {
+      "met_h": 0.1,
+      "zp_h": 0.74,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B": {
+      "met_h": 0.09,
+      "zp_h": 0.69,
+      "total_h": 0.87,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-0425-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.37,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-13B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.34,
+      "total_h": 1.6,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-7B-Instruct": {
+      "met_h": 0.1,
+      "zp_h": 0.76,
+      "total_h": 0.94,
+      "jobs": 1
+     },
+     "allenai/Olmo-3-7B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.8,
+      "total_h": 0.99,
+      "jobs": 1
+     },
+     "allenai/Olmo-3.1-32B-Instruct": {
+      "met_h": 0.25,
+      "zp_h": 1.83,
+      "total_h": 2.15,
+      "jobs": 1
+     },
+     "google/gemma-1.1-2b-it": {
+      "met_h": 0.05,
+      "zp_h": 0.39,
+      "total_h": 0.52,
+      "jobs": 1
+     },
+     "google/gemma-1.1-7b-it": {
+      "met_h": 0.07,
+      "zp_h": 0.54,
+      "total_h": 0.69,
+      "jobs": 1
+     },
+     "google/gemma-2-9b-it": {
+      "met_h": 0.14,
+      "zp_h": 1.06,
+      "total_h": 1.28,
+      "jobs": 1
+     },
+     "google/gemma-2b-it": {
+      "met_h": 0.06,
+      "zp_h": 0.42,
+      "total_h": 0.55,
+      "jobs": 1
+     },
+     "google/gemma-3-12b-it": {
+      "met_h": 0.19,
+      "zp_h": 1.42,
+      "total_h": 1.68,
+      "jobs": 1
+     },
+     "google/gemma-3-1b-it": {
+      "met_h": 0.11,
+      "zp_h": 0.83,
+      "total_h": 1.02,
+      "jobs": 1
+     },
+     "google/gemma-3-4b-it": {
+      "met_h": 0.15,
+      "zp_h": 1.11,
+      "total_h": 1.34,
+      "jobs": 1
+     },
+     "google/gemma-4-12B-it": {
+      "met_h": 0.19,
+      "zp_h": 1.37,
+      "total_h": 1.63,
+      "jobs": 1
+     },
+     "google/gemma-4-E4B-it": {
+      "met_h": 0.21,
+      "zp_h": 1.51,
+      "total_h": 1.79,
+      "jobs": 1
+     },
+     "google/gemma-7b-it": {
+      "met_h": 0.08,
+      "zp_h": 0.56,
+      "total_h": 0.72,
+      "jobs": 1
+     },
+     "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+      "met_h": 0.09,
+      "zp_h": 0.67,
+      "total_h": 0.83,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.0-8b-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.78,
+      "total_h": 0.97,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.1-8b-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.82,
+      "total_h": 1.01,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.2-8b-instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.86,
+      "total_h": 1.05,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.3-8b-instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.88,
+      "total_h": 1.08,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-3b": {
+      "met_h": 0.13,
+      "zp_h": 0.92,
+      "total_h": 1.12,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-8b": {
+      "met_h": 0.12,
+      "zp_h": 0.86,
+      "total_h": 1.05,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-3b": {
+      "met_h": 0.12,
+      "zp_h": 0.85,
+      "total_h": 1.04,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-8b": {
+      "met_h": 0.12,
+      "zp_h": 0.89,
+      "total_h": 1.09,
+      "jobs": 1
+     },
+     "internlm/internlm2_5-7b-chat": {
+      "met_h": 0.12,
+      "zp_h": 0.87,
+      "total_h": 1.06,
+      "jobs": 1
+     },
+     "meta-llama/Llama-2-7b-chat-hf": {
+      "met_h": 0.08,
+      "zp_h": 0.61,
+      "total_h": 0.78,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.36,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-3B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.6,
+      "total_h": 0.76,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.64,
+      "total_h": 0.8,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.66,
+      "total_h": 0.83,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-128k-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.82,
+      "total_h": 1.0,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-4k-instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.82,
+      "total_h": 1.01,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-128k-instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.58,
+      "total_h": 0.74,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-4k-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.62,
+      "total_h": 0.79,
+      "jobs": 1
+     },
+     "microsoft/Phi-3.5-mini-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.63,
+      "total_h": 0.79,
+      "jobs": 1
+     },
+     "microsoft/Phi-4-mini-instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.64,
+      "total_h": 0.8,
+      "jobs": 1
+     },
+     "microsoft/phi-4": {
+      "met_h": 0.11,
+      "zp_h": 0.82,
+      "total_h": 1.0,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+      "met_h": 0.14,
+      "zp_h": 1.01,
+      "total_h": 1.23,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "met_h": 0.09,
+      "zp_h": 0.65,
+      "total_h": 0.82,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "met_h": 0.11,
+      "zp_h": 0.82,
+      "total_h": 1.01,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.1": {
+      "met_h": 0.09,
+      "zp_h": 0.68,
+      "total_h": 0.85,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2": {
+      "met_h": 0.09,
+      "zp_h": 0.65,
+      "total_h": 0.82,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.3": {
+      "met_h": 0.09,
+      "zp_h": 0.62,
+      "total_h": 0.79,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501": {
+      "met_h": 0.12,
+      "zp_h": 0.87,
+      "total_h": 1.06,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "met_h": 0.13,
+      "zp_h": 0.96,
+      "total_h": 1.17,
+      "jobs": 1
+     },
+     "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.68,
+      "total_h": 0.84,
+      "jobs": 1
+     },
+     "nvidia/Llama3-ChatQA-1.5-8B": {
+      "met_h": 0.09,
+      "zp_h": 0.65,
+      "total_h": 0.82,
+      "jobs": 1
+     },
+     "openchat/openchat-3.6-8b-20240522": {
+      "met_h": 0.09,
+      "zp_h": 0.65,
+      "total_h": 0.82,
+      "jobs": 1
+     },
+     "openchat/openchat_3.5": {
+      "met_h": 0.09,
+      "zp_h": 0.69,
+      "total_h": 0.87,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-3B-Instruct": {
+      "met_h": 1.04,
+      "zp_h": 5.16,
+      "total_h": 6.28,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-7B-Instruct": {
+      "met_h": 1.85,
+      "zp_h": 10.36,
+      "total_h": 12.28,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-10B-Instruct": {
+      "met_h": 0.12,
+      "zp_h": 0.87,
+      "total_h": 1.06,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-1B-Instruct": {
+      "met_h": 0.05,
+      "zp_h": 0.36,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-3B-Instruct": {
+      "met_h": 0.07,
+      "zp_h": 0.48,
+      "total_h": 0.63,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-7B-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.6,
+      "total_h": 0.76,
+      "jobs": 1
+     },
+     "togethercomputer/Llama-2-7B-32K-Instruct": {
+      "met_h": 0.08,
+      "zp_h": 0.62,
+      "total_h": 0.78,
+      "jobs": 1
+     },
+     "upstage/SOLAR-10.7B-Instruct-v1.0": {
+      "met_h": 0.15,
+      "zp_h": 1.07,
+      "total_h": 1.29,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-1.7B-Instruct": {
+      "met_h": 0.07,
+      "zp_h": 0.51,
+      "total_h": 0.66,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct": {
+      "met_h": 0.13,
+      "zp_h": 0.92,
+      "total_h": 1.12,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct-2512": {
+      "met_h": 0.13,
+      "zp_h": 0.92,
+      "total_h": 1.12,
+      "jobs": 1
+     }
+    }
+   },
+   "min|5": {
+    "node_h_total": 86.4,
+    "node_h_met": 23.9,
+    "node_h_zp": 56.0,
+    "node_h_trio": 9.9,
+    "makespan_h_20_slots": 5.1,
+    "n_jobs": 85,
+    "max_model_h": [
+     "tiiuae/Falcon-H1-7B-Instruct",
+     {
+      "met_h": 1.85,
+      "zp_h": 3.19,
+      "total_h": 5.11,
+      "jobs": 1
+     }
+    ],
+    "per_model": {
+     "CohereForAI/aya-23-8B": {
+      "met_h": 0.22,
+      "zp_h": 0.55,
+      "total_h": 0.85,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-earth": {
+      "met_h": 0.23,
+      "zp_h": 0.57,
+      "total_h": 0.88,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-fire": {
+      "met_h": 0.25,
+      "zp_h": 0.62,
+      "total_h": 0.95,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-global": {
+      "met_h": 0.22,
+      "zp_h": 0.55,
+      "total_h": 0.85,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-water": {
+      "met_h": 0.23,
+      "zp_h": 0.57,
+      "total_h": 0.87,
+      "jobs": 1
+     },
+     "Deci/DeciLM-7B-instruct": {
+      "met_h": 0.25,
+      "zp_h": 0.62,
+      "total_h": 0.94,
+      "jobs": 1
+     },
+     "HuggingFaceH4/zephyr-7b-beta": {
+      "met_h": 0.21,
+      "zp_h": 0.54,
+      "total_h": 0.83,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+      "met_h": 0.14,
+      "zp_h": 0.35,
+      "total_h": 0.57,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "met_h": 0.13,
+      "zp_h": 0.33,
+      "total_h": 0.54,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-360M-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.47,
+      "total_h": 0.74,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-1.5B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.46,
+      "total_h": 0.72,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-7B-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.47,
+      "total_h": 0.74,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-0.5B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.18,
+      "total_h": 0.32,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-3B-Instruct": {
+      "met_h": 0.22,
+      "zp_h": 0.55,
+      "total_h": 0.85,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.45,
+      "total_h": 0.7,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct-1M": {
+      "met_h": 0.18,
+      "zp_h": 0.44,
+      "total_h": 0.69,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B": {
+      "met_h": 1.04,
+      "zp_h": 2.62,
+      "total_h": 3.74,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "met_h": 0.94,
+      "zp_h": 2.24,
+      "total_h": 3.26,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B": {
+      "met_h": 0.28,
+      "zp_h": 0.7,
+      "total_h": 1.05,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B-Instruct-2507": {
+      "met_h": 0.29,
+      "zp_h": 0.72,
+      "total_h": 1.09,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-8B": {
+      "met_h": 0.3,
+      "zp_h": 0.75,
+      "total_h": 1.13,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-4B": {
+      "met_h": 0.95,
+      "zp_h": 1.07,
+      "total_h": 2.09,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-9B": {
+      "met_h": 0.32,
+      "zp_h": 0.81,
+      "total_h": 1.21,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3-8B": {
+      "met_h": 0.22,
+      "zp_h": 0.55,
+      "total_h": 0.84,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B": {
+      "met_h": 0.2,
+      "zp_h": 0.51,
+      "total_h": 0.79,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-0425-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.27,
+      "total_h": 0.46,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-13B-Instruct": {
+      "met_h": 0.4,
+      "zp_h": 0.99,
+      "total_h": 1.47,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-7B-Instruct": {
+      "met_h": 0.22,
+      "zp_h": 0.56,
+      "total_h": 0.86,
+      "jobs": 1
+     },
+     "allenai/Olmo-3-7B-Instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.59,
+      "total_h": 0.9,
+      "jobs": 1
+     },
+     "allenai/Olmo-3.1-32B-Instruct": {
+      "met_h": 0.54,
+      "zp_h": 1.35,
+      "total_h": 1.96,
+      "jobs": 1
+     },
+     "google/gemma-1.1-2b-it": {
+      "met_h": 0.12,
+      "zp_h": 0.29,
+      "total_h": 0.48,
+      "jobs": 1
+     },
+     "google/gemma-1.1-7b-it": {
+      "met_h": 0.16,
+      "zp_h": 0.4,
+      "total_h": 0.64,
+      "jobs": 1
+     },
+     "google/gemma-2-9b-it": {
+      "met_h": 0.31,
+      "zp_h": 0.78,
+      "total_h": 1.17,
+      "jobs": 1
+     },
+     "google/gemma-2b-it": {
+      "met_h": 0.12,
+      "zp_h": 0.31,
+      "total_h": 0.51,
+      "jobs": 1
+     },
+     "google/gemma-3-12b-it": {
+      "met_h": 0.42,
+      "zp_h": 1.04,
+      "total_h": 1.54,
+      "jobs": 1
+     },
+     "google/gemma-3-1b-it": {
+      "met_h": 0.24,
+      "zp_h": 0.61,
+      "total_h": 0.93,
+      "jobs": 1
+     },
+     "google/gemma-3-4b-it": {
+      "met_h": 0.33,
+      "zp_h": 0.82,
+      "total_h": 1.22,
+      "jobs": 1
+     },
+     "google/gemma-4-12B-it": {
+      "met_h": 0.4,
+      "zp_h": 1.01,
+      "total_h": 1.49,
+      "jobs": 1
+     },
+     "google/gemma-4-E4B-it": {
+      "met_h": 0.44,
+      "zp_h": 1.11,
+      "total_h": 1.63,
+      "jobs": 1
+     },
+     "google/gemma-7b-it": {
+      "met_h": 0.17,
+      "zp_h": 0.42,
+      "total_h": 0.66,
+      "jobs": 1
+     },
+     "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+      "met_h": 0.2,
+      "zp_h": 0.49,
+      "total_h": 0.76,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.0-8b-instruct": {
+      "met_h": 0.23,
+      "zp_h": 0.58,
+      "total_h": 0.89,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.1-8b-instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.61,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.2-8b-instruct": {
+      "met_h": 0.25,
+      "zp_h": 0.63,
+      "total_h": 0.96,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.3-8b-instruct": {
+      "met_h": 0.26,
+      "zp_h": 0.65,
+      "total_h": 0.99,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-3b": {
+      "met_h": 0.27,
+      "zp_h": 0.68,
+      "total_h": 1.02,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-8b": {
+      "met_h": 0.25,
+      "zp_h": 0.63,
+      "total_h": 0.96,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-3b": {
+      "met_h": 0.25,
+      "zp_h": 0.62,
+      "total_h": 0.95,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-8b": {
+      "met_h": 0.26,
+      "zp_h": 0.66,
+      "total_h": 1.0,
+      "jobs": 1
+     },
+     "internlm/internlm2_5-7b-chat": {
+      "met_h": 0.26,
+      "zp_h": 0.64,
+      "total_h": 0.97,
+      "jobs": 1
+     },
+     "meta-llama/Llama-2-7b-chat-hf": {
+      "met_h": 0.18,
+      "zp_h": 0.45,
+      "total_h": 0.71,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.27,
+      "total_h": 0.45,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-3B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.44,
+      "total_h": 0.69,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3-8B-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.47,
+      "total_h": 0.73,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.26,
+      "total_h": 0.43,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-128k-instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.6,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-4k-instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.6,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-128k-instruct": {
+      "met_h": 0.17,
+      "zp_h": 0.43,
+      "total_h": 0.68,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-4k-instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.46,
+      "total_h": 0.72,
+      "jobs": 1
+     },
+     "microsoft/Phi-3.5-mini-instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.46,
+      "total_h": 0.72,
+      "jobs": 1
+     },
+     "microsoft/Phi-4-mini-instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.47,
+      "total_h": 0.74,
+      "jobs": 1
+     },
+     "microsoft/phi-4": {
+      "met_h": 0.24,
+      "zp_h": 0.6,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+      "met_h": 0.3,
+      "zp_h": 0.75,
+      "total_h": 1.12,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "met_h": 0.19,
+      "zp_h": 0.48,
+      "total_h": 0.75,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "met_h": 0.24,
+      "zp_h": 0.61,
+      "total_h": 0.93,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.1": {
+      "met_h": 0.2,
+      "zp_h": 0.5,
+      "total_h": 0.78,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2": {
+      "met_h": 0.19,
+      "zp_h": 0.48,
+      "total_h": 0.75,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.3": {
+      "met_h": 0.18,
+      "zp_h": 0.46,
+      "total_h": 0.72,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501": {
+      "met_h": 0.26,
+      "zp_h": 0.64,
+      "total_h": 0.97,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "met_h": 0.28,
+      "zp_h": 0.71,
+      "total_h": 1.07,
+      "jobs": 1
+     },
+     "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+      "met_h": 0.2,
+      "zp_h": 0.5,
+      "total_h": 0.77,
+      "jobs": 1
+     },
+     "nvidia/Llama3-ChatQA-1.5-8B": {
+      "met_h": 0.19,
+      "zp_h": 0.48,
+      "total_h": 0.75,
+      "jobs": 1
+     },
+     "openchat/openchat-3.6-8b-20240522": {
+      "met_h": 0.19,
+      "zp_h": 0.48,
+      "total_h": 0.75,
+      "jobs": 1
+     },
+     "openchat/openchat_3.5": {
+      "met_h": 0.2,
+      "zp_h": 0.51,
+      "total_h": 0.79,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-3B-Instruct": {
+      "met_h": 1.04,
+      "zp_h": 1.54,
+      "total_h": 2.66,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-7B-Instruct": {
+      "met_h": 1.85,
+      "zp_h": 3.19,
+      "total_h": 5.11,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-10B-Instruct": {
+      "met_h": 0.26,
+      "zp_h": 0.64,
+      "total_h": 0.97,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.27,
+      "total_h": 0.45,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-3B-Instruct": {
+      "met_h": 0.14,
+      "zp_h": 0.36,
+      "total_h": 0.58,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-7B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.44,
+      "total_h": 0.7,
+      "jobs": 1
+     },
+     "togethercomputer/Llama-2-7B-32K-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.46,
+      "total_h": 0.71,
+      "jobs": 1
+     },
+     "upstage/SOLAR-10.7B-Instruct-v1.0": {
+      "met_h": 0.31,
+      "zp_h": 0.79,
+      "total_h": 1.18,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-1.7B-Instruct": {
+      "met_h": 0.15,
+      "zp_h": 0.38,
+      "total_h": 0.61,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct": {
+      "met_h": 0.27,
+      "zp_h": 0.68,
+      "total_h": 1.02,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct-2512": {
+      "met_h": 0.27,
+      "zp_h": 0.68,
+      "total_h": 1.03,
+      "jobs": 1
+     }
+    }
+   },
+   "min|10": {
+    "node_h_total": 115.9,
+    "node_h_met": 23.9,
+    "node_h_zp": 85.6,
+    "node_h_trio": 13.3,
+    "makespan_h_20_slots": 6.9,
+    "n_jobs": 85,
+    "max_model_h": [
+     "tiiuae/Falcon-H1-7B-Instruct",
+     {
+      "met_h": 1.85,
+      "zp_h": 4.98,
+      "total_h": 6.91,
+      "jobs": 1
+     }
+    ],
+    "per_model": {
+     "CohereForAI/aya-23-8B": {
+      "met_h": 0.22,
+      "zp_h": 0.84,
+      "total_h": 1.13,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-earth": {
+      "met_h": 0.23,
+      "zp_h": 0.87,
+      "total_h": 1.18,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-fire": {
+      "met_h": 0.25,
+      "zp_h": 0.94,
+      "total_h": 1.27,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-global": {
+      "met_h": 0.22,
+      "zp_h": 0.84,
+      "total_h": 1.14,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-water": {
+      "met_h": 0.23,
+      "zp_h": 0.86,
+      "total_h": 1.16,
+      "jobs": 1
+     },
+     "Deci/DeciLM-7B-instruct": {
+      "met_h": 0.25,
+      "zp_h": 0.94,
+      "total_h": 1.26,
+      "jobs": 1
+     },
+     "HuggingFaceH4/zephyr-7b-beta": {
+      "met_h": 0.21,
+      "zp_h": 0.82,
+      "total_h": 1.11,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+      "met_h": 0.14,
+      "zp_h": 0.53,
+      "total_h": 0.75,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "met_h": 0.13,
+      "zp_h": 0.51,
+      "total_h": 0.72,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-360M-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.72,
+      "total_h": 0.99,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-1.5B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.69,
+      "total_h": 0.95,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-7B-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.72,
+      "total_h": 0.98,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-0.5B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.22,
+      "total_h": 0.36,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-3B-Instruct": {
+      "met_h": 0.22,
+      "zp_h": 0.84,
+      "total_h": 1.13,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.68,
+      "total_h": 0.93,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct-1M": {
+      "met_h": 0.18,
+      "zp_h": 0.67,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B": {
+      "met_h": 1.04,
+      "zp_h": 3.98,
+      "total_h": 5.1,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "met_h": 0.94,
+      "zp_h": 3.6,
+      "total_h": 4.62,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B": {
+      "met_h": 0.28,
+      "zp_h": 1.06,
+      "total_h": 1.41,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B-Instruct-2507": {
+      "met_h": 0.29,
+      "zp_h": 1.1,
+      "total_h": 1.46,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-8B": {
+      "met_h": 0.3,
+      "zp_h": 1.14,
+      "total_h": 1.52,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-4B": {
+      "met_h": 0.95,
+      "zp_h": 1.76,
+      "total_h": 2.78,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-9B": {
+      "met_h": 0.32,
+      "zp_h": 1.23,
+      "total_h": 1.63,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3-8B": {
+      "met_h": 0.22,
+      "zp_h": 0.83,
+      "total_h": 1.13,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B": {
+      "met_h": 0.2,
+      "zp_h": 0.78,
+      "total_h": 1.06,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-0425-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.41,
+      "total_h": 0.6,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-13B-Instruct": {
+      "met_h": 0.4,
+      "zp_h": 1.51,
+      "total_h": 1.98,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-7B-Instruct": {
+      "met_h": 0.22,
+      "zp_h": 0.85,
+      "total_h": 1.15,
+      "jobs": 1
+     },
+     "allenai/Olmo-3-7B-Instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.9,
+      "total_h": 1.21,
+      "jobs": 1
+     },
+     "allenai/Olmo-3.1-32B-Instruct": {
+      "met_h": 0.54,
+      "zp_h": 2.05,
+      "total_h": 2.66,
+      "jobs": 1
+     },
+     "google/gemma-1.1-2b-it": {
+      "met_h": 0.12,
+      "zp_h": 0.44,
+      "total_h": 0.63,
+      "jobs": 1
+     },
+     "google/gemma-1.1-7b-it": {
+      "met_h": 0.16,
+      "zp_h": 0.61,
+      "total_h": 0.84,
+      "jobs": 1
+     },
+     "google/gemma-2-9b-it": {
+      "met_h": 0.31,
+      "zp_h": 1.19,
+      "total_h": 1.58,
+      "jobs": 1
+     },
+     "google/gemma-2b-it": {
+      "met_h": 0.12,
+      "zp_h": 0.47,
+      "total_h": 0.67,
+      "jobs": 1
+     },
+     "google/gemma-3-12b-it": {
+      "met_h": 0.42,
+      "zp_h": 1.59,
+      "total_h": 2.08,
+      "jobs": 1
+     },
+     "google/gemma-3-1b-it": {
+      "met_h": 0.24,
+      "zp_h": 0.93,
+      "total_h": 1.25,
+      "jobs": 1
+     },
+     "google/gemma-3-4b-it": {
+      "met_h": 0.33,
+      "zp_h": 1.25,
+      "total_h": 1.65,
+      "jobs": 1
+     },
+     "google/gemma-4-12B-it": {
+      "met_h": 0.4,
+      "zp_h": 1.54,
+      "total_h": 2.02,
+      "jobs": 1
+     },
+     "google/gemma-4-E4B-it": {
+      "met_h": 0.44,
+      "zp_h": 1.69,
+      "total_h": 2.21,
+      "jobs": 1
+     },
+     "google/gemma-7b-it": {
+      "met_h": 0.17,
+      "zp_h": 0.63,
+      "total_h": 0.87,
+      "jobs": 1
+     },
+     "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+      "met_h": 0.2,
+      "zp_h": 0.75,
+      "total_h": 1.02,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.0-8b-instruct": {
+      "met_h": 0.23,
+      "zp_h": 0.88,
+      "total_h": 1.19,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.1-8b-instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.92,
+      "total_h": 1.24,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.2-8b-instruct": {
+      "met_h": 0.25,
+      "zp_h": 0.96,
+      "total_h": 1.29,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.3-8b-instruct": {
+      "met_h": 0.26,
+      "zp_h": 0.99,
+      "total_h": 1.33,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-3b": {
+      "met_h": 0.27,
+      "zp_h": 1.03,
+      "total_h": 1.37,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-8b": {
+      "met_h": 0.25,
+      "zp_h": 0.96,
+      "total_h": 1.29,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-3b": {
+      "met_h": 0.25,
+      "zp_h": 0.95,
+      "total_h": 1.27,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-8b": {
+      "met_h": 0.26,
+      "zp_h": 1.0,
+      "total_h": 1.34,
+      "jobs": 1
+     },
+     "internlm/internlm2_5-7b-chat": {
+      "met_h": 0.26,
+      "zp_h": 0.97,
+      "total_h": 1.3,
+      "jobs": 1
+     },
+     "meta-llama/Llama-2-7b-chat-hf": {
+      "met_h": 0.18,
+      "zp_h": 0.69,
+      "total_h": 0.95,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.41,
+      "total_h": 0.59,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-3B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.67,
+      "total_h": 0.92,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3-8B-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.71,
+      "total_h": 0.98,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.36,
+      "total_h": 0.53,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-128k-instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.91,
+      "total_h": 1.23,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-4k-instruct": {
+      "met_h": 0.24,
+      "zp_h": 0.92,
+      "total_h": 1.24,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-128k-instruct": {
+      "met_h": 0.17,
+      "zp_h": 0.65,
+      "total_h": 0.9,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-4k-instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.7,
+      "total_h": 0.96,
+      "jobs": 1
+     },
+     "microsoft/Phi-3.5-mini-instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.7,
+      "total_h": 0.96,
+      "jobs": 1
+     },
+     "microsoft/Phi-4-mini-instruct": {
+      "met_h": 0.19,
+      "zp_h": 0.72,
+      "total_h": 0.98,
+      "jobs": 1
+     },
+     "microsoft/phi-4": {
+      "met_h": 0.24,
+      "zp_h": 0.92,
+      "total_h": 1.23,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+      "met_h": 0.3,
+      "zp_h": 1.14,
+      "total_h": 1.51,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "met_h": 0.19,
+      "zp_h": 0.73,
+      "total_h": 1.0,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "met_h": 0.24,
+      "zp_h": 0.92,
+      "total_h": 1.24,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.1": {
+      "met_h": 0.2,
+      "zp_h": 0.77,
+      "total_h": 1.04,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2": {
+      "met_h": 0.19,
+      "zp_h": 0.73,
+      "total_h": 1.0,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.3": {
+      "met_h": 0.18,
+      "zp_h": 0.7,
+      "total_h": 0.96,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501": {
+      "met_h": 0.26,
+      "zp_h": 0.97,
+      "total_h": 1.3,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "met_h": 0.28,
+      "zp_h": 1.08,
+      "total_h": 1.43,
+      "jobs": 1
+     },
+     "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+      "met_h": 0.2,
+      "zp_h": 0.76,
+      "total_h": 1.03,
+      "jobs": 1
+     },
+     "nvidia/Llama3-ChatQA-1.5-8B": {
+      "met_h": 0.19,
+      "zp_h": 0.73,
+      "total_h": 1.0,
+      "jobs": 1
+     },
+     "openchat/openchat-3.6-8b-20240522": {
+      "met_h": 0.19,
+      "zp_h": 0.73,
+      "total_h": 1.0,
+      "jobs": 1
+     },
+     "openchat/openchat_3.5": {
+      "met_h": 0.2,
+      "zp_h": 0.78,
+      "total_h": 1.06,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-3B-Instruct": {
+      "met_h": 1.04,
+      "zp_h": 2.45,
+      "total_h": 3.57,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-7B-Instruct": {
+      "met_h": 1.85,
+      "zp_h": 4.98,
+      "total_h": 6.91,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-10B-Instruct": {
+      "met_h": 0.26,
+      "zp_h": 0.97,
+      "total_h": 1.31,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.41,
+      "total_h": 0.59,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-3B-Instruct": {
+      "met_h": 0.14,
+      "zp_h": 0.54,
+      "total_h": 0.76,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-7B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.67,
+      "total_h": 0.93,
+      "jobs": 1
+     },
+     "togethercomputer/Llama-2-7B-32K-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 0.69,
+      "total_h": 0.95,
+      "jobs": 1
+     },
+     "upstage/SOLAR-10.7B-Instruct-v1.0": {
+      "met_h": 0.31,
+      "zp_h": 1.2,
+      "total_h": 1.59,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-1.7B-Instruct": {
+      "met_h": 0.15,
+      "zp_h": 0.58,
+      "total_h": 0.8,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct": {
+      "met_h": 0.27,
+      "zp_h": 1.03,
+      "total_h": 1.37,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct-2512": {
+      "met_h": 0.27,
+      "zp_h": 1.03,
+      "total_h": 1.38,
+      "jobs": 1
+     }
+    }
+   },
+   "min|25": {
+    "node_h_total": 204.6,
+    "node_h_met": 23.9,
+    "node_h_zp": 174.2,
+    "node_h_trio": 23.4,
+    "makespan_h_20_slots": 12.3,
+    "n_jobs": 85,
+    "max_model_h": [
+     "tiiuae/Falcon-H1-7B-Instruct",
+     {
+      "met_h": 1.85,
+      "zp_h": 10.36,
+      "total_h": 12.28,
+      "jobs": 1
+     }
+    ],
+    "per_model": {
+     "CohereForAI/aya-23-8B": {
+      "met_h": 0.22,
+      "zp_h": 1.69,
+      "total_h": 1.99,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-earth": {
+      "met_h": 0.23,
+      "zp_h": 1.77,
+      "total_h": 2.07,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-fire": {
+      "met_h": 0.25,
+      "zp_h": 1.91,
+      "total_h": 2.24,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-global": {
+      "met_h": 0.22,
+      "zp_h": 1.7,
+      "total_h": 2.0,
+      "jobs": 1
+     },
+     "CohereLabs/tiny-aya-water": {
+      "met_h": 0.23,
+      "zp_h": 1.74,
+      "total_h": 2.04,
+      "jobs": 1
+     },
+     "Deci/DeciLM-7B-instruct": {
+      "met_h": 0.25,
+      "zp_h": 1.89,
+      "total_h": 2.22,
+      "jobs": 1
+     },
+     "HuggingFaceH4/zephyr-7b-beta": {
+      "met_h": 0.21,
+      "zp_h": 1.65,
+      "total_h": 1.94,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+      "met_h": 0.14,
+      "zp_h": 1.07,
+      "total_h": 1.29,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+      "met_h": 0.13,
+      "zp_h": 1.03,
+      "total_h": 1.24,
+      "jobs": 1
+     },
+     "HuggingFaceTB/SmolLM2-360M-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 1.46,
+      "total_h": 1.73,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-1.5B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.41,
+      "total_h": 1.67,
+      "jobs": 1
+     },
+     "Qwen/Qwen2-7B-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 1.45,
+      "total_h": 1.72,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-0.5B-Instruct": {
+      "met_h": 0.06,
+      "zp_h": 0.35,
+      "total_h": 0.49,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-3B-Instruct": {
+      "met_h": 0.22,
+      "zp_h": 1.69,
+      "total_h": 1.99,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.37,
+      "total_h": 1.63,
+      "jobs": 1
+     },
+     "Qwen/Qwen2.5-7B-Instruct-1M": {
+      "met_h": 0.18,
+      "zp_h": 1.36,
+      "total_h": 1.61,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B": {
+      "met_h": 1.04,
+      "zp_h": 8.05,
+      "total_h": 9.18,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+      "met_h": 0.94,
+      "zp_h": 7.69,
+      "total_h": 8.71,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B": {
+      "met_h": 0.28,
+      "zp_h": 2.14,
+      "total_h": 2.49,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-4B-Instruct-2507": {
+      "met_h": 0.29,
+      "zp_h": 2.22,
+      "total_h": 2.59,
+      "jobs": 1
+     },
+     "Qwen/Qwen3-8B": {
+      "met_h": 0.3,
+      "zp_h": 2.31,
+      "total_h": 2.69,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-4B": {
+      "met_h": 0.95,
+      "zp_h": 3.83,
+      "total_h": 4.86,
+      "jobs": 1
+     },
+     "Qwen/Qwen3.5-9B": {
+      "met_h": 0.32,
+      "zp_h": 2.5,
+      "total_h": 2.9,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3-8B": {
+      "met_h": 0.22,
+      "zp_h": 1.68,
+      "total_h": 1.98,
+      "jobs": 1
+     },
+     "allenai/Llama-3.1-Tulu-3.1-8B": {
+      "met_h": 0.2,
+      "zp_h": 1.58,
+      "total_h": 1.86,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-0425-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.83,
+      "total_h": 1.02,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-13B-Instruct": {
+      "met_h": 0.4,
+      "zp_h": 3.05,
+      "total_h": 3.52,
+      "jobs": 1
+     },
+     "allenai/OLMo-2-1124-7B-Instruct": {
+      "met_h": 0.22,
+      "zp_h": 1.72,
+      "total_h": 2.02,
+      "jobs": 1
+     },
+     "allenai/Olmo-3-7B-Instruct": {
+      "met_h": 0.24,
+      "zp_h": 1.82,
+      "total_h": 2.13,
+      "jobs": 1
+     },
+     "allenai/Olmo-3.1-32B-Instruct": {
+      "met_h": 0.54,
+      "zp_h": 4.15,
+      "total_h": 4.76,
+      "jobs": 1
+     },
+     "google/gemma-1.1-2b-it": {
+      "met_h": 0.12,
+      "zp_h": 0.89,
+      "total_h": 1.08,
+      "jobs": 1
+     },
+     "google/gemma-1.1-7b-it": {
+      "met_h": 0.16,
+      "zp_h": 1.23,
+      "total_h": 1.47,
+      "jobs": 1
+     },
+     "google/gemma-2-9b-it": {
+      "met_h": 0.31,
+      "zp_h": 2.4,
+      "total_h": 2.79,
+      "jobs": 1
+     },
+     "google/gemma-2b-it": {
+      "met_h": 0.12,
+      "zp_h": 0.96,
+      "total_h": 1.16,
+      "jobs": 1
+     },
+     "google/gemma-3-12b-it": {
+      "met_h": 0.42,
+      "zp_h": 3.21,
+      "total_h": 3.71,
+      "jobs": 1
+     },
+     "google/gemma-3-1b-it": {
+      "met_h": 0.24,
+      "zp_h": 1.88,
+      "total_h": 2.2,
+      "jobs": 1
+     },
+     "google/gemma-3-4b-it": {
+      "met_h": 0.33,
+      "zp_h": 2.52,
+      "total_h": 2.93,
+      "jobs": 1
+     },
+     "google/gemma-4-12B-it": {
+      "met_h": 0.4,
+      "zp_h": 3.11,
+      "total_h": 3.59,
+      "jobs": 1
+     },
+     "google/gemma-4-E4B-it": {
+      "met_h": 0.44,
+      "zp_h": 3.43,
+      "total_h": 3.95,
+      "jobs": 1
+     },
+     "google/gemma-7b-it": {
+      "met_h": 0.17,
+      "zp_h": 1.28,
+      "total_h": 1.52,
+      "jobs": 1
+     },
+     "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+      "met_h": 0.2,
+      "zp_h": 1.51,
+      "total_h": 1.78,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.0-8b-instruct": {
+      "met_h": 0.23,
+      "zp_h": 1.78,
+      "total_h": 2.09,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.1-8b-instruct": {
+      "met_h": 0.24,
+      "zp_h": 1.86,
+      "total_h": 2.18,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.2-8b-instruct": {
+      "met_h": 0.25,
+      "zp_h": 1.94,
+      "total_h": 2.27,
+      "jobs": 1
+     },
+     "ibm-granite/granite-3.3-8b-instruct": {
+      "met_h": 0.26,
+      "zp_h": 2.0,
+      "total_h": 2.34,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-3b": {
+      "met_h": 0.27,
+      "zp_h": 2.08,
+      "total_h": 2.43,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.1-8b": {
+      "met_h": 0.25,
+      "zp_h": 1.94,
+      "total_h": 2.27,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-3b": {
+      "met_h": 0.25,
+      "zp_h": 1.92,
+      "total_h": 2.24,
+      "jobs": 1
+     },
+     "ibm-granite/granite-4.2-8b": {
+      "met_h": 0.26,
+      "zp_h": 2.02,
+      "total_h": 2.36,
+      "jobs": 1
+     },
+     "internlm/internlm2_5-7b-chat": {
+      "met_h": 0.26,
+      "zp_h": 1.97,
+      "total_h": 2.3,
+      "jobs": 1
+     },
+     "meta-llama/Llama-2-7b-chat-hf": {
+      "met_h": 0.18,
+      "zp_h": 1.4,
+      "total_h": 1.65,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.83,
+      "total_h": 1.01,
+      "jobs": 1
+     },
+     "meta-llama/Llama-3.2-3B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.36,
+      "total_h": 1.61,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3-8B-Instruct": {
+      "met_h": 0.19,
+      "zp_h": 1.45,
+      "total_h": 1.71,
+      "jobs": 1
+     },
+     "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+      "met_h": 0.09,
+      "zp_h": 0.66,
+      "total_h": 0.83,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-128k-instruct": {
+      "met_h": 0.24,
+      "zp_h": 1.85,
+      "total_h": 2.17,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-medium-4k-instruct": {
+      "met_h": 0.24,
+      "zp_h": 1.86,
+      "total_h": 2.18,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-128k-instruct": {
+      "met_h": 0.17,
+      "zp_h": 1.32,
+      "total_h": 1.57,
+      "jobs": 1
+     },
+     "microsoft/Phi-3-mini-4k-instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.42,
+      "total_h": 1.68,
+      "jobs": 1
+     },
+     "microsoft/Phi-3.5-mini-instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.42,
+      "total_h": 1.68,
+      "jobs": 1
+     },
+     "microsoft/Phi-4-mini-instruct": {
+      "met_h": 0.19,
+      "zp_h": 1.45,
+      "total_h": 1.71,
+      "jobs": 1
+     },
+     "microsoft/phi-4": {
+      "met_h": 0.24,
+      "zp_h": 1.85,
+      "total_h": 2.17,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+      "met_h": 0.3,
+      "zp_h": 2.3,
+      "total_h": 2.67,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+      "met_h": 0.19,
+      "zp_h": 1.49,
+      "total_h": 1.76,
+      "jobs": 1
+     },
+     "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+      "met_h": 0.24,
+      "zp_h": 1.87,
+      "total_h": 2.19,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.1": {
+      "met_h": 0.2,
+      "zp_h": 1.55,
+      "total_h": 1.83,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.2": {
+      "met_h": 0.19,
+      "zp_h": 1.48,
+      "total_h": 1.75,
+      "jobs": 1
+     },
+     "mistralai/Mistral-7B-Instruct-v0.3": {
+      "met_h": 0.18,
+      "zp_h": 1.42,
+      "total_h": 1.68,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-24B-Instruct-2501": {
+      "met_h": 0.26,
+      "zp_h": 1.97,
+      "total_h": 2.3,
+      "jobs": 1
+     },
+     "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+      "met_h": 0.28,
+      "zp_h": 2.18,
+      "total_h": 2.54,
+      "jobs": 1
+     },
+     "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+      "met_h": 0.2,
+      "zp_h": 1.53,
+      "total_h": 1.81,
+      "jobs": 1
+     },
+     "nvidia/Llama3-ChatQA-1.5-8B": {
+      "met_h": 0.19,
+      "zp_h": 1.48,
+      "total_h": 1.75,
+      "jobs": 1
+     },
+     "openchat/openchat-3.6-8b-20240522": {
+      "met_h": 0.19,
+      "zp_h": 1.48,
+      "total_h": 1.74,
+      "jobs": 1
+     },
+     "openchat/openchat_3.5": {
+      "met_h": 0.2,
+      "zp_h": 1.58,
+      "total_h": 1.86,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-3B-Instruct": {
+      "met_h": 1.04,
+      "zp_h": 5.16,
+      "total_h": 6.28,
+      "jobs": 1
+     },
+     "tiiuae/Falcon-H1-7B-Instruct": {
+      "met_h": 1.85,
+      "zp_h": 10.36,
+      "total_h": 12.28,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-10B-Instruct": {
+      "met_h": 0.26,
+      "zp_h": 1.97,
+      "total_h": 2.31,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-1B-Instruct": {
+      "met_h": 0.11,
+      "zp_h": 0.83,
+      "total_h": 1.01,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-3B-Instruct": {
+      "met_h": 0.14,
+      "zp_h": 1.1,
+      "total_h": 1.32,
+      "jobs": 1
+     },
+     "tiiuae/Falcon3-7B-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.36,
+      "total_h": 1.62,
+      "jobs": 1
+     },
+     "togethercomputer/Llama-2-7B-32K-Instruct": {
+      "met_h": 0.18,
+      "zp_h": 1.4,
+      "total_h": 1.66,
+      "jobs": 1
+     },
+     "upstage/SOLAR-10.7B-Instruct-v1.0": {
+      "met_h": 0.31,
+      "zp_h": 2.42,
+      "total_h": 2.81,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-1.7B-Instruct": {
+      "met_h": 0.15,
+      "zp_h": 1.17,
+      "total_h": 1.39,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct": {
+      "met_h": 0.27,
+      "zp_h": 2.08,
+      "total_h": 2.43,
+      "jobs": 1
+     },
+     "utter-project/EuroLLM-9B-Instruct-2512": {
+      "met_h": 0.27,
+      "zp_h": 2.09,
+      "total_h": 2.44,
+      "jobs": 1
+     }
+    }
+   }
+  }
+ },
+ "precision": {
+  "d029_primary": {
+   "E_all_ci": [
+    -0.0072,
+    0.0634
+   ],
+   "E_hard_ci": [
+    0.0088,
+    0.0382
+   ],
+   "halfwidth_all": 0.0353,
+   "halfwidth_hard": 0.0147
+  },
+  "by_T_ZP": {
+   "5": {
+    "bootstrap_clusters_zp": 5,
+    "clusters_other_arms": 25,
+    "traces_per_pair": 10,
+    "halfwidth_delta_all": 0.0789,
+    "halfwidth_delta_hard": 0.0329,
+    "parity_reachable_all": false,
+    "parity_reachable_hard": false
+   },
+   "10": {
+    "bootstrap_clusters_zp": 10,
+    "clusters_other_arms": 25,
+    "traces_per_pair": 20,
+    "halfwidth_delta_all": 0.0558,
+    "halfwidth_delta_hard": 0.0232,
+    "parity_reachable_all": false,
+    "parity_reachable_hard": false
+   },
+   "25": {
+    "bootstrap_clusters_zp": 25,
+    "clusters_other_arms": 25,
+    "traces_per_pair": 50,
+    "halfwidth_delta_all": 0.0353,
+    "halfwidth_delta_hard": 0.0147,
+    "parity_reachable_all": false,
+    "parity_reachable_hard": true
+   }
+  }
+ }
+}

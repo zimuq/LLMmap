@@ -7,7 +7,7 @@ same env / mode / revision as baseline generation), results/D029/analysis.json.
 Projection rule (P1 S0.6):
   padded models : rate(m, method, row) = D028 ML gen/s(m) x f(method, row), f = median over the
                   padded pilot models of pilot gen/s / D028 ML gen/s (min / max reported).
-  batch-1 trio  : their own pilot, node rate = K x median per-process gen/s over the parts that
+  pilot models  : their own pilot rates (padded: n / wall; trio: node rate = K x median per-process gen/s over the parts that
                   ran that row (processes run concurrently on one GPU, D028 Call 1).
   per job       : + measured load overhead (max over single-process pilots), 15-min floor.
   makespan      : one job per model (trio: as D028, 1-2 jobs), LPT on 20 slots (MaxJobsPU).
@@ -77,11 +77,36 @@ def pilot_rates():
     return out
 
 
+def _pool_rate(m):
+    f = f"./data/corpus_v2/{m.replace('/', '__')}.final.json"
+    if not os.path.exists(f):
+        return None
+    ps = [p for p in json.load(open(f))["part_status"] if p.get("generated", 0) > 0 and p.get("gen_per_s")]
+    return max(ps, key=lambda p: p["generated"])["gen_per_s"] if ps else None
+
+
+_ML_FALLBACK = {}
+
+
 def ml_rate(man, m):
+    """D028 multilingual-extension gen/s. Two models (OLMo-2-13B, Olmo-3.1-32B) carry 0.0 there:
+    their ML status is from an OOM-resume that generated nothing new. For them: their own D028
+    pool gen/s x median(ML / pool) over the models that have both (recorded in s0.json)."""
     ps = man["models"][m]["ml_final"]["part_status"]
     if m in TRIO_K:      # concurrent parts: node rate = sum of per-part rates
         return sum(p["gen_per_s"] for p in ps)
-    return ps[0]["gen_per_s"]
+    if ps[0]["gen_per_s"] > 0:
+        return ps[0]["gen_per_s"]
+    if "ratio" not in _ML_FALLBACK:
+        rs = []
+        for n, x in man["models"].items():
+            r0, pr = x["ml_final"]["part_status"][0]["gen_per_s"], _pool_rate(n)
+            if n not in TRIO_K and r0 > 0 and pr:
+                rs.append(r0 / pr)
+        _ML_FALLBACK["ratio"] = dict(median=st.median(rs), n=len(rs), min=min(rs), max=max(rs))
+    r = _pool_rate(m) * _ML_FALLBACK["ratio"]["median"]
+    _ML_FALLBACK.setdefault("models", {})[m] = round(r, 3)
+    return r
 
 
 def lpt(durations, slots=20):
@@ -109,27 +134,28 @@ def main():
         rs = [pilot[m]["rows"][key]["node_gen_per_s"] / ml_rate(d028, m) for m in padded if key in pilot[m]["rows"]]
         fac[key] = dict(median=round(st.median(rs), 4), min=round(min(rs), 4), max=round(max(rs), 4), n=len(rs))
 
-    def rate(m, meth, rt):
+    def rate(m, meth, rt, which="median"):
+        """which = 'median' (central) or 'min' (slowest calibration factor -> conservative bound)."""
         key = f"{meth}|{dict(native='gen_ref', all='all_ref', test='test_timing')[rt]}"
-        if m in TRIO_K:
+        if m in pilot:       # the six pilot models: their own measurement
             return pilot[m]["rows"][key]["node_gen_per_s"]
-        return ml_rate(d028, m) * fac[key]["median"]
+        return ml_rate(d028, m) * fac[key][which]
 
     vol = dict(met=dict(native=500, all=250, test_per_slot=250), zp=dict(native=400, all=200, test_per_slot=200))
     proj = {}
-    for T in (5, 10, 25):
+    for which, T in [(w, T) for w in ("median", "min") for T in (5, 10, 25)]:
         per_model, jobs = {}, []
         for m in manifest["models"]:
-            s_met = vol["met"]["native"] / rate(m, "met", "native") + vol["met"]["all"] / rate(m, "met", "all") \
-                + 25 * vol["met"]["test_per_slot"] / rate(m, "met", "test")
-            s_zp = vol["zp"]["native"] / rate(m, "zp", "native") + vol["zp"]["all"] / rate(m, "zp", "all") \
-                + T * vol["zp"]["test_per_slot"] / rate(m, "zp", "test")
+            s_met = vol["met"]["native"] / rate(m, "met", "native", which) + vol["met"]["all"] / rate(m, "met", "all", which) \
+                + 25 * vol["met"]["test_per_slot"] / rate(m, "met", "test", which)
+            s_zp = vol["zp"]["native"] / rate(m, "zp", "native", which) + vol["zp"]["all"] / rate(m, "zp", "all", which) \
+                + T * vol["zp"]["test_per_slot"] / rate(m, "zp", "test", which)
             h = (s_met + s_zp + overhead_s) / 3600
             nj = max(1, math.ceil(h / 40))                 # keep each job well under the 48 h wall
             per_model[m] = dict(met_h=round(s_met / 3600, 2), zp_h=round(s_zp / 3600, 2), total_h=round(h, 2), jobs=nj)
             jobs += [max(0.25, h / nj)] * nj
         tot = sum(max(0.25, v["total_h"]) for v in per_model.values())
-        proj[str(T)] = dict(node_h_total=round(tot, 1),
+        proj[f"{which}|{T}"] = dict(node_h_total=round(tot, 1),
                             node_h_met=round(sum(v["met_h"] for v in per_model.values()), 1),
                             node_h_zp=round(sum(v["zp_h"] for v in per_model.values()), 1),
                             node_h_trio=round(sum(per_model[m]["total_h"] for m in TRIO_K), 1),
@@ -153,6 +179,7 @@ def main():
         prompts=manifest["prompts"], manifest_sha256=sha("./confs/baselines/baseline_ext_v1.json"),
         freeze=freeze, checks=checks,
         pilot=dict(rates=pilot, node_walls=walls, load_overhead_s=overhead_s, calibration=fac,
+                   ml_rate_fallback=_ML_FALLBACK,
                    note="pilot rows never part of baseline_ext_v1; test_timing rows timing-only (Review A3)"),
         projection=dict(rule=__doc__.split("Projection rule (P1 S0.6):")[1].split("Precision")[0].strip(),
                         by_T_ZP=proj),
