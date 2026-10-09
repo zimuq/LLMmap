@@ -1,0 +1,23 @@
+{
+ "transformers": "5.18.0",
+ "topk_lines": [
+  "if generation_config.top_k is not None and generation_config.top_k != 0:",
+  "TopKLogitsWarper(top_k=generation_config.top_k, min_tokens_to_keep=min_tokens_to_keep)"
+ ],
+ "met": {
+  "do_sample": true,
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "repetition_penalty": 1.0,
+  "max_new_tokens": 50
+ },
+ "zp": {
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "top_k": 50,
+  "repetition_penalty": null,
+  "max_new_tokens": 512
+ }
+}

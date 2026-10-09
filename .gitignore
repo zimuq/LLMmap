@@ -34,3 +34,7 @@ results/D028/S_*_tok200_v2.npy
 # D029: per-run S_test logits stay on $WORK; counts are committed (ml_query_emb.npy force-added)
 results/D029/logits_*.npz
 results/D029/models/
+
+# D030 (baseline_ext_v1 data; pilot outputs)
+data/baseline_ext_v1/
+results/D030/s0_pilot/

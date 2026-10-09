@@ -1,0 +1,138 @@
+{
+ "schema": "d030-zp-prompts-v1",
+ "zp_repo": "/work/11280/zimuq1/vista/ext/ZeroPrint",
+ "zp_commit": "16a02aa4cfd5693ecfa757e9d2832b7e9babada0",
+ "config_file": "/work/11280/zimuq1/vista/ext/ZeroPrint/config/zeroprint.yaml",
+ "config_sha256": "1bf749940675a49f05bcc6207fb5b76f5025926efa0edf03e359218b3ee4eabc",
+ "config": {
+  "fingerprint_method": "zeroprint",
+  "cached_fingerprints_path": "cache/zeroprint/zeroprint_fingerprints.pth",
+  "re_fingerprinting": true,
+  "fingerprint_type": "black-box",
+  "seed": 1000,
+  "query_csv_path": "cache/zeroprint/zeroprint_query_samples.csv",
+  "n_samples": 2,
+  "resample": false,
+  "query_datasets": [
+   "openai_humaneval"
+  ],
+  "continuation_word_limit": 20,
+  "minimum_qa_length": 15,
+  "perturbed_queries_path": "cache/zeroprint/zeroprint_perturbed_queries.csv",
+  "word_substitution_config": {
+   "word_vector_model": "glove",
+   "k_words_to_replace": 3,
+   "top_m_neighbors": 10,
+   "n_augmented_samples": 4,
+   "substitution_queries_path": "cache/zeroprint/zeroprint_substitution_queries.csv",
+   "max_workers": 50
+  },
+  "output_truncate_length": 0,
+  "embedding_model_name": "sentence-transformers/all-mpnet-base-v2",
+  "embedding_batch_size": 200,
+  "embeddings_path": "cache/zeroprint/zeroprint_embeddings.pth",
+  "generation_batch_size": 100,
+  "num_repeats": 20,
+  "gradient_estimation_method": "jacobian",
+  "ridge_alpha": 0.001,
+  "fingerprint_aggregation": "mean",
+  "similarity_metric": "correlation"
+ },
+ "seed": 1000,
+ "pythonhashseed": null,
+ "n_base": 2,
+ "n_variants": 5,
+ "n_prompts": 10,
+ "prompts": [
+  {
+   "prompt_id": 0,
+   "base": 0,
+   "variant": 0,
+   "text": "Complete the following code: def will_it_fly(q,w): ''' Write a function that returns True if the object q will fly, and False otherwise. The object"
+  },
+  {
+   "prompt_id": 1,
+   "base": 1,
+   "variant": 0,
+   "text": "Complete the following code: def generate_integers(a, b): \"\"\" Given two positive integers a and b, return the even digits between a and b, in"
+  },
+  {
+   "prompt_id": 2,
+   "base": 0,
+   "variant": 1,
+   "text": "Complete the following code : def will_it_fly ( q , w ) : `` ' Write a function that returns Fact if the object q will flies , and False not . The object",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  },
+  {
+   "prompt_id": 3,
+   "base": 0,
+   "variant": 2,
+   "text": "Complete the following code : def will_it_fly ( q , w ) : `` ' Book a function that returns Fact if the object q will fly , and False simply . The object",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  },
+  {
+   "prompt_id": 4,
+   "base": 0,
+   "variant": 3,
+   "text": "Complete the despite code : 7-6 will_it_fly ( q , w ) : `` ' Written a function that returns True if the object q will fly , and False otherwise . The object",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  },
+  {
+   "prompt_id": 5,
+   "base": 0,
+   "variant": 4,
+   "text": "Only the following code : vs will_it_fly ( q , w ) : `` ' Write a function that returns True if the object q will fly , and False otherwise . The element",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  },
+  {
+   "prompt_id": 6,
+   "base": 1,
+   "variant": 1,
+   "text": "Required the following code : 6-4 generate_integers ( a , b ) : `` '' '' Given two positive integers a and b , move the even digits between a and b , in",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  },
+  {
+   "prompt_id": 7,
+   "base": 1,
+   "variant": 2,
+   "text": "Complete the since code : def generate_integers ( a , b ) : `` '' '' Given two positive formula_7 a and b , return the even lowest between a and b , in",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  },
+  {
+   "prompt_id": 8,
+   "base": 1,
+   "variant": 3,
+   "text": "Complete the due laws : def generate_integers ( a , b ) : `` '' '' Given two given integers a and b , return the even digits between a and b , in",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  },
+  {
+   "prompt_id": 9,
+   "base": 1,
+   "variant": 4,
+   "text": "Complete the following code : def generate_integers ( a , b ) : `` '' '' However two positive non-negative a and b , take the even digits between a and b , in",
+   "substitutions": "token count differs (word_tokenize re-join); see text"
+  }
+ ],
+ "all_queries_order": [
+  "Complete the following code: def will_it_fly(q,w): ''' Write a function that returns True if the object q will fly, and False otherwise. The object",
+  "Complete the following code: def generate_integers(a, b): \"\"\" Given two positive integers a and b, return the even digits between a and b, in",
+  "Complete the following code : def will_it_fly ( q , w ) : `` ' Write a function that returns Fact if the object q will flies , and False not . The object",
+  "Complete the following code : def will_it_fly ( q , w ) : `` ' Book a function that returns Fact if the object q will fly , and False simply . The object",
+  "Complete the despite code : 7-6 will_it_fly ( q , w ) : `` ' Written a function that returns True if the object q will fly , and False otherwise . The object",
+  "Only the following code : vs will_it_fly ( q , w ) : `` ' Write a function that returns True if the object q will fly , and False otherwise . The element",
+  "Required the following code : 6-4 generate_integers ( a , b ) : `` '' '' Given two positive integers a and b , move the even digits between a and b , in",
+  "Complete the since code : def generate_integers ( a , b ) : `` '' '' Given two positive formula_7 a and b , return the even lowest between a and b , in",
+  "Complete the due laws : def generate_integers ( a , b ) : `` '' '' Given two given integers a and b , return the even digits between a and b , in",
+  "Complete the following code : def generate_integers ( a , b ) : `` '' '' However two positive non-negative a and b , take the even digits between a and b , in"
+ ],
+ "query_embedding_file": "confs/baselines/zp_query_emb.npy",
+ "query_embedding_sha256": "9da2b49d9a66a525304948b82a847019f50aa0c8f31266e95d0ba73736ddf9a7",
+ "official_cache_files": {
+  "cache/zeroprint/zeroprint_query_samples.csv": "dd3a0d529d2cc97a82f24d3c5a967f3fa403b88a02ac7d2ea818817b67ab1870",
+  "cache/zeroprint/zeroprint_substitution_queries.csv": "3cdd6ff6323ee8eceac0ed09cf2629b13c2a3aaa39783539ae16d15fed9a7f74",
+  "cache/zeroprint/zeroprint_embeddings.pth": "69923a3176d917283b877e5bd7e2957059b2edabf00f49726a29d27ff4c3ed7d"
+ },
+ "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+ "torch": "2.7.1+cu128",
+ "sha256_prompts": "80d9349c1823a7601dc1dd44e8c69ef42c46c3c7a38b445665e67f2b40b4bbda"
+}
