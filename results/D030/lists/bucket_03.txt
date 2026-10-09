@@ -1,0 +1,4 @@
+google/gemma-4-E4B-it
+microsoft/Phi-3-medium-4k-instruct
+nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct
+Qwen/Qwen2.5-7B-Instruct

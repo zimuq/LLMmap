@@ -1,0 +1,5 @@
+google/gemma-4-12B-it
+mistralai/Ministral-3-8B-Instruct-2512-BF16
+openchat/openchat_3.5
+togethercomputer/Llama-2-7B-32K-Instruct
+meta-llama/Meta-Llama-3.1-8B-Instruct

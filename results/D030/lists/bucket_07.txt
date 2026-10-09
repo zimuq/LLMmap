@@ -1,0 +1,5 @@
+google/gemma-3-4b-it
+Deci/DeciLM-7B-instruct
+HuggingFaceH4/zephyr-7b-beta
+microsoft/Phi-3-mini-4k-instruct
+HuggingFaceTB/SmolLM2-1.7B-Instruct-16k

@@ -1,0 +1,5 @@
+Qwen/Qwen3-4B
+ibm-granite/granite-3.3-8b-instruct
+allenai/Olmo-3-7B-Instruct
+openchat/openchat-3.6-8b-20240522
+utter-project/EuroLLM-1.7B-Instruct

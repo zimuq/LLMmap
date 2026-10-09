@@ -1,0 +1,292 @@
+{
+ "target_h": 10.0,
+ "n_jobs": 21,
+ "layout": [
+  {
+   "job": "b00",
+   "list": "./results/D030/lists/bucket_00.txt",
+   "models": [
+    "Qwen/Qwen3-30B-A3B",
+    "meta-llama/Llama-3.2-1B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.19,
+   "central_h": 4.6,
+   "wall_h": 17.3
+  },
+  {
+   "job": "b01",
+   "list": "./results/D030/lists/bucket_01.txt",
+   "models": [
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.0,
+   "central_h": 9.32,
+   "wall_h": 17.0
+  },
+  {
+   "job": "b02",
+   "list": "./results/D030/lists/bucket_02.txt",
+   "models": [
+    "allenai/Olmo-3.1-32B-Instruct",
+    "microsoft/Phi-3-medium-128k-instruct",
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+    "tiiuae/Falcon3-3B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.03,
+   "central_h": 4.61,
+   "wall_h": 17.0
+  },
+  {
+   "job": "b03",
+   "list": "./results/D030/lists/bucket_03.txt",
+   "models": [
+    "google/gemma-4-E4B-it",
+    "microsoft/Phi-3-medium-4k-instruct",
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+    "Qwen/Qwen2.5-7B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 9.57,
+   "central_h": 4.4,
+   "wall_h": 16.3
+  },
+  {
+   "job": "b04",
+   "list": "./results/D030/lists/bucket_04.txt",
+   "models": [
+    "google/gemma-3-12b-it",
+    "ibm-granite/granite-3.1-8b-instruct",
+    "mistralai/Mistral-7B-Instruct-v0.1",
+    "meta-llama/Llama-2-7b-chat-hf",
+    "Qwen/Qwen2.5-0.5B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 9.96,
+   "central_h": 4.81,
+   "wall_h": 16.9
+  },
+  {
+   "job": "b05",
+   "list": "./results/D030/lists/bucket_05.txt",
+   "models": [
+    "google/gemma-4-12B-it",
+    "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+    "openchat/openchat_3.5",
+    "togethercomputer/Llama-2-7B-32K-Instruct",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.23,
+   "central_h": 5.12,
+   "wall_h": 17.4
+  },
+  {
+   "job": "b06",
+   "list": "./results/D030/lists/bucket_06.txt",
+   "models": [
+    "allenai/OLMo-2-1124-13B-Instruct",
+    "google/gemma-3-1b-it",
+    "allenai/Llama-3.1-Tulu-3.1-8B",
+    "Qwen/Qwen2-1.5B-Instruct",
+    "tiiuae/Falcon3-1B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.26,
+   "central_h": 4.76,
+   "wall_h": 17.4
+  },
+  {
+   "job": "b07",
+   "list": "./results/D030/lists/bucket_07.txt",
+   "models": [
+    "google/gemma-3-4b-it",
+    "Deci/DeciLM-7B-instruct",
+    "HuggingFaceH4/zephyr-7b-beta",
+    "microsoft/Phi-3-mini-4k-instruct",
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k"
+   ],
+   "K": 1,
+   "conservative_h": 10.01,
+   "central_h": 4.64,
+   "wall_h": 17.0
+  },
+  {
+   "job": "b08",
+   "list": "./results/D030/lists/bucket_08.txt",
+   "models": [
+    "Qwen/Qwen3.5-9B",
+    "ibm-granite/granite-4.2-3b",
+    "allenai/Llama-3.1-Tulu-3-8B",
+    "microsoft/Phi-3.5-mini-instruct",
+    "google/gemma-1.1-2b-it"
+   ],
+   "K": 1,
+   "conservative_h": 9.88,
+   "central_h": 4.6,
+   "wall_h": 16.8
+  },
+  {
+   "job": "b09",
+   "list": "./results/D030/lists/bucket_09.txt",
+   "models": [
+    "upstage/SOLAR-10.7B-Instruct-v1.0",
+    "ibm-granite/granite-4.1-8b",
+    "CohereForAI/aya-23-8B",
+    "microsoft/Phi-4-mini-instruct",
+    "google/gemma-2b-it"
+   ],
+   "K": 1,
+   "conservative_h": 9.94,
+   "central_h": 4.61,
+   "wall_h": 16.9
+  },
+  {
+   "job": "b10",
+   "list": "./results/D030/lists/bucket_10.txt",
+   "models": [
+    "google/gemma-2-9b-it",
+    "CohereLabs/tiny-aya-fire",
+    "Qwen/Qwen2.5-3B-Instruct",
+    "mistralai/Mistral-7B-Instruct-v0.3",
+    "allenai/OLMo-2-0425-1B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 9.92,
+   "central_h": 4.51,
+   "wall_h": 16.9
+  },
+  {
+   "job": "b11",
+   "list": "./results/D030/lists/bucket_11.txt",
+   "models": [
+    "Qwen/Qwen3-8B",
+    "ibm-granite/granite-3.2-8b-instruct",
+    "allenai/OLMo-2-1124-7B-Instruct",
+    "meta-llama/Meta-Llama-3-8B-Instruct",
+    "google/gemma-7b-it"
+   ],
+   "K": 1,
+   "conservative_h": 10.21,
+   "central_h": 4.75,
+   "wall_h": 17.3
+  },
+  {
+   "job": "b12",
+   "list": "./results/D030/lists/bucket_12.txt",
+   "models": [
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16",
+    "mistralai/Mistral-Small-24B-Instruct-2501",
+    "CohereLabs/tiny-aya-global",
+    "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "google/gemma-1.1-7b-it"
+   ],
+   "K": 1,
+   "conservative_h": 10.17,
+   "central_h": 4.72,
+   "wall_h": 17.3
+  },
+  {
+   "job": "b13",
+   "list": "./results/D030/lists/bucket_13.txt",
+   "models": [
+    "Qwen/Qwen3-4B-Instruct-2507",
+    "internlm/internlm2_5-7b-chat",
+    "CohereLabs/tiny-aya-water",
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+    "Qwen/Qwen2.5-7B-Instruct-1M"
+   ],
+   "K": 1,
+   "conservative_h": 10.3,
+   "central_h": 4.78,
+   "wall_h": 17.5
+  },
+  {
+   "job": "b14",
+   "list": "./results/D030/lists/bucket_14.txt",
+   "models": [
+    "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+    "tiiuae/Falcon3-10B-Instruct",
+    "ibm-granite/granite-3.0-8b-instruct",
+    "nvidia/Llama3-ChatQA-1.5-8B",
+    "meta-llama/Llama-3.2-3B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.3,
+   "central_h": 4.78,
+   "wall_h": 17.5
+  },
+  {
+   "job": "b15",
+   "list": "./results/D030/lists/bucket_15.txt",
+   "models": [
+    "Qwen/Qwen3-4B",
+    "ibm-granite/granite-3.3-8b-instruct",
+    "allenai/Olmo-3-7B-Instruct",
+    "openchat/openchat-3.6-8b-20240522",
+    "utter-project/EuroLLM-1.7B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.09,
+   "central_h": 4.7,
+   "wall_h": 17.1
+  },
+  {
+   "job": "b16",
+   "list": "./results/D030/lists/bucket_16.txt",
+   "models": [
+    "utter-project/EuroLLM-9B-Instruct-2512",
+    "ibm-granite/granite-4.2-8b",
+    "microsoft/phi-4",
+    "Qwen/Qwen2-7B-Instruct",
+    "microsoft/Phi-3-mini-128k-instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.26,
+   "central_h": 4.75,
+   "wall_h": 17.4
+  },
+  {
+   "job": "b17",
+   "list": "./results/D030/lists/bucket_17.txt",
+   "models": [
+    "ibm-granite/granite-4.1-3b",
+    "utter-project/EuroLLM-9B-Instruct",
+    "CohereLabs/tiny-aya-earth",
+    "mistralai/Mistral-7B-Instruct-v0.2",
+    "tiiuae/Falcon3-7B-Instruct"
+   ],
+   "K": 1,
+   "conservative_h": 10.3,
+   "central_h": 4.78,
+   "wall_h": 17.5
+  },
+  {
+   "job": "trio-Falcon-H1-3B",
+   "model": "tiiuae/Falcon-H1-3B-Instruct",
+   "K": 8,
+   "conservative_h": 6.28,
+   "central_h": 6.28,
+   "wall_h": 11.0
+  },
+  {
+   "job": "trio-Falcon-H1-7B",
+   "model": "tiiuae/Falcon-H1-7B-Instruct",
+   "K": 4,
+   "conservative_h": 12.28,
+   "central_h": 12.28,
+   "wall_h": 20.6
+  },
+  {
+   "job": "trio-Qwen3.5-4B",
+   "model": "Qwen/Qwen3.5-4B",
+   "K": 8,
+   "conservative_h": 4.86,
+   "central_h": 4.86,
+   "wall_h": 8.8
+  }
+ ]
+}

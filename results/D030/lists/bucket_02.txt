@@ -1,0 +1,4 @@
+allenai/Olmo-3.1-32B-Instruct
+microsoft/Phi-3-medium-128k-instruct
+gradientai/Llama-3-8B-Instruct-Gradient-1048k
+tiiuae/Falcon3-3B-Instruct

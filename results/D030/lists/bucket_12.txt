@@ -1,0 +1,5 @@
+mistralai/Ministral-3-14B-Instruct-2512-BF16
+mistralai/Mistral-Small-24B-Instruct-2501
+CohereLabs/tiny-aya-global
+HuggingFaceTB/SmolLM2-360M-Instruct
+google/gemma-1.1-7b-it

@@ -33,3 +33,23 @@ draws (MET 25 × 10, ZP 2 × 20), the S_test config types and the full 25-slot T
 **Consumers** must key units by `(row, config_ref)`, read `samples[].p` as the method's prompt
 id (MET 0–24 in `met_prompts.json` order; ZP 0–9 in `all_queries_order`) and `samples[].r` as
 the sample / repeat index. ZP's fingerprint needs all 10 prompts × 20 repeats of one unit.
+
+## Addendum (2026-10-09, before S1) — sidecar `baseline_ext_v1/zp_dblbos_control/`
+
+Review D030 / P1, stop A adds a descriptive double-BOS control. Its data lives in a **sidecar**,
+not in `baseline_ext_v1` proper. The frozen manifest `confs/baselines/baseline_ext_v1.json` is
+**not** edited (multi-P rule).
+
+| | |
+|---|---|
+| path | `data/baseline_ext_v1/zp_dblbos_control/{slug}.jsonl` (+ `.status.json`, `.final.json`) |
+| schema | `baseline_ext_v1-zp_dblbos_control` |
+| models | `meta-llama/Meta-Llama-3.1-8B-Instruct`, `mistralai/Mistral-7B-Instruct-v0.3`, `google/gemma-2-9b-it`, `meta-llama/Llama-2-7b-chat-hf` |
+| row | `gen_ref_dblbos`: ZP native prompts, native decoding, 10 prompts × 20 repeats = 200 generations per model |
+| tokenisation | ZeroPrint's official `instruct_model.py`: our rendered template (BOS included; for these 4 models it equals the official template string, S0.5(c) class B) tokenised with `add_special_tokens=True`, then right-truncated to 512 tokens (does not bind here) |
+| seed | `torch.manual_seed(sha256('dblbos\|zp\|<model>\|gen_ref_dblbos\|None\|native'))` |
+| extra line field | `tokenisation` (sidecar rows only) |
+| use | P2 descriptive comparison against the same model's `gen_ref` / `native_tgt` (native rows only). It is never part of any S_test score or label |
+
+Also before S1: T_ZP = 25 (human). Every ZP row uses all 25 S_test slots, so the frozen
+`tzp_order` is moot for generation, and the manifest is unchanged.

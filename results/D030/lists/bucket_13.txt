@@ -1,0 +1,5 @@
+Qwen/Qwen3-4B-Instruct-2507
+internlm/internlm2_5-7b-chat
+CohereLabs/tiny-aya-water
+mistralai/Ministral-3-3B-Instruct-2512-BF16
+Qwen/Qwen2.5-7B-Instruct-1M

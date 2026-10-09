@@ -1,0 +1,5 @@
+Qwen/Qwen3.5-9B
+ibm-granite/granite-4.2-3b
+allenai/Llama-3.1-Tulu-3-8B
+microsoft/Phi-3.5-mini-instruct
+google/gemma-1.1-2b-it

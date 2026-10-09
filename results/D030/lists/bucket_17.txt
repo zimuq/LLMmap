@@ -1,0 +1,5 @@
+ibm-granite/granite-4.1-3b
+utter-project/EuroLLM-9B-Instruct
+CohereLabs/tiny-aya-earth
+mistralai/Mistral-7B-Instruct-v0.2
+tiiuae/Falcon3-7B-Instruct

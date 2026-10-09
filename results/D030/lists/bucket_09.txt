@@ -1,0 +1,5 @@
+upstage/SOLAR-10.7B-Instruct-v1.0
+ibm-granite/granite-4.1-8b
+CohereForAI/aya-23-8B
+microsoft/Phi-4-mini-instruct
+google/gemma-2b-it

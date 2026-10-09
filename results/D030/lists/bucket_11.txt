@@ -1,0 +1,5 @@
+Qwen/Qwen3-8B
+ibm-granite/granite-3.2-8b-instruct
+allenai/OLMo-2-1124-7B-Instruct
+meta-llama/Meta-Llama-3-8B-Instruct
+google/gemma-7b-it

@@ -1,0 +1,5 @@
+google/gemma-2-9b-it
+CohereLabs/tiny-aya-fire
+Qwen/Qwen2.5-3B-Instruct
+mistralai/Mistral-7B-Instruct-v0.3
+allenai/OLMo-2-0425-1B-Instruct

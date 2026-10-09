@@ -1,0 +1,5 @@
+allenai/OLMo-2-1124-13B-Instruct
+google/gemma-3-1b-it
+allenai/Llama-3.1-Tulu-3.1-8B
+Qwen/Qwen2-1.5B-Instruct
+tiiuae/Falcon3-1B-Instruct
