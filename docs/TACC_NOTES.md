@@ -63,6 +63,10 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+---
+
+## Resolved
+
 **Issue 24 (2026-10-09) — corpus-wide, not D030-owned: 9 models are prompted
 without a BOS token in every corpus (v1, v2, ML extension).** Found by D030
 S0.5(c) (`results/D030/s0_checks_parity_*.json`). `LLM_huggingface.generate`
@@ -81,9 +85,10 @@ itself, as most do. These 9 templates do not, so no BOS reaches the model:
   a check.
 - Ownership: corpus provenance is design-side's call. TACC changed nothing.
 
----
-
-## Resolved
+*Resolved 2026-10-09 (design-side, D030 stop-A Review).* Acknowledged; kept
+for consistency across every arm and corpus. Logged as
+`PAPER_DEVIATIONS.md` item 14 (disclosure; the effect is unmeasured and no
+check is scheduled). No D030 change.
 
 **Issue 23 (2026-10-05) — D029 `## D`, prediction P3: T3's stated count
 (11) does not match its own rule (10).** The rule is "every Qwen pair in

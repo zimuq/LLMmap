@@ -396,6 +396,28 @@ again. This is not a recommendation to run that alternative — I2 and
 numbers may read lower than the paper's — just a preserved, ready
 option.
 
+### 14. Nine chat templates without BOS are prompted without one, in every corpus — `[code, LLMmap/llm.py, quirk]`
+
+Found by TACC during D030 S0 (2026-10-09, `TACC_NOTES` Issue 24, now
+resolved). `LLM_huggingface.generate` (and `d027_llm`, which reproduces
+it) tokenises the rendered chat template with `add_special_tokens=False`.
+That is correct when the template writes the BOS itself, as most do. Nine
+templates do not, so those models never see a BOS: `zephyr-7b-beta`,
+`Llama-3.1-Tulu-3-8B`, `Llama-3.1-Tulu-3.1-8B`, `Llama-2-7B-32K-Instruct`,
+`SOLAR-10.7B-Instruct-v1.0`, `EuroLLM-1.7B-Instruct`, `EuroLLM-9B-Instruct`,
+`EuroLLM-9B-Instruct-2512`, `DeciLM-7B-instruct`.
+
+- It is the released code's behaviour, applied identically to every arm,
+  corpus (v1, v2, ML extension) and D030 baseline. So it cannot bias any
+  within-project comparison.
+- It may change those models' outputs (noisier, or more distinctive) in
+  absolute terms. Any writeup must disclose it.
+- Whether it affects their identifiability is **unmeasured**. A check
+  would need regeneration of those 9 models with BOS, which is not
+  scheduled.
+- Same family as items 9 and 12: a released-code quirk, kept for
+  fidelity, not patched.
+
 ---
 
 ## Known gaps in this ledger (flag rather than guess)
