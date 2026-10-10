@@ -1,0 +1,63 @@
+{
+ "ZP-512": {
+  "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+   "pearson_dblbos_vs_genref": 0.7090199029343507,
+   "pearson_genref_vs_native": 0.7865130884149826,
+   "pearson_dblbos_vs_native": 0.6717295170100518,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+   "pearson_dblbos_vs_genref": 0.846153384044006,
+   "pearson_genref_vs_native": 0.9126210940649321,
+   "pearson_dblbos_vs_native": 0.7883797420373438,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  },
+  "google/gemma-2-9b-it": {
+   "pearson_dblbos_vs_genref": 0.5801286800322341,
+   "pearson_genref_vs_native": 0.8274137915675864,
+   "pearson_dblbos_vs_native": 0.6593248336183839,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  },
+  "meta-llama/Llama-2-7b-chat-hf": {
+   "pearson_dblbos_vs_genref": 0.8166124301570193,
+   "pearson_genref_vs_native": 0.8560096099793544,
+   "pearson_dblbos_vs_native": 0.8656977782589321,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  }
+ },
+ "note": "Review D030/P1 stop A: descriptive only, native rows; (i) Pearson(F_dblbos, F_gen_ref) vs Pearson(F_gen_ref, F_native_tgt); (ii) rank of the true model for native_tgt against the 85-model ZP Gen library, with and without that model's reference replaced by gen_ref_dblbos",
+ "ZP-200": {
+  "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+   "pearson_dblbos_vs_genref": 0.6985470669000453,
+   "pearson_genref_vs_native": 0.7842351384558729,
+   "pearson_dblbos_vs_native": 0.6616241812772184,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+   "pearson_dblbos_vs_genref": 0.8362909004767106,
+   "pearson_genref_vs_native": 0.9079589239467182,
+   "pearson_dblbos_vs_native": 0.772432626999691,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  },
+  "google/gemma-2-9b-it": {
+   "pearson_dblbos_vs_genref": 0.6113298153876634,
+   "pearson_genref_vs_native": 0.8488660284464823,
+   "pearson_dblbos_vs_native": 0.6452836094199292,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  },
+  "meta-llama/Llama-2-7b-chat-hf": {
+   "pearson_dblbos_vs_genref": 0.8510985735188983,
+   "pearson_genref_vs_native": 0.8900576657706305,
+   "pearson_dblbos_vs_native": 0.8890286667877497,
+   "rank_native_vs_gen_library": 1.0,
+   "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+  }
+ }
+}

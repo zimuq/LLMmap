@@ -1,0 +1,2884 @@
+{
+ "schema": "d030-analysis-v1",
+ "written": "2026-10-10T17:31:52",
+ "bootstrap": {
+  "v2": {
+   "configs": "boot_draws(25, 2000, seed=20261005)",
+   "seeds": "default_rng(20261005).integers(0,5,(2000,24,5))[:, 7]",
+   "baselines": "configs only (no seed dimension)"
+  },
+  "v1": {
+   "configs": "boot_draws(25, 2000, seed=20260928)",
+   "seeds": "default_rng(20260928).integers(0,5,(2000,8,5))[:, 7]",
+   "baselines": "configs only (no seed dimension)"
+  }
+ },
+ "worse_scan": {
+  "rule": "hi(delta) < 0 on E_all or E_hard, delta = OURS(att, k=8) - cell; every MET / ZP variant x library cell, both views",
+  "n_cells": 16,
+  "n_worse": 2,
+  "worse": [
+   {
+    "view": "v2",
+    "method": "met",
+    "variant": "hamming",
+    "lib": "All",
+    "name": "MET-Hamming All",
+    "E_all": 0.736,
+    "E_all_ci": [
+     0.7224,
+     0.7511
+    ],
+    "E_hard": 0.8965,
+    "E_hard_ci": [
+     0.8832,
+     0.9102
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.736,
+     "delta": 0.0097,
+     "ci": [
+      -0.0151,
+      0.0313
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.8965,
+     "delta": -0.0282,
+     "ci": [
+      -0.0404,
+      -0.0161
+     ]
+    },
+    "worse": true
+   },
+   {
+    "view": "v2",
+    "method": "met",
+    "variant": "e5",
+    "lib": "All",
+    "name": "MET-e5 All",
+    "E_all": 0.7642,
+    "E_all_ci": [
+     0.7482,
+     0.7788
+    ],
+    "E_hard": 0.9081,
+    "E_hard_ci": [
+     0.8965,
+     0.9182
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.7642,
+     "delta": -0.0185,
+     "ci": [
+      -0.0419,
+      0.0025
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.9081,
+     "delta": -0.0398,
+     "ci": [
+      -0.0524,
+      -0.0264
+     ]
+    },
+    "worse": true
+   }
+  ],
+  "cells": [
+   {
+    "view": "v2",
+    "method": "met",
+    "variant": "hamming",
+    "lib": "Gen",
+    "name": "MET-Hamming Gen",
+    "E_all": 0.4824,
+    "E_all_ci": [
+     0.4645,
+     0.4998
+    ],
+    "E_hard": 0.8105,
+    "E_hard_ci": [
+     0.7923,
+     0.8274
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.4824,
+     "delta": 0.2633,
+     "ci": [
+      0.2383,
+      0.2875
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.8105,
+     "delta": 0.0578,
+     "ci": [
+      0.0391,
+      0.0766
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v2",
+    "method": "met",
+    "variant": "hamming",
+    "lib": "All",
+    "name": "MET-Hamming All",
+    "E_all": 0.736,
+    "E_all_ci": [
+     0.7224,
+     0.7511
+    ],
+    "E_hard": 0.8965,
+    "E_hard_ci": [
+     0.8832,
+     0.9102
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.736,
+     "delta": 0.0097,
+     "ci": [
+      -0.0151,
+      0.0313
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.8965,
+     "delta": -0.0282,
+     "ci": [
+      -0.0404,
+      -0.0161
+     ]
+    },
+    "worse": true
+   },
+   {
+    "view": "v2",
+    "method": "met",
+    "variant": "e5",
+    "lib": "Gen",
+    "name": "MET-e5 Gen",
+    "E_all": 0.4734,
+    "E_all_ci": [
+     0.4555,
+     0.4904
+    ],
+    "E_hard": 0.8425,
+    "E_hard_ci": [
+     0.8295,
+     0.8544
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.4734,
+     "delta": 0.2723,
+     "ci": [
+      0.2504,
+      0.2936
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.8425,
+     "delta": 0.0258,
+     "ci": [
+      0.0107,
+      0.0403
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v2",
+    "method": "met",
+    "variant": "e5",
+    "lib": "All",
+    "name": "MET-e5 All",
+    "E_all": 0.7642,
+    "E_all_ci": [
+     0.7482,
+     0.7788
+    ],
+    "E_hard": 0.9081,
+    "E_hard_ci": [
+     0.8965,
+     0.9182
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.7642,
+     "delta": -0.0185,
+     "ci": [
+      -0.0419,
+      0.0025
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.9081,
+     "delta": -0.0398,
+     "ci": [
+      -0.0524,
+      -0.0264
+     ]
+    },
+    "worse": true
+   },
+   {
+    "view": "v2",
+    "method": "zp",
+    "variant": "512",
+    "lib": "Gen",
+    "name": "ZP-512 Gen",
+    "E_all": 0.3798,
+    "E_all_ci": [
+     0.3619,
+     0.3986
+    ],
+    "E_hard": 0.774,
+    "E_hard_ci": [
+     0.7579,
+     0.7895
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.3798,
+     "delta": 0.3659,
+     "ci": [
+      0.3385,
+      0.391
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.774,
+     "delta": 0.0942,
+     "ci": [
+      0.0753,
+      0.114
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v2",
+    "method": "zp",
+    "variant": "512",
+    "lib": "All",
+    "name": "ZP-512 All",
+    "E_all": 0.5045,
+    "E_all_ci": [
+     0.4861,
+     0.5238
+    ],
+    "E_hard": 0.813,
+    "E_hard_ci": [
+     0.8018,
+     0.8246
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.5045,
+     "delta": 0.2412,
+     "ci": [
+      0.2141,
+      0.2658
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.813,
+     "delta": 0.0553,
+     "ci": [
+      0.0397,
+      0.0705
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v2",
+    "method": "zp",
+    "variant": "200",
+    "lib": "Gen",
+    "name": "ZP-200 Gen",
+    "E_all": 0.3605,
+    "E_all_ci": [
+     0.3416,
+     0.3798
+    ],
+    "E_hard": 0.7789,
+    "E_hard_ci": [
+     0.7635,
+     0.7944
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.3605,
+     "delta": 0.3852,
+     "ci": [
+      0.3586,
+      0.4111
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.7789,
+     "delta": 0.0893,
+     "ci": [
+      0.0709,
+      0.1079
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v2",
+    "method": "zp",
+    "variant": "200",
+    "lib": "All",
+    "name": "ZP-200 All",
+    "E_all": 0.4979,
+    "E_all_ci": [
+     0.4781,
+     0.5162
+    ],
+    "E_hard": 0.8193,
+    "E_hard_ci": [
+     0.8074,
+     0.8312
+    ],
+    "d_all": {
+     "a": 0.7457,
+     "b": 0.4979,
+     "delta": 0.2478,
+     "ci": [
+      0.2207,
+      0.2718
+     ]
+    },
+    "d_hard": {
+     "a": 0.8683,
+     "b": 0.8193,
+     "delta": 0.049,
+     "ci": [
+      0.0333,
+      0.0651
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "met",
+    "variant": "hamming",
+    "lib": "Gen",
+    "name": "MET-Hamming Gen",
+    "E_all": 0.5157,
+    "E_all_ci": [
+     0.4941,
+     0.5351
+    ],
+    "E_hard": 0.6373,
+    "E_hard_ci": [
+     0.5958,
+     0.657
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.5157,
+     "delta": 0.36,
+     "ci": [
+      0.3362,
+      0.3849
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.6373,
+     "delta": 0.3062,
+     "ci": [
+      0.2727,
+      0.3402
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "met",
+    "variant": "hamming",
+    "lib": "All",
+    "name": "MET-Hamming All",
+    "E_all": 0.8054,
+    "E_all_ci": [
+     0.7827,
+     0.8292
+    ],
+    "E_hard": 0.873,
+    "E_hard_ci": [
+     0.8221,
+     0.8842
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.8054,
+     "delta": 0.0703,
+     "ci": [
+      0.0415,
+      0.098
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.873,
+     "delta": 0.0704,
+     "ci": [
+      0.0493,
+      0.1102
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "met",
+    "variant": "e5",
+    "lib": "Gen",
+    "name": "MET-e5 Gen",
+    "E_all": 0.4822,
+    "E_all_ci": [
+     0.4541,
+     0.5103
+    ],
+    "E_hard": 0.5761,
+    "E_hard_ci": [
+     0.5373,
+     0.6006
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.4822,
+     "delta": 0.3935,
+     "ci": [
+      0.365,
+      0.4251
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.5761,
+     "delta": 0.3674,
+     "ci": [
+      0.3289,
+      0.3999
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "met",
+    "variant": "e5",
+    "lib": "All",
+    "name": "MET-e5 All",
+    "E_all": 0.8314,
+    "E_all_ci": [
+     0.8022,
+     0.8605
+    ],
+    "E_hard": 0.8909,
+    "E_hard_ci": [
+     0.8382,
+     0.903
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.8314,
+     "delta": 0.0443,
+     "ci": [
+      0.0108,
+      0.0781
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.8909,
+     "delta": 0.0525,
+     "ci": [
+      0.0322,
+      0.0901
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "zp",
+    "variant": "512",
+    "lib": "Gen",
+    "name": "ZP-512 Gen",
+    "E_all": 0.373,
+    "E_all_ci": [
+     0.3503,
+     0.3968
+    ],
+    "E_hard": 0.5894,
+    "E_hard_ci": [
+     0.5364,
+     0.5945
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.373,
+     "delta": 0.5027,
+     "ci": [
+      0.4742,
+      0.5317
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.5894,
+     "delta": 0.3541,
+     "ci": [
+      0.336,
+      0.3967
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "zp",
+    "variant": "512",
+    "lib": "All",
+    "name": "ZP-512 All",
+    "E_all": 0.5568,
+    "E_all_ci": [
+     0.5265,
+     0.5935
+    ],
+    "E_hard": 0.7006,
+    "E_hard_ci": [
+     0.6421,
+     0.7088
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.5568,
+     "delta": 0.3189,
+     "ci": [
+      0.2852,
+      0.3503
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.7006,
+     "delta": 0.2428,
+     "ci": [
+      0.2239,
+      0.2906
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "zp",
+    "variant": "200",
+    "lib": "Gen",
+    "name": "ZP-200 Gen",
+    "E_all": 0.3903,
+    "E_all_ci": [
+     0.3719,
+     0.4108
+    ],
+    "E_hard": 0.5861,
+    "E_hard_ci": [
+     0.5321,
+     0.5912
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.3903,
+     "delta": 0.4854,
+     "ci": [
+      0.4603,
+      0.5098
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.5861,
+     "delta": 0.3574,
+     "ci": [
+      0.3385,
+      0.403
+     ]
+    },
+    "worse": false
+   },
+   {
+    "view": "v1",
+    "method": "zp",
+    "variant": "200",
+    "lib": "All",
+    "name": "ZP-200 All",
+    "E_all": 0.5654,
+    "E_all_ci": [
+     0.5384,
+     0.5957
+    ],
+    "E_hard": 0.7152,
+    "E_hard_ci": [
+     0.6488,
+     0.7245
+    ],
+    "d_all": {
+     "a": 0.8757,
+     "b": 0.5654,
+     "delta": 0.3103,
+     "ci": [
+      0.2835,
+      0.336
+     ]
+    },
+    "d_hard": {
+     "a": 0.9435,
+     "b": 0.7152,
+     "delta": 0.2283,
+     "ci": [
+      0.2098,
+      0.2852
+     ]
+    },
+    "worse": false
+   }
+  ]
+ },
+ "labels": {
+  "met|v2": {
+   "view": "v2",
+   "method": "met",
+   "label": "WORSE",
+   "B_star": {
+    "variant": "e5",
+    "lib": "All",
+    "name": "MET-e5 All"
+   },
+   "E_all_points": {
+    "hamming|Gen": 0.4824,
+    "hamming|All": 0.736,
+    "e5|Gen": 0.4734,
+    "e5|All": 0.7642
+   },
+   "d_all": {
+    "a": 0.7457,
+    "b": 0.7642,
+    "delta": -0.0185,
+    "ci": [
+     -0.0419,
+     0.0025
+    ]
+   },
+   "d_hard": {
+    "a": 0.8683,
+    "b": 0.9081,
+    "delta": -0.0398,
+    "ci": [
+     -0.0524,
+     -0.0264
+    ]
+   },
+   "linear_sign": {
+    "d_all": 0.0998,
+    "d_hard": 0.0109,
+    "hard_source": "D029 lin|8 dirH"
+   },
+   "vs_primary": {
+    "Gen": {
+     "d_all": {
+      "a": 0.7457,
+      "b": 0.4824,
+      "delta": 0.2633,
+      "ci": [
+       0.2383,
+       0.2875
+      ]
+     },
+     "d_hard": {
+      "a": 0.8683,
+      "b": 0.8105,
+      "delta": 0.0578,
+      "ci": [
+       0.0391,
+       0.0766
+      ]
+     }
+    },
+    "All": {
+     "d_all": {
+      "a": 0.7457,
+      "b": 0.736,
+      "delta": 0.0097,
+      "ci": [
+       -0.0151,
+       0.0313
+      ]
+     },
+     "d_hard": {
+      "a": 0.8683,
+      "b": 0.8965,
+      "delta": -0.0282,
+      "ci": [
+       -0.0404,
+       -0.0161
+      ]
+     }
+    }
+   },
+   "b_star_optimism": "B* is the max over 4 cells chosen on S_test; its E_all is biased upward, so delta against B* is conservative for our claim (Review B2)"
+  },
+  "zp|v2": {
+   "view": "v2",
+   "method": "zp",
+   "label": "BETTER",
+   "B_star": {
+    "variant": "512",
+    "lib": "All",
+    "name": "ZP-512 All"
+   },
+   "E_all_points": {
+    "512|Gen": 0.3798,
+    "512|All": 0.5045,
+    "200|Gen": 0.3605,
+    "200|All": 0.4979
+   },
+   "d_all": {
+    "a": 0.7457,
+    "b": 0.5045,
+    "delta": 0.2412,
+    "ci": [
+     0.2141,
+     0.2658
+    ]
+   },
+   "d_hard": {
+    "a": 0.8683,
+    "b": 0.813,
+    "delta": 0.0553,
+    "ci": [
+     0.0397,
+     0.0705
+    ]
+   },
+   "linear_sign": {
+    "d_all": 0.3595,
+    "d_hard": 0.106,
+    "hard_source": "D029 lin|8 dirH"
+   },
+   "vs_primary": {
+    "Gen": {
+     "d_all": {
+      "a": 0.7457,
+      "b": 0.3798,
+      "delta": 0.3659,
+      "ci": [
+       0.3385,
+       0.391
+      ]
+     },
+     "d_hard": {
+      "a": 0.8683,
+      "b": 0.774,
+      "delta": 0.0942,
+      "ci": [
+       0.0753,
+       0.114
+      ]
+     }
+    },
+    "All": {
+     "d_all": {
+      "a": 0.7457,
+      "b": 0.5045,
+      "delta": 0.2412,
+      "ci": [
+       0.2141,
+       0.2658
+      ]
+     },
+     "d_hard": {
+      "a": 0.8683,
+      "b": 0.813,
+      "delta": 0.0553,
+      "ci": [
+       0.0397,
+       0.0705
+      ]
+     }
+    }
+   },
+   "b_star_optimism": "B* is the max over 4 cells chosen on S_test; its E_all is biased upward, so delta against B* is conservative for our claim (Review B2)"
+  },
+  "met|v1": {
+   "view": "v1",
+   "method": "met",
+   "label": "BETTER",
+   "B_star": {
+    "variant": "e5",
+    "lib": "All",
+    "name": "MET-e5 All"
+   },
+   "E_all_points": {
+    "hamming|Gen": 0.5157,
+    "hamming|All": 0.8054,
+    "e5|Gen": 0.4822,
+    "e5|All": 0.8314
+   },
+   "d_all": {
+    "a": 0.8757,
+    "b": 0.8314,
+    "delta": 0.0443,
+    "ci": [
+     0.0108,
+     0.0781
+    ]
+   },
+   "d_hard": {
+    "a": 0.9435,
+    "b": 0.8909,
+    "delta": 0.0525,
+    "ci": [
+     0.0322,
+     0.0901
+    ]
+   },
+   "linear_sign": {
+    "d_all": 0.1059,
+    "d_hard": 0.0715,
+    "hard_source": "Call 1 asserted reproduction (cnt_pair666, CVaR)"
+   },
+   "vs_primary": {
+    "Gen": {
+     "d_all": {
+      "a": 0.8757,
+      "b": 0.5157,
+      "delta": 0.36,
+      "ci": [
+       0.3362,
+       0.3849
+      ]
+     },
+     "d_hard": {
+      "a": 0.9435,
+      "b": 0.6373,
+      "delta": 0.3062,
+      "ci": [
+       0.2727,
+       0.3402
+      ]
+     }
+    },
+    "All": {
+     "d_all": {
+      "a": 0.8757,
+      "b": 0.8054,
+      "delta": 0.0703,
+      "ci": [
+       0.0415,
+       0.098
+      ]
+     },
+     "d_hard": {
+      "a": 0.9435,
+      "b": 0.873,
+      "delta": 0.0704,
+      "ci": [
+       0.0493,
+       0.1102
+      ]
+     }
+    }
+   },
+   "b_star_optimism": "B* is the max over 4 cells chosen on S_test; its E_all is biased upward, so delta against B* is conservative for our claim (Review B2)"
+  },
+  "zp|v1": {
+   "view": "v1",
+   "method": "zp",
+   "label": "BETTER",
+   "B_star": {
+    "variant": "200",
+    "lib": "All",
+    "name": "ZP-200 All"
+   },
+   "E_all_points": {
+    "512|Gen": 0.373,
+    "512|All": 0.5568,
+    "200|Gen": 0.3903,
+    "200|All": 0.5654
+   },
+   "d_all": {
+    "a": 0.8757,
+    "b": 0.5654,
+    "delta": 0.3103,
+    "ci": [
+     0.2835,
+     0.336
+    ]
+   },
+   "d_hard": {
+    "a": 0.9435,
+    "b": 0.7152,
+    "delta": 0.2283,
+    "ci": [
+     0.2098,
+     0.2852
+    ]
+   },
+   "linear_sign": {
+    "d_all": 0.3719,
+    "d_hard": 0.2473,
+    "hard_source": "Call 1 asserted reproduction (cnt_pair666, CVaR)"
+   },
+   "vs_primary": {
+    "Gen": {
+     "d_all": {
+      "a": 0.8757,
+      "b": 0.373,
+      "delta": 0.5027,
+      "ci": [
+       0.4742,
+       0.5317
+      ]
+     },
+     "d_hard": {
+      "a": 0.9435,
+      "b": 0.5894,
+      "delta": 0.3541,
+      "ci": [
+       0.336,
+       0.3967
+      ]
+     }
+    },
+    "All": {
+     "d_all": {
+      "a": 0.8757,
+      "b": 0.5568,
+      "delta": 0.3189,
+      "ci": [
+       0.2852,
+       0.3503
+      ]
+     },
+     "d_hard": {
+      "a": 0.9435,
+      "b": 0.7006,
+      "delta": 0.2428,
+      "ci": [
+       0.2239,
+       0.2906
+      ]
+     }
+    }
+   },
+   "b_star_optimism": "B* is the max over 4 cells chosen on S_test; its E_all is biased upward, so delta against B* is conservative for our claim (Review B2)"
+  }
+ },
+ "ours": {
+  "v2": {
+   "att": {
+    "E_all": 0.7457,
+    "E_all_ci": [
+     0.7241,
+     0.7645
+    ],
+    "E_hard": 0.8683,
+    "E_hard_ci": [
+     0.8584,
+     0.8788
+    ]
+   },
+   "lin": {
+    "E_all": 0.864,
+    "E_all_ci": [
+     0.8466,
+     0.8819
+    ],
+    "E_hard": 0.9189,
+    "E_hard_ci": [
+     0.9056,
+     0.9323
+    ]
+   },
+   "p8": {
+    "E_all": 0.7167,
+    "E_all_ci": [
+     0.6876,
+     0.7427
+    ],
+    "E_hard": 0.8446,
+    "E_hard_ci": [
+     0.8296,
+     0.8594
+    ]
+   },
+   "p8lin": {
+    "E_all": 0.8259,
+    "E_all_ci": [
+     0.8104,
+     0.8409
+    ],
+    "E_hard": 0.8898,
+    "E_hard_ci": [
+     0.8758,
+     0.9039
+    ]
+   }
+  },
+  "v1": {
+   "att": {
+    "E_all": 0.8757,
+    "E_all_ci": [
+     0.8577,
+     0.8932
+    ],
+    "E_hard": 0.9435,
+    "E_hard_ci": [
+     0.9161,
+     0.9452
+    ]
+   },
+   "lin": {
+    "E_all": 0.9373,
+    "E_all_ci": [
+     0.9211,
+     0.9524
+    ],
+    "E_hard": 0.9624,
+    "E_hard_ci": [
+     0.9264,
+     0.9642
+    ]
+   },
+   "p8": {
+    "E_all": 0.8452,
+    "E_all_ci": [
+     0.821,
+     0.8698
+    ],
+    "E_hard": 0.9312,
+    "E_hard_ci": [
+     0.8996,
+     0.9345
+    ]
+   }
+  }
+ },
+ "opposite_failure": {
+  "v2": {
+   "ours_hard_over_all": 1.1644,
+   "sets": {
+    "H_all": 57,
+    "H_N": 38,
+    "H_X": 19,
+    "N_prime": 161
+   },
+   "rows": {
+    "ours:att": {
+     "H_all": 0.8683,
+     "H_N": 0.8424,
+     "H_X": 0.92,
+     "N_prime": 0.9357
+    },
+    "ours:lin": {
+     "H_all": 0.9189,
+     "H_N": 0.8979,
+     "H_X": 0.9611,
+     "N_prime": 0.9647
+    },
+    "ours:p8": {
+     "H_all": 0.8446,
+     "H_N": 0.8183,
+     "H_X": 0.8973,
+     "N_prime": 0.9279
+    },
+    "MET-Hamming Gen": {
+     "H_all": 0.8105,
+     "H_N": 0.7474,
+     "H_X": 0.9368,
+     "N_prime": 0.828,
+     "E_all": 0.4824,
+     "E_hard": 0.8105,
+     "hard_over_all": 1.6804,
+     "hard_over_all_rel_ours": 1.4431,
+     "tie_rate": 0.0,
+     "native_top1": 0.9647,
+     "native_minus_E_all": 0.4824,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0588
+    },
+    "MET-Hamming All": {
+     "H_all": 0.8965,
+     "H_N": 0.8647,
+     "H_X": 0.96,
+     "N_prime": 0.9267,
+     "E_all": 0.736,
+     "E_hard": 0.8965,
+     "hard_over_all": 1.2181,
+     "hard_over_all_rel_ours": 1.0461,
+     "tie_rate": 0.0,
+     "native_top1": 0.5765,
+     "native_minus_E_all": -0.1595,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 4.7059
+    },
+    "MET-e5 Gen": {
+     "H_all": 0.8425,
+     "H_N": 0.7953,
+     "H_X": 0.9368,
+     "N_prime": 0.8484,
+     "E_all": 0.4734,
+     "E_hard": 0.8425,
+     "hard_over_all": 1.7795,
+     "hard_over_all_rel_ours": 1.5283,
+     "tie_rate": 0.0,
+     "native_top1": 0.9882,
+     "native_minus_E_all": 0.5148,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0118
+    },
+    "MET-e5 All": {
+     "H_all": 0.9081,
+     "H_N": 0.8795,
+     "H_X": 0.9653,
+     "N_prime": 0.9366,
+     "E_all": 0.7642,
+     "E_hard": 0.9081,
+     "hard_over_all": 1.1882,
+     "hard_over_all_rel_ours": 1.0205,
+     "tie_rate": 0.0,
+     "native_top1": 0.6941,
+     "native_minus_E_all": -0.0701,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 4.9412
+    },
+    "ZP-512 Gen": {
+     "H_all": 0.774,
+     "H_N": 0.7316,
+     "H_X": 0.8589,
+     "N_prime": 0.7949,
+     "E_all": 0.3798,
+     "E_hard": 0.774,
+     "hard_over_all": 2.0382,
+     "hard_over_all_rel_ours": 1.7504,
+     "tie_rate": 0.0,
+     "native_top1": 0.9765,
+     "native_minus_E_all": 0.5967,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0235
+    },
+    "ZP-512 All": {
+     "H_all": 0.813,
+     "H_N": 0.7726,
+     "H_X": 0.8937,
+     "N_prime": 0.8504,
+     "E_all": 0.5045,
+     "E_hard": 0.813,
+     "hard_over_all": 1.6116,
+     "hard_over_all_rel_ours": 1.384,
+     "tie_rate": 0.0,
+     "native_top1": 0.6235,
+     "native_minus_E_all": 0.1191,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 4.0
+    },
+    "ZP-200 Gen": {
+     "H_all": 0.7789,
+     "H_N": 0.7395,
+     "H_X": 0.8579,
+     "N_prime": 0.7968,
+     "E_all": 0.3605,
+     "E_hard": 0.7789,
+     "hard_over_all": 2.1609,
+     "hard_over_all_rel_ours": 1.8558,
+     "tie_rate": 0.0,
+     "native_top1": 0.9765,
+     "native_minus_E_all": 0.616,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0235
+    },
+    "ZP-200 All": {
+     "H_all": 0.8193,
+     "H_N": 0.7805,
+     "H_X": 0.8968,
+     "N_prime": 0.8524,
+     "E_all": 0.4979,
+     "E_hard": 0.8193,
+     "hard_over_all": 1.6456,
+     "hard_over_all_rel_ours": 1.4132,
+     "tie_rate": 0.0,
+     "native_top1": 0.6353,
+     "native_minus_E_all": 0.1374,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 3.7647
+    },
+    "LLMMAP-OS cos Gen": {
+     "H_all": 0.6421,
+     "H_N": 0.6263,
+     "H_X": 0.6737,
+     "N_prime": 0.8231,
+     "E_all": 0.4245,
+     "E_hard": 0.6421,
+     "hard_over_all": 1.5127,
+     "hard_over_all_rel_ours": 1.2991,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS cos All": {
+     "H_all": 0.7351,
+     "H_N": 0.7232,
+     "H_X": 0.7589,
+     "N_prime": 0.8836,
+     "E_all": 0.5384,
+     "E_hard": 0.7351,
+     "hard_over_all": 1.3654,
+     "hard_over_all_rel_ours": 1.1727,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc Gen": {
+     "H_all": 0.6389,
+     "H_N": 0.6205,
+     "H_X": 0.6758,
+     "N_prime": 0.8153,
+     "E_all": 0.4024,
+     "E_hard": 0.6389,
+     "hard_over_all": 1.588,
+     "hard_over_all_rel_ours": 1.3638,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc All": {
+     "H_all": 0.7382,
+     "H_N": 0.7247,
+     "H_X": 0.7653,
+     "N_prime": 0.8821,
+     "E_all": 0.5374,
+     "E_hard": 0.7382,
+     "hard_over_all": 1.3737,
+     "hard_over_all_rel_ours": 1.1798,
+     "tie_rate": 0.0
+    }
+   }
+  },
+  "v1": {
+   "ours_hard_over_all": 1.0774,
+   "sets": {
+    "structural65": 65,
+    "all666": 666
+   },
+   "rows": {
+    "ours:att": {
+     "structural65": 0.9685,
+     "all666": 0.9877
+    },
+    "ours:lin": {
+     "structural65": 0.9822,
+     "all666": 0.9929
+    },
+    "ours:p8": {
+     "structural65": 0.9637,
+     "all666": 0.9831
+    },
+    "MET-Hamming Gen": {
+     "structural65": 0.836,
+     "all666": 0.8838,
+     "E_all": 0.5157,
+     "E_hard": 0.6373,
+     "hard_over_all": 1.2358,
+     "hard_over_all_rel_ours": 1.147,
+     "tie_rate": 0.0,
+     "native_top1": 1.0,
+     "native_minus_E_all": 0.4843,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0
+    },
+    "MET-Hamming All": {
+     "structural65": 0.9375,
+     "all666": 0.962,
+     "E_all": 0.8054,
+     "E_hard": 0.873,
+     "hard_over_all": 1.084,
+     "hard_over_all_rel_ours": 1.0061,
+     "tie_rate": 0.0,
+     "native_top1": 0.5135,
+     "native_minus_E_all": -0.2919,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 3.5946
+    },
+    "MET-e5 Gen": {
+     "structural65": 0.8206,
+     "all666": 0.8643,
+     "E_all": 0.4822,
+     "E_hard": 0.5761,
+     "hard_over_all": 1.1947,
+     "hard_over_all_rel_ours": 1.1089,
+     "tie_rate": 0.0,
+     "native_top1": 1.0,
+     "native_minus_E_all": 0.5178,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0
+    },
+    "MET-e5 All": {
+     "structural65": 0.9468,
+     "all666": 0.9704,
+     "E_all": 0.8314,
+     "E_hard": 0.8909,
+     "hard_over_all": 1.0716,
+     "hard_over_all_rel_ours": 0.9947,
+     "tie_rate": 0.0,
+     "native_top1": 0.6486,
+     "native_minus_E_all": -0.1827,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 3.0541
+    },
+    "ZP-512 Gen": {
+     "structural65": 0.7858,
+     "all666": 0.8147,
+     "E_all": 0.373,
+     "E_hard": 0.5894,
+     "hard_over_all": 1.5803,
+     "hard_over_all_rel_ours": 1.4667,
+     "tie_rate": 0.0,
+     "native_top1": 1.0,
+     "native_minus_E_all": 0.627,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0
+    },
+    "ZP-512 All": {
+     "structural65": 0.8437,
+     "all666": 0.8811,
+     "E_all": 0.5568,
+     "E_hard": 0.7006,
+     "hard_over_all": 1.2584,
+     "hard_over_all_rel_ours": 1.168,
+     "tie_rate": 0.0,
+     "native_top1": 0.6486,
+     "native_minus_E_all": 0.0919,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 2.6216
+    },
+    "ZP-200 Gen": {
+     "structural65": 0.7849,
+     "all666": 0.8107,
+     "E_all": 0.3903,
+     "E_hard": 0.5861,
+     "hard_over_all": 1.5017,
+     "hard_over_all_rel_ours": 1.3938,
+     "tie_rate": 0.0,
+     "native_top1": 1.0,
+     "native_minus_E_all": 0.6097,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 1.0
+    },
+    "ZP-200 All": {
+     "structural65": 0.8489,
+     "all666": 0.881,
+     "E_all": 0.5654,
+     "E_hard": 0.7152,
+     "hard_over_all": 1.2648,
+     "hard_over_all_rel_ours": 1.174,
+     "tie_rate": 0.0,
+     "native_top1": 0.6486,
+     "native_minus_E_all": 0.0832,
+     "native_tie_rate": 0.0,
+     "native_rank_mean": 2.6216
+    },
+    "LLMMAP-OS cos Gen": {
+     "structural65": 0.9086,
+     "all666": 0.9498,
+     "E_all": 0.7016,
+     "E_hard": 0.8124,
+     "hard_over_all": 1.1579,
+     "hard_over_all_rel_ours": 1.0747,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS cos All": {
+     "structural65": 0.9443,
+     "all666": 0.9739,
+     "E_all": 0.7773,
+     "E_hard": 0.8736,
+     "hard_over_all": 1.1239,
+     "hard_over_all_rel_ours": 1.0432,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc Gen": {
+     "structural65": 0.8969,
+     "all666": 0.9399,
+     "E_all": 0.6908,
+     "E_hard": 0.7958,
+     "hard_over_all": 1.1519,
+     "hard_over_all_rel_ours": 1.0692,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc All": {
+     "structural65": 0.9443,
+     "all666": 0.9728,
+     "E_all": 0.7762,
+     "E_hard": 0.8694,
+     "hard_over_all": 1.12,
+     "hard_over_all_rel_ours": 1.0396,
+     "tie_rate": 0.0
+    }
+   }
+  }
+ },
+ "secondary": {
+  "a_representation": {
+   "met|Gen|v2": {
+    "contrast": "MET-Hamming - MET-e5 (Gen)",
+    "d_all": {
+     "a": 0.4824,
+     "b": 0.4734,
+     "delta": 0.0089,
+     "ci": [
+      -0.008,
+      0.0278
+     ]
+    },
+    "d_hard": {
+     "a": 0.8105,
+     "b": 0.8425,
+     "delta": -0.0319,
+     "ci": [
+      -0.0498,
+      -0.0161
+     ]
+    }
+   },
+   "met|All|v2": {
+    "contrast": "MET-Hamming - MET-e5 (All)",
+    "d_all": {
+     "a": 0.736,
+     "b": 0.7642,
+     "delta": -0.0282,
+     "ci": [
+      -0.04,
+      -0.0155
+     ]
+    },
+    "d_hard": {
+     "a": 0.8965,
+     "b": 0.9081,
+     "delta": -0.0116,
+     "ci": [
+      -0.0218,
+      -0.0011
+     ]
+    }
+   },
+   "zp|Gen|v2": {
+    "contrast": "ZP-512 - ZP-200 (Gen)",
+    "d_all": {
+     "a": 0.3798,
+     "b": 0.3605,
+     "delta": 0.0193,
+     "ci": [
+      0.0099,
+      0.0301
+     ]
+    },
+    "d_hard": {
+     "a": 0.774,
+     "b": 0.7789,
+     "delta": -0.0049,
+     "ci": [
+      -0.0147,
+      0.0042
+     ]
+    }
+   },
+   "zp|All|v2": {
+    "contrast": "ZP-512 - ZP-200 (All)",
+    "d_all": {
+     "a": 0.5045,
+     "b": 0.4979,
+     "delta": 0.0066,
+     "ci": [
+      -0.0038,
+      0.0174
+     ]
+    },
+    "d_hard": {
+     "a": 0.813,
+     "b": 0.8193,
+     "delta": -0.0063,
+     "ci": [
+      -0.0182,
+      0.006
+     ]
+    }
+   },
+   "met|Gen|v1": {
+    "contrast": "MET-Hamming - MET-e5 (Gen)",
+    "d_all": {
+     "a": 0.5157,
+     "b": 0.4822,
+     "delta": 0.0335,
+     "ci": [
+      0.0108,
+      0.0584
+     ]
+    },
+    "d_hard": {
+     "a": 0.6373,
+     "b": 0.5761,
+     "delta": 0.0612,
+     "ci": [
+      0.0345,
+      0.0827
+     ]
+    }
+   },
+   "met|All|v1": {
+    "contrast": "MET-Hamming - MET-e5 (All)",
+    "d_all": {
+     "a": 0.8054,
+     "b": 0.8314,
+     "delta": -0.0259,
+     "ci": [
+      -0.0443,
+      -0.0076
+     ]
+    },
+    "d_hard": {
+     "a": 0.873,
+     "b": 0.8909,
+     "delta": -0.0179,
+     "ci": [
+      -0.0388,
+      -0.0027
+     ]
+    }
+   },
+   "zp|Gen|v1": {
+    "contrast": "ZP-512 - ZP-200 (Gen)",
+    "d_all": {
+     "a": 0.373,
+     "b": 0.3903,
+     "delta": -0.0173,
+     "ci": [
+      -0.0335,
+      -0.0011
+     ]
+    },
+    "d_hard": {
+     "a": 0.5894,
+     "b": 0.5861,
+     "delta": 0.0033,
+     "ci": [
+      -0.0121,
+      0.0227
+     ]
+    }
+   },
+   "zp|All|v1": {
+    "contrast": "ZP-512 - ZP-200 (All)",
+    "d_all": {
+     "a": 0.5568,
+     "b": 0.5654,
+     "delta": -0.0086,
+     "ci": [
+      -0.0303,
+      0.013
+     ]
+    },
+    "d_hard": {
+     "a": 0.7006,
+     "b": 0.7152,
+     "delta": -0.0145,
+     "ci": [
+      -0.0309,
+      0.0085
+     ]
+    }
+   }
+  },
+  "b_blocks_v2": {
+   "blocks": {
+    "new48": 48,
+    "v1_37": 37
+   },
+   "rows": {
+    "OURS att": {
+     "new48": {
+      "E_all": 0.715,
+      "ci": [
+       0.691,
+       0.7403
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.7855,
+      "ci": [
+       0.7522,
+       0.8177
+      ]
+     }
+    },
+    "OURS lin": {
+     "new48": {
+      "E_all": 0.8433,
+      "ci": [
+       0.82,
+       0.8658
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.8908,
+      "ci": [
+       0.8703,
+       0.9092
+      ]
+     }
+    },
+    "PAPER8 att": {
+     "new48": {
+      "E_all": 0.6893,
+      "ci": [
+       0.6665,
+       0.7127
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.7522,
+      "ci": [
+       0.7062,
+       0.7927
+      ]
+     }
+    },
+    "MET-Hamming Gen": {
+     "new48": {
+      "E_all": 0.49,
+      "ci": [
+       0.4608,
+       0.5175
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.4724,
+      "ci": [
+       0.4508,
+       0.493
+      ]
+     }
+    },
+    "MET-Hamming All": {
+     "new48": {
+      "E_all": 0.7142,
+      "ci": [
+       0.6925,
+       0.7383
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.7643,
+      "ci": [
+       0.7384,
+       0.7903
+      ]
+     }
+    },
+    "MET-e5 Gen": {
+     "new48": {
+      "E_all": 0.4833,
+      "ci": [
+       0.4592,
+       0.5092
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.4605,
+      "ci": [
+       0.4346,
+       0.4876
+      ]
+     }
+    },
+    "MET-e5 All": {
+     "new48": {
+      "E_all": 0.7308,
+      "ci": [
+       0.7091,
+       0.7517
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.8076,
+      "ci": [
+       0.7773,
+       0.8368
+      ]
+     }
+    },
+    "ZP-512 Gen": {
+     "new48": {
+      "E_all": 0.4233,
+      "ci": [
+       0.4025,
+       0.445
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.3232,
+      "ci": [
+       0.3005,
+       0.347
+      ]
+     }
+    },
+    "ZP-512 All": {
+     "new48": {
+      "E_all": 0.505,
+      "ci": [
+       0.4816,
+       0.53
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.5038,
+      "ci": [
+       0.4778,
+       0.5308
+      ]
+     }
+    },
+    "ZP-200 Gen": {
+     "new48": {
+      "E_all": 0.3908,
+      "ci": [
+       0.3683,
+       0.4125
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.3211,
+      "ci": [
+       0.2973,
+       0.347
+      ]
+     }
+    },
+    "ZP-200 All": {
+     "new48": {
+      "E_all": 0.4783,
+      "ci": [
+       0.455,
+       0.4983
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.5232,
+      "ci": [
+       0.4973,
+       0.5503
+      ]
+     }
+    },
+    "LLMMAP-OS cos Gen": {
+     "new48": {
+      "E_all": 0.3033,
+      "ci": [
+       0.2725,
+       0.3367
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.5816,
+      "ci": [
+       0.5568,
+       0.6043
+      ]
+     }
+    },
+    "LLMMAP-OS cos All": {
+     "new48": {
+      "E_all": 0.4017,
+      "ci": [
+       0.38,
+       0.4267
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.7157,
+      "ci": [
+       0.6919,
+       0.7395
+      ]
+     }
+    },
+    "LLMMAP-OS euc Gen": {
+     "new48": {
+      "E_all": 0.3033,
+      "ci": [
+       0.2758,
+       0.3325
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.5308,
+      "ci": [
+       0.5114,
+       0.5492
+      ]
+     }
+    },
+    "LLMMAP-OS euc All": {
+     "new48": {
+      "E_all": 0.4042,
+      "ci": [
+       0.3783,
+       0.4342
+      ]
+     },
+     "v1_37": {
+      "E_all": 0.7103,
+      "ci": [
+       0.6854,
+       0.7341
+      ]
+     }
+    }
+   }
+  },
+  "c_config_type": {
+   "v2": {
+    "share_of_slots": {
+     "none": 0.0696,
+     "sys": 0.6475,
+     "RAG": 0.1449,
+     "CoT": 0.1379
+    },
+    "rows": {
+     "OURS att": {
+      "none": 0.8446,
+      "sys": 0.7904,
+      "RAG": 0.6071,
+      "CoT": 0.6314
+     },
+     "OURS lin": {
+      "none": 0.9459,
+      "sys": 0.8975,
+      "RAG": 0.7532,
+      "CoT": 0.7816
+     },
+     "OURS p8": {
+      "none": 0.8554,
+      "sys": 0.7624,
+      "RAG": 0.5201,
+      "CoT": 0.6389
+     },
+     "OURS p8lin": {
+      "none": 0.9189,
+      "sys": 0.8794,
+      "RAG": 0.6136,
+      "CoT": 0.7509
+     },
+     "MET-Hamming Gen": {
+      "none": 0.9324,
+      "sys": 0.5116,
+      "RAG": 0.2435,
+      "CoT": 0.3686
+     },
+     "MET-Hamming All": {
+      "none": 0.75,
+      "sys": 0.8379,
+      "RAG": 0.4221,
+      "CoT": 0.5802
+     },
+     "MET-e5 Gen": {
+      "none": 0.8784,
+      "sys": 0.5087,
+      "RAG": 0.2403,
+      "CoT": 0.3481
+     },
+     "MET-e5 All": {
+      "none": 0.8108,
+      "sys": 0.8619,
+      "RAG": 0.4578,
+      "CoT": 0.6041
+     },
+     "ZP-512 Gen": {
+      "none": 0.9595,
+      "sys": 0.4026,
+      "RAG": 0.2013,
+      "CoT": 0.1672
+     },
+     "ZP-512 All": {
+      "none": 0.6622,
+      "sys": 0.5828,
+      "RAG": 0.3084,
+      "CoT": 0.2628
+     },
+     "ZP-200 Gen": {
+      "none": 0.9797,
+      "sys": 0.3815,
+      "RAG": 0.1623,
+      "CoT": 0.157
+     },
+     "ZP-200 All": {
+      "none": 0.6216,
+      "sys": 0.5821,
+      "RAG": 0.3117,
+      "CoT": 0.2355
+     },
+     "LLMMAP-OS cos Gen": {
+      "none": 0.8041,
+      "sys": 0.4571,
+      "RAG": 0.2208,
+      "CoT": 0.2935
+     },
+     "LLMMAP-OS cos All": {
+      "none": 0.5878,
+      "sys": 0.6126,
+      "RAG": 0.276,
+      "CoT": 0.4403
+     },
+     "LLMMAP-OS euc Gen": {
+      "none": 0.7905,
+      "sys": 0.4259,
+      "RAG": 0.224,
+      "CoT": 0.2833
+     },
+     "LLMMAP-OS euc All": {
+      "none": 0.5946,
+      "sys": 0.6083,
+      "RAG": 0.2857,
+      "CoT": 0.4403
+     }
+    }
+   },
+   "v1": {
+    "share_of_slots": {
+     "none": 0.08,
+     "sys": 0.72,
+     "RAG": 0.08,
+     "CoT": 0.12
+    },
+    "rows": {
+     "OURS att": {
+      "none": 0.9649,
+      "sys": 0.8787,
+      "RAG": 0.8622,
+      "CoT": 0.8072
+     },
+     "OURS lin": {
+      "none": 1.0,
+      "sys": 0.9399,
+      "RAG": 0.9324,
+      "CoT": 0.8829
+     },
+     "OURS p8": {
+      "none": 0.9081,
+      "sys": 0.8574,
+      "RAG": 0.7838,
+      "CoT": 0.7712
+     },
+     "MET-Hamming Gen": {
+      "none": 0.973,
+      "sys": 0.4865,
+      "RAG": 0.527,
+      "CoT": 0.3784
+     },
+     "MET-Hamming All": {
+      "none": 0.7838,
+      "sys": 0.8589,
+      "RAG": 0.7162,
+      "CoT": 0.5586
+     },
+     "MET-e5 Gen": {
+      "none": 0.9189,
+      "sys": 0.464,
+      "RAG": 0.4054,
+      "CoT": 0.3514
+     },
+     "MET-e5 All": {
+      "none": 0.8514,
+      "sys": 0.8829,
+      "RAG": 0.7703,
+      "CoT": 0.5495
+     },
+     "ZP-512 Gen": {
+      "none": 0.9865,
+      "sys": 0.3408,
+      "RAG": 0.3649,
+      "CoT": 0.1622
+     },
+     "ZP-512 All": {
+      "none": 0.6892,
+      "sys": 0.5991,
+      "RAG": 0.4595,
+      "CoT": 0.2793
+     },
+     "ZP-200 Gen": {
+      "none": 1.0,
+      "sys": 0.3574,
+      "RAG": 0.3784,
+      "CoT": 0.1892
+     },
+     "ZP-200 All": {
+      "none": 0.6351,
+      "sys": 0.6261,
+      "RAG": 0.4595,
+      "CoT": 0.2252
+     },
+     "LLMMAP-OS cos Gen": {
+      "none": 0.9324,
+      "sys": 0.7072,
+      "RAG": 0.5946,
+      "CoT": 0.5856
+     },
+     "LLMMAP-OS cos All": {
+      "none": 0.9189,
+      "sys": 0.7883,
+      "RAG": 0.7162,
+      "CoT": 0.6577
+     },
+     "LLMMAP-OS euc Gen": {
+      "none": 0.9189,
+      "sys": 0.6982,
+      "RAG": 0.5946,
+      "CoT": 0.5586
+     },
+     "LLMMAP-OS euc All": {
+      "none": 0.9189,
+      "sys": 0.7853,
+      "RAG": 0.7162,
+      "CoT": 0.6667
+     }
+    }
+   }
+  },
+  "d_llmmap_os": {
+   "overlap_rule": "released encoder's training models (37, all v1) = in-sample",
+   "rows": {
+    "cos|Gen|v2": {
+     "E_all": 0.4245,
+     "E_all_ci": [
+      0.4056,
+      0.4447
+     ],
+     "E_hard": 0.6421,
+     "E_hard_ci": [
+      0.6207,
+      0.6642
+     ],
+     "d_all_ours_minus": {
+      "a": 0.7457,
+      "b": 0.4245,
+      "delta": 0.3212,
+      "ci": [
+       0.2949,
+       0.3445
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.8683,
+      "b": 0.6421,
+      "delta": 0.2262,
+      "ci": [
+       0.2043,
+       0.2476
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.5816
+     },
+     "out_of_sample": {
+      "n": 48,
+      "E_all": 0.3033
+     },
+     "tie_rate": 0.0,
+     "top3": 0.6296,
+     "mrr": 0.5573
+    },
+    "cos|All|v2": {
+     "E_all": 0.5384,
+     "E_all_ci": [
+      0.5219,
+      0.5553
+     ],
+     "E_hard": 0.7351,
+     "E_hard_ci": [
+      0.7172,
+      0.754
+     ],
+     "d_all_ours_minus": {
+      "a": 0.7457,
+      "b": 0.5384,
+      "delta": 0.2073,
+      "ci": [
+       0.1812,
+       0.2316
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.8683,
+      "b": 0.7351,
+      "delta": 0.1332,
+      "ci": [
+       0.1152,
+       0.1512
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.7157
+     },
+     "out_of_sample": {
+      "n": 48,
+      "E_all": 0.4017
+     },
+     "tie_rate": 0.0,
+     "top3": 0.7638,
+     "mrr": 0.6683
+    },
+    "euc|Gen|v2": {
+     "E_all": 0.4024,
+     "E_all_ci": [
+      0.384,
+      0.4226
+     ],
+     "E_hard": 0.6389,
+     "E_hard_ci": [
+      0.62,
+      0.6589
+     ],
+     "d_all_ours_minus": {
+      "a": 0.7457,
+      "b": 0.4024,
+      "delta": 0.3433,
+      "ci": [
+       0.3184,
+       0.3641
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.8683,
+      "b": 0.6389,
+      "delta": 0.2293,
+      "ci": [
+       0.209,
+       0.2495
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.5308
+     },
+     "out_of_sample": {
+      "n": 48,
+      "E_all": 0.3033
+     },
+     "tie_rate": 0.0,
+     "top3": 0.6136,
+     "mrr": 0.5336
+    },
+    "euc|All|v2": {
+     "E_all": 0.5374,
+     "E_all_ci": [
+      0.519,
+      0.5576
+     ],
+     "E_hard": 0.7382,
+     "E_hard_ci": [
+      0.72,
+      0.7568
+     ],
+     "d_all_ours_minus": {
+      "a": 0.7457,
+      "b": 0.5374,
+      "delta": 0.2083,
+      "ci": [
+       0.1823,
+       0.233
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.8683,
+      "b": 0.7382,
+      "delta": 0.13,
+      "ci": [
+       0.1123,
+       0.1488
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.7103
+     },
+     "out_of_sample": {
+      "n": 48,
+      "E_all": 0.4042
+     },
+     "tie_rate": 0.0,
+     "top3": 0.7581,
+     "mrr": 0.6667
+    },
+    "cos|Gen|v1": {
+     "E_all": 0.7016,
+     "E_all_ci": [
+      0.6768,
+      0.7254
+     ],
+     "E_hard": 0.8124,
+     "E_hard_ci": [
+      0.7648,
+      0.8236
+     ],
+     "d_all_ours_minus": {
+      "a": 0.8757,
+      "b": 0.7016,
+      "delta": 0.1741,
+      "ci": [
+       0.1429,
+       0.2039
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.9435,
+      "b": 0.8124,
+      "delta": 0.131,
+      "ci": [
+       0.1097,
+       0.1642
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.7016
+     },
+     "out_of_sample": {
+      "n": 0,
+      "E_all": null
+     },
+     "tie_rate": 0.0,
+     "top3": 0.8735,
+     "mrr": 0.7959
+    },
+    "cos|All|v1": {
+     "E_all": 0.7773,
+     "E_all_ci": [
+      0.747,
+      0.8065
+     ],
+     "E_hard": 0.8736,
+     "E_hard_ci": [
+      0.8373,
+      0.8827
+     ],
+     "d_all_ours_minus": {
+      "a": 0.8757,
+      "b": 0.7773,
+      "delta": 0.0984,
+      "ci": [
+       0.0679,
+       0.128
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.9435,
+      "b": 0.8736,
+      "delta": 0.0698,
+      "ci": [
+       0.0487,
+       0.0929
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.7773
+     },
+     "out_of_sample": {
+      "n": 0,
+      "E_all": null
+     },
+     "tie_rate": 0.0,
+     "top3": 0.9114,
+     "mrr": 0.8511
+    },
+    "euc|Gen|v1": {
+     "E_all": 0.6908,
+     "E_all_ci": [
+      0.6638,
+      0.7168
+     ],
+     "E_hard": 0.7958,
+     "E_hard_ci": [
+      0.736,
+      0.8076
+     ],
+     "d_all_ours_minus": {
+      "a": 0.8757,
+      "b": 0.6908,
+      "delta": 0.1849,
+      "ci": [
+       0.1518,
+       0.2162
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.9435,
+      "b": 0.7958,
+      "delta": 0.1477,
+      "ci": [
+       0.1261,
+       0.1942
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.6908
+     },
+     "out_of_sample": {
+      "n": 0,
+      "E_all": null
+     },
+     "tie_rate": 0.0,
+     "top3": 0.8595,
+     "mrr": 0.7829
+    },
+    "euc|All|v1": {
+     "E_all": 0.7762,
+     "E_all_ci": [
+      0.747,
+      0.8054
+     ],
+     "E_hard": 0.8694,
+     "E_hard_ci": [
+      0.8273,
+      0.88
+     ],
+     "d_all_ours_minus": {
+      "a": 0.8757,
+      "b": 0.7762,
+      "delta": 0.0995,
+      "ci": [
+       0.0694,
+       0.1287
+      ]
+     },
+     "d_hard_ours_minus": {
+      "a": 0.9435,
+      "b": 0.8694,
+      "delta": 0.0741,
+      "ci": [
+       0.0514,
+       0.1027
+      ]
+     },
+     "in_sample": {
+      "n": 37,
+      "E_all": 0.7762
+     },
+     "out_of_sample": {
+      "n": 0,
+      "E_all": null
+     },
+     "tie_rate": 0.0,
+     "top3": 0.9027,
+     "mrr": 0.8489
+    }
+   }
+  },
+  "top3_mrr_ties": {
+   "v2": {
+    "OURS att": {
+     "top3": 0.9001,
+     "mrr": 0.829
+    },
+    "PAPER8 att": {
+     "top3": 0.8804,
+     "mrr": 0.8061
+    },
+    "OURS lin": {
+     "top3": 0.9435,
+     "mrr": 0.9078
+    },
+    "MET-Hamming Gen": {
+     "top3": 0.6362,
+     "mrr": 0.5813,
+     "top1": 0.4824,
+     "tie_rate": 0.0
+    },
+    "MET-Hamming All": {
+     "top3": 0.8391,
+     "mrr": 0.7976,
+     "top1": 0.736,
+     "tie_rate": 0.0
+    },
+    "MET-e5 Gen": {
+     "top3": 0.5981,
+     "mrr": 0.5608,
+     "top1": 0.4734,
+     "tie_rate": 0.0
+    },
+    "MET-e5 All": {
+     "top3": 0.8588,
+     "mrr": 0.8206,
+     "top1": 0.7642,
+     "tie_rate": 0.0
+    },
+    "ZP-512 Gen": {
+     "top3": 0.5092,
+     "mrr": 0.4735,
+     "top1": 0.3798,
+     "tie_rate": 0.0
+    },
+    "ZP-512 All": {
+     "top3": 0.6518,
+     "mrr": 0.6001,
+     "top1": 0.5045,
+     "tie_rate": 0.0
+    },
+    "ZP-200 Gen": {
+     "top3": 0.4908,
+     "mrr": 0.4561,
+     "top1": 0.3605,
+     "tie_rate": 0.0
+    },
+    "ZP-200 All": {
+     "top3": 0.6386,
+     "mrr": 0.5934,
+     "top1": 0.4979,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS cos Gen": {
+     "top3": 0.6296,
+     "mrr": 0.5573,
+     "top1": 0.4245,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS cos All": {
+     "top3": 0.7638,
+     "mrr": 0.6683,
+     "top1": 0.5384,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc Gen": {
+     "top3": 0.6136,
+     "mrr": 0.5336,
+     "top1": 0.4024,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc All": {
+     "top3": 0.7581,
+     "mrr": 0.6667,
+     "top1": 0.5374,
+     "tie_rate": 0.0
+    }
+   },
+   "v1": {
+    "OURS att": {
+     "top3": 0.9559,
+     "mrr": 0.9196
+    },
+    "PAPER8 att": {
+     "top3": 0.941,
+     "mrr": 0.8984
+    },
+    "OURS lin": {
+     "top3": 0.9784,
+     "mrr": 0.9594
+    },
+    "MET-Hamming Gen": {
+     "top3": 0.6832,
+     "mrr": 0.6231,
+     "top1": 0.5157,
+     "tie_rate": 0.0
+    },
+    "MET-Hamming All": {
+     "top3": 0.8854,
+     "mrr": 0.8557,
+     "top1": 0.8054,
+     "tie_rate": 0.0
+    },
+    "MET-e5 Gen": {
+     "top3": 0.6422,
+     "mrr": 0.5923,
+     "top1": 0.4822,
+     "tie_rate": 0.0
+    },
+    "MET-e5 All": {
+     "top3": 0.9135,
+     "mrr": 0.8804,
+     "top1": 0.8314,
+     "tie_rate": 0.0
+    },
+    "ZP-512 Gen": {
+     "top3": 0.5232,
+     "mrr": 0.4868,
+     "top1": 0.373,
+     "tie_rate": 0.0
+    },
+    "ZP-512 All": {
+     "top3": 0.6897,
+     "mrr": 0.6472,
+     "top1": 0.5568,
+     "tie_rate": 0.0
+    },
+    "ZP-200 Gen": {
+     "top3": 0.5178,
+     "mrr": 0.4956,
+     "top1": 0.3903,
+     "tie_rate": 0.0
+    },
+    "ZP-200 All": {
+     "top3": 0.6876,
+     "mrr": 0.6535,
+     "top1": 0.5654,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS cos Gen": {
+     "top3": 0.8735,
+     "mrr": 0.7959,
+     "top1": 0.7016,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS cos All": {
+     "top3": 0.9114,
+     "mrr": 0.8511,
+     "top1": 0.7773,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc Gen": {
+     "top3": 0.8595,
+     "mrr": 0.7829,
+     "top1": 0.6908,
+     "tie_rate": 0.0
+    },
+    "LLMMAP-OS euc All": {
+     "top3": 0.9027,
+     "mrr": 0.8489,
+     "top1": 0.7762,
+     "tie_rate": 0.0
+    }
+   }
+  },
+  "dblbos_control": {
+   "ZP-512": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+     "pearson_dblbos_vs_genref": 0.7090199029343507,
+     "pearson_genref_vs_native": 0.7865130884149826,
+     "pearson_dblbos_vs_native": 0.6717295170100518,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+     "pearson_dblbos_vs_genref": 0.846153384044006,
+     "pearson_genref_vs_native": 0.9126210940649321,
+     "pearson_dblbos_vs_native": 0.7883797420373438,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    },
+    "google/gemma-2-9b-it": {
+     "pearson_dblbos_vs_genref": 0.5801286800322341,
+     "pearson_genref_vs_native": 0.8274137915675864,
+     "pearson_dblbos_vs_native": 0.6593248336183839,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    },
+    "meta-llama/Llama-2-7b-chat-hf": {
+     "pearson_dblbos_vs_genref": 0.8166124301570193,
+     "pearson_genref_vs_native": 0.8560096099793544,
+     "pearson_dblbos_vs_native": 0.8656977782589321,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    }
+   },
+   "note": "Review D030/P1 stop A: descriptive only, native rows; (i) Pearson(F_dblbos, F_gen_ref) vs Pearson(F_gen_ref, F_native_tgt); (ii) rank of the true model for native_tgt against the 85-model ZP Gen library, with and without that model's reference replaced by gen_ref_dblbos",
+   "ZP-200": {
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+     "pearson_dblbos_vs_genref": 0.6985470669000453,
+     "pearson_genref_vs_native": 0.7842351384558729,
+     "pearson_dblbos_vs_native": 0.6616241812772184,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+     "pearson_dblbos_vs_genref": 0.8362909004767106,
+     "pearson_genref_vs_native": 0.9079589239467182,
+     "pearson_dblbos_vs_native": 0.772432626999691,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    },
+    "google/gemma-2-9b-it": {
+     "pearson_dblbos_vs_genref": 0.6113298153876634,
+     "pearson_genref_vs_native": 0.8488660284464823,
+     "pearson_dblbos_vs_native": 0.6452836094199292,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    },
+    "meta-llama/Llama-2-7b-chat-hf": {
+     "pearson_dblbos_vs_genref": 0.8510985735188983,
+     "pearson_genref_vs_native": 0.8900576657706305,
+     "pearson_dblbos_vs_native": 0.8890286667877497,
+     "rank_native_vs_gen_library": 1.0,
+     "rank_native_vs_gen_library_with_dblbos_ref": 1.0
+    }
+   }
+  }
+ },
+ "tail": {
+  "v2": {
+   "OURS att": {
+    "min": 0.552,
+    "p10": 0.96,
+    "median": 0.988,
+    "cvar01": 0.9273,
+    "n_below_090": 45,
+    "n": 3570
+   },
+   "PAPER8 att": {
+    "min": 0.54,
+    "p10": 0.952,
+    "median": 0.988,
+    "cvar01": 0.9175,
+    "n_below_090": 59,
+    "n": 3570
+   },
+   "met B* (MET-e5 All)": {
+    "min": 0.46,
+    "p10": 0.9,
+    "median": 0.98,
+    "cvar01": 0.8686,
+    "n_below_090": 233,
+    "n": 3570
+   },
+   "zp B* (ZP-512 All)": {
+    "min": 0.4,
+    "p10": 0.78,
+    "median": 0.92,
+    "cvar01": 0.7258,
+    "n_below_090": 1320,
+    "n": 3570
+   }
+  },
+  "v1": {
+   "OURS att": {
+    "min": 0.732,
+    "p10": 0.968,
+    "median": 0.996,
+    "cvar01": 0.9435,
+    "n_below_090": 4,
+    "n": 666
+   },
+   "PAPER8 att": {
+    "min": 0.712,
+    "p10": 0.956,
+    "median": 0.992,
+    "cvar01": 0.9312,
+    "n_below_090": 3,
+    "n": 666
+   },
+   "met B* (MET-e5 All)": {
+    "min": 0.78,
+    "p10": 0.92,
+    "median": 0.98,
+    "cvar01": 0.8909,
+    "n_below_090": 22,
+    "n": 666
+   },
+   "zp B* (ZP-200 All)": {
+    "min": 0.56,
+    "p10": 0.76,
+    "median": 0.9,
+    "cvar01": 0.7152,
+    "n_below_090": 306,
+    "n": 666
+   }
+  }
+ },
+ "mcnemar": {
+  "rule": "exact two-sided McNemar on per-trace top-1, ours = linear readout k=8; baseline traces with a top-1 tie excluded (Call 7); Holm over all tests in the table",
+  "n_tests": 16,
+  "tests": [
+   {
+    "view": "v2",
+    "cell": "MET-Hamming Gen",
+    "ours_only": 872,
+    "baseline_only": 61,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 1.1425362495929338e-184,
+    "p_holm": 1.485297124470814e-183
+   },
+   {
+    "view": "v2",
+    "cell": "MET-Hamming All",
+    "ours_only": 400,
+    "baseline_only": 128,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 1.3624954536101139e-33,
+    "p_holm": 5.4499818144404556e-33
+   },
+   {
+    "view": "v2",
+    "cell": "MET-e5 Gen",
+    "ours_only": 898,
+    "baseline_only": 68,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 1.1892843815046603e-185,
+    "p_holm": 1.6649981341065245e-184
+   },
+   {
+    "view": "v2",
+    "cell": "MET-e5 All",
+    "ours_only": 330,
+    "baseline_only": 118,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 2.763361714486864e-24,
+    "p_holm": 8.290085143460592e-24
+   },
+   {
+    "view": "v2",
+    "cell": "ZP-512 Gen",
+    "ours_only": 1090,
+    "baseline_only": 61,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 1.4375916608745382e-244,
+    "p_holm": 2.1563874913118072e-243
+   },
+   {
+    "view": "v2",
+    "cell": "ZP-512 All",
+    "ours_only": 851,
+    "baseline_only": 87,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 2.8281363016525117e-158,
+    "p_holm": 3.1109499318177626e-157
+   },
+   {
+    "view": "v2",
+    "cell": "ZP-200 Gen",
+    "ours_only": 1129,
+    "baseline_only": 59,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 2.171667669302508e-257,
+    "p_holm": 3.474668270884013e-256
+   },
+   {
+    "view": "v2",
+    "cell": "ZP-200 All",
+    "ours_only": 860,
+    "baseline_only": 82,
+    "n_traces": 2125,
+    "n_excluded_ties": 0,
+    "p": 2.4663607902138163e-164,
+    "p_holm": 2.959632948256579e-163
+   },
+   {
+    "view": "v1",
+    "cell": "MET-Hamming Gen",
+    "ours_only": 407,
+    "baseline_only": 17,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 4.526384451506263e-98,
+    "p_holm": 3.168469116054384e-97
+   },
+   {
+    "view": "v1",
+    "cell": "MET-Hamming All",
+    "ours_only": 160,
+    "baseline_only": 38,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 5.220839953678741e-19,
+    "p_holm": 1.0441679907357481e-18
+   },
+   {
+    "view": "v1",
+    "cell": "MET-e5 Gen",
+    "ours_only": 441,
+    "baseline_only": 20,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 1.788888298111183e-104,
+    "p_holm": 1.4311106384889465e-103
+   },
+   {
+    "view": "v1",
+    "cell": "MET-e5 All",
+    "ours_only": 131,
+    "baseline_only": 33,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 5.075539182133955e-15,
+    "p_holm": 5.075539182133955e-15
+   },
+   {
+    "view": "v1",
+    "cell": "ZP-512 Gen",
+    "ours_only": 530,
+    "baseline_only": 8,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 3.7282203424253916e-145,
+    "p_holm": 3.7282203424253915e-144
+   },
+   {
+    "view": "v1",
+    "cell": "ZP-512 All",
+    "ours_only": 367,
+    "baseline_only": 15,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 6.593679542597795e-89,
+    "p_holm": 3.9562077255586765e-88
+   },
+   {
+    "view": "v1",
+    "cell": "ZP-200 Gen",
+    "ours_only": 512,
+    "baseline_only": 6,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 6.1463413258600295e-143,
+    "p_holm": 5.5317071932740266e-142
+   },
+   {
+    "view": "v1",
+    "cell": "ZP-200 All",
+    "ours_only": 359,
+    "baseline_only": 15,
+    "n_traces": 925,
+    "n_excluded_ties": 0,
+    "p": 1.2225831787200552e-86,
+    "p_holm": 6.112915893600276e-86
+   }
+  ]
+ },
+ "wall_s": 2.4
+}

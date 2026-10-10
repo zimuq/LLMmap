@@ -1,0 +1,21 @@
+{
+ "chain": [
+  193,
+  140,
+  237,
+  114,
+  233,
+  117,
+  0,
+  16
+ ],
+ "n_iter": 441,
+ "reproduces_D020": {
+  "cnt_total": true,
+  "cnt_model": true,
+  "cnt_pair": true
+ },
+ "all_equal": true,
+ "mean_top1": 0.9372972972972973,
+ "path": "asserted reproduction (Call 1 primary)"
+}

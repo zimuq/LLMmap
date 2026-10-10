@@ -1,0 +1,14 @@
+{
+ "score_sha256": {
+  "met_hamming": "da73d3d431d3d454bf10ae2770c7349f863e5820acc135effe7ee2d63d42e292",
+  "met_e5": "1be308c87220ab1a4cfa18f7763b8b61fce0017ae46422954841629baf8f844b",
+  "zp_512": "975d123e08a4537faf1f8ff6da64b7cc13684467bcb7e696eb7db92fbc08a630",
+  "zp_200": "934b6c446a305cff3909320836769b886f868e5e9fe2ed079ab054a7b5079eee",
+  "os_cos_v2": "9826ad97a5ba4a6b22efe6ce86053afff502b81e4544fcd34010c5e7a93f44e9",
+  "os_euc_v2": "98fedcc3e5fa44f8dba896d30ac33108ce5c98c47c32bcd602bd2a35e65fc904",
+  "os_cos_v1": "26335a841c689285d3cb60c280efe5d957b8169a123e29ab354afe00975f9b8e",
+  "os_euc_v1": "ac21a38beefeb2a89e9acf4264c322df19e68ed49518fcc78616914042ac0c54"
+ },
+ "written": "2026-10-10T17:31:02",
+ "format": "D029: cnt_total (25), cnt_model (n x 25, fractional tie credit), cnt_pair (v2: H_all 57, v1: D016 65 structural), dirH (v2, 57 x 2 x 25, ties 0.5), cnt_pair666 (v1), dir_all / cnt_pair_all (all pairs, combinations order), tie, rank (average), native_* (MET/ZP)"
+}

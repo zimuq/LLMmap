@@ -1,0 +1,69 @@
+{
+ "variant": "512",
+ "fingerprint": [
+  {
+   "model": 27,
+   "unit": 23,
+   "rel": 1.040730617644045e-05,
+   "sim_official_vs_fast": 1.0
+  },
+  {
+   "model": 32,
+   "unit": 5,
+   "rel": 6.5069655895153545e-06,
+   "sim_official_vs_fast": 0.9999999403953552
+  },
+  {
+   "model": 12,
+   "unit": 0,
+   "rel": 9.746530562460957e-06,
+   "sim_official_vs_fast": 1.0
+  },
+  {
+   "model": 59,
+   "unit": 16,
+   "rel": 8.682227092835299e-06,
+   "sim_official_vs_fast": 0.9999999403953552
+  },
+  {
+   "model": 82,
+   "unit": 20,
+   "rel": 6.333186429049491e-06,
+   "sim_official_vs_fast": 1.0
+  }
+ ],
+ "pearson": [
+  {
+   "official": 0.5558963418006897,
+   "ours": 0.5558963676956707,
+   "abs_diff": 2.589498104832444e-08
+  },
+  {
+   "official": 0.5484809875488281,
+   "ours": 0.548480994422239,
+   "abs_diff": 6.87341084049109e-09
+  },
+  {
+   "official": 0.5880997180938721,
+   "ours": 0.5880997511461983,
+   "abs_diff": 3.30523262093152e-08
+  },
+  {
+   "official": 0.5548510551452637,
+   "ours": 0.554851026571443,
+   "abs_diff": 2.857382064291869e-08
+  },
+  {
+   "official": 0.679423451423645,
+   "ours": 0.6794234964628351,
+   "abs_diff": 4.503919004417156e-08
+  }
+ ],
+ "ok": true,
+ "tol": {
+  "rel": 0.0001,
+  "sim": 0.999999,
+  "pearson_abs": 1e-05
+ },
+ "note": "official path is float32 torch; ours float64"
+}
