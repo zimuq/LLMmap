@@ -253,8 +253,10 @@ def _unit_stats(units):
             b["n_empty"] += not x["text"].strip()
             b["n_length"] += x["finish"] == "length"
             b["n_tok"] += x["n_tok"]
-            groups.setdefault(x["p"], set()).add(x["text"])
-        for texts in groups.values():
+            groups.setdefault(x["p"], []).append(x["text"])
+        for texts, n in ((set(v), len(v)) for v in groups.values()):
+            if n < 2:            # a single sample cannot collapse (all_ref groups are mostly 1 per prompt)
+                continue
             b["n_prompt_groups"] += 1
             col = len(texts) == 1
             b["n_collapsed"] += col
