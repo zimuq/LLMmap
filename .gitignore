@@ -38,3 +38,5 @@ results/D029/models/
 # D030 (baseline_ext_v1 data; pilot outputs)
 data/baseline_ext_v1/
 results/D030/s0_pilot/
+results/D030/scores/
+data/baseline_ext_v1/derived/
