@@ -24,6 +24,13 @@
 <!-- TACC appends here. One entry per issue: what's wrong, exactly where
      (file + section), and why the ownership rule blocks a direct fix. -->
 
+**Issue 25 (2026-10-12) — D031 `## D`, "S2 — Train": the citation "D023 Call 2
+canonical order" points at the wrong Call.** D023 Call 2 is the identical-`k`
+PARITY rule. The canonical training order (queries shared with JG in JG order,
+then ascending id) is D023 Call 3 / D024 Call 2. D031/P1 Call 7 applies the latter
+(extended to PAPER8). No number is affected; the fix is a one-word edit in a
+design-owned section.
+
 **Issue 10 (2026-09-05) — the structural cause, and a proposal.
 DEFERRED by the human, 2026-09-05: keep on file, do not action this
 session.** The approach is accepted in principle; the human wants it
