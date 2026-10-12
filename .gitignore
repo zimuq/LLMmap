@@ -40,3 +40,8 @@ data/baseline_ext_v1/
 results/D030/s0_pilot/
 results/D030/scores/
 data/baseline_ext_v1/derived/
+
+# D031: per-run logits, checkpoints and budget kernel sums stay on $WORK; counts are committed
+results/D031/logits_*.npz
+results/D031/models/
+results/D031/budget_scores/
