@@ -212,7 +212,7 @@ def assert_choice_committed():
     return ch
 
 
-def cmd_lin(view):
+def cmd_lin(view, shard=0, nshard=1):
     global CTX
     t0 = time.time()
     assert_choice_committed()
@@ -224,7 +224,9 @@ def cmd_lin(view):
             for k in range(1, L.K_MAX + 1):
                 j = dict(name=name, k=k, draw=None, q=chain[:k], ident=name)
                 jobs.append(dict(j, key=L.key(j)))
-    print(f"[S2 lin {view}] {len(jobs)} fits, {N_WORK} workers x {N_THR} threads", flush=True)
+    jobs = jobs[shard::nshard]
+    tag = f"{view}_lin" + (f"_{shard}of{nshard}" if nshard > 1 else "")
+    print(f"[S2 lin {view} {shard}/{nshard}] {len(jobs)} fits, {N_WORK} workers x {N_THR} threads", flush=True)
     store, logits, meta = {}, {}, {}
     for i, (k, cn, lg, m) in enumerate(pool_map(_lin_worker, jobs)):
         for c, v in cn.items():
@@ -233,16 +235,16 @@ def cmd_lin(view):
         meta[k] = m
         if (i + 1) % 20 == 0:
             print(f"[S2 lin {view}] {i + 1}/{len(jobs)} ({(time.time() - t0) / 60:.1f} min)", flush=True)
-    if view == "v1":                          # JG k = 8 all-pair vs D030 Call 1 (same D020 code path)
+    if "JG|8|cnt_pair_all" in store:          # v1 JG k = 8 all-pair vs D030 Call 1 (same D020 code path)
         z = np.load("./results/D030/call1_linear_v1.npz")
         assert np.array_equal(store["JG|8|cnt_pair_all"].astype(np.float64), z["cnt_pair666"]), "v1 JG lin k8 vs D030"
-    np.savez_compressed(f"{L.OUT}/counts_{view}_lin.npz", **store)
-    np.savez_compressed(f"{L.OUT}/logits_{view}_lin.npz", **logits)
+    np.savez_compressed(f"{L.OUT}/counts_{tag}.npz", **store)
+    np.savez_compressed(f"{L.OUT}/logits_{tag}.npz", **logits)
     L.jdump(dict(schema="d031-runs-v1", view=view, readout="linear concat", fits=meta,
                  identical_input_asserted=sorted(k for k, m in meta.items() if m["ident"]),
                  s_test="written to counts/logits only; not summarised in S2",
                  wall_min=round((time.time() - t0) / 60, 1), node=os.uname().nodename),
-            f"{L.OUT}/runs_{view}_lin.json")
+            f"{L.OUT}/runs_{tag}.json")
     print(f"[S2 lin {view}] done, {len(jobs)} fits, wall {(time.time() - t0) / 60:.1f} min", flush=True)
 
 
@@ -303,6 +305,6 @@ if __name__ == "__main__":
     if cmd == "val":
         cmd_val()
     elif cmd == "lin":
-        cmd_lin(sys.argv[2])
+        cmd_lin(sys.argv[2], *map(int, sys.argv[3:5]))
     elif cmd == "att":
         cmd_att(sys.argv[2], int(sys.argv[3]), int(sys.argv[4]))
