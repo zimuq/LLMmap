@@ -1730,3 +1730,56 @@ breaking the all-model guardrail?
 
 <!-- append new entries below, one per D, once it produces a project-level
      takeaway worth remembering outside its own file -->
+
+---
+
+## D030 — Published fingerprinting methods collapse under deployment-config shift; MET competes only with config-spanning references and 31× the queries
+
+**Question (baselines, native protocols):** how do MET (ICLR'25) and
+ZeroPrint (WWW'26), run as published, do on our task? The setting is
+corpus v2 (85-way) and its v1 subset (37-way), with targets deployed under
+unseen S_test configs.
+
+**Labels** (vs each method's strongest of 4 variants, attention readout):
+
+| method | v2 85-way | v1 37-way |
+|---|---|---|
+| ZeroPrint | BETTER (+24 pp overall) | BETTER (+31 pp) |
+| MET | **WORSE** (hard pairs only) | BETTER (+4.4 pp) |
+
+**Against MET as published** (reference from one plain config): we lead
+by +26 pp (v2) and +36 pp (v1) overall, and on hard pairs as well.
+
+**MET-v2 WORSE, in context.**
+- MET reaches parity on v2 overall only with three things:
+  - a reference spanning deployment configs (our D024 idea);
+  - e5 embeddings;
+  - 250 answers per target against our 8.
+- It wins only on the 57 pre-registered hard pairs. Those were selected
+  as an LLMmap-type classifier's errors, which is not neutral across
+  representations (a design-side error, see D030's Review).
+- On unselected pair sets we lead or tie: all pairs +2.3 pp, worst 10%
+  +5.9 pp, all near-relatives tie.
+- Under the linear readout we lead MET on every cell.
+
+**Config coverage is method-independent.**
+- Both methods are near-perfect when target and reference share a config
+  (0.96–1.00).
+- With a single-config reference they collapse to 0.36–0.52 as soon as a
+  system prompt, RAG or CoT is present.
+- A config-spanning reference recovers MET to 0.74–0.83 (ZeroPrint
+  0.50–0.57).
+- This is external support for D024's "fingerprints must span deployment
+  configs".
+
+**Other.**
+- LLMmap's released open-set encoder: 0.72 on models it was trained on,
+  0.40 on unseen ones. That is why other papers report LLMmap low.
+- RAG and CoT deployments are the hard modes for every method, ours
+  included.
+- The "opposite failure" prediction was half right. MET fails on config
+  shift, not on near-relatives. ZeroPrint fails on config shift and then
+  uniformly, not specifically on near-relatives.
+- Process: first multi-P D. Two review stops each caught a real issue.
+- Cost: 127.8 node-h.
+
