@@ -1,0 +1,27 @@
+=== node: c642-091.vista.tacc.utexas.edu start: Tue Oct 13 02:15:06 AM CDT 2026 A: d031_analysis.py;d031_plots.py | B: - ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          23         201           0           0         189
+Swap:             24           4          20
+[A] [A] >>> d031_analysis.py 02:15:06
+[A] [S4 v2] labels: HELM* (HELM-SIG|raw) BETTER, TOP-K (TOP-K) INCONCLUSIVE, MMR* (MMR|pearson|0.7) WORSE, RANDOM (RANDOM) BETTER
+[A] [S4 v2] done (3.5 min)
+[A] Traceback (most recent call last):
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_analysis.py", line 492, in <module>
+[A]     main()
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_analysis.py", line 261, in main
+[A]     refs = {ro: {n: Arm(n, st.ref(ro, n, 8)) for n in ("JG", "PAPER8", "GC")} for ro in ("att", "lin")}
+[A]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_analysis.py", line 261, in <dictcomp>
+[A]     refs = {ro: {n: Arm(n, st.ref(ro, n, 8)) for n in ("JG", "PAPER8", "GC")} for ro in ("att", "lin")}
+[A]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_analysis.py", line 261, in <dictcomp>
+[A]     refs = {ro: {n: Arm(n, st.ref(ro, n, 8)) for n in ("JG", "PAPER8", "GC")} for ro in ("att", "lin")}
+[A]                            ^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_analysis.py", line 213, in ref
+[A]     assert np.array_equal(z23[f"JointGreedy|{k}|{r}|cnt_total"], a[f"{p}|{k}|{r}|cnt_total"])
+[A]                           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py", line 243, in __getitem__
+[A]     raise KeyError(f"{key} is not a file in the archive") from None
+[A] KeyError: 'JointGreedy|8|0|cnt_total is not a file in the archive'
+[A] [A] FAILED: d031_analysis.py
+=== end: Tue Oct 13 02:18:36 AM CDT 2026 rc=1 ===

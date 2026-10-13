@@ -219,11 +219,13 @@ def cmd_lin(view, shard=0, nshard=1):
     ch = json.load(open(f"{L.OUT}/chains.json"))
     CTX = Ctx(view, ("build", "test"))
     jobs = [dict(j, key=L.key(j)) for j in L.jobs(ch, view, "lin")]
-    if view == "v1":                         # v1 references (P1 Call 7): JG re-derived, PAPER8 fitted
+    if view == "v1":                         # v1 references (P1 Call 7): JG re-derived, PAPER8 fitted;
+        refs = []                            # queued first so an identical-input failure stops the job early
         for name, chain in (("JG", L.jg_chain("v1")), ("PAPER8", L.PAPER8)):
             for k in range(1, L.K_MAX + 1):
                 j = dict(name=name, k=k, draw=None, q=chain[:k], ident=name)
-                jobs.append(dict(j, key=L.key(j)))
+                refs.append(dict(j, key=L.key(j)))
+        jobs = refs + jobs
     jobs = jobs[shard::nshard]
     tag = f"{view}_lin" + (f"_{shard}of{nshard}" if nshard > 1 else "")
     print(f"[S2 lin {view} {shard}/{nshard}] {len(jobs)} fits, {N_WORK} workers x {N_THR} threads", flush=True)

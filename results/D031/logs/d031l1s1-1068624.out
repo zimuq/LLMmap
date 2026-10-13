@@ -1,0 +1,14 @@
+=== node: c642-091.vista.tacc.utexas.edu start: Tue Oct 13 12:09:49 AM CDT 2026 A: - | B: d031_train.py lin v1 1 3 ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          22         201           0           0         190
+Swap:             24           4          20
+[B] [B] >>> d031_train.py lin v1 1 3 00:09:49
+[B] [S2 lin v1 1/3] 129 fits, 4 workers x 16 threads
+[B] [S2 lin v1] 20/129 (8.3 min)
+[B] [S2 lin v1] 40/129 (20.9 min)
+[B] [S2 lin v1] 60/129 (30.8 min)
+[B] [S2 lin v1] 80/129 (41.4 min)
+[B] [S2 lin v1] 100/129 (49.5 min)
+[B] [S2 lin v1] 120/129 (56.8 min)
+[B] [S2 lin v1] done, 129 fits, wall 59.7 min
+=== end: Tue Oct 13 01:09:49 AM CDT 2026 rc=0 ===

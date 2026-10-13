@@ -1,0 +1,12 @@
+{
+ "hamming": {
+  "exact_integer_equality": true,
+  "e5_constant_offset_spread": 0.0,
+  "top1_tie_sets_identical_units": 4250
+ },
+ "e5": {
+  "exact_integer_equality": false,
+  "e5_constant_offset_spread": 1.2656542480726785e-14,
+  "top1_tie_sets_identical_units": 4250
+ }
+}

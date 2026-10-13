@@ -1,0 +1,34 @@
+{
+ "k2|main|threads16": {
+  "equal_to_D020": {
+   "cnt_total": true,
+   "cnt_model": true
+  },
+  "n_iter": 560,
+  "omp": "16"
+ },
+ "k8|main|threads16": {
+  "equal_to_D020": {
+   "cnt_total": true,
+   "cnt_model": true
+  },
+  "n_iter": 441,
+  "omp": "16"
+ },
+ "k2|pool|threads16": {
+  "equal_to_D020": {
+   "cnt_total": true,
+   "cnt_model": true
+  },
+  "n_iter": 560,
+  "omp": "16"
+ },
+ "k8|pool|threads16": {
+  "equal_to_D020": {
+   "cnt_total": true,
+   "cnt_model": true
+  },
+  "n_iter": 441,
+  "omp": "16"
+ }
+}

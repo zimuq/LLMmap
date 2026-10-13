@@ -1,0 +1,23 @@
+=== node: c642-032.vista.tacc.utexas.edu start: Mon Oct 12 02:51:14 PM CDT 2026 A: - | B: d031_lin_threads_check.py main 16;d031_lin_threads_check.py pool 16;d031_train.py lin v1 0 1 ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          21         202           0           0         191
+Swap:             24           2          22
+[B] [B] >>> d031_lin_threads_check.py main 16 14:51:14
+[B] k2 main threads16: equal_to_D020 {'cnt_total': True, 'cnt_model': True} n_iter 560
+[B] k8 main threads16: equal_to_D020 {'cnt_total': True, 'cnt_model': True} n_iter 441
+[B] [B] >>> d031_lin_threads_check.py pool 16 14:52:32
+[B] k2 pool threads16: equal_to_D020 {'cnt_total': True, 'cnt_model': True} n_iter 560
+[B] k8 pool threads16: equal_to_D020 {'cnt_total': True, 'cnt_model': True} n_iter 441
+[B] [B] >>> d031_train.py lin v1 0 1 14:52:54
+[B] [S2 lin v1 0/1] 388 fits, 4 workers x 16 threads
+[B] [S2 lin v1] 20/388 (8.1 min)
+[B] [S2 lin v1] 40/388 (16.3 min)
+[B] [S2 lin v1] 60/388 (23.5 min)
+[B] [S2 lin v1] 80/388 (34.8 min)
+[B] [S2 lin v1] 100/388 (46.9 min)
+[B] [S2 lin v1] 120/388 (57.7 min)
+[B] [S2 lin v1] 140/388 (69.5 min)
+[B] [S2 lin v1] 160/388 (77.2 min)
+[B] [S2 lin v1] 180/388 (85.3 min)
+[B] [S2 lin v1] 200/388 (93.1 min)
+[B] [S2 lin v1] 220/388 (106.7 min)

@@ -1,0 +1,17 @@
+=== node: c642-012.vista.tacc.utexas.edu start: Tue Oct 13 02:22:45 AM CDT 2026 A: d031_analysis.py;d031_plots.py | B: - ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          20         203           0           0         192
+Swap:             24           0          24
+[A] [A] >>> d031_analysis.py 02:22:45
+[A] [S4 v2] labels: HELM* (HELM-SIG|raw) BETTER, TOP-K (TOP-K) INCONCLUSIVE, MMR* (MMR|pearson|0.7) WORSE, RANDOM (RANDOM) BETTER
+[A] [S4 v2] done (3.4 min)
+[A] [S4 v1] labels: HELM* (HELM-SIG|sf) BETTER, TOP-K (TOP-K) INCONCLUSIVE, MMR* (MMR|pearson|0.7) PARITY, RANDOM (RANDOM) BETTER
+[A] [S4 v1] done (4.0 min)
+[A] [S4] wrote analysis.json, plotdata.npz (241 s)
+[A] [A] >>> d031_plots.py 02:26:49
+[A] Traceback (most recent call last):
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_plots.py", line 10, in <module>
+[A]     import matplotlib
+[A] ModuleNotFoundError: No module named 'matplotlib'
+[A] [A] FAILED: d031_plots.py
+=== end: Tue Oct 13 02:26:49 AM CDT 2026 rc=1 ===

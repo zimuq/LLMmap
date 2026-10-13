@@ -208,15 +208,19 @@ class Store:
         if name == "JG":
             a, p = np.load("./results/D010/run_counts.npz"), "joint_energy"
             z23 = np.load("./results/D023/run_counts.npz")
-            pair = [z23[f"JointGreedy|{k}|{r}|cnt_pair666"] for r in rs]
-            for r in rs:
-                assert np.array_equal(z23[f"JointGreedy|{k}|{r}|cnt_total"], a[f"{p}|{k}|{r}|cnt_total"])
+            pair = None                                                        # D023 stores k = 8 all-pair only
+            if k == 8:
+                pair = [z23[f"JointGreedy|8|{r}|cnt_pair666"] for r in rs]
+                for r in rs:                                                   # hard-65 columns = the source run's
+                    assert np.array_equal(pair[r][self.hcols_v1()], a[f"{p}|8|{r}|cnt_pair"])
         elif name == "PAPER8":
             a, p = np.load("./results/D009/run_counts.npz"), "paper8"
             z23 = np.load("./results/D023/run_counts.npz")
-            pair = [z23[f"paper8|{k}|{r}|cnt_pair666"] for r in rs]
-            for r in rs:
-                assert np.array_equal(z23[f"paper8|{k}|{r}|cnt_total"], a[f"{p}|{k}|{r}|cnt_total"])
+            pair = None                                                        # D023 stores k = 8 all-pair only
+            if k == 8:
+                pair = [z23[f"paper8|8|{r}|cnt_pair666"] for r in rs]
+                for r in rs:                                                   # hard-65 columns = the source run's
+                    assert np.array_equal(pair[r][self.hcols_v1()], a[f"{p}|8|{r}|cnt_pair"])
         else:                                                                           # GC = D009 cvar_max (= D013 gamma 0.1)
             a, p = np.load("./results/D009/run_counts.npz"), "cvar_max"
             pair = None
@@ -228,6 +232,10 @@ class Store:
                     assert float((lg.argmax(1) == np.repeat(np.arange(n), NC)).sum()) == a[f"{p}|8|{r}|cnt_total"].sum()
                     pair.append(pc)
         return Unit([a[f"{p}|{k}|{r}|cnt_total"] for r in rs], [a[f"{p}|{k}|{r}|cnt_model"] for r in rs], pair, k)
+
+    def hcols_v1(self):
+        from d008_lib import near_relative_pairs
+        return sorted(near_relative_pairs(L.models("v1")))     # keys = indices in combinations order (d031_train)
 
     def hcols(self):
         import d029_lib as L29

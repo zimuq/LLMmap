@@ -1,0 +1,8 @@
+=== node: c642-021.vista.tacc.utexas.edu start: Mon Oct 12 07:22:58 AM CDT 2026 A: d031_lin_threads_check.py | B: - ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          20         204           0           0         192
+Swap:             24           0          24
+[A] [A] >>> d031_lin_threads_check.py 07:22:58
+[A] /var/spool/slurmd/job1067077/slurm_script: line 18: 1687255 Segmentation fault      (core dumped) python experiments/d031_lin_threads_check.py
+[A] [A] FAILED: d031_lin_threads_check.py
+=== end: Mon Oct 12 07:23:29 AM CDT 2026 rc=1 ===
