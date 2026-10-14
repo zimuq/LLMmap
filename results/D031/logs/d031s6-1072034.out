@@ -1,0 +1,15 @@
+=== node: c642-082.vista.tacc.utexas.edu start: Wed Oct 14 06:40:49 PM CDT 2026 A: OMP_NUM_THREADS=16 python experiments/d031_posthoc.py | B: - ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          23         200           0           0         189
+Swap:             24           1          23
+[A] [A] >>> OMP_NUM_THREADS=16 python experiments/d031_posthoc.py 18:40:49
+[A] [S6 v2] MMR* - PAPER8    att all +0.0872 [0.0557, 0.1224] tail +0.0268 [0.0187, 0.0406] -> BETTER (lin-as-label BETTER)
+[A] [S6 v2] TOP-K - PAPER8   att all +0.0388 [-0.0108, 0.0864] tail +0.0144 [0.0038, 0.0305] -> INCONCLUSIVE (lin-as-label BETTER)
+[A] [S6 v2] MMR* - TOP-K     att all +0.0485 [0.0248, 0.0757] tail +0.0123 [0.0028, 0.0201] -> BETTER (lin-as-label INCONCLUSIVE)
+[A] [S6 v2] JG - PAPER8      att all +0.0290 [-0.0072, 0.0634] tail +0.0098 [0.0, 0.0205] -> INCONCLUSIVE (lin-as-label BETTER)
+[A] [S6 v1] MMR* - PAPER8    att all +0.0303 [0.0045, 0.0562] tail +0.0093 [-0.005, 0.03] -> INCONCLUSIVE (lin-as-label INCONCLUSIVE)
+[A] [S6 v1] TOP-K - PAPER8   att all +0.0344 [0.008, 0.0629] tail +0.0093 [-0.0055, 0.0315] -> INCONCLUSIVE (lin-as-label INCONCLUSIVE)
+[A] [S6 v1] MMR* - TOP-K     att all -0.0041 [-0.0229, 0.0123] tail +0.0001 [-0.0099, 0.0096] -> INCONCLUSIVE (lin-as-label INCONCLUSIVE)
+[A] [S6 v1] JG - PAPER8      att all +0.0305 [0.0017, 0.0605] tail +0.0123 [-0.0034, 0.0338] -> INCONCLUSIVE (lin-as-label INCONCLUSIVE)
+[A] [S6] wrote posthoc_contrasts.json (3.8 s)
+=== end: Wed Oct 14 06:40:56 PM CDT 2026 rc=0 ===

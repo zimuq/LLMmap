@@ -1,0 +1,392 @@
+{
+ "schema": "d031-posthoc-v1",
+ "tag": "post-hoc",
+ "k": 8,
+ "note": "descriptive, not pre-registered; cannot change any D031 label; same replicates as S4",
+ "bootstrap": {
+  "n": 2000,
+  "v2_seed": 20261005,
+  "v1_seed": 20260928,
+  "draw_seed": 20261012,
+  "note": "draw arms: configs + seeds + draws resampled (Call 5 a); E_tail of a draw arm = mean of per-draw CVaR (A2); seeds averaged before CVaR within a set; 5-seed resampling understates seed variance by 4/5"
+ },
+ "views": {
+  "v2": {
+   "MMR_star": "MMR|pearson|0.7",
+   "cells": {
+    "MMR* - PAPER8": {
+     "att": {
+      "d_all": {
+       "a": 0.804,
+       "b": 0.7167,
+       "delta": 0.0872,
+       "ci": [
+        0.0557,
+        0.1224
+       ]
+      },
+      "d_tail": {
+       "a": 0.9443,
+       "b": 0.9175,
+       "delta": 0.0268,
+       "ci": [
+        0.0187,
+        0.0406
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.8791,
+       "b": 0.8259,
+       "delta": 0.0532,
+       "ci": [
+        0.0353,
+        0.0706
+       ]
+      },
+      "d_tail": {
+       "a": 0.9627,
+       "b": 0.9356,
+       "delta": 0.0272,
+       "ci": [
+        0.0148,
+        0.0436
+       ]
+      }
+     },
+     "label_post_hoc": "BETTER",
+     "linear_as_label_post_hoc": "BETTER"
+    },
+    "TOP-K - PAPER8": {
+     "att": {
+      "d_all": {
+       "a": 0.7555,
+       "b": 0.7167,
+       "delta": 0.0388,
+       "ci": [
+        -0.0108,
+        0.0864
+       ]
+      },
+      "d_tail": {
+       "a": 0.9319,
+       "b": 0.9175,
+       "delta": 0.0144,
+       "ci": [
+        0.0038,
+        0.0305
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.8598,
+       "b": 0.8259,
+       "delta": 0.0339,
+       "ci": [
+        0.0179,
+        0.0504
+       ]
+      },
+      "d_tail": {
+       "a": 0.9541,
+       "b": 0.9356,
+       "delta": 0.0185,
+       "ci": [
+        0.0054,
+        0.0366
+       ]
+      }
+     },
+     "label_post_hoc": "INCONCLUSIVE",
+     "linear_as_label_post_hoc": "BETTER"
+    },
+    "MMR* - TOP-K": {
+     "att": {
+      "d_all": {
+       "a": 0.804,
+       "b": 0.7555,
+       "delta": 0.0485,
+       "ci": [
+        0.0248,
+        0.0757
+       ]
+      },
+      "d_tail": {
+       "a": 0.9443,
+       "b": 0.9319,
+       "delta": 0.0123,
+       "ci": [
+        0.0028,
+        0.0201
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.8791,
+       "b": 0.8598,
+       "delta": 0.0193,
+       "ci": [
+        0.0075,
+        0.0301
+       ]
+      },
+      "d_tail": {
+       "a": 0.9627,
+       "b": 0.9541,
+       "delta": 0.0086,
+       "ci": [
+        -0.0027,
+        0.0218
+       ]
+      }
+     },
+     "label_post_hoc": "BETTER",
+     "linear_as_label_post_hoc": "INCONCLUSIVE"
+    },
+    "JG - PAPER8": {
+     "att": {
+      "d_all": {
+       "a": 0.7457,
+       "b": 0.7167,
+       "delta": 0.029,
+       "ci": [
+        -0.0072,
+        0.0634
+       ]
+      },
+      "d_tail": {
+       "a": 0.9273,
+       "b": 0.9175,
+       "delta": 0.0098,
+       "ci": [
+        0.0,
+        0.0205
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.864,
+       "b": 0.8259,
+       "delta": 0.0381,
+       "ci": [
+        0.0235,
+        0.0536
+       ]
+      },
+      "d_tail": {
+       "a": 0.9486,
+       "b": 0.9356,
+       "delta": 0.0131,
+       "ci": [
+        0.0002,
+        0.0303
+       ]
+      }
+     },
+     "label_post_hoc": "INCONCLUSIVE",
+     "linear_as_label_post_hoc": "BETTER",
+     "D029_primary_E_all": {
+      "a": 0.7457,
+      "b": 0.7167,
+      "delta": 0.029,
+      "ci": [
+       -0.0072,
+       0.0634
+      ]
+     }
+    }
+   }
+  },
+  "v1": {
+   "MMR_star": "MMR|pearson|0.7",
+   "cells": {
+    "MMR* - PAPER8": {
+     "att": {
+      "d_all": {
+       "a": 0.8755,
+       "b": 0.8452,
+       "delta": 0.0303,
+       "ci": [
+        0.0045,
+        0.0562
+       ]
+      },
+      "d_tail": {
+       "a": 0.9405,
+       "b": 0.9312,
+       "delta": 0.0093,
+       "ci": [
+        -0.005,
+        0.03
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.9286,
+       "b": 0.9027,
+       "delta": 0.0259,
+       "ci": [
+        0.0054,
+        0.0465
+       ]
+      },
+      "d_tail": {
+       "a": 0.9521,
+       "b": 0.9418,
+       "delta": 0.0103,
+       "ci": [
+        -0.0118,
+        0.0339
+       ]
+      }
+     },
+     "label_post_hoc": "INCONCLUSIVE",
+     "linear_as_label_post_hoc": "INCONCLUSIVE"
+    },
+    "TOP-K - PAPER8": {
+     "att": {
+      "d_all": {
+       "a": 0.8796,
+       "b": 0.8452,
+       "delta": 0.0344,
+       "ci": [
+        0.008,
+        0.0629
+       ]
+      },
+      "d_tail": {
+       "a": 0.9404,
+       "b": 0.9312,
+       "delta": 0.0093,
+       "ci": [
+        -0.0055,
+        0.0315
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.9124,
+       "b": 0.9027,
+       "delta": 0.0097,
+       "ci": [
+        -0.0108,
+        0.0281
+       ]
+      },
+      "d_tail": {
+       "a": 0.9485,
+       "b": 0.9418,
+       "delta": 0.0067,
+       "ci": [
+        -0.0133,
+        0.03
+       ]
+      }
+     },
+     "label_post_hoc": "INCONCLUSIVE",
+     "linear_as_label_post_hoc": "INCONCLUSIVE"
+    },
+    "MMR* - TOP-K": {
+     "att": {
+      "d_all": {
+       "a": 0.8755,
+       "b": 0.8796,
+       "delta": -0.0041,
+       "ci": [
+        -0.0229,
+        0.0123
+       ]
+      },
+      "d_tail": {
+       "a": 0.9405,
+       "b": 0.9404,
+       "delta": 0.0001,
+       "ci": [
+        -0.0099,
+        0.0096
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.9286,
+       "b": 0.9124,
+       "delta": 0.0162,
+       "ci": [
+        0.0054,
+        0.027
+       ]
+      },
+      "d_tail": {
+       "a": 0.9521,
+       "b": 0.9485,
+       "delta": 0.0036,
+       "ci": [
+        -0.0076,
+        0.0118
+       ]
+      }
+     },
+     "label_post_hoc": "INCONCLUSIVE",
+     "linear_as_label_post_hoc": "INCONCLUSIVE"
+    },
+    "JG - PAPER8": {
+     "att": {
+      "d_all": {
+       "a": 0.8757,
+       "b": 0.8452,
+       "delta": 0.0305,
+       "ci": [
+        0.0017,
+        0.0605
+       ]
+      },
+      "d_tail": {
+       "a": 0.9435,
+       "b": 0.9312,
+       "delta": 0.0123,
+       "ci": [
+        -0.0034,
+        0.0338
+       ]
+      }
+     },
+     "lin": {
+      "d_all": {
+       "a": 0.9373,
+       "b": 0.9027,
+       "delta": 0.0346,
+       "ci": [
+        0.013,
+        0.0551
+       ]
+      },
+      "d_tail": {
+       "a": 0.9624,
+       "b": 0.9418,
+       "delta": 0.0206,
+       "ci": [
+        -0.003,
+        0.0361
+       ]
+      }
+     },
+     "label_post_hoc": "INCONCLUSIVE",
+     "linear_as_label_post_hoc": "INCONCLUSIVE",
+     "D023_S_b_tail_k8_paper8_minus_JG": {
+      "point": -0.0123,
+      "lo": -0.0338,
+      "hi": 0.0034
+     }
+    }
+   }
+  }
+ },
+ "wall_s": 3.8
+}
