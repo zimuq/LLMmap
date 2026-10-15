@@ -1,0 +1,1036 @@
+{
+ "schema": "d032-runs-v1",
+ "view": "v1",
+ "readout": "linear concat",
+ "shard": [
+  1,
+  2
+ ],
+ "fits": {
+  "TOP-K[MEAN]|1": {
+   "n_iter": 902,
+   "wall_s": 65.5,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|cos|0.3|1": {
+   "n_iter": 902,
+   "wall_s": 120.3,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "TOP-K[MEAN]|4": {
+   "n_iter": 1084,
+   "wall_s": 175.8,
+   "q": [
+    114,
+    109,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "TOP-K[MEAN]|6": {
+   "n_iter": 1047,
+   "wall_s": 235.8,
+   "q": [
+    114,
+    117,
+    1,
+    109,
+    113,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|cos|0.5|4": {
+   "n_iter": 1084,
+   "wall_s": 201.8,
+   "q": [
+    114,
+    109,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|cos|0.7|4": {
+   "n_iter": 1084,
+   "wall_s": 164.4,
+   "q": [
+    114,
+    109,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|pearson|0.7|1": {
+   "n_iter": 902,
+   "wall_s": 85.0,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|pearson|0.3|1": {
+   "n_iter": 902,
+   "wall_s": 119.0,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|cos|0.7|6": {
+   "n_iter": 1047,
+   "wall_s": 224.7,
+   "q": [
+    114,
+    117,
+    1,
+    109,
+    113,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.5|3": {
+   "n_iter": 593,
+   "wall_s": 87.4,
+   "q": [
+    193,
+    140,
+    114
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:TOP-K"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.3|3": {
+   "n_iter": 593,
+   "wall_s": 95.2,
+   "q": [
+    193,
+    140,
+    114
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:TOP-K"
+   ]
+  },
+  "MMR-PP[MEAN]|pearson|0.7|5": {
+   "n_iter": 935,
+   "wall_s": 188.8,
+   "q": [
+    114,
+    109,
+    113,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.5|6": {
+   "n_iter": 473,
+   "wall_s": 100.7,
+   "q": [
+    193,
+    140,
+    114,
+    117,
+    0,
+    109
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.7",
+    "D031:TOP-K"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.7|2": {
+   "n_iter": 560,
+   "wall_s": 67.8,
+   "q": [
+    193,
+    140
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored",
+    "D031:JG"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.7|4": {
+   "n_iter": 492,
+   "wall_s": 73.2,
+   "q": [
+    193,
+    140,
+    114,
+    0
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.7",
+    "D031:TOP-K"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.5|8": {
+   "n_iter": 537,
+   "wall_s": 127.2,
+   "q": [
+    193,
+    140,
+    237,
+    114,
+    117,
+    0,
+    109,
+    145
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.7"
+   ]
+  },
+  "MMR-TXT[CVaR]|ccos|0.5|1": {
+   "n_iter": 609,
+   "wall_s": 45.6,
+   "q": [
+    193
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored",
+    "D031:JG"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.7|6": {
+   "n_iter": 473,
+   "wall_s": 97.6,
+   "q": [
+    193,
+    140,
+    114,
+    117,
+    0,
+    109
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.7",
+    "D031:TOP-K"
+   ]
+  },
+  "MMR-TXT[CVaR]|ccos|0.7|1": {
+   "n_iter": 609,
+   "wall_s": 33.6,
+   "q": [
+    193
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored",
+    "D031:JG"
+   ]
+  },
+  "MMR-TXT[MEAN]|cos|0.3|1": {
+   "n_iter": 902,
+   "wall_s": 49.8,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[CVaR]|cos|0.7|8": {
+   "n_iter": 529,
+   "wall_s": 136.4,
+   "q": [
+    193,
+    140,
+    114,
+    117,
+    0,
+    1,
+    109,
+    145
+   ],
+   "asserted": [
+    "D031:TOP-K"
+   ]
+  },
+  "MMR-TXT[CVaR]|ccos|0.7|3": {
+   "n_iter": 593,
+   "wall_s": 99.6,
+   "q": [
+    193,
+    140,
+    114
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:TOP-K"
+   ]
+  },
+  "MMR-TXT[MEAN]|cos|0.7|1": {
+   "n_iter": 902,
+   "wall_s": 100.3,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[MEAN]|cos|0.5|2": {
+   "n_iter": 1032,
+   "wall_s": 146.8,
+   "q": [
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[MEAN]|cos|0.3|4": {
+   "n_iter": 1084,
+   "wall_s": 216.9,
+   "q": [
+    114,
+    109,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[MEAN]|cos|0.5|5": {
+   "n_iter": 935,
+   "wall_s": 180.2,
+   "q": [
+    114,
+    109,
+    113,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[MEAN]|ccos|0.7|1": {
+   "n_iter": 902,
+   "wall_s": 92.2,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[MEAN]|ccos|0.3|1": {
+   "n_iter": 902,
+   "wall_s": 110.7,
+   "q": [
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[MEAN]|cos|0.7|4": {
+   "n_iter": 1084,
+   "wall_s": 190.5,
+   "q": [
+    114,
+    109,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-TXT[MEAN]|cos|0.7|6": {
+   "n_iter": 1047,
+   "wall_s": 206.7,
+   "q": [
+    114,
+    117,
+    1,
+    109,
+    113,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|cos|0.3|3": {
+   "n_iter": 737,
+   "wall_s": 118.0,
+   "q": [
+    3,
+    123,
+    252
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.7|4": {
+   "n_iter": 1084,
+   "wall_s": 191.0,
+   "q": [
+    114,
+    109,
+    117,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ]
+  },
+  "MMR-PP[MEAN]|cos|0.3|5": {
+   "n_iter": 728,
+   "wall_s": 135.3,
+   "q": [
+    3,
+    117,
+    123,
+    238,
+    252
+   ],
+   "asserted": []
+  },
+  "TOP-K[MEAN]|8": {
+   "n_iter": 951,
+   "wall_s": 229.7,
+   "q": [
+    140,
+    114,
+    117,
+    1,
+    109,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|cos|0.5|2": {
+   "n_iter": 978,
+   "wall_s": 91.8,
+   "q": [
+    117,
+    123
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|cos|0.3|7": {
+   "n_iter": 686,
+   "wall_s": 156.9,
+   "q": [
+    233,
+    117,
+    3,
+    109,
+    123,
+    238,
+    252
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|cos|0.5|5": {
+   "n_iter": 877,
+   "wall_s": 174.1,
+   "q": [
+    114,
+    3,
+    109,
+    117,
+    123
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|cos|0.5|7": {
+   "n_iter": 780,
+   "wall_s": 153.1,
+   "q": [
+    140,
+    114,
+    117,
+    3,
+    109,
+    113,
+    123
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|cos|0.7|2": {
+   "n_iter": 978,
+   "wall_s": 119.0,
+   "q": [
+    117,
+    123
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.3|7": {
+   "n_iter": 512,
+   "wall_s": 111.2,
+   "q": [
+    233,
+    3,
+    4,
+    16,
+    123,
+    216,
+    240
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.3|3": {
+   "n_iter": 891,
+   "wall_s": 132.8,
+   "q": [
+    3,
+    123,
+    240
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.3|5": {
+   "n_iter": 696,
+   "wall_s": 138.4,
+   "q": [
+    233,
+    3,
+    123,
+    216,
+    240
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|cos|0.7|8": {
+   "n_iter": 951,
+   "wall_s": 215.8,
+   "q": [
+    140,
+    114,
+    117,
+    1,
+    109,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.5|2": {
+   "n_iter": 1008,
+   "wall_s": 122.3,
+   "q": [
+    123,
+    240
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.5|4": {
+   "n_iter": 851,
+   "wall_s": 136.7,
+   "q": [
+    3,
+    117,
+    123,
+    240
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.5|8": {
+   "n_iter": 516,
+   "wall_s": 115.6,
+   "q": [
+    233,
+    117,
+    0,
+    16,
+    3,
+    109,
+    123,
+    240
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.5|6": {
+   "n_iter": 602,
+   "wall_s": 138.8,
+   "q": [
+    233,
+    117,
+    0,
+    3,
+    123,
+    240
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|cos|0.3|2": {
+   "n_iter": 623,
+   "wall_s": 69.4,
+   "q": [
+    193,
+    114
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|cos|0.3|5": {
+   "n_iter": 568,
+   "wall_s": 113.5,
+   "q": [
+    193,
+    140,
+    237,
+    114,
+    1
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.7|3": {
+   "n_iter": 1004,
+   "wall_s": 157.1,
+   "q": [
+    114,
+    117,
+    123
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.3|2": {
+   "n_iter": 557,
+   "wall_s": 68.0,
+   "q": [
+    193,
+    110
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|cos|0.3|7": {
+   "n_iter": 591,
+   "wall_s": 127.7,
+   "q": [
+    193,
+    140,
+    237,
+    114,
+    117,
+    1,
+    109
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|cos|0.5|2": {
+   "n_iter": 623,
+   "wall_s": 83.4,
+   "q": [
+    193,
+    114
+   ],
+   "asserted": []
+  },
+  "MMR-PP[MEAN]|pearson|0.7|7": {
+   "n_iter": 974,
+   "wall_s": 214.3,
+   "q": [
+    140,
+    114,
+    117,
+    109,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.3|4": {
+   "n_iter": 516,
+   "wall_s": 83.7,
+   "q": [
+    193,
+    99,
+    110,
+    234
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.3|6": {
+   "n_iter": 416,
+   "wall_s": 84.0,
+   "q": [
+    193,
+    99,
+    110,
+    135,
+    234,
+    251
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.5|4": {
+   "n_iter": 548,
+   "wall_s": 95.3,
+   "q": [
+    193,
+    140,
+    237,
+    117
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.3|8": {
+   "n_iter": 454,
+   "wall_s": 104.2,
+   "q": [
+    193,
+    237,
+    99,
+    110,
+    129,
+    135,
+    234,
+    251
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.5|8": {
+   "n_iter": 531,
+   "wall_s": 100.1,
+   "q": [
+    193,
+    140,
+    237,
+    114,
+    117,
+    99,
+    135,
+    241
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.5|6": {
+   "n_iter": 499,
+   "wall_s": 111.0,
+   "q": [
+    193,
+    140,
+    237,
+    114,
+    117,
+    99
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.7|6": {
+   "n_iter": 611,
+   "wall_s": 119.3,
+   "q": [
+    193,
+    140,
+    237,
+    114,
+    1,
+    109
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[CVaR]|ccos|0.7|8": {
+   "n_iter": 521,
+   "wall_s": 123.6,
+   "q": [
+    193,
+    140,
+    237,
+    114,
+    1,
+    68,
+    109,
+    121
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|cos|0.5|3": {
+   "n_iter": 1004,
+   "wall_s": 143.2,
+   "q": [
+    114,
+    117,
+    123
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|cos|0.3|5": {
+   "n_iter": 1071,
+   "wall_s": 203.7,
+   "q": [
+    114,
+    109,
+    117,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|cos|0.3|7": {
+   "n_iter": 974,
+   "wall_s": 208.4,
+   "q": [
+    140,
+    114,
+    117,
+    109,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.3|3": {
+   "n_iter": 547,
+   "wall_s": 42.5,
+   "q": [
+    0,
+    32,
+    123
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|cos|0.5|8": {
+   "n_iter": 951,
+   "wall_s": 228.6,
+   "q": [
+    140,
+    114,
+    117,
+    1,
+    109,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.3|5": {
+   "n_iter": 517,
+   "wall_s": 108.7,
+   "q": [
+    0,
+    32,
+    123,
+    132,
+    239
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.3|7": {
+   "n_iter": 513,
+   "wall_s": 102.3,
+   "q": [
+    0,
+    32,
+    61,
+    123,
+    132,
+    145,
+    239
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|cos|0.7|8": {
+   "n_iter": 951,
+   "wall_s": 211.2,
+   "q": [
+    140,
+    114,
+    117,
+    1,
+    109,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.5|2": {
+   "n_iter": 1082,
+   "wall_s": 128.4,
+   "q": [
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.5|4": {
+   "n_iter": 1123,
+   "wall_s": 186.2,
+   "q": [
+    114,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.5|6": {
+   "n_iter": 970,
+   "wall_s": 204.1,
+   "q": [
+    140,
+    114,
+    117,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.7|7": {
+   "n_iter": 974,
+   "wall_s": 66.3,
+   "q": [
+    140,
+    114,
+    117,
+    109,
+    113,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.7|5": {
+   "n_iter": 1071,
+   "wall_s": 178.4,
+   "q": [
+    114,
+    109,
+    117,
+    123,
+    132
+   ],
+   "asserted": []
+  },
+  "MMR-TXT[MEAN]|ccos|0.5|8": {
+   "n_iter": 937,
+   "wall_s": 189.2,
+   "q": [
+    140,
+    114,
+    117,
+    113,
+    116,
+    123,
+    132,
+    239
+   ],
+   "asserted": []
+  }
+ },
+ "threads": 16,
+ "workers": 4,
+ "omp": "16",
+ "identical_input_asserted": [
+  "MMR-PP[MEAN]|cos|0.3|1",
+  "MMR-PP[MEAN]|cos|0.5|4",
+  "MMR-PP[MEAN]|cos|0.7|4",
+  "MMR-PP[MEAN]|cos|0.7|6",
+  "MMR-PP[MEAN]|pearson|0.3|1",
+  "MMR-PP[MEAN]|pearson|0.7|1",
+  "MMR-PP[MEAN]|pearson|0.7|5",
+  "MMR-TXT[CVaR]|ccos|0.5|1",
+  "MMR-TXT[CVaR]|ccos|0.7|1",
+  "MMR-TXT[CVaR]|ccos|0.7|3",
+  "MMR-TXT[CVaR]|cos|0.3|3",
+  "MMR-TXT[CVaR]|cos|0.5|3",
+  "MMR-TXT[CVaR]|cos|0.5|6",
+  "MMR-TXT[CVaR]|cos|0.5|8",
+  "MMR-TXT[CVaR]|cos|0.7|2",
+  "MMR-TXT[CVaR]|cos|0.7|4",
+  "MMR-TXT[CVaR]|cos|0.7|6",
+  "MMR-TXT[CVaR]|cos|0.7|8",
+  "MMR-TXT[MEAN]|ccos|0.3|1",
+  "MMR-TXT[MEAN]|ccos|0.7|1",
+  "MMR-TXT[MEAN]|ccos|0.7|4",
+  "MMR-TXT[MEAN]|cos|0.3|1",
+  "MMR-TXT[MEAN]|cos|0.3|4",
+  "MMR-TXT[MEAN]|cos|0.5|2",
+  "MMR-TXT[MEAN]|cos|0.5|5",
+  "MMR-TXT[MEAN]|cos|0.7|1",
+  "MMR-TXT[MEAN]|cos|0.7|4",
+  "MMR-TXT[MEAN]|cos|0.7|6",
+  "TOP-K[MEAN]|1",
+  "TOP-K[MEAN]|4",
+  "TOP-K[MEAN]|6"
+ ],
+ "s_test": "written to counts/logits only; not summarised in S2",
+ "wall_min": 42.7,
+ "node": "c642-002.vista.tacc.utexas.edu"
+}

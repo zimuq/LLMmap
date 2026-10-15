@@ -65,6 +65,23 @@ below).
 
 ---
 
+**Issue 26 (2026-10-15): D032 `## D`, Q1 claim rule. Does "no WORSE anywhere" cover the non-starred cells?**
+
+- **Where:** `docs/D032.md → ## D → What counts as an answer → Q1` ("BETTER in ≥ 2 of 3 rules in each view, and
+  no WORSE anywhere").
+- **The ambiguity:** the Q1 contrasts are defined on the starred variants (R ∈ {TOP-K, MMR-PP\*, MMR-TXT\*}).
+  P1's WORSE scan also covers non-starred cells:
+  - Q1 variant-matched CVaR − MEAN pairs;
+  - Q2 PP-variant vs TXT\* and PP\* vs TXT-variant;
+  - Q3 every variant − TOP-K.
+- **Which cells fall in the gap:** in D032's S3, v2 has a non-starred Q1 cell labelled WORSE:
+  `MMR-PP[CVaR]|cos|0.3 − MMR-PP[MEAN]|cos|0.3`. Its attention Δ_tail interval is [−0.0185, −0.0003]. No starred
+  Q1 cell is WORSE.
+- **What R did:** it applied the starred reading (Q1 = SUPPORTED-v2), listed every WORSE cell first, and stated
+  that under the any-cell reading Q1 would be "WORSE (headline)".
+- **Why TACC can't fix it:** `## D` is design-owned. Design side should rule on which reading the claim rule
+  intends; R gives both verdicts, so no rerun is needed.
+
 ## Resolved
 
 **Issue 25 (2026-10-12) — D031 `## D`, "S2 — Train": the citation "D023 Call 2

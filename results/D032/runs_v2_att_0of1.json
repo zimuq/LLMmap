@@ -1,0 +1,5014 @@
+{
+ "schema": "d032-runs-v1",
+ "view": "v2",
+ "readout": "attention (D009)",
+ "shard": [
+  0,
+  1
+ ],
+ "runs": [
+  {
+   "key": "TOP-K[MEAN]|1|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.1,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=2.3125.ckpt",
+   "train_acc": 0.49929411764705883,
+   "val_acc": 0.38023529411764706
+  },
+  {
+   "key": "TOP-K[MEAN]|1|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=2.3759.ckpt",
+   "train_acc": 0.46305882352941174,
+   "val_acc": 0.3675294117647059
+  },
+  {
+   "key": "TOP-K[MEAN]|1|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.0,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=2.4081.ckpt",
+   "train_acc": 0.4337254901960784,
+   "val_acc": 0.3491764705882353
+  },
+  {
+   "key": "TOP-K[MEAN]|1|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.2,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=2.3501.ckpt",
+   "train_acc": 0.4810980392156863,
+   "val_acc": 0.39576470588235296
+  },
+  {
+   "key": "TOP-K[MEAN]|1|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.9,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=2.1552.ckpt",
+   "train_acc": 0.5785098039215686,
+   "val_acc": 0.4272941176470588
+  },
+  {
+   "key": "TOP-K[MEAN]|3|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.7352.ckpt",
+   "train_acc": 0.6712156862745098,
+   "val_acc": 0.5143529411764706
+  },
+  {
+   "key": "TOP-K[MEAN]|3|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.0,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.6416.ckpt",
+   "train_acc": 0.7504313725490196,
+   "val_acc": 0.5708235294117647
+  },
+  {
+   "key": "TOP-K[MEAN]|3|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "error": null,
+   "best_ckpt": "best-epoch=02-val_loss=1.8194.ckpt",
+   "train_acc": 0.5785098039215686,
+   "val_acc": 0.4875294117647059
+  },
+  {
+   "key": "TOP-K[MEAN]|3|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.3,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.7394.ckpt",
+   "train_acc": 0.624313725490196,
+   "val_acc": 0.5294117647058824
+  },
+  {
+   "key": "TOP-K[MEAN]|3|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.9,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.7386.ckpt",
+   "train_acc": 0.695843137254902,
+   "val_acc": 0.5298823529411765
+  },
+  {
+   "key": "TOP-K[MEAN]|4|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "error": null,
+   "best_ckpt": "best-epoch=02-val_loss=1.7290.ckpt",
+   "train_acc": 0.607686274509804,
+   "val_acc": 0.5303529411764706
+  },
+  {
+   "key": "TOP-K[MEAN]|4|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.3,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.7929.ckpt",
+   "train_acc": 0.6025098039215686,
+   "val_acc": 0.4983529411764706
+  },
+  {
+   "key": "TOP-K[MEAN]|4|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.1,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.6288.ckpt",
+   "train_acc": 0.7261176470588235,
+   "val_acc": 0.5614117647058824
+  },
+  {
+   "key": "TOP-K[MEAN]|4|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.9,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.5061.ckpt",
+   "train_acc": 0.7974901960784314,
+   "val_acc": 0.5934117647058823
+  },
+  {
+   "key": "TOP-K[MEAN]|4|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.9,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.5655.ckpt",
+   "train_acc": 0.7159215686274509,
+   "val_acc": 0.5731764705882353
+  },
+  {
+   "key": "TOP-K[MEAN]|5|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.3,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.6450.ckpt",
+   "train_acc": 0.7027450980392157,
+   "val_acc": 0.5576470588235294
+  },
+  {
+   "key": "TOP-K[MEAN]|5|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.5,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.4798.ckpt",
+   "train_acc": 0.7372549019607844,
+   "val_acc": 0.5736470588235294
+  },
+  {
+   "key": "TOP-K[MEAN]|5|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.3,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.6464.ckpt",
+   "train_acc": 0.6458039215686274,
+   "val_acc": 0.5331764705882353
+  },
+  {
+   "key": "TOP-K[MEAN]|5|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.2,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.2860.ckpt",
+   "train_acc": 0.8563137254901961,
+   "val_acc": 0.6395294117647059
+  },
+  {
+   "key": "TOP-K[MEAN]|5|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.1,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.5764.ckpt",
+   "train_acc": 0.756078431372549,
+   "val_acc": 0.5915294117647059
+  },
+  {
+   "key": "TOP-K[MEAN]|6|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.8,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.4717.ckpt",
+   "train_acc": 0.7181176470588235,
+   "val_acc": 0.587764705882353
+  },
+  {
+   "key": "TOP-K[MEAN]|6|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.2,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.3250.ckpt",
+   "train_acc": 0.8095686274509803,
+   "val_acc": 0.6244705882352941
+  },
+  {
+   "key": "TOP-K[MEAN]|6|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 19.5,
+   "error": null,
+   "best_ckpt": "best-epoch=15-val_loss=1.4311.ckpt",
+   "train_acc": 0.928,
+   "val_acc": 0.6414117647058823
+  },
+  {
+   "key": "TOP-K[MEAN]|6|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.4102.ckpt",
+   "train_acc": 0.7394509803921568,
+   "val_acc": 0.6047058823529412
+  },
+  {
+   "key": "TOP-K[MEAN]|6|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "asserted": [
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.7,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.5034.ckpt",
+   "train_acc": 0.7159215686274509,
+   "val_acc": 0.5868235294117647
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|1|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=2.3125.ckpt",
+   "train_acc": 0.49929411764705883,
+   "val_acc": 0.38023529411764706
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|1|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.3,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=2.3759.ckpt",
+   "train_acc": 0.46305882352941174,
+   "val_acc": 0.3675294117647059
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|1|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=2.4081.ckpt",
+   "train_acc": 0.4337254901960784,
+   "val_acc": 0.3491764705882353
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|1|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=2.3501.ckpt",
+   "train_acc": 0.4810980392156863,
+   "val_acc": 0.39576470588235296
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|1|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.4,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=2.1552.ckpt",
+   "train_acc": 0.5785098039215686,
+   "val_acc": 0.4272941176470588
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|1|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    193
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.9491.ckpt",
+   "train_acc": 0.6335686274509804,
+   "val_acc": 0.5176470588235295
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|1|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    193
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.0,
+   "error": null,
+   "best_ckpt": "best-epoch=02-val_loss=2.0225.ckpt",
+   "train_acc": 0.540235294117647,
+   "val_acc": 0.48094117647058826
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|1|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    193
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.2,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.8800.ckpt",
+   "train_acc": 0.6003137254901961,
+   "val_acc": 0.5058823529411764
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|1|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    193
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "error": null,
+   "best_ckpt": "best-epoch=02-val_loss=1.8857.ckpt",
+   "train_acc": 0.5788235294117647,
+   "val_acc": 0.49929411764705883
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|1|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    193
+   ],
+   "asserted": [
+    "D031:MMR|cos|0.3",
+    "D031:MMR|cos|0.5",
+    "D031:MMR|cos|0.7",
+    "D031:MMR|pearson|0.3",
+    "D031:MMR|pearson|0.5",
+    "D031:MMR|pearson|0.7",
+    "D031:TOP-K",
+    "JG:stored"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.9,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.8478.ckpt",
+   "train_acc": 0.632,
+   "val_acc": 0.5181176470588236
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.7|8|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.7",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    114,
+    123,
+    140
+   ],
+   "asserted": [
+    "D031:TOP-K"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.9,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.8458.ckpt",
+   "train_acc": 0.9866666666666667,
+   "val_acc": 0.7807058823529411
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.7|8|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.7",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    114,
+    123,
+    140
+   ],
+   "asserted": [
+    "D031:TOP-K"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.1,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=0.9682.ckpt",
+   "train_acc": 0.8489411764705882,
+   "val_acc": 0.7162352941176471
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.7|8|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.7",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    114,
+    123,
+    140
+   ],
+   "asserted": [
+    "D031:TOP-K"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.7,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.8499.ckpt",
+   "train_acc": 0.9334901960784314,
+   "val_acc": 0.7698823529411765
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.7|8|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.7",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    114,
+    123,
+    140
+   ],
+   "asserted": [
+    "D031:TOP-K"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.2,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=0.7919.ckpt",
+   "train_acc": 0.9507450980392157,
+   "val_acc": 0.7854117647058824
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.7|8|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.7",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    114,
+    123,
+    140
+   ],
+   "asserted": [
+    "D031:TOP-K"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.7,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=0.9767.ckpt",
+   "train_acc": 0.8191372549019608,
+   "val_acc": 0.7223529411764706
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|1|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.1,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=2.3125.ckpt",
+   "train_acc": 0.49929411764705883,
+   "val_acc": 0.38023529411764706
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|1|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.6,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=2.3759.ckpt",
+   "train_acc": 0.46305882352941174,
+   "val_acc": 0.3675294117647059
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|1|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=2.4081.ckpt",
+   "train_acc": 0.4337254901960784,
+   "val_acc": 0.3491764705882353
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|1|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=2.3501.ckpt",
+   "train_acc": 0.4810980392156863,
+   "val_acc": 0.39576470588235296
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|1|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    109
+   ],
+   "asserted": [
+    "D031:HELM-RANK|raw",
+    "D031:HELM-RANK|sf"
+   ],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.0,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=2.1552.ckpt",
+   "train_acc": 0.5785098039215686,
+   "val_acc": 0.4272941176470588
+  },
+  {
+   "key": "TOP-K[MEAN]|2|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    117,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.9,
+   "error": null,
+   "best_ckpt": "best-epoch=14-val_loss=2.1743.ckpt",
+   "train_acc": 0.723764705882353,
+   "val_acc": 0.4969411764705882
+  },
+  {
+   "key": "TOP-K[MEAN]|2|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    117,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.4,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.9072.ckpt",
+   "train_acc": 0.6597647058823529,
+   "val_acc": 0.4983529411764706
+  },
+  {
+   "key": "TOP-K[MEAN]|2|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    117,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.0,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=2.0381.ckpt",
+   "train_acc": 0.5436862745098039,
+   "val_acc": 0.43858823529411767
+  },
+  {
+   "key": "TOP-K[MEAN]|2|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    117,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.8315.ckpt",
+   "train_acc": 0.6577254901960784,
+   "val_acc": 0.4988235294117647
+  },
+  {
+   "key": "TOP-K[MEAN]|2|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    117,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.6,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=2.0602.ckpt",
+   "train_acc": 0.6464313725490196,
+   "val_acc": 0.48
+  },
+  {
+   "key": "TOP-K[MEAN]|7|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.2,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.4164.ckpt",
+   "train_acc": 0.7927843137254902,
+   "val_acc": 0.611764705882353
+  },
+  {
+   "key": "TOP-K[MEAN]|7|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.9,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.2609.ckpt",
+   "train_acc": 0.860078431372549,
+   "val_acc": 0.6404705882352941
+  },
+  {
+   "key": "TOP-K[MEAN]|7|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.3,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.3152.ckpt",
+   "train_acc": 0.7665882352941177,
+   "val_acc": 0.6127058823529412
+  },
+  {
+   "key": "TOP-K[MEAN]|7|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.3,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.3660.ckpt",
+   "train_acc": 0.8618039215686274,
+   "val_acc": 0.6437647058823529
+  },
+  {
+   "key": "TOP-K[MEAN]|7|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.0,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.4580.ckpt",
+   "train_acc": 0.8337254901960784,
+   "val_acc": 0.6122352941176471
+  },
+  {
+   "key": "TOP-K[MEAN]|8|r0",
+   "name": "TOP-K[MEAN]",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.3,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.4366.ckpt",
+   "train_acc": 0.7738039215686274,
+   "val_acc": 0.6009411764705882
+  },
+  {
+   "key": "TOP-K[MEAN]|8|r1",
+   "name": "TOP-K[MEAN]",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.7,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.3696.ckpt",
+   "train_acc": 0.712,
+   "val_acc": 0.6089411764705882
+  },
+  {
+   "key": "TOP-K[MEAN]|8|r2",
+   "name": "TOP-K[MEAN]",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.5,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.3013.ckpt",
+   "train_acc": 0.8266666666666667,
+   "val_acc": 0.6428235294117647
+  },
+  {
+   "key": "TOP-K[MEAN]|8|r3",
+   "name": "TOP-K[MEAN]",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.5,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.4672.ckpt",
+   "train_acc": 0.835764705882353,
+   "val_acc": 0.6136470588235294
+  },
+  {
+   "key": "TOP-K[MEAN]|8|r4",
+   "name": "TOP-K[MEAN]",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.0,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.5054.ckpt",
+   "train_acc": 0.7232941176470589,
+   "val_acc": 0.5896470588235294
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.3|8|r0",
+   "name": "MMR-PP[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    145,
+    240,
+    252
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.8,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.0352.ckpt",
+   "train_acc": 0.8235294117647058,
+   "val_acc": 0.6983529411764706
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.3|8|r1",
+   "name": "MMR-PP[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    145,
+    240,
+    252
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.1,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=0.9467.ckpt",
+   "train_acc": 0.9556078431372549,
+   "val_acc": 0.7557647058823529
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.3|8|r2",
+   "name": "MMR-PP[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    145,
+    240,
+    252
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.6,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9373.ckpt",
+   "train_acc": 0.9044705882352941,
+   "val_acc": 0.7312941176470589
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.3|8|r3",
+   "name": "MMR-PP[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    145,
+    240,
+    252
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.1,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.8989.ckpt",
+   "train_acc": 0.9788235294117648,
+   "val_acc": 0.7684705882352941
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.3|8|r4",
+   "name": "MMR-PP[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    145,
+    240,
+    252
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.9,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.8812.ckpt",
+   "train_acc": 0.9808627450980392,
+   "val_acc": 0.7689411764705882
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.5|8|r0",
+   "name": "MMR-PP[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9739.ckpt",
+   "train_acc": 0.8869019607843137,
+   "val_acc": 0.7303529411764705
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.5|8|r1",
+   "name": "MMR-PP[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.6,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.9171.ckpt",
+   "train_acc": 0.9270588235294117,
+   "val_acc": 0.7529411764705882
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.5|8|r2",
+   "name": "MMR-PP[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.2,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.8824.ckpt",
+   "train_acc": 0.9124705882352941,
+   "val_acc": 0.7538823529411764
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.5|8|r3",
+   "name": "MMR-PP[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 18.4,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.9064.ckpt",
+   "train_acc": 0.9835294117647059,
+   "val_acc": 0.768
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.5|8|r4",
+   "name": "MMR-PP[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.3,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.8987.ckpt",
+   "train_acc": 0.9645490196078431,
+   "val_acc": 0.7651764705882353
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.7|8|r0",
+   "name": "MMR-PP[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.5,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.4366.ckpt",
+   "train_acc": 0.7738039215686274,
+   "val_acc": 0.6009411764705882
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.7|8|r1",
+   "name": "MMR-PP[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.3696.ckpt",
+   "train_acc": 0.712,
+   "val_acc": 0.6089411764705882
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.7|8|r2",
+   "name": "MMR-PP[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.7,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.3013.ckpt",
+   "train_acc": 0.8266666666666667,
+   "val_acc": 0.6428235294117647
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.7|8|r3",
+   "name": "MMR-PP[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.3,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.4672.ckpt",
+   "train_acc": 0.835764705882353,
+   "val_acc": 0.6136470588235294
+  },
+  {
+   "key": "MMR-PP[MEAN]|cos|0.7|8|r4",
+   "name": "MMR-PP[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.6,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.5054.ckpt",
+   "train_acc": 0.7232941176470589,
+   "val_acc": 0.5896470588235294
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|2|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    3,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.2,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=1.8725.ckpt",
+   "train_acc": 0.7728627450980392,
+   "val_acc": 0.5284705882352941
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|2|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    3,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.3,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.7623.ckpt",
+   "train_acc": 0.6414117647058823,
+   "val_acc": 0.5087058823529412
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|2|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    3,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.8,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.9114.ckpt",
+   "train_acc": 0.6955294117647058,
+   "val_acc": 0.5044705882352941
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|2|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    3,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.8,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.9212.ckpt",
+   "train_acc": 0.5876078431372549,
+   "val_acc": 0.4903529411764706
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|2|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    3,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.9697.ckpt",
+   "train_acc": 0.5662745098039216,
+   "val_acc": 0.456
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|3|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.0,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.7184.ckpt",
+   "train_acc": 0.7537254901960785,
+   "val_acc": 0.5576470588235294
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|3|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.0,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.7027.ckpt",
+   "train_acc": 0.6585098039215687,
+   "val_acc": 0.5308235294117647
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|3|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.6,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.6925.ckpt",
+   "train_acc": 0.672156862745098,
+   "val_acc": 0.5407058823529411
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|3|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.9,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.8090.ckpt",
+   "train_acc": 0.6787450980392157,
+   "val_acc": 0.5218823529411765
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|3|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.0,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.8418.ckpt",
+   "train_acc": 0.7581176470588236,
+   "val_acc": 0.5477647058823529
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|4|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    193,
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.1,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.2388.ckpt",
+   "train_acc": 0.8269803921568627,
+   "val_acc": 0.6715294117647059
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|4|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    193,
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.6,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.1456.ckpt",
+   "train_acc": 0.872,
+   "val_acc": 0.6771764705882353
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|4|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    193,
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.5,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.1417.ckpt",
+   "train_acc": 0.9273725490196079,
+   "val_acc": 0.7044705882352941
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|4|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    193,
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.1887.ckpt",
+   "train_acc": 0.8133333333333334,
+   "val_acc": 0.6578823529411765
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|4|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    193,
+    3,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.1751.ckpt",
+   "train_acc": 0.8644705882352941,
+   "val_acc": 0.6832941176470588
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|5|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    193,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.0,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.0536.ckpt",
+   "train_acc": 0.9137254901960784,
+   "val_acc": 0.7101176470588235
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|5|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    193,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.1551.ckpt",
+   "train_acc": 0.820078431372549,
+   "val_acc": 0.6668235294117647
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|5|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    193,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.5,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=1.0828.ckpt",
+   "train_acc": 0.9636078431372549,
+   "val_acc": 0.7223529411764706
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|5|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    193,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.7,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.1023.ckpt",
+   "train_acc": 0.8936470588235295,
+   "val_acc": 0.6955294117647058
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|5|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    193,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.0,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.1217.ckpt",
+   "train_acc": 0.9054117647058824,
+   "val_acc": 0.7021176470588235
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|6|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.8,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=1.0934.ckpt",
+   "train_acc": 0.9507450980392157,
+   "val_acc": 0.7275294117647059
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|6|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.5,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.0380.ckpt",
+   "train_acc": 0.8955294117647059,
+   "val_acc": 0.7162352941176471
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|6|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.2,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.9909.ckpt",
+   "train_acc": 0.964078431372549,
+   "val_acc": 0.7369411764705882
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|6|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.2,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.9904.ckpt",
+   "train_acc": 0.9214117647058824,
+   "val_acc": 0.731764705882353
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|6|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 19.5,
+   "error": null,
+   "best_ckpt": "best-epoch=15-val_loss=0.9656.ckpt",
+   "train_acc": 0.9783529411764705,
+   "val_acc": 0.7595294117647059
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|7|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    237,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 18.3,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.9207.ckpt",
+   "train_acc": 0.9913725490196078,
+   "val_acc": 0.7689411764705882
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|7|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    237,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.9,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.9538.ckpt",
+   "train_acc": 0.9221960784313725,
+   "val_acc": 0.7411764705882353
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|7|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    237,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.1,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.9493.ckpt",
+   "train_acc": 0.9734901960784313,
+   "val_acc": 0.7604705882352941
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|7|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    237,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9287.ckpt",
+   "train_acc": 0.9050980392156863,
+   "val_acc": 0.7303529411764705
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|7|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    237,
+    3,
+    18,
+    109,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.3,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.8862.ckpt",
+   "train_acc": 0.9750588235294118,
+   "val_acc": 0.7651764705882353
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|8|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    237,
+    18,
+    3,
+    109,
+    192,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.6,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.8820.ckpt",
+   "train_acc": 0.988078431372549,
+   "val_acc": 0.7783529411764706
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|8|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    237,
+    18,
+    3,
+    109,
+    192,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.8,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.9496.ckpt",
+   "train_acc": 0.9331764705882353,
+   "val_acc": 0.7411764705882353
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|8|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    237,
+    18,
+    3,
+    109,
+    192,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.5,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9467.ckpt",
+   "train_acc": 0.9171764705882353,
+   "val_acc": 0.7298823529411764
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|8|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    237,
+    18,
+    3,
+    109,
+    192,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.8,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.9568.ckpt",
+   "train_acc": 0.8911372549019608,
+   "val_acc": 0.72
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.3|8|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.3",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    237,
+    18,
+    3,
+    109,
+    192,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.3,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=0.9815.ckpt",
+   "train_acc": 0.9435294117647058,
+   "val_acc": 0.744
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.5|8|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.5",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    237,
+    3,
+    109,
+    240,
+    255
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.9,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.8922.ckpt",
+   "train_acc": 0.9857254901960785,
+   "val_acc": 0.7632941176470588
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.5|8|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.5",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    237,
+    3,
+    109,
+    240,
+    255
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.4,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=0.9038.ckpt",
+   "train_acc": 0.939921568627451,
+   "val_acc": 0.7567058823529412
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.5|8|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.5",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    237,
+    3,
+    109,
+    240,
+    255
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.1,
+   "error": null,
+   "best_ckpt": "best-epoch=15-val_loss=0.8811.ckpt",
+   "train_acc": 0.9841568627450981,
+   "val_acc": 0.7783529411764706
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.5|8|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.5",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    237,
+    3,
+    109,
+    240,
+    255
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.5,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.9565.ckpt",
+   "train_acc": 0.8829803921568627,
+   "val_acc": 0.7275294117647059
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.5|8|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.5",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    237,
+    3,
+    109,
+    240,
+    255
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.6,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.8323.ckpt",
+   "train_acc": 0.9829019607843137,
+   "val_acc": 0.7807058823529411
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.7|8|r0",
+   "name": "MMR-PP[MEAN]|pearson|0.7",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    1,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.1,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.0093.ckpt",
+   "train_acc": 0.9303529411764706,
+   "val_acc": 0.7378823529411764
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.7|8|r1",
+   "name": "MMR-PP[MEAN]|pearson|0.7",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    1,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.0,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=0.9061.ckpt",
+   "train_acc": 0.9328627450980392,
+   "val_acc": 0.7524705882352941
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.7|8|r2",
+   "name": "MMR-PP[MEAN]|pearson|0.7",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    1,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9852.ckpt",
+   "train_acc": 0.8927058823529411,
+   "val_acc": 0.7275294117647059
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.7|8|r3",
+   "name": "MMR-PP[MEAN]|pearson|0.7",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    1,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9159.ckpt",
+   "train_acc": 0.9016470588235294,
+   "val_acc": 0.7392941176470588
+  },
+  {
+   "key": "MMR-PP[MEAN]|pearson|0.7|8|r4",
+   "name": "MMR-PP[MEAN]|pearson|0.7",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    1,
+    109,
+    114,
+    123,
+    240
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.8,
+   "error": null,
+   "best_ckpt": "best-epoch=02-val_loss=1.1078.ckpt",
+   "train_acc": 0.7888627450980392,
+   "val_acc": 0.6983529411764706
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|2|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    193,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.2,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.4485.ckpt",
+   "train_acc": 0.6927058823529412,
+   "val_acc": 0.6047058823529412
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|2|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    193,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.1,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.3712.ckpt",
+   "train_acc": 0.8315294117647059,
+   "val_acc": 0.6545882352941177
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|2|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    193,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.6,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.3572.ckpt",
+   "train_acc": 0.7527843137254902,
+   "val_acc": 0.6164705882352941
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|2|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    193,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.4,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.3914.ckpt",
+   "train_acc": 0.7361568627450981,
+   "val_acc": 0.6014117647058823
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|2|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    193,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.6,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.3345.ckpt",
+   "train_acc": 0.7764705882352941,
+   "val_acc": 0.6287058823529412
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|3|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    193,
+    123,
+    237
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.2,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.2466.ckpt",
+   "train_acc": 0.8073725490196079,
+   "val_acc": 0.6498823529411765
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|3|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    193,
+    123,
+    237
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.7,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.1773.ckpt",
+   "train_acc": 0.8983529411764706,
+   "val_acc": 0.6978823529411765
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|3|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    193,
+    123,
+    237
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.8,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.2442.ckpt",
+   "train_acc": 0.8547450980392157,
+   "val_acc": 0.6729411764705883
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|3|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    193,
+    123,
+    237
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.1893.ckpt",
+   "train_acc": 0.84,
+   "val_acc": 0.672
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|3|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    193,
+    123,
+    237
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.9,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.2354.ckpt",
+   "train_acc": 0.8698039215686274,
+   "val_acc": 0.6884705882352942
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|4|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.5,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.0343.ckpt",
+   "train_acc": 0.9625098039215686,
+   "val_acc": 0.7350588235294118
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|4|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.3,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.1391.ckpt",
+   "train_acc": 0.804235294117647,
+   "val_acc": 0.684235294117647
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|4|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.0,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.0939.ckpt",
+   "train_acc": 0.8947450980392156,
+   "val_acc": 0.7138823529411765
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|4|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.4,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.1064.ckpt",
+   "train_acc": 0.8415686274509804,
+   "val_acc": 0.6832941176470588
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|4|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.1142.ckpt",
+   "train_acc": 0.8705882352941177,
+   "val_acc": 0.6922352941176471
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|5|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.6,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=1.0224.ckpt",
+   "train_acc": 0.9744313725490196,
+   "val_acc": 0.7510588235294118
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|5|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.2,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.0354.ckpt",
+   "train_acc": 0.8531764705882353,
+   "val_acc": 0.7105882352941176
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|5|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.4,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=1.1029.ckpt",
+   "train_acc": 0.9469803921568627,
+   "val_acc": 0.7185882352941176
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|5|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.4,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.9449.ckpt",
+   "train_acc": 0.9670588235294117,
+   "val_acc": 0.7614117647058823
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|5|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.0,
+   "error": null,
+   "best_ckpt": "best-epoch=03-val_loss=1.2575.ckpt",
+   "train_acc": 0.7736470588235295,
+   "val_acc": 0.656
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|6|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.0,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=0.9039.ckpt",
+   "train_acc": 0.9662745098039216,
+   "val_acc": 0.7510588235294118
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|6|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.3,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.9224.ckpt",
+   "train_acc": 0.9650196078431372,
+   "val_acc": 0.7628235294117647
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|6|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.1,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.8953.ckpt",
+   "train_acc": 0.932235294117647,
+   "val_acc": 0.7501176470588236
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|6|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.4,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.0270.ckpt",
+   "train_acc": 0.8872156862745098,
+   "val_acc": 0.7152941176470589
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|6|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    16,
+    121,
+    123,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.2,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.0168.ckpt",
+   "train_acc": 0.9259607843137255,
+   "val_acc": 0.7294117647058823
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|7|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 19.2,
+   "error": null,
+   "best_ckpt": "best-epoch=14-val_loss=0.8490.ckpt",
+   "train_acc": 0.9945098039215686,
+   "val_acc": 0.7891764705882353
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|7|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.1,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=0.8836.ckpt",
+   "train_acc": 0.9370980392156862,
+   "val_acc": 0.7581176470588236
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|7|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 18.9,
+   "error": null,
+   "best_ckpt": "best-epoch=14-val_loss=0.8555.ckpt",
+   "train_acc": 0.9929411764705882,
+   "val_acc": 0.7905882352941176
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|7|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.9,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.8051.ckpt",
+   "train_acc": 0.9206274509803921,
+   "val_acc": 0.7745882352941177
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|7|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 18.1,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.8142.ckpt",
+   "train_acc": 0.9924705882352941,
+   "val_acc": 0.7863529411764706
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|8|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    17,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.5,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.7699.ckpt",
+   "train_acc": 0.9524705882352941,
+   "val_acc": 0.7830588235294118
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|8|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    17,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 19.8,
+   "error": null,
+   "best_ckpt": "best-epoch=15-val_loss=0.8199.ckpt",
+   "train_acc": 0.9876078431372549,
+   "val_acc": 0.7948235294117647
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|8|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    17,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.9232.ckpt",
+   "train_acc": 0.8961568627450981,
+   "val_acc": 0.7275294117647059
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|8|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    17,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 19.5,
+   "error": null,
+   "best_ckpt": "best-epoch=14-val_loss=0.7611.ckpt",
+   "train_acc": 0.9927843137254901,
+   "val_acc": 0.8051764705882353
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.3|8|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.3",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    121,
+    16,
+    17,
+    123,
+    241,
+    251
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.8,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.8706.ckpt",
+   "train_acc": 0.9861960784313726,
+   "val_acc": 0.7797647058823529
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.5|8|r0",
+   "name": "MMR-TXT[CVaR]|cos|0.5",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.8,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.8851.ckpt",
+   "train_acc": 0.8950588235294118,
+   "val_acc": 0.7552941176470588
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.5|8|r1",
+   "name": "MMR-TXT[CVaR]|cos|0.5",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.6,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.8148.ckpt",
+   "train_acc": 0.9530980392156863,
+   "val_acc": 0.7825882352941177
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.5|8|r2",
+   "name": "MMR-TXT[CVaR]|cos|0.5",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 18.1,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.7879.ckpt",
+   "train_acc": 0.9865098039215686,
+   "val_acc": 0.8018823529411765
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.5|8|r3",
+   "name": "MMR-TXT[CVaR]|cos|0.5",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.5,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.8795.ckpt",
+   "train_acc": 0.9770980392156863,
+   "val_acc": 0.768
+  },
+  {
+   "key": "MMR-TXT[CVaR]|cos|0.5|8|r4",
+   "name": "MMR-TXT[CVaR]|cos|0.5",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.6,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=0.8422.ckpt",
+   "train_acc": 0.931921568627451,
+   "val_acc": 0.768
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.3|8|r0",
+   "name": "MMR-TXT[CVaR]|ccos|0.3",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    20,
+    24,
+    28,
+    110,
+    135,
+    250
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.8,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9684.ckpt",
+   "train_acc": 0.915921568627451,
+   "val_acc": 0.7209411764705882
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.3|8|r1",
+   "name": "MMR-TXT[CVaR]|ccos|0.3",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    20,
+    24,
+    28,
+    110,
+    135,
+    250
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.0,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.8824.ckpt",
+   "train_acc": 0.9796078431372549,
+   "val_acc": 0.7675294117647059
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.3|8|r2",
+   "name": "MMR-TXT[CVaR]|ccos|0.3",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    20,
+    24,
+    28,
+    110,
+    135,
+    250
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.7,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.9317.ckpt",
+   "train_acc": 0.9424313725490197,
+   "val_acc": 0.728
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.3|8|r3",
+   "name": "MMR-TXT[CVaR]|ccos|0.3",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    20,
+    24,
+    28,
+    110,
+    135,
+    250
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.4,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=0.7994.ckpt",
+   "train_acc": 0.9904313725490196,
+   "val_acc": 0.7750588235294118
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.3|8|r4",
+   "name": "MMR-TXT[CVaR]|ccos|0.3",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    20,
+    24,
+    28,
+    110,
+    135,
+    250
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.8,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.9275.ckpt",
+   "train_acc": 0.9472941176470588,
+   "val_acc": 0.7364705882352941
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.5|8|r0",
+   "name": "MMR-TXT[CVaR]|ccos|0.5",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    17,
+    24,
+    110,
+    112,
+    135,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 18.9,
+   "error": null,
+   "best_ckpt": "best-epoch=13-val_loss=0.8223.ckpt",
+   "train_acc": 0.9941960784313726,
+   "val_acc": 0.780235294117647
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.5|8|r1",
+   "name": "MMR-TXT[CVaR]|ccos|0.5",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    17,
+    24,
+    110,
+    112,
+    135,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.0,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=0.9697.ckpt",
+   "train_acc": 0.9184313725490196,
+   "val_acc": 0.739764705882353
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.5|8|r2",
+   "name": "MMR-TXT[CVaR]|ccos|0.5",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    17,
+    24,
+    110,
+    112,
+    135,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.6,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=0.9162.ckpt",
+   "train_acc": 0.9838431372549019,
+   "val_acc": 0.7623529411764706
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.5|8|r3",
+   "name": "MMR-TXT[CVaR]|ccos|0.5",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    17,
+    24,
+    110,
+    112,
+    135,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.6,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=0.8990.ckpt",
+   "train_acc": 0.9728627450980392,
+   "val_acc": 0.7552941176470588
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.5|8|r4",
+   "name": "MMR-TXT[CVaR]|ccos|0.5",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    17,
+    24,
+    110,
+    112,
+    135,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.8,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.9362.ckpt",
+   "train_acc": 0.9314509803921569,
+   "val_acc": 0.7294117647058823
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.7|8|r0",
+   "name": "MMR-TXT[CVaR]|ccos|0.7",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    99,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.3,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.8700.ckpt",
+   "train_acc": 0.9030588235294118,
+   "val_acc": 0.7524705882352941
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.7|8|r1",
+   "name": "MMR-TXT[CVaR]|ccos|0.7",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    99,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.4,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=0.8787.ckpt",
+   "train_acc": 0.9333333333333333,
+   "val_acc": 0.7487058823529412
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.7|8|r2",
+   "name": "MMR-TXT[CVaR]|ccos|0.7",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    99,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 21.4,
+   "error": null,
+   "best_ckpt": "best-epoch=16-val_loss=0.7379.ckpt",
+   "train_acc": 0.9938823529411764,
+   "val_acc": 0.8112941176470588
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.7|8|r3",
+   "name": "MMR-TXT[CVaR]|ccos|0.7",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    99,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.2,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.8765.ckpt",
+   "train_acc": 0.8829803921568627,
+   "val_acc": 0.7571764705882353
+  },
+  {
+   "key": "MMR-TXT[CVaR]|ccos|0.7|8|r4",
+   "name": "MMR-TXT[CVaR]|ccos|0.7",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    237,
+    0,
+    121,
+    99,
+    123,
+    140,
+    241
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.6,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.8855.ckpt",
+   "train_acc": 0.8969411764705882,
+   "val_acc": 0.7505882352941177
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.3|8|r0",
+   "name": "MMR-TXT[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.5,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.0056.ckpt",
+   "train_acc": 0.9049411764705882,
+   "val_acc": 0.7312941176470589
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.3|8|r1",
+   "name": "MMR-TXT[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.8,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.9148.ckpt",
+   "train_acc": 0.9413333333333334,
+   "val_acc": 0.7425882352941177
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.3|8|r2",
+   "name": "MMR-TXT[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.7,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.9997.ckpt",
+   "train_acc": 0.9507450980392157,
+   "val_acc": 0.7416470588235294
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.3|8|r3",
+   "name": "MMR-TXT[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.7,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.0109.ckpt",
+   "train_acc": 0.9342745098039216,
+   "val_acc": 0.7275294117647059
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.3|8|r4",
+   "name": "MMR-TXT[MEAN]|cos|0.3",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.9,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.0686.ckpt",
+   "train_acc": 0.9035294117647059,
+   "val_acc": 0.7261176470588235
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.5|8|r0",
+   "name": "MMR-TXT[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    117,
+    1,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.7,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.3178.ckpt",
+   "train_acc": 0.8062745098039216,
+   "val_acc": 0.6484705882352941
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.5|8|r1",
+   "name": "MMR-TXT[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    117,
+    1,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.4361.ckpt",
+   "train_acc": 0.7505882352941177,
+   "val_acc": 0.5901176470588235
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.5|8|r2",
+   "name": "MMR-TXT[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    117,
+    1,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.3,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=1.3406.ckpt",
+   "train_acc": 0.8930196078431373,
+   "val_acc": 0.6663529411764706
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.5|8|r3",
+   "name": "MMR-TXT[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    117,
+    1,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.3,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.3298.ckpt",
+   "train_acc": 0.852392156862745,
+   "val_acc": 0.6484705882352941
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.5|8|r4",
+   "name": "MMR-TXT[MEAN]|cos|0.5",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    117,
+    1,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.4,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.3302.ckpt",
+   "train_acc": 0.8469019607843137,
+   "val_acc": 0.652235294117647
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.7|8|r0",
+   "name": "MMR-TXT[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.9,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.4366.ckpt",
+   "train_acc": 0.7738039215686274,
+   "val_acc": 0.6009411764705882
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.7|8|r1",
+   "name": "MMR-TXT[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.3696.ckpt",
+   "train_acc": 0.712,
+   "val_acc": 0.6089411764705882
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.7|8|r2",
+   "name": "MMR-TXT[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.9,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.3013.ckpt",
+   "train_acc": 0.8266666666666667,
+   "val_acc": 0.6428235294117647
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.7|8|r3",
+   "name": "MMR-TXT[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.5,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=1.4672.ckpt",
+   "train_acc": 0.835764705882353,
+   "val_acc": 0.6136470588235294
+  },
+  {
+   "key": "MMR-TXT[MEAN]|cos|0.7|8|r4",
+   "name": "MMR-TXT[MEAN]|cos|0.7",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.5054.ckpt",
+   "train_acc": 0.7232941176470589,
+   "val_acc": 0.5896470588235294
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|2|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    193,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.4,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.3477.ckpt",
+   "train_acc": 0.7606274509803922,
+   "val_acc": 0.6315294117647059
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|2|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    193,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.3,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.3735.ckpt",
+   "train_acc": 0.808,
+   "val_acc": 0.6202352941176471
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|2|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    193,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.2620.ckpt",
+   "train_acc": 0.828078431372549,
+   "val_acc": 0.6503529411764706
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|2|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    193,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.4,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.3695.ckpt",
+   "train_acc": 0.7993725490196079,
+   "val_acc": 0.6164705882352941
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|2|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    193,
+    109
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.6,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.3249.ckpt",
+   "train_acc": 0.7659607843137255,
+   "val_acc": 0.6291764705882353
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|3|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    193,
+    109,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.8,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=1.3260.ckpt",
+   "train_acc": 0.912156862745098,
+   "val_acc": 0.6710588235294118
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|3|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    193,
+    109,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.2166.ckpt",
+   "train_acc": 0.7963921568627451,
+   "val_acc": 0.668235294117647
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|3|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    193,
+    109,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.6,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.2905.ckpt",
+   "train_acc": 0.7973333333333333,
+   "val_acc": 0.6381176470588236
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|3|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    193,
+    109,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.7,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.2807.ckpt",
+   "train_acc": 0.908235294117647,
+   "val_acc": 0.6696470588235294
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|3|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    193,
+    109,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.3049.ckpt",
+   "train_acc": 0.764235294117647,
+   "val_acc": 0.6178823529411764
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|4|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    193,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.2,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.0490.ckpt",
+   "train_acc": 0.8787450980392156,
+   "val_acc": 0.7082352941176471
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|4|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    193,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.0,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.0180.ckpt",
+   "train_acc": 0.9286274509803921,
+   "val_acc": 0.7181176470588235
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|4|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    193,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.6,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=1.0691.ckpt",
+   "train_acc": 0.8724705882352941,
+   "val_acc": 0.6955294117647058
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|4|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    193,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.4,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.1246.ckpt",
+   "train_acc": 0.9449411764705883,
+   "val_acc": 0.7072941176470589
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|4|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    193,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "error": null,
+   "best_ckpt": "best-epoch=04-val_loss=1.1826.ckpt",
+   "train_acc": 0.7904313725490196,
+   "val_acc": 0.6447058823529411
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|5|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    193,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 20.8,
+   "error": null,
+   "best_ckpt": "best-epoch=16-val_loss=1.0513.ckpt",
+   "train_acc": 0.9778823529411764,
+   "val_acc": 0.7308235294117648
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|5|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    193,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.1652.ckpt",
+   "train_acc": 0.7861960784313725,
+   "val_acc": 0.6588235294117647
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|5|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    193,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.9,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=1.1017.ckpt",
+   "train_acc": 0.923921568627451,
+   "val_acc": 0.7223529411764706
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|5|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    193,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.4,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.0178.ckpt",
+   "train_acc": 0.9443137254901961,
+   "val_acc": 0.7303529411764705
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|5|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    193,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.2,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=1.0586.ckpt",
+   "train_acc": 0.9190588235294118,
+   "val_acc": 0.7072941176470589
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|6|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.2,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.1359.ckpt",
+   "train_acc": 0.8202352941176471,
+   "val_acc": 0.6663529411764706
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|6|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.9,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.9787.ckpt",
+   "train_acc": 0.9636078431372549,
+   "val_acc": 0.7392941176470588
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|6|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.6,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.9638.ckpt",
+   "train_acc": 0.9722352941176471,
+   "val_acc": 0.7477647058823529
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|6|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.1,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9346.ckpt",
+   "train_acc": 0.9193725490196079,
+   "val_acc": 0.731764705882353
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|6|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.4,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.9707.ckpt",
+   "train_acc": 0.9585882352941176,
+   "val_acc": 0.728
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|7|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.4,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=0.9845.ckpt",
+   "train_acc": 0.9327058823529412,
+   "val_acc": 0.7322352941176471
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|7|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.8,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=1.0168.ckpt",
+   "train_acc": 0.8547450980392157,
+   "val_acc": 0.7256470588235294
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|7|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 16.5,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=1.0307.ckpt",
+   "train_acc": 0.972392156862745,
+   "val_acc": 0.7341176470588235
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|7|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.9,
+   "error": null,
+   "best_ckpt": "best-epoch=11-val_loss=0.9457.ckpt",
+   "train_acc": 0.9744313725490196,
+   "val_acc": 0.7487058823529412
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|7|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    193,
+    3,
+    6,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.7,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9716.ckpt",
+   "train_acc": 0.8963137254901961,
+   "val_acc": 0.7265882352941176
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|8|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    3,
+    6,
+    108,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.5,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=0.8803.ckpt",
+   "train_acc": 0.9570196078431372,
+   "val_acc": 0.7454117647058823
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|8|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    3,
+    6,
+    108,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.4,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=0.8932.ckpt",
+   "train_acc": 0.9366274509803921,
+   "val_acc": 0.7416470588235294
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|8|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    3,
+    6,
+    108,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.6,
+   "error": null,
+   "best_ckpt": "best-epoch=08-val_loss=0.8851.ckpt",
+   "train_acc": 0.9510588235294117,
+   "val_acc": 0.7421176470588235
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|8|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    3,
+    6,
+    108,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.6,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.9753.ckpt",
+   "train_acc": 0.8773333333333333,
+   "val_acc": 0.715764705882353
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.3|8|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.3",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    3,
+    6,
+    108,
+    109,
+    132,
+    135,
+    234
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.6,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.9587.ckpt",
+   "train_acc": 0.9623529411764706,
+   "val_acc": 0.7567058823529412
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.5|8|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.5",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    108,
+    109,
+    123,
+    127,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.7,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9767.ckpt",
+   "train_acc": 0.9029019607843137,
+   "val_acc": 0.7209411764705882
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.5|8|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.5",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    108,
+    109,
+    123,
+    127,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.9,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9108.ckpt",
+   "train_acc": 0.9123137254901961,
+   "val_acc": 0.7425882352941177
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.5|8|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.5",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    108,
+    109,
+    123,
+    127,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "error": null,
+   "best_ckpt": "best-epoch=06-val_loss=0.9641.ckpt",
+   "train_acc": 0.904156862745098,
+   "val_acc": 0.7308235294117648
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.5|8|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.5",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    108,
+    109,
+    123,
+    127,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "error": null,
+   "best_ckpt": "best-epoch=05-val_loss=0.9345.ckpt",
+   "train_acc": 0.8944313725490196,
+   "val_acc": 0.7388235294117647
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.5|8|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.5",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    108,
+    109,
+    123,
+    127,
+    132
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.6,
+   "error": null,
+   "best_ckpt": "best-epoch=12-val_loss=0.9750.ckpt",
+   "train_acc": 0.9719215686274509,
+   "val_acc": 0.7567058823529412
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.7|8|r0",
+   "name": "MMR-TXT[MEAN]|ccos|0.7",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.4,
+   "error": null,
+   "best_ckpt": "best-epoch=07-val_loss=1.0056.ckpt",
+   "train_acc": 0.9049411764705882,
+   "val_acc": 0.7312941176470589
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.7|8|r1",
+   "name": "MMR-TXT[MEAN]|ccos|0.7",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.4,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.9148.ckpt",
+   "train_acc": 0.9413333333333334,
+   "val_acc": 0.7425882352941177
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.7|8|r2",
+   "name": "MMR-TXT[MEAN]|ccos|0.7",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.5,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=0.9997.ckpt",
+   "train_acc": 0.9507450980392157,
+   "val_acc": 0.7416470588235294
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.7|8|r3",
+   "name": "MMR-TXT[MEAN]|ccos|0.7",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.6,
+   "error": null,
+   "best_ckpt": "best-epoch=10-val_loss=1.0109.ckpt",
+   "train_acc": 0.9342745098039216,
+   "val_acc": 0.7275294117647059
+  },
+  {
+   "key": "MMR-TXT[MEAN]|ccos|0.7|8|r4",
+   "name": "MMR-TXT[MEAN]|ccos|0.7",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    108,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "asserted": [],
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.8,
+   "error": null,
+   "best_ckpt": "best-epoch=09-val_loss=1.0686.ckpt",
+   "train_acc": 0.9035294117647059,
+   "val_acc": 0.7261176470588235
+  }
+ ],
+ "s_test": "written to counts/logits only; not summarised in S2",
+ "wall_min": 50.4,
+ "node": "c642-031.vista.tacc.utexas.edu"
+}
