@@ -1,0 +1,97 @@
+=== node: c642-031.vista.tacc.utexas.edu start: Wed Oct 14 07:47:38 PM CDT 2026 A: OMP_NUM_THREADS=16 python experiments/d032_s0.py | B: - ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          24         199           0           0         188
+Swap:             24           6          18
+[A] [A] >>> OMP_NUM_THREADS=16 python experiments/d032_s0.py 19:47:38
+[A] [S0 v2] inputs asserted; CVaR scores and 7 reused chains equal D031 exactly
+[A] [S0 v2] TOP-K[CVaR]              [193, 0, 109, 123, 237, 121, 140, 114]  JG∩4 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v2] TOP-K[MEAN]              [109, 117, 123, 114, 1, 132, 136, 121]  JG∩2 ident_k [1, 3, 4, 5, 6]
+[A] [S0 v2] MMR-PP[CVaR]|cos|0.3     [193, 121, 3, 237, 7, 194, 242, 255]  JG∩3 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v2] MMR-PP[CVaR]|cos|0.5     [193, 121, 237, 0, 140, 194, 109, 3]  JG∩4 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v2] MMR-PP[CVaR]|cos|0.7     [193, 0, 109, 237, 140, 121, 123, 194]  JG∩4 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v2] MMR-PP[CVaR]|pearson|0.3 [193, 121, 255, 3, 237, 216, 233, 20]  JG∩4 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v2] MMR-PP[CVaR]|pearson|0.5 [193, 237, 114, 247, 255, 99, 28, 241]  JG∩2 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v2] MMR-PP[CVaR]|pearson|0.7 [193, 237, 109, 0, 194, 241, 140, 251]  JG∩3 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v2] MMR-PP[MEAN]|cos|0.3     [109, 3, 240, 193, 233, 145, 252, 117]  JG∩3 ident_k [1]
+[A] [S0 v2] MMR-PP[MEAN]|cos|0.5     [109, 240, 117, 123, 233, 193, 114, 3]  JG∩3 ident_k [1]
+[A] [S0 v2] MMR-PP[MEAN]|cos|0.7     [109, 117, 123, 114, 1, 132, 136, 121]  JG∩2 ident_k [1, 3, 4, 5, 6]
+[A] [S0 v2] MMR-PP[MEAN]|pearson|0.3 [109, 3, 240, 193, 18, 233, 237, 192]  JG∩4 ident_k [1]
+[A] [S0 v2] MMR-PP[MEAN]|pearson|0.5 [109, 240, 193, 233, 3, 237, 255, 117]  JG∩4 ident_k [1]
+[A] [S0 v2] MMR-PP[MEAN]|pearson|0.7 [109, 240, 117, 123, 114, 193, 233, 1]  JG∩3 ident_k [1]
+[A] [S0 v2] MMR-TXT[CVaR]|cos|0.3    [193, 123, 237, 121, 16, 241, 251, 17]  JG∩3 ident_k [1]
+[A] [S0 v2] MMR-TXT[CVaR]|cos|0.5    [193, 0, 123, 237, 121, 109, 140, 241]  JG∩4 ident_k [1, 2, 6, 7]
+[A] [S0 v2] MMR-TXT[CVaR]|cos|0.7    [193, 0, 123, 237, 109, 121, 140, 114]  JG∩4 ident_k [1, 2, 5, 6, 7, 8]
+[A] [S0 v2] MMR-TXT[CVaR]|ccos|0.3   [193, 110, 24, 237, 250, 135, 28, 20]  JG∩2 ident_k [1]
+[A] [S0 v2] MMR-TXT[CVaR]|ccos|0.5   [193, 110, 237, 24, 241, 112, 135, 17]  JG∩2 ident_k [1]
+[A] [S0 v2] MMR-TXT[CVaR]|ccos|0.7   [193, 121, 237, 123, 0, 241, 99, 140]  JG∩4 ident_k [1, 2, 3]
+[A] [S0 v2] MMR-TXT[MEAN]|cos|0.3    [109, 132, 117, 123, 114, 136, 193, 108]  JG∩2 ident_k [1]
+[A] [S0 v2] MMR-TXT[MEAN]|cos|0.5    [109, 117, 123, 114, 132, 1, 136, 108]  JG∩1 ident_k [1, 3, 4, 6]
+[A] [S0 v2] MMR-TXT[MEAN]|cos|0.7    [109, 117, 123, 114, 132, 1, 136, 121]  JG∩2 ident_k [1, 3, 4, 6]
+[A] [S0 v2] MMR-TXT[MEAN]|ccos|0.3   [109, 193, 132, 234, 6, 3, 135, 108]  JG∩1 ident_k [1]
+[A] [S0 v2] MMR-TXT[MEAN]|ccos|0.5   [109, 132, 193, 108, 233, 117, 127, 123]  JG∩3 ident_k [1]
+[A] [S0 v2] MMR-TXT[MEAN]|ccos|0.7   [109, 132, 117, 123, 114, 136, 193, 108]  JG∩2 ident_k [1]
+[A] [S0 v2] TOP-K[CVaR] vs TOP-K[MEAN]: overlap 4/8
+[A] [S0 v2] MMR-PP[CVaR]|cos|0.3 vs MMR-PP[MEAN]|cos|0.3: overlap 2/8
+[A] [S0 v2] MMR-PP[CVaR]|cos|0.5 vs MMR-PP[MEAN]|cos|0.5: overlap 3/8
+[A] [S0 v2] MMR-PP[CVaR]|cos|0.7 vs MMR-PP[MEAN]|cos|0.7: overlap 3/8
+[A] [S0 v2] MMR-PP[CVaR]|pearson|0.3 vs MMR-PP[MEAN]|pearson|0.3: overlap 4/8
+[A] [S0 v2] MMR-PP[CVaR]|pearson|0.5 vs MMR-PP[MEAN]|pearson|0.5: overlap 3/8
+[A] [S0 v2] MMR-PP[CVaR]|pearson|0.7 vs MMR-PP[MEAN]|pearson|0.7: overlap 2/8
+[A] [S0 v2] MMR-TXT[CVaR]|cos|0.3 vs MMR-TXT[MEAN]|cos|0.3: overlap 2/8
+[A] [S0 v2] MMR-TXT[CVaR]|cos|0.5 vs MMR-TXT[MEAN]|cos|0.5: overlap 2/8
+[A] [S0 v2] MMR-TXT[CVaR]|cos|0.7 vs MMR-TXT[MEAN]|cos|0.7: overlap 4/8
+[A] [S0 v2] MMR-TXT[CVaR]|ccos|0.3 vs MMR-TXT[MEAN]|ccos|0.3: overlap 2/8
+[A] [S0 v2] MMR-TXT[CVaR]|ccos|0.5 vs MMR-TXT[MEAN]|ccos|0.5: overlap 1/8
+[A] [S0 v2] MMR-TXT[CVaR]|ccos|0.7 vs MMR-TXT[MEAN]|ccos|0.7: overlap 2/8
+[A] [S0 v2] sim PP|cos: min 0.2933, p05 0.5907, median 0.7995, p95 0.9198, max 0.9797, p05_p95_width 0.3290
+[A] [S0 v2] sim PP|pearson: min -0.1300, p05 0.0195, median 0.2750, p95 0.6805, max 0.9420, p05_p95_width 0.6610
+[A] [S0 v2] sim TXT|cos: min 0.6703, p05 0.7492, median 0.7937, p95 0.8736, max 0.9809, p05_p95_width 0.1244
+[A] [S0 v2] sim TXT|ccos: min -0.3316, p05 -0.1855, median -0.0355, p95 0.3096, max 0.8923, p05_p95_width 0.4950
+[A] [S0 v2] sim rank corr {'PP|cos~PP|pearson': 0.8939077513507356, 'PP|cos~TXT|cos': 0.1999210393341744, 'PP|cos~TXT|ccos': 0.22471665695076096, 'PP|pearson~TXT|cos': 0.22855035659714532, 'PP|pearson~TXT|ccos': 0.2622221998058167, 'TXT|cos~TXT|ccos': 0.699740089586586}
+[A] [S0 v1] inputs asserted; CVaR scores and 7 reused chains equal D031 exactly
+[A] [S0 v1] TOP-K[CVaR]              [193, 140, 114, 0, 109, 117, 145, 1]  JG∩5 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] TOP-K[MEAN]              [123, 114, 117, 109, 1, 113, 140, 132]  JG∩3 ident_k [1, 2, 4, 5, 6, 7]
+[A] [S0 v1] MMR-PP[CVaR]|cos|0.3     [193, 140, 3, 237, 117, 114, 17, 252]  JG∩5 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] MMR-PP[CVaR]|cos|0.5     [193, 140, 114, 237, 117, 109, 0, 113]  JG∩6 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] MMR-PP[CVaR]|cos|0.7     [193, 140, 114, 0, 109, 117, 237, 145]  JG∩6 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] MMR-PP[CVaR]|pearson|0.3 [193, 140, 17, 237, 22, 204, 252, 28]  JG∩3 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] MMR-PP[CVaR]|pearson|0.5 [193, 140, 17, 237, 117, 194, 28, 233]  JG∩5 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] MMR-PP[CVaR]|pearson|0.7 [193, 140, 237, 114, 117, 109, 0, 16]  JG∩7 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] MMR-PP[MEAN]|cos|0.3     [123, 3, 252, 117, 238, 233, 109, 114]  JG∩3 ident_k [1]
+[A] [S0 v1] MMR-PP[MEAN]|cos|0.5     [123, 117, 114, 109, 3, 113, 140, 132]  JG∩3 ident_k [1, 4]
+[A] [S0 v1] MMR-PP[MEAN]|cos|0.7     [123, 117, 114, 109, 113, 1, 140, 132]  JG∩3 ident_k [1, 4, 5, 6, 7]
+[A] [S0 v1] MMR-PP[MEAN]|pearson|0.3 [123, 3, 240, 216, 233, 16, 4, 0]  JG∩3 ident_k [1]
+[A] [S0 v1] MMR-PP[MEAN]|pearson|0.5 [123, 240, 3, 117, 233, 0, 16, 109]  JG∩4 ident_k [1]
+[A] [S0 v1] MMR-PP[MEAN]|pearson|0.7 [123, 117, 114, 109, 113, 140, 132, 1]  JG∩3 ident_k [1, 4, 5]
+[A] [S0 v1] MMR-TXT[CVaR]|cos|0.3    [193, 114, 140, 1, 237, 109, 117, 241]  JG∩5 ident_k [1, 3]
+[A] [S0 v1] MMR-TXT[CVaR]|cos|0.5    [193, 114, 140, 109, 0, 117, 237, 145]  JG∩6 ident_k [1, 3, 5, 6, 7, 8]
+[A] [S0 v1] MMR-TXT[CVaR]|cos|0.7    [193, 140, 114, 0, 109, 117, 145, 1]  JG∩5 ident_k [1, 2, 3, 4, 5, 6, 7, 8]
+[A] [S0 v1] MMR-TXT[CVaR]|ccos|0.3   [193, 110, 234, 99, 251, 135, 237, 129]  JG∩2 ident_k [1]
+[A] [S0 v1] MMR-TXT[CVaR]|ccos|0.5   [193, 140, 117, 237, 99, 114, 135, 241]  JG∩5 ident_k [1, 2]
+[A] [S0 v1] MMR-TXT[CVaR]|ccos|0.7   [193, 140, 114, 237, 1, 109, 68, 121]  JG∩4 ident_k [1, 2, 3, 4]
+[A] [S0 v1] MMR-TXT[MEAN]|cos|0.3    [123, 114, 117, 109, 132, 113, 140, 1]  JG∩3 ident_k [1, 2, 4]
+[A] [S0 v1] MMR-TXT[MEAN]|cos|0.5    [123, 114, 117, 109, 113, 1, 132, 140]  JG∩3 ident_k [1, 2, 4, 5, 6]
+[A] [S0 v1] MMR-TXT[MEAN]|cos|0.7    [123, 114, 117, 109, 113, 1, 140, 132]  JG∩3 ident_k [1, 2, 4, 5, 6, 7]
+[A] [S0 v1] MMR-TXT[MEAN]|ccos|0.3   [123, 32, 0, 132, 239, 145, 61, 3]  JG∩1 ident_k [1]
+[A] [S0 v1] MMR-TXT[MEAN]|ccos|0.5   [123, 132, 114, 113, 117, 140, 239, 116]  JG∩3 ident_k [1]
+[A] [S0 v1] MMR-TXT[MEAN]|ccos|0.7   [123, 114, 117, 109, 132, 113, 140, 121]  JG∩3 ident_k [1, 2, 4]
+[A] [S0 v1] TOP-K[CVaR] vs TOP-K[MEAN]: overlap 5/8
+[A] [S0 v1] MMR-PP[CVaR]|cos|0.3 vs MMR-PP[MEAN]|cos|0.3: overlap 4/8
+[A] [S0 v1] MMR-PP[CVaR]|cos|0.5 vs MMR-PP[MEAN]|cos|0.5: overlap 5/8
+[A] [S0 v1] MMR-PP[CVaR]|cos|0.7 vs MMR-PP[MEAN]|cos|0.7: overlap 4/8
+[A] [S0 v1] MMR-PP[CVaR]|pearson|0.3 vs MMR-PP[MEAN]|pearson|0.3: overlap 0/8
+[A] [S0 v1] MMR-PP[CVaR]|pearson|0.5 vs MMR-PP[MEAN]|pearson|0.5: overlap 2/8
+[A] [S0 v1] MMR-PP[CVaR]|pearson|0.7 vs MMR-PP[MEAN]|pearson|0.7: overlap 4/8
+[A] [S0 v1] MMR-TXT[CVaR]|cos|0.3 vs MMR-TXT[MEAN]|cos|0.3: overlap 5/8
+[A] [S0 v1] MMR-TXT[CVaR]|cos|0.5 vs MMR-TXT[MEAN]|cos|0.5: overlap 4/8
+[A] [S0 v1] MMR-TXT[CVaR]|cos|0.7 vs MMR-TXT[MEAN]|cos|0.7: overlap 5/8
+[A] [S0 v1] MMR-TXT[CVaR]|ccos|0.3 vs MMR-TXT[MEAN]|ccos|0.3: overlap 0/8
+[A] [S0 v1] MMR-TXT[CVaR]|ccos|0.5 vs MMR-TXT[MEAN]|ccos|0.5: overlap 3/8
+[A] [S0 v1] MMR-TXT[CVaR]|ccos|0.7 vs MMR-TXT[MEAN]|ccos|0.7: overlap 4/8
+[A] [S0 v1] sim PP|cos: min 0.2896, p05 0.6094, median 0.7963, p95 0.9182, max 0.9803, p05_p95_width 0.3088
+[A] [S0 v1] sim PP|pearson: min -0.2455, p05 -0.0459, median 0.2527, p95 0.6802, max 0.9554, p05_p95_width 0.7260
+[A] [S0 v1] sim TXT|cos: min 0.6703, p05 0.7492, median 0.7937, p95 0.8736, max 0.9809, p05_p95_width 0.1244
+[A] [S0 v1] sim TXT|ccos: min -0.3316, p05 -0.1855, median -0.0355, p95 0.3096, max 0.8923, p05_p95_width 0.4950
+[A] [S0 v1] sim rank corr {'PP|cos~PP|pearson': 0.906190650479518, 'PP|cos~TXT|cos': 0.20468609556269945, 'PP|cos~TXT|ccos': 0.22251079830622103, 'PP|pearson~TXT|cos': 0.2200419842390583, 'PP|pearson~TXT|ccos': 0.24535504780210168, 'TXT|cos~TXT|ccos': 0.699740089586586}
+[A] [S0] wrote ./results/D032/chains.json (0.01 min)
+=== end: Wed Oct 14 07:47:59 PM CDT 2026 rc=0 ===

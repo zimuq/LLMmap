@@ -1,0 +1,14 @@
+=== node: c642-001.vista.tacc.utexas.edu start: Wed Oct 14 04:36:30 PM CDT 2026 A: OMP_NUM_THREADS=16 python experiments/d032_s0.py | B: - ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          20         204           0           0         192
+Swap:             24           0          24
+[A] [A] >>> OMP_NUM_THREADS=16 python experiments/d032_s0.py 16:36:30
+[A] Traceback (most recent call last):
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d032_s0.py", line 148, in <module>
+[A]     main()
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d032_s0.py", line 82, in main
+[A]     assert list(sel) == L.chain_names()
+[A]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A] AssertionError
+[A] [A] FAILED: OMP_NUM_THREADS=16 python experiments/d032_s0.py
+=== end: Wed Oct 14 04:37:22 PM CDT 2026 rc=1 ===

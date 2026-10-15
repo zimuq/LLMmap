@@ -45,3 +45,6 @@ data/baseline_ext_v1/derived/
 results/D031/logits_*.npz
 results/D031/models/
 results/D031/budget_scores/
+# D032: per-run logits and checkpoints stay on $WORK; counts are committed
+results/D032/logits_*.npz
+results/D032/models/
