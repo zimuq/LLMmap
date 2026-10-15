@@ -1,0 +1,131 @@
+{
+ "view": "v2",
+ "per_job": {
+  "MMR-TXT[CVaR]|cos|0.3": {
+   "val_top1": 0.884235294117647,
+   "n_iter": 652,
+   "wall_s": 196.0
+  },
+  "MMR-PP[MEAN]|pearson|0.3": {
+   "val_top1": 0.8465882352941176,
+   "n_iter": 751,
+   "wall_s": 229.3
+  },
+  "MMR-PP[MEAN]|pearson|0.5": {
+   "val_top1": 0.843764705882353,
+   "n_iter": 769,
+   "wall_s": 233.9
+  },
+  "MMR-PP[MEAN]|cos|0.3": {
+   "val_top1": 0.8367058823529412,
+   "n_iter": 763,
+   "wall_s": 235.7
+  },
+  "MMR-TXT[CVaR]|cos|0.5": {
+   "val_top1": 0.8696470588235294,
+   "n_iter": 781,
+   "wall_s": 235.8
+  },
+  "MMR-PP[MEAN]|cos|0.5": {
+   "val_top1": 0.8395294117647059,
+   "n_iter": 838,
+   "wall_s": 251.1
+  },
+  "MMR-PP[MEAN]|pearson|0.7": {
+   "val_top1": 0.8404705882352941,
+   "n_iter": 824,
+   "wall_s": 254.7
+  },
+  "MMR-TXT[CVaR]|cos|0.7": {
+   "val_top1": 0.8621176470588235,
+   "n_iter": 749,
+   "wall_s": 226.3
+  },
+  "MMR-TXT[CVaR]|ccos|0.5": {
+   "val_top1": 0.859764705882353,
+   "n_iter": 692,
+   "wall_s": 211.6
+  },
+  "MMR-TXT[CVaR]|ccos|0.3": {
+   "val_top1": 0.8555294117647059,
+   "n_iter": 726,
+   "wall_s": 222.1
+  },
+  "MMR-TXT[CVaR]|ccos|0.7": {
+   "val_top1": 0.8663529411764705,
+   "n_iter": 724,
+   "wall_s": 218.2
+  },
+  "MMR-PP[MEAN]|cos|0.7": {
+   "val_top1": 0.7835294117647059,
+   "n_iter": 1513,
+   "wall_s": 459.4
+  },
+  "MMR-TXT[MEAN]|cos|0.3": {
+   "val_top1": 0.8268235294117647,
+   "n_iter": 891,
+   "wall_s": 272.6
+  },
+  "D031:MMR|cos|0.3": {
+   "val_top1": 0.8423529411764706,
+   "n_iter": 672,
+   "wall_s": 208.6
+  },
+  "MMR-TXT[MEAN]|ccos|0.3": {
+   "val_top1": 0.8404705882352941,
+   "n_iter": 790,
+   "wall_s": 242.3
+  },
+  "MMR-TXT[MEAN]|cos|0.5": {
+   "val_top1": 0.7807058823529411,
+   "n_iter": 1357,
+   "wall_s": 422.0
+  },
+  "D031:MMR|cos|0.5": {
+   "val_top1": 0.8569411764705882,
+   "n_iter": 724,
+   "wall_s": 220.3
+  },
+  "MMR-TXT[MEAN]|ccos|0.5": {
+   "val_top1": 0.8371764705882353,
+   "n_iter": 843,
+   "wall_s": 251.6
+  },
+  "D031:MMR|cos|0.7": {
+   "val_top1": 0.8602352941176471,
+   "n_iter": 687,
+   "wall_s": 196.6
+  },
+  "MMR-TXT[MEAN]|cos|0.7": {
+   "val_top1": 0.7835294117647059,
+   "n_iter": 1513,
+   "wall_s": 451.5
+  },
+  "MMR-TXT[MEAN]|ccos|0.7": {
+   "val_top1": 0.8268235294117647,
+   "n_iter": 891,
+   "wall_s": 257.4
+  },
+  "D031:MMR|pearson|0.7": {
+   "val_top1": 0.8776470588235294,
+   "n_iter": 643,
+   "wall_s": 109.5
+  },
+  "D031:MMR|pearson|0.5": {
+   "val_top1": 0.8578823529411764,
+   "n_iter": 719,
+   "wall_s": 125.1
+  },
+  "D031:MMR|pearson|0.3": {
+   "val_top1": 0.8423529411764706,
+   "n_iter": 770,
+   "wall_s": 135.7
+  }
+ },
+ "threads": 8,
+ "workers": 8,
+ "omp": "8",
+ "chains_sha256": "bd1968f5f93d61008b82a294770f27ebc8f2d78e4156ecb3f35eae4e2f3eef6c",
+ "wall_min": 13.7,
+ "node": "c642-022.vista.tacc.utexas.edu"
+}

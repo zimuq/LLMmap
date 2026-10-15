@@ -1,0 +1,140 @@
+{
+ "schema": "d032-variant-choice-v1",
+ "readout": "linear (D017 concat), fit S_build, top-1 S_val, k = 8",
+ "rule": "highest S_val E_all; ties: cos (uncentred) first, then lower lambda (D031 order)",
+ "s_test_reads": 0,
+ "chains_sha256": "bd1968f5f93d61008b82a294770f27ebc8f2d78e4156ecb3f35eae4e2f3eef6c",
+ "views": {
+  "v2": {
+   "stars": {
+    "TOP-K[CVaR]": "TOP-K[CVaR]",
+    "TOP-K[MEAN]": "TOP-K[MEAN]",
+    "MMR-PP[CVaR]": "MMR-PP[CVaR]|pearson|0.7",
+    "MMR-PP[MEAN]": "MMR-PP[MEAN]|pearson|0.3",
+    "MMR-TXT[CVaR]": "MMR-TXT[CVaR]|cos|0.3",
+    "MMR-TXT[MEAN]": "MMR-TXT[MEAN]|ccos|0.3"
+   },
+   "values": {
+    "MMR-PP[MEAN]|cos|0.3": 0.8367058823529412,
+    "MMR-PP[MEAN]|cos|0.5": 0.8395294117647059,
+    "MMR-PP[MEAN]|cos|0.7": 0.7835294117647059,
+    "MMR-PP[MEAN]|pearson|0.3": 0.8465882352941176,
+    "MMR-PP[MEAN]|pearson|0.5": 0.843764705882353,
+    "MMR-PP[MEAN]|pearson|0.7": 0.8404705882352941,
+    "MMR-TXT[CVaR]|cos|0.3": 0.884235294117647,
+    "MMR-TXT[CVaR]|cos|0.5": 0.8696470588235294,
+    "MMR-TXT[CVaR]|cos|0.7": 0.8621176470588235,
+    "MMR-TXT[CVaR]|ccos|0.3": 0.8555294117647059,
+    "MMR-TXT[CVaR]|ccos|0.5": 0.859764705882353,
+    "MMR-TXT[CVaR]|ccos|0.7": 0.8663529411764705,
+    "MMR-TXT[MEAN]|cos|0.3": 0.8268235294117647,
+    "MMR-TXT[MEAN]|cos|0.5": 0.7807058823529411,
+    "MMR-TXT[MEAN]|cos|0.7": 0.7835294117647059,
+    "MMR-TXT[MEAN]|ccos|0.3": 0.8404705882352941,
+    "MMR-TXT[MEAN]|ccos|0.5": 0.8371764705882353,
+    "MMR-TXT[MEAN]|ccos|0.7": 0.8268235294117647
+   },
+   "threads": {
+    "threads": 8,
+    "workers": 8,
+    "omp": "8"
+   },
+   "d031_mmr_pp_cvar_diagnostic": {
+    "note": "Call 2 (a): D031's 6 MMR-PP[CVaR] chains re-scored on S_val under D032 S1 threads; the star is NOT changed (fixed before D031 read S_test)",
+    "d031_values": {
+     "MMR-PP[CVaR]|cos|0.3": 0.8423529411764706,
+     "MMR-PP[CVaR]|cos|0.5": 0.8569411764705882,
+     "MMR-PP[CVaR]|cos|0.7": 0.8602352941176471,
+     "MMR-PP[CVaR]|pearson|0.3": 0.8423529411764706,
+     "MMR-PP[CVaR]|pearson|0.5": 0.8578823529411764,
+     "MMR-PP[CVaR]|pearson|0.7": 0.8776470588235294
+    },
+    "rescored_values": {
+     "MMR-PP[CVaR]|cos|0.3": 0.8423529411764706,
+     "MMR-PP[CVaR]|cos|0.5": 0.8569411764705882,
+     "MMR-PP[CVaR]|cos|0.7": 0.8602352941176471,
+     "MMR-PP[CVaR]|pearson|0.3": 0.8423529411764706,
+     "MMR-PP[CVaR]|pearson|0.5": 0.8578823529411764,
+     "MMR-PP[CVaR]|pearson|0.7": 0.8776470588235294
+    },
+    "equal_to_d031": {
+     "MMR-PP[CVaR]|cos|0.3": true,
+     "MMR-PP[CVaR]|cos|0.5": true,
+     "MMR-PP[CVaR]|cos|0.7": true,
+     "MMR-PP[CVaR]|pearson|0.3": true,
+     "MMR-PP[CVaR]|pearson|0.5": true,
+     "MMR-PP[CVaR]|pearson|0.7": true
+    },
+    "rescored_max": "MMR-PP[CVaR]|pearson|0.7",
+    "d031_star": "MMR-PP[CVaR]|pearson|0.7",
+    "still_max": true
+   }
+  },
+  "v1": {
+   "stars": {
+    "TOP-K[CVaR]": "TOP-K[CVaR]",
+    "TOP-K[MEAN]": "TOP-K[MEAN]",
+    "MMR-PP[CVaR]": "MMR-PP[CVaR]|pearson|0.7",
+    "MMR-PP[MEAN]": "MMR-PP[MEAN]|pearson|0.5",
+    "MMR-TXT[CVaR]": "MMR-TXT[CVaR]|cos|0.3",
+    "MMR-TXT[MEAN]": "MMR-TXT[MEAN]|ccos|0.3"
+   },
+   "values": {
+    "MMR-PP[MEAN]|cos|0.3": 0.8962162162162162,
+    "MMR-PP[MEAN]|cos|0.5": 0.8972972972972973,
+    "MMR-PP[MEAN]|cos|0.7": 0.8854054054054054,
+    "MMR-PP[MEAN]|pearson|0.3": 0.9048648648648648,
+    "MMR-PP[MEAN]|pearson|0.5": 0.9102702702702703,
+    "MMR-PP[MEAN]|pearson|0.7": 0.8854054054054054,
+    "MMR-TXT[CVaR]|cos|0.3": 0.9416216216216217,
+    "MMR-TXT[CVaR]|cos|0.5": 0.9243243243243243,
+    "MMR-TXT[CVaR]|cos|0.7": 0.9178378378378378,
+    "MMR-TXT[CVaR]|ccos|0.3": 0.9340540540540541,
+    "MMR-TXT[CVaR]|ccos|0.5": 0.9394594594594594,
+    "MMR-TXT[CVaR]|ccos|0.7": 0.9221621621621622,
+    "MMR-TXT[MEAN]|cos|0.3": 0.8854054054054054,
+    "MMR-TXT[MEAN]|cos|0.5": 0.8854054054054054,
+    "MMR-TXT[MEAN]|cos|0.7": 0.8854054054054054,
+    "MMR-TXT[MEAN]|ccos|0.3": 0.9145945945945946,
+    "MMR-TXT[MEAN]|ccos|0.5": 0.8778378378378379,
+    "MMR-TXT[MEAN]|ccos|0.7": 0.8745945945945945
+   },
+   "threads": {
+    "threads": 16,
+    "workers": 4,
+    "omp": "16"
+   },
+   "d031_mmr_pp_cvar_diagnostic": {
+    "note": "Call 2 (a): D031's 6 MMR-PP[CVaR] chains re-scored on S_val under D032 S1 threads; the star is NOT changed (fixed before D031 read S_test)",
+    "d031_values": {
+     "MMR-PP[CVaR]|cos|0.3": 0.9297297297297298,
+     "MMR-PP[CVaR]|cos|0.5": 0.9264864864864865,
+     "MMR-PP[CVaR]|cos|0.7": 0.9243243243243243,
+     "MMR-PP[CVaR]|pearson|0.3": 0.9264864864864865,
+     "MMR-PP[CVaR]|pearson|0.5": 0.9254054054054054,
+     "MMR-PP[CVaR]|pearson|0.7": 0.9351351351351351
+    },
+    "rescored_values": {
+     "MMR-PP[CVaR]|cos|0.3": 0.9297297297297298,
+     "MMR-PP[CVaR]|cos|0.5": 0.9264864864864865,
+     "MMR-PP[CVaR]|cos|0.7": 0.9243243243243243,
+     "MMR-PP[CVaR]|pearson|0.3": 0.9264864864864865,
+     "MMR-PP[CVaR]|pearson|0.5": 0.9254054054054054,
+     "MMR-PP[CVaR]|pearson|0.7": 0.9351351351351351
+    },
+    "equal_to_d031": {
+     "MMR-PP[CVaR]|cos|0.3": true,
+     "MMR-PP[CVaR]|cos|0.5": true,
+     "MMR-PP[CVaR]|cos|0.7": true,
+     "MMR-PP[CVaR]|pearson|0.3": true,
+     "MMR-PP[CVaR]|pearson|0.5": true,
+     "MMR-PP[CVaR]|pearson|0.7": true
+    },
+    "rescored_max": "MMR-PP[CVaR]|pearson|0.7",
+    "d031_star": "MMR-PP[CVaR]|pearson|0.7",
+    "still_max": true
+   }
+  }
+ },
+ "code_commit": "a43e5c34f067d17ee5161e09a50ba0fd1246c75e"
+}
