@@ -65,6 +65,8 @@ below).
 
 ---
 
+## Resolved
+
 **Issue 26 (2026-10-15): D032 `## D`, Q1 claim rule. Does "no WORSE anywhere" cover the non-starred cells?**
 
 - **Where:** `docs/D032.md → ## D → What counts as an answer → Q1` ("BETTER in ≥ 2 of 3 rules in each view, and
@@ -82,7 +84,10 @@ below).
 - **Why TACC can't fix it:** `## D` is design-owned. Design side should rule on which reading the claim rule
   intends; R gives both verdicts, so no rerun is needed.
 
-## Resolved
+*Resolved 2026-10-19 (design-side, D032 results Review).* Starred reading, per D031 Call 6's
+strongest-variant convention: "no WORSE anywhere" ranges over Q1's starred contrasts × views; the WORSE scan
+over non-starred cells is reported, not counted. Ruling made after the data and disclosed as such; the
+any-cell reading is recorded in D032's Review and FINDINGS. Dated clarification added to D032 `## D`.
 
 **Issue 25 (2026-10-12) — D031 `## D`, "S2 — Train": the citation "D023 Call 2
 canonical order" points at the wrong Call.** D023 Call 2 is the identical-`k`

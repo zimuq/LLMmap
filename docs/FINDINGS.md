@@ -1783,3 +1783,76 @@ by +26 pp (v2) and +36 pp (v1) overall, and on hard pairs as well.
 - Process: first multi-P D. Two review stops each caught a real issue.
 - Cost: 127.8 node-h.
 
+## D031 — Against selection baselines, JG beats Helm et al.'s spectral rule and random, but a plain CVaR ranking ties it and CVaR + MMR beats it on v2
+
+**Question (baselines, query selection only):** with the readout fixed,
+is JointGreedy-CVaR's 8-query set better than Helm et al. 2026's spectral
+selection, TOP-K, MMR and random draws? Also: MET at a matched
+target-side budget.
+
+**Labels** (Δ = JG − X, `k` = 8, attention; each method's variant
+chosen on S_val):
+
+| X | v2 85-way | v1 37-way |
+|---|---|---|
+| Helm\* (faithful signal filter) | BETTER (+6.1 pp) | BETTER (+7.9 pp) |
+| RANDOM | BETTER (+10.9 pp) | BETTER (+13.3 pp) |
+| TOP-K (CVaR ranking) | INCONCLUSIVE (−1.0 pp) | INCONCLUSIVE |
+| MMR\* (CVaR + pair-profile redundancy) | **WORSE (−5.8 pp; linear −1.5 pp)** | PARITY |
+| MET\* at n = 8 answers | BETTER (+11.2 pp) | BETTER (+19.0 pp) |
+
+- **Helm et al.** In our setting r̂ = 1 in every view. Their ranked
+  extension is the weakest arm, below random. Every Helm variant loses to
+  JG.
+- **MET** needs about 50 answers to reach JG's 8 on v2, and never reaches
+  it on v1 (0.831 at n = 250).
+- **The WORSE is the finding.** The gain is the per-query tail score; how
+  queries are combined matters less. JG's set-level greedy ≈ independent
+  ranking, and explicit decorrelation helps on the larger universe.
+  D032 decomposes this.
+- **S6 (post-hoc, descriptive):** MMR\* − PAPER8 on v2 is +8.7 pp
+  attention and +5.3 pp linear, both endpoints resolved. On v1 it is
+  +3.0 / +2.6 pp, unresolved.
+- **Reproducibility:** bit-exact linear (lbfgs) results need the original
+  BLAS thread count.
+- Cost: 10.5 node-h (+4.4 wasted).
+
+## D032 — The selection gain is the tail criterion; the redundancy space does not matter
+
+**Question (attribution):** with the fingerprint (config-marginal point
+clouds) and the readout fixed, which ingredient carries D031's gains?
+- Q1: the CVaR criterion vs the mean, under TOP-K and two MMR rules.
+- Q2: redundancy on pair-profiles vs on query-text embeddings.
+- Q3: the redundancy term itself.
+
+**Verdicts (pre-registered rules):**
+
+| | v2 85-way | v1 37-way | verdict |
+|---|---|---|---|
+| Q1 TOP-K: CVaR − mean | **+13.6 pp** BETTER | **+6.3 pp** BETTER | **SUPPORTED-v2** |
+| Q1 MMR-PP: CVaR − mean | +5.4 pp BETTER | +2.2 pp (tail unresolved) | |
+| Q1 MMR-TXT: CVaR − mean | +3.5 pp (tail unresolved) | +4.0 pp (tail unresolved) | |
+| Q2 PP − TXT (CVaR) | +2.6 pp att / −0.1 pp lin | +0.6 / +0.8 pp | **NOT SUPPORTED** (linear: parity, both views) |
+
+- **Mechanism.** The CVaR gain is concentrated on near-relative pairs (5 of
+  6 cells). This is I1's prediction made visible at trained accuracy.
+- **Why the mean fails.**
+  - Mean-ranking stacks near-duplicate queries: within-set pair-profile
+    correlation 0.78 vs 0.37 for CVaR ranking.
+  - On v2 attention it falls below random.
+  - It is 7/8 the same set as Helm's spectral ranking, which explains
+    D031's Helm result.
+- **Q3.** Decorrelation repairs the mean criterion (+13 pp). On top of
+  CVaR it adds about 5 pp on v2 only, in a cell already seen in D031.
+- **Ruling (after the data):** "no WORSE anywhere" was read over the
+  starred contrasts. One non-starred variant cell was WORSE, with tail
+  interval upper bound −0.0003; under the any-cell reading Q1 would be
+  "WORSE".
+- **For the paper:**
+  - Claim the criterion: a tail over pairs, on config-marginal clouds.
+  - Not "pair-profile redundancy".
+  - MMR is a borrowed rule.
+  - Whether to headline CVaR + MMR is a human decision. Confirmation comes
+    from a fresh S_test.
+- Cost: 2.9 node-h.
+
