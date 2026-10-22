@@ -1,0 +1,118 @@
+=== node: c642-081.vista.tacc.utexas.edu start: Thu Oct 22 05:56:44 AM CDT 2026 | OMP_NUM_THREADS=8 python experiments/d033_pilot.py repro | OMP_NUM_THREADS=8 python experiments/d033_pilot.py v2 0 | OMP_NUM_THREADS=8 python experiments/d033_pilot.py v2 1 | OMP_NUM_THREADS=8 python experiments/d033_pilot.py v2 2 ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          23         200           0           0         189
+Swap:             24           5          19
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[B] [B] >>> OMP_NUM_THREADS=8 python experiments/d033_pilot.py v2 0 05:56:44
+[C] [C] >>> OMP_NUM_THREADS=8 python experiments/d033_pilot.py v2 1 05:56:44
+[D] [D] >>> OMP_NUM_THREADS=8 python experiments/d033_pilot.py v2 2 05:56:44
+[A] [A] >>> OMP_NUM_THREADS=8 python experiments/d033_pilot.py repro 05:56:44
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type            | Params | Mode 
+[A] ------------------------------------------------------
+[A] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[A] 1 | criterion | ContrastiveLoss | 0      | train
+[A] 2 | train_acc | BinaryAccuracy  | 0      | train
+[A] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[A] ------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.038    Total estimated model params size (MB)
+[A] 37        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[D] [rank: 0] Seed set to 2
+[B] [rank: 0] Seed set to 0
+[C] [rank: 0] Seed set to 1
+[B] GPU available: True (cuda), used: True
+[C] GPU available: True (cuda), used: True
+[B] TPU available: False, using: 0 TPU cores
+[D] GPU available: True (cuda), used: True
+[C] TPU available: False, using: 0 TPU cores
+[B] HPU available: False, using: 0 HPUs
+[D] TPU available: False, using: 0 TPU cores
+[C] HPU available: False, using: 0 HPUs
+[D] HPU available: False, using: 0 HPUs
+[B] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[B] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[C] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[C] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[D] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[D] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[B] 
+[B]   | Name      | Type            | Params | Mode 
+[B] ------------------------------------------------------
+[B] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[B] 1 | criterion | ContrastiveLoss | 0      | train
+[B] 2 | train_acc | BinaryAccuracy  | 0      | train
+[B] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[B] ------------------------------------------------------
+[B] 3.0 M     Trainable params
+[B] 0         Non-trainable params
+[B] 3.0 M     Total params
+[B] 12.038    Total estimated model params size (MB)
+[B] 37        Modules in train mode
+[B] 0         Modules in eval mode
+[C] 
+[C]   | Name      | Type            | Params | Mode 
+[C] ------------------------------------------------------
+[C] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[C] 1 | criterion | ContrastiveLoss | 0      | train
+[C] 2 | train_acc | BinaryAccuracy  | 0      | train
+[C] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[C] ------------------------------------------------------
+[C] 3.0 M     Trainable params
+[C] 0         Non-trainable params
+[C] 3.0 M     Total params
+[C] 12.038    Total estimated model params size (MB)
+[C] 37        Modules in train mode
+[C] 0         Modules in eval mode
+[D] 
+[D]   | Name      | Type            | Params | Mode 
+[D] ------------------------------------------------------
+[D] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[D] 1 | criterion | ContrastiveLoss | 0      | train
+[D] 2 | train_acc | BinaryAccuracy  | 0      | train
+[D] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[D] ------------------------------------------------------
+[D] 3.0 M     Trainable params
+[D] 0         Non-trainable params
+[D] 3.0 M     Total params
+[D] 12.038    Total estimated model params size (MB)
+[D] 37        Modules in train mode
+[D] 0         Modules in eval mode
+[B] SLURM auto-requeueing enabled. Setting signal handlers.
+[C] SLURM auto-requeueing enabled. Setting signal handlers.
+[D] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 0.117
+[B] Metric val_loss improved. New best score: 0.112
+[C] Metric val_loss improved. New best score: 0.091
+[D] Metric val_loss improved. New best score: 0.090
+[A] Metric val_loss improved by 0.036 >= min_delta = 0.0. New best score: 0.081
+[C] Metric val_loss improved by 0.020 >= min_delta = 0.0. New best score: 0.071
+[B] Metric val_loss improved by 0.032 >= min_delta = 0.0. New best score: 0.081
+[D] Metric val_loss improved by 0.026 >= min_delta = 0.0. New best score: 0.064
+[A] Metric val_loss improved by 0.016 >= min_delta = 0.0. New best score: 0.064
+[C] Metric val_loss improved by 0.006 >= min_delta = 0.0. New best score: 0.065
+[B] Metric val_loss improved by 0.013 >= min_delta = 0.0. New best score: 0.068
+[D] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.062
+[A] Metric val_loss improved by 0.004 >= min_delta = 0.0. New best score: 0.060
+[A] Metric val_loss improved by 0.003 >= min_delta = 0.0. New best score: 0.057
+[B] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.068. Signaling Trainer to stop.
+[C] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.065. Signaling Trainer to stop.
+[D] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.062. Signaling Trainer to stop.
+[C] [pilot v2_s1] {'view': 'v2', 'n_models': 68, 'seed': 1, 'n_build': 5100, 'n_val': 1700, 'load_min': 0.68, 'train_min': 12.13, 'best_ckpt': 'best-epoch=02-val_loss=0.0649.ckpt', 'last_epoch': 2, 'node': 'c642-081.vista.tacc.utexas.edu', 'gpu': 'NVIDIA GH200 120GB'}
+[B] [pilot v2_s0] {'view': 'v2', 'n_models': 68, 'seed': 0, 'n_build': 5100, 'n_val': 1700, 'load_min': 0.68, 'train_min': 12.13, 'best_ckpt': 'best-epoch=02-val_loss=0.0676.ckpt', 'last_epoch': 2, 'node': 'c642-081.vista.tacc.utexas.edu', 'gpu': 'NVIDIA GH200 120GB'}
+[D] [pilot v2_s2] {'view': 'v2', 'n_models': 68, 'seed': 2, 'n_build': 5100, 'n_val': 1700, 'load_min': 0.68, 'train_min': 12.13, 'best_ckpt': 'best-epoch=02-val_loss=0.0623.ckpt', 'last_epoch': 2, 'node': 'c642-081.vista.tacc.utexas.edu', 'gpu': 'NVIDIA GH200 120GB'}
+[A] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.056
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.056. Signaling Trainer to stop.
+[A] [pilot repro_v1] {'view': 'v1', 'n_models': 37, 'seed': 0, 'n_build': 2775, 'n_val': 925, 'load_min': 0.18, 'train_min': 21.63, 'best_ckpt': 'best-epoch=09-val_loss=0.0562.ckpt', 'last_epoch': 9, 'node': 'c642-081.vista.tacc.utexas.edu', 'gpu': 'NVIDIA GH200 120GB', 'd009_best_epoch': 9, 'bit_exact': True, 'max_abs_diff': 0.0}
+=== end: Thu Oct 22 06:20:23 AM CDT 2026 rc=0 ===

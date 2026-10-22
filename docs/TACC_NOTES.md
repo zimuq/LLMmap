@@ -63,6 +63,18 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+**Issue 27 (2026-10-22) — D033 `## D`, readout ①: "Distance: cosine (released default)".** The
+parenthetical is not what the released code does. The released default is **Euclidean**:
+`LLMmap/inference.py` uses `self.conf.get('distance_fn', 'euclidean')` and the released
+`data/pretrained_models/default/conf.json` sets no `distance_fn`; `LLMmap/templates.py
+predict_by_templates` is L2; the siamese head is trained on `euclidean_distance`
+(`inference_model_archs.SiameseNetwork`); D009 S8 used L2. Cosine was D030's *primary* for LLMMAP-OS
+(D030 Call 6: "cosine primary + Euclidean (the released default)"), not the default. The D's two
+attributes ("cosine", "released default") therefore conflict, and which one carries ①'s labels is a
+pre-registration choice. D033/P1 raises it as **Call 1** (recommends Euclidean for labels, cosine reported
+alongside; both come from the same stored features, so no cost either way). Ownership rule: `## D` is
+design-side; TACC cannot correct it in place.
+
 ---
 
 ## Resolved

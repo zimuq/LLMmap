@@ -1,0 +1,16 @@
+{
+ "view": "v1",
+ "n_models": 37,
+ "seed": 0,
+ "n_build": 2775,
+ "n_val": 925,
+ "load_min": 0.18,
+ "train_min": 21.63,
+ "best_ckpt": "best-epoch=09-val_loss=0.0562.ckpt",
+ "last_epoch": 9,
+ "node": "c642-081.vista.tacc.utexas.edu",
+ "gpu": "NVIDIA GH200 120GB",
+ "d009_best_epoch": 9,
+ "bit_exact": true,
+ "max_abs_diff": 0.0
+}
