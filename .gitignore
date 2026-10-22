@@ -50,5 +50,5 @@ results/D032/logits_*.npz
 results/D032/models/
 # D033: checkpoints, features and readout-(2) terms stay on $WORK; counts are committed
 results/D033/models/
-results/D033/feat_*.npz
+results/D033/feat/
 results/D033/nc_*.npz

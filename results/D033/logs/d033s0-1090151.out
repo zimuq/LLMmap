@@ -1,0 +1,44 @@
+=== node: c642-002.vista.tacc.utexas.edu start: Thu Oct 22 03:14:18 PM CDT 2026 | OMP_NUM_THREADS=32 python experiments/d033_s0.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          19         204           0           0         193
+Swap:             24           0          24
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=32 python experiments/d033_s0.py 15:14:18
+[A] [S0] 24 families (= lineage groups); fold sizes v2 {'model': [17, 17, 17, 17, 17], 'family': [17, 17, 17, 17, 17]}; model folds: held-out without enrolled sibling = ['CohereForAI/aya-23-8B', 'Deci/DeciLM-7B-instruct', 'internlm/internlm2_5-7b-chat']
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S0] v2: precompute 1.4 min, XY2 20.8 GB
+[A] [S0] v2: no-holdout pipeline reproduces D031 MMR|pearson|0.7 [193, 237, 109, 0, 194, 241, 140, 251] and JG [193, 117, 233, 237, 0, 253, 121, 18] exactly
+[A] [S0] v2 model f0: train 68 held-out 17 pairs 2278  OURS [193, 109, 237, 0, 194, 241, 251, 145] (∩FULL 7)  JG [193, 121, 233, 0, 253, 237, 117, 16] (∩JG 7)  (30 s)
+[A] [S0] v2 model f1: train 68 held-out 17 pairs 2278  OURS [193, 121, 237, 0, 241, 194, 109, 235] (∩FULL 6)  JG [193, 117, 233, 237, 18, 0, 121, 253] (∩JG 8)  (30 s)
+[A] [S0] v2 model f2: train 68 held-out 17 pairs 2278  OURS [193, 237, 0, 140, 194, 255, 109, 251] (∩FULL 7)  JG [193, 117, 233, 0, 253, 237, 18, 114] (∩JG 7)  (30 s)
+[A] [S0] v2 model f3: train 68 held-out 17 pairs 2278  OURS [193, 140, 237, 0, 194, 241, 109, 251] (∩FULL 8)  JG [193, 109, 233, 0, 237, 18, 117, 243] (∩JG 6)  (30 s)
+[A] [S0] v2 model f4: train 68 held-out 17 pairs 2278  OURS [193, 123, 237, 0, 241, 194, 251, 28] (∩FULL 6)  JG [193, 117, 233, 18, 237, 0, 140, 253] (∩JG 7)  (30 s)
+[A] [S0] v2 family f0: train 68 held-out 17 pairs 2278  OURS [193, 237, 0, 140, 117, 194, 16, 251] (∩FULL 6)  JG [193, 109, 233, 0, 237, 114, 16, 243] (∩JG 4)  (30 s)
+[A] [S0] v2 family f1: train 68 held-out 17 pairs 2278  OURS [193, 109, 237, 0, 17, 194, 241, 140] (∩FULL 7)  JG [193, 121, 233, 237, 253, 0, 117, 18] (∩JG 8)  (30 s)
+[A] [S0] v2 family f2: train 68 held-out 17 pairs 2278  OURS [193, 140, 237, 0, 194, 241, 109, 251] (∩FULL 8)  JG [193, 117, 237, 233, 0, 253, 121, 114] (∩JG 7)  (30 s)
+[A] [S0] v2 family f3: train 68 held-out 17 pairs 2278  OURS [193, 121, 194, 237, 0, 241, 140, 24] (∩FULL 6)  JG [193, 117, 233, 237, 0, 253, 140, 252] (∩JG 6)  (30 s)
+[A] [S0] v2 family f4: train 68 held-out 17 pairs 2278  OURS [193, 237, 110, 0, 251, 255, 109, 194] (∩FULL 6)  JG [193, 121, 233, 237, 0, 117, 16, 253] (∩JG 7)  (30 s)
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S0] v1: precompute 0.3 min, XY2 3.9 GB
+[A] [S0] v1: no-holdout pipeline reproduces D031 MMR|pearson|0.7 [193, 140, 237, 114, 117, 109, 0, 16] and JG [193, 140, 237, 114, 233, 117, 0, 16] exactly
+[A] [S0] v1 model f0: train 30 held-out 7 pairs 435  OURS [193, 140, 237, 0, 117, 234, 114, 16] (∩FULL 7)  JG [193, 140, 237, 16, 0, 114, 233, 117] (∩JG 8)  (4 s)
+[A] [S0] v1 model f1: train 30 held-out 7 pairs 435  OURS [114, 193, 109, 140, 117, 17, 0, 237] (∩FULL 7)  JG [114, 193, 123, 233, 0, 237, 16, 18] (∩JG 6)  (4 s)
+[A] [S0] v1 model f2: train 29 held-out 8 pairs 406  OURS [193, 140, 237, 0, 16, 117, 114, 194] (∩FULL 7)  JG [193, 117, 237, 233, 16, 0, 140, 243] (∩JG 7)  (4 s)
+[A] [S0] v1 model f3: train 30 held-out 7 pairs 435  OURS [193, 140, 114, 237, 109, 194, 16, 145] (∩FULL 6)  JG [193, 1, 114, 233, 237, 0, 140, 16] (∩JG 7)  (4 s)
+[A] [S0] v1 model f4: train 29 held-out 8 pairs 406  OURS [140, 193, 237, 117, 114, 17, 109, 233] (∩FULL 6)  JG [140, 193, 117, 233, 16, 237, 114, 234] (∩JG 7)  (4 s)
+[A] [S0] v1 family f0: train 29 held-out 8 pairs 406  OURS [193, 140, 237, 0, 114, 16, 109, 194] (∩FULL 7)  JG [193, 140, 114, 0, 237, 16, 239, 132] (∩JG 6)  (4 s)
+[A] [S0] v1 family f1: train 35 held-out 2 pairs 595  OURS [193, 140, 114, 237, 109, 0, 233, 117] (∩FULL 7)  JG [193, 140, 114, 233, 132, 0, 237, 16] (∩JG 7)  (6 s)
+[A] [S0] v1 family f2: train 30 held-out 7 pairs 435  OURS [140, 193, 114, 109, 241, 237, 135, 1] (∩FULL 5)  JG [140, 193, 237, 123, 114, 233, 0, 117] (∩JG 7)  (4 s)
+[A] [S0] v1 family f3: train 27 held-out 10 pairs 351  OURS [140, 193, 117, 194, 114, 241, 237, 112] (∩FULL 5)  JG [140, 193, 117, 16, 237, 114, 0, 18] (∩JG 7)  (4 s)
+[A] [S0] v1 family f4: train 27 held-out 10 pairs 351  OURS [193, 237, 140, 235, 117, 16, 233, 0] (∩FULL 6)  JG [193, 140, 16, 237, 117, 233, 0, 123] (∩JG 7)  (4 s)
+[A] [S0] union 37 queries (2 not in any D031/D032 chain); wrote ./results/D033/chains.json (8.26 min)
+=== end: Thu Oct 22 03:22:47 PM CDT 2026 rc=0 ===
