@@ -63,6 +63,10 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+---
+
+## Resolved
+
 **Issue 27 (2026-10-22) — D033 `## D`, readout ①: "Distance: cosine (released default)".** The
 parenthetical is not what the released code does. The released default is **Euclidean**:
 `LLMmap/inference.py` uses `self.conf.get('distance_fn', 'euclidean')` and the released
@@ -75,9 +79,8 @@ pre-registration choice. D033/P1 raises it as **Call 1** (recommends Euclidean f
 alongside; both come from the same stored features, so no cost either way). Ownership rule: `## D` is
 design-side; TACC cannot correct it in place.
 
----
-
-## Resolved
+*Resolved 2026-10-22 (design-side, D033/P1 Review, before any data).* Correct — design-side error.
+Call 1 → (a): Euclidean carries ①'s labels, cosine reported alongside. `## D` corrected with a dated note.
 
 **Issue 26 (2026-10-15): D032 `## D`, Q1 claim rule. Does "no WORSE anywhere" cover the non-starred cells?**
 
