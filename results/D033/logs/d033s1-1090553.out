@@ -1,0 +1,13 @@
+=== node: c634-002.vista.tacc.utexas.edu start: Fri Oct 23 12:10:45 AM CDT 2026 | OMP_NUM_THREADS=64 python experiments/d033_nc.py val |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          20         203           0           0         192
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=64 python experiments/d033_nc.py val 00:10:45
+[A] [S1 v2] code-path: point-to-cloud terms reproduce the frozen raw tensor (max rel err 3.79e-08)
+[A] [S1 v2] S_val held-out O_all (OURS^fold, k=8): raw 0.7478  sf 0.5624 -> raw
+[A] [S1 v1] code-path: point-to-cloud terms reproduce the frozen raw tensor (max rel err 5.09e-08)
+[A] [S1 v1] S_val held-out O_all (OURS^fold, k=8): raw 0.8281  sf 0.6778 -> raw
+[A] [S1] wrote ./results/D033/variant_choice.json (0.62 min)
+=== end: Fri Oct 23 12:11:29 AM CDT 2026 rc=0 ===

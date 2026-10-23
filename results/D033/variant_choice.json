@@ -1,0 +1,56 @@
+{
+ "schema": "d033-variant-choice-v1",
+ "chains_sha256": "b7a876aa008b13e183da7a03f673dc23dad99c3a5132c420fddac5c4f1e45d14",
+ "rule": "O_all of held-out S_val targets, model-level folds, OURS^fold, k = 8; higher wins; tie -> raw",
+ "s_test_reads": 0,
+ "views": {
+  "v2": {
+   "s_val_O_all": {
+    "raw": 0.7477647058823529,
+    "sf": 0.5623529411764706
+   },
+   "choice": "raw",
+   "n_union_queries": 32,
+   "code_path": {
+    "pairs": [
+     0,
+     1785,
+     3569
+    ],
+    "queries": [
+     0,
+     64,
+     128,
+     193,
+     258
+    ],
+    "max_rel_err_vs_tensor": 3.788417832209131e-08
+   }
+  },
+  "v1": {
+   "s_val_O_all": {
+    "raw": 0.8281081081081081,
+    "sf": 0.6778378378378378
+   },
+   "choice": "raw",
+   "n_union_queries": 29,
+   "code_path": {
+    "pairs": [
+     0,
+     333,
+     665
+    ],
+    "queries": [
+     0,
+     64,
+     128,
+     193,
+     258
+    ],
+    "max_rel_err_vs_tensor": 5.091729940078649e-08
+   }
+  }
+ },
+ "code_commit": "2b077d3ff93ee40f45c8c59d2ec60b6d6822ef1e",
+ "wall_min": 0.62
+}
