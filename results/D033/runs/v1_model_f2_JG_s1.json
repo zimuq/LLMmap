@@ -1,0 +1,112 @@
+{
+ "name": "v1_model_f2_JG_s1",
+ "view": "v1",
+ "kind": "model",
+ "fold": 2,
+ "arm": "JG",
+ "seed": 1,
+ "queries": [
+  193,
+  117,
+  237,
+  233,
+  16,
+  0,
+  140,
+  243
+ ],
+ "n_train": 29,
+ "train_models": [
+  "Deci/DeciLM-7B-instruct",
+  "Qwen/Qwen2-1.5B-Instruct",
+  "Qwen/Qwen2-7B-Instruct",
+  "Qwen/Qwen2.5-0.5B-Instruct",
+  "Qwen/Qwen2.5-3B-Instruct",
+  "google/gemma-1.1-2b-it",
+  "google/gemma-1.1-7b-it",
+  "google/gemma-2-9b-it",
+  "google/gemma-7b-it",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+  "ibm-granite/granite-3.0-8b-instruct",
+  "ibm-granite/granite-3.1-8b-instruct",
+  "internlm/internlm2_5-7b-chat",
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Llama-3.2-3B-Instruct",
+  "meta-llama/Meta-Llama-3-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-medium-4k-instruct",
+  "microsoft/Phi-3-mini-128k-instruct",
+  "microsoft/Phi-3-mini-4k-instruct",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "mistralai/Mistral-7B-Instruct-v0.3",
+  "nvidia/Llama3-ChatQA-1.5-8B",
+  "openchat/openchat-3.6-8b-20240522",
+  "tiiuae/Falcon3-10B-Instruct",
+  "tiiuae/Falcon3-7B-Instruct",
+  "togethercomputer/Llama-2-7B-32K-Instruct",
+  "upstage/SOLAR-10.7B-Instruct-v1.0"
+ ],
+ "best_ckpt": "best-epoch=02-val_loss=0.0553.ckpt",
+ "best_epoch": 2,
+ "epochs_run": 8,
+ "epoch_log": [
+  {
+   "epoch": 0,
+   "val_loss": 0.0777013748884201,
+   "val_acc": 0.9330000281333923,
+   "train_acc": 0.9862819910049438
+  },
+  {
+   "epoch": 1,
+   "val_loss": 0.058240149170160294,
+   "val_acc": 0.9355999827384949,
+   "train_acc": 0.996749997138977
+  },
+  {
+   "epoch": 2,
+   "val_loss": 0.05529390275478363,
+   "val_acc": 0.9282000064849854,
+   "train_acc": 0.9999279975891113
+  },
+  {
+   "epoch": 3,
+   "val_loss": 0.0631408542394638,
+   "val_acc": 0.9192000031471252,
+   "train_acc": 0.9944300055503845
+  },
+  {
+   "epoch": 4,
+   "val_loss": 0.06204705312848091,
+   "val_acc": 0.9156000018119812,
+   "train_acc": 0.9988980293273926
+  },
+  {
+   "epoch": 5,
+   "val_loss": 0.07772772759199142,
+   "val_acc": 0.9038000106811523,
+   "train_acc": 0.9970759749412537
+  },
+  {
+   "epoch": 6,
+   "val_loss": 0.0839502289891243,
+   "val_acc": 0.8956000208854675,
+   "train_acc": 0.9991220235824585
+  },
+  {
+   "epoch": 7,
+   "val_loss": 0.08744953572750092,
+   "val_acc": 0.8944000005722046,
+   "train_acc": 0.9993339776992798
+  }
+ ],
+ "s_val_pair_acc_at_best": 0.9282000064849854,
+ "no_improvement_after_first_epoch": false,
+ "wall_train_min": 12.21,
+ "wall_min": 12.22,
+ "hp_conf": "confs/default.json",
+ "hp_sha256": "0826d230b9cf23999fa8632fbbc5f75ac5921672b2550f00638c6230f0b11cd8",
+ "ckpt_sha256": "70f03e5f935db025d601992bfe1f38cc1f5ec173bbeb8a9d7c06a6993ab05b3d",
+ "heldout_exclusion_assert": true,
+ "node": "c634-071.vista.tacc.utexas.edu"
+}

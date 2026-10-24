@@ -1,0 +1,113 @@
+{
+ "name": "v1_family_f2_JG_s0",
+ "view": "v1",
+ "kind": "family",
+ "fold": 2,
+ "arm": "JG",
+ "seed": 0,
+ "queries": [
+  140,
+  193,
+  237,
+  123,
+  114,
+  233,
+  0,
+  117
+ ],
+ "n_train": 30,
+ "train_models": [
+  "CohereForAI/aya-23-8B",
+  "Deci/DeciLM-7B-instruct",
+  "HuggingFaceH4/zephyr-7b-beta",
+  "google/gemma-1.1-2b-it",
+  "google/gemma-1.1-7b-it",
+  "google/gemma-2-9b-it",
+  "google/gemma-2b-it",
+  "google/gemma-7b-it",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+  "meta-llama/Llama-2-7b-chat-hf",
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Llama-3.2-3B-Instruct",
+  "meta-llama/Meta-Llama-3-8B-Instruct",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-medium-4k-instruct",
+  "microsoft/Phi-3-mini-128k-instruct",
+  "microsoft/Phi-3-mini-4k-instruct",
+  "microsoft/Phi-3.5-mini-instruct",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "mistralai/Mistral-7B-Instruct-v0.3",
+  "nvidia/Llama3-ChatQA-1.5-8B",
+  "openchat/openchat-3.6-8b-20240522",
+  "openchat/openchat_3.5",
+  "tiiuae/Falcon3-10B-Instruct",
+  "tiiuae/Falcon3-7B-Instruct",
+  "togethercomputer/Llama-2-7B-32K-Instruct",
+  "upstage/SOLAR-10.7B-Instruct-v1.0",
+  "utter-project/EuroLLM-1.7B-Instruct"
+ ],
+ "best_ckpt": "best-epoch=02-val_loss=0.0504.ckpt",
+ "best_epoch": 2,
+ "epochs_run": 8,
+ "epoch_log": [
+  {
+   "epoch": 0,
+   "val_loss": 0.10943492501974106,
+   "val_acc": 0.9459999799728394,
+   "train_acc": 0.8796020150184631
+  },
+  {
+   "epoch": 1,
+   "val_loss": 0.0693507120013237,
+   "val_acc": 0.9229999780654907,
+   "train_acc": 0.9996100068092346
+  },
+  {
+   "epoch": 2,
+   "val_loss": 0.050383761525154114,
+   "val_acc": 0.9332000017166138,
+   "train_acc": 0.9984340071678162
+  },
+  {
+   "epoch": 3,
+   "val_loss": 0.1308092325925827,
+   "val_acc": 0.8050000071525574,
+   "train_acc": 0.9993860125541687
+  },
+  {
+   "epoch": 4,
+   "val_loss": 0.054307445883750916,
+   "val_acc": 0.930400013923645,
+   "train_acc": 0.9960520267486572
+  },
+  {
+   "epoch": 5,
+   "val_loss": 0.057050105184316635,
+   "val_acc": 0.926800012588501,
+   "train_acc": 1.0
+  },
+  {
+   "epoch": 6,
+   "val_loss": 0.057393744587898254,
+   "val_acc": 0.928600013256073,
+   "train_acc": 1.0
+  },
+  {
+   "epoch": 7,
+   "val_loss": 0.05183752626180649,
+   "val_acc": 0.9341999888420105,
+   "train_acc": 0.9930880069732666
+  }
+ ],
+ "s_val_pair_acc_at_best": 0.9332000017166138,
+ "no_improvement_after_first_epoch": false,
+ "wall_train_min": 11.33,
+ "wall_min": 11.33,
+ "hp_conf": "confs/default.json",
+ "hp_sha256": "0826d230b9cf23999fa8632fbbc5f75ac5921672b2550f00638c6230f0b11cd8",
+ "ckpt_sha256": "9e98966267afc60046f2b834a39a1620e21f130fe751323c8268a22ee7c434cc",
+ "heldout_exclusion_assert": true,
+ "node": "c637-112.vista.tacc.utexas.edu"
+}

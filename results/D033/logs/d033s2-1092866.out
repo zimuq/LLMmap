@@ -1,0 +1,351 @@
+=== node: c636-131.vista.tacc.utexas.edu start: Sat Oct 24 02:26:21 AM CDT 2026 | OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 15 20 | OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 16 20 | OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 17 20 | OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 18 20 ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          20         203           0           0         192
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[C] [C] >>> OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 17 20 02:26:21
+[A] [A] >>> OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 15 20 02:26:21
+[D] [D] >>> OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 18 20 02:26:21
+[B] [B] >>> OMP_NUM_THREADS=8 python experiments/d033_enc.py v1 model 16 20 02:26:21
+[C] [S2 enc v1 model 17/20] 3 runs to do
+[D] [S2 enc v1 model 18/20] 3 runs to do
+[A] [S2 enc v1 model 15/20] 3 runs to do
+[B] [S2 enc v1 model 16/20] 3 runs to do
+[D] [rank: 0] Seed set to 0
+[C] [rank: 0] Seed set to 0
+[A] [rank: 0] Seed set to 0
+[B] [rank: 0] Seed set to 0
+[C] GPU available: True (cuda), used: True
+[B] GPU available: True (cuda), used: True
+[D] GPU available: True (cuda), used: True
+[C] TPU available: False, using: 0 TPU cores
+[B] TPU available: False, using: 0 TPU cores
+[D] TPU available: False, using: 0 TPU cores
+[C] HPU available: False, using: 0 HPUs
+[B] HPU available: False, using: 0 HPUs
+[D] HPU available: False, using: 0 HPUs
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[D] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[D] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[C] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[C] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[B] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[B] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[B] 
+[B]   | Name      | Type            | Params | Mode 
+[B] ------------------------------------------------------
+[B] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[B] 1 | criterion | ContrastiveLoss | 0      | train
+[B] 2 | train_acc | BinaryAccuracy  | 0      | train
+[B] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[B] ------------------------------------------------------
+[B] 3.0 M     Trainable params
+[B] 0         Non-trainable params
+[B] 3.0 M     Total params
+[C] 
+[B] 12.038    Total estimated model params size (MB)
+[C]   | Name      | Type            | Params | Mode 
+[B] 37        Modules in train mode
+[C] ------------------------------------------------------
+[B] 0         Modules in eval mode
+[C] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[C] 1 | criterion | ContrastiveLoss | 0      | train
+[C] 2 | train_acc | BinaryAccuracy  | 0      | train
+[C] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[C] ------------------------------------------------------
+[C] 3.0 M     Trainable params
+[C] 0         Non-trainable params
+[C] 3.0 M     Total params
+[C] 12.038    Total estimated model params size (MB)
+[C] 37        Modules in train mode
+[C] 0         Modules in eval mode
+[A] 
+[A]   | Name      | Type            | Params | Mode 
+[A] ------------------------------------------------------
+[A] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[A] 1 | criterion | ContrastiveLoss | 0      | train
+[A] 2 | train_acc | BinaryAccuracy  | 0      | train
+[A] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[A] ------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.038    Total estimated model params size (MB)
+[A] 37        Modules in train mode
+[D] 
+[A] 0         Modules in eval mode
+[D]   | Name      | Type            | Params | Mode 
+[D] ------------------------------------------------------
+[D] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[D] 1 | criterion | ContrastiveLoss | 0      | train
+[D] 2 | train_acc | BinaryAccuracy  | 0      | train
+[D] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[D] ------------------------------------------------------
+[D] 3.0 M     Trainable params
+[D] 0         Non-trainable params
+[D] 3.0 M     Total params
+[D] 12.038    Total estimated model params size (MB)
+[D] 37        Modules in train mode
+[D] 0         Modules in eval mode
+[B] SLURM auto-requeueing enabled. Setting signal handlers.
+[C] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[D] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 0.191
+[B] Metric val_loss improved. New best score: 0.105
+[D] Metric val_loss improved. New best score: 0.101
+[C] Metric val_loss improved. New best score: 0.113
+[A] Metric val_loss improved by 0.133 >= min_delta = 0.0. New best score: 0.058
+[D] Metric val_loss improved by 0.045 >= min_delta = 0.0. New best score: 0.056
+[B] Metric val_loss improved by 0.047 >= min_delta = 0.0. New best score: 0.058
+[C] Metric val_loss improved by 0.042 >= min_delta = 0.0. New best score: 0.072
+[A] Metric val_loss improved by 0.017 >= min_delta = 0.0. New best score: 0.041
+[D] Metric val_loss improved by 0.017 >= min_delta = 0.0. New best score: 0.039
+[B] Metric val_loss improved by 0.019 >= min_delta = 0.0. New best score: 0.038
+[C] Metric val_loss improved by 0.012 >= min_delta = 0.0. New best score: 0.060
+[D] Metric val_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.039
+[A] Metric val_loss improved by 0.008 >= min_delta = 0.0. New best score: 0.033
+[B] Metric val_loss improved by 0.005 >= min_delta = 0.0. New best score: 0.033
+[D] Metric val_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.039
+[A] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.033
+[B] Metric val_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.033
+[D] Metric val_loss improved by 0.003 >= min_delta = 0.0. New best score: 0.035
+[C] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.060. Signaling Trainer to stop.
+[C] [S2 enc] v1_model_f4_PAPER8_s0: best epoch 2, 8 epochs, S_val pair acc 0.91839998960495, train 12.42 min
+[C] [rank: 0] Seed set to 1
+[C] GPU available: True (cuda), used: True
+[C] TPU available: False, using: 0 TPU cores
+[C] HPU available: False, using: 0 HPUs
+[C] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[C] 
+[C]   | Name      | Type            | Params | Mode 
+[C] ------------------------------------------------------
+[C] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[C] 1 | criterion | ContrastiveLoss | 0      | train
+[C] 2 | train_acc | BinaryAccuracy  | 0      | train
+[C] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[C] ------------------------------------------------------
+[C] 3.0 M     Trainable params
+[C] 0         Non-trainable params
+[C] 3.0 M     Total params
+[C] 12.038    Total estimated model params size (MB)
+[C] 37        Modules in train mode
+[C] 0         Modules in eval mode
+[C] SLURM auto-requeueing enabled. Setting signal handlers.
+[C] Metric val_loss improved. New best score: 0.088
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.033. Signaling Trainer to stop.
+[A] [S2 enc] v1_model_f3_JG_s0: best epoch 4, 10 epochs, S_val pair acc 0.9575999975204468, train 15.48 min
+[A] [rank: 0] Seed set to 1
+[C] Metric val_loss improved by 0.019 >= min_delta = 0.0. New best score: 0.069
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type            | Params | Mode 
+[A] ------------------------------------------------------
+[A] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[A] 1 | criterion | ContrastiveLoss | 0      | train
+[A] 2 | train_acc | BinaryAccuracy  | 0      | train
+[A] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[A] ------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.038    Total estimated model params size (MB)
+[A] 37        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[D] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.035. Signaling Trainer to stop.
+[B] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.033. Signaling Trainer to stop.
+[C] Metric val_loss improved by 0.013 >= min_delta = 0.0. New best score: 0.056
+[A] Metric val_loss improved. New best score: 0.076
+[B] [S2 enc] v1_model_f4_OURS_s0: best epoch 5, 11 epochs, S_val pair acc 0.9574000239372253, train 17.03 min
+[D] [S2 enc] v1_model_f4_FULL_s0: best epoch 5, 11 epochs, S_val pair acc 0.9539999961853027, train 17.03 min
+[B] [rank: 0] Seed set to 1
+[D] [rank: 0] Seed set to 1
+[B] GPU available: True (cuda), used: True
+[D] GPU available: True (cuda), used: True
+[B] TPU available: False, using: 0 TPU cores
+[D] TPU available: False, using: 0 TPU cores
+[B] HPU available: False, using: 0 HPUs
+[D] HPU available: False, using: 0 HPUs
+[B] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[D] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[B] 
+[B]   | Name      | Type            | Params | Mode 
+[B] ------------------------------------------------------
+[B] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[B] 1 | criterion | ContrastiveLoss | 0      | train
+[B] 2 | train_acc | BinaryAccuracy  | 0      | train
+[B] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[B] ------------------------------------------------------
+[B] 3.0 M     Trainable params
+[B] 0         Non-trainable params
+[B] 3.0 M     Total params
+[B] 12.038    Total estimated model params size (MB)
+[B] 37        Modules in train mode
+[B] 0         Modules in eval mode
+[D] 
+[D]   | Name      | Type            | Params | Mode 
+[D] ------------------------------------------------------
+[D] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[D] 1 | criterion | ContrastiveLoss | 0      | train
+[D] 2 | train_acc | BinaryAccuracy  | 0      | train
+[D] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[D] ------------------------------------------------------
+[D] 3.0 M     Trainable params
+[D] 0         Non-trainable params
+[D] 3.0 M     Total params
+[D] 12.038    Total estimated model params size (MB)
+[D] 37        Modules in train mode
+[D] 0         Modules in eval mode
+[B] SLURM auto-requeueing enabled. Setting signal handlers.
+[D] SLURM auto-requeueing enabled. Setting signal handlers.
+[C] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 0.049
+[A] Metric val_loss improved by 0.028 >= min_delta = 0.0. New best score: 0.048
+[D] Metric val_loss improved. New best score: 0.070
+[B] Metric val_loss improved. New best score: 0.074
+[A] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 0.041
+[B] Metric val_loss improved by 0.025 >= min_delta = 0.0. New best score: 0.049
+[D] Metric val_loss improved by 0.023 >= min_delta = 0.0. New best score: 0.048
+[C] Metric val_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.048
+[A] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.040
+[D] Metric val_loss improved by 0.006 >= min_delta = 0.0. New best score: 0.042
+[B] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 0.042
+[B] Metric val_loss improved by 0.003 >= min_delta = 0.0. New best score: 0.039
+[D] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.040
+[B] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.037
+[B] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.036
+[B] Metric val_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.036
+[C] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.048. Signaling Trainer to stop.
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.040. Signaling Trainer to stop.
+[D] Metric val_loss improved by 0.005 >= min_delta = 0.0. New best score: 0.036
+[A] [S2 enc] v1_model_f3_JG_s1: best epoch 3, 9 epochs, S_val pair acc 0.9466000199317932, train 13.89 min
+[C] [S2 enc] v1_model_f4_PAPER8_s1: best epoch 5, 11 epochs, S_val pair acc 0.9351999759674072, train 16.94 min
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[C] [rank: 0] Seed set to 2
+[C] GPU available: True (cuda), used: True
+[C] TPU available: False, using: 0 TPU cores
+[C] HPU available: False, using: 0 HPUs
+[C] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type            | Params | Mode 
+[A] ------------------------------------------------------
+[A] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[A] 1 | criterion | ContrastiveLoss | 0      | train
+[A] 2 | train_acc | BinaryAccuracy  | 0      | train
+[A] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[A] ------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.038    Total estimated model params size (MB)
+[A] 37        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[C] 
+[C]   | Name      | Type            | Params | Mode 
+[C] ------------------------------------------------------
+[C] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[C] 1 | criterion | ContrastiveLoss | 0      | train
+[C] 2 | train_acc | BinaryAccuracy  | 0      | train
+[C] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[C] ------------------------------------------------------
+[C] 3.0 M     Trainable params
+[C] 0         Non-trainable params
+[C] 3.0 M     Total params
+[C] 12.038    Total estimated model params size (MB)
+[C] 37        Modules in train mode
+[C] 0         Modules in eval mode
+[C] SLURM auto-requeueing enabled. Setting signal handlers.
+[D] Metric val_loss improved by 0.003 >= min_delta = 0.0. New best score: 0.033
+[A] Metric val_loss improved. New best score: 0.064
+[C] Metric val_loss improved. New best score: 0.076
+[C] Metric val_loss improved by 0.018 >= min_delta = 0.0. New best score: 0.057
+[A] Metric val_loss improved by 0.017 >= min_delta = 0.0. New best score: 0.047
+[C] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 0.050
+[A] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 0.040
+[B] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.036. Signaling Trainer to stop.
+[C] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.047
+[B] [S2 enc] v1_model_f4_OURS_s1: best epoch 6, 12 epochs, S_val pair acc 0.9520000219345093, train 18.47 min
+[B] [rank: 0] Seed set to 2
+[B] GPU available: True (cuda), used: True
+[B] TPU available: False, using: 0 TPU cores
+[B] HPU available: False, using: 0 HPUs
+[B] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[B] 
+[B]   | Name      | Type            | Params | Mode 
+[B] ------------------------------------------------------
+[B] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[B] 1 | criterion | ContrastiveLoss | 0      | train
+[B] 2 | train_acc | BinaryAccuracy  | 0      | train
+[B] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[B] ------------------------------------------------------
+[B] 3.0 M     Trainable params
+[B] 0         Non-trainable params
+[B] 3.0 M     Total params
+[B] 12.038    Total estimated model params size (MB)
+[B] 37        Modules in train mode
+[B] 0         Modules in eval mode
+[B] SLURM auto-requeueing enabled. Setting signal handlers.
+[C] Metric val_loss improved by 0.000 >= min_delta = 0.0. New best score: 0.047
+[B] Metric val_loss improved. New best score: 0.062
+[D] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.033. Signaling Trainer to stop.
+[C] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.046
+[D] [S2 enc] v1_model_f4_FULL_s1: best epoch 8, 14 epochs, S_val pair acc 0.9588000178337097, train 21.55 min
+[A] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.038
+[D] [rank: 0] Seed set to 2
+[D] GPU available: True (cuda), used: True
+[D] TPU available: False, using: 0 TPU cores
+[D] HPU available: False, using: 0 HPUs
+[D] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[D] 
+[D]   | Name      | Type            | Params | Mode 
+[D] ------------------------------------------------------
+[D] 0 | net       | SiameseNetwork  | 3.0 M  | train
+[D] 1 | criterion | ContrastiveLoss | 0      | train
+[D] 2 | train_acc | BinaryAccuracy  | 0      | train
+[D] 3 | val_acc   | BinaryAccuracy  | 0      | train
+[D] ------------------------------------------------------
+[D] 3.0 M     Trainable params
+[D] 0         Non-trainable params
+[D] 3.0 M     Total params
+[D] 12.038    Total estimated model params size (MB)
+[D] 37        Modules in train mode
+[D] 0         Modules in eval mode
+[D] SLURM auto-requeueing enabled. Setting signal handlers.
+[B] Metric val_loss improved by 0.021 >= min_delta = 0.0. New best score: 0.041
+[C] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.045
+[A] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 0.037
+[D] Metric val_loss improved. New best score: 0.060
+[C] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.044
+[A] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.036
+[D] Metric val_loss improved by 0.019 >= min_delta = 0.0. New best score: 0.041
+[B] Metric val_loss improved by 0.006 >= min_delta = 0.0. New best score: 0.035
+[D] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 0.035
+[B] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.034
+[D] Metric val_loss improved by 0.006 >= min_delta = 0.0. New best score: 0.029
+[D] Metric val_loss improved by 0.001 >= min_delta = 0.0. New best score: 0.028
+[C] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.044. Signaling Trainer to stop.
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.036. Signaling Trainer to stop.
+[C] [S2 enc] v1_model_f4_PAPER8_s2: best epoch 7, 13 epochs, S_val pair acc 0.9395999908447266, train 20.1 min
+[C] [S2 enc v1 model 17/20] stream done (49.7 min)
+[A] [S2 enc] v1_model_f3_JG_s2: best epoch 7, 13 epochs, S_val pair acc 0.9534000158309937, train 20.1 min
+[A] [S2 enc v1 model 15/20] stream done (49.7 min)
+[B] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.034. Signaling Trainer to stop.
+[B] [S2 enc] v1_model_f4_OURS_s2: best epoch 4, 10 epochs, S_val pair acc 0.951200008392334, train 15.39 min
+[B] [S2 enc v1 model 16/20] stream done (51.2 min)
+[D] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.028. Signaling Trainer to stop.
+[D] [S2 enc] v1_model_f4_FULL_s2: best epoch 5, 11 epochs, S_val pair acc 0.9625999927520752, train 16.36 min
+[D] [S2 enc v1 model 18/20] stream done (55.2 min)
+=== end: Sat Oct 24 03:22:04 AM CDT 2026 rc=0 ===

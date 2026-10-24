@@ -1,0 +1,136 @@
+{
+ "name": "v1_model_f4_JG_s0",
+ "view": "v1",
+ "kind": "model",
+ "fold": 4,
+ "arm": "JG",
+ "seed": 0,
+ "queries": [
+  140,
+  193,
+  117,
+  233,
+  16,
+  237,
+  114,
+  234
+ ],
+ "n_train": 29,
+ "train_models": [
+  "CohereForAI/aya-23-8B",
+  "Deci/DeciLM-7B-instruct",
+  "HuggingFaceH4/zephyr-7b-beta",
+  "Qwen/Qwen2-1.5B-Instruct",
+  "Qwen/Qwen2.5-0.5B-Instruct",
+  "Qwen/Qwen2.5-3B-Instruct",
+  "google/gemma-1.1-2b-it",
+  "google/gemma-1.1-7b-it",
+  "google/gemma-2-9b-it",
+  "google/gemma-2b-it",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+  "ibm-granite/granite-3.0-8b-instruct",
+  "meta-llama/Llama-2-7b-chat-hf",
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Llama-3.2-3B-Instruct",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-mini-128k-instruct",
+  "microsoft/Phi-3-mini-4k-instruct",
+  "microsoft/Phi-3.5-mini-instruct",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "nvidia/Llama3-ChatQA-1.5-8B",
+  "openchat/openchat-3.6-8b-20240522",
+  "openchat/openchat_3.5",
+  "tiiuae/Falcon3-10B-Instruct",
+  "togethercomputer/Llama-2-7B-32K-Instruct",
+  "upstage/SOLAR-10.7B-Instruct-v1.0",
+  "utter-project/EuroLLM-1.7B-Instruct"
+ ],
+ "best_ckpt": "best-epoch=06-val_loss=0.0385.ckpt",
+ "best_epoch": 6,
+ "epochs_run": 12,
+ "epoch_log": [
+  {
+   "epoch": 0,
+   "val_loss": 0.10511070489883423,
+   "val_acc": 0.9580000042915344,
+   "train_acc": 0.8805279731750488
+  },
+  {
+   "epoch": 1,
+   "val_loss": 0.06120537221431732,
+   "val_acc": 0.9480000138282776,
+   "train_acc": 0.9985640048980713
+  },
+  {
+   "epoch": 2,
+   "val_loss": 0.2810932397842407,
+   "val_acc": 0.5070000290870667,
+   "train_acc": 0.9999560117721558
+  },
+  {
+   "epoch": 3,
+   "val_loss": 0.04089220240712166,
+   "val_acc": 0.9416000247001648,
+   "train_acc": 0.9990000128746033
+  },
+  {
+   "epoch": 4,
+   "val_loss": 0.0442696288228035,
+   "val_acc": 0.9395999908447266,
+   "train_acc": 1.0
+  },
+  {
+   "epoch": 5,
+   "val_loss": 0.09945930540561676,
+   "val_acc": 0.8628000020980835,
+   "train_acc": 0.9994840025901794
+  },
+  {
+   "epoch": 6,
+   "val_loss": 0.03851662948727608,
+   "val_acc": 0.9495999813079834,
+   "train_acc": 0.9984440207481384
+  },
+  {
+   "epoch": 7,
+   "val_loss": 0.03971675783395767,
+   "val_acc": 0.9466000199317932,
+   "train_acc": 1.0
+  },
+  {
+   "epoch": 8,
+   "val_loss": 0.04245232418179512,
+   "val_acc": 0.9453999996185303,
+   "train_acc": 1.0
+  },
+  {
+   "epoch": 9,
+   "val_loss": 0.04488883540034294,
+   "val_acc": 0.9449999928474426,
+   "train_acc": 1.0
+  },
+  {
+   "epoch": 10,
+   "val_loss": 0.047622621059417725,
+   "val_acc": 0.9419999718666077,
+   "train_acc": 1.0
+  },
+  {
+   "epoch": 11,
+   "val_loss": 0.04991960525512695,
+   "val_acc": 0.9399999976158142,
+   "train_acc": 1.0
+  }
+ ],
+ "s_val_pair_acc_at_best": 0.9495999813079834,
+ "no_improvement_after_first_epoch": false,
+ "wall_train_min": 18.62,
+ "wall_min": 18.63,
+ "hp_conf": "confs/default.json",
+ "hp_sha256": "0826d230b9cf23999fa8632fbbc5f75ac5921672b2550f00638c6230f0b11cd8",
+ "ckpt_sha256": "5fb063afaf039e441dccab247de626f72ea91b7b47a9e9d498b4c8d9a9395682",
+ "heldout_exclusion_assert": true,
+ "node": "c635-142.vista.tacc.utexas.edu"
+}
