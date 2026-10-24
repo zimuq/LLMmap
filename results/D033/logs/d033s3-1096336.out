@@ -1,0 +1,30 @@
+=== node: c642-072.vista.tacc.utexas.edu start: Sat Oct 24 06:10:25 AM CDT 2026 | OMP_NUM_THREADS=64 python experiments/d033_analysis.py; /work/11280/zimuq1/vista/miniconda3/envs/llmmap/bin/python experiments/d033_plots.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          18         205           0           0         193
+Swap:             24           0          24
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=64 python experiments/d033_analysis.py 06:10:25
+[A] [S3 v2] PRIMARY enc: OURS^fold - PAPER8  all +0.0869 [0.0615, 0.1118] tail +0.0163 [0.0058, 0.0271] -> BETTER
+[A] [S3 v2] PRIMARY nc: OURS^fold - PAPER8  all +0.0602 [0.0428, 0.0776] tail +0.0441 [0.0249, 0.0621] -> BETTER
+[A] [S3 v2] enc|model|FULL - OURS: all +0.0033 [-0.0174, 0.0254] tail +0.0030 [-0.002, 0.0097] -> INCONCLUSIVE
+[A] [S3 v2] nc|model|FULL - OURS: all +0.0099 [-0.0019, 0.0207] tail +0.0072 [-0.0017, 0.0155] -> INCONCLUSIVE
+[A] [S3 v2] enc-alt|model|OURS - PAPER8: all +0.0955 [0.069, 0.1217] tail +0.0205 [0.0103, 0.0306] -> BETTER
+[A] [S3 v2] nc-alt|model|OURS - PAPER8: all +0.0678 [0.0518, 0.0838] tail +0.0299 [0.0178, 0.0478] -> BETTER
+[A] [S3 v2] enc|family|OURS - PAPER8: all +0.0993 [0.072, 0.1242] tail +0.0341 [0.0253, 0.0426] -> BETTER
+[A] [S3 v2] nc|family|OURS - PAPER8: all +0.0593 [0.0409, 0.0781] tail +0.0476 [0.0252, 0.0692] -> BETTER
+[A] [S3 v2] done (0.2 min)
+[A] [S3 v1] PRIMARY enc: OURS^fold - PAPER8  all -0.0022 [-0.0458, 0.0393] tail -0.0072 [-0.028, 0.011] -> INCONCLUSIVE
+[A] [S3 v1] PRIMARY nc: OURS^fold - PAPER8  all +0.0130 [-0.0195, 0.0476] tail +0.0279 [0.0027, 0.0527] -> INCONCLUSIVE
+[A] [S3 v1] enc|model|FULL - OURS: all +0.0461 [0.0047, 0.0879] tail +0.0159 [0.0014, 0.0345] -> BETTER
+[A] [S3 v1] nc|model|FULL - OURS: all +0.0216 [0.0, 0.0422] tail +0.0006 [-0.0109, 0.0145] -> INCONCLUSIVE
+[A] [S3 v1] enc-alt|model|OURS - PAPER8: all +0.0047 [-0.0483, 0.0573] tail -0.0081 [-0.0294, 0.0149] -> INCONCLUSIVE
+[A] [S3 v1] nc-alt|model|OURS - PAPER8: all +0.0151 [-0.0152, 0.0454] tail +0.0400 [0.0188, 0.0606] -> INCONCLUSIVE
+[A] [S3 v1] enc|family|OURS - PAPER8: all +0.0519 [0.0141, 0.0919] tail +0.0315 [0.0197, 0.0497] -> BETTER
+[A] [S3 v1] nc|family|OURS - PAPER8: all +0.0065 [-0.027, 0.04] tail +0.0176 [-0.0149, 0.0455] -> INCONCLUSIVE
+[A] [S3 v1] done (0.2 min)
+[A] [S3] WORSE primary []; secondary []
+[A] [S3] claim: SUPPORTED (v2 enc BETTER)
+[A] [A] >>>  /work/11280/zimuq1/vista/miniconda3/envs/llmmap/bin/python experiments/d033_plots.py 06:10:42
+[A] wrote tail_{v2,v1}.png, curves.png
+=== end: Sat Oct 24 06:10:53 AM CDT 2026 rc=0 ===
