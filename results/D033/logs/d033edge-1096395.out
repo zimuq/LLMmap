@@ -1,0 +1,10 @@
+=== node: c612-121.vista.tacc.utexas.edu start: Sat Oct 24 07:10:20 AM CDT 2026 | OMP_NUM_THREADS=16 python experiments/d033_edge_ci.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          21         202           0           0         191
+Swap:             24           1          23
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=16 python experiments/d033_edge_ci.py 07:10:20
+[A] family OURS JG p2.5 -0.03783784 p97.5 0.00000000  share==0 0.0070
+[A] model FULL OURS p2.5 0.00000000 p97.5 0.04216216  share==0 0.0075
+=== end: Sat Oct 24 07:10:23 AM CDT 2026 rc=0 ===
