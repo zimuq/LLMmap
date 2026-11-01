@@ -1856,3 +1856,37 @@ clouds) and the readout fixed, which ingredient carries D031's gains?
     from a fresh S_test.
 - Cost: 2.9 node-h.
 
+
+## D033 — On models selection and training never saw, our queries beat LLMmap's in v2; the training-free nearest-cloud readout is the better open-set mechanism
+
+**Question (open-set (a), development grade):** with leave-models-out
+folds (family-stratified, 5 folds), are new models identified better
+with our 8 queries than with LLMmap's 8? Two readouts: ① LLMmap's
+retrained siamese encoder, ② training-free nearest point cloud.
+
+**Answer (pre-registered claim rule): SUPPORTED** for
+MMR-PP[CVaR] (held-out O_all, `k` = 8, Δ vs PAPER8):
+
+| | v2 85-way | v1 37-way |
+|---|---|---|
+| ① encoder (Euclidean) | **+8.7 pp** BETTER | −0.2 pp INCONCLUSIVE |
+| ② nearest cloud (raw) | **+6.0 pp** BETTER | +1.3 pp INCONCLUSIVE |
+
+- **Main method = JG (human, 2026-11-01).** JG^fold − PAPER8 is
+  INCONCLUSIVE in all 4 model-level cells (v2 ① +2.8 pp: E_all resolved,
+  tail not). MMR^fold − JG^fold is BETTER in v2 under both readouts and
+  INCONCLUSIVE in v1.
+- **② beats ① on held-out accuracy by 8–15 pp.** ② loses nothing on unseen
+  models; ① drops 12–20 pp from seen to unseen, which is D030's LLMMAP-OS
+  drop again. ① keeps the edge on the v2 hard-pair tail (0.937 vs 0.904).
+  On family-out folds, ① falls to 0.56 and ② holds at 0.755.
+- **Selection transfers in v2:** leaving the new models out of selection
+  costs ≤ 1 pp (unresolved). In v1 it costs +4.6 pp under ① (each fold
+  selects on only ~30 models).
+- **Ceiling:** the best open-set number (0.766, v2 ②) is 4 pp below
+  closed-set attention and 11 pp below closed-set linear.
+- **Recipe:** no convergence failures; the pilot's early stop was the low
+  end of the range.
+- **Caveat:** S_test configs were already read, so these are development
+  numbers. The protocol is frozen for D034's open-set section.
+- Cost: 12.3 node-h.

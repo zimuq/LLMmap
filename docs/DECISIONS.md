@@ -1928,6 +1928,32 @@ interpretable; specialist-based two-stage design not pursued
     confirm in the fresh-S_test D); tiny-aya (rec. stop, characterised
     limitation).
   Decided by: design-side (closure).
+
+[2026-11-01] Method framing -- main method stays JointGreedy-CVaR; MMR is an ablation
+  - Human: the main method stays JG (gamma = 0.1, frozen since v1). CVaR +
+    MMR on pair-profiles (D031 / D032 star) moves to the ablation rows.
+  - Why the evidence does not support "MMR > JG" (design-side check, all
+    old-S_test, attention labels):
+    - v2 closed-set (D031): JG - MMR* = -5.8 pp [-7.5, -4.1], linear
+      -1.5 pp; both resolved for MMR. But that S_test was read before MMR
+      was adopted, and only lambda = 0.7 does it (0.3 / 0.5 are not WORSE).
+    - v1 closed-set: PARITY (+0.0 pp [-1.8, +1.6]); linear +0.9 / +1.0 pp
+      favours JG.
+    - Open-set (D033): v2 BETTER for MMR under both readouts; v1
+      INCONCLUSIVE, with the ① point favouring JG (-1.5 pp).
+    - So: consistent and resolved on v2, but development grade; absent on v1.
+  - Consequences recorded for the human:
+    - JG - PAPER8 is INCONCLUSIVE under attention on both views
+      (v2 +2.9 pp [-0.7, +6.3]; linear BETTER on v2). Open-set JG^fold -
+      PAPER8 is INCONCLUSIVE in all 4 model-level cells.
+    - D029's CONFIRMED is on the hard pairs.
+  - D034 revised before any P / data: primaries JG - PAPER8 and JG -
+    {TOP-K[MEAN] or MMR-PP[MEAN]*} (human picks before stop B); ablations
+    A1 MMR-PP[CVaR] - JG, A2 / A3 CVaR - MEAN under TOP-K / MMR-PP;
+    open-set primary JG^fold - PAPER8. MEAN-MMR chains added to the union.
+  - METHOD.md: no edit yet; the METHOD rewrite (diff to the human) follows
+    the framing freeze.
+  Decided by: human (framing); design-side (D034 revision, routine).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
