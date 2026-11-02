@@ -1,0 +1,1486 @@
+{
+ "schema": "d035-runs-val-v1",
+ "runs": [
+  {
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r0.ckpt",
+   "wall_s": 11.4,
+   "best_ckpt": "best-epoch=04-val_loss=1.9491.ckpt",
+   "train_acc": 0.6335686274509804,
+   "val_acc": 0.5176470588235295
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r1.ckpt",
+   "wall_s": 4.6,
+   "best_ckpt": "best-epoch=02-val_loss=2.0225.ckpt",
+   "train_acc": 0.540235294117647,
+   "val_acc": 0.48094117647058826
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r2.ckpt",
+   "wall_s": 5.3,
+   "best_ckpt": "best-epoch=03-val_loss=1.8800.ckpt",
+   "train_acc": 0.6003137254901961,
+   "val_acc": 0.5058823529411764
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r3.ckpt",
+   "wall_s": 4.7,
+   "best_ckpt": "best-epoch=02-val_loss=1.8857.ckpt",
+   "train_acc": 0.5788235294117647,
+   "val_acc": 0.49929411764705883
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r4.ckpt",
+   "wall_s": 5.9,
+   "best_ckpt": "best-epoch=04-val_loss=1.8478.ckpt",
+   "train_acc": 0.632,
+   "val_acc": 0.5181176470588236
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r0.ckpt",
+   "wall_s": 12.5,
+   "best_ckpt": "best-epoch=15-val_loss=1.5281.ckpt",
+   "train_acc": 0.9364705882352942,
+   "val_acc": 0.6672941176470588
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r1.ckpt",
+   "wall_s": 7.2,
+   "best_ckpt": "best-epoch=06-val_loss=1.3531.ckpt",
+   "train_acc": 0.7987450980392157,
+   "val_acc": 0.6291764705882353
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r2.ckpt",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=1.3448.ckpt",
+   "train_acc": 0.7789803921568628,
+   "val_acc": 0.6263529411764706
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r3.ckpt",
+   "wall_s": 5.5,
+   "best_ckpt": "best-epoch=03-val_loss=1.3269.ckpt",
+   "train_acc": 0.756078431372549,
+   "val_acc": 0.6348235294117647
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r4.ckpt",
+   "wall_s": 4.9,
+   "best_ckpt": "best-epoch=02-val_loss=1.5075.ckpt",
+   "train_acc": 0.664156862745098,
+   "val_acc": 0.5712941176470588
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r0.ckpt",
+   "wall_s": 10.3,
+   "best_ckpt": "best-epoch=11-val_loss=1.3182.ckpt",
+   "train_acc": 0.928156862745098,
+   "val_acc": 0.6781176470588235
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r1.ckpt",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.3404.ckpt",
+   "train_acc": 0.7358431372549019,
+   "val_acc": 0.6305882352941177
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r2.ckpt",
+   "wall_s": 9.2,
+   "best_ckpt": "best-epoch=09-val_loss=1.1987.ckpt",
+   "train_acc": 0.916235294117647,
+   "val_acc": 0.6927058823529412
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r3.ckpt",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.2422.ckpt",
+   "train_acc": 0.8566274509803922,
+   "val_acc": 0.664
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r4.ckpt",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=08-val_loss=1.3069.ckpt",
+   "train_acc": 0.8583529411764705,
+   "val_acc": 0.668235294117647
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r0.ckpt",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=08-val_loss=1.0682.ckpt",
+   "train_acc": 0.9179607843137255,
+   "val_acc": 0.7303529411764705
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r1.ckpt",
+   "wall_s": 6.2,
+   "best_ckpt": "best-epoch=04-val_loss=1.0322.ckpt",
+   "train_acc": 0.8381176470588235,
+   "val_acc": 0.7007058823529412
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r2.ckpt",
+   "wall_s": 6.2,
+   "best_ckpt": "best-epoch=04-val_loss=1.0455.ckpt",
+   "train_acc": 0.8489411764705882,
+   "val_acc": 0.7176470588235294
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r3.ckpt",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.1941.ckpt",
+   "train_acc": 0.7764705882352941,
+   "val_acc": 0.6734117647058824
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r4.ckpt",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.0878.ckpt",
+   "train_acc": 0.8152156862745098,
+   "val_acc": 0.7011764705882353
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r0.ckpt",
+   "wall_s": 11.8,
+   "best_ckpt": "best-epoch=13-val_loss=1.1040.ckpt",
+   "train_acc": 0.9551372549019608,
+   "val_acc": 0.7261176470588235
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r1.ckpt",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=0.9720.ckpt",
+   "train_acc": 0.940078431372549,
+   "val_acc": 0.7501176470588236
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r2.ckpt",
+   "wall_s": 13.6,
+   "best_ckpt": "best-epoch=16-val_loss=1.0012.ckpt",
+   "train_acc": 0.9818039215686275,
+   "val_acc": 0.7708235294117647
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r3.ckpt",
+   "wall_s": 14.2,
+   "best_ckpt": "best-epoch=17-val_loss=1.0366.ckpt",
+   "train_acc": 0.9891764705882353,
+   "val_acc": 0.7727058823529411
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r4.ckpt",
+   "wall_s": 6.2,
+   "best_ckpt": "best-epoch=04-val_loss=1.0210.ckpt",
+   "train_acc": 0.8436078431372549,
+   "val_acc": 0.7044705882352941
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r0.ckpt",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=0.9474.ckpt",
+   "train_acc": 0.9449411764705883,
+   "val_acc": 0.7543529411764706
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r1.ckpt",
+   "wall_s": 9.9,
+   "best_ckpt": "best-epoch=10-val_loss=0.8063.ckpt",
+   "train_acc": 0.9620392156862745,
+   "val_acc": 0.784
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r2.ckpt",
+   "wall_s": 14.9,
+   "best_ckpt": "best-epoch=18-val_loss=0.8545.ckpt",
+   "train_acc": 0.9968627450980392,
+   "val_acc": 0.7924705882352941
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r3.ckpt",
+   "wall_s": 6.3,
+   "best_ckpt": "best-epoch=04-val_loss=0.9214.ckpt",
+   "train_acc": 0.8763921568627451,
+   "val_acc": 0.7303529411764705
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r4.ckpt",
+   "wall_s": 8.1,
+   "best_ckpt": "best-epoch=07-val_loss=0.8180.ckpt",
+   "train_acc": 0.9370980392156862,
+   "val_acc": 0.7712941176470588
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r0.ckpt",
+   "wall_s": 8.9,
+   "best_ckpt": "best-epoch=08-val_loss=0.9351.ckpt",
+   "train_acc": 0.9501176470588235,
+   "val_acc": 0.7425882352941177
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r1.ckpt",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=0.8686.ckpt",
+   "train_acc": 0.9298823529411765,
+   "val_acc": 0.756235294117647
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r2.ckpt",
+   "wall_s": 15.0,
+   "best_ckpt": "best-epoch=18-val_loss=0.8925.ckpt",
+   "train_acc": 0.9956078431372549,
+   "val_acc": 0.7967058823529412
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r3.ckpt",
+   "wall_s": 5.7,
+   "best_ckpt": "best-epoch=03-val_loss=0.9803.ckpt",
+   "train_acc": 0.8288627450980393,
+   "val_acc": 0.7298823529411764
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r4.ckpt",
+   "wall_s": 10.1,
+   "best_ckpt": "best-epoch=10-val_loss=0.8495.ckpt",
+   "train_acc": 0.9730196078431372,
+   "val_acc": 0.7849411764705883
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r0.ckpt",
+   "wall_s": 11.4,
+   "best_ckpt": "best-epoch=12-val_loss=0.8709.ckpt",
+   "train_acc": 0.9810196078431372,
+   "val_acc": 0.772235294117647
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r1.ckpt",
+   "wall_s": 9.5,
+   "best_ckpt": "best-epoch=09-val_loss=0.8442.ckpt",
+   "train_acc": 0.9546666666666667,
+   "val_acc": 0.7661176470588236
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r2.ckpt",
+   "wall_s": 12.0,
+   "best_ckpt": "best-epoch=13-val_loss=0.8294.ckpt",
+   "train_acc": 0.9898039215686274,
+   "val_acc": 0.7929411764705883
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r3.ckpt",
+   "wall_s": 11.4,
+   "best_ckpt": "best-epoch=12-val_loss=0.7943.ckpt",
+   "train_acc": 0.9934117647058823,
+   "val_acc": 0.7934117647058824
+  },
+  {
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r4.ckpt",
+   "wall_s": 8.3,
+   "best_ckpt": "best-epoch=07-val_loss=0.7905.ckpt",
+   "train_acc": 0.9482352941176471,
+   "val_acc": 0.780235294117647
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r0.ckpt",
+   "wall_s": 7.7,
+   "best_ckpt": "best-epoch=07-val_loss=2.1403.ckpt",
+   "train_acc": 0.7234509803921568,
+   "val_acc": 0.46352941176470586
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r1.ckpt",
+   "wall_s": 7.2,
+   "best_ckpt": "best-epoch=06-val_loss=2.2615.ckpt",
+   "train_acc": 0.6767058823529412,
+   "val_acc": 0.45129411764705885
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r2.ckpt",
+   "wall_s": 8.4,
+   "best_ckpt": "best-epoch=08-val_loss=2.2457.ckpt",
+   "train_acc": 0.712,
+   "val_acc": 0.456
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r3.ckpt",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=2.2570.ckpt",
+   "train_acc": 0.6015686274509804,
+   "val_acc": 0.41411764705882353
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r4.ckpt",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=2.4112.ckpt",
+   "train_acc": 0.5432156862745098,
+   "val_acc": 0.38823529411764707
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r0.ckpt",
+   "wall_s": 11.0,
+   "best_ckpt": "best-epoch=12-val_loss=2.0559.ckpt",
+   "train_acc": 0.9176470588235294,
+   "val_acc": 0.5275294117647059
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r1.ckpt",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=2.1094.ckpt",
+   "train_acc": 0.8015686274509803,
+   "val_acc": 0.5044705882352941
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r2.ckpt",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=2.1319.ckpt",
+   "train_acc": 0.728156862745098,
+   "val_acc": 0.4757647058823529
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r3.ckpt",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=2.0076.ckpt",
+   "train_acc": 0.751686274509804,
+   "val_acc": 0.5002352941176471
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r4.ckpt",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.9346.ckpt",
+   "train_acc": 0.8371764705882353,
+   "val_acc": 0.5185882352941177
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r0.ckpt",
+   "wall_s": 9.9,
+   "best_ckpt": "best-epoch=10-val_loss=1.6195.ckpt",
+   "train_acc": 0.952,
+   "val_acc": 0.6150588235294118
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r1.ckpt",
+   "wall_s": 5.7,
+   "best_ckpt": "best-epoch=03-val_loss=1.8700.ckpt",
+   "train_acc": 0.688156862745098,
+   "val_acc": 0.5002352941176471
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r2.ckpt",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.5550.ckpt",
+   "train_acc": 0.932235294117647,
+   "val_acc": 0.6136470588235294
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r3.ckpt",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.6083.ckpt",
+   "train_acc": 0.8928627450980392,
+   "val_acc": 0.5910588235294117
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r4.ckpt",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.5566.ckpt",
+   "train_acc": 0.9043137254901961,
+   "val_acc": 0.5952941176470589
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r0.ckpt",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.2788.ckpt",
+   "train_acc": 0.9190588235294118,
+   "val_acc": 0.6517647058823529
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r1.ckpt",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.3505.ckpt",
+   "train_acc": 0.9163921568627451,
+   "val_acc": 0.6404705882352941
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r2.ckpt",
+   "wall_s": 5.7,
+   "best_ckpt": "best-epoch=03-val_loss=1.4594.ckpt",
+   "train_acc": 0.7615686274509804,
+   "val_acc": 0.5891764705882353
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r3.ckpt",
+   "wall_s": 10.7,
+   "best_ckpt": "best-epoch=11-val_loss=1.1822.ckpt",
+   "train_acc": 0.9932549019607844,
+   "val_acc": 0.7002352941176471
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r4.ckpt",
+   "wall_s": 10.6,
+   "best_ckpt": "best-epoch=11-val_loss=1.1970.ckpt",
+   "train_acc": 0.9905882352941177,
+   "val_acc": 0.691764705882353
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r0.ckpt",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.1752.ckpt",
+   "train_acc": 0.9344313725490196,
+   "val_acc": 0.6809411764705883
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r1.ckpt",
+   "wall_s": 12.0,
+   "best_ckpt": "best-epoch=13-val_loss=1.2228.ckpt",
+   "train_acc": 0.991686274509804,
+   "val_acc": 0.6964705882352941
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r2.ckpt",
+   "wall_s": 11.3,
+   "best_ckpt": "best-epoch=12-val_loss=1.2165.ckpt",
+   "train_acc": 0.9824313725490196,
+   "val_acc": 0.7044705882352941
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r3.ckpt",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.2773.ckpt",
+   "train_acc": 0.9331764705882353,
+   "val_acc": 0.6644705882352941
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r4.ckpt",
+   "wall_s": 9.5,
+   "best_ckpt": "best-epoch=09-val_loss=1.2513.ckpt",
+   "train_acc": 0.9618823529411765,
+   "val_acc": 0.6677647058823529
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r0.ckpt",
+   "wall_s": 8.9,
+   "best_ckpt": "best-epoch=08-val_loss=1.2417.ckpt",
+   "train_acc": 0.9261176470588235,
+   "val_acc": 0.6710588235294118
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r1.ckpt",
+   "wall_s": 12.0,
+   "best_ckpt": "best-epoch=13-val_loss=1.1245.ckpt",
+   "train_acc": 0.9970196078431373,
+   "val_acc": 0.7138823529411765
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r2.ckpt",
+   "wall_s": 8.3,
+   "best_ckpt": "best-epoch=07-val_loss=1.1622.ckpt",
+   "train_acc": 0.9372549019607843,
+   "val_acc": 0.6832941176470588
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r3.ckpt",
+   "wall_s": 12.6,
+   "best_ckpt": "best-epoch=14-val_loss=1.0779.ckpt",
+   "train_acc": 0.9967058823529412,
+   "val_acc": 0.736
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r4.ckpt",
+   "wall_s": 10.7,
+   "best_ckpt": "best-epoch=11-val_loss=1.1969.ckpt",
+   "train_acc": 0.9794509803921568,
+   "val_acc": 0.6927058823529412
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r0.ckpt",
+   "wall_s": 15.1,
+   "best_ckpt": "best-epoch=18-val_loss=1.0820.ckpt",
+   "train_acc": 0.999686274509804,
+   "val_acc": 0.7468235294117647
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r1.ckpt",
+   "wall_s": 12.6,
+   "best_ckpt": "best-epoch=14-val_loss=1.1785.ckpt",
+   "train_acc": 0.9926274509803922,
+   "val_acc": 0.7101176470588235
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r2.ckpt",
+   "wall_s": 13.3,
+   "best_ckpt": "best-epoch=15-val_loss=1.1249.ckpt",
+   "train_acc": 0.9951372549019608,
+   "val_acc": 0.7209411764705882
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r3.ckpt",
+   "wall_s": 11.3,
+   "best_ckpt": "best-epoch=12-val_loss=1.1393.ckpt",
+   "train_acc": 0.987921568627451,
+   "val_acc": 0.7054117647058824
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r4.ckpt",
+   "wall_s": 9.5,
+   "best_ckpt": "best-epoch=09-val_loss=1.0747.ckpt",
+   "train_acc": 0.9841568627450981,
+   "val_acc": 0.7129411764705882
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r0.ckpt",
+   "wall_s": 8.4,
+   "best_ckpt": "best-epoch=07-val_loss=1.0166.ckpt",
+   "train_acc": 0.9667450980392157,
+   "val_acc": 0.7190588235294118
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r1.ckpt",
+   "wall_s": 8.4,
+   "best_ckpt": "best-epoch=07-val_loss=1.2516.ckpt",
+   "train_acc": 0.9018039215686274,
+   "val_acc": 0.6583529411764706
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r2.ckpt",
+   "wall_s": 9.8,
+   "best_ckpt": "best-epoch=09-val_loss=1.0848.ckpt",
+   "train_acc": 0.9813333333333333,
+   "val_acc": 0.7162352941176471
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r3.ckpt",
+   "wall_s": 7.9,
+   "best_ckpt": "best-epoch=06-val_loss=1.2124.ckpt",
+   "train_acc": 0.8905098039215686,
+   "val_acc": 0.6649411764705883
+  },
+  {
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r4.ckpt",
+   "wall_s": 7.8,
+   "best_ckpt": "best-epoch=06-val_loss=1.0883.ckpt",
+   "train_acc": 0.9396078431372549,
+   "val_acc": 0.6988235294117647
+  }
+ ],
+ "s_test_reads": 0
+}

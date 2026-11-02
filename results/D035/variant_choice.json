@@ -1,0 +1,159 @@
+{
+ "schema": "d035-variant-choice-v1",
+ "s_test_reads": 0,
+ "chains_sha256": "828e9c4e0a886ac2d10ab737a58089c97f60d29ff4d74d52e0a1f113df7a8d69",
+ "rule": "CENTROID* = higher mean over k = 1..8 of the 5-seed mean S_val attention top-1 (reloaded best checkpoints); exact tie -> CENTROID|norm (Call 3 (a))",
+ "attention_val_top1_by_k": {
+  "CENTROID|raw": [
+   0.5043764705882353,
+   0.6257882352941176,
+   0.6667294117647058,
+   0.7046588235294118,
+   0.7448470588235294,
+   0.7664941176470588,
+   0.7620705882352942,
+   0.7809882352941176
+  ],
+  "CENTROID|norm": [
+   0.43463529411764706,
+   0.5053176470588235,
+   0.5830588235294117,
+   0.6546823529411765,
+   0.6828235294117648,
+   0.6993882352941176,
+   0.7192470588235294,
+   0.6914823529411764
+  ]
+ },
+ "attention_score": {
+  "CENTROID|raw": 0.6944941176470588,
+  "CENTROID|norm": 0.6213294117647059
+ },
+ "CENTROID_star": "CENTROID|raw",
+ "other_centroid": "CENTROID|norm",
+ "single_trained": "SINGLE|raw",
+ "single_selection_only": "SINGLE|norm",
+ "linear_diagnostic": {
+  "val_top1_by_k": {
+   "CENTROID|raw": [
+    0.6428235294117647,
+    0.7501176470588236,
+    0.7891764705882353,
+    0.8211764705882353,
+    0.8324705882352941,
+    0.8616470588235294,
+    0.8583529411764705,
+    0.8522352941176471
+   ],
+   "CENTROID|norm": [
+    0.5722352941176471,
+    0.6611764705882353,
+    0.7374117647058823,
+    0.7924705882352941,
+    0.8070588235294117,
+    0.816,
+    0.8174117647058824,
+    0.8348235294117647
+   ]
+  },
+  "score": {
+   "CENTROID|raw": 0.8009999999999999,
+   "CENTROID|norm": 0.7548235294117647
+  },
+  "prefers": "CENTROID|raw",
+  "agrees_with_attention": true,
+  "per_fit": {
+   "CENTROID|raw|1": {
+    "val_top1": 0.6428235294117647,
+    "n_iter": 797,
+    "wall_s": 25.8
+   },
+   "CENTROID|raw|2": {
+    "val_top1": 0.7501176470588236,
+    "n_iter": 807,
+    "wall_s": 105.6
+   },
+   "CENTROID|raw|3": {
+    "val_top1": 0.7891764705882353,
+    "n_iter": 876,
+    "wall_s": 145.7
+   },
+   "CENTROID|raw|4": {
+    "val_top1": 0.8211764705882353,
+    "n_iter": 799,
+    "wall_s": 194.0
+   },
+   "CENTROID|raw|5": {
+    "val_top1": 0.8324705882352941,
+    "n_iter": 772,
+    "wall_s": 210.4
+   },
+   "CENTROID|raw|6": {
+    "val_top1": 0.8616470588235294,
+    "n_iter": 724,
+    "wall_s": 227.5
+   },
+   "CENTROID|raw|7": {
+    "val_top1": 0.8583529411764705,
+    "n_iter": 720,
+    "wall_s": 239.4
+   },
+   "CENTROID|raw|8": {
+    "val_top1": 0.8522352941176471,
+    "n_iter": 634,
+    "wall_s": 238.4
+   },
+   "CENTROID|norm|1": {
+    "val_top1": 0.5722352941176471,
+    "n_iter": 604,
+    "wall_s": 26.0
+   },
+   "CENTROID|norm|2": {
+    "val_top1": 0.6611764705882353,
+    "n_iter": 626,
+    "wall_s": 39.1
+   },
+   "CENTROID|norm|3": {
+    "val_top1": 0.7374117647058823,
+    "n_iter": 587,
+    "wall_s": 103.2
+   },
+   "CENTROID|norm|4": {
+    "val_top1": 0.7924705882352941,
+    "n_iter": 599,
+    "wall_s": 124.2
+   },
+   "CENTROID|norm|5": {
+    "val_top1": 0.8070588235294117,
+    "n_iter": 568,
+    "wall_s": 103.3
+   },
+   "CENTROID|norm|6": {
+    "val_top1": 0.816,
+    "n_iter": 608,
+    "wall_s": 91.5
+   },
+   "CENTROID|norm|7": {
+    "val_top1": 0.8174117647058824,
+    "n_iter": 622,
+    "wall_s": 104.7
+   },
+   "CENTROID|norm|8": {
+    "val_top1": 0.8348235294117647,
+    "n_iter": 561,
+    "wall_s": 96.8
+   }
+  },
+  "note": "diagnostic only; not used for the choice. Review A1: if it prefers the other variant, R's headline says so"
+ },
+ "identical_to_d029_asserted": [
+  "CENTROID|raw|1|r0",
+  "CENTROID|raw|1|r1",
+  "CENTROID|raw|1|r2",
+  "CENTROID|raw|1|r3",
+  "CENTROID|raw|1|r4"
+ ],
+ "code_commit": "d3244c751fada8e67185bb2b87e1efdfdd92b612",
+ "wall_min": 17.8,
+ "node": "c642-081.vista.tacc.utexas.edu"
+}
