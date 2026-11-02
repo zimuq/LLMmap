@@ -1,0 +1,61 @@
+=== node: c642-081.vista.tacc.utexas.edu start: Mon Nov  2 03:15:56 AM CST 2026 | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d035_analysis.py; /work/11280/zimuq1/vista/miniconda3/envs/llmmap/bin/python experiments/d035_plots.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          23         200           0           0         188
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d035_analysis.py 03:15:56
+[A] [S3] plotdata.npz written (I1 tail plot inputs)
+[A] [S3] WORSE scan (k = 8): ['CLOUD - CENTROID|raw', 'CENTROID|norm - SINGLE|raw']
+[A] [S3] P1 (CLOUD - CENTROID|raw): WORSE; mean k1-8 {'point': -0.0176, 'lo': -0.027, 'hi': -0.0086, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': -0.0201, 'lo': -0.0309, 'hi': -0.0098, 'ks': [2, 3, 4, 5, 6, 7, 8]}; linear {'point': -0.0045, 'lo': -0.0138, 'hi': 0.0042, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'mean_k1_8': {'point': -0.0176, 'lo': -0.0274, 'hi': -0.0069, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'mean_differing_k': {'point': -0.0201, 'lo': -0.0309, 'hi': -0.0085, 'ks': [2, 3, 4, 5, 6, 7, 8]}, 'verdict': 'WORSE'}; k=8 label WORSE
+[A]      k=1: 0.4955 vs 0.4955 d +0.0000 {'lo': 0.0, 'hi': 0.0} ident True lin {'delta': 0.0, 'lo': 0.0, 'hi': 0.0} old-rule False
+[A]      k=2: 0.6126 vs 0.6245 d -0.0119 {'lo': -0.0362, 'hi': 0.0122} ident False lin {'delta': 0.0005, 'lo': -0.0136, 'hi': 0.0146} old-rule False
+[A]      k=3: 0.6473 vs 0.6719 d -0.0246 {'lo': -0.0531, 'hi': 0.0056} ident False lin {'delta': -0.0094, 'lo': -0.0254, 'hi': 0.0056} old-rule False
+[A]      k=4: 0.7063 vs 0.7079 d -0.0016 {'lo': -0.0234, 'hi': 0.0179} ident False lin {'delta': -0.0052, 'lo': -0.0207, 'hi': 0.0089} old-rule False
+[A]      k=5: 0.729 vs 0.7484 d -0.0194 {'lo': -0.0488, 'hi': 0.0137} ident False lin {'delta': -0.0005, 'lo': -0.0169, 'hi': 0.0165} old-rule False
+[A]      k=6: 0.7187 vs 0.7628 d -0.0441 {'lo': -0.0612, 'hi': -0.028} ident False lin {'delta': -0.0155, 'lo': -0.0306, 'hi': 0.0} old-rule False
+[A]      k=7: 0.7448 vs 0.7534 d -0.0086 {'lo': -0.0348, 'hi': 0.0185} ident False lin {'delta': -0.0094, 'lo': -0.0226, 'hi': 0.0028} old-rule False
+[A]      k=8: 0.7457 vs 0.7766 d -0.0309 {'lo': -0.0493, 'hi': -0.0144} ident False lin {'delta': 0.0033, 'lo': -0.0108, 'hi': 0.0174} old-rule False
+[A] [S3] P2 (CENTROID|raw - SINGLE|raw): BETTER; mean k1-8 {'point': 0.1609, 'lo': 0.1486, 'hi': 0.174, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.1609, 'lo': 0.1486, 'hi': 0.174, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; linear {'point': 0.1339, 'lo': 0.1189, 'hi': 0.1497, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'mean_k1_8': {'point': 0.1609, 'lo': 0.148, 'hi': 0.1742, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'mean_differing_k': {'point': 0.1609, 'lo': 0.148, 'hi': 0.1742, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'verdict': 'BETTER'}; k=8 label BETTER
+[A]      k=1: 0.4955 vs 0.3491 d +0.1464 {'lo': 0.1209, 'hi': 0.1759} ident False lin {'delta': 0.1548, 'lo': 0.1285, 'hi': 0.1807} old-rule True
+[A]      k=2: 0.6245 vs 0.4221 d +0.2024 {'lo': 0.1748, 'hi': 0.2329} ident False lin {'delta': 0.1854, 'lo': 0.1661, 'hi': 0.2066} old-rule True
+[A]      k=3: 0.6719 vs 0.5035 d +0.1684 {'lo': 0.1504, 'hi': 0.191} ident False lin {'delta': 0.168, 'lo': 0.1468, 'hi': 0.1887} old-rule True
+[A]      k=4: 0.7079 vs 0.5193 d +0.1885 {'lo': 0.1568, 'hi': 0.2202} ident False lin {'delta': 0.1459, 'lo': 0.1247, 'hi': 0.1675} old-rule True
+[A]      k=5: 0.7484 vs 0.536 d +0.2124 {'lo': 0.1724, 'hi': 0.2488} ident False lin {'delta': 0.1421, 'lo': 0.1176, 'hi': 0.1675} old-rule True
+[A]      k=6: 0.7628 vs 0.5751 d +0.1878 {'lo': 0.1663, 'hi': 0.2107} ident False lin {'delta': 0.1355, 'lo': 0.1134, 'hi': 0.1581} old-rule True
+[A]      k=7: 0.7534 vs 0.641 d +0.1124 {'lo': 0.081, 'hi': 0.1431} ident False lin {'delta': 0.0904, 'lo': 0.0725, 'hi': 0.1096} old-rule True
+[A]      k=8: 0.7766 vs 0.7078 d +0.0688 {'lo': 0.0533, 'hi': 0.0846} ident False lin {'delta': 0.0494, 'lo': 0.0296, 'hi': 0.0687} old-rule True
+[A] [S3] CLOUD - SINGLE (CLOUD - SINGLE|raw): (no verdict); mean k1-8 {'point': 0.1433, 'lo': 0.1324, 'hi': 0.155, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.1433, 'lo': 0.1324, 'hi': 0.155, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; linear {'point': 0.1294, 'lo': 0.1149, 'hi': 0.1439, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'mean_k1_8': {'point': 0.1433, 'lo': 0.1308, 'hi': 0.1562, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'mean_differing_k': {'point': 0.1433, 'lo': 0.1308, 'hi': 0.1562, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}}; k=8 label BETTER
+[A]      k=1: 0.4955 vs 0.3491 d +0.1464 {'lo': 0.1209, 'hi': 0.1759} ident False lin {'delta': 0.1548, 'lo': 0.1285, 'hi': 0.1807} old-rule True
+[A]      k=2: 0.6126 vs 0.4221 d +0.1905 {'lo': 0.1655, 'hi': 0.2182} ident False lin {'delta': 0.1859, 'lo': 0.1638, 'hi': 0.2066} old-rule True
+[A]      k=3: 0.6473 vs 0.5035 d +0.1438 {'lo': 0.118, 'hi': 0.1712} ident False lin {'delta': 0.1586, 'lo': 0.1365, 'hi': 0.1821} old-rule True
+[A]      k=4: 0.7063 vs 0.5193 d +0.1869 {'lo': 0.1585, 'hi': 0.218} ident False lin {'delta': 0.1407, 'lo': 0.1195, 'hi': 0.1605} old-rule True
+[A]      k=5: 0.729 vs 0.536 d +0.1930 {'lo': 0.1707, 'hi': 0.2111} ident False lin {'delta': 0.1416, 'lo': 0.12, 'hi': 0.1661} old-rule True
+[A]      k=6: 0.7187 vs 0.5751 d +0.1436 {'lo': 0.1276, 'hi': 0.1613} ident False lin {'delta': 0.12, 'lo': 0.1016, 'hi': 0.1407} old-rule True
+[A]      k=7: 0.7448 vs 0.641 d +0.1038 {'lo': 0.0885, 'hi': 0.119} ident False lin {'delta': 0.0809, 'lo': 0.064, 'hi': 0.0984} old-rule True
+[A]      k=8: 0.7457 vs 0.7078 d +0.0379 {'lo': 0.0208, 'hi': 0.0559} ident False lin {'delta': 0.0527, 'lo': 0.0372, 'hi': 0.0682} old-rule False
+[A] [S3] CLOUD - CENTROID|norm (CLOUD - CENTROID|norm): (no verdict); mean k1-8 {'point': 0.0694, 'lo': 0.0546, 'hi': 0.0843, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.0694, 'lo': 0.0546, 'hi': 0.0843, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; linear {'point': 0.0506, 'lo': 0.0375, 'hi': 0.0628, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'mean_k1_8': {'point': 0.0694, 'lo': 0.0555, 'hi': 0.0842, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'mean_differing_k': {'point': 0.0694, 'lo': 0.0555, 'hi': 0.0842, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}}; k=8 label BETTER
+[A]      k=1: 0.4955 vs 0.4251 d +0.0704 {'lo': 0.0324, 'hi': 0.1033} ident False lin {'delta': 0.0748, 'lo': 0.055, 'hi': 0.0937} old-rule True
+[A]      k=2: 0.6126 vs 0.4888 d +0.1238 {'lo': 0.0991, 'hi': 0.1481} ident False lin {'delta': 0.0885, 'lo': 0.0645, 'hi': 0.1115} old-rule True
+[A]      k=3: 0.6473 vs 0.5689 d +0.0784 {'lo': 0.0421, 'hi': 0.1201} ident False lin {'delta': 0.0664, 'lo': 0.0485, 'hi': 0.0847} old-rule False
+[A]      k=4: 0.7063 vs 0.6506 d +0.0556 {'lo': 0.0108, 'hi': 0.0964} ident False lin {'delta': 0.0367, 'lo': 0.0198, 'hi': 0.0537} old-rule False
+[A]      k=5: 0.729 vs 0.664 d +0.0650 {'lo': 0.0395, 'hi': 0.0886} ident False lin {'delta': 0.0414, 'lo': 0.0254, 'hi': 0.0574} old-rule True
+[A]      k=6: 0.7187 vs 0.6762 d +0.0424 {'lo': 0.0094, 'hi': 0.0795} ident False lin {'delta': 0.0311, 'lo': 0.0127, 'hi': 0.0499} old-rule False
+[A]      k=7: 0.7448 vs 0.7027 d +0.0422 {'lo': 0.0225, 'hi': 0.0612} ident False lin {'delta': 0.0339, 'lo': 0.0207, 'hi': 0.0466} old-rule False
+[A]      k=8: 0.7457 vs 0.6683 d +0.0774 {'lo': 0.0542, 'hi': 0.1031} ident False lin {'delta': 0.032, 'lo': 0.0169, 'hi': 0.0475} old-rule True
+[A] [S3] CENTROID|raw - CENTROID|norm (CENTROID|raw - CENTROID|norm): (no verdict); mean k1-8 {'point': 0.087, 'lo': 0.0726, 'hi': 0.101, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; differing k {'point': 0.087, 'lo': 0.0726, 'hi': 0.101, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; linear {'point': 0.0551, 'lo': 0.0419, 'hi': 0.0681, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; ind {'mean_k1_8': {'point': 0.087, 'lo': 0.0727, 'hi': 0.1019, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}, 'mean_differing_k': {'point': 0.087, 'lo': 0.0727, 'hi': 0.1019, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}}; k=8 label BETTER
+[A]      k=1: 0.4955 vs 0.4251 d +0.0704 {'lo': 0.0324, 'hi': 0.1033} ident False lin {'delta': 0.0748, 'lo': 0.055, 'hi': 0.0937} old-rule True
+[A]      k=2: 0.6245 vs 0.4888 d +0.1356 {'lo': 0.103, 'hi': 0.1652} ident False lin {'delta': 0.088, 'lo': 0.064, 'hi': 0.1106} old-rule True
+[A]      k=3: 0.6719 vs 0.5689 d +0.1030 {'lo': 0.0769, 'hi': 0.1319} ident False lin {'delta': 0.0758, 'lo': 0.0579, 'hi': 0.0927} old-rule True
+[A]      k=4: 0.7079 vs 0.6506 d +0.0572 {'lo': 0.0062, 'hi': 0.1032} ident False lin {'delta': 0.0419, 'lo': 0.0245, 'hi': 0.0579} old-rule False
+[A]      k=5: 0.7484 vs 0.664 d +0.0844 {'lo': 0.0502, 'hi': 0.1198} ident False lin {'delta': 0.0419, 'lo': 0.0245, 'hi': 0.0593} old-rule False
+[A]      k=6: 0.7628 vs 0.6762 d +0.0866 {'lo': 0.0522, 'hi': 0.1191} ident False lin {'delta': 0.0466, 'lo': 0.0282, 'hi': 0.0649} old-rule True
+[A]      k=7: 0.7534 vs 0.7027 d +0.0507 {'lo': 0.028, 'hi': 0.0717} ident False lin {'delta': 0.0433, 'lo': 0.0287, 'hi': 0.0593} old-rule False
+[A]      k=8: 0.7766 vs 0.6683 d +0.1082 {'lo': 0.0812, 'hi': 0.1401} ident False lin {'delta': 0.0287, 'lo': 0.0132, 'hi': 0.0438} old-rule True
+[A] [S3] D1 {'CLOUD': 0.675, 'CENTROID|raw': 0.6926, 'CENTROID|norm': 0.6056, 'SINGLE|raw': 0.5317} other>star False; A1 {'linear_prefers': 'CENTROID|raw', 'attention_choice': 'CENTROID|raw', 'agrees': True}
+[A] [S3] (b) hard k=8: {'CLOUD': {'H_all': 0.8683, 'stably_hard': 0.7985, 'N_prime': 0.9357, 'not_N_prime': 0.9845, 'E_tail': 0.9273, 'N_prime_share_of_worst_decile': 0.2213}, 'CENTROID|raw': {'H_all': 0.8796, 'stably_hard': 0.8095, 'N_prime': 0.9422, 'not_N_prime': 0.9872, 'E_tail': 0.9375, 'N_prime_share_of_worst_decile': 0.2101}, 'CENTROID|norm': {'H_all': 0.8705, 'stably_hard': 0.8065, 'N_prime': 0.9263, 'not_N_prime': 0.975, 'E_tail': 0.9056, 'N_prime_share_of_worst_decile': 0.1849}, 'SINGLE|raw': {'H_all': 0.8598, 'stably_hard': 0.7834, 'N_prime': 0.9279, 'not_N_prime': 0.9807, 'E_tail': 0.9155, 'N_prime_share_of_worst_decile': 0.1877}, 'PAPER8': {'H_all': 0.8446, 'stably_hard': 0.7695, 'N_prime': 0.9279, 'not_N_prime': 0.9818, 'E_tail': 0.9175, 'N_prime_share_of_worst_decile': 0.2045}}
+[A] [S3] (e) SINGLE - CENTROID* by reference kind: {'greedy_ref_64': {'n': 64, 'k8': {'single': 0.7389, 'star': 0.7969, 'delta': -0.058, 'lo': -0.0736, 'hi': -0.0426}, 'mean_k': {'delta': -0.1578, 'lo': -0.1723, 'hi': -0.1441}}, 'sampled_ref_21': {'n': 21, 'k8': {'single': 0.613, 'star': 0.7147, 'delta': -0.1017, 'lo': -0.141, 'hi': -0.0617}, 'mean_k': {'delta': -0.1703, 'lo': -0.1922, 'hi': -0.1479}}}
+[A] [S3] D024 side-by-side (raw (P1 matching; P2 mixed)): P1 {'point': 0.0154, 'lo': 0.0023, 'hi': 0.0273, 'ks': [1, 2, 3, 4, 5, 6, 7, 8]}; P2 {'point': 0.1318, 'lo': 0.1095, 'hi': 0.1548, 'note': 'v1 CENTROID-raw - SINGLE(normalised): mixes scalings (D024 trained SINGLE only normalised); D024 draws, seed 20260928'}
+[A] [S3] verdicts {'P1': 'WORSE', 'P2': 'BETTER'}; wrote analysis.json (0.3 min)
+[A] [A] >>>  /work/11280/zimuq1/vista/miniconda3/envs/llmmap/bin/python experiments/d035_plots.py 03:16:18
+=== end: Mon Nov  2 03:16:27 AM CST 2026 rc=0 ===
