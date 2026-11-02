@@ -1,0 +1,25 @@
+=== node: c640-141.vista.tacc.utexas.edu start: Mon Nov  2 04:32:49 PM CST 2026 | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_select.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          20         203           0           0         191
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_select.py 16:32:49
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S1] precompute 1.6 min
+[A] [S1] CLOUD-raw: [193, 233, 117, 0, 253, 252, 243, 109]  objective [1.79135, 2.75268, 3.67117, 4.34248, 4.90827, 5.31909, 5.69037, 6.05183]  ties [1, 1, 1, 1, 1, 1, 1, 1] (0.7 min)
+[A] [S1] fold 0: CLOUD-raw^fold [193, 233, 117, 0, 253, 243, 252, 251]  CENTROID-raw^fold [193, 136, 251, 0, 233, 253, 5, 252]  CLOUD^fold [193, 121, 233, 0, 253, 237, 117, 16] (0.5 min)
+[A] [S1] fold 1: CLOUD-raw^fold [193, 136, 233, 0, 253, 255, 252, 117]  CENTROID-raw^fold [193, 136, 255, 0, 233, 252, 253, 251]  CLOUD^fold [193, 117, 233, 237, 18, 0, 121, 253] (0.5 min)
+[A] [S1] fold 2: CLOUD-raw^fold [193, 233, 117, 0, 253, 255, 252, 239]  CENTROID-raw^fold [193, 251, 117, 0, 233, 255, 253, 252]  CLOUD^fold [193, 117, 233, 0, 253, 237, 18, 114] (0.5 min)
+[A] [S1] fold 3: CLOUD-raw^fold [193, 123, 233, 240, 0, 255, 237, 239]  CENTROID-raw^fold [193, 136, 233, 0, 255, 240, 251, 1]  CLOUD^fold [193, 109, 233, 0, 237, 18, 117, 243] (0.5 min)
+[A] [S1] fold 4: CLOUD-raw^fold [193, 233, 117, 0, 253, 243, 123, 239]  CENTROID-raw^fold [193, 136, 233, 0, 253, 252, 251, 117]  CLOUD^fold [193, 117, 233, 18, 237, 0, 140, 253] (0.5 min)
+[A] [S1] identical-input k: {'P1': [1], 'P2': [1, 3], 'CLOUD_minus_CENTROID-raw': [1], 'CLOUD-raw_vs_PAPER8': []}; same chain all k: {'P1': False, 'P2': False, 'CLOUD_minus_CENTROID-raw': False, 'CLOUD-raw_vs_PAPER8': False}
+[A] [S1] fold same-chain: {'O1': {'folds_same_set_k8': 0, 'folds_same_ordered': 0, 'same_chain_all_folds': False}, 'O2': {'folds_same_set_k8': 0, 'folds_same_ordered': 0, 'same_chain_all_folds': False}}
+[A] [S1] overlaps k=8 with CLOUD-raw: {'CLOUD-raw': 8, 'CLOUD': 5, 'CENTROID-raw': 5, 'PAPER8': 1, 'MMR|pearson|0.7 (D031, reference)': 3}; 233-257 block: {'CLOUD-raw': [233, 253, 252, 243], 'CLOUD': [233, 237, 253], 'CENTROID-raw': [233, 255, 251, 252, 253], 'PAPER8': [], 'MMR|pearson|0.7 (D031, reference)': [237, 241, 251]}
+[A] [S1] D034 union: 17 new-chain queries, 1 not in D033 union / D035 chains
+[A] [S1] wrote ./results/D036/chains.json (4.98 min)
+=== end: Mon Nov  2 04:37:50 PM CST 2026 rc=0 ===
