@@ -1,0 +1,19 @@
+=== node: c642-071.vista.tacc.utexas.edu start: Mon Nov  2 03:12:23 AM CST 2026 | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d035_analysis.py; /work/11280/zimuq1/vista/miniconda3/envs/llmmap/bin/python experiments/d035_plots.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          27         196           0           0         185
+Swap:             24           9          15
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d035_analysis.py 03:12:23
+[A] Traceback (most recent call last):
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d035_analysis.py", line 271, in <module>
+[A]     main()
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d035_analysis.py", line 90, in main
+[A]     pc = {a: D.unit("att", a, 8).sorted_curve() for a in trained + ["PAPER8"]}
+[A]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d035_analysis.py", line 90, in <dictcomp>
+[A]     pc = {a: D.unit("att", a, 8).sorted_curve() for a in trained + ["PAPER8"]}
+[A]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A] AttributeError: 'Unit' object has no attribute 'sorted_curve'
+[A] [A] FAILED: OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d035_analysis.py
+=== end: Mon Nov  2 03:12:26 AM CST 2026 rc=1 ===

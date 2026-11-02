@@ -87,7 +87,7 @@ def main():
     differ = lambda a, b: [k for k in KS if orders[a][k] != orders[b][k]]
 
     # ---------------------------------------------------------------- (b, I1) tail-plot inputs, before labels
-    pc = {a: D.unit("att", a, 8).sorted_curve() for a in trained + ["PAPER8"]}
+    pc = {a: A.Arm(a, D.unit("att", a, 8)).sorted_curve() for a in trained + ["PAPER8"]}
     np.savez_compressed(f"{L.OUT}/plotdata.npz", **{f"tail|{a}": v for a, v in pc.items()},
                         **{f"curve|{ro}|{a}": np.array([D.unit(ro, a, k).e_all(B)[1] for k in KS])
                            for ro in ("att", "lin") for a in trained + ["PAPER8"]})
