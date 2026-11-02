@@ -52,3 +52,6 @@ results/D032/models/
 results/D033/models/
 results/D033/feat/
 results/D033/nc_*.npz
+# D035: S0 distance arrays (sha in s0.json) and checkpoints stay on $WORK
+results/D035/distances.npz
+results/D035/models/
