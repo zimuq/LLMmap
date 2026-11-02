@@ -19,6 +19,9 @@ import sys
 import json
 import time
 
+import multiprocessing as mp
+from concurrent.futures import ProcessPoolExecutor
+
 import numpy as np
 
 import d031_lib as L31
@@ -62,26 +65,36 @@ def att_conf(ctx, k):
     return hp, conf, T.hp_check("v2", hp)
 
 
+def pmap(fn, jobs):
+    """d031_train.pool_map, but a dead worker raises (BrokenProcessPool) instead of hanging the job. Linear fits
+    fork BEFORE d009_train / d023_train are imported: their module-level torch.cuda.is_available() initialises
+    CUDA, and lbfgs segfaulted in every forked worker after it (S1b job 1115748)."""
+    assert "d009_train" not in sys.modules and "d023_train" not in sys.modules, "fork after CUDA init"
+    with ProcessPoolExecutor(T.N_WORK, mp_context=mp.get_context("fork")) as ex:
+        for r in ex.map(fn, jobs):
+            yield r
+
+
 # ------------------------------------------------------------------ S1b
 def lin_val(ch):
     """Linear S_val diagnostic (forked workers; run before torch touches CUDA)."""
     jobs = [dict(key=f"{a}|{k}", q=orders(ch, a)[k][0]) for a in CENTROIDS for k in KS]
     out = {}
-    for key, acc, n_it, w in T.pool_map(T._val_worker, jobs):
+    for key, acc, n_it, w in pmap(T._val_worker, jobs):
         out[key] = dict(val_top1=acc, n_iter=n_it, wall_s=w)
         print(f"[S1b lin] {key}: S_val top-1 {acc:.4f} ({n_it} it, {w}s)", flush=True)
     return out
 
 
 def cmd_val():
-    from d009_train import run_one
-    from d023_train import reload_logits
     t0 = time.time()
     ch = load_chains()
     ctx = T.Ctx("v2", ("build", "val"))
     assert ctx.models == ch["models"]
     T.CTX = ctx
     lin = lin_val(ch)
+    from d009_train import run_one                  # after the forked linear fits (see pmap)
+    from d023_train import reload_logits
     ref = d029_val_acc()
     os.makedirs(CKDIR, exist_ok=True)
     runs, vlog, seen = [], {}, {}
@@ -155,7 +168,7 @@ def lin_test(ch, arms):
         for k, (q, tag) in orders(ch, a).items():
             jobs.append(dict(key=f"{a}|{k}", name=a, k=k, q=q, ident=tag))
     store, logits, meta = {}, {}, {}
-    for key, cn, lg, m in T.pool_map(T._lin_worker, jobs):
+    for key, cn, lg, m in pmap(T._lin_worker, jobs):
         for c, v in cn.items():
             store[f"{key}|{c}"] = v
         logits[key] = lg
@@ -166,8 +179,6 @@ def lin_test(ch, arms):
 
 
 def cmd_test():
-    from d009_train import run_one
-    from d023_train import reload_logits
     t0 = time.time()
     vc = assert_choice_committed()
     ch = load_chains()
@@ -179,6 +190,8 @@ def cmd_test():
     lstore, llog, lmeta = lin_test(ch, arms)
     np.savez_compressed(f"{L.OUT}/linear_counts.npz", **lstore)
     np.savez_compressed(f"{L.OUT}/logits_lin.npz", **llog)
+    from d009_train import run_one                  # after the forked linear fits (see pmap)
+    from d023_train import reload_logits
     vref = json.load(open(f"{L.OUT}/runs_val.json"))["runs"]
     vref = {(x["arm"], x["k"], x["seed"]): x for x in vref}
     store, logits, runs, seen = {}, {}, [], {}
