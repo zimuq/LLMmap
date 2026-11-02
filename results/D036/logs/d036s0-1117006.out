@@ -1,0 +1,24 @@
+=== node: c642-081.vista.tacc.utexas.edu start: Mon Nov  2 03:50:01 PM CST 2026 | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_s0.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          23         200           0           0         189
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_s0.py 15:50:01
+[A] [S0] inventory: {"D029_JG_complete": true, "D029_PAPER8_complete": true, "D035_CENTROID_raw_complete": true, "D035_CENTROID_star": "CENTROID|raw", "D033_nc_JG_raw_complete": true, "D033_nc_test_terms": {"A": [2125, 85, 32], "W": [85, 32], "U": [0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 24, 28, 109, 110, 114, 117, 121, 123, 140, 145, 193, 194, 233, 235, 237, 241, 243, 251, 252, 253, 255]}, "D033_variant_v2": "raw", "D027_n_prime_pairs": 161, "D031_v2_boot_seed": 20261005}
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S0] precompute 1.7 min, XY2 20.8 GB
+[A] [S0] closed-set code path: [193, 117, 233, 237, 0, 253, 121, 18] vs D029 [193, 117, 233, 237, 0, 253, 121, 18]; per-step |dobj| [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] -> PASS
+[A] [S0] direct computation (raw, 12 cases): max rel err 3.72e-05 -> PASS
+[A] [S0] fold 0: JG^fold [193, 121, 233, 0, 253, 237, 117, 16] vs D033 [193, 121, 233, 0, 253, 237, 117, 16]; max |dobj| 0.0e+00 -> PASS
+[A] [S0] fold 1: JG^fold [193, 117, 233, 237, 18, 0, 121, 253] vs D033 [193, 117, 233, 237, 18, 0, 121, 253]; max |dobj| 0.0e+00 -> PASS
+[A] [S0] fold 2: JG^fold [193, 117, 233, 0, 253, 237, 18, 114] vs D033 [193, 117, 233, 0, 253, 237, 18, 114]; max |dobj| 0.0e+00 -> PASS
+[A] [S0] fold 3: JG^fold [193, 109, 233, 0, 237, 18, 117, 243] vs D033 [193, 109, 233, 0, 237, 18, 117, 243]; max |dobj| 0.0e+00 -> PASS
+[A] [S0] fold 4: JG^fold [193, 117, 233, 18, 237, 0, 140, 253] vs D033 [193, 117, 233, 18, 237, 0, 140, 253]; max |dobj| 0.0e+00 -> PASS
+[A] [S0] CENTROID-raw (all pairs) [193, 136, 233, 0, 255, 251, 252, 253] vs D035 [193, 136, 233, 0, 255, 251, 252, 253] -> PASS
+[A] [S0] wrote ./results/D036/s0.json (5.1 min); stop conditions: none
+=== end: Mon Nov  2 03:56:14 PM CST 2026 rc=0 ===
