@@ -1,0 +1,2762 @@
+{
+ "schema": "d035-runs-v1",
+ "centroid_star": "CENTROID|raw",
+ "single": "SINGLE|raw",
+ "arms": [
+  "CENTROID|raw",
+  "CENTROID|norm",
+  "SINGLE|raw"
+ ],
+ "runs": [
+  {
+   "key": "CENTROID|raw|1|r0",
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.4,
+   "best_ckpt": "best-epoch=04-val_loss=1.9491.ckpt",
+   "train_acc": 0.6335686274509804,
+   "val_acc": 0.5176470588235295
+  },
+  {
+   "key": "CENTROID|raw|1|r1",
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 4.6,
+   "best_ckpt": "best-epoch=02-val_loss=2.0225.ckpt",
+   "train_acc": 0.540235294117647,
+   "val_acc": 0.48094117647058826
+  },
+  {
+   "key": "CENTROID|raw|1|r2",
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.3,
+   "best_ckpt": "best-epoch=03-val_loss=1.8800.ckpt",
+   "train_acc": 0.6003137254901961,
+   "val_acc": 0.5058823529411764
+  },
+  {
+   "key": "CENTROID|raw|1|r3",
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 4.7,
+   "best_ckpt": "best-epoch=02-val_loss=1.8857.ckpt",
+   "train_acc": 0.5788235294117647,
+   "val_acc": 0.49929411764705883
+  },
+  {
+   "key": "CENTROID|raw|1|r4",
+   "arm": "CENTROID|raw",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    193
+   ],
+   "ident": "JG",
+   "ckpt": "./results/D035/models/CENTROID-raw_k1_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.9,
+   "best_ckpt": "best-epoch=04-val_loss=1.8478.ckpt",
+   "train_acc": 0.632,
+   "val_acc": 0.5181176470588236
+  },
+  {
+   "key": "CENTROID|raw|2|r0",
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.5,
+   "best_ckpt": "best-epoch=15-val_loss=1.5281.ckpt",
+   "train_acc": 0.9364705882352942,
+   "val_acc": 0.6672941176470588
+  },
+  {
+   "key": "CENTROID|raw|2|r1",
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.2,
+   "best_ckpt": "best-epoch=06-val_loss=1.3531.ckpt",
+   "train_acc": 0.7987450980392157,
+   "val_acc": 0.6291764705882353
+  },
+  {
+   "key": "CENTROID|raw|2|r2",
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=1.3448.ckpt",
+   "train_acc": 0.7789803921568628,
+   "val_acc": 0.6263529411764706
+  },
+  {
+   "key": "CENTROID|raw|2|r3",
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.5,
+   "best_ckpt": "best-epoch=03-val_loss=1.3269.ckpt",
+   "train_acc": 0.756078431372549,
+   "val_acc": 0.6348235294117647
+  },
+  {
+   "key": "CENTROID|raw|2|r4",
+   "arm": "CENTROID|raw",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    193,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k2_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 4.9,
+   "best_ckpt": "best-epoch=02-val_loss=1.5075.ckpt",
+   "train_acc": 0.664156862745098,
+   "val_acc": 0.5712941176470588
+  },
+  {
+   "key": "CENTROID|raw|3|r0",
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.3,
+   "best_ckpt": "best-epoch=11-val_loss=1.3182.ckpt",
+   "train_acc": 0.928156862745098,
+   "val_acc": 0.6781176470588235
+  },
+  {
+   "key": "CENTROID|raw|3|r1",
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.3404.ckpt",
+   "train_acc": 0.7358431372549019,
+   "val_acc": 0.6305882352941177
+  },
+  {
+   "key": "CENTROID|raw|3|r2",
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "best_ckpt": "best-epoch=09-val_loss=1.1987.ckpt",
+   "train_acc": 0.916235294117647,
+   "val_acc": 0.6927058823529412
+  },
+  {
+   "key": "CENTROID|raw|3|r3",
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.2422.ckpt",
+   "train_acc": 0.8566274509803922,
+   "val_acc": 0.664
+  },
+  {
+   "key": "CENTROID|raw|3|r4",
+   "arm": "CENTROID|raw",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k3_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=08-val_loss=1.3069.ckpt",
+   "train_acc": 0.8583529411764705,
+   "val_acc": 0.668235294117647
+  },
+  {
+   "key": "CENTROID|raw|4|r0",
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=08-val_loss=1.0682.ckpt",
+   "train_acc": 0.9179607843137255,
+   "val_acc": 0.7303529411764705
+  },
+  {
+   "key": "CENTROID|raw|4|r1",
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.2,
+   "best_ckpt": "best-epoch=04-val_loss=1.0322.ckpt",
+   "train_acc": 0.8381176470588235,
+   "val_acc": 0.7007058823529412
+  },
+  {
+   "key": "CENTROID|raw|4|r2",
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.2,
+   "best_ckpt": "best-epoch=04-val_loss=1.0455.ckpt",
+   "train_acc": 0.8489411764705882,
+   "val_acc": 0.7176470588235294
+  },
+  {
+   "key": "CENTROID|raw|4|r3",
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.1941.ckpt",
+   "train_acc": 0.7764705882352941,
+   "val_acc": 0.6734117647058824
+  },
+  {
+   "key": "CENTROID|raw|4|r4",
+   "arm": "CENTROID|raw",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k4_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.0878.ckpt",
+   "train_acc": 0.8152156862745098,
+   "val_acc": 0.7011764705882353
+  },
+  {
+   "key": "CENTROID|raw|5|r0",
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.8,
+   "best_ckpt": "best-epoch=13-val_loss=1.1040.ckpt",
+   "train_acc": 0.9551372549019608,
+   "val_acc": 0.7261176470588235
+  },
+  {
+   "key": "CENTROID|raw|5|r1",
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=0.9720.ckpt",
+   "train_acc": 0.940078431372549,
+   "val_acc": 0.7501176470588236
+  },
+  {
+   "key": "CENTROID|raw|5|r2",
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.6,
+   "best_ckpt": "best-epoch=16-val_loss=1.0012.ckpt",
+   "train_acc": 0.9818039215686275,
+   "val_acc": 0.7708235294117647
+  },
+  {
+   "key": "CENTROID|raw|5|r3",
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.2,
+   "best_ckpt": "best-epoch=17-val_loss=1.0366.ckpt",
+   "train_acc": 0.9891764705882353,
+   "val_acc": 0.7727058823529411
+  },
+  {
+   "key": "CENTROID|raw|5|r4",
+   "arm": "CENTROID|raw",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k5_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.2,
+   "best_ckpt": "best-epoch=04-val_loss=1.0210.ckpt",
+   "train_acc": 0.8436078431372549,
+   "val_acc": 0.7044705882352941
+  },
+  {
+   "key": "CENTROID|raw|6|r0",
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=0.9474.ckpt",
+   "train_acc": 0.9449411764705883,
+   "val_acc": 0.7543529411764706
+  },
+  {
+   "key": "CENTROID|raw|6|r1",
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "best_ckpt": "best-epoch=10-val_loss=0.8063.ckpt",
+   "train_acc": 0.9620392156862745,
+   "val_acc": 0.784
+  },
+  {
+   "key": "CENTROID|raw|6|r2",
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.9,
+   "best_ckpt": "best-epoch=18-val_loss=0.8545.ckpt",
+   "train_acc": 0.9968627450980392,
+   "val_acc": 0.7924705882352941
+  },
+  {
+   "key": "CENTROID|raw|6|r3",
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.3,
+   "best_ckpt": "best-epoch=04-val_loss=0.9214.ckpt",
+   "train_acc": 0.8763921568627451,
+   "val_acc": 0.7303529411764705
+  },
+  {
+   "key": "CENTROID|raw|6|r4",
+   "arm": "CENTROID|raw",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k6_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.1,
+   "best_ckpt": "best-epoch=07-val_loss=0.8180.ckpt",
+   "train_acc": 0.9370980392156862,
+   "val_acc": 0.7712941176470588
+  },
+  {
+   "key": "CENTROID|raw|7|r0",
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.9,
+   "best_ckpt": "best-epoch=08-val_loss=0.9351.ckpt",
+   "train_acc": 0.9501176470588235,
+   "val_acc": 0.7425882352941177
+  },
+  {
+   "key": "CENTROID|raw|7|r1",
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=0.8686.ckpt",
+   "train_acc": 0.9298823529411765,
+   "val_acc": 0.756235294117647
+  },
+  {
+   "key": "CENTROID|raw|7|r2",
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.0,
+   "best_ckpt": "best-epoch=18-val_loss=0.8925.ckpt",
+   "train_acc": 0.9956078431372549,
+   "val_acc": 0.7967058823529412
+  },
+  {
+   "key": "CENTROID|raw|7|r3",
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.7,
+   "best_ckpt": "best-epoch=03-val_loss=0.9803.ckpt",
+   "train_acc": 0.8288627450980393,
+   "val_acc": 0.7298823529411764
+  },
+  {
+   "key": "CENTROID|raw|7|r4",
+   "arm": "CENTROID|raw",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k7_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.1,
+   "best_ckpt": "best-epoch=10-val_loss=0.8495.ckpt",
+   "train_acc": 0.9730196078431372,
+   "val_acc": 0.7849411764705883
+  },
+  {
+   "key": "CENTROID|raw|8|r0",
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.4,
+   "best_ckpt": "best-epoch=12-val_loss=0.8709.ckpt",
+   "train_acc": 0.9810196078431372,
+   "val_acc": 0.772235294117647
+  },
+  {
+   "key": "CENTROID|raw|8|r1",
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "best_ckpt": "best-epoch=09-val_loss=0.8442.ckpt",
+   "train_acc": 0.9546666666666667,
+   "val_acc": 0.7661176470588236
+  },
+  {
+   "key": "CENTROID|raw|8|r2",
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.0,
+   "best_ckpt": "best-epoch=13-val_loss=0.8294.ckpt",
+   "train_acc": 0.9898039215686274,
+   "val_acc": 0.7929411764705883
+  },
+  {
+   "key": "CENTROID|raw|8|r3",
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.4,
+   "best_ckpt": "best-epoch=12-val_loss=0.7943.ckpt",
+   "train_acc": 0.9934117647058823,
+   "val_acc": 0.7934117647058824
+  },
+  {
+   "key": "CENTROID|raw|8|r4",
+   "arm": "CENTROID|raw",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-raw_k8_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.3,
+   "best_ckpt": "best-epoch=07-val_loss=0.7905.ckpt",
+   "train_acc": 0.9482352941176471,
+   "val_acc": 0.780235294117647
+  },
+  {
+   "key": "CENTROID|norm|1|r0",
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.7,
+   "best_ckpt": "best-epoch=07-val_loss=2.1403.ckpt",
+   "train_acc": 0.7234509803921568,
+   "val_acc": 0.46352941176470586
+  },
+  {
+   "key": "CENTROID|norm|1|r1",
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.2,
+   "best_ckpt": "best-epoch=06-val_loss=2.2615.ckpt",
+   "train_acc": 0.6767058823529412,
+   "val_acc": 0.45129411764705885
+  },
+  {
+   "key": "CENTROID|norm|1|r2",
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.4,
+   "best_ckpt": "best-epoch=08-val_loss=2.2457.ckpt",
+   "train_acc": 0.712,
+   "val_acc": 0.456
+  },
+  {
+   "key": "CENTROID|norm|1|r3",
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=2.2570.ckpt",
+   "train_acc": 0.6015686274509804,
+   "val_acc": 0.41411764705882353
+  },
+  {
+   "key": "CENTROID|norm|1|r4",
+   "arm": "CENTROID|norm",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k1_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=2.4112.ckpt",
+   "train_acc": 0.5432156862745098,
+   "val_acc": 0.38823529411764707
+  },
+  {
+   "key": "CENTROID|norm|2|r0",
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.0,
+   "best_ckpt": "best-epoch=12-val_loss=2.0559.ckpt",
+   "train_acc": 0.9176470588235294,
+   "val_acc": 0.5275294117647059
+  },
+  {
+   "key": "CENTROID|norm|2|r1",
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=2.1094.ckpt",
+   "train_acc": 0.8015686274509803,
+   "val_acc": 0.5044705882352941
+  },
+  {
+   "key": "CENTROID|norm|2|r2",
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=2.1319.ckpt",
+   "train_acc": 0.728156862745098,
+   "val_acc": 0.4757647058823529
+  },
+  {
+   "key": "CENTROID|norm|2|r3",
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=2.0076.ckpt",
+   "train_acc": 0.751686274509804,
+   "val_acc": 0.5002352941176471
+  },
+  {
+   "key": "CENTROID|norm|2|r4",
+   "arm": "CENTROID|norm",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    51,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k2_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.9346.ckpt",
+   "train_acc": 0.8371764705882353,
+   "val_acc": 0.5185882352941177
+  },
+  {
+   "key": "CENTROID|norm|3|r0",
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "best_ckpt": "best-epoch=10-val_loss=1.6195.ckpt",
+   "train_acc": 0.952,
+   "val_acc": 0.6150588235294118
+  },
+  {
+   "key": "CENTROID|norm|3|r1",
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.7,
+   "best_ckpt": "best-epoch=03-val_loss=1.8700.ckpt",
+   "train_acc": 0.688156862745098,
+   "val_acc": 0.5002352941176471
+  },
+  {
+   "key": "CENTROID|norm|3|r2",
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.5550.ckpt",
+   "train_acc": 0.932235294117647,
+   "val_acc": 0.6136470588235294
+  },
+  {
+   "key": "CENTROID|norm|3|r3",
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.6083.ckpt",
+   "train_acc": 0.8928627450980392,
+   "val_acc": 0.5910588235294117
+  },
+  {
+   "key": "CENTROID|norm|3|r4",
+   "arm": "CENTROID|norm",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    51,
+    199,
+    246
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k3_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.5566.ckpt",
+   "train_acc": 0.9043137254901961,
+   "val_acc": 0.5952941176470589
+  },
+  {
+   "key": "CENTROID|norm|4|r0",
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.2788.ckpt",
+   "train_acc": 0.9190588235294118,
+   "val_acc": 0.6517647058823529
+  },
+  {
+   "key": "CENTROID|norm|4|r1",
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.3505.ckpt",
+   "train_acc": 0.9163921568627451,
+   "val_acc": 0.6404705882352941
+  },
+  {
+   "key": "CENTROID|norm|4|r2",
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.7,
+   "best_ckpt": "best-epoch=03-val_loss=1.4594.ckpt",
+   "train_acc": 0.7615686274509804,
+   "val_acc": 0.5891764705882353
+  },
+  {
+   "key": "CENTROID|norm|4|r3",
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "best_ckpt": "best-epoch=11-val_loss=1.1822.ckpt",
+   "train_acc": 0.9932549019607844,
+   "val_acc": 0.7002352941176471
+  },
+  {
+   "key": "CENTROID|norm|4|r4",
+   "arm": "CENTROID|norm",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k4_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.6,
+   "best_ckpt": "best-epoch=11-val_loss=1.1970.ckpt",
+   "train_acc": 0.9905882352941177,
+   "val_acc": 0.691764705882353
+  },
+  {
+   "key": "CENTROID|norm|5|r0",
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.1752.ckpt",
+   "train_acc": 0.9344313725490196,
+   "val_acc": 0.6809411764705883
+  },
+  {
+   "key": "CENTROID|norm|5|r1",
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.0,
+   "best_ckpt": "best-epoch=13-val_loss=1.2228.ckpt",
+   "train_acc": 0.991686274509804,
+   "val_acc": 0.6964705882352941
+  },
+  {
+   "key": "CENTROID|norm|5|r2",
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.3,
+   "best_ckpt": "best-epoch=12-val_loss=1.2165.ckpt",
+   "train_acc": 0.9824313725490196,
+   "val_acc": 0.7044705882352941
+  },
+  {
+   "key": "CENTROID|norm|5|r3",
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.2,
+   "best_ckpt": "best-epoch=07-val_loss=1.2773.ckpt",
+   "train_acc": 0.9331764705882353,
+   "val_acc": 0.6644705882352941
+  },
+  {
+   "key": "CENTROID|norm|5|r4",
+   "arm": "CENTROID|norm",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k5_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "best_ckpt": "best-epoch=09-val_loss=1.2513.ckpt",
+   "train_acc": 0.9618823529411765,
+   "val_acc": 0.6677647058823529
+  },
+  {
+   "key": "CENTROID|norm|6|r0",
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.9,
+   "best_ckpt": "best-epoch=08-val_loss=1.2417.ckpt",
+   "train_acc": 0.9261176470588235,
+   "val_acc": 0.6710588235294118
+  },
+  {
+   "key": "CENTROID|norm|6|r1",
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.0,
+   "best_ckpt": "best-epoch=13-val_loss=1.1245.ckpt",
+   "train_acc": 0.9970196078431373,
+   "val_acc": 0.7138823529411765
+  },
+  {
+   "key": "CENTROID|norm|6|r2",
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.3,
+   "best_ckpt": "best-epoch=07-val_loss=1.1622.ckpt",
+   "train_acc": 0.9372549019607843,
+   "val_acc": 0.6832941176470588
+  },
+  {
+   "key": "CENTROID|norm|6|r3",
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.6,
+   "best_ckpt": "best-epoch=14-val_loss=1.0779.ckpt",
+   "train_acc": 0.9967058823529412,
+   "val_acc": 0.736
+  },
+  {
+   "key": "CENTROID|norm|6|r4",
+   "arm": "CENTROID|norm",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k6_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.7,
+   "best_ckpt": "best-epoch=11-val_loss=1.1969.ckpt",
+   "train_acc": 0.9794509803921568,
+   "val_acc": 0.6927058823529412
+  },
+  {
+   "key": "CENTROID|norm|7|r0",
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.1,
+   "best_ckpt": "best-epoch=18-val_loss=1.0820.ckpt",
+   "train_acc": 0.999686274509804,
+   "val_acc": 0.7468235294117647
+  },
+  {
+   "key": "CENTROID|norm|7|r1",
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.6,
+   "best_ckpt": "best-epoch=14-val_loss=1.1785.ckpt",
+   "train_acc": 0.9926274509803922,
+   "val_acc": 0.7101176470588235
+  },
+  {
+   "key": "CENTROID|norm|7|r2",
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 13.3,
+   "best_ckpt": "best-epoch=15-val_loss=1.1249.ckpt",
+   "train_acc": 0.9951372549019608,
+   "val_acc": 0.7209411764705882
+  },
+  {
+   "key": "CENTROID|norm|7|r3",
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.3,
+   "best_ckpt": "best-epoch=12-val_loss=1.1393.ckpt",
+   "train_acc": 0.987921568627451,
+   "val_acc": 0.7054117647058824
+  },
+  {
+   "key": "CENTROID|norm|7|r4",
+   "arm": "CENTROID|norm",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k7_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "best_ckpt": "best-epoch=09-val_loss=1.0747.ckpt",
+   "train_acc": 0.9841568627450981,
+   "val_acc": 0.7129411764705882
+  },
+  {
+   "key": "CENTROID|norm|8|r0",
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r0.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.4,
+   "best_ckpt": "best-epoch=07-val_loss=1.0166.ckpt",
+   "train_acc": 0.9667450980392157,
+   "val_acc": 0.7190588235294118
+  },
+  {
+   "key": "CENTROID|norm|8|r1",
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r1.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.4,
+   "best_ckpt": "best-epoch=07-val_loss=1.2516.ckpt",
+   "train_acc": 0.9018039215686274,
+   "val_acc": 0.6583529411764706
+  },
+  {
+   "key": "CENTROID|norm|8|r2",
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r2.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.8,
+   "best_ckpt": "best-epoch=09-val_loss=1.0848.ckpt",
+   "train_acc": 0.9813333333333333,
+   "val_acc": 0.7162352941176471
+  },
+  {
+   "key": "CENTROID|norm|8|r3",
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r3.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.9,
+   "best_ckpt": "best-epoch=06-val_loss=1.2124.ckpt",
+   "train_acc": 0.8905098039215686,
+   "val_acc": 0.6649411764705883
+  },
+  {
+   "key": "CENTROID|norm|8|r4",
+   "arm": "CENTROID|norm",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/CENTROID-norm_k8_r4.ckpt",
+   "source": "S1b checkpoint reloaded (Call 3 (a))",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.8,
+   "best_ckpt": "best-epoch=06-val_loss=1.0883.ckpt",
+   "train_acc": 0.9396078431372549,
+   "val_acc": 0.6988235294117647
+  },
+  {
+   "key": "SINGLE|raw|1|r0",
+   "arm": "SINGLE|raw",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k1_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=04-val_loss=2.4870.ckpt",
+   "train_acc": 0.512313725490196,
+   "val_acc": 0.3750588235294118
+  },
+  {
+   "key": "SINGLE|raw|1|r1",
+   "arm": "SINGLE|raw",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k1_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.0,
+   "best_ckpt": "best-epoch=05-val_loss=2.5117.ckpt",
+   "train_acc": 0.49098039215686273,
+   "val_acc": 0.34494117647058825
+  },
+  {
+   "key": "SINGLE|raw|1|r2",
+   "arm": "SINGLE|raw",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k1_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.6,
+   "best_ckpt": "best-epoch=06-val_loss=2.4140.ckpt",
+   "train_acc": 0.560156862745098,
+   "val_acc": 0.37458823529411767
+  },
+  {
+   "key": "SINGLE|raw|1|r3",
+   "arm": "SINGLE|raw",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k1_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.7,
+   "best_ckpt": "best-epoch=03-val_loss=2.5562.ckpt",
+   "train_acc": 0.4271372549019608,
+   "val_acc": 0.3355294117647059
+  },
+  {
+   "key": "SINGLE|raw|1|r4",
+   "arm": "SINGLE|raw",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k1_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.3,
+   "best_ckpt": "best-epoch=04-val_loss=2.4378.ckpt",
+   "train_acc": 0.4988235294117647,
+   "val_acc": 0.36658823529411766
+  },
+  {
+   "key": "SINGLE|raw|2|r0",
+   "arm": "SINGLE|raw",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    22,
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k2_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.5,
+   "best_ckpt": "best-epoch=07-val_loss=2.2227.ckpt",
+   "train_acc": 0.7234509803921568,
+   "val_acc": 0.46305882352941174
+  },
+  {
+   "key": "SINGLE|raw|2|r1",
+   "arm": "SINGLE|raw",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    22,
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k2_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.5,
+   "best_ckpt": "best-epoch=04-val_loss=2.2898.ckpt",
+   "train_acc": 0.5902745098039216,
+   "val_acc": 0.4032941176470588
+  },
+  {
+   "key": "SINGLE|raw|2|r2",
+   "arm": "SINGLE|raw",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    22,
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k2_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.1,
+   "best_ckpt": "best-epoch=05-val_loss=2.1640.ckpt",
+   "train_acc": 0.651607843137255,
+   "val_acc": 0.43576470588235294
+  },
+  {
+   "key": "SINGLE|raw|2|r3",
+   "arm": "SINGLE|raw",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    22,
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k2_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.5,
+   "best_ckpt": "best-epoch=04-val_loss=2.1447.ckpt",
+   "train_acc": 0.6381176470588236,
+   "val_acc": 0.4583529411764706
+  },
+  {
+   "key": "SINGLE|raw|2|r4",
+   "arm": "SINGLE|raw",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    22,
+    99
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k2_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.5,
+   "best_ckpt": "best-epoch=04-val_loss=2.1133.ckpt",
+   "train_acc": 0.6219607843137255,
+   "val_acc": 0.4371764705882353
+  },
+  {
+   "key": "SINGLE|raw|3|r0",
+   "arm": "SINGLE|raw",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    22,
+    99,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k3_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "best_ckpt": "best-epoch=08-val_loss=1.9428.ckpt",
+   "train_acc": 0.8665098039215686,
+   "val_acc": 0.5232941176470588
+  },
+  {
+   "key": "SINGLE|raw|3|r1",
+   "arm": "SINGLE|raw",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    22,
+    99,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k3_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.9,
+   "best_ckpt": "best-epoch=06-val_loss=2.0783.ckpt",
+   "train_acc": 0.7681568627450981,
+   "val_acc": 0.4889411764705882
+  },
+  {
+   "key": "SINGLE|raw|3|r2",
+   "arm": "SINGLE|raw",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    22,
+    99,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k3_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.9,
+   "best_ckpt": "best-epoch=03-val_loss=1.8970.ckpt",
+   "train_acc": 0.6956862745098039,
+   "val_acc": 0.4988235294117647
+  },
+  {
+   "key": "SINGLE|raw|3|r3",
+   "arm": "SINGLE|raw",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    22,
+    99,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k3_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.9,
+   "best_ckpt": "best-epoch=06-val_loss=2.0041.ckpt",
+   "train_acc": 0.763921568627451,
+   "val_acc": 0.5002352941176471
+  },
+  {
+   "key": "SINGLE|raw|3|r4",
+   "arm": "SINGLE|raw",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    22,
+    99,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k3_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.1,
+   "best_ckpt": "best-epoch=08-val_loss=2.0419.ckpt",
+   "train_acc": 0.8109803921568628,
+   "val_acc": 0.5068235294117647
+  },
+  {
+   "key": "SINGLE|raw|4|r0",
+   "arm": "SINGLE|raw",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    22,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k4_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=05-val_loss=1.7626.ckpt",
+   "train_acc": 0.7701960784313725,
+   "val_acc": 0.5228235294117647
+  },
+  {
+   "key": "SINGLE|raw|4|r1",
+   "arm": "SINGLE|raw",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    22,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k4_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=03-val_loss=1.8977.ckpt",
+   "train_acc": 0.6789019607843138,
+   "val_acc": 0.4955294117647059
+  },
+  {
+   "key": "SINGLE|raw|4|r2",
+   "arm": "SINGLE|raw",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    22,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k4_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=07-val_loss=1.8834.ckpt",
+   "train_acc": 0.8458039215686275,
+   "val_acc": 0.5303529411764706
+  },
+  {
+   "key": "SINGLE|raw|4|r3",
+   "arm": "SINGLE|raw",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    22,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k4_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.0,
+   "best_ckpt": "best-epoch=06-val_loss=1.8556.ckpt",
+   "train_acc": 0.7926274509803921,
+   "val_acc": 0.5303529411764706
+  },
+  {
+   "key": "SINGLE|raw|4|r4",
+   "arm": "SINGLE|raw",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    22,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k4_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.1,
+   "best_ckpt": "best-epoch=06-val_loss=1.7116.ckpt",
+   "train_acc": 0.8004705882352942,
+   "val_acc": 0.5529411764705883
+  },
+  {
+   "key": "SINGLE|raw|5|r0",
+   "arm": "SINGLE|raw",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    22,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k5_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=08-val_loss=1.8337.ckpt",
+   "train_acc": 0.8804705882352941,
+   "val_acc": 0.5590588235294117
+  },
+  {
+   "key": "SINGLE|raw|5|r1",
+   "arm": "SINGLE|raw",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    22,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k5_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "best_ckpt": "best-epoch=08-val_loss=1.7873.ckpt",
+   "train_acc": 0.8836078431372549,
+   "val_acc": 0.5505882352941176
+  },
+  {
+   "key": "SINGLE|raw|5|r2",
+   "arm": "SINGLE|raw",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    22,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k5_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=07-val_loss=1.8658.ckpt",
+   "train_acc": 0.8100392156862745,
+   "val_acc": 0.5341176470588235
+  },
+  {
+   "key": "SINGLE|raw|5|r3",
+   "arm": "SINGLE|raw",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    22,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k5_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=05-val_loss=1.7862.ckpt",
+   "train_acc": 0.7378823529411764,
+   "val_acc": 0.5336470588235294
+  },
+  {
+   "key": "SINGLE|raw|5|r4",
+   "arm": "SINGLE|raw",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    22,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k5_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=05-val_loss=1.6435.ckpt",
+   "train_acc": 0.8309019607843138,
+   "val_acc": 0.5595294117647058
+  },
+  {
+   "key": "SINGLE|raw|6|r0",
+   "arm": "SINGLE|raw",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k6_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "best_ckpt": "best-epoch=09-val_loss=1.6040.ckpt",
+   "train_acc": 0.9298823529411765,
+   "val_acc": 0.5948235294117648
+  },
+  {
+   "key": "SINGLE|raw|6|r1",
+   "arm": "SINGLE|raw",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k6_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.0,
+   "best_ckpt": "best-epoch=06-val_loss=1.5721.ckpt",
+   "train_acc": 0.8387450980392157,
+   "val_acc": 0.5924705882352941
+  },
+  {
+   "key": "SINGLE|raw|6|r2",
+   "arm": "SINGLE|raw",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k6_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.5,
+   "best_ckpt": "best-epoch=10-val_loss=1.6148.ckpt",
+   "train_acc": 0.9411764705882353,
+   "val_acc": 0.6221176470588236
+  },
+  {
+   "key": "SINGLE|raw|6|r3",
+   "arm": "SINGLE|raw",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k6_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=07-val_loss=1.6149.ckpt",
+   "train_acc": 0.8836078431372549,
+   "val_acc": 0.5863529411764706
+  },
+  {
+   "key": "SINGLE|raw|6|r4",
+   "arm": "SINGLE|raw",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k6_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=05-val_loss=1.5343.ckpt",
+   "train_acc": 0.8371764705882353,
+   "val_acc": 0.5792941176470588
+  },
+  {
+   "key": "SINGLE|raw|7|r0",
+   "arm": "SINGLE|raw",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k7_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.6,
+   "best_ckpt": "best-epoch=10-val_loss=1.3249.ckpt",
+   "train_acc": 0.9344313725490196,
+   "val_acc": 0.6757647058823529
+  },
+  {
+   "key": "SINGLE|raw|7|r1",
+   "arm": "SINGLE|raw",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k7_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=03-val_loss=1.2191.ckpt",
+   "train_acc": 0.7912156862745098,
+   "val_acc": 0.6578823529411765
+  },
+  {
+   "key": "SINGLE|raw|7|r2",
+   "arm": "SINGLE|raw",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k7_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.1,
+   "best_ckpt": "best-epoch=06-val_loss=1.1856.ckpt",
+   "train_acc": 0.8900392156862745,
+   "val_acc": 0.68
+  },
+  {
+   "key": "SINGLE|raw|7|r3",
+   "arm": "SINGLE|raw",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k7_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.7,
+   "best_ckpt": "best-epoch=04-val_loss=1.1406.ckpt",
+   "train_acc": 0.8425098039215686,
+   "val_acc": 0.6790588235294117
+  },
+  {
+   "key": "SINGLE|raw|7|r4",
+   "arm": "SINGLE|raw",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k7_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.7,
+   "best_ckpt": "best-epoch=04-val_loss=1.2934.ckpt",
+   "train_acc": 0.8051764705882353,
+   "val_acc": 0.6287058823529412
+  },
+  {
+   "key": "SINGLE|raw|8|r0",
+   "arm": "SINGLE|raw",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k8_r0.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.7,
+   "best_ckpt": "best-epoch=04-val_loss=1.0971.ckpt",
+   "train_acc": 0.8807843137254902,
+   "val_acc": 0.6955294117647058
+  },
+  {
+   "key": "SINGLE|raw|8|r1",
+   "arm": "SINGLE|raw",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k8_r1.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.5,
+   "best_ckpt": "best-epoch=08-val_loss=1.0863.ckpt",
+   "train_acc": 0.9265882352941176,
+   "val_acc": 0.6875294117647058
+  },
+  {
+   "key": "SINGLE|raw|8|r2",
+   "arm": "SINGLE|raw",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k8_r2.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.3,
+   "best_ckpt": "best-epoch=11-val_loss=0.9902.ckpt",
+   "train_acc": 0.9929411764705882,
+   "val_acc": 0.7482352941176471
+  },
+  {
+   "key": "SINGLE|raw|8|r3",
+   "arm": "SINGLE|raw",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k8_r3.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.8,
+   "best_ckpt": "best-epoch=10-val_loss=0.9279.ckpt",
+   "train_acc": 0.9832156862745098,
+   "val_acc": 0.7350588235294118
+  },
+  {
+   "key": "SINGLE|raw|8|r4",
+   "arm": "SINGLE|raw",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226,
+    251
+   ],
+   "ident": null,
+   "ckpt": "./results/D035/models/SINGLE-raw_k8_r4.ckpt",
+   "source": "trained (S2)",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 11.4,
+   "best_ckpt": "best-epoch=11-val_loss=1.0040.ckpt",
+   "train_acc": 0.9727058823529412,
+   "val_acc": 0.744
+  }
+ ],
+ "linear": {
+  "CENTROID|raw|1": {
+   "n_iter": 797,
+   "wall_s": 32.6,
+   "q": [
+    193
+   ],
+   "ident": "JG"
+  },
+  "CENTROID|raw|2": {
+   "n_iter": 807,
+   "wall_s": 99.1,
+   "q": [
+    193,
+    136
+   ],
+   "ident": null
+  },
+  "CENTROID|raw|3": {
+   "n_iter": 876,
+   "wall_s": 159.0,
+   "q": [
+    193,
+    233,
+    136
+   ],
+   "ident": null
+  },
+  "CENTROID|raw|4": {
+   "n_iter": 799,
+   "wall_s": 196.4,
+   "q": [
+    193,
+    233,
+    0,
+    136
+   ],
+   "ident": null
+  },
+  "CENTROID|raw|5": {
+   "n_iter": 772,
+   "wall_s": 211.1,
+   "q": [
+    193,
+    233,
+    0,
+    136,
+    255
+   ],
+   "ident": null
+  },
+  "CENTROID|raw|6": {
+   "n_iter": 724,
+   "wall_s": 227.7,
+   "q": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    255
+   ],
+   "ident": null
+  },
+  "CENTROID|raw|7": {
+   "n_iter": 720,
+   "wall_s": 253.6,
+   "q": [
+    193,
+    233,
+    0,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null
+  },
+  "CENTROID|raw|8": {
+   "n_iter": 634,
+   "wall_s": 254.1,
+   "q": [
+    193,
+    233,
+    0,
+    253,
+    136,
+    251,
+    252,
+    255
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|1": {
+   "n_iter": 604,
+   "wall_s": 18.6,
+   "q": [
+    246
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|2": {
+   "n_iter": 626,
+   "wall_s": 54.8,
+   "q": [
+    51,
+    246
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|3": {
+   "n_iter": 587,
+   "wall_s": 85.0,
+   "q": [
+    51,
+    199,
+    246
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|4": {
+   "n_iter": 599,
+   "wall_s": 128.0,
+   "q": [
+    51,
+    199,
+    246,
+    251
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|5": {
+   "n_iter": 568,
+   "wall_s": 144.0,
+   "q": [
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|6": {
+   "n_iter": 608,
+   "wall_s": 182.9,
+   "q": [
+    253,
+    51,
+    95,
+    199,
+    246,
+    251
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|7": {
+   "n_iter": 622,
+   "wall_s": 192.1,
+   "q": [
+    253,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null
+  },
+  "CENTROID|norm|8": {
+   "n_iter": 561,
+   "wall_s": 185.0,
+   "q": [
+    253,
+    22,
+    51,
+    95,
+    199,
+    221,
+    246,
+    251
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|1": {
+   "n_iter": 755,
+   "wall_s": 21.6,
+   "q": [
+    99
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|2": {
+   "n_iter": 745,
+   "wall_s": 70.1,
+   "q": [
+    22,
+    99
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|3": {
+   "n_iter": 679,
+   "wall_s": 79.0,
+   "q": [
+    22,
+    99,
+    226
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|4": {
+   "n_iter": 626,
+   "wall_s": 122.5,
+   "q": [
+    22,
+    99,
+    144,
+    226
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|5": {
+   "n_iter": 588,
+   "wall_s": 132.0,
+   "q": [
+    22,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|6": {
+   "n_iter": 555,
+   "wall_s": 108.3,
+   "q": [
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|7": {
+   "n_iter": 587,
+   "wall_s": 120.2,
+   "q": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226
+   ],
+   "ident": null
+  },
+  "SINGLE|raw|8": {
+   "n_iter": 572,
+   "wall_s": 114.3,
+   "q": [
+    0,
+    22,
+    72,
+    94,
+    99,
+    144,
+    226,
+    251
+   ],
+   "ident": null
+  }
+ },
+ "identical_input_asserted": [
+  "CENTROID|raw|1",
+  "CENTROID|raw|1|r0",
+  "CENTROID|raw|1|r1",
+  "CENTROID|raw|1|r2",
+  "CENTROID|raw|1|r3",
+  "CENTROID|raw|1|r4"
+ ],
+ "s_test": "written to counts/logits only; not summarised in S2",
+ "code_commit": "e781d1cbe989b9edf5e50b24164f5960debf9bf0",
+ "wall_min": 13.7,
+ "node": "c642-081.vista.tacc.utexas.edu"
+}
