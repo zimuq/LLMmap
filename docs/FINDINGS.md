@@ -1277,6 +1277,11 @@ validated against D019 exactly).**
 
 ## D024 — Fingerprints must span deployment configs; keeping the full distribution adds a smaller, hard-model-weighted edge
 
+> **2026-11-02, corpus v2 (D035):** the multi-config effect replicates (+16 pp). The
+> distribution edge does **not**: on v2 the cloud chain is −1.8 pp under attention and level
+> under linear vs the raw centroid. Both D024 and D035 also confound "distribution" with the
+> cloud statistic's per-pair scale-free division. Read the edge below as v1-only.
+
 **The question.** Hold the selection algorithm fixed (JointGreedy,
 CVaR₀.₁ over 666 pairs) and change only the fingerprint inside its
 statistic:
@@ -1890,3 +1895,34 @@ MMR-PP[CVaR] (held-out O_all, `k` = 8, Δ vs PAPER8):
 - **Caveat:** S_test configs were already read, so these are development
   numbers. The protocol is frozen for D034's open-set section.
 - Cost: 12.3 node-h.
+
+## D035 — On v2, the reference must span deployment configs (+16 pp); keeping the full distribution adds nothing over a raw centroid
+
+**The question.** D024 on corpus v2 (85 models), JG held fixed. The
+fingerprint inside JG's statistic is varied:
+- CLOUD (D029's chain);
+- CENTROID (raw and median-normalised; raw won on S_val);
+- SINGLE (one greedy reference per model).
+
+**Answer** (mean top-1 over `k` = 1..8, attention, old S_test, development grade):
+
+| | v1 (D024) | v2 (D035) |
+|---|---|---|
+| CENTROID-raw − SINGLE | +13.2 pp | **+16.1 pp** BETTER (linear +13.4) |
+| CLOUD − CENTROID-raw | +1.5 pp | **−1.8 pp** WORSE (linear −0.5, level) |
+
+- **Multi-config reference data is the fingerprint claim that holds.** It
+  is BETTER at every `k` under both readouts and on every hard-pair
+  stratum. It also holds on the 64 models that have a true greedy reference.
+- **The full distribution does not help selection on v2.** The v1 edge,
+  including its hard-model weighting, does not replicate. Scaling choices
+  matter more than this effect: the raw centroid beats the
+  median-normalised one by 8.7 pp.
+- **Caveat (design-side):** CLOUD's statistic also divides each pair's
+  distance by that pair's within-model spread; the raw centroid does not.
+  So this tests "the method's cloud statistic vs a raw centroid", not
+  distribution vs mean at matched scaling. A CLOUD-raw follow-up is
+  pending the human.
+- **Unaffected:** training and evaluation in every arm still use all 75
+  configs (I3 at the tensor / evaluation level).
+- Cost 2.7 node-h.

@@ -1975,6 +1975,28 @@ interpretable; specialist-based two-stage design not pursued
     D033's header, FINDINGS and DECISIONS. Raised with the human; ids stay
     unless the human overrides.
   Decided by: human (pause); id question pending the human's answer.
+  - 2026-11-01 later: human answered "保留D035"; ids stay.
+
+[2026-11-02] D035 R accepted and closed; P1 confound acknowledged; follow-up escalated
+  - P1 CLOUD - CENTROID-raw WORSE (attention -0.018 [-0.027, -0.009]; linear
+    -0.0045 [-0.014, +0.004], level). P2 CENTROID-raw - SINGLE BETTER
+    (+0.161, both readouts). Accepted as executed.
+  - Design-side error in the D: P1 was described as isolating the
+    within-model spread. CLOUD's statistic (D010, scale-free) also divides
+    each pair by its own mean within-cloud distance; CENTROID-raw is
+    unscaled. P1 = distribution + per-pair scaling. D024 has the same
+    confound. Paper wording until resolved: "the method's cloud statistic
+    selects no better than a raw centroid on v2".
+  - Convention for future D's (routine): the linear sign-agreement clause
+    applies to WORSE as well as BETTER. Not retroactive.
+  - D034 (routine, applied on resume): add CENTROID-raw's JG chain (and
+    CLOUD-raw's, if run) to the S_test' generation union.
+  - Escalated to the human (I3 rationale / paper claims): (1) run a
+    CLOUD-raw follow-up (D036; design-side recommends yes); (2) drop
+    "distribution beats centroid" from the paper's claims pending (1)
+    (recommended). No main-method change on old-S_test evidence.
+  Decided by: design-side (acceptance, wording, convention, D034 union);
+  human (items 1-2, pending).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
