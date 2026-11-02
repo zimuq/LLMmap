@@ -1997,6 +1997,28 @@ interpretable; specialist-based two-stage design not pursued
     (recommended). No main-method change on old-S_test evidence.
   Decided by: design-side (acceptance, wording, convention, D034 union);
   human (items 1-2, pending).
+  - 2026-11-02 later: human approved both. (1) D036 drafted (READY).
+    (2) The paper does not claim "distribution beats centroid" unless
+    D036 P1 is BETTER (then development grade, confirm in D034).
+
+[2026-11-02] D036 scope: closed-set primary, open-set (2) as labelled secondary
+  - Human asked whether the ablation needs open-set results. Design-side
+    recommendation, accepted by the human: closed-set stays primary
+    (it answers the confound and is comparable with D024 / D035). Open-set
+    is added as a labelled secondary, v2 only, readout (2) raw only, under
+    D033's frozen protocol. Reasons: (2) is training-free (CPU-cheap), and
+    unseen models are where a distribution effect would most plausibly
+    show. Readout (1) is excluded on cost (D033: 12.3 node-h for 2 arms)
+    and because D033 found (2) the better open-set mechanism.
+  - Scope note in the D: (2) is itself a cloud readout held fixed across
+    arms, so the open-set rows speak to query selection, not to the
+    identification mechanism.
+  - Human, same exchange: Helm et al. 2026 uses a single T = 0 point
+    (= SINGLE). The DKPS-style mean embedding is un-normalised
+    (~ CENTROID-raw). Median normalisation (CENTROID-norm) is our own D024
+    construct. DKPS detail is from earlier reading, not re-verified against
+    the source this session.
+  Decided by: human (scope), on design-side recommendation.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
