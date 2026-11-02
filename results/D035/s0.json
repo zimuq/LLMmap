@@ -1,0 +1,9513 @@
+{
+ "schema": "d035-s0-v1",
+ "view": "v2",
+ "models": [
+  "CohereForAI/aya-23-8B",
+  "CohereLabs/tiny-aya-earth",
+  "CohereLabs/tiny-aya-fire",
+  "CohereLabs/tiny-aya-global",
+  "CohereLabs/tiny-aya-water",
+  "Deci/DeciLM-7B-instruct",
+  "HuggingFaceH4/zephyr-7b-beta",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+  "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "Qwen/Qwen2-1.5B-Instruct",
+  "Qwen/Qwen2-7B-Instruct",
+  "Qwen/Qwen2.5-0.5B-Instruct",
+  "Qwen/Qwen2.5-3B-Instruct",
+  "Qwen/Qwen2.5-7B-Instruct",
+  "Qwen/Qwen2.5-7B-Instruct-1M",
+  "Qwen/Qwen3-30B-A3B",
+  "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "Qwen/Qwen3-4B",
+  "Qwen/Qwen3-4B-Instruct-2507",
+  "Qwen/Qwen3-8B",
+  "Qwen/Qwen3.5-4B",
+  "Qwen/Qwen3.5-9B",
+  "allenai/Llama-3.1-Tulu-3-8B",
+  "allenai/Llama-3.1-Tulu-3.1-8B",
+  "allenai/OLMo-2-0425-1B-Instruct",
+  "allenai/OLMo-2-1124-13B-Instruct",
+  "allenai/OLMo-2-1124-7B-Instruct",
+  "allenai/Olmo-3-7B-Instruct",
+  "allenai/Olmo-3.1-32B-Instruct",
+  "google/gemma-1.1-2b-it",
+  "google/gemma-1.1-7b-it",
+  "google/gemma-2-9b-it",
+  "google/gemma-2b-it",
+  "google/gemma-3-12b-it",
+  "google/gemma-3-1b-it",
+  "google/gemma-3-4b-it",
+  "google/gemma-4-12B-it",
+  "google/gemma-4-E4B-it",
+  "google/gemma-7b-it",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+  "ibm-granite/granite-3.0-8b-instruct",
+  "ibm-granite/granite-3.1-8b-instruct",
+  "ibm-granite/granite-3.2-8b-instruct",
+  "ibm-granite/granite-3.3-8b-instruct",
+  "ibm-granite/granite-4.1-3b",
+  "ibm-granite/granite-4.1-8b",
+  "ibm-granite/granite-4.2-3b",
+  "ibm-granite/granite-4.2-8b",
+  "internlm/internlm2_5-7b-chat",
+  "meta-llama/Llama-2-7b-chat-hf",
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Llama-3.2-3B-Instruct",
+  "meta-llama/Meta-Llama-3-8B-Instruct",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-medium-4k-instruct",
+  "microsoft/Phi-3-mini-128k-instruct",
+  "microsoft/Phi-3-mini-4k-instruct",
+  "microsoft/Phi-3.5-mini-instruct",
+  "microsoft/Phi-4-mini-instruct",
+  "microsoft/phi-4",
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16",
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "mistralai/Mistral-7B-Instruct-v0.3",
+  "mistralai/Mistral-Small-24B-Instruct-2501",
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+  "nvidia/Llama3-ChatQA-1.5-8B",
+  "openchat/openchat-3.6-8b-20240522",
+  "openchat/openchat_3.5",
+  "tiiuae/Falcon-H1-3B-Instruct",
+  "tiiuae/Falcon-H1-7B-Instruct",
+  "tiiuae/Falcon3-10B-Instruct",
+  "tiiuae/Falcon3-1B-Instruct",
+  "tiiuae/Falcon3-3B-Instruct",
+  "tiiuae/Falcon3-7B-Instruct",
+  "togethercomputer/Llama-2-7B-32K-Instruct",
+  "upstage/SOLAR-10.7B-Instruct-v1.0",
+  "utter-project/EuroLLM-1.7B-Instruct",
+  "utter-project/EuroLLM-9B-Instruct",
+  "utter-project/EuroLLM-9B-Instruct-2512"
+ ],
+ "n_pairs": 3570,
+ "n_queries": 259,
+ "cvar_m": 357,
+ "code_commit": "193bf2309c30845517ee404d1bd39430ba0a993a",
+ "config_axis_is_0_74": 85,
+ "single_greedy_first_differs": [
+  "CohereLabs/tiny-aya-earth",
+  "CohereLabs/tiny-aya-fire",
+  "CohereLabs/tiny-aya-water",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+  "Qwen/Qwen3-4B",
+  "Qwen/Qwen3.5-4B",
+  "Qwen/Qwen3.5-9B",
+  "allenai/Llama-3.1-Tulu-3.1-8B",
+  "allenai/OLMo-2-0425-1B-Instruct",
+  "google/gemma-4-E4B-it",
+  "ibm-granite/granite-3.2-8b-instruct",
+  "ibm-granite/granite-4.1-8b",
+  "ibm-granite/granite-4.2-3b",
+  "microsoft/Phi-4-mini-instruct",
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "mistralai/Mistral-Small-24B-Instruct-2501",
+  "tiiuae/Falcon-H1-3B-Instruct",
+  "tiiuae/Falcon3-3B-Instruct",
+  "utter-project/EuroLLM-9B-Instruct"
+ ],
+ "single_tier": {
+  "readings": {
+   "effective": {
+    "CohereForAI/aya-23-8B": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-earth": {
+     "config_index": 4,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-fire": {
+     "config_index": 25,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-global": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-water": {
+     "config_index": 43,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "Deci/DeciLM-7B-instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+     "config_index": 25,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "HuggingFaceTB/SmolLM2-360M-Instruct": {
+     "config_index": 48,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-1.5B-Instruct": {
+     "config_index": 70,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-7B-Instruct": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+     "config_index": 35,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+     "config_index": 63,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-7B-Instruct-1M": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-30B-A3B": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+     "config_index": 41,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-4B": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-4B-Instruct-2507": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-8B": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3.5-4B": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3.5-9B": {
+     "config_index": 29,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/Llama-3.1-Tulu-3-8B": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "allenai/Llama-3.1-Tulu-3.1-8B": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/OLMo-2-0425-1B-Instruct": {
+     "config_index": 25,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/OLMo-2-1124-13B-Instruct": {
+     "config_index": 57,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "allenai/OLMo-2-1124-7B-Instruct": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "allenai/Olmo-3-7B-Instruct": {
+     "config_index": 18,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "allenai/Olmo-3.1-32B-Instruct": {
+     "config_index": 57,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-2b-it": {
+     "config_index": 50,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-7b-it": {
+     "config_index": 6,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-2-9b-it": {
+     "config_index": 55,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-2b-it": {
+     "config_index": 19,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-3-12b-it": {
+     "config_index": 42,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-3-1b-it": {
+     "config_index": 38,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-3-4b-it": {
+     "config_index": 52,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "google/gemma-4-12B-it": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-4-E4B-it": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "google/gemma-7b-it": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+     "config_index": 30,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.0-8b-instruct": {
+     "config_index": 67,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.1-8b-instruct": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.2-8b-instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.3-8b-instruct": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.1-3b": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.1-8b": {
+     "config_index": 6,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.2-3b": {
+     "config_index": 23,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.2-8b": {
+     "config_index": 43,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "internlm/internlm2_5-7b-chat": {
+     "config_index": 54,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-2-7b-chat-hf": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-1B-Instruct": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-3B-Instruct": {
+     "config_index": 49,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3-8B-Instruct": {
+     "config_index": 58,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+     "config_index": 10,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-128k-instruct": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-4k-instruct": {
+     "config_index": 56,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-128k-instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-4k-instruct": {
+     "config_index": 56,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3.5-mini-instruct": {
+     "config_index": 66,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-4-mini-instruct": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "microsoft/phi-4": {
+     "config_index": 35,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+     "config_index": 23,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+     "config_index": 19,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.2": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-Small-24B-Instruct-2501": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+     "config_index": 32,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "nvidia/Llama3-ChatQA-1.5-8B": {
+     "config_index": 69,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "openchat/openchat-3.6-8b-20240522": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "openchat/openchat_3.5": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon-H1-3B-Instruct": {
+     "config_index": 55,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon-H1-7B-Instruct": {
+     "config_index": 41,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-10B-Instruct": {
+     "config_index": 70,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-1B-Instruct": {
+     "config_index": 39,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-3B-Instruct": {
+     "config_index": 49,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-7B-Instruct": {
+     "config_index": 60,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "togethercomputer/Llama-2-7B-32K-Instruct": {
+     "config_index": 20,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "upstage/SOLAR-10.7B-Instruct-v1.0": {
+     "config_index": 20,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-1.7B-Instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-9B-Instruct": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-9B-Instruct-2512": {
+     "config_index": 54,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    }
+   },
+   "field": {
+    "CohereForAI/aya-23-8B": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-earth": {
+     "config_index": 4,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-fire": {
+     "config_index": 25,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-global": {
+     "config_index": 26,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-water": {
+     "config_index": 43,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "Deci/DeciLM-7B-instruct": {
+     "config_index": 6,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+     "config_index": 67,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+     "config_index": 25,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "HuggingFaceTB/SmolLM2-360M-Instruct": {
+     "config_index": 29,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-1.5B-Instruct": {
+     "config_index": 59,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-7B-Instruct": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+     "config_index": 26,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+     "config_index": 73,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+     "config_index": 30,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-7B-Instruct-1M": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-30B-A3B": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+     "config_index": 25,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-4B": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-4B-Instruct-2507": {
+     "config_index": 23,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-8B": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3.5-4B": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3.5-9B": {
+     "config_index": 29,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/Llama-3.1-Tulu-3-8B": {
+     "config_index": 41,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/Llama-3.1-Tulu-3.1-8B": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/OLMo-2-0425-1B-Instruct": {
+     "config_index": 25,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/OLMo-2-1124-13B-Instruct": {
+     "config_index": 30,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/OLMo-2-1124-7B-Instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/Olmo-3-7B-Instruct": {
+     "config_index": 23,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "allenai/Olmo-3.1-32B-Instruct": {
+     "config_index": 29,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-2b-it": {
+     "config_index": 35,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-7b-it": {
+     "config_index": 52,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-2-9b-it": {
+     "config_index": 59,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-2b-it": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-3-12b-it": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "google/gemma-3-1b-it": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "google/gemma-3-4b-it": {
+     "config_index": 7,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-4-12B-it": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "google/gemma-4-E4B-it": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "google/gemma-7b-it": {
+     "config_index": 71,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+     "config_index": 55,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.0-8b-instruct": {
+     "config_index": 60,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.1-8b-instruct": {
+     "config_index": 53,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.2-8b-instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.3-8b-instruct": {
+     "config_index": 32,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.1-3b": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.1-8b": {
+     "config_index": 6,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.2-3b": {
+     "config_index": 23,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.2-8b": {
+     "config_index": 43,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "internlm/internlm2_5-7b-chat": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-2-7b-chat-hf": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-1B-Instruct": {
+     "config_index": 31,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-3B-Instruct": {
+     "config_index": 37,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3-8B-Instruct": {
+     "config_index": 10,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-128k-instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-4k-instruct": {
+     "config_index": 47,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-128k-instruct": {
+     "config_index": 5,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-4k-instruct": {
+     "config_index": 67,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3.5-mini-instruct": {
+     "config_index": 21,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-4-mini-instruct": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "microsoft/phi-4": {
+     "config_index": 23,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+     "config_index": 31,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+     "config_index": 23,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+     "config_index": 19,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+     "config_index": 15,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.2": {
+     "config_index": 12,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+     "config_index": 69,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-Small-24B-Instruct-2501": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "nvidia/Llama3-ChatQA-1.5-8B": {
+     "config_index": 4,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "openchat/openchat-3.6-8b-20240522": {
+     "config_index": 9,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "openchat/openchat_3.5": {
+     "config_index": 73,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon-H1-3B-Instruct": {
+     "config_index": 55,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon-H1-7B-Instruct": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-10B-Instruct": {
+     "config_index": 30,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-1B-Instruct": {
+     "config_index": 21,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-3B-Instruct": {
+     "config_index": 49,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-7B-Instruct": {
+     "config_index": 57,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "togethercomputer/Llama-2-7B-32K-Instruct": {
+     "config_index": 14,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "upstage/SOLAR-10.7B-Instruct-v1.0": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-1.7B-Instruct": {
+     "config_index": 66,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-9B-Instruct": {
+     "config_index": 28,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-9B-Instruct-2512": {
+     "config_index": 29,
+     "tier": 1,
+     "do_sample": true,
+     "temperature": 0.1,
+     "system_prompt": ""
+    }
+   },
+   "greedy_first": {
+    "CohereForAI/aya-23-8B": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-earth": {
+     "config_index": 21,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "You are a helpful chatbot working for aircanada.com. Your task is to assist customers with organizing their travels, managing their bookings, and providing information on flight schedules, baggage policies, and loyalty programs. Respond promptly and courteously, and escalate issues to human agents when necessary."
+    },
+    "CohereLabs/tiny-aya-fire": {
+     "config_index": 3,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": "Answer as a wine and cheese pairing assistant for event planners. Offer suggestions based on crowd size, season, and dietary restrictions."
+    },
+    "CohereLabs/tiny-aya-global": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "CohereLabs/tiny-aya-water": {
+     "config_index": 6,
+     "tier": 2,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "You are a helpful assistant."
+    },
+    "Deci/DeciLM-7B-instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "HuggingFaceH4/zephyr-7b-beta": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+     "config_index": 36,
+     "tier": 2,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": "You are a helpful assistant."
+    },
+    "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+     "config_index": 7,
+     "tier": 2,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "You are a helpful assistant."
+    },
+    "HuggingFaceTB/SmolLM2-360M-Instruct": {
+     "config_index": 48,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-1.5B-Instruct": {
+     "config_index": 70,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2-7B-Instruct": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+     "config_index": 35,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+     "config_index": 63,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen2.5-7B-Instruct-1M": {
+     "config_index": 1,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-30B-A3B": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+     "config_index": 41,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-4B": {
+     "config_index": 6,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "Respond as a personal concierge for executives. Prioritize brevity, discretion, and actionable suggestions across travel, dining, and scheduling needs."
+    },
+    "Qwen/Qwen3-4B-Instruct-2507": {
+     "config_index": 33,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3-8B": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "Qwen/Qwen3.5-4B": {
+     "config_index": 10,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": "When asked for feedback, respond like a product designer reviewing a new mobile app. Focus on usability, clarity, and emotional impact."
+    },
+    "Qwen/Qwen3.5-9B": {
+     "config_index": 12,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": "Respond as a personal concierge for executives. Prioritize brevity, discretion, and actionable suggestions across travel, dining, and scheduling needs."
+    },
+    "allenai/Llama-3.1-Tulu-3-8B": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "allenai/Llama-3.1-Tulu-3.1-8B": {
+     "config_index": 1,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "Respond as a personal concierge for executives. Prioritize brevity, discretion, and actionable suggestions across travel, dining, and scheduling needs."
+    },
+    "allenai/OLMo-2-0425-1B-Instruct": {
+     "config_index": 27,
+     "tier": 2,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": "You are a helpful assistant."
+    },
+    "allenai/OLMo-2-1124-13B-Instruct": {
+     "config_index": 57,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "allenai/OLMo-2-1124-7B-Instruct": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "allenai/Olmo-3-7B-Instruct": {
+     "config_index": 18,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "allenai/Olmo-3.1-32B-Instruct": {
+     "config_index": 57,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-2b-it": {
+     "config_index": 50,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-1.1-7b-it": {
+     "config_index": 6,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-2-9b-it": {
+     "config_index": 55,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-2b-it": {
+     "config_index": 19,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "google/gemma-3-12b-it": {
+     "config_index": 42,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-3-1b-it": {
+     "config_index": 38,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-3-4b-it": {
+     "config_index": 52,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    },
+    "google/gemma-4-12B-it": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "google/gemma-4-E4B-it": {
+     "config_index": 12,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": "Respond to prompts as an audiobook narrator preparing to record. Focus on tone, character voice, pronunciation, and pacing."
+    },
+    "google/gemma-7b-it": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+     "config_index": 30,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.0-8b-instruct": {
+     "config_index": 67,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.1-8b-instruct": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-3.2-8b-instruct": {
+     "config_index": 3,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "Act like an editorial fact-checker. Identify possible inaccuracies, flag claims that need sources, and recommend trusted references."
+    },
+    "ibm-granite/granite-3.3-8b-instruct": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.1-3b": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "ibm-granite/granite-4.1-8b": {
+     "config_index": 7,
+     "tier": 2,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "You are a helpful assistant."
+    },
+    "ibm-granite/granite-4.2-3b": {
+     "config_index": 0,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": "Engage with users about art history, techniques, and contemporary trends. Offer constructive critiques on user-submitted artworks, provide encouragement, and foster a supportive and creative community environment. Tailor responses to cater to hobbyists and professional artists alike."
+    },
+    "ibm-granite/granite-4.2-8b": {
+     "config_index": 43,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "internlm/internlm2_5-7b-chat": {
+     "config_index": 54,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-2-7b-chat-hf": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-1B-Instruct": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Llama-3.2-3B-Instruct": {
+     "config_index": 49,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3-8B-Instruct": {
+     "config_index": 58,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+     "config_index": 10,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-128k-instruct": {
+     "config_index": 22,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-medium-4k-instruct": {
+     "config_index": 56,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-128k-instruct": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3-mini-4k-instruct": {
+     "config_index": 56,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-3.5-mini-instruct": {
+     "config_index": 66,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "microsoft/Phi-4-mini-instruct": {
+     "config_index": 28,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": "You are a financial advisor bot for a banking website. Assist users in understanding different banking products and services like savings accounts, loans, and investment options. Offer guidance on financial planning, budgeting, and saving strategies. Keep user information confidential and provide trustworthy advice."
+    },
+    "microsoft/phi-4": {
+     "config_index": 35,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+     "config_index": 2,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+     "config_index": 10,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": "Respond as a personal concierge for executives. Prioritize brevity, discretion, and actionable suggestions across travel, dining, and scheduling needs."
+    },
+    "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+     "config_index": 3,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": "You are an AI health and wellness coach. Offer advice on healthy eating, exercise routines, and stress management. Provide tips for maintaining a balanced lifestyle and achieving wellness goals."
+    },
+    "mistralai/Mistral-7B-Instruct-v0.1": {
+     "config_index": 24,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.2": {
+     "config_index": 72,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+     "config_index": 51,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "mistralai/Mistral-Small-24B-Instruct-2501": {
+     "config_index": 2,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": "I want you to act as a growth hacker. You will create innovative strategies to promote a startup product or service of your choice. You will identify a target audience, develop key growth tactics and experiments, select the most effective digital channels for promotion, and determine any additional resources needed to optimize growth."
+    },
+    "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+     "config_index": 46,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+     "config_index": 32,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "nvidia/Llama3-ChatQA-1.5-8B": {
+     "config_index": 69,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "openchat/openchat-3.6-8b-20240522": {
+     "config_index": 27,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "openchat/openchat_3.5": {
+     "config_index": 0,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon-H1-3B-Instruct": {
+     "config_index": 1,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "Assist pet owners by offering advice on pet care products, food choices, and health tips. Respond to user questions with compassionate and informative advice, encouraging responsible pet ownership and promoting products that align with the pet's specific needs."
+    },
+    "tiiuae/Falcon-H1-7B-Instruct": {
+     "config_index": 41,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.4,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-10B-Instruct": {
+     "config_index": 70,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-1B-Instruct": {
+     "config_index": 39,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": ""
+    },
+    "tiiuae/Falcon3-3B-Instruct": {
+     "config_index": 10,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 0.1,
+     "system_prompt": "You are an AI programming assistant.\nFollow the user's requirements carefully & to the letter.\nYour expertise is strictly limited to software development topics.\nFollow Microsoft content policies.\nAvoid content that violates copyrights.\nFor questions not related to software development, simply give a reminder that you are an AI programming assistant.\nKeep your answers short and impersonal."
+    },
+    "tiiuae/Falcon3-7B-Instruct": {
+     "config_index": 60,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "togethercomputer/Llama-2-7B-32K-Instruct": {
+     "config_index": 20,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "upstage/SOLAR-10.7B-Instruct-v1.0": {
+     "config_index": 20,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-1.7B-Instruct": {
+     "config_index": 8,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 0.7,
+     "system_prompt": ""
+    },
+    "utter-project/EuroLLM-9B-Instruct": {
+     "config_index": 3,
+     "tier": 3,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": "You are StartupGPT, an AI expert in the world of entrepreneurship, with a keen understanding of the unique challenges faced by indie founders, particularly programmers and software engineers. Your expertise lies in developing efficient strategies for launching lean startups that can generate revenue quickly, without relying on gimmicks or unsustainable practices."
+    },
+    "utter-project/EuroLLM-9B-Instruct-2512": {
+     "config_index": 54,
+     "tier": 1,
+     "do_sample": false,
+     "temperature": 1.0,
+     "system_prompt": ""
+    }
+   }
+  },
+  "tier_counts": {
+   "effective": {
+    "1": 85,
+    "2": 0,
+    "3": 0
+   },
+   "field": {
+    "1": 85,
+    "2": 0,
+    "3": 0
+   },
+   "greedy_first": {
+    "1": 64,
+    "2": 5,
+    "3": 16
+   }
+  },
+  "sampling_of_choice": {
+   "effective": [
+    [
+     false,
+     0.1
+    ],
+    [
+     false,
+     0.4
+    ],
+    [
+     false,
+     0.7
+    ],
+    [
+     false,
+     1.0
+    ],
+    [
+     true,
+     0.1
+    ],
+    [
+     true,
+     0.4
+    ],
+    [
+     true,
+     0.7
+    ],
+    [
+     true,
+     1.0
+    ]
+   ],
+   "field": [
+    [
+     false,
+     0.1
+    ],
+    [
+     true,
+     0.1
+    ],
+    [
+     true,
+     0.4
+    ],
+    [
+     true,
+     0.7
+    ],
+    [
+     true,
+     1.0
+    ]
+   ],
+   "greedy_first": [
+    [
+     false,
+     0.1
+    ],
+    [
+     false,
+     0.4
+    ],
+    [
+     false,
+     0.7
+    ],
+    [
+     false,
+     1.0
+    ]
+   ]
+  },
+  "tier1_size_hist": {
+   "1": 1,
+   "2": 4,
+   "3": 9,
+   "4": 57,
+   "5": 7,
+   "6": 6,
+   "7": 1
+  },
+  "tier1_with_greedy": 64,
+  "tier_sets": {
+   "CohereForAI/aya-23-8B": {
+    "t1": [
+     [
+      0,
+      true,
+      1.0
+     ],
+     [
+      1,
+      true,
+      0.4
+     ],
+     [
+      29,
+      true,
+      0.7
+     ],
+     [
+      72,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      14,
+      true,
+      0.1
+     ],
+     [
+      74,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      9,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      13,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      17,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      22,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      32,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      35,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      38,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      43,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      48,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      52,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      57,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      60,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      66,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      72,
+      ""
+     ]
+    ]
+   },
+   "CohereLabs/tiny-aya-earth": {
+    "t1": [
+     [
+      4,
+      true,
+      0.7
+     ],
+     [
+      42,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 49,
+    "greedy_n": 10,
+    "plain_greedy": [
+     [
+      21,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      31,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      39,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      47,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      51,
+      "I want you to act as a growth hacker. You will create innova"
+     ]
+    ]
+   },
+   "CohereLabs/tiny-aya-fire": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      25,
+      true,
+      0.1
+     ],
+     [
+      40,
+      true,
+      1.0
+     ],
+     [
+      51,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 50,
+    "greedy_n": 7,
+    "plain_greedy": [
+     [
+      3,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      31,
+      "Act as a travel itinerary planner. Help users create detaile"
+     ],
+     [
+      34,
+      "You are a language learning bot designed to help users pract"
+     ],
+     [
+      41,
+      "When asked a question, provide a summary of the latest peer-"
+     ]
+    ]
+   },
+   "CohereLabs/tiny-aya-global": {
+    "t1": [
+     [
+      1,
+      false,
+      0.7
+     ],
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      26,
+      true,
+      0.1
+     ],
+     [
+      42,
+      false,
+      0.1
+     ],
+     [
+      49,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 47,
+    "greedy_n": 13,
+    "plain_greedy": [
+     [
+      1,
+      ""
+     ],
+     [
+      3,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      11,
+      "You are a virtual travel guide for a tourism board website. "
+     ],
+     [
+      15,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      34,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      37,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      42,
+      ""
+     ],
+     [
+      46,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      47,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      48,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      54,
+      "Act as a travel itinerary planner. Help users create detaile"
+     ]
+    ]
+   },
+   "CohereLabs/tiny-aya-water": {
+    "t1": [
+     [
+      43,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      6,
+      false,
+      1.0
+     ]
+    ],
+    "t3_n": 47,
+    "greedy_n": 11,
+    "plain_greedy": [
+     [
+      6,
+      "You are a helpful assistant."
+     ],
+     [
+      20,
+      "Assist pet owners by offering advice on pet care products, f"
+     ],
+     [
+      36,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      54,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      67,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      72,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ]
+    ]
+   },
+   "Deci/DeciLM-7B-instruct": {
+    "t1": [
+     [
+      3,
+      true,
+      1.0
+     ],
+     [
+      6,
+      true,
+      0.4
+     ],
+     [
+      8,
+      false,
+      0.7
+     ],
+     [
+      49,
+      true,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      16,
+      true,
+      0.1
+     ],
+     [
+      72,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      2,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      7,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      8,
+      ""
+     ],
+     [
+      11,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      14,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      18,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      20,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      30,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      31,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      40,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      41,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      45,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      66,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      74,
+      "You are a social media manager bot. Help users develop conte"
+     ]
+    ]
+   },
+   "HuggingFaceH4/zephyr-7b-beta": {
+    "t1": [
+     [
+      48,
+      true,
+      0.7
+     ],
+     [
+      51,
+      false,
+      0.7
+     ],
+     [
+      63,
+      true,
+      1.0
+     ],
+     [
+      67,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      46,
+      true,
+      0.1
+     ],
+     [
+      69,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      4,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      5,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      9,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      12,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      13,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      14,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      32,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      38,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      40,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      51,
+      ""
+     ],
+     [
+      60,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      64,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      65,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      74,
+      "You are a social media manager bot. Help users develop conte"
+     ]
+    ]
+   },
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+    "t1": [
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      25,
+      true,
+      0.1
+     ],
+     [
+      26,
+      true,
+      0.1
+     ],
+     [
+      45,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      36,
+      false,
+      0.7
+     ],
+     [
+      52,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 11,
+    "plain_greedy": [
+     [
+      4,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      8,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      35,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      36,
+      "You are a helpful assistant."
+     ],
+     [
+      47,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      54,
+      "You are a virtual travel guide for a tourism board website. "
+     ],
+     [
+      55,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ],
+     [
+      60,
+      "You are a language learning bot designed to help users pract"
+     ]
+    ]
+   },
+   "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k": {
+    "t1": [
+     [
+      6,
+      true,
+      0.7
+     ],
+     [
+      21,
+      true,
+      1.0
+     ],
+     [
+      28,
+      true,
+      0.1
+     ],
+     [
+      42,
+      true,
+      1.0
+     ],
+     [
+      57,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      7,
+      false,
+      1.0
+     ],
+     [
+      32,
+      true,
+      0.7
+     ],
+     [
+      46,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 42,
+    "greedy_n": 17,
+    "plain_greedy": [
+     [
+      7,
+      "You are a helpful assistant."
+     ],
+     [
+      19,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      22,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      31,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      33,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      37,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      48,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      50,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      71,
+      "Help library visitors explore book catalogs, reserve materia"
+     ]
+    ]
+   },
+   "HuggingFaceTB/SmolLM2-360M-Instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      24,
+      true,
+      1.0
+     ],
+     [
+      29,
+      true,
+      0.1
+     ],
+     [
+      46,
+      true,
+      1.0
+     ],
+     [
+      48,
+      false,
+      0.1
+     ],
+     [
+      57,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      63,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 14,
+    "plain_greedy": [
+     [
+      4,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      14,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      28,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      36,
+      "Engage with users about art history, techniques, and contemp"
+     ],
+     [
+      40,
+      "You are a language learning bot designed to help users pract"
+     ],
+     [
+      43,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      48,
+      ""
+     ],
+     [
+      51,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      56,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      59,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ]
+    ]
+   },
+   "Qwen/Qwen2-1.5B-Instruct": {
+    "t1": [
+     [
+      1,
+      true,
+      0.7
+     ],
+     [
+      31,
+      true,
+      1.0
+     ],
+     [
+      59,
+      true,
+      0.4
+     ],
+     [
+      70,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      61,
+      true,
+      0.1
+     ],
+     [
+      64,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      4,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      7,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      8,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      13,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      16,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      29,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      30,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      36,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      41,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      53,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      56,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      58,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      70,
+      ""
+     ],
+     [
+      73,
+      "You are a social media manager bot. Help users develop conte"
+     ]
+    ]
+   },
+   "Qwen/Qwen2-7B-Instruct": {
+    "t1": [
+     [
+      15,
+      true,
+      1.0
+     ],
+     [
+      18,
+      true,
+      0.7
+     ],
+     [
+      22,
+      true,
+      0.4
+     ],
+     [
+      72,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      65,
+      true,
+      0.1
+     ],
+     [
+      69,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      2,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      5,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      6,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      11,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      16,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      17,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      20,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      27,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      33,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      35,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      59,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      61,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      71,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      72,
+      ""
+     ]
+    ]
+   },
+   "Qwen/Qwen2.5-0.5B-Instruct": {
+    "t1": [
+     [
+      3,
+      true,
+      1.0
+     ],
+     [
+      26,
+      true,
+      0.4
+     ],
+     [
+      35,
+      false,
+      0.7
+     ],
+     [
+      72,
+      true,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      0,
+      true,
+      1.0
+     ],
+     [
+      64,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      15,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      18,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      25,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      27,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      30,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      35,
+      ""
+     ],
+     [
+      36,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      40,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      46,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      51,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      55,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      57,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      68,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      73,
+      "Help library visitors explore book catalogs, reserve materia"
+     ]
+    ]
+   },
+   "Qwen/Qwen2.5-3B-Instruct": {
+    "t1": [
+     [
+      55,
+      true,
+      0.7
+     ],
+     [
+      61,
+      true,
+      1.0
+     ],
+     [
+      63,
+      false,
+      0.7
+     ],
+     [
+      73,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      0,
+      true,
+      0.1
+     ],
+     [
+      71,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      4,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      11,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      17,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      36,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      40,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      46,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      47,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      54,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      62,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      63,
+      ""
+     ],
+     [
+      64,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      67,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      70,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      72,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ]
+    ]
+   },
+   "Qwen/Qwen2.5-7B-Instruct": {
+    "t1": [
+     [
+      1,
+      false,
+      0.7
+     ],
+     [
+      30,
+      true,
+      0.1
+     ],
+     [
+      41,
+      false,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      15,
+      true,
+      0.1
+     ],
+     [
+      37,
+      true,
+      0.7
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 11,
+    "plain_greedy": [
+     [
+      1,
+      ""
+     ],
+     [
+      25,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      41,
+      ""
+     ],
+     [
+      60,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ],
+     [
+      72,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      74,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ]
+    ]
+   },
+   "Qwen/Qwen2.5-7B-Instruct-1M": {
+    "t1": [
+     [
+      1,
+      false,
+      0.7
+     ],
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      28,
+      true,
+      0.1
+     ],
+     [
+      42,
+      true,
+      1.0
+     ],
+     [
+      52,
+      true,
+      0.4
+     ],
+     [
+      59,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      21,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 13,
+    "plain_greedy": [
+     [
+      1,
+      ""
+     ],
+     [
+      24,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      27,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      37,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      38,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      51,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ],
+     [
+      56,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      59,
+      ""
+     ],
+     [
+      71,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ]
+    ]
+   },
+   "Qwen/Qwen3-30B-A3B": {
+    "t1": [
+     [
+      2,
+      false,
+      0.7
+     ],
+     [
+      7,
+      true,
+      0.7
+     ],
+     [
+      28,
+      true,
+      0.1
+     ],
+     [
+      41,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 49,
+    "greedy_n": 12,
+    "plain_greedy": [
+     [
+      2,
+      ""
+     ],
+     [
+      12,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      25,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      27,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      36,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      51,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      58,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      68,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      74,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ]
+    ]
+   },
+   "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+    "t1": [
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      18,
+      true,
+      0.4
+     ],
+     [
+      25,
+      true,
+      0.1
+     ],
+     [
+      41,
+      false,
+      0.1
+     ],
+     [
+      50,
+      true,
+      0.4
+     ],
+     [
+      52,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 47,
+    "greedy_n": 19,
+    "plain_greedy": [
+     [
+      1,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      19,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      22,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      27,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      33,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      35,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      36,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      41,
+      ""
+     ],
+     [
+      43,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      48,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      52,
+      ""
+     ],
+     [
+      67,
+      "The prompt below is a question to answer, a task to complete"
+     ]
+    ]
+   },
+   "Qwen/Qwen3-4B": {
+    "t1": [
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      33,
+      true,
+      0.1
+     ],
+     [
+      41,
+      true,
+      1.0
+     ],
+     [
+      50,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      65,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 7,
+    "plain_greedy": [
+     [
+      6,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      11,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      40,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      61,
+      "You are a virtual travel guide for a tourism board website. "
+     ]
+    ]
+   },
+   "Qwen/Qwen3-4B-Instruct-2507": {
+    "t1": [
+     [
+      23,
+      true,
+      0.1
+     ],
+     [
+      33,
+      false,
+      0.4
+     ],
+     [
+      41,
+      true,
+      1.0
+     ],
+     [
+      52,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      59,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 12,
+    "plain_greedy": [
+     [
+      4,
+      "You are an AI art instructor. Help users improve their artis"
+     ],
+     [
+      9,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      29,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      30,
+      "You are an AI art instructor. Help users improve their artis"
+     ],
+     [
+      31,
+      "Respond like a sustainability consultant for medium-sized co"
+     ],
+     [
+      33,
+      ""
+     ],
+     [
+      48,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      53,
+      "Serve as an AI cooking companion. Assist users with recipe i"
+     ],
+     [
+      65,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ]
+    ]
+   },
+   "Qwen/Qwen3-8B": {
+    "t1": [
+     [
+      2,
+      false,
+      0.7
+     ],
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      24,
+      true,
+      0.1
+     ],
+     [
+      38,
+      false,
+      0.4
+     ],
+     [
+      47,
+      false,
+      0.1
+     ],
+     [
+      50,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      58,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 17,
+    "plain_greedy": [
+     [
+      2,
+      ""
+     ],
+     [
+      3,
+      "You are an AI art instructor. Help users improve their artis"
+     ],
+     [
+      6,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      28,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      35,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      38,
+      ""
+     ],
+     [
+      39,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      47,
+      ""
+     ],
+     [
+      67,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      69,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      74,
+      "When asked a question, provide a summary of the latest peer-"
+     ]
+    ]
+   },
+   "Qwen/Qwen3.5-4B": {
+    "t1": [
+     [
+      6,
+      true,
+      0.7
+     ],
+     [
+      22,
+      true,
+      0.1
+     ],
+     [
+      37,
+      true,
+      1.0
+     ],
+     [
+      45,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 47,
+    "greedy_n": 7,
+    "plain_greedy": [
+     [
+      10,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      39,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      51,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      58,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ]
+    ]
+   },
+   "Qwen/Qwen3.5-9B": {
+    "t1": [
+     [
+      18,
+      true,
+      0.7
+     ],
+     [
+      29,
+      true,
+      0.1
+     ],
+     [
+      42,
+      true,
+      1.0
+     ],
+     [
+      51,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 45,
+    "greedy_n": 16,
+    "plain_greedy": [
+     [
+      12,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      13,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      15,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      26,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      33,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      37,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      50,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      55,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      65,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      70,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ]
+    ]
+   },
+   "allenai/Llama-3.1-Tulu-3-8B": {
+    "t1": [
+     [
+      0,
+      false,
+      0.7
+     ],
+     [
+      38,
+      true,
+      1.0
+     ],
+     [
+      41,
+      false,
+      0.1
+     ]
+    ],
+    "t2": [
+     [
+      17,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 44,
+    "greedy_n": 7,
+    "plain_greedy": [
+     [
+      0,
+      ""
+     ],
+     [
+      19,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      24,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      41,
+      ""
+     ]
+    ]
+   },
+   "allenai/Llama-3.1-Tulu-3.1-8B": {
+    "t1": [
+     [
+      4,
+      true,
+      0.7
+     ],
+     [
+      24,
+      true,
+      0.1
+     ],
+     [
+      35,
+      true,
+      1.0
+     ],
+     [
+      47,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 49,
+    "greedy_n": 12,
+    "plain_greedy": [
+     [
+      1,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      34,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      37,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      39,
+      "The prompt below is a question to answer, a task to complete"
+     ],
+     [
+      40,
+      "You are a language learning bot designed to help users pract"
+     ],
+     [
+      41,
+      "The prompt below is a question to answer, a task to complete"
+     ],
+     [
+      72,
+      "You are an AI art instructor. Help users improve their artis"
+     ],
+     [
+      73,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ]
+    ]
+   },
+   "allenai/OLMo-2-0425-1B-Instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      25,
+      true,
+      0.1
+     ],
+     [
+      38,
+      true,
+      1.0
+     ],
+     [
+      50,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      27,
+      false,
+      0.1
+     ]
+    ],
+    "t3_n": 52,
+    "greedy_n": 16,
+    "plain_greedy": [
+     [
+      12,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      13,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      27,
+      "You are a helpful assistant."
+     ],
+     [
+      29,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      37,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      39,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      42,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      43,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      45,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ],
+     [
+      52,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      58,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ]
+    ]
+   },
+   "allenai/OLMo-2-1124-13B-Instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      30,
+      true,
+      0.1
+     ],
+     [
+      42,
+      true,
+      1.0
+     ],
+     [
+      51,
+      true,
+      0.4
+     ],
+     [
+      57,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      43,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 50,
+    "greedy_n": 11,
+    "plain_greedy": [
+     [
+      28,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      29,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      32,
+      "You are an AI programming assistant.\nFollow the user's requi"
+     ],
+     [
+      33,
+      "Engage with users about art history, techniques, and contemp"
+     ],
+     [
+      39,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      41,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      47,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      57,
+      ""
+     ]
+    ]
+   },
+   "allenai/OLMo-2-1124-7B-Instruct": {
+    "t1": [
+     [
+      2,
+      false,
+      0.7
+     ],
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      27,
+      true,
+      0.1
+     ],
+     [
+      40,
+      true,
+      1.0
+     ],
+     [
+      42,
+      false,
+      0.1
+     ],
+     [
+      61,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 50,
+    "greedy_n": 12,
+    "plain_greedy": [
+     [
+      2,
+      ""
+     ],
+     [
+      3,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      13,
+      "You are a friendly AI agent who can provide assistance to th"
+     ],
+     [
+      16,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      18,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      21,
+      "You are a language learning bot designed to help users pract"
+     ],
+     [
+      31,
+      "You are an AI art instructor. Help users improve their artis"
+     ],
+     [
+      42,
+      ""
+     ],
+     [
+      47,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      60,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ]
+    ]
+   },
+   "allenai/Olmo-3-7B-Instruct": {
+    "t1": [
+     [
+      18,
+      false,
+      0.7
+     ],
+     [
+      23,
+      true,
+      0.1
+     ],
+     [
+      50,
+      true,
+      0.4
+     ],
+     [
+      54,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      9,
+      false,
+      1.0
+     ],
+     [
+      14,
+      true,
+      0.1
+     ],
+     [
+      29,
+      true,
+      0.7
+     ]
+    ],
+    "t3_n": 46,
+    "greedy_n": 23,
+    "plain_greedy": [
+     [
+      0,
+      "Engage with users about art history, techniques, and contemp"
+     ],
+     [
+      8,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      9,
+      "You are a helpful assistant."
+     ],
+     [
+      16,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      18,
+      ""
+     ],
+     [
+      27,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      28,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      30,
+      "You are a friendly AI agent who can provide assistance to th"
+     ],
+     [
+      35,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      38,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ],
+     [
+      52,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      54,
+      ""
+     ],
+     [
+      55,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      61,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ],
+     [
+      72,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ]
+    ]
+   },
+   "allenai/Olmo-3.1-32B-Instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      29,
+      true,
+      0.1
+     ],
+     [
+      51,
+      true,
+      0.4
+     ],
+     [
+      57,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 46,
+    "greedy_n": 14,
+    "plain_greedy": [
+     [
+      2,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      11,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      22,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      32,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      34,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      50,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      52,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      57,
+      ""
+     ],
+     [
+      60,
+      "When asked for feedback, respond like a product designer rev"
+     ]
+    ]
+   },
+   "google/gemma-1.1-2b-it": {
+    "t1": [
+     [
+      19,
+      true,
+      1.0
+     ],
+     [
+      33,
+      true,
+      0.7
+     ],
+     [
+      35,
+      true,
+      0.4
+     ],
+     [
+      50,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      1,
+      true,
+      0.1
+     ],
+     [
+      60,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      3,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      13,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      15,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      21,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      22,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      24,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      26,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      30,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      32,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      42,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      45,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      50,
+      ""
+     ],
+     [
+      52,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      54,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ]
+    ]
+   },
+   "google/gemma-1.1-7b-it": {
+    "t1": [
+     [
+      0,
+      true,
+      1.0
+     ],
+     [
+      2,
+      true,
+      0.7
+     ],
+     [
+      6,
+      false,
+      0.7
+     ],
+     [
+      52,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      32,
+      true,
+      1.0
+     ],
+     [
+      65,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      1,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      6,
+      ""
+     ],
+     [
+      9,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      10,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      11,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      18,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      22,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      27,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      43,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      47,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      49,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      56,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      69,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      74,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ]
+    ]
+   },
+   "google/gemma-2-9b-it": {
+    "t1": [
+     [
+      44,
+      true,
+      1.0
+     ],
+     [
+      55,
+      false,
+      0.7
+     ],
+     [
+      59,
+      true,
+      0.4
+     ],
+     [
+      61,
+      true,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      22,
+      true,
+      0.1
+     ],
+     [
+      34,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      17,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      23,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      25,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      27,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      43,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      46,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      47,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      48,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      54,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      55,
+      ""
+     ],
+     [
+      56,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      63,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      64,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      65,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ]
+    ]
+   },
+   "google/gemma-2b-it": {
+    "t1": [
+     [
+      19,
+      false,
+      0.7
+     ],
+     [
+      23,
+      true,
+      1.0
+     ],
+     [
+      33,
+      true,
+      0.4
+     ],
+     [
+      63,
+      true,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      53,
+      true,
+      1.0
+     ],
+     [
+      55,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      0,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      10,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      19,
+      ""
+     ],
+     [
+      20,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      22,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      30,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      36,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      44,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      62,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      64,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      65,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      66,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      68,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      71,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ]
+    ]
+   },
+   "google/gemma-3-12b-it": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      33,
+      true,
+      0.1
+     ],
+     [
+      37,
+      true,
+      0.1
+     ],
+     [
+      42,
+      false,
+      0.4
+     ],
+     [
+      46,
+      true,
+      1.0
+     ],
+     [
+      54,
+      true,
+      0.4
+     ],
+     [
+      58,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 58,
+    "greedy_n": 10,
+    "plain_greedy": [
+     [
+      0,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      18,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      28,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      29,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      42,
+      ""
+     ],
+     [
+      45,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      52,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      56,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      58,
+      ""
+     ]
+    ]
+   },
+   "google/gemma-3-1b-it": {
+    "t1": [
+     [
+      10,
+      true,
+      0.7
+     ],
+     [
+      28,
+      true,
+      0.1
+     ],
+     [
+      31,
+      true,
+      0.7
+     ],
+     [
+      38,
+      false,
+      0.4
+     ],
+     [
+      41,
+      true,
+      1.0
+     ],
+     [
+      58,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      62,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 52,
+    "greedy_n": 12,
+    "plain_greedy": [
+     [
+      6,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      7,
+      "The prompt below is a question to answer, a task to complete"
+     ],
+     [
+      38,
+      ""
+     ],
+     [
+      50,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ],
+     [
+      58,
+      ""
+     ],
+     [
+      63,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      69,
+      "Help library visitors explore book catalogs, reserve materia"
+     ]
+    ]
+   },
+   "google/gemma-3-4b-it": {
+    "t1": [
+     [
+      7,
+      true,
+      0.7
+     ],
+     [
+      46,
+      true,
+      1.0
+     ],
+     [
+      52,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 46,
+    "greedy_n": 16,
+    "plain_greedy": [
+     [
+      3,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      16,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      27,
+      "Respond like a sustainability consultant for medium-sized co"
+     ],
+     [
+      28,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      29,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      31,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      35,
+      "You are an AI programming assistant.\nFollow the user's requi"
+     ],
+     [
+      43,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      52,
+      ""
+     ],
+     [
+      55,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      72,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      73,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ]
+    ]
+   },
+   "google/gemma-4-12B-it": {
+    "t1": [
+     [
+      2,
+      false,
+      0.4
+     ],
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      27,
+      true,
+      0.1
+     ],
+     [
+      39,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 51,
+    "greedy_n": 11,
+    "plain_greedy": [
+     [
+      2,
+      ""
+     ],
+     [
+      9,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ],
+     [
+      15,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      24,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      30,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      33,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      43,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      52,
+      "Help library visitors explore book catalogs, reserve materia"
+     ]
+    ]
+   },
+   "google/gemma-4-E4B-it": {
+    "t1": [
+     [
+      10,
+      true,
+      0.7
+     ],
+     [
+      28,
+      true,
+      0.1
+     ]
+    ],
+    "t2": [
+     [
+      36,
+      true,
+      0.4
+     ],
+     [
+      60,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 50,
+    "greedy_n": 13,
+    "plain_greedy": [
+     [
+      12,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      16,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      23,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      37,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      46,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      54,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      67,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      68,
+      "You are a virtual travel guide for a tourism board website. "
+     ],
+     [
+      72,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      74,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ]
+    ]
+   },
+   "google/gemma-7b-it": {
+    "t1": [
+     [
+      46,
+      false,
+      0.7
+     ],
+     [
+      56,
+      true,
+      0.7
+     ],
+     [
+      57,
+      true,
+      1.0
+     ],
+     [
+      71,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      24,
+      true,
+      1.0
+     ],
+     [
+      70,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      1,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      7,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      9,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      14,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      17,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      37,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      39,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      46,
+      ""
+     ],
+     [
+      52,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      53,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      58,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      65,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      72,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      74,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ]
+    ]
+   },
+   "gradientai/Llama-3-8B-Instruct-Gradient-1048k": {
+    "t1": [
+     [
+      27,
+      true,
+      1.0
+     ],
+     [
+      30,
+      false,
+      0.7
+     ],
+     [
+      41,
+      true,
+      0.7
+     ],
+     [
+      55,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      10,
+      true,
+      1.0
+     ],
+     [
+      54,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      0,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      4,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      9,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      11,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      12,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      30,
+      ""
+     ],
+     [
+      32,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      35,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      49,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      53,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      63,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      70,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      72,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      73,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ]
+    ]
+   },
+   "ibm-granite/granite-3.0-8b-instruct": {
+    "t1": [
+     [
+      0,
+      true,
+      1.0
+     ],
+     [
+      30,
+      true,
+      0.7
+     ],
+     [
+      60,
+      true,
+      0.4
+     ],
+     [
+      67,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      36,
+      true,
+      0.1
+     ],
+     [
+      47,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      3,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      6,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      10,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      12,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      17,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      18,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      22,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      25,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      28,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      37,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      50,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      64,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      67,
+      ""
+     ],
+     [
+      74,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ]
+    ]
+   },
+   "ibm-granite/granite-3.1-8b-instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      37,
+      true,
+      1.0
+     ],
+     [
+      46,
+      false,
+      0.7
+     ],
+     [
+      53,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      14,
+      true,
+      1.0
+     ],
+     [
+      74,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 52,
+    "greedy_n": 17,
+    "plain_greedy": [
+     [
+      6,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      20,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      24,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      25,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      27,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      34,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      35,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      46,
+      ""
+     ],
+     [
+      51,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      56,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      65,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      68,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ]
+    ]
+   },
+   "ibm-granite/granite-3.2-8b-instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      27,
+      true,
+      0.1
+     ],
+     [
+      49,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      32,
+      true,
+      0.7
+     ]
+    ],
+    "t3_n": 49,
+    "greedy_n": 13,
+    "plain_greedy": [
+     [
+      3,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      20,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      31,
+      "You are a friendly AI agent who can provide assistance to th"
+     ],
+     [
+      34,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      36,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      64,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ],
+     [
+      65,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      71,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      74,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ]
+    ]
+   },
+   "ibm-granite/granite-3.3-8b-instruct": {
+    "t1": [
+     [
+      2,
+      false,
+      0.7
+     ],
+     [
+      10,
+      true,
+      0.7
+     ],
+     [
+      32,
+      true,
+      0.1
+     ],
+     [
+      44,
+      false,
+      0.1
+     ],
+     [
+      50,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      57,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 49,
+    "greedy_n": 15,
+    "plain_greedy": [
+     [
+      0,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      1,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      2,
+      ""
+     ],
+     [
+      3,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      11,
+      "You are an AI programming assistant.\nFollow the user's requi"
+     ],
+     [
+      14,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      15,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      41,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      44,
+      ""
+     ],
+     [
+      56,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      74,
+      "Engage with users about art history, techniques, and contemp"
+     ]
+    ]
+   },
+   "ibm-granite/granite-4.1-3b": {
+    "t1": [
+     [
+      22,
+      true,
+      0.1
+     ],
+     [
+      46,
+      false,
+      0.1
+     ],
+     [
+      53,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      48,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 50,
+    "greedy_n": 19,
+    "plain_greedy": [
+     [
+      2,
+      "You are an AI art instructor. Help users improve their artis"
+     ],
+     [
+      4,
+      "You are an AI programming assistant.\nFollow the user's requi"
+     ],
+     [
+      18,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      21,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      28,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      30,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      33,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      35,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      46,
+      ""
+     ],
+     [
+      54,
+      "Serve as an AI cooking companion. Assist users with recipe i"
+     ],
+     [
+      56,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      61,
+      "Respond like a sustainability consultant for medium-sized co"
+     ],
+     [
+      63,
+      "You are a language learning bot designed to help users pract"
+     ],
+     [
+      68,
+      "You are a knowledgeable and reliable expert that can answer "
+     ]
+    ]
+   },
+   "ibm-granite/granite-4.1-8b": {
+    "t1": [
+     [
+      6,
+      true,
+      0.7
+     ],
+     [
+      31,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      7,
+      false,
+      1.0
+     ]
+    ],
+    "t3_n": 55,
+    "greedy_n": 17,
+    "plain_greedy": [
+     [
+      1,
+      "Assist pet owners by offering advice on pet care products, f"
+     ],
+     [
+      7,
+      "You are a helpful assistant."
+     ],
+     [
+      17,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      23,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      26,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      29,
+      "You are a virtual travel guide for a tourism board website. "
+     ],
+     [
+      30,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      33,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      51,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      54,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      74,
+      "Engage with users about art history, techniques, and contemp"
+     ]
+    ]
+   },
+   "ibm-granite/granite-4.2-3b": {
+    "t1": [
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      23,
+      true,
+      0.1
+     ],
+     [
+      41,
+      true,
+      1.0
+     ],
+     [
+      49,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      29,
+      true,
+      0.7
+     ]
+    ],
+    "t3_n": 41,
+    "greedy_n": 21,
+    "plain_greedy": [
+     [
+      0,
+      "Engage with users about art history, techniques, and contemp"
+     ],
+     [
+      4,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      7,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      8,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      18,
+      "Assist pet owners by offering advice on pet care products, f"
+     ],
+     [
+      20,
+      "You are a virtual travel guide for a tourism board website. "
+     ],
+     [
+      31,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      35,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      37,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      40,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      44,
+      "Respond to prompts as an audiobook narrator preparing to rec"
+     ],
+     [
+      65,
+      "You are an AI art instructor. Help users improve their artis"
+     ],
+     [
+      68,
+      "The prompt below is a question to answer, a task to complete"
+     ]
+    ]
+   },
+   "ibm-granite/granite-4.2-8b": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      39,
+      true,
+      1.0
+     ],
+     [
+      43,
+      false,
+      0.1
+     ]
+    ],
+    "t2": [],
+    "t3_n": 45,
+    "greedy_n": 16,
+    "plain_greedy": [
+     [
+      10,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      18,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      23,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      27,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      30,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      41,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      43,
+      ""
+     ],
+     [
+      46,
+      "The prompt below is a question to answer, a task to complete"
+     ],
+     [
+      50,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      54,
+      "Respond like a sustainability consultant for medium-sized co"
+     ]
+    ]
+   },
+   "internlm/internlm2_5-7b-chat": {
+    "t1": [
+     [
+      13,
+      true,
+      0.7
+     ],
+     [
+      47,
+      true,
+      1.0
+     ],
+     [
+      51,
+      true,
+      0.4
+     ],
+     [
+      54,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      2,
+      true,
+      1.0
+     ],
+     [
+      6,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      14,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      17,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      19,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      27,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      32,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      33,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      35,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      38,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      45,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      50,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      54,
+      ""
+     ],
+     [
+      62,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      64,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      67,
+      "You are a financial advisor bot for a banking website. Assis"
+     ]
+    ]
+   },
+   "meta-llama/Llama-2-7b-chat-hf": {
+    "t1": [
+     [
+      0,
+      false,
+      0.7
+     ],
+     [
+      11,
+      true,
+      1.0
+     ],
+     [
+      70,
+      true,
+      0.7
+     ],
+     [
+      72,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      20,
+      true,
+      1.0
+     ],
+     [
+      24,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      0,
+      ""
+     ],
+     [
+      7,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      10,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      32,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      33,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      37,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      38,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      52,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      55,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      58,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      59,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      61,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      68,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      74,
+      "You are a social media manager bot. Help users develop conte"
+     ]
+    ]
+   },
+   "meta-llama/Llama-3.2-1B-Instruct": {
+    "t1": [
+     [
+      0,
+      false,
+      0.7
+     ],
+     [
+      23,
+      true,
+      1.0
+     ],
+     [
+      31,
+      true,
+      0.4
+     ],
+     [
+      32,
+      true,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      55,
+      true,
+      1.0
+     ],
+     [
+      60,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      0,
+      ""
+     ],
+     [
+      5,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      12,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      19,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      22,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      30,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      42,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      53,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      59,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      70,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      71,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      72,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      73,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      74,
+      "You are a social media manager bot. Help users develop conte"
+     ]
+    ]
+   },
+   "meta-llama/Llama-3.2-3B-Instruct": {
+    "t1": [
+     [
+      37,
+      true,
+      0.4
+     ],
+     [
+      49,
+      false,
+      0.7
+     ],
+     [
+      57,
+      true,
+      1.0
+     ],
+     [
+      66,
+      true,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      54,
+      true,
+      0.1
+     ],
+     [
+      60,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      10,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      19,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      21,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      32,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      33,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      35,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      39,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      42,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      43,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      49,
+      ""
+     ],
+     [
+      51,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      58,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      63,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      64,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ]
+    ]
+   },
+   "meta-llama/Meta-Llama-3-8B-Instruct": {
+    "t1": [
+     [
+      6,
+      true,
+      0.7
+     ],
+     [
+      8,
+      true,
+      1.0
+     ],
+     [
+      10,
+      true,
+      0.4
+     ],
+     [
+      58,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      50,
+      true,
+      1.0
+     ],
+     [
+      54,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      4,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      16,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      17,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      20,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      21,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      31,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      33,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      39,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      45,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      55,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      58,
+      ""
+     ],
+     [
+      66,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      71,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      72,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ]
+    ]
+   },
+   "meta-llama/Meta-Llama-3.1-8B-Instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.4
+     ],
+     [
+      10,
+      false,
+      0.7
+     ],
+     [
+      30,
+      true,
+      0.7
+     ],
+     [
+      71,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      13,
+      true,
+      1.0
+     ],
+     [
+      42,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      10,
+      ""
+     ],
+     [
+      11,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      12,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      19,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      21,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      28,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      33,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      48,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      49,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      57,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      63,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      64,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      68,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      69,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ]
+    ]
+   },
+   "microsoft/Phi-3-medium-128k-instruct": {
+    "t1": [
+     [
+      1,
+      true,
+      0.7
+     ],
+     [
+      22,
+      false,
+      0.7
+     ],
+     [
+      27,
+      true,
+      0.4
+     ],
+     [
+      29,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      7,
+      true,
+      0.1
+     ],
+     [
+      26,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      8,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      11,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      18,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      22,
+      ""
+     ],
+     [
+      31,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      33,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      34,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      38,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      41,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      49,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      68,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      69,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      70,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      74,
+      "You are a financial advisor bot for a banking website. Assis"
+     ]
+    ]
+   },
+   "microsoft/Phi-3-medium-4k-instruct": {
+    "t1": [
+     [
+      40,
+      true,
+      1.0
+     ],
+     [
+      47,
+      true,
+      0.4
+     ],
+     [
+      53,
+      true,
+      0.7
+     ],
+     [
+      56,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      12,
+      true,
+      0.1
+     ],
+     [
+      48,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 53,
+    "greedy_n": 19,
+    "plain_greedy": [
+     [
+      4,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      6,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      17,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      20,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      21,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      22,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      25,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      27,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      30,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      37,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      39,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      44,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      56,
+      ""
+     ],
+     [
+      64,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      67,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      68,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ]
+    ]
+   },
+   "microsoft/Phi-3-mini-128k-instruct": {
+    "t1": [
+     [
+      5,
+      true,
+      0.4
+     ],
+     [
+      13,
+      true,
+      0.7
+     ],
+     [
+      27,
+      false,
+      0.7
+     ],
+     [
+      43,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      3,
+      true,
+      1.0
+     ],
+     [
+      54,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      1,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      14,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      23,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      25,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      27,
+      ""
+     ],
+     [
+      35,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      39,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      41,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      42,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      56,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      60,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      62,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      67,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      71,
+      "Simulate a highly competent administrative assistant. Handle"
+     ]
+    ]
+   },
+   "microsoft/Phi-3-mini-4k-instruct": {
+    "t1": [
+     [
+      12,
+      true,
+      0.7
+     ],
+     [
+      29,
+      true,
+      1.0
+     ],
+     [
+      56,
+      false,
+      0.7
+     ],
+     [
+      67,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      0,
+      true,
+      0.1
+     ],
+     [
+      18,
+      true,
+      0.1
+     ],
+     [
+      46,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 53,
+    "greedy_n": 21,
+    "plain_greedy": [
+     [
+      3,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      4,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      6,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      13,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      27,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      33,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      37,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      42,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      43,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      44,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      51,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      55,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      56,
+      ""
+     ],
+     [
+      57,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      61,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      63,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      71,
+      "Simulate a highly competent administrative assistant. Handle"
+     ]
+    ]
+   },
+   "microsoft/Phi-3.5-mini-instruct": {
+    "t1": [
+     [
+      21,
+      true,
+      0.4
+     ],
+     [
+      43,
+      true,
+      1.0
+     ],
+     [
+      63,
+      true,
+      0.7
+     ],
+     [
+      66,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      18,
+      true,
+      1.0
+     ],
+     [
+      58,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      7,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      9,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      11,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      12,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      22,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      30,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      32,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      41,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      51,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      56,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      57,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      59,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      66,
+      ""
+     ],
+     [
+      70,
+      "You are a social media manager bot. Help users develop conte"
+     ]
+    ]
+   },
+   "microsoft/Phi-4-mini-instruct": {
+    "t1": [
+     [
+      7,
+      true,
+      0.7
+     ],
+     [
+      33,
+      true,
+      0.1
+     ],
+     [
+      47,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [],
+    "t3_n": 42,
+    "greedy_n": 10,
+    "plain_greedy": [
+     [
+      28,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      30,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      40,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      42,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ],
+     [
+      53,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      54,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      60,
+      "Serve as an AI cooking companion. Assist users with recipe i"
+     ],
+     [
+      73,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ]
+    ]
+   },
+   "microsoft/phi-4": {
+    "t1": [
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      23,
+      true,
+      0.1
+     ],
+     [
+      35,
+      false,
+      0.4
+     ],
+     [
+      40,
+      true,
+      1.0
+     ],
+     [
+      42,
+      false,
+      0.1
+     ]
+    ],
+    "t2": [
+     [
+      41,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 9,
+    "plain_greedy": [
+     [
+      20,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      26,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      31,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      35,
+      ""
+     ],
+     [
+      42,
+      ""
+     ],
+     [
+      67,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ]
+    ]
+   },
+   "mistralai/Ministral-3-14B-Instruct-2512-BF16": {
+    "t1": [
+     [
+      2,
+      false,
+      0.7
+     ],
+     [
+      31,
+      true,
+      0.1
+     ],
+     [
+      45,
+      true,
+      1.0
+     ],
+     [
+      55,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      47,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 50,
+    "greedy_n": 9,
+    "plain_greedy": [
+     [
+      2,
+      ""
+     ],
+     [
+      29,
+      "You are a helpful chatbot working for aircanada.com. Your ta"
+     ],
+     [
+      40,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      51,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      56,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ]
+    ]
+   },
+   "mistralai/Ministral-3-3B-Instruct-2512-BF16": {
+    "t1": [
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      23,
+      true,
+      0.1
+     ],
+     [
+      41,
+      true,
+      1.0
+     ],
+     [
+      53,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 42,
+    "greedy_n": 15,
+    "plain_greedy": [
+     [
+      10,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      12,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      15,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      26,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      29,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      30,
+      "You are an AI programming assistant.\nFollow the user's requi"
+     ],
+     [
+      32,
+      "You are a language learning bot designed to help users pract"
+     ],
+     [
+      44,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      54,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      74,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ]
+    ]
+   },
+   "mistralai/Ministral-3-8B-Instruct-2512-BF16": {
+    "t1": [
+     [
+      6,
+      true,
+      0.7
+     ],
+     [
+      19,
+      true,
+      0.1
+     ],
+     [
+      43,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      50,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 46,
+    "greedy_n": 12,
+    "plain_greedy": [
+     [
+      3,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      12,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      17,
+      "Respond like a sustainability consultant for medium-sized co"
+     ],
+     [
+      26,
+      "You are a friendly AI agent who can provide assistance to th"
+     ],
+     [
+      27,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      33,
+      "Act as a fitness tracker assistant. Help users monitor their"
+     ],
+     [
+      73,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ]
+    ]
+   },
+   "mistralai/Mistral-7B-Instruct-v0.1": {
+    "t1": [
+     [
+      15,
+      true,
+      0.4
+     ],
+     [
+      24,
+      false,
+      0.7
+     ],
+     [
+      29,
+      true,
+      0.7
+     ],
+     [
+      72,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      3,
+      true,
+      0.1
+     ],
+     [
+      9,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      2,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      10,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      23,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      24,
+      ""
+     ],
+     [
+      26,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      33,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      35,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      36,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      47,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      49,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      51,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      65,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      67,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      69,
+      "Simulate a highly competent administrative assistant. Handle"
+     ]
+    ]
+   },
+   "mistralai/Mistral-7B-Instruct-v0.2": {
+    "t1": [
+     [
+      12,
+      true,
+      0.4
+     ],
+     [
+      34,
+      true,
+      0.7
+     ],
+     [
+      56,
+      true,
+      1.0
+     ],
+     [
+      72,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      13,
+      true,
+      0.1
+     ],
+     [
+      68,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 57,
+    "greedy_n": 19,
+    "plain_greedy": [
+     [
+      0,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      5,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      10,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      27,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      29,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      30,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      39,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      42,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      51,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      57,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      59,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      60,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      72,
+      ""
+     ],
+     [
+      73,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      74,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ]
+    ]
+   },
+   "mistralai/Mistral-7B-Instruct-v0.3": {
+    "t1": [
+     [
+      0,
+      true,
+      1.0
+     ],
+     [
+      51,
+      false,
+      0.7
+     ],
+     [
+      68,
+      true,
+      0.7
+     ],
+     [
+      69,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      27,
+      true,
+      0.1
+     ],
+     [
+      34,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      2,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      7,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      11,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      14,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      15,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      17,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      31,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      33,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      38,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      39,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      51,
+      ""
+     ],
+     [
+      59,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      67,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      71,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ]
+    ]
+   },
+   "mistralai/Mistral-Small-24B-Instruct-2501": {
+    "t1": [
+     [
+      11,
+      true,
+      0.7
+     ],
+     [
+      27,
+      true,
+      0.1
+     ],
+     [
+      42,
+      true,
+      1.0
+     ],
+     [
+      53,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 47,
+    "greedy_n": 17,
+    "plain_greedy": [
+     [
+      2,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      16,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      17,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      37,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      46,
+      "The prompt below is a question to answer, a task to complete"
+     ],
+     [
+      61,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      62,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      63,
+      "You are a cooking assistant bot here to help users find and "
+     ],
+     [
+      65,
+      "You are a virtual travel guide for a tourism board website. "
+     ]
+    ]
+   },
+   "mistralai/Mistral-Small-3.1-24B-Instruct-2503": {
+    "t1": [
+     [
+      7,
+      true,
+      0.7
+     ],
+     [
+      24,
+      true,
+      0.1
+     ],
+     [
+      45,
+      true,
+      1.0
+     ],
+     [
+      46,
+      false,
+      0.1
+     ]
+    ],
+    "t2": [
+     [
+      14,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 7,
+    "plain_greedy": [
+     [
+      9,
+      "When asked for feedback, respond like a product designer rev"
+     ],
+     [
+      10,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      27,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      31,
+      "Act as a bilingual customer support agent fluent in Spanish "
+     ],
+     [
+      46,
+      ""
+     ],
+     [
+      64,
+      "You are a knowledgeable and reliable expert that can answer "
+     ]
+    ]
+   },
+   "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct": {
+    "t1": [
+     [
+      7,
+      true,
+      0.7
+     ],
+     [
+      24,
+      true,
+      0.1
+     ],
+     [
+      32,
+      false,
+      0.4
+     ],
+     [
+      48,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      11,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 53,
+    "greedy_n": 11,
+    "plain_greedy": [
+     [
+      12,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      31,
+      "You are an AI fashion consultant. Assist users in choosing o"
+     ],
+     [
+      32,
+      ""
+     ],
+     [
+      36,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      60,
+      "You are a virtual travel guide for a tourism board website. "
+     ],
+     [
+      62,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ]
+    ]
+   },
+   "nvidia/Llama3-ChatQA-1.5-8B": {
+    "t1": [
+     [
+      4,
+      true,
+      0.4
+     ],
+     [
+      25,
+      true,
+      1.0
+     ],
+     [
+      63,
+      true,
+      0.7
+     ],
+     [
+      69,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      19,
+      true,
+      1.0
+     ],
+     [
+      66,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      3,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      10,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      11,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      20,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      22,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      26,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      28,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      31,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      43,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      50,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      53,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      69,
+      ""
+     ],
+     [
+      72,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      74,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ]
+    ]
+   },
+   "openchat/openchat-3.6-8b-20240522": {
+    "t1": [
+     [
+      9,
+      true,
+      0.4
+     ],
+     [
+      27,
+      false,
+      0.7
+     ],
+     [
+      43,
+      true,
+      0.7
+     ],
+     [
+      46,
+      true,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      26,
+      true,
+      0.1
+     ],
+     [
+      65,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      4,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      7,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      21,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      27,
+      ""
+     ],
+     [
+      35,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      37,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      39,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      47,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      51,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      55,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      59,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      63,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      64,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      74,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ]
+    ]
+   },
+   "openchat/openchat_3.5": {
+    "t1": [
+     [
+      0,
+      false,
+      0.7
+     ],
+     [
+      3,
+      true,
+      1.0
+     ],
+     [
+      17,
+      true,
+      0.7
+     ],
+     [
+      73,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      57,
+      true,
+      1.0
+     ],
+     [
+      74,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      0,
+      ""
+     ],
+     [
+      9,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      11,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      20,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      28,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      30,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      34,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      40,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      41,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      42,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      44,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      46,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      47,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      53,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ]
+    ]
+   },
+   "tiiuae/Falcon-H1-3B-Instruct": {
+    "t1": [
+     [
+      7,
+      true,
+      0.7
+     ],
+     [
+      41,
+      true,
+      1.0
+     ],
+     [
+      55,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      16,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 44,
+    "greedy_n": 16,
+    "plain_greedy": [
+     [
+      1,
+      "Assist pet owners by offering advice on pet care products, f"
+     ],
+     [
+      33,
+      "I want you to act as a growth hacker. You will create innova"
+     ],
+     [
+      47,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      53,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ],
+     [
+      54,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      57,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      72,
+      "Help library visitors explore book catalogs, reserve materia"
+     ]
+    ]
+   },
+   "tiiuae/Falcon-H1-7B-Instruct": {
+    "t1": [
+     [
+      7,
+      true,
+      0.7
+     ],
+     [
+      28,
+      true,
+      0.1
+     ],
+     [
+      41,
+      false,
+      0.4
+     ],
+     [
+      43,
+      true,
+      1.0
+     ],
+     [
+      50,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 50,
+    "greedy_n": 13,
+    "plain_greedy": [
+     [
+      10,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      23,
+      "Respond like a sustainability consultant for medium-sized co"
+     ],
+     [
+      26,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      32,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      41,
+      ""
+     ],
+     [
+      47,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      52,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      57,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      74,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ]
+    ]
+   },
+   "tiiuae/Falcon3-10B-Instruct": {
+    "t1": [
+     [
+      30,
+      true,
+      0.4
+     ],
+     [
+      54,
+      true,
+      0.7
+     ],
+     [
+      56,
+      true,
+      1.0
+     ],
+     [
+      70,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      9,
+      true,
+      0.1
+     ],
+     [
+      27,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      4,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      13,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      16,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      21,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      22,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      26,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      36,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      41,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      48,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      49,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      58,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      68,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      70,
+      ""
+     ],
+     [
+      71,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ]
+    ]
+   },
+   "tiiuae/Falcon3-1B-Instruct": {
+    "t1": [
+     [
+      4,
+      true,
+      0.7
+     ],
+     [
+      21,
+      true,
+      0.1
+     ],
+     [
+      36,
+      true,
+      1.0
+     ],
+     [
+      39,
+      false,
+      0.1
+     ],
+     [
+      49,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      5,
+      false,
+      1.0
+     ],
+     [
+      16,
+      false,
+      0.4
+     ]
+    ],
+    "t3_n": 51,
+    "greedy_n": 15,
+    "plain_greedy": [
+     [
+      3,
+      "The prompt below is a question to answer, a task to complete"
+     ],
+     [
+      5,
+      "You are a helpful assistant."
+     ],
+     [
+      6,
+      "You are an AI programming assistant.\nFollow the user's requi"
+     ],
+     [
+      8,
+      "Respond as a personal concierge for executives. Prioritize b"
+     ],
+     [
+      16,
+      "You are a helpful assistant."
+     ],
+     [
+      31,
+      "Respond like a sustainability consultant for medium-sized co"
+     ],
+     [
+      39,
+      ""
+     ],
+     [
+      50,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      52,
+      "When asked a question, provide a summary of the latest peer-"
+     ],
+     [
+      68,
+      "Simulate a highly competent administrative assistant. Handle"
+     ]
+    ]
+   },
+   "tiiuae/Falcon3-3B-Instruct": {
+    "t1": [
+     [
+      39,
+      true,
+      1.0
+     ],
+     [
+      49,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      58,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 48,
+    "greedy_n": 11,
+    "plain_greedy": [
+     [
+      10,
+      "You are an AI programming assistant.\nFollow the user's requi"
+     ],
+     [
+      26,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      28,
+      "Assist potential buyers and renters by providing detailed in"
+     ],
+     [
+      50,
+      "You are FuturistGPT, a visionary expert in predicting and an"
+     ],
+     [
+      52,
+      "You are a knowledgeable and reliable expert that can answer "
+     ],
+     [
+      61,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ],
+     [
+      62,
+      "Respond as a first-time founder mentor, specializing in mark"
+     ]
+    ]
+   },
+   "tiiuae/Falcon3-7B-Instruct": {
+    "t1": [
+     [
+      6,
+      true,
+      1.0
+     ],
+     [
+      34,
+      true,
+      0.7
+     ],
+     [
+      57,
+      true,
+      0.4
+     ],
+     [
+      60,
+      false,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      43,
+      true,
+      1.0
+     ],
+     [
+      68,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      15,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      22,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      25,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      35,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      37,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      39,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      50,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      51,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      53,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      60,
+      ""
+     ],
+     [
+      62,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      63,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      65,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      70,
+      "Simulate a highly competent administrative assistant. Handle"
+     ]
+    ]
+   },
+   "togethercomputer/Llama-2-7B-32K-Instruct": {
+    "t1": [
+     [
+      14,
+      true,
+      0.4
+     ],
+     [
+      19,
+      true,
+      1.0
+     ],
+     [
+      20,
+      false,
+      0.7
+     ],
+     [
+      33,
+      true,
+      0.7
+     ]
+    ],
+    "t2": [
+     [
+      25,
+      true,
+      1.0
+     ],
+     [
+      73,
+      true,
+      0.1
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      0,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      1,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      3,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      6,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      7,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      11,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      18,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      20,
+      ""
+     ],
+     [
+      37,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      38,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      51,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      56,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      60,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      64,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ]
+    ]
+   },
+   "upstage/SOLAR-10.7B-Instruct-v1.0": {
+    "t1": [
+     [
+      13,
+      true,
+      1.0
+     ],
+     [
+      20,
+      false,
+      0.7
+     ],
+     [
+      53,
+      true,
+      0.7
+     ],
+     [
+      72,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      31,
+      true,
+      0.1
+     ],
+     [
+      32,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      5,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      6,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      10,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      20,
+      ""
+     ],
+     [
+      21,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      22,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      30,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      38,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      45,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      47,
+      "You are a social media manager bot. Help users develop conte"
+     ],
+     [
+      48,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      49,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      51,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      68,
+      "You are a financial advisor bot for a banking website. Assis"
+     ]
+    ]
+   },
+   "utter-project/EuroLLM-1.7B-Instruct": {
+    "t1": [
+     [
+      8,
+      false,
+      0.7
+     ],
+     [
+      13,
+      true,
+      1.0
+     ],
+     [
+      45,
+      true,
+      0.7
+     ],
+     [
+      66,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [
+     [
+      37,
+      true,
+      0.1
+     ],
+     [
+      73,
+      true,
+      1.0
+     ]
+    ],
+    "t3_n": 54,
+    "greedy_n": 18,
+    "plain_greedy": [
+     [
+      2,
+      "Engage like a peer reviewer for grant applications. Focus on"
+     ],
+     [
+      8,
+      ""
+     ],
+     [
+      15,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      16,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      19,
+      "Act as a knowledgeable tutor, helping students understand co"
+     ],
+     [
+      29,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      31,
+      "Write onboarding messages for a fintech app, guiding new use"
+     ],
+     [
+      34,
+      "Simulate a highly competent administrative assistant. Handle"
+     ],
+     [
+      35,
+      "Help library visitors explore book catalogs, reserve materia"
+     ],
+     [
+      51,
+      "You are a financial advisor bot for a banking website. Assis"
+     ],
+     [
+      62,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      63,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      64,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      70,
+      "You are a social media manager bot. Help users develop conte"
+     ]
+    ]
+   },
+   "utter-project/EuroLLM-9B-Instruct": {
+    "t1": [
+     [
+      8,
+      true,
+      0.7
+     ],
+     [
+      28,
+      true,
+      0.1
+     ],
+     [
+      43,
+      true,
+      1.0
+     ],
+     [
+      55,
+      true,
+      0.4
+     ]
+    ],
+    "t2": [],
+    "t3_n": 48,
+    "greedy_n": 10,
+    "plain_greedy": [
+     [
+      3,
+      "You are StartupGPT, an AI expert in the world of entrepreneu"
+     ],
+     [
+      4,
+      "Answer as a wine and cheese pairing assistant for event plan"
+     ],
+     [
+      6,
+      "You are an AI health and wellness coach. Offer advice on hea"
+     ],
+     [
+      17,
+      "Assist pet owners by offering advice on pet care products, f"
+     ],
+     [
+      25,
+      "Assist indie game developers by providing feedback on mechan"
+     ],
+     [
+      35,
+      "Offer parenting support from a Montessori perspective. Focus"
+     ],
+     [
+      39,
+      "Serve as a tech support bot. Assist users with troubleshooti"
+     ],
+     [
+      51,
+      "Act like an editorial fact-checker. Identify possible inaccu"
+     ],
+     [
+      70,
+      "Assist indie game developers by providing feedback on mechan"
+     ]
+    ]
+   },
+   "utter-project/EuroLLM-9B-Instruct-2512": {
+    "t1": [
+     [
+      9,
+      true,
+      0.7
+     ],
+     [
+      29,
+      true,
+      0.1
+     ],
+     [
+      51,
+      true,
+      0.4
+     ],
+     [
+      54,
+      false,
+      1.0
+     ]
+    ],
+    "t2": [
+     [
+      58,
+      true,
+      0.4
+     ]
+    ],
+    "t3_n": 45,
+    "greedy_n": 8,
+    "plain_greedy": [
+     [
+      20,
+      "Reply like an AI voice UX tester. Evaluate prompts for clari"
+     ],
+     [
+      25,
+      "Respond like a sustainability consultant for medium-sized co"
+     ],
+     [
+      35,
+      "Provide personal productivity advice grounded in cognitive s"
+     ],
+     [
+      54,
+      ""
+     ]
+    ]
+   }
+  },
+  "same_config_index_all_models": {
+   "effective": false,
+   "field": false,
+   "greedy_first": false
+  }
+ },
+ "single_effective_vs_field_identical_points": false,
+ "health": {
+  "CENTROID|raw": {
+   "median_d2_per_query": {
+    "min": 6.572935459216385,
+    "p50": 14.807640655628681,
+    "max": 51.81174286814408,
+    "max_over_min": 7.88258810536396,
+    "n_zero_median": 0
+   },
+   "exact_zero_cells": {
+    "total": 0,
+    "queries_with_any": 0,
+    "queries_with_ge_m": 0,
+    "pairs_ever": 0,
+    "max_per_pair": 0,
+    "max_per_query": 0
+   },
+   "near_zero_cells": 0,
+   "k1_objective": {
+    "argmax": 193,
+    "max": 3.8383857591112687,
+    "n_at_max": 1,
+    "second": 3.746081422793774,
+    "n_zero": 0,
+    "n_nan": 0
+   },
+   "most_colliding_pairs": [],
+   "zero_median_queries": []
+  },
+  "CENTROID|norm": {
+   "median_d2_per_query": {
+    "min": 6.572935459216385,
+    "p50": 14.807640655628681,
+    "max": 51.81174286814408,
+    "max_over_min": 7.88258810536396,
+    "n_zero_median": 0
+   },
+   "exact_zero_cells": {
+    "total": 0,
+    "queries_with_any": 0,
+    "queries_with_ge_m": 0,
+    "pairs_ever": 0,
+    "max_per_pair": 0,
+    "max_per_query": 0
+   },
+   "near_zero_cells": 0,
+   "k1_objective": {
+    "argmax": 246,
+    "max": 0.6585004834778982,
+    "n_at_max": 1,
+    "second": 0.6422737706380066,
+    "n_zero": 0,
+    "n_nan": 0
+   },
+   "most_colliding_pairs": [],
+   "zero_median_queries": []
+  },
+  "SINGLE|raw": {
+   "median_d2_per_query": {
+    "min": 0.0,
+    "p50": 75.68357225895477,
+    "max": 166.99042068018485,
+    "max_over_min": null,
+    "n_zero_median": 1
+   },
+   "exact_zero_cells": {
+    "total": 12541,
+    "queries_with_any": 86,
+    "queries_with_ge_m": 9,
+    "pairs_ever": 3054,
+    "max_per_pair": 46,
+    "max_per_query": 1831
+   },
+   "near_zero_cells": 12541,
+   "k1_objective": {
+    "argmax": 99,
+    "max": 8.261847475209752,
+    "n_at_max": 1,
+    "second": 8.250857186015375,
+    "n_zero": 9,
+    "n_nan": 0
+   },
+   "most_colliding_pairs": [
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 46
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 33
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 32
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 26
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 25
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 22
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 21
+    }
+   ],
+   "zero_median_queries": [
+    253
+   ]
+  },
+  "SINGLE|norm": {
+   "median_d2_per_query": {
+    "min": 0.0,
+    "p50": 75.68357225895477,
+    "max": 166.99042068018485,
+    "max_over_min": null,
+    "n_zero_median": 1
+   },
+   "exact_zero_cells": {
+    "total": 12541,
+    "queries_with_any": 86,
+    "queries_with_ge_m": 9,
+    "pairs_ever": 3054,
+    "max_per_pair": 46,
+    "max_per_query": 1831
+   },
+   "near_zero_cells": 12541,
+   "k1_objective": {
+    "argmax": 20,
+    "max": 0.7626094202855839,
+    "n_at_max": 1,
+    "second": 0.7474225745499982,
+    "n_zero": 8,
+    "n_nan": 1
+   },
+   "most_colliding_pairs": [
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 46
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 33
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 32
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 26
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 25
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 22
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 21
+    }
+   ],
+   "zero_median_queries": [
+    253
+   ]
+  },
+  "SINGLE-field|raw": {
+   "median_d2_per_query": {
+    "min": 19.658988628821135,
+    "p50": 77.32629777949359,
+    "max": 170.62682577420128,
+    "max_over_min": 8.679328779103782,
+    "n_zero_median": 0
+   },
+   "exact_zero_cells": {
+    "total": 12183,
+    "queries_with_any": 91,
+    "queries_with_ge_m": 9,
+    "pairs_ever": 3011,
+    "max_per_pair": 38,
+    "max_per_query": 1711
+   },
+   "near_zero_cells": 12183,
+   "k1_objective": {
+    "argmax": 22,
+    "max": 8.818664099689533,
+    "n_at_max": 1,
+    "second": 8.365456570662438,
+    "n_zero": 9,
+    "n_nan": 0
+   },
+   "most_colliding_pairs": [
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 38
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 28
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 26
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 25
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 23
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 22
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 21
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 20
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 19
+    },
+    {
+     "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 18
+    },
+    {
+     "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+     "zero_queries": 17
+    }
+   ],
+   "zero_median_queries": []
+  },
+  "SINGLE-field|norm": {
+   "median_d2_per_query": {
+    "min": 19.658988628821135,
+    "p50": 77.32629777949359,
+    "max": 170.62682577420128,
+    "max_over_min": 8.679328779103782,
+    "n_zero_median": 0
+   },
+   "exact_zero_cells": {
+    "total": 12183,
+    "queries_with_any": 91,
+    "queries_with_ge_m": 9,
+    "pairs_ever": 3011,
+    "max_per_pair": 38,
+    "max_per_query": 1711
+   },
+   "near_zero_cells": 12183,
+   "k1_objective": {
+    "argmax": 20,
+    "max": 0.7765816867073979,
+    "n_at_max": 1,
+    "second": 0.7575212933327722,
+    "n_zero": 9,
+    "n_nan": 0
+   },
+   "most_colliding_pairs": [
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 38
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 28
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 26
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 25
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 23
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 22
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 21
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 20
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 19
+    },
+    {
+     "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 18
+    },
+    {
+     "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+     "zero_queries": 17
+    }
+   ],
+   "zero_median_queries": []
+  },
+  "SINGLE-greedyfirst|raw": {
+   "median_d2_per_query": {
+    "min": 21.371404653048558,
+    "p50": 83.80369501002201,
+    "max": 175.44701612262438,
+    "max_over_min": 8.20942839139015,
+    "n_zero_median": 0
+   },
+   "exact_zero_cells": {
+    "total": 10863,
+    "queries_with_any": 91,
+    "queries_with_ge_m": 9,
+    "pairs_ever": 2847,
+    "max_per_pair": 46,
+    "max_per_query": 1713
+   },
+   "near_zero_cells": 10863,
+   "k1_objective": {
+    "argmax": 68,
+    "max": 8.608260917498757,
+    "n_at_max": 1,
+    "second": 8.552145545915,
+    "n_zero": 9,
+    "n_nan": 0
+   },
+   "most_colliding_pairs": [
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 46
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 33
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 32
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 22
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 19
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 19
+    },
+    {
+     "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+     "zero_queries": 17
+    },
+    {
+     "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 17
+    }
+   ],
+   "zero_median_queries": []
+  },
+  "SINGLE-greedyfirst|norm": {
+   "median_d2_per_query": {
+    "min": 21.371404653048558,
+    "p50": 83.80369501002201,
+    "max": 175.44701612262438,
+    "max_over_min": 8.20942839139015,
+    "n_zero_median": 0
+   },
+   "exact_zero_cells": {
+    "total": 10863,
+    "queries_with_any": 91,
+    "queries_with_ge_m": 9,
+    "pairs_ever": 2847,
+    "max_per_pair": 46,
+    "max_per_query": 1713
+   },
+   "near_zero_cells": 10863,
+   "k1_objective": {
+    "argmax": 20,
+    "max": 0.7629673470958447,
+    "n_at_max": 1,
+    "second": 0.7383372715159491,
+    "n_zero": 9,
+    "n_nan": 0
+   },
+   "most_colliding_pairs": [
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 46
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-128k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 33
+    },
+    {
+     "pair": "microsoft/Phi-3-medium-4k-instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 32
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-128k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 27
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 24
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-medium-4k-instruct",
+     "zero_queries": 22
+    },
+    {
+     "pair": "Qwen/Qwen2.5-0.5B-Instruct | microsoft/Phi-3-mini-4k-instruct",
+     "zero_queries": 19
+    },
+    {
+     "pair": "Qwen/Qwen2.5-7B-Instruct-1M | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 19
+    },
+    {
+     "pair": "Qwen/Qwen3-30B-A3B-Instruct-2507 | Qwen/Qwen3-4B-Instruct-2507",
+     "zero_queries": 17
+    },
+    {
+     "pair": "microsoft/Phi-3-mini-4k-instruct | microsoft/Phi-4-mini-instruct",
+     "zero_queries": 17
+    }
+   ],
+   "zero_median_queries": []
+  }
+ },
+ "distances_npz_sha256": "27f34628a7d9c37609a82295369c8cbc1b34d130344a5df21117d9b679e586be",
+ "distances_wall_min": 0.18,
+ "code_path_check": {
+  "chain": [
+   193,
+   117,
+   233,
+   237,
+   0,
+   253,
+   121,
+   18
+  ],
+  "d029_chain": [
+   193,
+   117,
+   233,
+   237,
+   0,
+   253,
+   121,
+   18
+  ],
+  "identical": true,
+  "per_step_abs_objective_diff": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "trace": [
+   {
+    "k": 1,
+    "query": 193,
+    "objective_cvar": 0.16909688676209175,
+    "mean_stat": 0.6395837664604187,
+    "min_stat": 0.023628896102309227,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 2,
+    "query": 117,
+    "objective_cvar": 0.1957188306965915,
+    "mean_stat": 0.646472156047821,
+    "min_stat": 0.023806698620319366,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 3,
+    "query": 233,
+    "objective_cvar": 0.206720734140327,
+    "mean_stat": 0.5603510141372681,
+    "min_stat": 0.02387072704732418,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 4,
+    "query": 237,
+    "objective_cvar": 0.2087379843205297,
+    "mean_stat": 0.5171975493431091,
+    "min_stat": 0.02719801850616932,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 5,
+    "query": 0,
+    "objective_cvar": 0.20963114111342518,
+    "mean_stat": 0.5103249549865723,
+    "min_stat": 0.028083359822630882,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 6,
+    "query": 253,
+    "objective_cvar": 0.21026439416934462,
+    "mean_stat": 0.46963971853256226,
+    "min_stat": 0.028095342218875885,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 7,
+    "query": 121,
+    "objective_cvar": 0.21045679424782426,
+    "mean_stat": 0.48249921202659607,
+    "min_stat": 0.02729763649404049,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 8,
+    "query": 18,
+    "objective_cvar": 0.2099518101996317,
+    "mean_stat": 0.4696199893951416,
+    "min_stat": 0.02700088359415531,
+    "n_exact_ties_at_max": 1
+   }
+  ],
+  "wall_min": 1.8
+ },
+ "inventory": {
+  "D029_JG": {
+   "att_counts": true,
+   "lin_counts": true,
+   "att_logits": true,
+   "lin_logits": true,
+   "logits_order_ok": true
+  },
+  "D029_PAPER8": {
+   "att_counts": true,
+   "lin_counts": true,
+   "att_logits": true,
+   "lin_logits": true,
+   "logits_order_ok": true
+  },
+  "D029_hard": {
+   "H_all": 57,
+   "H_N": 38,
+   "H_X": 19,
+   "stably_hard": 26,
+   "no_mode_mixed": 52,
+   "fresh_only": 42
+  },
+  "D027_n_prime_pairs": 161,
+  "D031_v2_boot_seed": 20261005,
+  "D031_v2_n_slot": 24,
+  "D024_files": {
+   "analysis.json": true,
+   "selection.json": true,
+   "run_counts.npz": true,
+   "linear_counts.npz": true
+  }
+ },
+ "stops": [
+  "SINGLE|norm: 1 queries with median d2 = 0"
+ ],
+ "wall_min": 2.36
+}
