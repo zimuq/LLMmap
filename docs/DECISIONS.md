@@ -1964,6 +1964,17 @@ interpretable; specialist-based two-stage design not pursued
     D024 is closed. Its I3-violating ablation arms (CENTROID, SINGLE) carry
     D024's confinement rule.
   Decided by: human.
+
+[2026-11-01] D034 paused; D035 runs first
+  - Human: pause D034. It needs new corpus generation (S_test' pools, I7
+    bump), which belongs to the corpus/dataset session, so no P was
+    requested from TACC. Run the fingerprint ablation (D035) first.
+  - The human also proposed renaming D035 -> D034 ("D024 + 10"). Not done:
+    it conflicts with CLAUDE.md's never-reuse rule, and "D034" is already
+    cited as the confirmatory D in TACC-owned text (D033 R section 8),
+    D033's header, FINDINGS and DECISIONS. Raised with the human; ids stay
+    unless the human overrides.
+  Decided by: human (pause); id question pending the human's answer.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
