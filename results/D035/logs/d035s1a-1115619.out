@@ -1,0 +1,27 @@
+=== node: c642-091.vista.tacc.utexas.edu start: Sun Nov  1 11:58:09 PM CST 2026 | PYTHONPATH=.:experiments python experiments/d035_select.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          23         200           0           0         188
+Swap:             24           4          20
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> PYTHONPATH=.:experiments python experiments/d035_select.py 23:58:09
+[A] [S1a] CENTROID|raw: [193, 136, 233, 0, 255, 251, 252, 253]  objective [3.8384, 5.812, 7.3546, 8.783, 9.9624, 10.9301, 11.8225, 12.6683]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] CENTROID|norm: [246, 51, 199, 251, 95, 253, 221, 22]  objective [0.6585, 1.0067, 1.2724, 1.5004, 1.6977, 1.8837, 2.0516, 2.2071]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] SINGLE|raw: [99, 22, 226, 144, 94, 72, 0, 251]  objective [8.2618, 13.6669, 17.5142, 20.339, 22.8632, 25.1219, 27.1638, 29.149]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] SINGLE|norm: [20, 214, 42, 22, 72, 118, 8, 62]  objective [0.7626, 1.1555, 1.4669, 1.7355, 1.9666, 2.1723, 2.3666, 2.54]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] SINGLE-field|raw: [22, 226, 68, 193, 144, 72, 251, 94]  objective [8.8187, 14.2093, 17.9474, 20.7032, 23.167, 25.4151, 27.45, 29.3682]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] SINGLE-field|norm: [20, 78, 244, 214, 41, 42, 22, 72]  objective [0.7766, 1.1544, 1.4594, 1.7168, 1.9446, 2.1519, 2.3476, 2.5217]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] SINGLE-greedyfirst|raw: [68, 22, 226, 143, 0, 135, 72, 94]  objective [8.6083, 14.1, 17.9358, 20.9252, 23.4397, 25.726, 27.7721, 29.6401]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] SINGLE-greedyfirst|norm: [20, 8, 22, 70, 214, 24, 244, 136]  objective [0.763, 1.1486, 1.4606, 1.7277, 1.9588, 2.1635, 2.3454, 2.511]  ties [1, 1, 1, 1, 1, 1, 1, 1]
+[A] [S1a] identical-input k: {'P1_if_raw': [1], 'P1_if_norm': [], 'P2_if_raw': [], 'P2_if_norm': [], 'CLOUD_minus_SINGLE_if_raw': [], 'CLOUD_minus_SINGLE_if_norm': [], 'CENTROID_raw_vs_norm': []}
+[A] [S1a] identical to D029 sets: {'CENTROID|raw': {'JG': [1], 'PAPER8': []}, 'CENTROID|norm': {'JG': [], 'PAPER8': []}, 'SINGLE|raw': {'JG': [], 'PAPER8': []}, 'SINGLE|norm': {'JG': [], 'PAPER8': []}}
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S1a] cross-objective table: CLOUD-vs-D029 max |d| 3.94e-07; own-row max |d| 4.97e-07 (3.6 min)
+[A] [S1a] overlaps k=8 with CLOUD: {'CLOUD': 8, 'CENTROID|raw': 4, 'CENTROID|norm': 1, 'SINGLE|raw': 1, 'SINGLE|norm': 0, 'SINGLE-field|raw': 1, 'SINGLE-field|norm': 0, 'SINGLE-greedyfirst|raw': 1, 'SINGLE-greedyfirst|norm': 0, 'PAPER8': 1, 'MMR|pearson|0.7 (D031, reference)': 3}
+[A] [S1a] colliding queries in chains: {'CLOUD': [233, 253], 'CENTROID|raw': [233, 252, 253], 'CENTROID|norm': [253], 'SINGLE|raw': [], 'SINGLE|norm': [], 'SINGLE-field|raw': [], 'SINGLE-field|norm': [], 'SINGLE-greedyfirst|raw': [], 'SINGLE-greedyfirst|norm': [], 'PAPER8': [], 'MMR|pearson|0.7 (D031, reference)': []}
+[A] [S1a] wrote ./results/D035/chains.json (3.87 min); stops: []
+=== end: Mon Nov  2 12:02:04 AM CST 2026 rc=0 ===
