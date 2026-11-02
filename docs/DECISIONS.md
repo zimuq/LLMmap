@@ -1954,6 +1954,16 @@ interpretable; specialist-based two-stage design not pursued
   - METHOD.md: no edit yet; the METHOD rewrite (diff to the human) follows
     the framing freeze.
   Decided by: human (framing); design-side (D034 revision, routine).
+
+[2026-11-01] D034 primary 2 comparator = MMR-PP[MEAN]*; fingerprint ablation on v2 = D035
+  - Human: primary 2 is JG - MMR-PP[MEAN]* (the strongest mean-criterion arm).
+    TOP-K[MEAN] (below RANDOM on v2 attention) stays as a row, per the
+    strongest-baseline lesson (D024).
+  - Human: redo D024's fingerprint-definition ablation on corpus v2, under
+    JG only. It is a new id (D035), not "D024v2": ids are sequential and
+    D024 is closed. Its I3-violating ablation arms (CENTROID, SINGLE) carry
+    D024's confinement rule.
+  Decided by: human.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
