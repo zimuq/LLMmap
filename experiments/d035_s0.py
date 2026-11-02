@@ -1,8 +1,8 @@
 """D035 / S0 — inventory, target-free (run before the P1 Review, as D024's S0 was).
 
 (1) SINGLE reference config per model under D024's tier rule, both readings ("effective": greedy = temperature 0,
-    the D's SINGLE; "field": the literal temperature field, SINGLE-field). Stop condition: a model with no config in
-    any tier.
+    the D's SINGLE; "field": the literal temperature field, SINGLE-field), plus P1 Call 1's "greedy_first" reading
+    (SINGLE-greedyfirst, selection only). Stop condition: a model with no config in any tier.
 (2) 259 x 3,570 per-query squared-distance arrays from S_build: CENTROID, SINGLE (effective), SINGLE-field, each
     raw and median-normalised. Accumulator == direct concatenation asserted for CENTROID. Health rows per array
     (median spread, exact-zero / near-zero cells, the k = 1 objective's argmax uniqueness). Stop conditions: a
@@ -84,13 +84,21 @@ def main():
     def plain(pc, sys_):
         return pc["cot_prompt"] is None and pc["rag_prompt"] is None and (sys_ is None or pc["system_prompt"] == sys_)
 
+    gf = L.single_choice_greedy_first(pcs, ms)
+    tiers["greedy_first"] = {m: dict(config_index=int(c), tier=int(t), do_sample=pc["sampling_hparams"]["do_sample"],
+                                     temperature=pc["sampling_hparams"]["temperature"],
+                                     system_prompt=pc["system_prompt"]) for m, (c, t, pc) in gf.items()}
+    out["single_greedy_first_differs"] = sorted(m for m in ms if tiers["greedy_first"][m]["config_index"]
+                                                != tiers["effective"][m]["config_index"])
     tier_sets = {m: dict(
         t1=sorted([c, pc["sampling_hparams"]["do_sample"], pc["sampling_hparams"]["temperature"]]
                   for c, pc in pcs[m].items() if plain(pc, "")),
         t2=sorted([c, pc["sampling_hparams"]["do_sample"], pc["sampling_hparams"]["temperature"]]
                   for c, pc in pcs[m].items() if plain(pc, "You are a helpful assistant.")),
         t3_n=sum(1 for pc in pcs[m].values() if plain(pc, None)),
-        greedy_n=sum(1 for pc in pcs[m].values() if not pc["sampling_hparams"]["do_sample"]))
+        greedy_n=sum(1 for pc in pcs[m].values() if not pc["sampling_hparams"]["do_sample"]),
+        plain_greedy=sorted([c, pc["system_prompt"][:60]] for c, pc in pcs[m].items()
+                            if plain(pc, None) and not pc["sampling_hparams"]["do_sample"]))
         for m in ms}
     out["single_tier"] = dict(
         readings=tiers,
@@ -116,7 +124,7 @@ def main():
         direct = float(np.sum((np.concatenate(cen[ia[p], qs]) - np.concatenate(cen[ib[p], qs])) ** 2))
         assert abs(direct - raw["CENTROID"][qs, p].sum()) < 1e-9 * direct, (p, direct)
     del cen
-    for rd, arm in (("effective", "SINGLE"), ("field", "SINGLE-field")):
+    for rd, arm in (("effective", "SINGLE"), ("field", "SINGLE-field"), ("greedy_first", "SINGLE-greedyfirst")):
         if len(tiers[rd]) == n:
             cfg = {m: tiers[rd][m]["config_index"] for m in ms}
             raw[arm] = L.d2_chunked(L.single_points(X, ms, axis, cfg), ia, ib)
@@ -127,6 +135,7 @@ def main():
         for sc, D in (("raw", R), ("norm", N)):
             h = health(D, R, ms, ia, ib)
             hl[f"{arm}|{sc}"] = h
+            h["zero_median_queries"] = [int(q) for q in np.where(med == 0)[0]]
             if h["median_d2_per_query"]["n_zero_median"] and sc == "norm":
                 stops.append(f"{arm}|norm: {h['median_d2_per_query']['n_zero_median']} queries with median d2 = 0")
             if h["k1_objective"]["n_at_max"] != 1:

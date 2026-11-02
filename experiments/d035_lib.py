@@ -98,3 +98,20 @@ def normalise(D2):
     with np.errstate(divide="ignore", invalid="ignore"):
         N = np.where(med[:, None] > 0, D2 / med[:, None], np.nan)
     return N, med
+
+
+def single_choice_greedy_first(pcs, ms):
+    """P1 Call 1 sensitivity reading (selection only): the first of D024's tiers 1 -> 3 that contains a greedy
+    (do_sample = False) config, lowest config index within it; if no tier holds a greedy config, D024's rule."""
+    from d024_lib import _tier
+    out = {}
+    for m in ms:
+        pick = None
+        for t in (1, 2, 3):
+            cand = sorted(c for c, pc in pcs[m].items() if _tier(pc) is not None and (_tier(pc) == t or t == 3)
+                          and not pc["sampling_hparams"]["do_sample"])
+            if cand:
+                pick = (cand[0], t, pcs[m][cand[0]])
+                break
+        out[m] = pick if pick is not None else single_config(pcs[m], "effective")
+    return out
