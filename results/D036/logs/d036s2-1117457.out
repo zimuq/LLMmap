@@ -1,0 +1,18 @@
+=== node: c642-021.vista.tacc.utexas.edu start: Mon Nov  2 08:25:30 PM CST 2026 | OMP_NUM_THREADS=32 D031_WORKERS=2 D031_THREADS=32 PYTHONPATH=.:experiments python experiments/d036_train.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          21         202           0           0         191
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=32 D031_WORKERS=2 D031_THREADS=32 PYTHONPATH=.:experiments python experiments/d036_train.py 20:25:30
+[A] Traceback (most recent call last):
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d036_train.py", line 129, in <module>
+[A]     main()
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d036_train.py", line 73, in main
+[A]     assert_d035(cn, lg, f"CENTROID|raw|{k}", d35["lin"])
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d036_train.py", line 52, in assert_d035
+[A]     assert np.array_equal(cn[c], z[f"{key35}|{c}"]), f"{key35} {c} differs from D035"
+[A]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A] AssertionError: CENTROID|raw|1 cnt_pair_all differs from D035
+[A] [A] FAILED: OMP_NUM_THREADS=32 D031_WORKERS=2 D031_THREADS=32 PYTHONPATH=.:experiments python experiments/d036_train.py
+=== end: Mon Nov  2 08:37:44 PM CST 2026 rc=1 ===
