@@ -1,0 +1,59 @@
+=== node: c642-091.vista.tacc.utexas.edu start: Mon Nov  2 06:13:03 PM CST 2026 | OMP_NUM_THREADS=8 D031_WORKERS=8 D031_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_train.py | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_openset.py |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          22         201           0           0         190
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[B] [B] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_openset.py 18:13:03
+[A] [A] >>> OMP_NUM_THREADS=8 D031_WORKERS=8 D031_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_train.py 18:13:03
+[B] [S3] terms for 22 queries (1.1 min)
+[B] [S3] terms vs D033 (19 shared queries): max |dA| 0.0e+00, |dW| 0.0e+00 -> PASS
+[B] [S3] CLOUD^fold re-scored (5 folds, k = 1..8) = D033 nc|model|JG|raw counts exactly -> PASS
+[B] [S3] wrote openset_counts.npz, openset.json (1.2 min)
+[A] [S2 lin] CLOUD-raw|1 done (797 it, 25.5s) (identical input: reproduced exactly)
+[A] [S2 lin] CLOUD-raw|2 done (945 it, 62.9s)
+[A] concurrent.futures.process._RemoteTraceback: 
+[A] """
+[A] Traceback (most recent call last):
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/process.py", line 261, in _process_worker
+[A]     r = call_item.fn(*call_item.args, **call_item.kwargs)
+[A]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/process.py", line 210, in _process_chunk
+[A]     return [fn(*args) for args in chunk]
+[A]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/process.py", line 210, in <listcomp>
+[A]     return [fn(*args) for args in chunk]
+[A]             ^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_train.py", line 145, in _lin_worker
+[A]     check_ident(CTX.view, "lin", job["ident"], job["k"], cn)
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d031_train.py", line 114, in check_ident
+[A]     assert np.array_equal(cn[c], v), f"identical-input {view} {readout} {ident} k={k} r={seed} {c} differs"
+[A]            ^^^^^^^^^^^^^^^^^^^^^^^^
+[A] AssertionError: identical-input v2 lin JG k=3 r=None cnt_total differs
+[A] """
+[A] 
+[A] The above exception was the direct cause of the following exception:
+[A] 
+[A] Traceback (most recent call last):
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d036_train.py", line 129, in <module>
+[A]     main()
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d036_train.py", line 70, in main
+[A]     for key, cn, lg, m in pmap(T._lin_worker, jobs):
+[A]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d035_train.py", line 74, in pmap
+[A]     for r in ex.map(fn, jobs):
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/process.py", line 620, in _chain_from_iterable_of_lists
+[A]     for element in iterable:
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+[A]     yield _result_or_cancel(fs.pop())
+[A]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+[A]     return fut.result(timeout)
+[A]            ^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+[A]     return self.__get_result()
+[A]            ^^^^^^^^^^^^^^^^^^^
+[A]   File "/work/11280/zimuq1/vista/miniconda3/envs/llmmap-gpu/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+[A]     raise self._exception
+[A] AssertionError: identical-input v2 lin JG k=3 r=None cnt_total differs
+[A] [A] FAILED: OMP_NUM_THREADS=8 D031_WORKERS=8 D031_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_train.py
+=== end: Mon Nov  2 06:18:41 PM CST 2026 rc=1 ===
