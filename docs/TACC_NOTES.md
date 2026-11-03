@@ -24,18 +24,6 @@
 <!-- TACC appends here. One entry per issue: what's wrong, exactly where
      (file + section), and why the ownership rule blocks a direct fix. -->
 
-**Issue 28 (2026-11-02) — D036 `## D`, Required steps S2: the linear thread setting and the
-exact-reproduction asserts cannot both be met.** S2 says "Linear fits as D031 / D035, with
-`OMP_NUM_THREADS` set as in D035's successful runs" (8 threads) and asks for exact-reproduction
-asserts "against D029 / D035 counts". D029's v2 linear fits ran at 32 BLAS threads
-(`submit_d029_train.slurm`, main process, no `threadpool_limits`); D035's ran at 8. On the same
-input (JG `k` = 1, query 193) their stored linear logits differ (max |Δ| 0.0447) while
-`cnt_total` / `cnt_model` / `cnt_pair` agree; D029 stores no `cnt_pair_all`. So a CLOUD-raw fit
-that reproduces D029 bit for bit at `k` = 3 cannot reproduce D035's `k` = 1 logits / `cnt_pair_all`,
-and vice versa. Both thread counts were run (jobs 1117253, 1117457) and both stopped on an assert.
-The fix is a `## D` / Review decision (which reference governs, or a common-thread refit), so TACC
-stopped and raised it as D036 R Call 4 instead of choosing. Same root fact as D031 R §7.1.
-
 **Issue 10 (2026-09-05) — the structural cause, and a proposal.
 DEFERRED by the human, 2026-09-05: keep on file, do not action this
 session.** The approach is accepted in principle; the human wants it
@@ -78,6 +66,20 @@ below).
 ---
 
 ## Resolved
+
+**Issue 28 (2026-11-02) — D036 `## D`, Required steps S2: the linear thread setting and the
+exact-reproduction asserts cannot both be met.** S2 says "Linear fits as D031 / D035, with
+`OMP_NUM_THREADS` set as in D035's successful runs" (8 threads) and asks for exact-reproduction
+asserts "against D029 / D035 counts". D029's v2 linear fits ran at 32 BLAS threads
+(`submit_d029_train.slurm`, main process, no `threadpool_limits`); D035's ran at 8. On the same
+input (JG `k` = 1, query 193) their stored linear logits differ (max |Δ| 0.0447) while
+`cnt_total` / `cnt_model` / `cnt_pair` agree; D029 stores no `cnt_pair_all`. So a CLOUD-raw fit
+that reproduces D029 bit for bit at `k` = 3 cannot reproduce D035's `k` = 1 logits / `cnt_pair_all`,
+and vice versa. Both thread counts were run (jobs 1117253, 1117457) and both stopped on an assert.
+The fix is a `## D` / Review decision (which reference governs, or a common-thread refit), so TACC
+stopped and raised it as D036 R Call 4 instead of choosing. Same root fact as D031 R §7.1.
+
+*Resolved 2026-11-03 (design-side, D036 Review — R1 stop, Call 4).* Correct — design-side error in the D's thread instruction. Call 4 → (a): CLOUD-raw linear at 32 threads, bit-exact vs D029 at k = 1, 3; vs D035 coarse counts only, logit difference disclosed; amendment A1 adds a 32-thread CENTROID-raw linear refit as a P1 sensitivity row.
 
 **Issue 27 (2026-10-22) — D033 `## D`, readout ①: "Distance: cosine (released default)".** The
 parenthetical is not what the released code does. The released default is **Euclidean**:
