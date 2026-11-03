@@ -10,6 +10,9 @@ default_rng(20261005).integers(0, 5, (2000, 24, 5)), shared by every arm; linear
 row: the second arm's seeds from default_rng(20261101) (D035's, D3). Open-set: d033_analysis.Boot("v2") (configs
 only; folds fixed). CLOUD / PAPER8 = D029 counts verbatim, CENTROID-raw = D035 counts verbatim, CLOUD^fold = D033
 counts verbatim.
+A1 (Review D036/R1): P1's linear mean-k point and interval are also reported against CENTROID-raw@32 (the 32-thread
+refit stored in results/D036/linear_counts.npz); the label uses D035's stored counts, and a sign disagreement between
+the two linear points is reported as "linear sign thread-sensitive".
 Usage:  PYTHONPATH=.:experiments python experiments/d036_analysis.py
 """
 import copy
@@ -48,7 +51,8 @@ class Data:
         self.src = {"CLOUD-raw": (dict(np.load(f"{L.OUT}/run_counts.npz")), dict(np.load(f"{L.OUT}/linear_counts.npz")),
                                   "CLOUD-raw"),
                     "CENTROID-raw": (dict(np.load("./results/D035/run_counts.npz")),
-                                     dict(np.load("./results/D035/linear_counts.npz")), "CENTROID|raw")}
+                                     dict(np.load("./results/D035/linear_counts.npz")), "CENTROID|raw"),
+                    "CENTROID-raw@32": (None, dict(np.load(f"{L.OUT}/linear_counts.npz")), "CENTROID|raw@32")}
         self.cache = {}
 
     def unit(self, ro, arm, k):
@@ -189,6 +193,19 @@ def main():
     print(f"[S4] WORSE scan: {worse or 'none'}", flush=True)
 
     prim = {"P1": compare("CLOUD-raw", "CENTROID-raw", True), "P2": compare("CLOUD-raw", "CLOUD", True)}
+
+    # A1: P1 linear thread sensitivity (reported, not the label input)
+    lin8_32 = mean_k("lin", "CLOUD-raw", "CENTROID-raw@32", KS)
+    lin8_8 = prim["P1"]["linear_mean_k1_8"]
+    agree = np.sign(lin8_32["point"]) == np.sign(lin8_8["point"])
+    prim["P1"]["a1_linear_thread"] = dict(
+        stored_d035_8_threads=lin8_8, refit_32_threads=lin8_32, signs_agree=bool(agree),
+        per_k={k: dict(stored=A.r4(e_all_k("lin", "CENTROID-raw", k)[1]), refit32=A.r4(e_all_k("lin", "CENTROID-raw@32", k)[1]))
+               for k in KS})
+    if not agree:
+        prim["P1"]["verdict"] += " (linear sign thread-sensitive)"
+    print(f"[S4] A1 P1 linear mean k1-8: vs D035 stored (8 thr) {lin8_8}; vs refit (32 thr) {lin8_32}; "
+          f"signs agree {bool(agree)}", flush=True)
     rows = {"CLOUD - CENTROID-raw (D035 P1 restated)": compare("CLOUD", "CENTROID-raw", False),
             "CLOUD-raw - PAPER8": compare("CLOUD-raw", "PAPER8", False)}
     for n, v in {**prim, **rows}.items():
