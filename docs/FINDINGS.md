@@ -1921,8 +1921,40 @@ fingerprint inside JG's statistic is varied:
 - **Caveat (design-side):** CLOUD's statistic also divides each pair's
   distance by that pair's within-model spread; the raw centroid does not.
   So this tests "the method's cloud statistic vs a raw centroid", not
-  distribution vs mean at matched scaling. A CLOUD-raw follow-up is
-  pending the human.
+  distribution vs mean at matched scaling. **Resolved by D036:** at matched
+  scaling the cloud still trails (−2.0 pp).
 - **Unaffected:** training and evaluation in every arm still use all 75
   configs (I3 at the tensor / evaluation level).
 - Cost 2.7 node-h.
+
+## D036 — The distribution does not help selection even at matched scaling; the scale-free division pays off only for training-free identification of new models
+
+**The question.** D035's P1 confounded two changes, distribution vs mean
+and CLOUD's per-pair division by within-model spread. D036 adds CLOUD-raw
+(the same JG on the undivided joint energy) on v2. Development grade,
+old S_test.
+
+| | closed-set, mean top-1 over `k` (attention) | open-set ② raw, held-out `k` = 8 O_all |
+|---|---|---|
+| CLOUD-raw − CENTROID-raw | **−2.0 pp WORSE** (linear −1.7) | **−3.0 pp WORSE** |
+| CLOUD-raw − CLOUD (scale-free) | **−0.3 pp PARITY** (linear −1.3) | **−5.5 pp WORSE** |
+| CLOUD − CENTROID-raw (D035 P1) | −1.8 pp (linear level) | +2.5 pp (point, descriptive) |
+
+- **Distribution vs mean:** at matched scaling the mean still selects
+  better on the closed set. At `k` = 8 the two are practically equal
+  (E_all / E_tail INCONCLUSIVE, same bottom-decile accuracy 0.937). The
+  gap is in the chain's order at mid `k`.
+- **Scaling:** it does not matter when the readout is trained. It does
+  matter for training-free nearest-cloud identification of held-out
+  models, where scale-free CLOUD is the best of the three.
+- **Scale of these effects:** all three multi-config statistics sit within
+  2–5 pp of each other, with readout-dependent order. Config-spanning vs
+  single-config is +16 pp (D035). The paper's fingerprint claim is the
+  latter.
+- **Hypotheses (untested):**
+  - energy distance also rewards spread differences, which are tied to the
+    specific build configs and transfer less well to new configs than mean
+    shifts;
+  - the scale-free division is a signal-to-noise ratio that a trained
+    readout learns for itself but a training-free summed readout cannot.
+- Main statistic unchanged (no selection on old S_test). Cost 1.13 node-h.

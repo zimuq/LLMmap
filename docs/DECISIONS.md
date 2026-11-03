@@ -2019,6 +2019,36 @@ interpretable; specialist-based two-stage design not pursued
     construct. DKPS detail is from earlier reading, not re-verified against
     the source this session.
   Decided by: human (scope), on design-side recommendation.
+
+[2026-11-03] D036 Call 4 (linear thread reproducibility) -> (a) + A1
+  - D029 (32 BLAS threads) and D035 (8) linear fits are not bit-identical
+    on the same input (counts equal at k = 1; logits differ <= 0.045), so
+    the D's two exact-reproduction asserts could not both pass.
+    Design-side error in the D's thread instruction.
+  - CLOUD-raw linear at 32 threads (bit-exact vs D029); D035 asserted on
+    coarse counts only, with the difference disclosed. A1: CENTROID-raw
+    linear refit at 32 threads as a P1 sensitivity row; the label uses
+    the stored D035 fits.
+  - Corrected the D035 R Review's "bit for bit" (counts only, not logits).
+  Decided by: design-side (routine; TACC_NOTES Issue 28 resolved).
+
+[2026-11-03] D036 R accepted and closed; main statistic unchanged; I3 rationale escalated
+  - P1 CLOUD-raw - CENTROID-raw WORSE (-2.0 pp; linear -1.7, A1 agrees);
+    P2 CLOUD-raw - CLOUD PARITY (-0.3 pp); open-set (2) O1 / O2 WORSE.
+    D035's confound is resolved against the cloud.
+  - Main statistic (scale-free cloud, JG) is not changed: closed-set
+    evidence shows no advantage over a raw centroid, but it is best
+    open-set, and old-S_test numbers cannot choose the method.
+  - Escalated to the human (I3 rationale / METHOD): keep the scale-free
+    cloud, rewrite the rationale as config-spanning reference (D035 P2) +
+    signal-to-noise scaling for training-free open-set identification
+    (D036 O2), without a "distribution beats mean" claim. Recommended.
+    Diff with the METHOD rewrite.
+  - Routine: descriptive R2 addendum requested from TACC (open-set
+    CLOUD^fold - CENTROID-raw^fold interval, stored counts, no label);
+    D036 chains to D034's union on resume (only query 240 new).
+  Decided by: design-side (acceptance, addendum, D034 union); human
+  (I3 rationale, pending).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
