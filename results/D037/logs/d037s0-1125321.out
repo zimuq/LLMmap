@@ -1,0 +1,30 @@
+=== node: c642-031.vista.tacc.utexas.edu start: Thu Nov  5 09:15:06 PM CST 2026 | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d037_s0.py | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_addendum.py |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          25         198           0           0         187
+Swap:             24           6          18
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d037_s0.py 21:15:06
+[B] [B] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_addendum.py 21:15:06
+[A] [S0] inventory: 26 files, 0 missing; tensor sha = D029's
+[A] [S0] GC gamma=0.1 chain [193, 233, 117, 253, 252, 237, 140, 240] = D029: True (max |d obj| 0.0); CVaR_1 = mean max |d| 0.0e+00
+[B] Traceback (most recent call last):
+[B]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d036_addendum.py", line 40, in <module>
+[B]     main()
+[B]   File "/work/11280/zimuq1/vista/LLMmap-project/LLMmap/experiments/d036_addendum.py", line 32, in main
+[B]     assert abs(rows[8][f"d_{e}"]["delta"] - d) <= 1e-4, (e, rows[8], d)
+[B]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[B] AssertionError: ('all', {'d_all': {'a': 0.7059, 'b': 0.6805, 'delta': 0.0254, 'ci': [0.0127, 0.0367]}, 'd_tail': {'a': 0.8732, 'b': 0.8571, 'delta': 0.0161, 'ci': [0.003, 0.0292]}}, 0.025500000000000002)
+[B] [B] FAILED: OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_addendum.py
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S0] accumulators 1.7 min
+[A] [S0] JG gamma=0.1 chain [193, 117, 233, 237, 0, 253, 121, 18] = D029: True (max |d obj| 0.0)
+[A] [S0] JG CVaR_1 = mean: step 1 all candidates 0.0e+00, D029 chain steps 0.0e+00
+[A] [S0] D029 all-pair rebuild + recounts: {'JG': {'pair_all_rebuilt': True, 'recount_equal': True}, 'GC': {'pair_all_rebuilt': True, 'recount_equal': True}, 'PAPER8': {'pair_all_rebuilt': True, 'recount_equal': True}}
+[A] [S0] reference rows {'TOP-K[CVaR]': {'key': 'TOP-K', 'complete': True}, 'MMR-PP[CVaR]': {'key': 'MMR|pearson|0.7', 'complete': True}, 'TOP-K[MEAN]': {'key': 'TOP-K[MEAN]', 'complete': True}}; draws = D036's: True
+[A] [S0] all checks pass (3.32 min)
+=== end: Thu Nov  5 09:19:42 PM CST 2026 rc=1 ===

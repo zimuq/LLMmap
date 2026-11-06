@@ -60,3 +60,5 @@ results/D035/logits_*.npz
 results/D036/models/
 results/D036/logits_*.npz
 results/D036/nc_*.npz
+results/D037/models/
+results/D037/logits_*.npz

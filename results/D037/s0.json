@@ -1,0 +1,137 @@
+{
+ "schema": "d037-s0-v1",
+ "view": "v2",
+ "s_val_reads": 0,
+ "s_test_reads": "none new; D029 stored logits for equality asserts only",
+ "sha256": {
+  "results/D029/chains.json": "76d7e08320019d49a4e638ae19298bab6b9641d62a17f63b3bf033ac79b757ad",
+  "results/D029/counts_JG.npz": "aeb3c7ad95eaa2db2744ca2149274a1bddf88d5e836da8a98ad89317fe025e04",
+  "results/D029/counts_GC.npz": "ec908129374fe0fc981850c267f09a503118b93086f3e90f9c19d6fb529b936c",
+  "results/D029/counts_PAPER8.npz": "d66ea44f90dc865ae8d5c5fb6f27245a7c108b7c25262a553ad1dc6172bb3b6f",
+  "results/D029/logits_JG.npz": "dd425878b154e3ecd7b26a2e9e0e2dbf0ba27ef51cddf58aeb77a167c5aa3571",
+  "results/D029/logits_GC.npz": "49633f1d62f74ede6e667f31ac8055cc4f8bdd4715dea1336c9961bca463acdb",
+  "results/D029/logits_PAPER8.npz": "1a873130f1b7689beee3315a0adc75733ebd469bb899932190886446f87c44d5",
+  "results/D031/chains.json": "d0efb5b50fd8d18748e8812f2f18d176ac307d47fb626c9f2c605d2571e5e5e9",
+  "results/D031/variant_choice.json": "140b47cc4a60dfbf1999e1c51b3bc6bff241994c93a30686a40f1221537a5e5a",
+  "results/D032/chains.json": "bd1968f5f93d61008b82a294770f27ebc8f2d78e4156ecb3f35eae4e2f3eef6c",
+  "results/D027/n_prime.json": "22017368017c048e38d042b073b60be983e6aeef9034bae2bf8bf5d837db1b23",
+  "results/D028/hard_sets_v2.json": "552cbb650c4a91e08118e79770e42f2c6d297b0ca06922aca61c7866ee26c056",
+  "results/D010/selection.json": "0e3150e892dc20f48827816a78e239d6f7e49a745b09e14809592dd58c9d955b",
+  "results/D012/metrics_by_gamma_k.json": "6ba820e9fa015805fa3696ffec7b1ce87c8f808aeef7d55cbc9899afc700b371",
+  "results/D013/metrics_by_gamma_k.json": "8284a43d995cefe7f4f8540472f8b112a77091f2e420285f74a404a4ed53cd37",
+  "results/D013/cross_algorithm_comparison.json": "e7f5ebdf9567d72f865411bb814a4687d08700d85ff193b3a703be2aa5ef8a21",
+  "results/D033/chains.json": "b7a876aa008b13e183da7a03f673dc23dad99c3a5132c420fddac5c4f1e45d14",
+  "results/D035/chains.json": "828e9c4e0a886ac2d10ab737a58089c97f60d29ff4d74d52e0a1f113df7a8d69",
+  "results/D036/chains.json": "07fdf7e7f574dbccf1ec133c7296af83c2c0531664706d1d7e29197c52952766",
+  "results/D031/counts_v2_att_0of2.npz": "892ee00f921e83f5a4d89925f483274430b1fe207f9c59ed212dcadb374848eb",
+  "results/D031/counts_v2_att_1of2.npz": "f69552869c1df5bed3f7cc2d4dc8cb394db2aecd5e9bd37eb13dec16858e3dba",
+  "results/D031/counts_v2_lin_0of2.npz": "c41b85871bf0db71fc2433b2e9d808e25a354672037c8da43f7d8473ac16c450",
+  "results/D031/counts_v2_lin_1of2.npz": "20b03dc7fd8e9728af6fc31eb45a301d1a9917917d7148a1b6b6b4138d634b38",
+  "results/D032/counts_v2_att_0of1.npz": "06b0574e22b1c83b43df09e1bd77c01e06e2a68428abd1373c5dc13592f7ef56",
+  "results/D032/counts_v2_lin_0of2.npz": "55fbf00509375dd5910e5e85dd0354686e3d85ff735c72ae8bf01c9b31535582",
+  "results/D032/counts_v2_lin_1of2.npz": "d7770a771803a28fd6eddfea6d0d2f143074001c1ac0028ae3ed8dd5c6cf7f69"
+ },
+ "mmr_reference": "MMR|pearson|0.7",
+ "tensor_sha256": "8a31d7603c27d1e8b455e4b653ba3c3bc5edd4cf50582f9b43443abc73a1f223",
+ "gc_gamma01": {
+  "chain": [
+   193,
+   233,
+   117,
+   253,
+   252,
+   237,
+   140,
+   240
+  ],
+  "d029": [
+   193,
+   233,
+   117,
+   253,
+   252,
+   237,
+   140,
+   240
+  ],
+  "equal": true,
+  "max_abs_dobj": 0.0
+ },
+ "gc_gamma1_reduction_no_chain": {
+  "max_abs_d": 0.0,
+  "tol": 1e-12
+ },
+ "jg_gamma01": {
+  "chain": [
+   193,
+   117,
+   233,
+   237,
+   0,
+   253,
+   121,
+   18
+  ],
+  "d029": [
+   193,
+   117,
+   233,
+   237,
+   0,
+   253,
+   121,
+   18
+  ],
+  "equal": true,
+  "max_abs_dobj": 0.0,
+  "ties": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ "jg_gamma1_reduction_no_chain": {
+  "step1_all_candidates_max_abs_d": 0.0,
+  "d029_chain_steps_max_abs_d": 0.0,
+  "tol": 1e-12,
+  "nan_free": true
+ },
+ "d029_all_pair_rebuild": {
+  "JG": {
+   "pair_all_rebuilt": true,
+   "recount_equal": true
+  },
+  "GC": {
+   "pair_all_rebuilt": true,
+   "recount_equal": true
+  },
+  "PAPER8": {
+   "pair_all_rebuilt": true,
+   "recount_equal": true
+  }
+ },
+ "reference_rows": {
+  "TOP-K[CVaR]": {
+   "key": "TOP-K",
+   "complete": true
+  },
+  "MMR-PP[CVaR]": {
+   "key": "MMR|pearson|0.7",
+   "complete": true
+  },
+  "TOP-K[MEAN]": {
+   "key": "TOP-K[MEAN]",
+   "complete": true
+  }
+ },
+ "boot_configs_sha256": "fe60a8f4bb9dd51d72e49371fbc30d3c9a1516da5f9125f53be4d413e982c093",
+ "boot_equals_d036": true,
+ "stops": [],
+ "code_commit": "083b5714abf247e908feb64bfd098d66f43c7f4f",
+ "wall_min": 3.32
+}
