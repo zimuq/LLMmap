@@ -1,0 +1,9 @@
+=== node: c642-051.vista.tacc.utexas.edu start: Thu Nov  5 10:44:44 PM CST 2026 | OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_addendum.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          20         203           0           0         191
+Swap:             24           2          22
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d036_addendum.py 22:44:44
+[A] [D036 addendum] wrote ./results/D036/addendum.json
+=== end: Thu Nov  5 10:44:57 PM CST 2026 rc=0 ===
