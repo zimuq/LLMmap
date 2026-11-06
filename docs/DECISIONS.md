@@ -2049,6 +2049,23 @@ interpretable; specialist-based two-stage design not pursued
     D036 chains to D034's union on resume (only query 240 new).
   Decided by: design-side (acceptance, addendum, D034 union); human
   (I3 rationale, pending).
+
+[2026-11-05] D037 opened: selection grid {JG, GC} x {CVaR, mean} on v2
+  - The human asked whether max-/mean-coverage have v2 results, with a
+    view to highlighting JG's contribution. Status: GC (gamma = 0.1, MAX)
+    has v2 counts (D029 secondary, D031 reference row, descriptive);
+    gamma = 1 arms of both rules exist on v1 only (D008/D009/D012/D013).
+  - Design-side advice, given before drafting: the evidence so far puts
+    JG's robust contribution in the tail criterion (D012/D013, D032).
+    Joint combination and cloud energy carry <= 2 pp each (D031, D035,
+    D036). The grid is expected to reinforce the criterion, not to make
+    "joint + energy" a headline. The human approved drafting.
+  - Design: C1 JG - JG-mean (fresh) and C2 JG - GC (seen; labelled for the
+    first time, with a disclosure) as primaries, using the D031/D032
+    endpoint (k = 8 E_all / E_tail) so the grid shares a table with D032
+    Q1. The symmetric linear clause is applied to WORSE. On resume, the
+    new chains join D034's union.
+  Decided by: human (open D037); design-side (design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
