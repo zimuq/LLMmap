@@ -2066,6 +2066,23 @@ interpretable; specialist-based two-stage design not pursued
     Q1. The symmetric linear clause is applied to WORSE. On resume, the
     new chains join D034's union.
   Decided by: human (open D037); design-side (design).
+
+[2026-11-06] D037 P1 approved with amendments; D036 R2 addendum received
+  - D037 P1: S0 exact (D029 JG/GC chains reproduced; gamma = 1 reductions
+    |d| = 0; D029 all-pair rebuild exact). Call 1 -> (a) (chain-dependent
+    checks in S1 before anything is written). Call 2 -> (a) (GC-prefix
+    training order).
+  - A1/A2: at k = 3 the JG and GC prefixes are the same set in a different
+    order. D029's k = 3 counts differ between the two (all linear arrays;
+    attention seed 0 cnt_pair), so training order is not bit-neutral.
+    The exact assert targets the arm whose order was used.
+    Identical-input k is defined by set equality. C2's k = 3 delta is
+    reported as an order-only noise row.
+  - D036 R2 addendum: open-set CLOUD - CENTROID-raw at k = 8 is +2.5 pp
+    [+1.3, +3.7] (tail +1.6 [+0.3, +2.9]); the sign flips at k = 3-5.
+    Descriptive only, not pre-registered. It is context for the pending
+    I3-rationale decision; the closing verdict is unchanged.
+  Decided by: design-side.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

@@ -1938,7 +1938,7 @@ old S_test.
 |---|---|---|
 | CLOUD-raw − CENTROID-raw | **−2.0 pp WORSE** (linear −1.7) | **−3.0 pp WORSE** |
 | CLOUD-raw − CLOUD (scale-free) | **−0.3 pp PARITY** (linear −1.3) | **−5.5 pp WORSE** |
-| CLOUD − CENTROID-raw (D035 P1) | −1.8 pp (linear level) | +2.5 pp (point, descriptive) |
+| CLOUD − CENTROID-raw (D035 P1) | −1.8 pp (linear level) | +2.5 pp [+1.3, +3.7] (R2 addendum, descriptive; tail +1.6 [+0.3, +2.9]) |
 
 - **Distribution vs mean:** at matched scaling the mean still selects
   better on the closed set. At `k` = 8 the two are practically equal
@@ -1947,6 +1947,9 @@ old S_test.
 - **Scaling:** it does not matter when the readout is trained. It does
   matter for training-free nearest-cloud identification of held-out
   models, where scale-free CLOUD is the best of the three.
+  The lead over the raw centroid holds at `k` = 7–8 only. CENTROID-raw
+  is ahead at `k` = 3–5. This comes from the R2 addendum, is not
+  pre-registered and is descriptive only.
 - **Scale of these effects:** all three multi-config statistics sit within
   2–5 pp of each other, with readout-dependent order. Config-spanning vs
   single-config is +16 pp (D035). The paper's fingerprint claim is the
