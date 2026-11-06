@@ -78,3 +78,42 @@ def train_order(S, ref):
             return list(ref[tag][:k]), tag
     shared = [q for q in ref["JG"][:k] if q in S]
     return shared + sorted(set(S) - set(shared)), None
+
+
+# ------------------------------------------------------------------ S3 loaders (S_test counts; S3a / S3b only)
+ARMS8 = GRID + ("TOP-K[CVaR]", "TOP-K[MEAN]", "MMR-PP[CVaR]", "PAPER8")
+
+
+class Data:
+    """Units for every arm, both readouts: D029 cells via d031_analysis.Store.ref (all-pair from stored logits),
+    D031 / D032 reference rows verbatim, JG-mean / GC-mean from results/D037."""
+
+    def __init__(self, mmr):
+        import d031_analysis as A
+        from d032_analysis import Store32
+        self.A, self.mmr = A, mmr
+        self.s31, self.s32 = A.Store(VIEW), Store32(VIEW)
+        self.att, self.lin = dict(np.load(f"{OUT}/run_counts.npz")), dict(np.load(f"{OUT}/linear_counts.npz"))
+        self.cache = {}
+
+    def unit(self, ro, arm, k):
+        key = (ro, arm, k)
+        if key not in self.cache:
+            A = self.A
+            if arm in ("JG", "GC", "PAPER8"):
+                u = self.s31.ref(ro, arm, k)
+            elif arm == "TOP-K[CVaR]":
+                u = self.s31.new(ro, "TOP-K", k)
+            elif arm == "MMR-PP[CVaR]":
+                u = self.s31.new(ro, self.mmr, k)
+            elif arm == "TOP-K[MEAN]":
+                u = self.s32.new(ro, "TOP-K[MEAN]", k)
+            elif ro == "att":
+                g = lambda c: np.stack([self.att[f"{arm}|{k}|r{r}|{c}"] for r in range(5)])
+                u = A.Unit(g("cnt_total"), g("cnt_model"), g("cnt_pair_all"), k)
+            else:
+                b = f"{arm}|{k}"
+                u = A.Unit(self.lin[f"{b}|cnt_total"][None], self.lin[f"{b}|cnt_model"][None],
+                           self.lin[f"{b}|cnt_pair_all"][None], k)
+            self.cache[key] = u
+        return self.cache[key]
