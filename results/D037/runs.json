@@ -1,0 +1,1768 @@
+{
+ "schema": "d037-runs-v1",
+ "arms": [
+  "JG-mean",
+  "GC-mean"
+ ],
+ "chains_sha256": "dfc9efb99a90ad7da1b5ee4e3ee9d8180bf3a8082b51a79f5dcd2a72220dec96",
+ "runs": [
+  {
+   "key": "JG-mean|1|r0",
+   "arm": "JG-mean",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k1_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 17.0,
+   "best_ckpt": "best-epoch=06-val_loss=2.3125.ckpt",
+   "train_acc": 0.49929411764705883,
+   "val_acc": 0.38023529411764706
+  },
+  {
+   "key": "JG-mean|1|r1",
+   "arm": "JG-mean",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k1_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.3,
+   "best_ckpt": "best-epoch=05-val_loss=2.3759.ckpt",
+   "train_acc": 0.46305882352941174,
+   "val_acc": 0.3675294117647059
+  },
+  {
+   "key": "JG-mean|1|r2",
+   "arm": "JG-mean",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k1_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.9,
+   "best_ckpt": "best-epoch=04-val_loss=2.4081.ckpt",
+   "train_acc": 0.4337254901960784,
+   "val_acc": 0.3491764705882353
+  },
+  {
+   "key": "JG-mean|1|r3",
+   "arm": "JG-mean",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k1_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.1,
+   "best_ckpt": "best-epoch=06-val_loss=2.3501.ckpt",
+   "train_acc": 0.4810980392156863,
+   "val_acc": 0.39576470588235296
+  },
+  {
+   "key": "JG-mean|1|r4",
+   "arm": "JG-mean",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k1_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.9,
+   "best_ckpt": "best-epoch=09-val_loss=2.1552.ckpt",
+   "train_acc": 0.5785098039215686,
+   "val_acc": 0.4272941176470588
+  },
+  {
+   "key": "GC-mean|1|r0",
+   "arm": "GC-mean",
+   "k": 1,
+   "seed": 0,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k1_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.1,
+   "best_ckpt": "best-epoch=06-val_loss=2.3125.ckpt",
+   "train_acc": 0.49929411764705883,
+   "val_acc": 0.38023529411764706
+  },
+  {
+   "key": "GC-mean|1|r1",
+   "arm": "GC-mean",
+   "k": 1,
+   "seed": 1,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k1_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.6,
+   "best_ckpt": "best-epoch=05-val_loss=2.3759.ckpt",
+   "train_acc": 0.46305882352941174,
+   "val_acc": 0.3675294117647059
+  },
+  {
+   "key": "GC-mean|1|r2",
+   "arm": "GC-mean",
+   "k": 1,
+   "seed": 2,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k1_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=2.4081.ckpt",
+   "train_acc": 0.4337254901960784,
+   "val_acc": 0.3491764705882353
+  },
+  {
+   "key": "GC-mean|1|r3",
+   "arm": "GC-mean",
+   "k": 1,
+   "seed": 3,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k1_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.2,
+   "best_ckpt": "best-epoch=06-val_loss=2.3501.ckpt",
+   "train_acc": 0.4810980392156863,
+   "val_acc": 0.39576470588235296
+  },
+  {
+   "key": "GC-mean|1|r4",
+   "arm": "GC-mean",
+   "k": 1,
+   "seed": 4,
+   "queries": [
+    109
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k1_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.0,
+   "best_ckpt": "best-epoch=09-val_loss=2.1552.ckpt",
+   "train_acc": 0.5785098039215686,
+   "val_acc": 0.4272941176470588
+  },
+  {
+   "key": "JG-mean|2|r0",
+   "arm": "JG-mean",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k2_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=06-val_loss=2.1112.ckpt",
+   "train_acc": 0.5658039215686275,
+   "val_acc": 0.43576470588235294
+  },
+  {
+   "key": "JG-mean|2|r1",
+   "arm": "JG-mean",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k2_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.5,
+   "best_ckpt": "best-epoch=03-val_loss=1.9305.ckpt",
+   "train_acc": 0.5570196078431373,
+   "val_acc": 0.46258823529411763
+  },
+  {
+   "key": "JG-mean|2|r2",
+   "arm": "JG-mean",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k2_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=06-val_loss=1.9439.ckpt",
+   "train_acc": 0.6069019607843137,
+   "val_acc": 0.46447058823529414
+  },
+  {
+   "key": "JG-mean|2|r3",
+   "arm": "JG-mean",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k2_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.6,
+   "best_ckpt": "best-epoch=05-val_loss=1.8105.ckpt",
+   "train_acc": 0.6525490196078432,
+   "val_acc": 0.5068235294117647
+  },
+  {
+   "key": "JG-mean|2|r4",
+   "arm": "JG-mean",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k2_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.1,
+   "best_ckpt": "best-epoch=11-val_loss=1.9964.ckpt",
+   "train_acc": 0.6861176470588235,
+   "val_acc": 0.4823529411764706
+  },
+  {
+   "key": "GC-mean|2|r0",
+   "arm": "GC-mean",
+   "k": 2,
+   "seed": 0,
+   "queries": [
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k2_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.2,
+   "best_ckpt": "best-epoch=06-val_loss=1.8786.ckpt",
+   "train_acc": 0.652235294117647,
+   "val_acc": 0.4908235294117647
+  },
+  {
+   "key": "GC-mean|2|r1",
+   "arm": "GC-mean",
+   "k": 2,
+   "seed": 1,
+   "queries": [
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k2_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.3,
+   "best_ckpt": "best-epoch=08-val_loss=2.1760.ckpt",
+   "train_acc": 0.6255686274509804,
+   "val_acc": 0.4602352941176471
+  },
+  {
+   "key": "GC-mean|2|r2",
+   "arm": "GC-mean",
+   "k": 2,
+   "seed": 2,
+   "queries": [
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k2_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.0,
+   "best_ckpt": "best-epoch=04-val_loss=2.1189.ckpt",
+   "train_acc": 0.5457254901960784,
+   "val_acc": 0.4258823529411765
+  },
+  {
+   "key": "GC-mean|2|r3",
+   "arm": "GC-mean",
+   "k": 2,
+   "seed": 3,
+   "queries": [
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k2_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.2,
+   "best_ckpt": "best-epoch=06-val_loss=1.9866.ckpt",
+   "train_acc": 0.5824313725490196,
+   "val_acc": 0.46447058823529414
+  },
+  {
+   "key": "GC-mean|2|r4",
+   "arm": "GC-mean",
+   "k": 2,
+   "seed": 4,
+   "queries": [
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k2_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.4,
+   "best_ckpt": "best-epoch=08-val_loss=2.0912.ckpt",
+   "train_acc": 0.6462745098039215,
+   "val_acc": 0.46305882352941174
+  },
+  {
+   "key": "JG-mean|3|r0",
+   "arm": "JG-mean",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k3_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=06-val_loss=1.7352.ckpt",
+   "train_acc": 0.6712156862745098,
+   "val_acc": 0.5143529411764706
+  },
+  {
+   "key": "JG-mean|3|r1",
+   "arm": "JG-mean",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k3_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.5,
+   "best_ckpt": "best-epoch=08-val_loss=1.6416.ckpt",
+   "train_acc": 0.7504313725490196,
+   "val_acc": 0.5708235294117647
+  },
+  {
+   "key": "JG-mean|3|r2",
+   "arm": "JG-mean",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k3_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 4.9,
+   "best_ckpt": "best-epoch=02-val_loss=1.8194.ckpt",
+   "train_acc": 0.5785098039215686,
+   "val_acc": 0.4875294117647059
+  },
+  {
+   "key": "JG-mean|3|r3",
+   "arm": "JG-mean",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k3_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.5,
+   "best_ckpt": "best-epoch=03-val_loss=1.7394.ckpt",
+   "train_acc": 0.624313725490196,
+   "val_acc": 0.5294117647058824
+  },
+  {
+   "key": "JG-mean|3|r4",
+   "arm": "JG-mean",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    117,
+    109,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k3_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=06-val_loss=1.7386.ckpt",
+   "train_acc": 0.695843137254902,
+   "val_acc": 0.5298823529411765
+  },
+  {
+   "key": "GC-mean|3|r0",
+   "arm": "GC-mean",
+   "k": 3,
+   "seed": 0,
+   "queries": [
+    233,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k3_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.9,
+   "best_ckpt": "best-epoch=07-val_loss=1.7959.ckpt",
+   "train_acc": 0.6646274509803921,
+   "val_acc": 0.5025882352941177
+  },
+  {
+   "key": "GC-mean|3|r1",
+   "arm": "GC-mean",
+   "k": 3,
+   "seed": 1,
+   "queries": [
+    233,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k3_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.9,
+   "best_ckpt": "best-epoch=12-val_loss=1.5943.ckpt",
+   "train_acc": 0.8324705882352941,
+   "val_acc": 0.5887058823529412
+  },
+  {
+   "key": "GC-mean|3|r2",
+   "arm": "GC-mean",
+   "k": 3,
+   "seed": 2,
+   "queries": [
+    233,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k3_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.6,
+   "best_ckpt": "best-epoch=05-val_loss=1.6736.ckpt",
+   "train_acc": 0.6712156862745098,
+   "val_acc": 0.5505882352941176
+  },
+  {
+   "key": "GC-mean|3|r3",
+   "arm": "GC-mean",
+   "k": 3,
+   "seed": 3,
+   "queries": [
+    233,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k3_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 4.9,
+   "best_ckpt": "best-epoch=02-val_loss=1.9072.ckpt",
+   "train_acc": 0.5935686274509804,
+   "val_acc": 0.48564705882352943
+  },
+  {
+   "key": "GC-mean|3|r4",
+   "arm": "GC-mean",
+   "k": 3,
+   "seed": 4,
+   "queries": [
+    233,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k3_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.1,
+   "best_ckpt": "best-epoch=09-val_loss=1.8228.ckpt",
+   "train_acc": 0.720156862745098,
+   "val_acc": 0.5444705882352942
+  },
+  {
+   "key": "JG-mean|4|r0",
+   "arm": "JG-mean",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k4_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 4.9,
+   "best_ckpt": "best-epoch=02-val_loss=1.7290.ckpt",
+   "train_acc": 0.607686274509804,
+   "val_acc": 0.5303529411764706
+  },
+  {
+   "key": "JG-mean|4|r1",
+   "arm": "JG-mean",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k4_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.5,
+   "best_ckpt": "best-epoch=03-val_loss=1.7929.ckpt",
+   "train_acc": 0.6025098039215686,
+   "val_acc": 0.4983529411764706
+  },
+  {
+   "key": "JG-mean|4|r2",
+   "arm": "JG-mean",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k4_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=06-val_loss=1.6288.ckpt",
+   "train_acc": 0.7261176470588235,
+   "val_acc": 0.5614117647058824
+  },
+  {
+   "key": "JG-mean|4|r3",
+   "arm": "JG-mean",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k4_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "best_ckpt": "best-epoch=09-val_loss=1.5061.ckpt",
+   "train_acc": 0.7974901960784314,
+   "val_acc": 0.5934117647058823
+  },
+  {
+   "key": "JG-mean|4|r4",
+   "arm": "JG-mean",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k4_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.5655.ckpt",
+   "train_acc": 0.7159215686274509,
+   "val_acc": 0.5731764705882353
+  },
+  {
+   "key": "GC-mean|4|r0",
+   "arm": "GC-mean",
+   "k": 4,
+   "seed": 0,
+   "queries": [
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k4_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.5453.ckpt",
+   "train_acc": 0.7626666666666667,
+   "val_acc": 0.5887058823529412
+  },
+  {
+   "key": "GC-mean|4|r1",
+   "arm": "GC-mean",
+   "k": 4,
+   "seed": 1,
+   "queries": [
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k4_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.7,
+   "best_ckpt": "best-epoch=10-val_loss=1.5075.ckpt",
+   "train_acc": 0.8607058823529412,
+   "val_acc": 0.6225882352941177
+  },
+  {
+   "key": "GC-mean|4|r2",
+   "arm": "GC-mean",
+   "k": 4,
+   "seed": 2,
+   "queries": [
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k4_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.0,
+   "best_ckpt": "best-epoch=07-val_loss=1.4161.ckpt",
+   "train_acc": 0.7824313725490196,
+   "val_acc": 0.6070588235294118
+  },
+  {
+   "key": "GC-mean|4|r3",
+   "arm": "GC-mean",
+   "k": 4,
+   "seed": 3,
+   "queries": [
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k4_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "best_ckpt": "best-epoch=09-val_loss=1.4839.ckpt",
+   "train_acc": 0.8305882352941176,
+   "val_acc": 0.6061176470588235
+  },
+  {
+   "key": "GC-mean|4|r4",
+   "arm": "GC-mean",
+   "k": 4,
+   "seed": 4,
+   "queries": [
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k4_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.0,
+   "best_ckpt": "best-epoch=07-val_loss=1.4754.ckpt",
+   "train_acc": 0.7887058823529411,
+   "val_acc": 0.5943529411764706
+  },
+  {
+   "key": "JG-mean|5|r0",
+   "arm": "JG-mean",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    117,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k5_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.5951.ckpt",
+   "train_acc": 0.6605490196078432,
+   "val_acc": 0.5449411764705883
+  },
+  {
+   "key": "JG-mean|5|r1",
+   "arm": "JG-mean",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    117,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k5_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.4662.ckpt",
+   "train_acc": 0.7576470588235295,
+   "val_acc": 0.587764705882353
+  },
+  {
+   "key": "JG-mean|5|r2",
+   "arm": "JG-mean",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    117,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k5_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.8,
+   "best_ckpt": "best-epoch=05-val_loss=1.6953.ckpt",
+   "train_acc": 0.6646274509803921,
+   "val_acc": 0.5444705882352942
+  },
+  {
+   "key": "JG-mean|5|r3",
+   "arm": "JG-mean",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    117,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k5_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 14.0,
+   "best_ckpt": "best-epoch=17-val_loss=1.4880.ckpt",
+   "train_acc": 0.9174901960784314,
+   "val_acc": 0.6498823529411765
+  },
+  {
+   "key": "JG-mean|5|r4",
+   "arm": "JG-mean",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    117,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k5_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.1,
+   "best_ckpt": "best-epoch=04-val_loss=1.5677.ckpt",
+   "train_acc": 0.6517647058823529,
+   "val_acc": 0.5327058823529411
+  },
+  {
+   "key": "GC-mean|5|r0",
+   "arm": "GC-mean",
+   "k": 5,
+   "seed": 0,
+   "queries": [
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k5_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=08-val_loss=1.2572.ckpt",
+   "train_acc": 0.8789019607843137,
+   "val_acc": 0.6583529411764706
+  },
+  {
+   "key": "GC-mean|5|r1",
+   "arm": "GC-mean",
+   "k": 5,
+   "seed": 1,
+   "queries": [
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k5_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.2,
+   "best_ckpt": "best-epoch=09-val_loss=1.3023.ckpt",
+   "train_acc": 0.887686274509804,
+   "val_acc": 0.6578823529411765
+  },
+  {
+   "key": "GC-mean|5|r2",
+   "arm": "GC-mean",
+   "k": 5,
+   "seed": 2,
+   "queries": [
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k5_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.4554.ckpt",
+   "train_acc": 0.7978039215686274,
+   "val_acc": 0.6150588235294118
+  },
+  {
+   "key": "GC-mean|5|r3",
+   "arm": "GC-mean",
+   "k": 5,
+   "seed": 3,
+   "queries": [
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k5_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.3744.ckpt",
+   "train_acc": 0.8150588235294117,
+   "val_acc": 0.6225882352941177
+  },
+  {
+   "key": "GC-mean|5|r4",
+   "arm": "GC-mean",
+   "k": 5,
+   "seed": 4,
+   "queries": [
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k5_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.5,
+   "best_ckpt": "best-epoch=08-val_loss=1.2211.ckpt",
+   "train_acc": 0.8781176470588236,
+   "val_acc": 0.6672941176470588
+  },
+  {
+   "key": "JG-mean|6|r0",
+   "arm": "JG-mean",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k6_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.1,
+   "best_ckpt": "best-epoch=04-val_loss=1.4717.ckpt",
+   "train_acc": 0.7181176470588235,
+   "val_acc": 0.587764705882353
+  },
+  {
+   "key": "JG-mean|6|r1",
+   "arm": "JG-mean",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k6_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.3,
+   "best_ckpt": "best-epoch=06-val_loss=1.3250.ckpt",
+   "train_acc": 0.8095686274509803,
+   "val_acc": 0.6244705882352941
+  },
+  {
+   "key": "JG-mean|6|r2",
+   "arm": "JG-mean",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k6_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 12.8,
+   "best_ckpt": "best-epoch=15-val_loss=1.4311.ckpt",
+   "train_acc": 0.928,
+   "val_acc": 0.6414117647058823
+  },
+  {
+   "key": "JG-mean|6|r3",
+   "arm": "JG-mean",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k6_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.2,
+   "best_ckpt": "best-epoch=04-val_loss=1.4102.ckpt",
+   "train_acc": 0.7394509803921568,
+   "val_acc": 0.6047058823529412
+  },
+  {
+   "key": "JG-mean|6|r4",
+   "arm": "JG-mean",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k6_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.1,
+   "best_ckpt": "best-epoch=04-val_loss=1.5034.ckpt",
+   "train_acc": 0.7159215686274509,
+   "val_acc": 0.5868235294117647
+  },
+  {
+   "key": "GC-mean|6|r0",
+   "arm": "GC-mean",
+   "k": 6,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k6_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 15.3,
+   "best_ckpt": "best-epoch=19-val_loss=0.9899.ckpt",
+   "train_acc": 0.9951372549019608,
+   "val_acc": 0.7609411764705882
+  },
+  {
+   "key": "GC-mean|6|r1",
+   "arm": "GC-mean",
+   "k": 6,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k6_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 5.6,
+   "best_ckpt": "best-epoch=03-val_loss=1.0856.ckpt",
+   "train_acc": 0.8073725490196079,
+   "val_acc": 0.6922352941176471
+  },
+  {
+   "key": "GC-mean|6|r2",
+   "arm": "GC-mean",
+   "k": 6,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k6_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.6,
+   "best_ckpt": "best-epoch=08-val_loss=0.9945.ckpt",
+   "train_acc": 0.9403921568627451,
+   "val_acc": 0.7378823529411764
+  },
+  {
+   "key": "GC-mean|6|r3",
+   "arm": "GC-mean",
+   "k": 6,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k6_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.4,
+   "best_ckpt": "best-epoch=06-val_loss=1.0374.ckpt",
+   "train_acc": 0.8732549019607844,
+   "val_acc": 0.707764705882353
+  },
+  {
+   "key": "GC-mean|6|r4",
+   "arm": "GC-mean",
+   "k": 6,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k6_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.8,
+   "best_ckpt": "best-epoch=05-val_loss=0.9397.ckpt",
+   "train_acc": 0.8832941176470588,
+   "val_acc": 0.7336470588235294
+  },
+  {
+   "key": "JG-mean|7|r0",
+   "arm": "JG-mean",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k7_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.5,
+   "best_ckpt": "best-epoch=06-val_loss=1.4164.ckpt",
+   "train_acc": 0.7927843137254902,
+   "val_acc": 0.611764705882353
+  },
+  {
+   "key": "JG-mean|7|r1",
+   "arm": "JG-mean",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k7_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=1.2609.ckpt",
+   "train_acc": 0.860078431372549,
+   "val_acc": 0.6404705882352941
+  },
+  {
+   "key": "JG-mean|7|r2",
+   "arm": "JG-mean",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k7_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.8,
+   "best_ckpt": "best-epoch=05-val_loss=1.3152.ckpt",
+   "train_acc": 0.7665882352941177,
+   "val_acc": 0.6127058823529412
+  },
+  {
+   "key": "JG-mean|7|r3",
+   "arm": "JG-mean",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k7_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=1.3660.ckpt",
+   "train_acc": 0.8618039215686274,
+   "val_acc": 0.6437647058823529
+  },
+  {
+   "key": "JG-mean|7|r4",
+   "arm": "JG-mean",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k7_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "best_ckpt": "best-epoch=10-val_loss=1.4580.ckpt",
+   "train_acc": 0.8337254901960784,
+   "val_acc": 0.6122352941176471
+  },
+  {
+   "key": "GC-mean|7|r0",
+   "arm": "GC-mean",
+   "k": 7,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k7_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.3,
+   "best_ckpt": "best-epoch=09-val_loss=0.9222.ckpt",
+   "train_acc": 0.9604705882352941,
+   "val_acc": 0.756235294117647
+  },
+  {
+   "key": "GC-mean|7|r1",
+   "arm": "GC-mean",
+   "k": 7,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k7_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.5,
+   "best_ckpt": "best-epoch=06-val_loss=0.9039.ckpt",
+   "train_acc": 0.9195294117647059,
+   "val_acc": 0.7487058823529412
+  },
+  {
+   "key": "GC-mean|7|r2",
+   "arm": "GC-mean",
+   "k": 7,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k7_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.5,
+   "best_ckpt": "best-epoch=11-val_loss=0.9098.ckpt",
+   "train_acc": 0.9643921568627452,
+   "val_acc": 0.7585882352941177
+  },
+  {
+   "key": "GC-mean|7|r3",
+   "arm": "GC-mean",
+   "k": 7,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k7_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.5,
+   "best_ckpt": "best-epoch=06-val_loss=0.8893.ckpt",
+   "train_acc": 0.9027450980392157,
+   "val_acc": 0.7463529411764706
+  },
+  {
+   "key": "GC-mean|7|r4",
+   "arm": "GC-mean",
+   "k": 7,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k7_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=0.8901.ckpt",
+   "train_acc": 0.9370980392156862,
+   "val_acc": 0.7590588235294118
+  },
+  {
+   "key": "JG-mean|8|r0",
+   "arm": "JG-mean",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136,
+    147
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k8_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.6,
+   "best_ckpt": "best-epoch=11-val_loss=1.4385.ckpt",
+   "train_acc": 0.8671372549019608,
+   "val_acc": 0.6324705882352941
+  },
+  {
+   "key": "JG-mean|8|r1",
+   "arm": "JG-mean",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136,
+    147
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k8_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.3,
+   "best_ckpt": "best-epoch=04-val_loss=1.2803.ckpt",
+   "train_acc": 0.7457254901960785,
+   "val_acc": 0.616
+  },
+  {
+   "key": "JG-mean|8|r2",
+   "arm": "JG-mean",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136,
+    147
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k8_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.3,
+   "best_ckpt": "best-epoch=04-val_loss=1.4647.ckpt",
+   "train_acc": 0.6923921568627451,
+   "val_acc": 0.5854117647058823
+  },
+  {
+   "key": "JG-mean|8|r3",
+   "arm": "JG-mean",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136,
+    147
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k8_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.4,
+   "best_ckpt": "best-epoch=09-val_loss=1.3950.ckpt",
+   "train_acc": 0.8674509803921568,
+   "val_acc": 0.6315294117647059
+  },
+  {
+   "key": "JG-mean|8|r4",
+   "arm": "JG-mean",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136,
+    147
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/JG-mean_k8_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 8.7,
+   "best_ckpt": "best-epoch=08-val_loss=1.4438.ckpt",
+   "train_acc": 0.8023529411764706,
+   "val_acc": 0.6221176470588236
+  },
+  {
+   "key": "GC-mean|8|r0",
+   "arm": "GC-mean",
+   "k": 8,
+   "seed": 0,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240,
+    252
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k8_r0.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 6.8,
+   "best_ckpt": "best-epoch=05-val_loss=0.9928.ckpt",
+   "train_acc": 0.8607058823529412,
+   "val_acc": 0.7110588235294117
+  },
+  {
+   "key": "GC-mean|8|r1",
+   "arm": "GC-mean",
+   "k": 8,
+   "seed": 1,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240,
+    252
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k8_r1.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 7.5,
+   "best_ckpt": "best-epoch=06-val_loss=0.9626.ckpt",
+   "train_acc": 0.904156862745098,
+   "val_acc": 0.7355294117647059
+  },
+  {
+   "key": "GC-mean|8|r2",
+   "arm": "GC-mean",
+   "k": 8,
+   "seed": 2,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240,
+    252
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k8_r2.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.5,
+   "best_ckpt": "best-epoch=11-val_loss=0.8903.ckpt",
+   "train_acc": 0.9712941176470589,
+   "val_acc": 0.7656470588235295
+  },
+  {
+   "key": "GC-mean|8|r3",
+   "arm": "GC-mean",
+   "k": 8,
+   "seed": 3,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240,
+    252
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k8_r3.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 9.9,
+   "best_ckpt": "best-epoch=10-val_loss=0.9070.ckpt",
+   "train_acc": 0.9697254901960785,
+   "val_acc": 0.7505882352941177
+  },
+  {
+   "key": "GC-mean|8|r4",
+   "arm": "GC-mean",
+   "k": 8,
+   "seed": 4,
+   "queries": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240,
+    252
+   ],
+   "ident": null,
+   "ckpt": "./results/D037/models/GC-mean_k8_r4.ckpt",
+   "hp_hash": "01e27d7f8bccfb2eda4b1a62b8c34aa91c0df902c30bcc0b0ebd9f9cacdd5737",
+   "wall_s": 10.6,
+   "best_ckpt": "best-epoch=11-val_loss=0.8645.ckpt",
+   "train_acc": 0.968,
+   "val_acc": 0.7651764705882353
+  }
+ ],
+ "linear": {
+  "JG-mean|1": {
+   "n_iter": 1007,
+   "wall_s": 184.7,
+   "q": [
+    109
+   ],
+   "ident": null
+  },
+  "JG-mean|2": {
+   "n_iter": 1256,
+   "wall_s": 265.0,
+   "q": [
+    109,
+    123
+   ],
+   "ident": null
+  },
+  "JG-mean|3": {
+   "n_iter": 1276,
+   "wall_s": 267.7,
+   "q": [
+    117,
+    109,
+    123
+   ],
+   "ident": null
+  },
+  "JG-mean|4": {
+   "n_iter": 1271,
+   "wall_s": 294.2,
+   "q": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "ident": null
+  },
+  "JG-mean|5": {
+   "n_iter": 1344,
+   "wall_s": 312.8,
+   "q": [
+    117,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null
+  },
+  "JG-mean|6": {
+   "n_iter": 1314,
+   "wall_s": 328.8,
+   "q": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "ident": null
+  },
+  "JG-mean|7": {
+   "n_iter": 1393,
+   "wall_s": 352.9,
+   "q": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "ident": null
+  },
+  "JG-mean|8": {
+   "n_iter": 1425,
+   "wall_s": 409.4,
+   "q": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136,
+    147
+   ],
+   "ident": null
+  },
+  "GC-mean|1": {
+   "n_iter": 1007,
+   "wall_s": 161.1,
+   "q": [
+    109
+   ],
+   "ident": null
+  },
+  "GC-mean|2": {
+   "n_iter": 1239,
+   "wall_s": 224.2,
+   "q": [
+    109,
+    240
+   ],
+   "ident": null
+  },
+  "GC-mean|3": {
+   "n_iter": 1275,
+   "wall_s": 277.7,
+   "q": [
+    233,
+    109,
+    240
+   ],
+   "ident": null
+  },
+  "GC-mean|4": {
+   "n_iter": 1053,
+   "wall_s": 230.7,
+   "q": [
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null
+  },
+  "GC-mean|5": {
+   "n_iter": 998,
+   "wall_s": 230.2,
+   "q": [
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null
+  },
+  "GC-mean|6": {
+   "n_iter": 845,
+   "wall_s": 208.4,
+   "q": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "ident": null
+  },
+  "GC-mean|7": {
+   "n_iter": 856,
+   "wall_s": 223.8,
+   "q": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240
+   ],
+   "ident": null
+  },
+  "GC-mean|8": {
+   "n_iter": 743,
+   "wall_s": 122.5,
+   "q": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240,
+    252
+   ],
+   "ident": null
+  }
+ },
+ "identical_to_d029": {
+  "JG-mean": {},
+  "GC-mean": {}
+ },
+ "new_arms_same_set_k": [
+  1
+ ],
+ "linear_threads": 32,
+ "s_test": "written to counts/logits only; not summarised in S2",
+ "code_commit": "1687280cb6775698709fde1275181dd9330ec8d3",
+ "wall_min": 53.4,
+ "node": "c642-071.vista.tacc.utexas.edu"
+}

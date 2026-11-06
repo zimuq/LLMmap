@@ -1,0 +1,2163 @@
+=== node: c642-071.vista.tacc.utexas.edu start: Fri Nov  6 04:11:22 AM CST 2026 | OMP_NUM_THREADS=32 D031_WORKERS=2 D031_THREADS=32 PYTHONPATH=.:experiments python experiments/d037_train.py;OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d037_plots.py data;/work/11280/zimuq1/vista/miniconda3/envs/llmmap/bin/python experiments/d037_plots.py draw |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             212          27         196           0           0         185
+Swap:             24           9          15
+name, memory.total [MiB]
+NVIDIA GH200 120GB, 97871 MiB
+[A] [A] >>> OMP_NUM_THREADS=32 D031_WORKERS=2 D031_THREADS=32 PYTHONPATH=.:experiments python experiments/d037_train.py 04:11:22
+[A] [S2 lin] JG-mean|1 done (1007 it, 184.7s)
+[A] [S2 lin] JG-mean|2 done (1256 it, 265.0s)
+[A] [S2 lin] JG-mean|3 done (1276 it, 267.7s)
+[A] [S2 lin] JG-mean|4 done (1271 it, 294.2s)
+[A] [S2 lin] JG-mean|5 done (1344 it, 312.8s)
+[A] [S2 lin] JG-mean|6 done (1314 it, 328.8s)
+[A] [S2 lin] JG-mean|7 done (1393 it, 352.9s)
+[A] [S2 lin] JG-mean|8 done (1425 it, 409.4s)
+[A] [S2 lin] GC-mean|1 done (1007 it, 161.1s)
+[A] [S2 lin] GC-mean|2 done (1239 it, 224.2s)
+[A] [S2 lin] GC-mean|3 done (1275 it, 277.7s)
+[A] [S2 lin] GC-mean|4 done (1053 it, 230.7s)
+[A] [S2 lin] GC-mean|5 done (998 it, 230.2s)
+[A] [S2 lin] GC-mean|6 done (845 it, 208.4s)
+[A] [S2 lin] GC-mean|7 done (856 it, 223.8s)
+[A] [S2 lin] GC-mean|8 done (743 it, 122.5s)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] You are using a CUDA device ('NVIDIA GH200 120GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.334
+[A] Metric val_loss improved by 0.528 >= min_delta = 0.0. New best score: 2.807
+[A] Metric val_loss improved by 0.424 >= min_delta = 0.0. New best score: 2.383
+[A] Metric val_loss improved by 0.070 >= min_delta = 0.0. New best score: 2.312
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.312. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.252
+[A] Metric val_loss improved by 0.688 >= min_delta = 0.0. New best score: 2.563
+[A] Metric val_loss improved by 0.117 >= min_delta = 0.0. New best score: 2.447
+[A] Metric val_loss improved by 0.071 >= min_delta = 0.0. New best score: 2.376
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.376. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.297
+[A] Metric val_loss improved by 0.713 >= min_delta = 0.0. New best score: 2.583
+[A] Metric val_loss improved by 0.012 >= min_delta = 0.0. New best score: 2.571
+[A] Metric val_loss improved by 0.163 >= min_delta = 0.0. New best score: 2.408
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.408. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.275
+[A] Metric val_loss improved by 0.722 >= min_delta = 0.0. New best score: 2.552
+[A] Metric val_loss improved by 0.100 >= min_delta = 0.0. New best score: 2.453
+[A] Metric val_loss improved by 0.035 >= min_delta = 0.0. New best score: 2.418
+[A] Metric val_loss improved by 0.068 >= min_delta = 0.0. New best score: 2.350
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.350. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.287
+[A] Metric val_loss improved by 0.435 >= min_delta = 0.0. New best score: 2.851
+[A] Metric val_loss improved by 0.412 >= min_delta = 0.0. New best score: 2.440
+[A] Metric val_loss improved by 0.145 >= min_delta = 0.0. New best score: 2.294
+[A] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 2.287
+[A] Metric val_loss improved by 0.010 >= min_delta = 0.0. New best score: 2.277
+[A] Metric val_loss improved by 0.122 >= min_delta = 0.0. New best score: 2.155
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.155. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=1 done (43.2 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.334
+[A] Metric val_loss improved by 0.528 >= min_delta = 0.0. New best score: 2.807
+[A] Metric val_loss improved by 0.424 >= min_delta = 0.0. New best score: 2.383
+[A] Metric val_loss improved by 0.070 >= min_delta = 0.0. New best score: 2.312
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.312. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.252
+[A] Metric val_loss improved by 0.688 >= min_delta = 0.0. New best score: 2.563
+[A] Metric val_loss improved by 0.117 >= min_delta = 0.0. New best score: 2.447
+[A] Metric val_loss improved by 0.071 >= min_delta = 0.0. New best score: 2.376
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.376. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.297
+[A] Metric val_loss improved by 0.713 >= min_delta = 0.0. New best score: 2.583
+[A] Metric val_loss improved by 0.012 >= min_delta = 0.0. New best score: 2.571
+[A] Metric val_loss improved by 0.163 >= min_delta = 0.0. New best score: 2.408
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.408. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.275
+[A] Metric val_loss improved by 0.722 >= min_delta = 0.0. New best score: 2.552
+[A] Metric val_loss improved by 0.100 >= min_delta = 0.0. New best score: 2.453
+[A] Metric val_loss improved by 0.035 >= min_delta = 0.0. New best score: 2.418
+[A] Metric val_loss improved by 0.068 >= min_delta = 0.0. New best score: 2.350
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.350. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.287
+[A] Metric val_loss improved by 0.435 >= min_delta = 0.0. New best score: 2.851
+[A] Metric val_loss improved by 0.412 >= min_delta = 0.0. New best score: 2.440
+[A] Metric val_loss improved by 0.145 >= min_delta = 0.0. New best score: 2.294
+[A] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 2.287
+[A] Metric val_loss improved by 0.010 >= min_delta = 0.0. New best score: 2.277
+[A] Metric val_loss improved by 0.122 >= min_delta = 0.0. New best score: 2.155
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.155. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=1 done (43.8 min)
+[A] [S2 att] k=1: JG-mean = GC-mean set, bit-identical
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.116
+[A] Metric val_loss improved by 0.701 >= min_delta = 0.0. New best score: 2.416
+[A] Metric val_loss improved by 0.156 >= min_delta = 0.0. New best score: 2.260
+[A] Metric val_loss improved by 0.149 >= min_delta = 0.0. New best score: 2.111
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.111. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.061
+[A] Metric val_loss improved by 0.497 >= min_delta = 0.0. New best score: 2.565
+[A] Metric val_loss improved by 0.576 >= min_delta = 0.0. New best score: 1.989
+[A] Metric val_loss improved by 0.058 >= min_delta = 0.0. New best score: 1.930
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.930. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.120
+[A] Metric val_loss improved by 0.795 >= min_delta = 0.0. New best score: 2.325
+[A] Metric val_loss improved by 0.276 >= min_delta = 0.0. New best score: 2.049
+[A] Metric val_loss improved by 0.105 >= min_delta = 0.0. New best score: 1.944
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.944. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.082
+[A] Metric val_loss improved by 0.596 >= min_delta = 0.0. New best score: 2.486
+[A] Metric val_loss improved by 0.277 >= min_delta = 0.0. New best score: 2.209
+[A] Metric val_loss improved by 0.137 >= min_delta = 0.0. New best score: 2.072
+[A] Metric val_loss improved by 0.261 >= min_delta = 0.0. New best score: 1.811
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.811. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.032
+[A] Metric val_loss improved by 0.607 >= min_delta = 0.0. New best score: 2.425
+[A] Metric val_loss improved by 0.148 >= min_delta = 0.0. New best score: 2.278
+[A] Metric val_loss improved by 0.160 >= min_delta = 0.0. New best score: 2.118
+[A] Metric val_loss improved by 0.101 >= min_delta = 0.0. New best score: 2.017
+[A] Metric val_loss improved by 0.021 >= min_delta = 0.0. New best score: 1.996
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.996. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=2 done (44.4 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.238
+[A] Metric val_loss improved by 0.740 >= min_delta = 0.0. New best score: 2.499
+[A] Metric val_loss improved by 0.044 >= min_delta = 0.0. New best score: 2.454
+[A] Metric val_loss improved by 0.227 >= min_delta = 0.0. New best score: 2.227
+[A] Metric val_loss improved by 0.349 >= min_delta = 0.0. New best score: 1.879
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.879. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.243
+[A] Metric val_loss improved by 0.199 >= min_delta = 0.0. New best score: 3.044
+[A] Metric val_loss improved by 0.615 >= min_delta = 0.0. New best score: 2.428
+[A] Metric val_loss improved by 0.015 >= min_delta = 0.0. New best score: 2.413
+[A] Metric val_loss improved by 0.237 >= min_delta = 0.0. New best score: 2.176
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.176. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.204
+[A] Metric val_loss improved by 0.576 >= min_delta = 0.0. New best score: 2.629
+[A] Metric val_loss improved by 0.265 >= min_delta = 0.0. New best score: 2.363
+[A] Metric val_loss improved by 0.157 >= min_delta = 0.0. New best score: 2.206
+[A] Metric val_loss improved by 0.087 >= min_delta = 0.0. New best score: 2.119
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.119. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.189
+[A] Metric val_loss improved by 0.379 >= min_delta = 0.0. New best score: 2.809
+[A] Metric val_loss improved by 0.465 >= min_delta = 0.0. New best score: 2.344
+[A] Metric val_loss improved by 0.034 >= min_delta = 0.0. New best score: 2.310
+[A] Metric val_loss improved by 0.087 >= min_delta = 0.0. New best score: 2.223
+[A] Metric val_loss improved by 0.236 >= min_delta = 0.0. New best score: 1.987
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.987. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.204
+[A] Metric val_loss improved by 0.738 >= min_delta = 0.0. New best score: 2.466
+[A] Metric val_loss improved by 0.128 >= min_delta = 0.0. New best score: 2.338
+[A] Metric val_loss improved by 0.112 >= min_delta = 0.0. New best score: 2.226
+[A] Metric val_loss improved by 0.036 >= min_delta = 0.0. New best score: 2.190
+[A] Metric val_loss improved by 0.099 >= min_delta = 0.0. New best score: 2.091
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 2.091. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=2 done (45.0 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.988
+[A] Metric val_loss improved by 0.618 >= min_delta = 0.0. New best score: 2.370
+[A] Metric val_loss improved by 0.322 >= min_delta = 0.0. New best score: 2.047
+[A] Metric val_loss improved by 0.014 >= min_delta = 0.0. New best score: 2.034
+[A] Metric val_loss improved by 0.299 >= min_delta = 0.0. New best score: 1.735
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.735. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.921
+[A] Metric val_loss improved by 0.771 >= min_delta = 0.0. New best score: 2.151
+[A] Metric val_loss improved by 0.070 >= min_delta = 0.0. New best score: 2.081
+[A] Metric val_loss improved by 0.081 >= min_delta = 0.0. New best score: 2.000
+[A] Metric val_loss improved by 0.271 >= min_delta = 0.0. New best score: 1.729
+[A] Metric val_loss improved by 0.087 >= min_delta = 0.0. New best score: 1.642
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.642. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.917
+[A] Metric val_loss improved by 0.631 >= min_delta = 0.0. New best score: 2.286
+[A] Metric val_loss improved by 0.467 >= min_delta = 0.0. New best score: 1.819
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.819. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.878
+[A] Metric val_loss improved by 0.655 >= min_delta = 0.0. New best score: 2.223
+[A] Metric val_loss improved by 0.027 >= min_delta = 0.0. New best score: 2.196
+[A] Metric val_loss improved by 0.456 >= min_delta = 0.0. New best score: 1.739
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.739. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.908
+[A] Metric val_loss improved by 0.705 >= min_delta = 0.0. New best score: 2.203
+[A] Metric val_loss improved by 0.133 >= min_delta = 0.0. New best score: 2.070
+[A] Metric val_loss improved by 0.045 >= min_delta = 0.0. New best score: 2.025
+[A] Metric val_loss improved by 0.203 >= min_delta = 0.0. New best score: 1.822
+[A] Metric val_loss improved by 0.083 >= min_delta = 0.0. New best score: 1.739
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.739. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=3 done (45.6 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.074
+[A] Metric val_loss improved by 0.574 >= min_delta = 0.0. New best score: 2.500
+[A] Metric val_loss improved by 0.562 >= min_delta = 0.0. New best score: 1.938
+[A] Metric val_loss improved by 0.057 >= min_delta = 0.0. New best score: 1.881
+[A] Metric val_loss improved by 0.085 >= min_delta = 0.0. New best score: 1.796
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.796. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.076
+[A] Metric val_loss improved by 0.690 >= min_delta = 0.0. New best score: 2.385
+[A] Metric val_loss improved by 0.437 >= min_delta = 0.0. New best score: 1.948
+[A] Metric val_loss improved by 0.036 >= min_delta = 0.0. New best score: 1.913
+[A] Metric val_loss improved by 0.146 >= min_delta = 0.0. New best score: 1.767
+[A] Metric val_loss improved by 0.068 >= min_delta = 0.0. New best score: 1.699
+[A] Metric val_loss improved by 0.016 >= min_delta = 0.0. New best score: 1.683
+[A] Metric val_loss improved by 0.089 >= min_delta = 0.0. New best score: 1.594
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.594. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.065
+[A] Metric val_loss improved by 0.768 >= min_delta = 0.0. New best score: 2.297
+[A] Metric val_loss improved by 0.276 >= min_delta = 0.0. New best score: 2.021
+[A] Metric val_loss improved by 0.347 >= min_delta = 0.0. New best score: 1.674
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.674. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.030
+[A] Metric val_loss improved by 0.777 >= min_delta = 0.0. New best score: 2.253
+[A] Metric val_loss improved by 0.346 >= min_delta = 0.0. New best score: 1.907
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.907. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.082
+[A] Metric val_loss improved by 0.057 >= min_delta = 0.0. New best score: 3.025
+[A] Metric val_loss improved by 0.693 >= min_delta = 0.0. New best score: 2.332
+[A] Metric val_loss improved by 0.398 >= min_delta = 0.0. New best score: 1.934
+[A] Metric val_loss improved by 0.014 >= min_delta = 0.0. New best score: 1.920
+[A] Metric val_loss improved by 0.097 >= min_delta = 0.0. New best score: 1.823
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.823. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=3 done (46.3 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.812
+[A] Metric val_loss improved by 0.829 >= min_delta = 0.0. New best score: 1.983
+[A] Metric val_loss improved by 0.254 >= min_delta = 0.0. New best score: 1.729
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.729. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.831
+[A] Metric val_loss improved by 0.647 >= min_delta = 0.0. New best score: 2.184
+[A] Metric val_loss improved by 0.391 >= min_delta = 0.0. New best score: 1.793
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.793. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.981
+[A] Metric val_loss improved by 1.067 >= min_delta = 0.0. New best score: 1.913
+[A] Metric val_loss improved by 0.071 >= min_delta = 0.0. New best score: 1.842
+[A] Metric val_loss improved by 0.198 >= min_delta = 0.0. New best score: 1.644
+[A] Metric val_loss improved by 0.015 >= min_delta = 0.0. New best score: 1.629
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.629. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.870
+[A] Metric val_loss improved by 0.655 >= min_delta = 0.0. New best score: 2.215
+[A] Metric val_loss improved by 0.439 >= min_delta = 0.0. New best score: 1.776
+[A] Metric val_loss improved by 0.047 >= min_delta = 0.0. New best score: 1.729
+[A] Metric val_loss improved by 0.223 >= min_delta = 0.0. New best score: 1.506
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.506. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.825
+[A] Metric val_loss improved by 0.784 >= min_delta = 0.0. New best score: 2.040
+[A] Metric val_loss improved by 0.117 >= min_delta = 0.0. New best score: 1.923
+[A] Metric val_loss improved by 0.052 >= min_delta = 0.0. New best score: 1.871
+[A] Metric val_loss improved by 0.037 >= min_delta = 0.0. New best score: 1.834
+[A] Metric val_loss improved by 0.269 >= min_delta = 0.0. New best score: 1.566
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.566. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=4 done (46.9 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.128
+[A] Metric val_loss improved by 0.781 >= min_delta = 0.0. New best score: 2.347
+[A] Metric val_loss improved by 0.367 >= min_delta = 0.0. New best score: 1.981
+[A] Metric val_loss improved by 0.323 >= min_delta = 0.0. New best score: 1.658
+[A] Metric val_loss improved by 0.061 >= min_delta = 0.0. New best score: 1.597
+[A] Metric val_loss improved by 0.052 >= min_delta = 0.0. New best score: 1.545
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.545. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.924
+[A] Metric val_loss improved by 0.713 >= min_delta = 0.0. New best score: 2.211
+[A] Metric val_loss improved by 0.441 >= min_delta = 0.0. New best score: 1.770
+[A] Metric val_loss improved by 0.017 >= min_delta = 0.0. New best score: 1.753
+[A] Metric val_loss improved by 0.058 >= min_delta = 0.0. New best score: 1.696
+[A] Metric val_loss improved by 0.188 >= min_delta = 0.0. New best score: 1.507
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.507. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.059
+[A] Metric val_loss improved by 0.934 >= min_delta = 0.0. New best score: 2.124
+[A] Metric val_loss improved by 0.341 >= min_delta = 0.0. New best score: 1.784
+[A] Metric val_loss improved by 0.180 >= min_delta = 0.0. New best score: 1.604
+[A] Metric val_loss improved by 0.098 >= min_delta = 0.0. New best score: 1.506
+[A] Metric val_loss improved by 0.090 >= min_delta = 0.0. New best score: 1.416
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.416. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.956
+[A] Metric val_loss improved by 0.601 >= min_delta = 0.0. New best score: 2.355
+[A] Metric val_loss improved by 0.389 >= min_delta = 0.0. New best score: 1.966
+[A] Metric val_loss improved by 0.328 >= min_delta = 0.0. New best score: 1.638
+[A] Metric val_loss improved by 0.007 >= min_delta = 0.0. New best score: 1.631
+[A] Metric val_loss improved by 0.147 >= min_delta = 0.0. New best score: 1.484
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.484. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.979
+[A] Metric val_loss improved by 0.698 >= min_delta = 0.0. New best score: 2.281
+[A] Metric val_loss improved by 0.454 >= min_delta = 0.0. New best score: 1.827
+[A] Metric val_loss improved by 0.073 >= min_delta = 0.0. New best score: 1.754
+[A] Metric val_loss improved by 0.045 >= min_delta = 0.0. New best score: 1.708
+[A] Metric val_loss improved by 0.105 >= min_delta = 0.0. New best score: 1.604
+[A] Metric val_loss improved by 0.128 >= min_delta = 0.0. New best score: 1.475
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.475. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=4 done (47.6 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.836
+[A] Metric val_loss improved by 0.598 >= min_delta = 0.0. New best score: 2.239
+[A] Metric val_loss improved by 0.487 >= min_delta = 0.0. New best score: 1.752
+[A] Metric val_loss improved by 0.157 >= min_delta = 0.0. New best score: 1.595
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.595. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.958
+[A] Metric val_loss improved by 0.974 >= min_delta = 0.0. New best score: 1.983
+[A] Metric val_loss improved by 0.156 >= min_delta = 0.0. New best score: 1.827
+[A] Metric val_loss improved by 0.047 >= min_delta = 0.0. New best score: 1.780
+[A] Metric val_loss improved by 0.313 >= min_delta = 0.0. New best score: 1.466
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.466. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.057
+[A] Metric val_loss improved by 1.099 >= min_delta = 0.0. New best score: 1.957
+[A] Metric val_loss improved by 0.110 >= min_delta = 0.0. New best score: 1.847
+[A] Metric val_loss improved by 0.023 >= min_delta = 0.0. New best score: 1.824
+[A] Metric val_loss improved by 0.129 >= min_delta = 0.0. New best score: 1.695
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.695. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.800
+[A] Metric val_loss improved by 0.688 >= min_delta = 0.0. New best score: 2.113
+[A] Metric val_loss improved by 0.035 >= min_delta = 0.0. New best score: 2.078
+[A] Metric val_loss improved by 0.185 >= min_delta = 0.0. New best score: 1.893
+[A] Metric val_loss improved by 0.236 >= min_delta = 0.0. New best score: 1.657
+[A] Metric val_loss improved by 0.077 >= min_delta = 0.0. New best score: 1.580
+[A] Metric val_loss improved by 0.092 >= min_delta = 0.0. New best score: 1.488
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.488. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.835
+[A] Metric val_loss improved by 0.499 >= min_delta = 0.0. New best score: 2.336
+[A] Metric val_loss improved by 0.431 >= min_delta = 0.0. New best score: 1.904
+[A] Metric val_loss improved by 0.337 >= min_delta = 0.0. New best score: 1.568
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.568. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=5 done (48.3 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.914
+[A] Metric val_loss improved by 0.838 >= min_delta = 0.0. New best score: 2.077
+[A] Metric val_loss improved by 0.259 >= min_delta = 0.0. New best score: 1.817
+[A] Metric val_loss improved by 0.189 >= min_delta = 0.0. New best score: 1.628
+[A] Metric val_loss improved by 0.170 >= min_delta = 0.0. New best score: 1.458
+[A] Metric val_loss improved by 0.201 >= min_delta = 0.0. New best score: 1.257
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.257. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 3.076
+[A] Metric val_loss improved by 1.061 >= min_delta = 0.0. New best score: 2.015
+[A] Metric val_loss improved by 0.311 >= min_delta = 0.0. New best score: 1.704
+[A] Metric val_loss improved by 0.085 >= min_delta = 0.0. New best score: 1.619
+[A] Metric val_loss improved by 0.204 >= min_delta = 0.0. New best score: 1.415
+[A] Metric val_loss improved by 0.028 >= min_delta = 0.0. New best score: 1.387
+[A] Metric val_loss improved by 0.085 >= min_delta = 0.0. New best score: 1.302
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.302. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.891
+[A] Metric val_loss improved by 0.872 >= min_delta = 0.0. New best score: 2.020
+[A] Metric val_loss improved by 0.139 >= min_delta = 0.0. New best score: 1.881
+[A] Metric val_loss improved by 0.074 >= min_delta = 0.0. New best score: 1.807
+[A] Metric val_loss improved by 0.157 >= min_delta = 0.0. New best score: 1.650
+[A] Metric val_loss improved by 0.082 >= min_delta = 0.0. New best score: 1.569
+[A] Metric val_loss improved by 0.113 >= min_delta = 0.0. New best score: 1.455
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.455. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.946
+[A] Metric val_loss improved by 0.837 >= min_delta = 0.0. New best score: 2.109
+[A] Metric val_loss improved by 0.320 >= min_delta = 0.0. New best score: 1.789
+[A] Metric val_loss improved by 0.255 >= min_delta = 0.0. New best score: 1.534
+[A] Metric val_loss improved by 0.061 >= min_delta = 0.0. New best score: 1.473
+[A] Metric val_loss improved by 0.098 >= min_delta = 0.0. New best score: 1.374
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.374. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.833
+[A] Metric val_loss improved by 0.955 >= min_delta = 0.0. New best score: 1.878
+[A] Metric val_loss improved by 0.527 >= min_delta = 0.0. New best score: 1.351
+[A] Metric val_loss improved by 0.130 >= min_delta = 0.0. New best score: 1.221
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.221. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=5 done (49.0 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.708
+[A] Metric val_loss improved by 0.760 >= min_delta = 0.0. New best score: 1.947
+[A] Metric val_loss improved by 0.082 >= min_delta = 0.0. New best score: 1.865
+[A] Metric val_loss improved by 0.269 >= min_delta = 0.0. New best score: 1.596
+[A] Metric val_loss improved by 0.124 >= min_delta = 0.0. New best score: 1.472
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.472. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.850
+[A] Metric val_loss improved by 0.884 >= min_delta = 0.0. New best score: 1.965
+[A] Metric val_loss improved by 0.210 >= min_delta = 0.0. New best score: 1.756
+[A] Metric val_loss improved by 0.254 >= min_delta = 0.0. New best score: 1.501
+[A] Metric val_loss improved by 0.176 >= min_delta = 0.0. New best score: 1.325
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.325. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.974
+[A] Metric val_loss improved by 0.935 >= min_delta = 0.0. New best score: 2.039
+[A] Metric val_loss improved by 0.290 >= min_delta = 0.0. New best score: 1.749
+[A] Metric val_loss improved by 0.020 >= min_delta = 0.0. New best score: 1.730
+[A] Metric val_loss improved by 0.081 >= min_delta = 0.0. New best score: 1.649
+[A] Metric val_loss improved by 0.162 >= min_delta = 0.0. New best score: 1.487
+[A] Metric val_loss improved by 0.054 >= min_delta = 0.0. New best score: 1.433
+[A] Metric val_loss improved by 0.002 >= min_delta = 0.0. New best score: 1.431
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.431. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.734
+[A] Metric val_loss improved by 0.736 >= min_delta = 0.0. New best score: 1.999
+[A] Metric val_loss improved by 0.216 >= min_delta = 0.0. New best score: 1.782
+[A] Metric val_loss improved by 0.297 >= min_delta = 0.0. New best score: 1.485
+[A] Metric val_loss improved by 0.075 >= min_delta = 0.0. New best score: 1.410
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.410. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.736
+[A] Metric val_loss improved by 0.550 >= min_delta = 0.0. New best score: 2.185
+[A] Metric val_loss improved by 0.367 >= min_delta = 0.0. New best score: 1.819
+[A] Metric val_loss improved by 0.315 >= min_delta = 0.0. New best score: 1.503
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.503. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=6 done (49.6 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.757
+[A] Metric val_loss improved by 1.074 >= min_delta = 0.0. New best score: 1.683
+[A] Metric val_loss improved by 0.144 >= min_delta = 0.0. New best score: 1.539
+[A] Metric val_loss improved by 0.294 >= min_delta = 0.0. New best score: 1.245
+[A] Metric val_loss improved by 0.084 >= min_delta = 0.0. New best score: 1.161
+[A] Metric val_loss improved by 0.047 >= min_delta = 0.0. New best score: 1.114
+[A] Metric val_loss improved by 0.021 >= min_delta = 0.0. New best score: 1.093
+[A] Metric val_loss improved by 0.057 >= min_delta = 0.0. New best score: 1.036
+[A] Metric val_loss improved by 0.014 >= min_delta = 0.0. New best score: 1.021
+[A] Metric val_loss improved by 0.031 >= min_delta = 0.0. New best score: 0.990
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.990. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.611
+[A] Metric val_loss improved by 1.111 >= min_delta = 0.0. New best score: 1.500
+[A] Metric val_loss improved by 0.325 >= min_delta = 0.0. New best score: 1.175
+[A] Metric val_loss improved by 0.089 >= min_delta = 0.0. New best score: 1.086
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.086. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.713
+[A] Metric val_loss improved by 1.171 >= min_delta = 0.0. New best score: 1.542
+[A] Metric val_loss improved by 0.300 >= min_delta = 0.0. New best score: 1.241
+[A] Metric val_loss improved by 0.049 >= min_delta = 0.0. New best score: 1.192
+[A] Metric val_loss improved by 0.062 >= min_delta = 0.0. New best score: 1.131
+[A] Metric val_loss improved by 0.049 >= min_delta = 0.0. New best score: 1.082
+[A] Metric val_loss improved by 0.087 >= min_delta = 0.0. New best score: 0.995
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.995. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.722
+[A] Metric val_loss improved by 0.996 >= min_delta = 0.0. New best score: 1.726
+[A] Metric val_loss improved by 0.441 >= min_delta = 0.0. New best score: 1.285
+[A] Metric val_loss improved by 0.008 >= min_delta = 0.0. New best score: 1.277
+[A] Metric val_loss improved by 0.062 >= min_delta = 0.0. New best score: 1.214
+[A] Metric val_loss improved by 0.177 >= min_delta = 0.0. New best score: 1.037
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.037. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.590
+[A] Metric val_loss improved by 1.121 >= min_delta = 0.0. New best score: 1.468
+[A] Metric val_loss improved by 0.171 >= min_delta = 0.0. New best score: 1.297
+[A] Metric val_loss improved by 0.095 >= min_delta = 0.0. New best score: 1.202
+[A] Metric val_loss improved by 0.127 >= min_delta = 0.0. New best score: 1.074
+[A] Metric val_loss improved by 0.135 >= min_delta = 0.0. New best score: 0.940
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.940. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=6 done (50.4 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.684
+[A] Metric val_loss improved by 0.841 >= min_delta = 0.0. New best score: 1.843
+[A] Metric val_loss improved by 0.121 >= min_delta = 0.0. New best score: 1.721
+[A] Metric val_loss improved by 0.052 >= min_delta = 0.0. New best score: 1.669
+[A] Metric val_loss improved by 0.052 >= min_delta = 0.0. New best score: 1.617
+[A] Metric val_loss improved by 0.201 >= min_delta = 0.0. New best score: 1.416
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.416. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.669
+[A] Metric val_loss improved by 0.782 >= min_delta = 0.0. New best score: 1.888
+[A] Metric val_loss improved by 0.429 >= min_delta = 0.0. New best score: 1.459
+[A] Metric val_loss improved by 0.136 >= min_delta = 0.0. New best score: 1.323
+[A] Metric val_loss improved by 0.062 >= min_delta = 0.0. New best score: 1.261
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.261. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.980
+[A] Metric val_loss improved by 1.077 >= min_delta = 0.0. New best score: 1.903
+[A] Metric val_loss improved by 0.353 >= min_delta = 0.0. New best score: 1.550
+[A] Metric val_loss improved by 0.235 >= min_delta = 0.0. New best score: 1.315
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.315. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.786
+[A] Metric val_loss improved by 0.705 >= min_delta = 0.0. New best score: 2.080
+[A] Metric val_loss improved by 0.098 >= min_delta = 0.0. New best score: 1.982
+[A] Metric val_loss improved by 0.503 >= min_delta = 0.0. New best score: 1.480
+[A] Metric val_loss improved by 0.071 >= min_delta = 0.0. New best score: 1.408
+[A] Metric val_loss improved by 0.042 >= min_delta = 0.0. New best score: 1.366
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.366. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.729
+[A] Metric val_loss improved by 0.795 >= min_delta = 0.0. New best score: 1.934
+[A] Metric val_loss improved by 0.015 >= min_delta = 0.0. New best score: 1.919
+[A] Metric val_loss improved by 0.062 >= min_delta = 0.0. New best score: 1.857
+[A] Metric val_loss improved by 0.323 >= min_delta = 0.0. New best score: 1.534
+[A] Metric val_loss improved by 0.076 >= min_delta = 0.0. New best score: 1.458
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.458. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=7 done (51.2 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.835
+[A] Metric val_loss improved by 1.291 >= min_delta = 0.0. New best score: 1.544
+[A] Metric val_loss improved by 0.283 >= min_delta = 0.0. New best score: 1.261
+[A] Metric val_loss improved by 0.097 >= min_delta = 0.0. New best score: 1.164
+[A] Metric val_loss improved by 0.022 >= min_delta = 0.0. New best score: 1.142
+[A] Metric val_loss improved by 0.008 >= min_delta = 0.0. New best score: 1.134
+[A] Metric val_loss improved by 0.078 >= min_delta = 0.0. New best score: 1.055
+[A] Metric val_loss improved by 0.133 >= min_delta = 0.0. New best score: 0.922
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.922. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.728
+[A] Metric val_loss improved by 1.244 >= min_delta = 0.0. New best score: 1.483
+[A] Metric val_loss improved by 0.182 >= min_delta = 0.0. New best score: 1.302
+[A] Metric val_loss improved by 0.112 >= min_delta = 0.0. New best score: 1.189
+[A] Metric val_loss improved by 0.024 >= min_delta = 0.0. New best score: 1.166
+[A] Metric val_loss improved by 0.076 >= min_delta = 0.0. New best score: 1.090
+[A] Metric val_loss improved by 0.186 >= min_delta = 0.0. New best score: 0.904
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.904. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.587
+[A] Metric val_loss improved by 1.150 >= min_delta = 0.0. New best score: 1.438
+[A] Metric val_loss improved by 0.153 >= min_delta = 0.0. New best score: 1.284
+[A] Metric val_loss improved by 0.019 >= min_delta = 0.0. New best score: 1.266
+[A] Metric val_loss improved by 0.172 >= min_delta = 0.0. New best score: 1.093
+[A] Metric val_loss improved by 0.105 >= min_delta = 0.0. New best score: 0.988
+[A] Metric val_loss improved by 0.078 >= min_delta = 0.0. New best score: 0.910
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.910. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.602
+[A] Metric val_loss improved by 1.086 >= min_delta = 0.0. New best score: 1.516
+[A] Metric val_loss improved by 0.338 >= min_delta = 0.0. New best score: 1.177
+[A] Metric val_loss improved by 0.066 >= min_delta = 0.0. New best score: 1.112
+[A] Metric val_loss improved by 0.022 >= min_delta = 0.0. New best score: 1.089
+[A] Metric val_loss improved by 0.200 >= min_delta = 0.0. New best score: 0.889
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.889. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.585
+[A] Metric val_loss improved by 1.157 >= min_delta = 0.0. New best score: 1.428
+[A] Metric val_loss improved by 0.111 >= min_delta = 0.0. New best score: 1.317
+[A] Metric val_loss improved by 0.223 >= min_delta = 0.0. New best score: 1.095
+[A] Metric val_loss improved by 0.098 >= min_delta = 0.0. New best score: 0.997
+[A] Metric val_loss improved by 0.107 >= min_delta = 0.0. New best score: 0.890
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.890. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=7 done (51.9 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.651
+[A] Metric val_loss improved by 0.800 >= min_delta = 0.0. New best score: 1.851
+[A] Metric val_loss improved by 0.184 >= min_delta = 0.0. New best score: 1.667
+[A] Metric val_loss improved by 0.113 >= min_delta = 0.0. New best score: 1.554
+[A] Metric val_loss improved by 0.010 >= min_delta = 0.0. New best score: 1.544
+[A] Metric val_loss improved by 0.063 >= min_delta = 0.0. New best score: 1.481
+[A] Metric val_loss improved by 0.043 >= min_delta = 0.0. New best score: 1.439
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.439. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.710
+[A] Metric val_loss improved by 0.704 >= min_delta = 0.0. New best score: 2.007
+[A] Metric val_loss improved by 0.244 >= min_delta = 0.0. New best score: 1.762
+[A] Metric val_loss improved by 0.176 >= min_delta = 0.0. New best score: 1.587
+[A] Metric val_loss improved by 0.306 >= min_delta = 0.0. New best score: 1.280
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.280. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.919
+[A] Metric val_loss improved by 1.004 >= min_delta = 0.0. New best score: 1.915
+[A] Metric val_loss improved by 0.153 >= min_delta = 0.0. New best score: 1.761
+[A] Metric val_loss improved by 0.282 >= min_delta = 0.0. New best score: 1.479
+[A] Metric val_loss improved by 0.014 >= min_delta = 0.0. New best score: 1.465
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.465. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.739
+[A] Metric val_loss improved by 0.645 >= min_delta = 0.0. New best score: 2.094
+[A] Metric val_loss improved by 0.346 >= min_delta = 0.0. New best score: 1.749
+[A] Metric val_loss improved by 0.035 >= min_delta = 0.0. New best score: 1.713
+[A] Metric val_loss improved by 0.133 >= min_delta = 0.0. New best score: 1.580
+[A] Metric val_loss improved by 0.113 >= min_delta = 0.0. New best score: 1.467
+[A] Metric val_loss improved by 0.072 >= min_delta = 0.0. New best score: 1.395
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.395. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.762
+[A] Metric val_loss improved by 0.789 >= min_delta = 0.0. New best score: 1.973
+[A] Metric val_loss improved by 0.419 >= min_delta = 0.0. New best score: 1.555
+[A] Metric val_loss improved by 0.010 >= min_delta = 0.0. New best score: 1.545
+[A] Metric val_loss improved by 0.101 >= min_delta = 0.0. New best score: 1.444
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 1.444. Signaling Trainer to stop.
+[A] [S2 att] JG-mean k=8 done (52.6 min)
+[A] [rank: 0] Seed set to 0
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.929
+[A] Metric val_loss improved by 1.232 >= min_delta = 0.0. New best score: 1.697
+[A] Metric val_loss improved by 0.340 >= min_delta = 0.0. New best score: 1.357
+[A] Metric val_loss improved by 0.277 >= min_delta = 0.0. New best score: 1.080
+[A] Metric val_loss improved by 0.087 >= min_delta = 0.0. New best score: 0.993
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.993. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 1
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.700
+[A] Metric val_loss improved by 1.234 >= min_delta = 0.0. New best score: 1.466
+[A] Metric val_loss improved by 0.322 >= min_delta = 0.0. New best score: 1.145
+[A] Metric val_loss improved by 0.148 >= min_delta = 0.0. New best score: 0.996
+[A] Metric val_loss improved by 0.034 >= min_delta = 0.0. New best score: 0.963
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.963. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 2
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.408
+[A] Metric val_loss improved by 0.765 >= min_delta = 0.0. New best score: 1.643
+[A] Metric val_loss improved by 0.376 >= min_delta = 0.0. New best score: 1.266
+[A] Metric val_loss improved by 0.027 >= min_delta = 0.0. New best score: 1.239
+[A] Metric val_loss improved by 0.221 >= min_delta = 0.0. New best score: 1.018
+[A] Metric val_loss improved by 0.123 >= min_delta = 0.0. New best score: 0.895
+[A] Metric val_loss improved by 0.005 >= min_delta = 0.0. New best score: 0.890
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.890. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 3
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.634
+[A] Metric val_loss improved by 1.101 >= min_delta = 0.0. New best score: 1.533
+[A] Metric val_loss improved by 0.329 >= min_delta = 0.0. New best score: 1.204
+[A] Metric val_loss improved by 0.214 >= min_delta = 0.0. New best score: 0.991
+[A] Metric val_loss improved by 0.084 >= min_delta = 0.0. New best score: 0.907
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.907. Signaling Trainer to stop.
+[A] [rank: 0] Seed set to 4
+[A] GPU available: True (cuda), used: True
+[A] TPU available: False, using: 0 TPU cores
+[A] HPU available: False, using: 0 HPUs
+[A] LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[A] 
+[A]   | Name      | Type                 | Params | Mode 
+[A] -----------------------------------------------------------
+[A] 0 | net       | InferenceModelLLMmap | 3.0 M  | train
+[A] 1 | criterion | CrossEntropyLoss     | 0      | train
+[A] 2 | train_acc | MulticlassAccuracy   | 0      | train
+[A] 3 | val_acc   | MulticlassAccuracy   | 0      | train
+[A] -----------------------------------------------------------
+[A] 3.0 M     Trainable params
+[A] 0         Non-trainable params
+[A] 3.0 M     Total params
+[A] 12.169    Total estimated model params size (MB)
+[A] 34        Modules in train mode
+[A] 0         Modules in eval mode
+[A] SLURM auto-requeueing enabled. Setting signal handlers.
+[A] Metric val_loss improved. New best score: 2.699
+[A] Metric val_loss improved by 1.210 >= min_delta = 0.0. New best score: 1.489
+[A] Metric val_loss improved by 0.244 >= min_delta = 0.0. New best score: 1.245
+[A] Metric val_loss improved by 0.074 >= min_delta = 0.0. New best score: 1.171
+[A] Metric val_loss improved by 0.138 >= min_delta = 0.0. New best score: 1.033
+[A] Metric val_loss improved by 0.049 >= min_delta = 0.0. New best score: 0.984
+[A] Metric val_loss improved by 0.008 >= min_delta = 0.0. New best score: 0.976
+[A] Metric val_loss improved by 0.111 >= min_delta = 0.0. New best score: 0.864
+[A] Monitored metric val_loss did not improve in the last 5 records. Best score: 0.864. Signaling Trainer to stop.
+[A] [S2 att] GC-mean k=8 done (53.4 min)
+[A] [S2] done: 80 attention runs, 16 linear fits, wall 53.4 min
+[A] [A] >>> OMP_NUM_THREADS=8 PYTHONPATH=.:experiments python experiments/d037_plots.py data 05:06:21
+[A] [S3a] wrote ./results/D037/plotdata.npz (tail plot + curve inputs; no contrast computed)
+[A] [A] >>> /work/11280/zimuq1/vista/miniconda3/envs/llmmap/bin/python experiments/d037_plots.py draw 05:06:25
+[A] [S3a] drew ./results/D037/tail_k8.png, ./results/D037/curves.png
+=== end: Fri Nov  6 05:07:26 AM CST 2026 rc=0 ===
