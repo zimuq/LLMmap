@@ -1,0 +1,1478 @@
+{
+ "schema": "d037-chains-v1",
+ "frozen_before_training": true,
+ "view": "v2",
+ "models": [
+  "CohereForAI/aya-23-8B",
+  "CohereLabs/tiny-aya-earth",
+  "CohereLabs/tiny-aya-fire",
+  "CohereLabs/tiny-aya-global",
+  "CohereLabs/tiny-aya-water",
+  "Deci/DeciLM-7B-instruct",
+  "HuggingFaceH4/zephyr-7b-beta",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct-16k",
+  "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "Qwen/Qwen2-1.5B-Instruct",
+  "Qwen/Qwen2-7B-Instruct",
+  "Qwen/Qwen2.5-0.5B-Instruct",
+  "Qwen/Qwen2.5-3B-Instruct",
+  "Qwen/Qwen2.5-7B-Instruct",
+  "Qwen/Qwen2.5-7B-Instruct-1M",
+  "Qwen/Qwen3-30B-A3B",
+  "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "Qwen/Qwen3-4B",
+  "Qwen/Qwen3-4B-Instruct-2507",
+  "Qwen/Qwen3-8B",
+  "Qwen/Qwen3.5-4B",
+  "Qwen/Qwen3.5-9B",
+  "allenai/Llama-3.1-Tulu-3-8B",
+  "allenai/Llama-3.1-Tulu-3.1-8B",
+  "allenai/OLMo-2-0425-1B-Instruct",
+  "allenai/OLMo-2-1124-13B-Instruct",
+  "allenai/OLMo-2-1124-7B-Instruct",
+  "allenai/Olmo-3-7B-Instruct",
+  "allenai/Olmo-3.1-32B-Instruct",
+  "google/gemma-1.1-2b-it",
+  "google/gemma-1.1-7b-it",
+  "google/gemma-2-9b-it",
+  "google/gemma-2b-it",
+  "google/gemma-3-12b-it",
+  "google/gemma-3-1b-it",
+  "google/gemma-3-4b-it",
+  "google/gemma-4-12B-it",
+  "google/gemma-4-E4B-it",
+  "google/gemma-7b-it",
+  "gradientai/Llama-3-8B-Instruct-Gradient-1048k",
+  "ibm-granite/granite-3.0-8b-instruct",
+  "ibm-granite/granite-3.1-8b-instruct",
+  "ibm-granite/granite-3.2-8b-instruct",
+  "ibm-granite/granite-3.3-8b-instruct",
+  "ibm-granite/granite-4.1-3b",
+  "ibm-granite/granite-4.1-8b",
+  "ibm-granite/granite-4.2-3b",
+  "ibm-granite/granite-4.2-8b",
+  "internlm/internlm2_5-7b-chat",
+  "meta-llama/Llama-2-7b-chat-hf",
+  "meta-llama/Llama-3.2-1B-Instruct",
+  "meta-llama/Llama-3.2-3B-Instruct",
+  "meta-llama/Meta-Llama-3-8B-Instruct",
+  "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "microsoft/Phi-3-medium-128k-instruct",
+  "microsoft/Phi-3-medium-4k-instruct",
+  "microsoft/Phi-3-mini-128k-instruct",
+  "microsoft/Phi-3-mini-4k-instruct",
+  "microsoft/Phi-3.5-mini-instruct",
+  "microsoft/Phi-4-mini-instruct",
+  "microsoft/phi-4",
+  "mistralai/Ministral-3-14B-Instruct-2512-BF16",
+  "mistralai/Ministral-3-3B-Instruct-2512-BF16",
+  "mistralai/Ministral-3-8B-Instruct-2512-BF16",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "mistralai/Mistral-7B-Instruct-v0.2",
+  "mistralai/Mistral-7B-Instruct-v0.3",
+  "mistralai/Mistral-Small-24B-Instruct-2501",
+  "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+  "nvidia/Llama-3.1-Nemotron-8B-UltraLong-1M-Instruct",
+  "nvidia/Llama3-ChatQA-1.5-8B",
+  "openchat/openchat-3.6-8b-20240522",
+  "openchat/openchat_3.5",
+  "tiiuae/Falcon-H1-3B-Instruct",
+  "tiiuae/Falcon-H1-7B-Instruct",
+  "tiiuae/Falcon3-10B-Instruct",
+  "tiiuae/Falcon3-1B-Instruct",
+  "tiiuae/Falcon3-3B-Instruct",
+  "tiiuae/Falcon3-7B-Instruct",
+  "togethercomputer/Llama-2-7B-32K-Instruct",
+  "upstage/SOLAR-10.7B-Instruct-v1.0",
+  "utter-project/EuroLLM-1.7B-Instruct",
+  "utter-project/EuroLLM-9B-Instruct",
+  "utter-project/EuroLLM-9B-Instruct-2512"
+ ],
+ "n_pairs": 3570,
+ "review": "D037 Review 2026-11-06, APPROVED WITH AMENDMENTS (Calls 1, 2 -> (a); A1, A2)",
+ "s0_sha256": "b52e43bfa8c85efd22d153cd89474264dcffcf015f84559f9902e0f6d2433c2f",
+ "tensor_sha256": "8a31d7603c27d1e8b455e4b653ba3c3bc5edd4cf50582f9b43443abc73a1f223",
+ "gammas": {
+  "JG": 0.1,
+  "JG-mean": 1.0,
+  "GC": 0.1,
+  "GC-mean": 1.0
+ },
+ "k": 8,
+ "tie_rule": "lowest id wins (joint_greedy / greedy_cover)",
+ "mmr_reference": "MMR|pearson|0.7",
+ "chains": {
+  "JG": [
+   193,
+   117,
+   233,
+   237,
+   0,
+   253,
+   121,
+   18
+  ],
+  "JG-mean": [
+   109,
+   123,
+   117,
+   114,
+   132,
+   1,
+   136,
+   147
+  ],
+  "GC": [
+   193,
+   233,
+   117,
+   253,
+   252,
+   237,
+   140,
+   240
+  ],
+  "GC-mean": [
+   109,
+   240,
+   233,
+   3,
+   117,
+   193,
+   123,
+   252
+  ],
+  "PAPER8": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "TOP-K[CVaR]": [
+   193,
+   0,
+   109,
+   123,
+   237,
+   121,
+   140,
+   114
+  ],
+  "TOP-K[MEAN]": [
+   109,
+   117,
+   123,
+   114,
+   1,
+   132,
+   136,
+   121
+  ],
+  "MMR-PP[CVaR]": [
+   193,
+   237,
+   109,
+   0,
+   194,
+   241,
+   140,
+   251
+  ]
+ },
+ "traces": {
+  "JG-mean": [
+   {
+    "k": 1,
+    "query": 109,
+    "objective_cvar": 1.027014798032386,
+    "mean_stat": 1.0270148515701294,
+    "min_stat": 0.021361134946346283,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 2,
+    "query": 123,
+    "objective_cvar": 0.8850182468869856,
+    "mean_stat": 0.8850182294845581,
+    "min_stat": 0.02272125706076622,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 3,
+    "query": 117,
+    "objective_cvar": 0.8298059040779661,
+    "mean_stat": 0.829805850982666,
+    "min_stat": 0.02700023539364338,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 4,
+    "query": 114,
+    "objective_cvar": 0.7964857400799332,
+    "mean_stat": 0.7964857220649719,
+    "min_stat": 0.02827269583940506,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 5,
+    "query": 132,
+    "objective_cvar": 0.7628572273801187,
+    "mean_stat": 0.7628572583198547,
+    "min_stat": 0.028389474377036095,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 6,
+    "query": 1,
+    "objective_cvar": 0.7404346012413836,
+    "mean_stat": 0.7404345870018005,
+    "min_stat": 0.02775566652417183,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 7,
+    "query": 136,
+    "objective_cvar": 0.7230443166067996,
+    "mean_stat": 0.7230443358421326,
+    "min_stat": 0.027476979419589043,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   },
+   {
+    "k": 8,
+    "query": 147,
+    "objective_cvar": 0.7095470044881899,
+    "mean_stat": 0.7095469832420349,
+    "min_stat": 0.026887159794569016,
+    "sigma2": null,
+    "n_exact_ties_at_max": 1
+   }
+  ],
+  "GC-mean": [
+   {
+    "k": 1,
+    "query": 109,
+    "objective": 1.0270225959775203,
+    "n_ties": 1,
+    "cvar_gamma": 1.0270225959775203,
+    "mean_cov": 1.0270225959775203,
+    "min_cov": 0.021362753584980965
+   },
+   {
+    "k": 2,
+    "query": 240,
+    "objective": 1.287473369465948,
+    "n_ties": 1,
+    "cvar_gamma": 1.287473369465948,
+    "mean_cov": 1.287473369465948,
+    "min_cov": 0.02748483419418335
+   },
+   {
+    "k": 3,
+    "query": 233,
+    "objective": 1.425262581141723,
+    "n_ties": 1,
+    "cvar_gamma": 1.425262581141723,
+    "mean_cov": 1.425262581141723,
+    "min_cov": 0.02748483419418335
+   },
+   {
+    "k": 4,
+    "query": 3,
+    "objective": 1.5411287846988073,
+    "n_ties": 1,
+    "cvar_gamma": 1.5411287846988073,
+    "mean_cov": 1.5411287846988073,
+    "min_cov": 0.02748483419418335
+   },
+   {
+    "k": 5,
+    "query": 117,
+    "objective": 1.6291050685115722,
+    "n_ties": 1,
+    "cvar_gamma": 1.6291050685115722,
+    "mean_cov": 1.6291050685115722,
+    "min_cov": 0.03622334823012352
+   },
+   {
+    "k": 6,
+    "query": 193,
+    "objective": 1.7090296874349775,
+    "n_ties": 1,
+    "cvar_gamma": 1.7090296874349775,
+    "mean_cov": 1.7090296874349775,
+    "min_cov": 0.041083645075559616
+   },
+   {
+    "k": 7,
+    "query": 123,
+    "objective": 1.7685443684364817,
+    "n_ties": 1,
+    "cvar_gamma": 1.7685443684364817,
+    "mean_cov": 1.7685443684364817,
+    "min_cov": 0.041083645075559616
+   },
+   {
+    "k": 8,
+    "query": 252,
+    "objective": 1.8094334779698558,
+    "n_ties": 1,
+    "cvar_gamma": 1.8094334779698558,
+    "mean_cov": 1.8094334779698558,
+    "min_cov": 0.041083645075559616
+   }
+  ]
+ },
+ "first_query": {
+  "JG": 193,
+  "JG-mean": 109,
+  "GC": 193,
+  "GC-mean": 109,
+  "PAPER8": 0,
+  "TOP-K[CVaR]": 193,
+  "TOP-K[MEAN]": 109,
+  "MMR-PP[CVaR]": 193
+ },
+ "objective_trend": {
+  "JG-mean": {
+   "objective": [
+    1.027014798032386,
+    0.8850182468869856,
+    0.8298059040779661,
+    0.7964857400799332,
+    0.7628572273801187,
+    0.7404346012413836,
+    0.7230443166067996,
+    0.7095470044881899
+   ],
+   "diffs": [
+    -0.14199655114540044,
+    -0.05521234280901954,
+    -0.03332016399803284,
+    -0.03362851269981448,
+    -0.022422626138735136,
+    -0.01739028463458403,
+    -0.013497312118609717
+   ],
+   "n_decreases": 7,
+   "monotone_nonincreasing": true,
+   "d012_v1_pattern": "objective falls as queries are added"
+  },
+  "GC-mean": {
+   "objective": [
+    1.0270225959775203,
+    1.287473369465948,
+    1.425262581141723,
+    1.5411287846988073,
+    1.6291050685115722,
+    1.7090296874349775,
+    1.7685443684364817,
+    1.8094334779698558
+   ],
+   "monotone_nondecreasing": true,
+   "note": "MAX coverage: mean coverage cannot fall"
+  }
+ },
+ "verify_reduction": {
+  "gamma1_chain": [
+   109,
+   240,
+   233,
+   3,
+   117,
+   193,
+   123,
+   252
+  ],
+  "mean_greedy_chain": [
+   109,
+   240,
+   233,
+   3,
+   117,
+   193,
+   123,
+   252
+  ],
+  "identical": true,
+  "agg": "max"
+ },
+ "jg_mean_check": [
+  {
+   "k": 1,
+   "query": 109,
+   "cvar1": 1.027014798032386,
+   "mean": 1.027014798032386,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  },
+  {
+   "k": 2,
+   "query": 123,
+   "cvar1": 0.8850182468869856,
+   "mean": 0.8850182468869856,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  },
+  {
+   "k": 3,
+   "query": 117,
+   "cvar1": 0.8298059040779661,
+   "mean": 0.8298059040779661,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  },
+  {
+   "k": 4,
+   "query": 114,
+   "cvar1": 0.7964857400799332,
+   "mean": 0.7964857400799332,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  },
+  {
+   "k": 5,
+   "query": 132,
+   "cvar1": 0.7628572273801187,
+   "mean": 0.7628572273801187,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  },
+  {
+   "k": 6,
+   "query": 1,
+   "cvar1": 0.7404346012413836,
+   "mean": 0.7404346012413836,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  },
+  {
+   "k": 7,
+   "query": 136,
+   "cvar1": 0.7230443166067996,
+   "mean": 0.7230443166067996,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  },
+  {
+   "k": 8,
+   "query": 147,
+   "cvar1": 0.7095470044881899,
+   "mean": 0.7095470044881899,
+   "d_cvar1_mean": 0.0,
+   "d_cvar1_trace": 0.0,
+   "nan": false
+  }
+ ],
+ "jg_mean_check_max_abs_d": 0.0,
+ "train_order": {
+  "JG-mean": {
+   "1": [
+    109
+   ],
+   "2": [
+    109,
+    123
+   ],
+   "3": [
+    117,
+    109,
+    123
+   ],
+   "4": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "5": [
+    117,
+    109,
+    114,
+    123,
+    132
+   ],
+   "6": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "7": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "8": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136,
+    147
+   ]
+  },
+  "GC-mean": {
+   "1": [
+    109
+   ],
+   "2": [
+    109,
+    240
+   ],
+   "3": [
+    233,
+    109,
+    240
+   ],
+   "4": [
+    233,
+    3,
+    109,
+    240
+   ],
+   "5": [
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "6": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    240
+   ],
+   "7": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240
+   ],
+   "8": [
+    193,
+    117,
+    233,
+    3,
+    109,
+    123,
+    240,
+    252
+   ]
+  },
+  "JG": {
+   "1": [
+    193
+   ],
+   "2": [
+    193,
+    117
+   ],
+   "3": [
+    193,
+    117,
+    233
+   ],
+   "4": [
+    193,
+    117,
+    233,
+    237
+   ],
+   "5": [
+    193,
+    117,
+    233,
+    237,
+    0
+   ],
+   "6": [
+    193,
+    117,
+    233,
+    237,
+    0,
+    253
+   ],
+   "7": [
+    193,
+    117,
+    233,
+    237,
+    0,
+    253,
+    121
+   ],
+   "8": [
+    193,
+    117,
+    233,
+    237,
+    0,
+    253,
+    121,
+    18
+   ]
+  },
+  "GC": {
+   "1": [
+    193
+   ],
+   "2": [
+    193,
+    233
+   ],
+   "3": [
+    193,
+    233,
+    117
+   ],
+   "4": [
+    193,
+    233,
+    117,
+    253
+   ],
+   "5": [
+    193,
+    233,
+    117,
+    253,
+    252
+   ],
+   "6": [
+    193,
+    233,
+    117,
+    253,
+    252,
+    237
+   ],
+   "7": [
+    193,
+    233,
+    117,
+    253,
+    252,
+    237,
+    140
+   ],
+   "8": [
+    193,
+    233,
+    117,
+    253,
+    252,
+    237,
+    140,
+    240
+   ]
+  },
+  "PAPER8": {
+   "1": [
+    0
+   ],
+   "2": [
+    0,
+    1
+   ],
+   "3": [
+    0,
+    1,
+    2
+   ],
+   "4": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "5": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "6": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "7": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "8": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "TOP-K[CVaR]": {
+   "1": [
+    193
+   ],
+   "2": [
+    193,
+    0
+   ],
+   "3": [
+    193,
+    0,
+    109
+   ],
+   "4": [
+    193,
+    0,
+    109,
+    123
+   ],
+   "5": [
+    193,
+    237,
+    0,
+    109,
+    123
+   ],
+   "6": [
+    193,
+    237,
+    0,
+    109,
+    121,
+    123
+   ],
+   "7": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    123,
+    140
+   ],
+   "8": [
+    193,
+    237,
+    0,
+    121,
+    109,
+    114,
+    123,
+    140
+   ]
+  },
+  "TOP-K[MEAN]": {
+   "1": [
+    109
+   ],
+   "2": [
+    117,
+    109
+   ],
+   "3": [
+    117,
+    109,
+    123
+   ],
+   "4": [
+    117,
+    109,
+    114,
+    123
+   ],
+   "5": [
+    117,
+    1,
+    109,
+    114,
+    123
+   ],
+   "6": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132
+   ],
+   "7": [
+    117,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ],
+   "8": [
+    117,
+    121,
+    1,
+    109,
+    114,
+    123,
+    132,
+    136
+   ]
+  },
+  "MMR-PP[CVaR]": {
+   "1": [
+    193
+   ],
+   "2": [
+    193,
+    237
+   ],
+   "3": [
+    193,
+    109,
+    237
+   ],
+   "4": [
+    193,
+    237,
+    0,
+    109
+   ],
+   "5": [
+    193,
+    237,
+    0,
+    109,
+    194
+   ],
+   "6": [
+    193,
+    237,
+    0,
+    109,
+    194,
+    241
+   ],
+   "7": [
+    193,
+    237,
+    0,
+    109,
+    140,
+    194,
+    241
+   ],
+   "8": [
+    193,
+    237,
+    0,
+    109,
+    140,
+    194,
+    241,
+    251
+   ]
+  }
+ },
+ "train_order_tag": {
+  "JG-mean": {
+   "1": null,
+   "2": null,
+   "3": null,
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null
+  },
+  "GC-mean": {
+   "1": null,
+   "2": null,
+   "3": null,
+   "4": null,
+   "5": null,
+   "6": null,
+   "7": null,
+   "8": null
+  }
+ },
+ "d029_prefix_matches": {
+  "JG-mean": {
+   "1": [],
+   "2": [],
+   "3": [],
+   "4": [],
+   "5": [],
+   "6": [],
+   "7": [],
+   "8": []
+  },
+  "GC-mean": {
+   "1": [],
+   "2": [],
+   "3": [],
+   "4": [],
+   "5": [],
+   "6": [],
+   "7": [],
+   "8": []
+  }
+ },
+ "multi_match_k": {
+  "JG-mean": {},
+  "GC-mean": {}
+ },
+ "d029_jg_gc_same_set_k": [
+  3
+ ],
+ "order_rule": "d037_lib.train_order: set = D029 JG / GC / PAPER8 k-prefix -> that D029 order (tested in that order; A1: S2's exact assert targets the returned tag); else JG-shared queries in JG order, then ascending id. Existing arms: stored orders (D029 chain order, D031 / D032 'train').",
+ "comparisons": {
+  "C1": [
+   "JG",
+   "JG-mean"
+  ],
+  "C2": [
+   "JG",
+   "GC"
+  ],
+  "C3": [
+   "GC",
+   "GC-mean"
+  ],
+  "C4": [
+   "JG-mean",
+   "GC-mean"
+  ],
+  "JG-mean_vs_PAPER8": [
+   "JG-mean",
+   "PAPER8"
+  ],
+  "JG-mean_vs_TOP-K[MEAN]": [
+   "JG-mean",
+   "TOP-K[MEAN]"
+  ],
+  "JG-mean_vs_TOP-K[CVaR]": [
+   "JG-mean",
+   "TOP-K[CVaR]"
+  ],
+  "GC-mean_vs_PAPER8": [
+   "GC-mean",
+   "PAPER8"
+  ],
+  "GC-mean_vs_TOP-K[MEAN]": [
+   "GC-mean",
+   "TOP-K[MEAN]"
+  ],
+  "GC-mean_vs_TOP-K[CVaR]": [
+   "GC-mean",
+   "TOP-K[CVaR]"
+  ]
+ },
+ "identical_input_k": {
+  "C1": [],
+  "C2": [
+   1,
+   3
+  ],
+  "C3": [],
+  "C4": [
+   1
+  ],
+  "JG-mean_vs_PAPER8": [],
+  "JG-mean_vs_TOP-K[MEAN]": [
+   1,
+   3,
+   4,
+   6,
+   7
+  ],
+  "JG-mean_vs_TOP-K[CVaR]": [],
+  "GC-mean_vs_PAPER8": [],
+  "GC-mean_vs_TOP-K[MEAN]": [
+   1
+  ],
+  "GC-mean_vs_TOP-K[CVaR]": []
+ },
+ "order_only_k": {
+  "C1": [],
+  "C2": [
+   3
+  ],
+  "C3": [],
+  "C4": [],
+  "JG-mean_vs_PAPER8": [],
+  "JG-mean_vs_TOP-K[MEAN]": [],
+  "JG-mean_vs_TOP-K[CVaR]": [],
+  "GC-mean_vs_PAPER8": [],
+  "GC-mean_vs_TOP-K[MEAN]": [],
+  "GC-mean_vs_TOP-K[CVaR]": []
+ },
+ "differing_k": {
+  "C1": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "C2": [
+   2,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "C3": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "C4": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "JG-mean_vs_PAPER8": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "JG-mean_vs_TOP-K[MEAN]": [
+   2,
+   5,
+   8
+  ],
+  "JG-mean_vs_TOP-K[CVaR]": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "GC-mean_vs_PAPER8": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "GC-mean_vs_TOP-K[MEAN]": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "GC-mean_vs_TOP-K[CVaR]": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ "same_chain_all_k": {
+  "C1": false,
+  "C2": false,
+  "C3": false,
+  "C4": false,
+  "JG-mean_vs_PAPER8": false,
+  "JG-mean_vs_TOP-K[MEAN]": false,
+  "JG-mean_vs_TOP-K[CVaR]": false,
+  "GC-mean_vs_PAPER8": false,
+  "GC-mean_vs_TOP-K[MEAN]": false,
+  "GC-mean_vs_TOP-K[CVaR]": false
+ },
+ "new_arms_same_set_k": [
+  1
+ ],
+ "identical_rule": "set equality (A2); order_only_k = same set, different training order",
+ "parity_quantity": "mean over each contrast's own differing k (D036)",
+ "overlaps_k8": {
+  "JG": {
+   "JG": 8,
+   "JG-mean": 1,
+   "GC": 5,
+   "GC-mean": 3,
+   "PAPER8": 1,
+   "TOP-K[CVaR]": 4,
+   "TOP-K[MEAN]": 2,
+   "MMR-PP[CVaR]": 3
+  },
+  "JG-mean": {
+   "JG": 1,
+   "JG-mean": 8,
+   "GC": 1,
+   "GC-mean": 3,
+   "PAPER8": 1,
+   "TOP-K[CVaR]": 3,
+   "TOP-K[MEAN]": 7,
+   "MMR-PP[CVaR]": 1
+  },
+  "GC": {
+   "JG": 5,
+   "JG-mean": 1,
+   "GC": 8,
+   "GC-mean": 5,
+   "PAPER8": 0,
+   "TOP-K[CVaR]": 3,
+   "TOP-K[MEAN]": 1,
+   "MMR-PP[CVaR]": 3
+  },
+  "GC-mean": {
+   "JG": 3,
+   "JG-mean": 3,
+   "GC": 5,
+   "GC-mean": 8,
+   "PAPER8": 1,
+   "TOP-K[CVaR]": 3,
+   "TOP-K[MEAN]": 3,
+   "MMR-PP[CVaR]": 2
+  },
+  "PAPER8": {
+   "JG": 1,
+   "JG-mean": 1,
+   "GC": 0,
+   "GC-mean": 1,
+   "PAPER8": 8,
+   "TOP-K[CVaR]": 1,
+   "TOP-K[MEAN]": 1,
+   "MMR-PP[CVaR]": 1
+  },
+  "TOP-K[CVaR]": {
+   "JG": 4,
+   "JG-mean": 3,
+   "GC": 3,
+   "GC-mean": 3,
+   "PAPER8": 1,
+   "TOP-K[CVaR]": 8,
+   "TOP-K[MEAN]": 4,
+   "MMR-PP[CVaR]": 5
+  },
+  "TOP-K[MEAN]": {
+   "JG": 2,
+   "JG-mean": 7,
+   "GC": 1,
+   "GC-mean": 3,
+   "PAPER8": 1,
+   "TOP-K[CVaR]": 4,
+   "TOP-K[MEAN]": 8,
+   "MMR-PP[CVaR]": 1
+  },
+  "MMR-PP[CVaR]": {
+   "JG": 3,
+   "JG-mean": 1,
+   "GC": 3,
+   "GC-mean": 2,
+   "PAPER8": 1,
+   "TOP-K[CVaR]": 5,
+   "TOP-K[MEAN]": 1,
+   "MMR-PP[CVaR]": 8
+  }
+ },
+ "overlap_by_k": {
+  "JG-mean": {
+   "JG": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "JG-mean": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "GC": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "GC-mean": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+   ],
+   "PAPER8": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "TOP-K[CVaR]": [
+    0,
+    0,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3
+   ],
+   "TOP-K[MEAN]": [
+    1,
+    1,
+    3,
+    4,
+    4,
+    6,
+    7,
+    7
+   ],
+   "MMR-PP[CVaR]": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  "GC-mean": {
+   "JG": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    3,
+    3,
+    3
+   ],
+   "JG-mean": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+   ],
+   "GC": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    3,
+    3,
+    5
+   ],
+   "GC-mean": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "PAPER8": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "TOP-K[CVaR]": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    3,
+    3
+   ],
+   "TOP-K[MEAN]": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3
+   ],
+   "MMR-PP[CVaR]": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+   ]
+  }
+ },
+ "within_set_sim_k8": {
+  "JG": {
+   "pearson": 0.11920074558597256,
+   "cos": 0.6338657488290852
+  },
+  "JG-mean": {
+   "pearson": 0.8128195527280777,
+   "cos": 0.8972399435312582
+  },
+  "GC": {
+   "pearson": 0.12264444408502105,
+   "cos": 0.598665011242572
+  },
+  "GC-mean": {
+   "pearson": 0.1253475356395693,
+   "cos": 0.5403079208144242
+  },
+  "PAPER8": {
+   "pearson": 0.15527779493775012,
+   "cos": 0.6439185201792801
+  },
+  "TOP-K[CVaR]": {
+   "pearson": 0.3720427505016865,
+   "cos": 0.724800550475658
+  },
+  "TOP-K[MEAN]": {
+   "pearson": 0.77594039476856,
+   "cos": 0.877168149810687
+  },
+  "MMR-PP[CVaR]": {
+   "pearson": 0.17830831436581712,
+   "cos": 0.7064645213254771
+  }
+ },
+ "within_set_rule": "d032_s0.within on d031_lib.similarity(S_energy_sf_tok200_v2, pearson | cos)",
+ "d034_union": {
+  "new_queries": [
+   1,
+   3,
+   109,
+   114,
+   117,
+   123,
+   132,
+   136,
+   147,
+   193,
+   233,
+   240,
+   252
+  ],
+  "n_new": 13,
+  "not_in_d033_union": [
+   136,
+   147,
+   240
+  ],
+  "not_in_d033_union_or_d035_d036_chains": [
+   147
+  ],
+  "note": "all k <= 8 queries of JG-mean and GC-mean; adding them to D034's union is a design-side edit on resume"
+ },
+ "stops": [],
+ "s_val_reads": 0,
+ "s_test_reads": 0,
+ "code_commit": "011fa80b6d08ef0b2c5738f304b510dea0026b3e",
+ "wall_min": 3.35
+}
