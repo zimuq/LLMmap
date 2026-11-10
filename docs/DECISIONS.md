@@ -2098,6 +2098,23 @@ interpretable; specialist-based two-stage design not pursued
     is absent on v2. Hypotheses are logged in the Review; none is tested.
   - D034 on resume: add query 147 to the union.
   Decided by: design-side.
+
+[2026-11-09] D038 opened: diagnostic of MMR's v2 edge over JG (S_build only)
+  - Human asked, before deciding a SUM-coverage D: why MMR wins on v2, and
+    how to get non-redundant sets without MMR's lambda.
+  - Design-side correction in chat: under CVaR, JG is already the least
+    redundant set (D037 within-set r 0.119 vs MMR* 0.178), so redundancy
+    is not the obvious cause. Candidate causes: individual query strength
+    (MMR's relevance = single-query CVaR) and tail-chasing of noise in
+    JG's later steps (D028 no-ammunition pairs; D011 / D025 winner's
+    curse).
+  - Design: target-free. Two-halves test on S_build (select on one half
+    of each model's configs, measure on the other). Readout-2 proxy on
+    halves as a sanity anchor; v1 as the negative control; readings at
+    >= 36/40 split sign consistency. No S_val / S_test, no training. The
+    outcome table maps to the follow-up candidates (cross-fitted JG,
+    SUM + CVaR, or none).
+  Decided by: human (open a diagnostic D); design-side (design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
