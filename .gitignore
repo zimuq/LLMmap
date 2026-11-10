@@ -62,3 +62,6 @@ results/D036/logits_*.npz
 results/D036/nc_*.npz
 results/D037/models/
 results/D037/logits_*.npz
+
+# D038: per-split single-query energies (41 config sets x 259 x P, float32) stay on $WORK; sha in s0.json
+results/D038/energies_*.npz
