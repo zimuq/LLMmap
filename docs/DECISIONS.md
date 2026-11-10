@@ -2134,6 +2134,22 @@ interpretable; specialist-based two-stage design not pursued
   - Note: H-strength's sign is expected by construction (MMR* selects on
     s_q); its information is the v2-vs-v1 size and the TOP-K row in M4.
   Decided by: design-side (routine; own-D correction before data).
+
+[2026-11-10] D038 R accepted, closed
+  - Outcome row: H-strength supported, H-chase not. H-redundancy reversed.
+    Anchor (S_build readout-2 proxy) reproduces MMR* > JG on v2, null on v1.
+  - A2 case alpha: JG's set beats MMR*'s held out on both set-level tail
+    yardsticks (Y_joint, Y_max) yet loses proxy accuracy; TOP-K < MMR*.
+    Reading: set-level tail separability does not predict accuracy on v2;
+    mean single-query strength plus enough diversity does.
+  - Proxy over-penalises weak-query sets (GC: proxy -7.8 vs test -1.1);
+    usable as a screen only among sets of comparable strength.
+  - OPEN, human: follow-up per the pre-registered map is SUM + CVaR (I4).
+    Design-side recommends a target-free first stage (S_build halves,
+    strength / redundancy / proxy vs MMR* and JG) before any training;
+    alternatives: adopt CVaR + MMR and reframe JG, or pause.
+  - No METHOD edit; METHOD-level implication flagged to the human.
+  Decided by: design-side (review); follow-up pending human.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

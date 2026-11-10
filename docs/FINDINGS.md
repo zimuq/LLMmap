@@ -1996,3 +1996,37 @@ was seen before.
 - **Writeup:** JG is "a joint statistic made robust by a tail criterion",
   not "joint beats MAX". The method is unchanged and γ = 0.1 stays.
   Cost 1.19 node-h.
+
+## D038 — MMR's v2 edge is query strength, not redundancy or noise-chasing; set-level tail separability does not predict accuracy
+
+**The question.** Why does CVaR + MMR beat JointGreedy on v2 (old S_test
++5.8 pp) but tie on v1? Target-free: S_build only, 40 directed half splits
+(select on one half of each model's configs, measure on the other).
+
+| v2, `k` = 8, held-out medians | JG | MMR\* | TOP-K[CVaR] | GC |
+|---|---|---|---|---|
+| proxy accuracy P_all (readout ② raw) | 0.713 | **0.746** | 0.724 | 0.636 |
+| JG's objective Y_joint | **0.233** | 0.209 | 0.213 | 0.215 |
+| mean single-query strength s_q | 0.135 | 0.150 | **0.157** | 0.112 |
+| effective number of queries | 5.93 | 5.56 | 3.04 | 6.50 |
+
+- **The edge is visible inside S_build.** The proxy gives MMR\* − JG
+  +3.3 pp (40 / 40) on v2, and ±0 on v1.
+- **Not noise-chasing.** Every rule's optimism is ≤ 1 % of its level,
+  inside the no-selection PAPER8 null. JG's late picks transfer as well on
+  pool-unseparable pairs as on other pairs.
+- **Not redundancy.** JG's set is the *less* redundant one.
+- **Strength.** MMR\*'s queries are individually stronger: +0.017, 40 / 40,
+  4× v1. JG takes two of the pool's weakest single queries (ranks 149 and
+  256) because they fill specific hard pairs.
+- **Central result.** JG beats MMR\* held out on both set-level tail
+  yardsticks (joint and MAX), yet loses accuracy.
+  - Set-level tail separability does not predict which set classifies
+    better on v2.
+  - Mean single-query strength does, provided the set is not near-copies:
+    TOP-K, with effective number 3.0, loses to MMR\* by 2.1 pp.
+- **Proxy calibration.** It matches the old test order MMR\* > TOP-K > JG >
+  PAPER8, but over-penalises weak-query sets (GC: −7.8 on the proxy,
+  −1.1 on test). It is a screen only among sets of comparable strength.
+- **Open (human):** whether to test SUM-coverage + CVaR next (touches I4).
+  Cost 0.49 node-h.
