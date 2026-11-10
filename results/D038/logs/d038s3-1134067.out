@@ -1,0 +1,24 @@
+=== node: i614-073.vista.tacc.utexas.edu start: Tue Nov 10 04:22:39 AM CST 2026 | OMP_NUM_THREADS=4 python experiments/d038_analysis.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             237          36         200           0           4         201
+Swap:              0           0           0
+[A] [A] >>> OMP_NUM_THREADS=4 python experiments/d038_analysis.py 04:22:39
+[A] {
+[A]  "anchor_reproduces_test_ordering": true,
+[A]  "scope": "",
+[A]  "H_strength": {
+[A]   "supported_v2": true,
+[A]   "v1_control_holds": true
+[A]  },
+[A]  "H_redundancy": {
+[A]   "supported_v2": false
+[A]  },
+[A]  "H_chase": {
+[A]   "status_v2": "not supported",
+[A]   "iii_prime_evaluable": true,
+[A]   "v1_control_holds": true
+[A]  },
+[A]  "A2_case_v2": "alpha",
+[A]  "A2_case_v1": "alpha"
+[A] }
+=== end: Tue Nov 10 04:22:40 AM CST 2026 rc=0 ===
