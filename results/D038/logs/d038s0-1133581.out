@@ -1,0 +1,29 @@
+=== node: i615-043.vista.tacc.utexas.edu start: Mon Nov  9 10:16:42 PM CST 2026 | OMP_NUM_THREADS=32 D038_WORKERS=64 python experiments/d038_s0.py |  |  |  ===
+               total        used        free      shared  buff/cache   available
+Mem:             237          20         218           2           3         216
+Swap:              0           0           0
+[A] [A] >>> OMP_NUM_THREADS=32 D038_WORKERS=64 python experiments/d038_s0.py 22:16:42
+[A]   [v2] energies 50/259
+[A]   [v2] energies 100/259
+[A]   [v2] energies 150/259
+[A]   [v2] energies 200/259
+[A]   [v2] energies 250/259
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S0 v2] 5.5 min; path1 max rel 0.00e+00 (924630/924630 exact); path2 k=1 max rel 6.44e-03; JG equal True; rules [('TOP-K[CVaR]', {'frozen': True, 'path1_full': True}), ('MMR*', {'frozen': True, 'path1_full': True}), ('GC', {'frozen': True, 'path1_full': True}), ('MMR|pearson|0.3', {'frozen': True, 'path1_full': True}), ('MMR|pearson|0.5', {'frozen': True, 'path1_full': True})]
+[A]   [v1] energies 50/259
+[A]   [v1] energies 100/259
+[A]   [v1] energies 150/259
+[A]   [v1] energies 200/259
+[A]   [v1] energies 250/259
+[A]   precompute 50/259
+[A]   precompute 100/259
+[A]   precompute 150/259
+[A]   precompute 200/259
+[A]   precompute 250/259
+[A] [S0 v1] 0.9 min; path1 max rel 0.00e+00 (172494/172494 exact); path2 k=1 max rel 6.44e-03; JG equal True; rules [('TOP-K[CVaR]', {'frozen': True, 'path1_full': True}), ('MMR*', {'frozen': True, 'path1_full': True}), ('GC', {'frozen': True, 'path1_full': True}), ('MMR|pearson|0.3', {'frozen': True, 'path1_full': True}), ('MMR|pearson|0.5', {'frozen': True, 'path1_full': True})]
+[A] [S0] stops: []
+=== end: Mon Nov  9 10:23:46 PM CST 2026 rc=0 ===

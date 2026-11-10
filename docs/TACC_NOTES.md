@@ -63,6 +63,21 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+**Issue 29 (2026-11-09) — D038 `## D`: "Two-halves mechanics" and the Notes / S0 guard ask for two
+computation paths that cannot both hold.** Two-halves mechanics says every statistic on a half is computed
+"from the restricted blocks with the frozen float32 operations" (the `d010_select.precompute` XY2 / XX2
+accumulators). The Notes and S0 say the single-query sf energy must use "the same operations as the frozen
+tensor's builder", guarded by a full-set assert at rel 1e-5.
+
+The builder is `d007_lib.energy` (scipy `cdist`, float64), not the float32 accumulators. D038 S0 (job 1133581)
+measured the accumulator `k` = 1 statistic against the frozen tensor:
+- v2: max rel 6.4e-3, and 79 % of cells exceed rel 1e-5;
+- v1: max rel 6.4e-3, and 75 % of cells exceed rel 1e-5.
+
+The builder operations on restricted clouds reproduce both tensors bit for bit. TACC cannot edit `## D`, so the
+choice is raised as D038 P1 Call 1. The recommendation (a) is builder operations for single-query quantities and
+accumulator sub-blocks for JG / Y_joint, which reproduce exactly.
+
 ---
 
 ## Resolved
