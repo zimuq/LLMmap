@@ -1961,3 +1961,38 @@ old S_test.
   - the scale-free division is a signal-to-noise ratio that a trained
     readout learns for itself but a training-free summed readout cannot.
 - Main statistic unchanged (no selection on old S_test). Cost 1.13 node-h.
+
+## D037 — JointGreedy needs its tail criterion; MAX coverage at 8 queries does not, and joint vs MAX stays small
+
+**The question.** v2 2×2: {JointGreedy, GreedyCover (MAX)} × {CVaR₀.₁, mean
+over pairs}. Development grade, old S_test. JG and GC are D029 cells; JG − GC
+was seen before.
+
+| `k` = 8, attention (linear agrees) | Δ E_all | Δ E_tail | label |
+|---|---|---|---|
+| JG − JG-mean | **+11.9 pp** | +4.8 | **BETTER** |
+| JG − GC (seen) | +1.1 (linear +1.9) | +0.3 | INCONCLUSIVE; mean over `k` +1.5 |
+| GC − GC-mean | −1.0 | −0.4 | INCONCLUSIVE; mean over `k` +5.2, from `k` = 1–5 only |
+| JG-mean − GC-mean | **−11.9** | −5.0 | **WORSE** |
+
+- **CVaR's role is anti-redundancy.**
+  - Under the mean, JointGreedy collapses onto ranking by average
+    separability: it shares 7 of 8 queries with TOP-K[MEAN], and its
+    within-set correlation is 0.81 against JG's 0.12.
+  - Its objective falls with every added query, repeating D012's v1
+    pattern.
+  - The loss sits on near-relative pairs.
+  - MAX coverage cannot stack redundant queries, so GC-mean matches GC and
+    JG at `k` = 8.
+- **"The criterion is required for both set-level rules" is not
+  supported on v2.** It holds for JointGreedy, and for GreedyCover only at
+  small `k`. This is consistent with D014's finding that GreedyCover's γ
+  effect was fragile on v1.
+- **Joint vs MAX under CVaR is about +1–2 pp on both corpora.** v1 averages
+  +1.1 pp over `k`, v2 +1.5 pp (seen); neither resolves at a single `k`.
+  - What changed from v1 is overlap. The chains share 2 of 8 queries on v1
+    and 5 of 8 on v2.
+  - v1's hard-twin edge is absent on v2.
+- **Writeup:** JG is "a joint statistic made robust by a tail criterion",
+  not "joint beats MAX". The method is unchanged and γ = 0.1 stays.
+  Cost 1.19 node-h.

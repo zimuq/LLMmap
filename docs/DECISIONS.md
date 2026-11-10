@@ -2083,6 +2083,21 @@ interpretable; specialist-based two-stage design not pursued
     Descriptive only, not pre-registered. It is context for the pending
     I3-rationale decision; the closing verdict is unchanged.
   Decided by: design-side.
+
+[2026-11-09] D037 R accepted, closed
+  - C1 BETTER, C4 WORSE (k = 8, linear agreeing); C2 and C3 INCONCLUSIVE.
+    The mean-over-k secondary: C1, C2 (seen), C3 BETTER; C4 WORSE.
+  - Reading: JG needs CVaR. Under the mean it collapses onto TOP-K[MEAN]
+    (7/8 shared; within-set r 0.81). GC at k = 8 does not need it: MAX
+    coverage blocks redundancy by construction. The pre-registered "both
+    rules need the criterion" row is not licensed; only its JG half is.
+  - The paper frames JG as "a joint statistic made robust by a tail
+    criterion", not "joint beats MAX". No METHOD edit; gamma = 0.1 stays.
+  - v1 vs v2 JG - GC (descriptive): the same size (about 1-2 pp averaged
+    over k). Chain overlap rises from 2/8 to 5/8 and the v1 hard-twin edge
+    is absent on v2. Hypotheses are logged in the Review; none is tested.
+  - D034 on resume: add query 147 to the union.
+  Decided by: design-side.
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
