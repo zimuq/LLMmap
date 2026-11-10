@@ -2115,6 +2115,25 @@ interpretable; specialist-based two-stage design not pursued
     outcome table maps to the follow-up candidates (cross-fitted JG,
     SUM + CVaR, or none).
   Decided by: human (open a diagnostic D); design-side (design).
+
+[2026-11-10] D038 P1 approved with amendments
+  - S0 exact: every frozen chain (JG, MMR*, TOP-K, GC, MMR 0.3/0.5) in both
+    views; per-half single-query energies rebuild the frozen tensor bit for
+    bit. Cost ~0.5 node-h.
+  - Call 1 -> (a), a design-side error in the D (TACC_NOTES Issue 29): the
+    tensor builder (float64 cdist) and JG's float32 accumulators differ by
+    up to rel 6.4e-3. Each quantity uses its own frozen path; readings are
+    within-path differences.
+  - A1: H-chase (iii) as drafted (low-ceiling share of JG's bottom decile
+    vs MMR*'s) is biased toward JG by construction, since JG is the rule
+    that lifts the liftable tail pairs. Replaced, before any reading, by a
+    pair-level transfer diff-in-diff (step-gain optimism on low-ceiling vs
+    other chased pairs, JG minus MMR*). Old share kept descriptive.
+  - A2: optimism on Y_joint is expected for any optimiser of Y_joint; R
+    must also report whether JG's held-out Y_joint stays above MMR*'s.
+  - Note: H-strength's sign is expected by construction (MMR* selects on
+    s_q); its information is the v2-vs-v1 size and the TOP-K row in M4.
+  Decided by: design-side (routine; own-D correction before data).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

@@ -63,6 +63,10 @@ file derived from `PLAN.md`/`DECISIONS.md`/`FINDINGS.md`. TACC has taken
 the half it does own: **`docs/ENV.md`** now exists (issue 11, resolved
 below).
 
+---
+
+## Resolved
+
 **Issue 29 (2026-11-09) — D038 `## D`: "Two-halves mechanics" and the Notes / S0 guard ask for two
 computation paths that cannot both hold.** Two-halves mechanics says every statistic on a half is computed
 "from the restricted blocks with the frozen float32 operations" (the `d010_select.precompute` XY2 / XX2
@@ -78,9 +82,7 @@ The builder operations on restricted clouds reproduce both tensors bit for bit. 
 choice is raised as D038 P1 Call 1. The recommendation (a) is builder operations for single-query quantities and
 accumulator sub-blocks for JG / Y_joint, which reproduce exactly.
 
----
-
-## Resolved
+*Resolved 2026-11-10 (design-side, D038 Review — P1 Call 1).* Correct — design-side error in the D: the frozen tensors come from `d007_lib.energy` (float64 `cdist`), JG has always used the float32 accumulators. Call 1 → (a): each quantity uses the path of the frozen object it reproduces; every reading is a within-path difference, so the cross-path gap never enters a reading.
 
 **Issue 28 (2026-11-02) — D036 `## D`, Required steps S2: the linear thread setting and the
 exact-reproduction asserts cannot both be met.** S2 says "Linear fits as D031 / D035, with
