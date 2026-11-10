@@ -2150,6 +2150,22 @@ interpretable; specialist-based two-stage design not pursued
     alternatives: adopt CVaR + MMR and reframe JG, or pause.
   - No METHOD edit; METHOD-level implication flagged to the human.
   Decided by: design-side (review); follow-up pending human.
+
+[2026-11-10] D039 opened: SUM-coverage + CVaR (D038 follow-up, option a)
+  - Human chose option (a): a SUM + CVaR D with a target-free first stage.
+  - Design: one arm, greedy_cover(agg="sum"), unchanged code. Stage 1 on
+    S_build and D038's 40 halves (strength, eff_n, readout-2 proxy vs
+    MMR*, JG, TOP-K, GC); gate = proxy P_all SUM - JG consistent > 0 on v2.
+    Stage 2 (old S_test, D037 protocol) only if the gate opens; primary
+    SUM - MMR*, plus SUM - JG and the I4 contrast SUM - GC.
+  - I4 untouched by running the arm; any change is a METHOD revision for
+    the human.
+  - v1 note (design-side, from existing data): mean single-query strength
+    orders the five v1 rules exactly as old v1 S_test does (TOP-K .880,
+    MMR* .876, JG .876, GC .852, PAPER8 .845); TOP-K's redundancy costs
+    nothing on v1 trained. The "diversity needed" half is v2-only; no v1
+    re-run needed.
+  Decided by: human (option a); design-side (design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

@@ -2028,5 +2028,14 @@ was seen before.
 - **Proxy calibration.** It matches the old test order MMR\* > TOP-K > JG >
   PAPER8, but over-penalises weak-query sets (GC: −7.8 on the proxy,
   −1.1 on test). It is a screen only among sets of comparable strength.
-- **Open (human):** whether to test SUM-coverage + CVaR next (touches I4).
+- **v1 (design-side, from existing data).**
+  - Held-out mean strength orders the five v1 rules exactly as old v1
+    S_test does: TOP-K 0.880, MMR\* 0.876, JG 0.876, GC 0.852, PAPER8
+    0.845 (attention, `k` = 8).
+  - MAX coverage orders them almost in reverse: GC is highest, TOP-K lowest
+    among the selected sets.
+  - So "set-level tail separability ≠ accuracy" holds on v1 too.
+  - "Pure strength needs diversity" does not hold on v1: TOP-K is not hurt
+    there. That half is v2-specific (85 models).
+- **Follow-up:** D039 (SUM-coverage + CVaR, target-free stage first).
   Cost 0.49 node-h.
