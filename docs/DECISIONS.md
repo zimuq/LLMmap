@@ -2166,6 +2166,32 @@ interpretable; specialist-based two-stage design not pursued
     nothing on v1 trained. The "diversity needed" half is v2-only; no v1
     re-run needed.
   Decided by: human (option a); design-side (design).
+
+[2026-11-11] Next steps after the cross-readout / MMR / Y_joint audit
+  - Design-side audit from published outputs only (FINDINGS: "Design-side
+    audit (2026-11-11)"):
+    - MMR*'s v2 lead holds under 5 readouts, two of them training-free.
+    - Attention curves' non-monotonic steps are seed noise.
+    - MMR's v2 range over its 6 variants is 7.7 pp (attention, k = 8).
+      The S_val choice transferred. Lambda's meaning depends on the pool,
+      because relevance is min-max normalised.
+    - Y_joint ranks MMR* 4th of 5 on v2: Spearman with accuracy is
+      0.1-0.3, against 0.6-0.9 for mean s_q.
+  - Human: (b) first, i.e. wait for D039 Stage 1 (SUM + CVaR, lambda-free).
+    Then (a): headline single-query CVaR strength plus a de-duplication
+    rule tuned on S_val, and demote Y_joint from evaluation yardstick to
+    JG's objective. The framing / METHOD text is drafted for the human
+    after D039 Stage 1, with a diff.
+  - Still open for that draft:
+    - 0.7 < lambda < 1 is unexplored.
+    - A threshold rule is a lambda-free option to propose in a D: skip a
+      candidate whose Pearson with any selected query exceeds tau.
+    - A "strength + de-duplication" set measure must be pre-registered
+      before it is used.
+  - TACC is under maintenance. Until it returns, design-side work is
+    limited to computation from published outputs and discussion. D039
+    stays READY.
+  Decided by: human (next steps); design-side (audit, logging).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)

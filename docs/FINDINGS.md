@@ -2039,3 +2039,123 @@ was seen before.
     there. That half is v2-specific (85 models).
 - **Follow-up:** D039 (SUM-coverage + CVaR, target-free stage first).
   Cost 0.49 node-h.
+
+
+## Design-side audit (2026-11-11): MMR\*'s v2 lead holds under every readout; attention curve shapes are seed noise; MMR is λ-sensitive; Y_joint does not rank sets on v2
+
+**What this is.** A compilation from published outputs only (D029, D031, D033, D038). No new runs. Development grade,
+because old S_test has been read many times. Rank correlations use 5 points and are descriptive.
+
+**1. Cross-readout check at `k` = 8.**
+
+Readouts:
+- **attention:** mean of 5 seeds.
+- **linear:** one deterministic fit.
+- **④:** D038's training-free proxy on S_build halves; chains are reselected per half.
+- **open-set:** D033's held-out models; JG and MMR are reselected per fold. There is no TOP-K or GC arm.
+
+| v2 | attention | linear | ④ proxy | open-set ② | open-set ① |
+|---|---|---|---|---|---|
+| MMR\* | **.804** | **.879** | **.746** | **.756** (fold) | **.680** (fold) |
+| JG | .746 | .864 | .713 | .706 | .622 |
+| TOP-K[CVaR] | .755 | .860 | .724 | — | — |
+| GC | .735 | .845 | .636 | — | — |
+| PAPER8 | .717 | .826 | .682 | .696 | .593 |
+
+| v1 | attention | linear | ④ proxy | open-set ② | open-set ① |
+|---|---|---|---|---|---|
+| MMR\* | .875 | .929 | **.828** | .808 | .659 |
+| JG | .876 | **.937** | .825 | .801 | **.674** |
+| TOP-K[CVaR] | **.880** | .912 | .802 | — | — |
+| GC | .852 | .904 | .761 | — | — |
+| PAPER8 | .845 | .903 | .783 | .795 | .661 |
+
+- **v2: MMR\* is first under all five readouts, including the two that train nothing.** Its lead is a property of the
+  query set, not of the classifier.
+- **v2: JG vs TOP-K flips with the readout** (≤ 1.5 pp). The order cannot be resolved.
+- **GC depends most on training.** It is last under the training-free proxy and recovers under the trained readouts,
+  consistent with D038: a trained readout partly bypasses weak queries.
+- **v1: JG and MMR\* form one top tier under every readout.**
+  - JG − MMR\* lies between −0.7 and +1.5 pp.
+  - Their v1 chains share 7 of 8 queries: JG has 233 where MMR\* has 109.
+  - Under attention, all five v1 sets lie within 3.5 pp, about one set's seed range.
+
+**2. Curve shapes come from attention seed noise.**
+- Per-point attention seed range is 3–9 pp on v2 (sd 1.5–4 pp) and 1.4–6.5 pp on v1.
+- Steps where adding a query lowers accuracy, v2, 5 chains:
+
+  | readout | steps | where |
+  |---|---|---|
+  | attention | 4 | TOP-K at `k` = 7 and 8; JG at `k` = 6; PAPER8 at `k` = 7 |
+  | linear | 0 | — |
+  | ④ | 2 | GC at `k` = 4 (it adds 253, pool rank 256); JG at `k` = 7 |
+
+- **TOP-K's attention peak at `k` = 6 is noise.** Under linear and ④ it keeps rising, only more slowly (redundancy).
+- **Reach claims that hold in all three closed-set readouts (v2):**
+  - MMR\* matches JG@8 at `k` = 6–7.
+  - Nothing matches MMR\*@8.
+  - MMR\*, JG and TOP-K match PAPER8@8 at `k` = 5–6.
+  - GC needs 7, and never matches under ④.
+- **"Query `k` matches" statements from attention alone carry ±1 query.**
+- **Attention fit (untested hint).** Linear is above attention for every chain (v2 +6 to +13 pp, v1 +3 to +6 pp) and has
+  no seed variance. This suggests the attention readout is under-fit at this data size.
+
+**3. MMR parameter sensitivity** (D031, 6 variants, chosen on S_val linear at `k` = 8).
+
+| v2, `k` = 8 | S_val | attention | linear |
+|---|---|---|---|
+| cos 0.3 / 0.5 / 0.7 | .842 / .857 / .860 | .727 / .763 / .780 | .847 / .862 / .864 |
+| pearson 0.3 / 0.5 / 0.7\* | .842 / .858 / **.878** | .741 / .746 / **.804** | .847 / .860 / **.879** |
+| TOP-K (λ = 1) / JG | — | .755 / .746 | .860 / .864 |
+
+- **Range.** On v2 it is 7.7 pp (attention) and 3.2 pp (linear) at `k` = 8, and 3.0 / 2.1 pp averaged over
+  `k` = 1..8. On v1 it is about 2 pp.
+- **The S_val choice transferred on v2:** it is first on test under both readouts. On v1 it is mid-pack under attention
+  and tied first under linear.
+- **λ is a strength-vs-diversity dial.**
+  - Accuracy rises with λ up to 0.7 and falls at λ = 1 (TOP-K).
+  - λ = 0.3 loses to JG.
+  - The range 0.7 < λ < 1 is unexplored.
+  - λ changes the chain a lot: pearson 0.5 and 0.7 share 3 of 8 queries on v2.
+- **What "diversity" is here.** It is the similarity between two queries' per-pair sf-energy profiles across all model
+  pairs, and the penalty is the maximum similarity to any query already selected.
+  - Pearson centres the profiles; cosine does not.
+  - Energies are positive, so cosine is high for every set (about 0.64 within a set).
+  - It is not text similarity, and not response-embedding similarity.
+- **Known weakness.** Relevance is min–max normalised over the pool, so a given λ means a different trade-off on another
+  pool. λ = 0.7 does not transfer by itself.
+- **Empirical rule (D038): diversity only needs to prevent near-duplicates.**
+  - GC (eff_n 6.5) and JG (5.9) are more diverse than MMR\* (5.6), and less accurate.
+  - TOP-K (eff_n 3.0) pays for its redundancy.
+
+**4. JG's set-level separability Y_joint, scored on every chain** (D038 held-out medians).
+
+| | Y_joint, v2 | Y_joint, v1 |
+|---|---|---|
+| JG | **.233** | **.267** |
+| MMR\* | .209 (4th) | .250 |
+| TOP-K[CVaR] | .213 | .240 |
+| GC | .215 | .236 |
+| PAPER8 | .169 | .184 |
+
+Spearman rank correlation with accuracy across the five sets:
+
+| | attention | linear | ④ |
+|---|---|---|---|
+| Y_joint, v2 | 0.1 | 0.3 | −0.2 |
+| Y_joint, v1 | 0.7 | 1.0 | 0.8 |
+| mean s_q, v2 | 0.8 | 0.6 | 0.9 |
+| mean s_q, v1 | 0.9 | 0.6 | 0.6 |
+
+- **Y_joint does not rank the selected sets on v2.** It does put PAPER8 last in both views.
+- **It is JG's own objective**, so as a yardstick for every rule it favours JG by construction.
+- **Mean single-query strength ranks the sets better.** Its one miss is TOP-K, because it ignores redundancy.
+- **"Strength plus de-duplication" is a post-hoc candidate set measure.** It needs a pre-registered formula and a fresh
+  test before it is used.
+
+**Next (human, 2026-11-11).**
+1. **(b) first:** D039 Stage 1 decides whether SUM + CVaR is a λ-free alternative.
+2. **Then (a):** headline single-query CVaR strength plus a de-duplication rule (MMR or a correlation threshold), tuned on
+   S_val. Y_joint is demoted to "JG's objective".
+
+TACC is under maintenance. Until it is back, work is limited to design-side computation from published outputs.
