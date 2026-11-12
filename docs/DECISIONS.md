@@ -2192,6 +2192,26 @@ interpretable; specialist-based two-stage design not pursued
     limited to computation from published outputs and discussion. D039
     stays READY.
   Decided by: human (next steps); design-side (audit, logging).
+
+[2026-11-12] D039 amended before any P: + TH(tau) arm, + Part B
+  - Human (chat): fold both into D039. TACC had not posted a P, so ## D was
+    edited in place; the header records the amendment.
+  - TH(tau): TOP-K[CVaR] order with a Pearson veto (tau grid 0.5-0.9). tau*
+    is chosen on S_val with D031's MMR variant-choice protocol, so TH and
+    MMR* are tuned on equal terms. Gate as SUM's: proxy P_all TH - JG.
+    Stage 2 contrasts C4 TH - MMR* (primary) and C5 TH - TOP-K.
+  - Part B: an additive-evidence set-quality model, using stored old-S_test
+    E_all only (no training, no new S_test read).
+    - A_opt: per-pair sum of energies, i.e. an optimally weighted readout.
+    - A_eq: (sum of sqrt energies)^2 / |S|, i.e. an equal-weight readout.
+    - Both use a saturating link 1 - exp(-cD), with c0 fixed by PAPER8.
+    - B1: A_opt beats mean s_q and Y_joint in Spearman with accuracy.
+    - B2: noise accumulation (A_eq fits the equal-weight proxy, A_opt
+      fits the trained readouts).
+    - B3: noise correlation vs profile correlation (descriptive).
+    - B4: a written prediction for the new arms.
+  - Deferred to TODO (human): the METHOD section 4 / I3 rationale rewrite.
+  Decided by: human (scope); design-side (design).
 ```
 
 ## Escalated: two silent I2 violations found in the current generator (2026-09-02)
